@@ -3,6 +3,8 @@
 This repository contains a collection of dotfiles and setup commands to configure a Ubuntu Linux system.
 ## Getting Started
 Please follow the steps carefully.
+## Clean History
+history -c && history -w
 ## System Update and Cache Cleaning
 ```
 sudo apt update
@@ -92,4 +94,19 @@ sudo apt install inkscape
 sudo add-apt-repository ppa:alex-p/tesseract-ocr5
 sudo apt update
 sudo apt install tesseract-ocr
+```
+## Remove Snap
+```
+snap list
+sudo snap remove --purge snap-store
+sudo snap remove --purge gnome-3-38-2004
+sudo snap remove --purge gnome-42-2204
+sudo snap remove --purge gtk-common-themes
+sudo snap remove --purge snapd-desktop-integration
+sudo snap remove --purge bare
+sudo snap remove --purge core22
+sudo snap remove --purge firefox
+sudo snap remove --purge core20
+sudo snap remove --purge snapd
+sudo apt remove snapd
 ```
