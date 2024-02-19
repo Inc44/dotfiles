@@ -81,3 +81,9 @@ sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
 sudo apt update
 sudo apt install qbittorrent
 ```
+## Installing Inkscape
+```
+sudo add-apt-repository ppa:inkscape.dev/stable
+sudo apt update
+sudo apt install inkscape
+```
