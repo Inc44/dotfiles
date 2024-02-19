@@ -87,3 +87,9 @@ sudo add-apt-repository ppa:inkscape.dev/stable
 sudo apt update
 sudo apt install inkscape
 ```
+## Installing Tesseract OCR
+```
+sudo add-apt-repository ppa:alex-p/tesseract-ocr5
+sudo apt update
+sudo apt install tesseract-ocr
+```
