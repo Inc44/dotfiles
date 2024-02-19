@@ -4,7 +4,9 @@ This repository contains a collection of dotfiles and setup commands to configur
 ## Getting Started
 Please follow the steps carefully.
 ## Clean History
+```
 history -c && history -w
+```
 ## System Update and Cache Cleaning
 ```
 sudo apt update
@@ -109,4 +111,5 @@ sudo snap remove --purge firefox
 sudo snap remove --purge core20
 sudo snap remove --purge snapd
 sudo apt remove snapd
+sudo gedit /etc/apt/preferences.d/nosnap.pref
 ```
