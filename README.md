@@ -14,14 +14,18 @@ pip cache purge
 conda clean -a
 sudo journalctl --vacuum-time=1d
 ```
-## Disable/Blacklist the Nouveau driver
+## Installing Vim Text Editor
+```
+sudo apt install vim
+```
+## Disable/Blacklist the Nouveau Driver
 ```
 echo "blacklist nouveau" | sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf
 echo "options nouveau modeset=0" | sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf
 sudo update-initramfs -u
 sudo reboot
 ```
-## Installing CUDA
+## Installing CUDA Toolkit
 ```
 sudo apt install gcc
 sudo apt install linux-headers-$(uname -r)
@@ -33,7 +37,7 @@ sudo apt-get install cuda-toolkit
 sudo apt-get install nvidia-gds
 sudo reboot
 ```
-## Installing Nvidia Drivers
+## Installing Nvidia Driver
 ```
 sudo dpkg -i cuda-keyring_1.1-1_all.deb
 sudo apt update
@@ -41,9 +45,27 @@ sudo apt-get install nvidia-driver-545
 rm cuda-keyring_1.1-1_all.deb
 sudo reboot
 ```
-## Installing Microsoft Edge
+## Installing Microsoft Edge Browser
 ```
 wget https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_121.0.2277.128-1_amd64.deb
 sudo apt install ~/microsoft-edge-stable_121.0.2277.128-1_amd64.deb
 rm microsoft-edge-stable_121.0.2277.128-1_amd64.deb
+```
+## Installing Visual Studio Code
+```
+wget https://packages.microsoft.com/repos/code/pool/main/c/code/code_1.86.2-1707854558_amd64.deb
+sudo apt install ~/code_1.86.2-1707854558_amd64.deb
+rm code_1.86.2-1707854558_amd64.deb
+```
+## Installing Yandex Browser
+```
+wget https://ext-cachev2-cogent03.cdn.yandex.net/download.cdn.yandex.net/browser/yandex/24_1_1_940_54214/Yandex.deb
+sudo apt install ~/Yandex.deb
+rm Yandex.deb
+```
+## Installing Obsidian Notes
+```
+wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.3/obsidian_1.5.3_amd64.deb
+sudo apt install ~/obsidian_1.5.3_amd64.deb
+rm obsidian_1.5.3_amd64.deb
 ```
