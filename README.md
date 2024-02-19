@@ -76,25 +76,21 @@ rm obsidian_1.5.3_amd64.deb
 ## Installing OBS Studio
 ```
 sudo add-apt-repository ppa:obsproject/obs-studio
-sudo apt update
 sudo apt install obs-studio
 ```
 ## Installing qBittorrent
 ```
 sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
-sudo apt update
 sudo apt install qbittorrent
 ```
 ## Installing Inkscape
 ```
 sudo add-apt-repository ppa:inkscape.dev/stable
-sudo apt update
 sudo apt install inkscape
 ```
 ## Installing Tesseract OCR
 ```
 sudo add-apt-repository ppa:alex-p/tesseract-ocr5
-sudo apt update
 sudo apt install tesseract-ocr
 ```
 ## Remove Snap
@@ -121,4 +117,9 @@ bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm -rf ~/miniconda3/miniconda.sh
 cd miniconda3/bin
 ./conda init
+```
+## Installing FFMPEG
+```
+sudo add-apt-repository ppa:ubuntuhandbook1/ffmpeg6
+sudo apt-get install ffmpeg
 ```
