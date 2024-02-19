@@ -108,6 +108,7 @@ sudo snap remove --purge core20
 sudo snap remove --purge snapd
 sudo apt remove snapd
 sudo gedit /etc/apt/preferences.d/nosnap.pref
+rm -r snap
 ```
 ## Installing Miniconda
 ```
@@ -122,4 +123,27 @@ cd miniconda3/bin
 ```
 sudo add-apt-repository ppa:ubuntuhandbook1/ffmpeg6
 sudo apt-get install ffmpeg
+```
+## Installing  and Configuring Git
+```
+sudo apt install git
+git config --global user.email email
+git config --global user.name name
+```
+## Initializing Git
+```
+git init -b main
+```
+## Installing FFMPEG
+```
+sudo apt install cmake
+```
+## Installing ECT
+```
+git clone --recursive https://github.com/fhanau/Efficient-Compression-Tool.git
+cd Efficient-Compression-Tool
+mkdir build
+cd build
+cmake ../src
+make
 ```
