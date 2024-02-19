@@ -14,7 +14,7 @@ pip cache purge
 conda clean -a
 sudo journalctl --vacuum-time=1d
 ```
-## Installing Vim Text Editor
+## Installing Vim
 ```
 sudo apt install vim
 ```
@@ -25,7 +25,7 @@ echo "options nouveau modeset=0" | sudo tee -a /etc/modprobe.d/blacklist-nouveau
 sudo update-initramfs -u
 sudo reboot
 ```
-## Installing CUDA Toolkit
+## Installing CUDA
 ```
 sudo apt install gcc
 sudo apt install linux-headers-$(uname -r)
@@ -45,7 +45,7 @@ sudo apt-get install nvidia-driver-545
 rm cuda-keyring_1.1-1_all.deb
 sudo reboot
 ```
-## Installing Microsoft Edge Browser
+## Installing Microsoft Edge
 ```
 wget https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_121.0.2277.128-1_amd64.deb
 sudo apt install ~/microsoft-edge-stable_121.0.2277.128-1_amd64.deb
@@ -63,9 +63,21 @@ wget https://ext-cachev2-cogent03.cdn.yandex.net/download.cdn.yandex.net/browser
 sudo apt install ~/Yandex.deb
 rm Yandex.deb
 ```
-## Installing Obsidian Notes
+## Installing Obsidian
 ```
 wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.3/obsidian_1.5.3_amd64.deb
 sudo apt install ~/obsidian_1.5.3_amd64.deb
 rm obsidian_1.5.3_amd64.deb
+```
+## Installing OBS Studio
+```
+sudo add-apt-repository ppa:obsproject/obs-studio
+sudo apt update
+sudo apt install obs-studio
+```
+## Installing qBittorrent
+```
+sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
+sudo apt update
+sudo apt install qbittorrent
 ```
