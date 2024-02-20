@@ -39,6 +39,14 @@ Super+T
 ```
 ...
 ```
+Super+S
+```
+gnome-screenshot --delay=1
+```
+Super+Shift+S
+```
+Take a screenshot interactively
+```
 ## Installing Vim
 ```
 sudo apt install vim
@@ -59,6 +67,8 @@ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/
 sudo dpkg -i cuda-keyring_1.1-1_all.deb
 sudo apt-get install cuda-toolkit
 sudo apt-get install nvidia-gds
+echo 'export PATH="/usr/local/cuda-12.3/bin:$PATH"' | sudo tee -a /home/pc/.bashrc
+echo "export LD_LIBRARY_PATH="/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH"" | sudo tee -a /home/pc/.bashrc
 sudo reboot
 ```
 ## Installing Nvidia Driver
@@ -289,4 +299,20 @@ sudo apt purge apport
 ## Remove Ubuntu Logo
 ```
 sudo rm /usr/share/plymouth/ubuntu-logo.png
+```
+## Installing Pinta
+```
+sudo apt install pinta
+```
+## Installing Gnome Screenshot
+```
+sudo apt install gnome-screenshot
+```
+## Installing AutoKhan
+```
+git clone https://github.com/Inc44/AutoKhan.git
+cd AutoKhan
+conda create --name AutoKhan python=3.10.13
+conda activate AutoKhan
+pip install -r requirements.txt
 ```
