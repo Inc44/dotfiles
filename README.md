@@ -68,7 +68,7 @@ sudo dpkg -i cuda-keyring_1.1-1_all.deb
 sudo apt-get install cuda-toolkit
 sudo apt-get install nvidia-gds
 echo 'export PATH="/usr/local/cuda-12.3/bin:$PATH"' | tee -a /home/pc/.bashrc
-echo "export LD_LIBRARY_PATH="/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH"" | tee -a /home/pc/.bashrc
+echo 'export LD_LIBRARY_PATH="/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH"' | tee -a /home/pc/.bashrc
 sudo reboot
 ```
 ## Installing Nvidia Driver
@@ -351,4 +351,11 @@ git clone https://github.com/hashcat/hashcat.git
 cd hashcat
 make
 echo 'export PATH="/home/pc/hashcat:$PATH"' | tee -a /home/pc/.bashrc
+```
+## Installing 7-Zip
+```
+wget https://www.7-zip.org/a/7z2301-linux-x64.tar.xz
+mkdir 7-zip
+tar xf 7z2301-linux-x64.tar.xz -C 7-zip
+echo 'export PATH="/home/pc/7-zip:$PATH"' | tee -a /home/pc/.bashrc
 ```
