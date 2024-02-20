@@ -112,7 +112,7 @@ sudo apt install inkscape
 sudo add-apt-repository ppa:alex-p/tesseract-ocr5
 sudo apt install tesseract-ocr
 ```
-## Remove Snap
+## Purge Snap
 ```
 snap list
 sudo snap remove --purge snap-store
@@ -125,7 +125,7 @@ sudo snap remove --purge core22
 sudo snap remove --purge firefox
 sudo snap remove --purge core20
 sudo snap remove --purge snapd
-sudo apt remove snapd
+sudo apt purge snapd
 sudo gedit /etc/apt/preferences.d/nosnap.pref
 rm -r snap
 ```
@@ -277,4 +277,16 @@ cd ..
 git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git --depth=1
 cd WhiteSur-icon-theme
 ./install.sh -a -t purple
+```
+## Disabling Shutdown Confirmation
+```
+gsettings set org.gnome.SessionManager logout-prompt false
+```
+## Purge Apport
+```
+sudo apt purge apport
+```
+## Remove Ubuntu Logo
+```
+sudo rm /usr/share/plymouth/ubuntu-logo.png
 ```
