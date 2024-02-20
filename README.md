@@ -155,7 +155,11 @@ git init -b main
 ```
 ## Installing CMake
 ```
-sudo apt install cmake
+wget https://github.com/Kitware/CMake/releases/download/v3.28.3/cmake-3.28.3-linux-x86_64.sh
+sudo mkdir /opt/cmake
+sudo sh cmake-3.28.3-linux-x86_64.sh --skip-license --exclude-subdir --prefix=/opt/cmake
+sudo ln -s /opt/cmake/bin/cmake /usr/local/bin/cmake
+rm cmake-3.28.3-linux-x86_64.sh
 ```
 ## Installing ECT
 ```
