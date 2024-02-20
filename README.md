@@ -29,7 +29,7 @@ Ctrl+M
 ```
 Ctrl+U
 ```
-...
+/home/pc/miniconda3/envs/uvr/bin/python -O /home/pc/ultimatevocalremovergui/UVR.py
 ```
 Super+E
 ```
@@ -57,7 +57,6 @@ sudo apt install linux-headers-$(uname -r)
 sudo apt-key del 7fa2af80
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
 sudo dpkg -i cuda-keyring_1.1-1_all.deb
-sudo apt update
 sudo apt-get install cuda-toolkit
 sudo apt-get install nvidia-gds
 sudo reboot
@@ -65,7 +64,6 @@ sudo reboot
 ## Installing Nvidia Driver
 ```
 sudo dpkg -i cuda-keyring_1.1-1_all.deb
-sudo apt update
 sudo apt-get install nvidia-driver-545
 rm cuda-keyring_1.1-1_all.deb
 sudo reboot
@@ -155,7 +153,7 @@ git config --global user.name name
 ```
 git init -b main
 ```
-## Installing FFMPEG
+## Installing CMake
 ```
 sudo apt install cmake
 ```
@@ -191,4 +189,25 @@ conda activate ocrmypdf
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install ocrmypdf
 pip install git+https://github.com/ocrmypdf/OCRmyPDF-EasyOCR.git
+```
+## Installing UVR
+```
+sudo apt install python3-pip
+sudo apt install python3-tk
+git clone https://github.com/Anjok07/ultimatevocalremovergui.git
+cd ultimatevocalremovergui
+conda create --name uvr python=3.10.13
+conda activate uvr
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/Dora-0.0.3.tar.gz
+pip3 install Dora-0.0.3.tar.gz
+pip3 install -r requirements.txt
+```
+## Installing Thunderbird
+```
+wget https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/115.7.0/linux-x86_64/fr/thunderbird-115.7.0.tar.bz2
+tar xjf thunderbird-115.7.0.tar.bz2
+rm thunderbird-115.7.0.tar.bz2
+sudo mv thunderbird /opt
+sudo ln -s /opt/thunderbird/thunderbird /usr/local/bin/thunderbird
+sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/installing-thunderbird-linux/thunderbird.desktop -P /usr/local/share/applications
 ```
