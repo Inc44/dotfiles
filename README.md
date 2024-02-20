@@ -18,6 +18,27 @@ pip cache purge
 conda clean -a
 sudo journalctl --vacuum-time=1d
 ```
+## Shortcuts
+Ctrl+E
+```
+sensible-browser
+```
+Ctrl+M
+```
+/home/pc/miniconda3/envs/MaTools/bin/python -O /home/pc/MaTools/management_tools/main_management_tools_app.pyw
+```
+Ctrl+U
+```
+...
+```
+Super+E
+```
+nautilus
+```
+Super+T
+```
+...
+```
 ## Installing Vim
 ```
 sudo apt install vim
@@ -146,4 +167,28 @@ mkdir build
 cd build
 cmake ../src
 make
+```
+## Installing MaTools
+```
+sudo apt install libxcb-cursor0
+conda create --name MaTools python=3.10.13
+conda activate MaTools
+git clone https://github.com/Inc44/MaTools.git
+cd MaTools
+pip install -r requirements.txt
+```
+## Installing WhisperX
+```
+conda create --name whisperx python=3.10.13 -y
+conda activate whisperx
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+pip install git+https://github.com/m-bain/whisperx.git
+```
+## Installing OCRMyPDF
+```
+conda create --name ocrmypdf python=3.10.13 -y
+conda activate ocrmypdf
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+pip install ocrmypdf
+pip install git+https://github.com/ocrmypdf/OCRmyPDF-EasyOCR.git
 ```
