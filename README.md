@@ -215,3 +215,14 @@ sudo mv thunderbird /opt
 sudo ln -s /opt/thunderbird/thunderbird /usr/local/bin/thunderbird
 sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/installing-thunderbird-linux/thunderbird.desktop -P /usr/local/share/applications
 ```
+## Installing Rclone Browser
+```
+sudo apt update && sudo apt -y install git g++ make qtdeclarative5-dev
+git clone https://github.com/kapitainsky/RcloneBrowser.git
+cd RcloneBrowser
+mkdir build && cd build
+cmake ..
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/main_window.cpp -P RcloneBrowser/src
+make
+sudo make install
+```
