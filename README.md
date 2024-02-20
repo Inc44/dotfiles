@@ -247,13 +247,17 @@ rclone config
 ```
 sudo apt install telegram-desktop
 ```
+## Installing Go
+```
+sudo apt install golang-go
+```
 ## Installing Rust
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
-## Installing Go
+## Installing Blazingly Fast Rust Donut
 ```
-sudo apt install golang-go
+cargo install blazingly_fast_rust_donut
 ```
 ## Installing Czkawka
 ```
