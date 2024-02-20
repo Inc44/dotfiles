@@ -316,3 +316,17 @@ conda create --name AutoKhan python=3.10.13
 conda activate AutoKhan
 pip install -r requirements.txt
 ```
+## Installing Zathura
+```
+sudo apt install zathura
+```
+## Installing TeX Live
+```
+wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+zcat < install-tl-unx.tar.gz | tar xf -
+cd install-tl-20240219
+sudo perl ./install-tl --no-interaction
+echo 'export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"' | sudo tee -a /home/pc/.bashrc
+rm install-tl-unx.tar.gz
+rm -r install-tl-20240219
+```
