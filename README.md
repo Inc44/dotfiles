@@ -67,8 +67,8 @@ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/
 sudo dpkg -i cuda-keyring_1.1-1_all.deb
 sudo apt-get install cuda-toolkit
 sudo apt-get install nvidia-gds
-echo 'export PATH="/usr/local/cuda-12.3/bin:$PATH"' | sudo tee -a /home/pc/.bashrc
-echo "export LD_LIBRARY_PATH="/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH"" | sudo tee -a /home/pc/.bashrc
+echo 'export PATH="/usr/local/cuda-12.3/bin:$PATH"' | tee -a /home/pc/.bashrc
+echo "export LD_LIBRARY_PATH="/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH"" | tee -a /home/pc/.bashrc
 sudo reboot
 ```
 ## Installing Nvidia Driver
@@ -179,6 +179,7 @@ mkdir build
 cd build
 cmake ../src
 make
+echo 'export PATH="/home/pc/Efficient-Compression-Tool/build:$PATH"' | tee -a /home/pc/.bashrc
 ```
 ## Installing MaTools
 ```
@@ -326,7 +327,28 @@ wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 zcat < install-tl-unx.tar.gz | tar xf -
 cd install-tl-20240219
 sudo perl ./install-tl --no-interaction
-echo 'export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"' | sudo tee -a /home/pc/.bashrc
+echo 'export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"' | tee -a /home/pc/.bashrc
 rm install-tl-unx.tar.gz
 rm -r install-tl-20240219
+```
+## Installing Xtreme Download Manager
+```
+wget https://github.com/subhra74/xdm/releases/download/8.0.29/xdman_gtk_8.0.29_amd64.deb
+sudo apt install ~/xdman_gtk_8.0.29_amd64.deb
+rm xdman_gtk_8.0.29_amd64.deb
+```
+## Installing John the Ripper
+```
+git clone https://github.com/openwall/john
+cd john/src
+./configure
+make
+echo 'export PATH="/home/pc/john/run:$PATH"' | tee -a /home/pc/.bashrc
+```
+## Installing Hashcat
+```
+git clone https://github.com/hashcat/hashcat.git
+cd hashcat
+make
+echo 'export PATH="/home/pc/hashcat:$PATH"' | tee -a /home/pc/.bashrc
 ```
