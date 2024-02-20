@@ -251,6 +251,10 @@ sudo apt install telegram-desktop
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
+## Installing Go
+```
+sudo apt install golang-go
+```
 ## Installing Czkawka
 ```
 sudo add-apt-repository ppa:xtradeb/apps
@@ -337,7 +341,19 @@ wget https://github.com/subhra74/xdm/releases/download/8.0.29/xdman_gtk_8.0.29_a
 sudo apt install ~/xdman_gtk_8.0.29_amd64.deb
 rm xdman_gtk_8.0.29_amd64.deb
 ```
-## Installing John the Ripper
+## Installing and Using 7-Zip
+```
+wget https://www.7-zip.org/a/7z2301-linux-x64.tar.xz
+mkdir 7-zip
+tar xf 7z2301-linux-x64.tar.xz -C 7-zip
+echo 'export PATH="/home/pc/7-zip:$PATH"' | tee -a /home/pc/.bashrc
+rm 7z2301-linux-x64.tar.xz
+```
+```
+7zz a -tzip -m0=Copy -ppassword -mem=AES256 file.zip file
+7zz x file.zip
+```
+## Installing and Using John the Ripper
 ```
 git clone https://github.com/openwall/john
 cd john/src
@@ -345,17 +361,55 @@ cd john/src
 make
 echo 'export PATH="/home/pc/john/run:$PATH"' | tee -a /home/pc/.bashrc
 ```
-## Installing Hashcat
+```
+zip2john /home/pc/file.zip > /home/pc/hash.txt
+```
+## Installing and Using Hashcat
 ```
 git clone https://github.com/hashcat/hashcat.git
 cd hashcat
 make
 echo 'export PATH="/home/pc/hashcat:$PATH"' | tee -a /home/pc/.bashrc
 ```
-## Installing 7-Zip
 ```
-wget https://www.7-zip.org/a/7z2301-linux-x64.tar.xz
-mkdir 7-zip
-tar xf 7z2301-linux-x64.tar.xz -C 7-zip
-echo 'export PATH="/home/pc/7-zip:$PATH"' | tee -a /home/pc/.bashrc
+sed -i 's/^[^$]*//' /home/pc/hash.txt
+sed -i 's/[^$]*$//' /home/pc/hash.txt
 ```
+```
+wget https://download.weakpass.com/wordlists/90/rockyou.txt.gz
+gzip -d rockyou.txt.gz
+hashcat -m 13600 -a3 -w3 -d2 /home/pc/hash.txt /home/pc/rockyou.txt --increment --increment-min 8 --increment-max 8
+cat /home/pc/hashcat/hashcat.potfile
+rm /home/pc/hashcat/hashcat.potfile
+```
+```
+hashcat -m 13600 -a3 -w3 -d2 /home/pc/hash.txt --increment --increment-min 8 --increment-max 8 ?d?d?d?d?d?d?d?d
+hashcat -m 13600 -a3 -w3 -d2 /home/pc/hash.txt --increment --increment-min 8 --increment-max 8 ?l?l?l?l?l?l?l?l
+```
+```
+hashcat -b -d 2 -m 13600
+```
+## Installing Hashcat Utils
+```
+git clone https://github.com/hashcat/hashcat-utils.git
+cd /home/pc/hashcat-utils/src
+make
+echo 'export PATH="/home/pc/hashcat-utils/src:$PATH"' | tee -a /home/pc/.bashrc
+```
+```
+./cap2hccapx.bin /home/pc/.-01.cap /home/pc/wifi.hccapx
+```
+## Installing and Using Aircrack-ng
+```
+sudo apt install aircrack-ng
+sudo apt install net-tools
+```
+```
+ifconfig
+sudo airmon-ng start wlp7s0
+iwconfig
+sudo airodump-ng wlp7s0mon
+sudo airodump-ng -c CH --bssid BSSID -w . wlp7s0mon
+sudo airmon-ng stop wlp7s0mon
+```
+
