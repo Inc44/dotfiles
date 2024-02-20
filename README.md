@@ -246,3 +246,35 @@ sudo add-apt-repository ppa:xtradeb/apps
 sudo apt update
 sudo apt-get install czkawka
 ```
+## Installing Neofetch
+```
+sudo apt install neofetch
+```
+## Installing Solaar
+```
+sudo add-apt-repository ppa:solaar-unifying/stable
+sudo apt install solaar
+```
+## Installing GParted
+```
+sudo apt install gparted
+```
+## Configuring GRUB
+```
+sudo vim /etc/default/grub
+sudo update-grub
+#sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+## Installing  and Configuring WhiteSur Theme
+```
+sudo add-apt-repository universe
+sudo apt install gnome-tweaks
+sudo apt install gnome-shell-extension-manager
+git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
+cd WhiteSur-gtk-theme
+./install.sh -t purple -c Light
+cd ..
+git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git --depth=1
+cd WhiteSur-icon-theme
+./install.sh -a -t purple
+```
