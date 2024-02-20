@@ -226,3 +226,23 @@ wget https://raw.githubusercontent.com/Inc44/dotfiles/main/main_window.cpp -P Rc
 make
 sudo make install
 ```
+## Installing  and Configuring Rclone
+```
+sudo apt install curl
+sudo -v ; curl https://rclone.org/install.sh | sudo bash
+rclone config
+```
+## Installing Telegram
+```
+sudo apt install telegram-desktop
+```
+## Installing Rust
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+## Installing Czkawka
+```
+sudo add-apt-repository ppa:xtradeb/apps
+sudo apt update
+sudo apt-get install czkawka
+```
