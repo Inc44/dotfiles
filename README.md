@@ -442,6 +442,7 @@ sudo pihole -a -p
 ```
 wget https://github.com/peazip/PeaZip/releases/download/9.7.1/peazip_9.7.1.LINUX.GTK2-1_amd64.deb
 sudo apt install ~/peazip_9.7.1.LINUX.GTK2-1_amd64.deb
+rm peazip_9.7.1.LINUX.GTK2-1_amd64.deb
 ```
 ## Installing and Configuring Pywal
 ```
@@ -452,6 +453,12 @@ echo 'wal -R -q' | tee -a /home/pc/.bashrc
 ```
 ```
 wal --theme base16-rebecca
+```
+## Installing VirtualBox
+```
+wget https://download.virtualbox.org/virtualbox/7.0.14/virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb
+sudo apt install ~/virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb
+rm virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb
 ```
 ## Maintaining Linux
 ```
