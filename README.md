@@ -156,6 +156,8 @@ sudo apt-get install ffmpeg
 ## Installing  and Configuring Git
 ```
 sudo apt install git
+```
+```
 git config --global user.email email
 git config --global user.name name
 ```
@@ -354,8 +356,8 @@ echo 'export PATH="/home/pc/7-zip:$PATH"' | tee -a /home/pc/.bashrc
 rm 7z2301-linux-x64.tar.xz
 ```
 ```
-7zz a -tzip -m0=Copy -ppassword -mem=AES256 file.zip file
-7zz x file.zip
+7zz a -tzip -m0=Copy -ppassword -mem=AES256 path.zip path
+7zz x path.zip
 ```
 ## Installing and Using John the Ripper
 ```
@@ -366,7 +368,7 @@ make
 echo 'export PATH="/home/pc/john/run:$PATH"' | tee -a /home/pc/.bashrc
 ```
 ```
-zip2john /home/pc/file.zip > /home/pc/hash.txt
+zip2john /home/pc/path.zip > /home/pc/hash.txt
 ```
 ## Installing and Using Hashcat
 ```
@@ -409,11 +411,70 @@ sudo apt install aircrack-ng
 sudo apt install net-tools
 ```
 ```
-ifconfig
+ifconfig #netstat -ie
 sudo airmon-ng start wlp7s0
 iwconfig
 sudo airodump-ng wlp7s0mon
 sudo airodump-ng -c CH --bssid BSSID -w . wlp7s0mon
 sudo airmon-ng stop wlp7s0mon
 ```
-
+## Installing and Using NanoGPT
+```
+conda create --name nanogpt python=3.10.13
+conda activate nanogpt
+pip install torch numpy transformers datasets tiktoken wandb tqdm
+git clone https://github.com/karpathy/nanoGPT.git
+```
+```
+conda activate nanogpt
+cd nanoGPT
+python -O data/shakespeare_char/prepare.py
+python -O train.py config/train_shakespeare_char.py
+```
+## Installing and Configuring Pi-hole
+```
+curl -sSL https://install.pi-hole.net | bash
+```
+```
+sudo pihole -a -p
+```
+## Installing PeaZip
+```
+wget https://github.com/peazip/PeaZip/releases/download/9.7.1/peazip_9.7.1.LINUX.GTK2-1_amd64.deb
+sudo apt install ~/peazip_9.7.1.LINUX.GTK2-1_amd64.deb
+```
+## Installing and Configuring Pywal
+```
+conda deactivate
+sudo pip3 install pywal
+#sudo apt install python2
+echo 'wal -R -q' | tee -a /home/pc/.bashrc
+```
+```
+wal --theme base16-rebecca
+```
+## Maintaining Linux
+```
+ls
+lshw
+lsblk
+mkdir path
+cd path
+cp path path
+mv path path
+killall process
+nvidia-smi
+nano path
+vim path
+lsattr path
+chattr -i path
+chmod +x path
+chown path
+ps -aux
+xz -zkf9ev path
+zip -0 -r path.zip path
+touch -amt 197001010100.00 path
+reboot
+shutdown
+apt install/remove/purge package
+```
