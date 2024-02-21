@@ -389,6 +389,7 @@ pip install -r requirements.txt
 ```
 ## Installing OCRMyPDF
 ```
+sudo apt install unpaper
 conda create --name ocrmypdf python=3.10.13 -y
 conda activate ocrmypdf
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
