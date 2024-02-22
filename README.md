@@ -336,11 +336,11 @@ sudo apt install telegram-desktop
 ```
 wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 zcat < install-tl-unx.tar.gz | tar xf -
-cd install-tl-20240219
+cd install-tl-*
 sudo perl ./install-tl --no-interaction
 echo 'export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"' | tee -a /home/pc/.bashrc
 rm install-tl-unx.tar.gz
-rm -r install-tl-20240219
+rm -r install-tl-*
 ```
 ## Installing Thunderbird
 ```
