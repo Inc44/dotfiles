@@ -76,8 +76,9 @@ sudo apt install linux-headers-$(uname -r)
 sudo apt-key del 7fa2af80
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
 sudo dpkg -i cuda-keyring_1.1-1_all.deb
-sudo apt-get install cuda-toolkit
-sudo apt-get install nvidia-gds
+sudo apt update
+sudo apt install cuda-toolkit
+sudo apt install nvidia-gds
 echo 'export PATH="/usr/local/cuda-12.3/bin:$PATH"' | tee -a /home/pc/.bashrc
 echo 'export LD_LIBRARY_PATH="/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH"' | tee -a /home/pc/.bashrc
 sudo apt install libcublas11
