@@ -282,6 +282,7 @@ sudo apt install pinta
 ## Installing and Configuring Pywal
 ```
 conda deactivate
+sudo apt install pip
 sudo pip3 install pywal
 #sudo apt install python2
 echo 'wal -R -q' | tee -a /home/pc/.bashrc
