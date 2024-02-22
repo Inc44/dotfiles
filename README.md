@@ -1,4 +1,4 @@
-# dotfiles
+e# dotfiles
 ## Introduction
 This repository contains a collection of dotfiles and setup commands to configure a Ubuntu Linux system.
 ## Getting Started
@@ -69,7 +69,7 @@ echo "options nouveau modeset=0" | sudo tee -a /etc/modprobe.d/blacklist-nouveau
 sudo update-initramfs -u
 sudo reboot
 ```
-### Installing CUDA Toolkit
+### Installing CUDA Toolkit and Nvidia Driver
 ```
 sudo apt install gcc
 sudo apt install linux-headers-$(uname -r)
@@ -82,12 +82,7 @@ sudo apt install nvidia-gds
 echo 'export PATH="/usr/local/cuda-12.3/bin:$PATH"' | tee -a /home/pc/.bashrc
 echo 'export LD_LIBRARY_PATH="/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH"' | tee -a /home/pc/.bashrc
 sudo apt install libcublas11
-sudo reboot
-```
-### Installing Nvidia Driver
-```
-sudo dpkg -i cuda-keyring_1.1-1_all.deb
-sudo apt-get install nvidia-driver-545
+sudo apt install nvidia-driver-545
 rm cuda-keyring_1.1-1_all.deb
 sudo reboot
 ```
@@ -295,6 +290,7 @@ wal --theme base16-rebecca
 ```
 ## Installing and Configuring Pi-hole
 ```
+sudo apt  install curl
 curl -sSL https://install.pi-hole.net | bash
 ```
 ```
