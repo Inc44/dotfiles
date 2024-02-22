@@ -231,6 +231,7 @@ rm 7z2301-linux-x64.tar.xz
 ## Installing Conky
 ```
 sudo apt install conky
+sudo wget https://raw.githubusercontent.com/Inc44/dotfiles/main/conky.conf -P /etc/conky
 ```
 ## Installing Czkawka
 ```
@@ -264,6 +265,7 @@ sudo apt install inkscape
 ## Installing MPV
 ```
 sudo apt install mpv
+sudo wget https://raw.githubusercontent.com/Inc44/dotfiles/main/mpv.conf -P /etc/mpv -O mpv.conf
 ```
 ## Installing Neofetch
 ```
@@ -326,8 +328,7 @@ git clone https://github.com/kapitainsky/RcloneBrowser.git
 cd RcloneBrowser
 mkdir build && cd build
 cmake ..
-rm ~/RcloneBrowser/src/main_window.cpp
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/main_window.cpp -P ~/RcloneBrowser/src
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/main_window.cpp -P ~/RcloneBrowser/src -O main_window.cpp
 make
 sudo make install
 ```
