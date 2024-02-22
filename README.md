@@ -117,6 +117,10 @@ rm -rf ~/miniconda3/miniconda.sh
 cd miniconda3/bin
 ./conda init
 ```
+## Installing Curl
+```
+sudo apt install curl
+```
 ## Installing FFMPEG
 ```
 sudo add-apt-repository ppa:ubuntuhandbook1/ffmpeg6
@@ -304,7 +308,6 @@ sudo apt install qbittorrent
 ```
 ## Installing  and Configuring Rclone
 ```
-sudo apt install curl
 sudo -v ; curl https://rclone.org/install.sh | sudo bash
 rclone config
 ```
