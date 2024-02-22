@@ -44,7 +44,7 @@ nautilus
 ```
 ### Super+T
 ```
-...
+/home/pc/miniconda3/envs/MaTools/bin/python -O /home/pc/MaTools/management_tools/script_image_trimmer.pyw
 ```
 ### Super+S
 ```
@@ -386,7 +386,7 @@ pip install -r requirements.txt
 ```
 ## Installing MaTools
 ```
-sudo apt install libxcb-cursor0
+sudo apt install libxcb-cursor0 xclip
 conda create --name MaTools python=3.10.13
 conda activate MaTools
 git clone https://github.com/Inc44/MaTools.git
