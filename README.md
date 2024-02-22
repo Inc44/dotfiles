@@ -200,7 +200,7 @@ sudo snap remove --purge firefox
 sudo snap remove --purge core20
 sudo snap remove --purge snapd
 sudo apt purge snapd
-sudo gedit /etc/apt/preferences.d/nosnap.pref
+sudo vim /etc/apt/preferences.d/nosnap.pref
 rm -r snap
 ```
 ## Remove Ubuntu Logo
