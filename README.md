@@ -228,6 +228,10 @@ rm 7z2301-linux-x64.tar.xz
 7zz a -tzip -m0=Copy -ppassword -mem=AES256 path.zip path
 7zz x path.zip
 ```
+## Installing Conky
+```
+sudo apt install conky
+```
 ## Installing Czkawka
 ```
 sudo add-apt-repository ppa:xtradeb/apps
@@ -452,9 +456,10 @@ sudo airmon-ng stop wlp7s0mon
 ```
 git clone https://github.com/openwall/john
 cd john/src
+sudo apt install libssl-dev libgmp-dev libbz2-dev libpcap-dev
 ./configure
 make
-echo 'export PATH="/home/pc/john/run:$PATH"' | tee -a /home/pc/.bashrc
+echo 'export PATH="/home/pc/john/run:$PATH"' | tee -a /e
 ```
 ```
 zip2john /home/pc/path.zip > /home/pc/hash.txt
