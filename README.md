@@ -256,6 +256,7 @@ sudo apt install inkscape
 ## Installing Neofetch
 ```
 sudo apt install neofetch
+echo 'neofetch' | tee -a /home/pc/.bashrc
 ```
 ## Installing OBS Studio
 ```
