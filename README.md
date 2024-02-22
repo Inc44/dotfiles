@@ -1,4 +1,4 @@
-e# dotfiles
+# dotfiles
 ## Introduction
 This repository contains a collection of dotfiles and setup commands to configure a Ubuntu Linux system.
 ## Getting Started
@@ -292,7 +292,6 @@ wal --theme base16-rebecca
 ```
 ## Installing and Configuring Pi-hole
 ```
-sudo apt  install curl
 curl -sSL https://install.pi-hole.net | bash
 ```
 ```
