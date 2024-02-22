@@ -318,7 +318,8 @@ git clone https://github.com/kapitainsky/RcloneBrowser.git
 cd RcloneBrowser
 mkdir build && cd build
 cmake ..
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/main_window.cpp -P RcloneBrowser/src
+rm ~/RcloneBrowser/src/main_window.cpp
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/main_window.cpp -P ~/RcloneBrowser/src
 make
 sudo make install
 ```
