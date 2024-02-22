@@ -261,6 +261,10 @@ sudo apt install gparted
 sudo add-apt-repository ppa:inkscape.dev/stable
 sudo apt install inkscape
 ```
+## Installing MPV
+```
+sudo apt install mpv
+```
 ## Installing Neofetch
 ```
 sudo apt install neofetch
