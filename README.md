@@ -497,7 +497,7 @@ make
 echo 'export PATH="/home/pc/hashcat-utils/src:$PATH"' | tee -a /home/pc/.bashrc
 ```
 ```
-./cap2hccapx.bin /home/pc/.-01.cap /home/pc/wifi.hccapx
+cap2hccapx.bin /home/pc/.-01.cap /home/pc/wifi.hccapx
 ```
 </details>
 
