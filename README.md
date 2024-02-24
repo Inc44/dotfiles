@@ -360,10 +360,12 @@ rclone config
 ```
 ## Installing Rclone Browser
 ```
-sudo apt update && sudo apt -y install git g++ make qtdeclarative5-dev
+sudo apt update
+sudo apt install git g++ make qtdeclarative5-dev
 git clone https://github.com/kapitainsky/RcloneBrowser.git
 cd RcloneBrowser
-mkdir build && cd build
+mkdir build
+cd build
 cmake ..
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/main_window.cpp -P ~/RcloneBrowser/src -O main_window.cpp
 make
@@ -433,19 +435,29 @@ conda create --name AutoKhan python=3.10.13
 conda activate AutoKhan
 pip install -r requirements.txt
 ```
-## Installing MaTools
+## Installing AutoKhan
 ```
-sudo apt install libxcb-cursor0 xclip
-conda create --name MaTools python=3.10.13
-conda activate MaTools
-git clone https://github.com/Inc44/MaTools.git
-cd MaTools
+git clone https://github.com/Inc44/AutoKhan.git
+cd AutoKhan
+conda create --name AutoKhan python=3.10.13
+conda activate AutoKhan
 pip install -r requirements.txt
+```
+## Installing Chatgpt Telegram Bot
+```
+conda create --name ctb python=3.10.13
+conda activate ctb
+git clone https://github.com/n3d1117/chatgpt-telegram-bot.git
+cd chatgpt-telegram-bot
+pip install -r requirements.txt
+```
+```
+/home/pc/miniconda3/envs/ctb/bin/python -O /home/pc/chatgpt-telegram-bot/bot/main.py
 ```
 ## Installing OCRMyPDF
 ```
 sudo apt install unpaper
-conda create --name ocrmypdf python=3.10.13 -y
+conda create --name ocrmypdf python=3.10.13
 conda activate ocrmypdf
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install ocrmypdf
@@ -453,7 +465,7 @@ pip install git+https://github.com/ocrmypdf/OCRmyPDF-EasyOCR.git
 ```
 ## Installing WhisperX
 ```
-conda create --name whisperx python=3.10.13 -y
+conda create --name whisperx python=3.10.13
 conda activate whisperx
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install git+https://github.com/m-bain/whisperx.git
