@@ -336,6 +336,7 @@ sudo make install
 ```
 sudo add-apt-repository ppa:solaar-unifying/stable
 sudo apt install solaar
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/solaar/config.yaml -P ~/.config/solaar
 ```
 ## Installing Telegram
 ```
