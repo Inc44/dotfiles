@@ -228,6 +228,10 @@ rm 7z2301-linux-x64.tar.xz
 7zz a -tzip -m0=Copy -ppassword -mem=AES256 path.zip path
 7zz x path.zip
 ```
+## Installing Bspwm
+```
+sudo apt install bspwm
+```
 ## Installing Conky
 ```
 sudo apt install conky
@@ -257,10 +261,24 @@ sudo apt install gnome-screenshot
 ```
 sudo apt install gparted
 ```
+# Configuring Gedit
+```
+gsettings set org.gnome.gedit.preferences.editor editor-font 'Noto Sans Mono 16'
+gsettings set org.gnome.gedit.preferences.editor scheme 'classic'
+gsettings set org.gnome.gedit.preferences.editor tabs-size uint32 4
+gsettings set org.gnome.gedit.preferences.editor use-default-font false
+```
 ## Installing Inkscape
 ```
 sudo add-apt-repository ppa:inkscape.dev/stable
 sudo apt install inkscape
+```
+## Installing Ly
+```
+git clone --recurse-submodules https://github.com/fairyglade/ly
+cd ly
+make
+...
 ```
 ## Installing MPV
 ```
@@ -297,6 +315,10 @@ rm peazip_9.7.1.LINUX.GTK2-1_amd64.deb
 ## Installing Pinta
 ```
 sudo apt install pinta
+```
+## Installing Polybar
+```
+sudo apt install polybar
 ```
 ## Installing and Configuring Pywal
 ```
@@ -383,6 +405,10 @@ rm xdman_gtk_8.0.29_amd64.deb
 ```
 sudo apt install zathura
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/zathura/zathurarc -P ~/.config/zathura
+```
+## Installing Zsh
+```
+sudo apt install zsh
 ```
 </details>
 
@@ -543,26 +569,39 @@ cargo install blazingly_fast_rust_donut
 
 # TODO
 ```
-ls
-lshw
-lsblk
-mkdir path
+apt install/remove/purge package
 cd path
-cp path path
-mv path path
-killall process
-nvidia-smi
-nano path
-vim path
-lsattr path
 chattr -i path
 chmod +x path
 chown path
+cp path path
+killall process
+ls
+lsattr path
+lsblk
+lshw
+mkdir path
+mkfs.ext4
+mkfs.fat -F32
+mount
+mv path path
+nano path
+nvidia-smi
 ps -aux
+reboot
+rsync -avz --no-o --no-g --no-perms
+shutdown
+touch -amt 197001010100.00 path
+umount
+vim path
 xz -zkf9ev path
 zip -0 -r path.zip path
-touch -amt 197001010100.00 path
-reboot
-shutdown
-apt install/remove/purge package
+```
+```
+Bspwm
+Ly
+Nerd Font
+Polybar
+Siji
+Zsh
 ```
