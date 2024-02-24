@@ -139,11 +139,16 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo add-apt-repository ppa:alex-p/tesseract-ocr5
 sudo apt install tesseract-ocr
 ```
-## Installing Vim
+## Installing and Configuring Vim and Vim-Plug
 ```
 sudo apt install vim
-
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.vimrc
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.vimrc.plug
+vim > :set spell > Y > Y > 1 > Y
+vim > :PlugInstall
 ```
+
 ## Installing Visual Studio Code
 ```
 wget https://packages.microsoft.com/repos/code/pool/main/c/code/code_1.86.2-1707854558_amd64.deb
