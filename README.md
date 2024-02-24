@@ -382,7 +382,7 @@ rm xdman_gtk_8.0.29_amd64.deb
 ## Installing Zathura
 ```
 sudo apt install zathura
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/zathura/zathuraarc -P ~/.config/zathura
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/zathura/zathurarc -P ~/.config/zathura
 ```
 </details>
 
