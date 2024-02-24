@@ -331,6 +331,7 @@ cmake ..
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/main_window.cpp -P ~/RcloneBrowser/src -O main_window.cpp
 make
 sudo make install
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.local/share/rclone-browser/rclone-browser/tasks.bin -P ~/.local/share/rclone-browser/rclone-browser/tasks.bin
 ```
 ## Installing Solaar
 ```
