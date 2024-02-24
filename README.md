@@ -142,6 +142,7 @@ sudo apt install tesseract-ocr
 ## Installing Vim
 ```
 sudo apt install vim
+
 ```
 ## Installing Visual Studio Code
 ```
@@ -227,6 +228,10 @@ rm 7z2301-linux-x64.tar.xz
 ```
 7zz a -tzip -m0=Copy -ppassword -mem=AES256 path.zip path
 7zz x path.zip
+```
+# Configuring Bash
+```
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.bashrc
 ```
 ## Installing Bspwm
 ```
