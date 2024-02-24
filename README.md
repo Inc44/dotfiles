@@ -501,6 +501,7 @@ conda create --name whisperx python=3.10.13
 conda activate whisperx
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install git+https://github.com/m-bain/whisperx.git
+pip install faster-whisper==1.0.0 --upgrade
 ```
 </details>
 
