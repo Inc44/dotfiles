@@ -1,0 +1,46 @@
+set synctex true
+set statusbar-h-padding 0
+set font 'monospace normal 14'
+map u scroll half-up
+map d scroll half-down
+map D toggle_page_mode
+map r reload
+map R rotate
+map K zoom in
+map J zoom out
+map i recolor
+map p print
+set selection-clipboard clipboard
+
+set default-bg                  "#292A44"
+set default-fg                  "#FFFFFF"
+
+set statusbar-fg                "#FFFFFF"
+set statusbar-bg                "#292A44"
+
+set inputbar-bg                 "#292A44"
+set inputbar-fg                 "#FFFFFF"
+
+set notification-bg             "#292A44"
+set notification-fg             "#FFFFFF"
+
+set notification-error-bg       "#292A44"
+set notification-error-fg       "#FF0066"
+
+set notification-warning-bg     "#292A44"
+set notification-warning-fg     "#FF0066"
+
+set highlight-color             "#2CCA9b"
+set highlight-active-color      "#2CCA9b"
+
+set completion-bg               "#292A44"
+set completion-fg               "#2CCA9b"
+
+set completion-highlight-fg     "#FFFFFF"
+set completion-highlight-bg     "#2CCA9b"
+
+set recolor-lightcolor          "#292A44"
+set recolor-darkcolor           "#FFFFFF"
+
+set recolor                     "false"
+set recolor-keephue             "true"
