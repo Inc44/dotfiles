@@ -147,6 +147,7 @@ wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.vimrc -O .vimrc
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.vimrc.plug -O .vimrc.plug
 vim > :set spell > Y > Y > 1 > Y
 vim > :PlugInstall
+wget https://raw.githubusercontent.com/gillescastel/latex-snippets/master/tex.snippets -O ~/.vim/UltiSnips/tex.snippets
 ```
 ## Installing Visual Studio Code
 ```
@@ -244,7 +245,7 @@ sudo apt install bspwm
 ## Installing Conky
 ```
 sudo apt install conky
-sudo wget https://raw.githubusercontent.com/Inc44/dotfiles/main/conky.conf -P /etc/conky -O conky.conf
+sudo wget https://raw.githubusercontent.com/Inc44/dotfiles/main/conky.conf -O /etc/conky/conky.conf
 ```
 ## Installing Czkawka
 ```
@@ -292,7 +293,7 @@ make
 ## Installing MPV
 ```
 sudo apt install mpv
-sudo wget https://raw.githubusercontent.com/Inc44/dotfiles/main/mpv.conf -P /etc/mpv -O mpv.conf
+sudo wget https://raw.githubusercontent.com/Inc44/dotfiles/main/mpv.conf -O /etc/mpv/mpv.conf
 ```
 ## Installing Neofetch
 ```
@@ -303,10 +304,10 @@ echo 'neofetch' | tee -a /home/pc/.bashrc
 ```
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt install obs-studio
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/global.ini -P ~/.config/obs-studio -O global.ini
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/basic.ini -P ~/.config/obs-studio/basic/profiles/Untitled -O basic.ini
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/recordEncoder.json -P ~/.config/obs-studio/basic/profiles/Untitled -O recordEncoder.json
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/streamEncoder.json -P ~/.config/obs-studio/basic/profiles/Untitled -O streamEncoder.json
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/global.ini -O ~/.config/obs-studio/global.ini
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/basic.ini -O ~/.config/obs-studio/basic/profiles/Untitled/basic.ini
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/recordEncoder.json -O ~/.config/obs-studio/basic/profiles/Untitled/recordEncoder.json
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/streamEncoder.json -O ~/.config/obs-studio/basic/profiles/Untitled/streamEncoder.json
 ```
 ## Installing Obsidian
 ```
@@ -365,16 +366,16 @@ cd RcloneBrowser
 mkdir build
 cd build
 cmake ..
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/main_window.cpp -P ~/RcloneBrowser/src -O main_window.cpp
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/main_window.cpp -O ~/RcloneBrowser/src/main_window.cpp
 make
 sudo make install
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.local/share/rclone-browser/rclone-browser/tasks.bin -P ~/.local/share/rclone-browser/rclone-browser/tasks.bin -O tasks.bin
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.local/share/rclone-browser/rclone-browser/tasks.bin -O ~/.local/share/rclone-browser/rclone-browser/tasks.bin
 ```
 ## Installing Solaar
 ```
 sudo add-apt-repository ppa:solaar-unifying/stable
 sudo apt install solaar
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/solaar/config.yaml -P ~/.config/solaar -O config.yaml
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/solaar/config.yaml -O ~/.config/solaar/config.yaml
 ```
 ## Installing Telegram
 ```
@@ -397,7 +398,7 @@ tar xjf thunderbird-115.7.0.tar.bz2
 rm thunderbird-115.7.0.tar.bz2
 sudo mv thunderbird /opt
 sudo ln -s /opt/thunderbird/thunderbird /usr/local/bin/thunderbird
-sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/installing-thunderbird-linux/thunderbird.desktop -P /usr/local/share/applications -O thunderbird.desktop
+sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/installing-thunderbird-linux/thunderbird.desktop -O /usr/local/share/applications/thunderbird.desktop
 ```
 ## Installing VirtualBox
 ```
@@ -414,7 +415,7 @@ rm xdman_gtk_8.0.29_amd64.deb
 ## Installing Zathura
 ```
 sudo apt install zathura
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/zathura/zathurarc -P ~/.config/zathura -O zathurarc
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/zathura/zathurarc -O ~/.config/zathura/zathurarc
 ```
 ## Installing Zsh
 ```
