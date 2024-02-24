@@ -74,7 +74,7 @@ sudo reboot
 sudo apt install gcc
 sudo apt install linux-headers-$(uname -r)
 sudo apt-key del 7fa2af80
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb -O cuda-keyring_1.1-1_all.deb
 sudo dpkg -i cuda-keyring_1.1-1_all.deb
 sudo apt update
 sudo apt install cuda-toolkit
@@ -102,7 +102,7 @@ git init -b main
 ```
 ## Installing CMake
 ```
-wget https://github.com/Kitware/CMake/releases/download/v3.28.3/cmake-3.28.3-linux-x86_64.sh
+wget https://github.com/Kitware/CMake/releases/download/v3.28.3/cmake-3.28.3-linux-x86_64.sh -O cmake-3.28.3-linux-x86_64.sh
 sudo mkdir /opt/cmake
 sudo sh cmake-3.28.3-linux-x86_64.sh --skip-license --exclude-subdir --prefix=/opt/cmake
 sudo ln -s /opt/cmake/bin/cmake /usr/local/bin/cmake
@@ -143,15 +143,15 @@ sudo apt install tesseract-ocr
 ```
 sudo apt install vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.vimrc
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.vimrc.plug
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.vimrc -O .vimrc
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.vimrc.plug -O .vimrc.plug
 vim > :set spell > Y > Y > 1 > Y
 vim > :PlugInstall
 ```
 
 ## Installing Visual Studio Code
 ```
-wget https://packages.microsoft.com/repos/code/pool/main/c/code/code_1.86.2-1707854558_amd64.deb
+wget https://packages.microsoft.com/repos/code/pool/main/c/code/code_1.86.2-1707854558_amd64.deb -O code_1.86.2-1707854558_amd64.deb
 sudo apt install ~/code_1.86.2-1707854558_amd64.deb
 rm code_1.86.2-1707854558_amd64.deb
 ```
@@ -162,13 +162,13 @@ rm code_1.86.2-1707854558_amd64.deb
 
 ## Installing Microsoft Edge
 ```
-wget https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_121.0.2277.128-1_amd64.deb
+wget https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_121.0.2277.128-1_amd64.deb -O microsoft-edge-stable_121.0.2277.128-1_amd64.deb
 sudo apt install ~/microsoft-edge-stable_121.0.2277.128-1_amd64.deb
 rm microsoft-edge-stable_121.0.2277.128-1_amd64.deb
 ```
 ## Installing Yandex Browser
 ```
-wget https://ext-cachev2-cogent03.cdn.yandex.net/download.cdn.yandex.net/browser/yandex/24_1_1_940_54214/Yandex.deb
+wget https://ext-cachev2-cogent03.cdn.yandex.net/download.cdn.yandex.net/browser/yandex/24_1_1_940_54214/Yandex.deb -O Yandex.deb
 sudo apt install ~/Yandex.deb
 rm Yandex.deb
 ```
@@ -224,7 +224,7 @@ sudo rm /usr/share/plymouth/ubuntu-logo.png
 
 ## Installing and Using 7-Zip
 ```
-wget https://www.7-zip.org/a/7z2301-linux-x64.tar.xz
+wget https://www.7-zip.org/a/7z2301-linux-x64.tar.xz -O 7z2301-linux-x64.tar.xz
 mkdir 7-zip
 tar xf 7z2301-linux-x64.tar.xz -C 7-zip
 echo 'export PATH="/home/pc/7-zip:$PATH"' | tee -a /home/pc/.bashrc
@@ -236,7 +236,7 @@ rm 7z2301-linux-x64.tar.xz
 ```
 # Configuring Bash
 ```
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.bashrc
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.bashrc -O .bashrc
 ```
 ## Installing Bspwm
 ```
@@ -245,7 +245,7 @@ sudo apt install bspwm
 ## Installing Conky
 ```
 sudo apt install conky
-sudo wget https://raw.githubusercontent.com/Inc44/dotfiles/main/conky.conf -P /etc/conky
+sudo wget https://raw.githubusercontent.com/Inc44/dotfiles/main/conky.conf -P /etc/conky -O conky.conf
 ```
 ## Installing Czkawka
 ```
@@ -275,7 +275,7 @@ sudo apt install gparted
 ```
 gsettings set org.gnome.gedit.preferences.editor editor-font 'Noto Sans Mono 16'
 gsettings set org.gnome.gedit.preferences.editor scheme 'classic'
-gsettings set org.gnome.gedit.preferences.editor tabs-size uint32 4
+gsettings set org.gnome.gedit.preferences.editor tabs-size 4
 gsettings set org.gnome.gedit.preferences.editor use-default-font false
 ```
 ## Installing Inkscape
@@ -305,20 +305,20 @@ echo 'neofetch' | tee -a /home/pc/.bashrc
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt install obs-studio
 
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/global.ini -P ~/.config/obs-studio
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/basic.ini -P ~/.config/obs-studio/basic/profiles/Untitled
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/recordEncoder.json -P ~/.config/obs-studio/basic/profiles/Untitled
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/streamEncoder.json -P ~/.config/obs-studio/basic/profiles/Untitled
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/global.ini -P ~/.config/obs-studio -O global.ini
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/basic.ini -P ~/.config/obs-studio/basic/profiles/Untitled -O basic.ini
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/recordEncoder.json -P ~/.config/obs-studio/basic/profiles/Untitled -O recordEncoder.json
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/streamEncoder.json -P ~/.config/obs-studio/basic/profiles/Untitled -O streamEncoder.json
 ```
 ## Installing Obsidian
 ```
-wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.3/obsidian_1.5.3_amd64.deb
+wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.3/obsidian_1.5.3_amd64.deb -O obsidian_1.5.3_amd64.deb
 sudo apt install ~/obsidian_1.5.3_amd64.deb
 rm obsidian_1.5.3_amd64.deb
 ```
 ## Installing PeaZip
 ```
-wget https://github.com/peazip/PeaZip/releases/download/9.7.1/peazip_9.7.1.LINUX.GTK2-1_amd64.deb
+wget https://github.com/peazip/PeaZip/releases/download/9.7.1/peazip_9.7.1.LINUX.GTK2-1_amd64.deb -O peazip_9.7.1.LINUX.GTK2-1_amd64.deb
 sudo apt install ~/peazip_9.7.1.LINUX.GTK2-1_amd64.deb
 rm peazip_9.7.1.LINUX.GTK2-1_amd64.deb
 ```
@@ -370,13 +370,13 @@ cmake ..
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/main_window.cpp -P ~/RcloneBrowser/src -O main_window.cpp
 make
 sudo make install
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.local/share/rclone-browser/rclone-browser/tasks.bin -P ~/.local/share/rclone-browser/rclone-browser/tasks.bin
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.local/share/rclone-browser/rclone-browser/tasks.bin -P ~/.local/share/rclone-browser/rclone-browser/tasks.bin -O tasks.bin
 ```
 ## Installing Solaar
 ```
 sudo add-apt-repository ppa:solaar-unifying/stable
 sudo apt install solaar
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/solaar/config.yaml -P ~/.config/solaar
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/solaar/config.yaml -P ~/.config/solaar -O config.yaml
 ```
 ## Installing Telegram
 ```
@@ -384,7 +384,7 @@ sudo apt install telegram-desktop
 ```
 ## Installing TeX Live
 ```
-wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O install-tl-unx.tar.gz
 zcat < install-tl-unx.tar.gz | tar xf -
 cd install-tl-*
 sudo perl ./install-tl --no-interaction
@@ -394,29 +394,29 @@ rm -r install-tl-*
 ```
 ## Installing Thunderbird
 ```
-wget https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/115.7.0/linux-x86_64/fr/thunderbird-115.7.0.tar.bz2
+wget https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/115.7.0/linux-x86_64/fr/thunderbird-115.7.0.tar.bz2 -O thunderbird-115.7.0.tar.bz2
 tar xjf thunderbird-115.7.0.tar.bz2
 rm thunderbird-115.7.0.tar.bz2
 sudo mv thunderbird /opt
 sudo ln -s /opt/thunderbird/thunderbird /usr/local/bin/thunderbird
-sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/installing-thunderbird-linux/thunderbird.desktop -P /usr/local/share/applications
+sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/installing-thunderbird-linux/thunderbird.desktop -P /usr/local/share/applications -O thunderbird.desktop
 ```
 ## Installing VirtualBox
 ```
-wget https://download.virtualbox.org/virtualbox/7.0.14/virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb
+wget https://download.virtualbox.org/virtualbox/7.0.14/virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb -O virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb
 sudo apt install ~/virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb
 rm virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb
 ```
 ## Installing Xtreme Download Manager
 ```
-wget https://github.com/subhra74/xdm/releases/download/8.0.29/xdman_gtk_8.0.29_amd64.deb
+wget https://github.com/subhra74/xdm/releases/download/8.0.29/xdman_gtk_8.0.29_amd64.deb -O xdman_gtk_8.0.29_amd64.deb
 sudo apt install ~/xdman_gtk_8.0.29_amd64.deb
 rm xdman_gtk_8.0.29_amd64.deb
 ```
 ## Installing Zathura
 ```
 sudo apt install zathura
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/zathura/zathurarc -P ~/.config/zathura
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/zathura/zathurarc -P ~/.config/zathura -O zathurarc
 ```
 ## Installing Zsh
 ```
@@ -427,14 +427,6 @@ sudo apt install zsh
 # Python
 <details>
 
-## Installing AutoKhan
-```
-git clone https://github.com/Inc44/AutoKhan.git
-cd AutoKhan
-conda create --name AutoKhan python=3.10.13
-conda activate AutoKhan
-pip install -r requirements.txt
-```
 ## Installing AutoKhan
 ```
 git clone https://github.com/Inc44/AutoKhan.git
@@ -454,21 +446,14 @@ pip install -r requirements.txt
 ```
 /home/pc/miniconda3/envs/ctb/bin/python -O /home/pc/chatgpt-telegram-bot/bot/main.py
 ```
-## Installing OCRMyPDF
+## Installing MaTools
 ```
-sudo apt install unpaper
-conda create --name ocrmypdf python=3.10.13
-conda activate ocrmypdf
-conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
-pip install ocrmypdf
-pip install git+https://github.com/ocrmypdf/OCRmyPDF-EasyOCR.git
-```
-## Installing WhisperX
-```
-conda create --name whisperx python=3.10.13
-conda activate whisperx
-conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
-pip install git+https://github.com/m-bain/whisperx.git
+sudo apt install libxcb-cursor0 xclip
+conda create --name MaTools python=3.10.13
+conda activate MaTools
+git clone https://github.com/Inc44/MaTools.git
+cd MaTools
+pip install -r requirements.txt
 ```
 ## Installing and Using NanoGPT
 ```
@@ -482,6 +467,15 @@ conda activate nanogpt
 cd nanoGPT
 python -O data/shakespeare_char/prepare.py
 python -O train.py config/train_shakespeare_char.py
+```
+## Installing OCRMyPDF
+```
+sudo apt install unpaper
+conda create --name ocrmypdf python=3.10.13
+conda activate ocrmypdf
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+pip install ocrmypdf
+pip install git+https://github.com/ocrmypdf/OCRmyPDF-EasyOCR.git
 ```
 ## Installing and Using TheSync
 ```
@@ -499,9 +493,16 @@ git clone https://github.com/Anjok07/ultimatevocalremovergui.git
 cd ultimatevocalremovergui
 conda create --name uvr python=3.10.13
 conda activate uvr
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/Dora-0.0.3.tar.gz
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/Dora-0.0.3.tar.gz -O Dora-0.0.3.tar.gz
 pip3 install Dora-0.0.3.tar.gz
 pip3 install -r requirements.txt
+```
+## Installing WhisperX
+```
+conda create --name whisperx python=3.10.13
+conda activate whisperx
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+pip install git+https://github.com/m-bain/whisperx.git
 ```
 </details>
 
@@ -545,7 +546,7 @@ sed -i 's/^[^$]*//' /home/pc/hash.txt
 sed -i 's/[^$]*$//' /home/pc/hash.txt
 ```
 ```
-wget https://download.weakpass.com/wordlists/90/rockyou.txt.gz
+wget https://download.weakpass.com/wordlists/90/rockyou.txt.gz -O rockyou.txt.gz
 gzip -d rockyou.txt.gz
 hashcat -m 13600 -a3 -w3 -d2 /home/pc/hash.txt /home/pc/rockyou.txt --increment --increment-min 8 --increment-max 8
 cat /home/pc/hashcat/hashcat.potfile
