@@ -148,7 +148,6 @@ wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.vimrc.plug -O .vimrc
 vim > :set spell > Y > Y > 1 > Y
 vim > :PlugInstall
 ```
-
 ## Installing Visual Studio Code
 ```
 wget https://packages.microsoft.com/repos/code/pool/main/c/code/code_1.86.2-1707854558_amd64.deb -O code_1.86.2-1707854558_amd64.deb
@@ -304,7 +303,6 @@ echo 'neofetch' | tee -a /home/pc/.bashrc
 ```
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt install obs-studio
-
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/global.ini -P ~/.config/obs-studio -O global.ini
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/basic.ini -P ~/.config/obs-studio/basic/profiles/Untitled -O basic.ini
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/recordEncoder.json -P ~/.config/obs-studio/basic/profiles/Untitled -O recordEncoder.json
