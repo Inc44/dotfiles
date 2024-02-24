@@ -276,6 +276,11 @@ echo 'neofetch' | tee -a /home/pc/.bashrc
 ```
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt install obs-studio
+
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/global.ini -P ~/.config/obs-studio
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/basic.ini -P ~/.config/obs-studio/basic/profiles/Untitled
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/recordEncoder.json -P ~/.config/obs-studio/basic/profiles/Untitled
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/streamEncoder.json -P ~/.config/obs-studio/basic/profiles/Untitled
 ```
 ## Installing Obsidian
 ```
