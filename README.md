@@ -412,7 +412,7 @@ sudo apt install zsh
 ```
 </details>
 
-# Conda
+# Python
 <details>
 
 ## Installing AutoKhan
@@ -460,6 +460,14 @@ conda activate nanogpt
 cd nanoGPT
 python -O data/shakespeare_char/prepare.py
 python -O train.py config/train_shakespeare_char.py
+```
+## Installing and Using TheSync
+```
+git clone https://github.com/Inc44/TheSync.git
+```
+```
+cd TheSync
+python -O thesync.py
 ```
 ## Installing UVR
 ```
