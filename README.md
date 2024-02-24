@@ -484,6 +484,18 @@ git clone https://github.com/Inc44/TheSync.git
 cd TheSync
 python -O thesync.py
 ```
+## Installing and Using TheTTS
+```
+git clone https://github.com/Inc44/TheTTS.git
+conda create --name TheTTS python=3.10.13
+conda activate TheTTS
+pip install openai TTS
+```
+```
+conda activate TheTTS
+cd TheTTS
+python -O thetts.py
+```
 ## Installing UVR
 ```
 sudo apt install python3-pip
