@@ -487,9 +487,16 @@ python -O thesync.py
 ## Installing and Using TheTTS
 ```
 git clone https://github.com/Inc44/TheTTS.git
+cd TheTTS
 conda create --name TheTTS python=3.10.13
 conda activate TheTTS
-pip install openai TTS
+pip install openai==1.12.0 TTS==0.22.0
+DS_BUILD_TRANSFORMER_INFERENCE=1 pip install deepspeed==0.13.3
+sudo apt install git-lfs
+git lfs install
+git clone https://huggingface.co/coqui/XTTS-v2
+sudo rm -r XTTS-v2/.git
+cp /home/pc/TheTTS/xtts.py /home/pc/miniconda3/envs/TheTTS/lib/python3.10/site-packages/TTS/tts/models
 ```
 ```
 conda activate TheTTS
