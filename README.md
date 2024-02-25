@@ -371,6 +371,10 @@ make
 sudo make install
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.local/share/rclone-browser/rclone-browser/tasks.bin -O ~/.local/share/rclone-browser/rclone-browser/tasks.bin
 ```
+## Installing Rofi
+```
+sudo apt install rofi
+```
 ## Installing Solaar
 ```
 sudo add-apt-repository ppa:solaar-unifying/stable
@@ -652,6 +656,7 @@ Bspwm
 Ly
 Nerd Font
 Polybar
+Rofi
 Siji
 Zsh
 ```
