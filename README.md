@@ -88,7 +88,7 @@ sudo reboot
 ```
 </details>
 
-## Installing  and Configuring Git
+## Installing and Configuring Git
 ```
 sudo apt install git
 ```
@@ -263,6 +263,11 @@ cmake ../src
 make
 echo 'export PATH="/home/pc/Efficient-Compression-Tool/build:$PATH"' | tee -a /home/pc/.bashrc
 ```
+## Installing Fonts
+```
+cp -r ~/dotfiles/.fonts ~
+sudo fc-cache -f -v
+```
 ## Installing Gnome Screenshot
 ```
 sudo apt install gnome-screenshot
@@ -299,6 +304,12 @@ sudo wget https://raw.githubusercontent.com/Inc44/dotfiles/main/mpv.conf -O /etc
 ```
 sudo apt install neofetch
 echo 'neofetch' | tee -a /home/pc/.bashrc
+```
+## Installing Nerd Fonts
+```
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Noto.zip
+unzip Noto.zip "*.ttf" -d ~/.fonts
+sudo fc-cache -f -v
 ```
 ## Installing OBS Studio
 ```
@@ -352,7 +363,7 @@ sudo pihole -a -p
 sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
 sudo apt install qbittorrent
 ```
-## Installing  and Configuring Rclone
+## Installing and Configuring Rclone
 ```
 sudo -v ; curl https://rclone.org/install.sh | sudo bash
 rclone config
@@ -596,7 +607,7 @@ cap2hccapx.bin /home/pc/.-01.cap /home/pc/wifi.hccapx
 
 # Theme
 <details>
-  
+
 ## Installing and Configuring WhiteSur Theme
 ```
 sudo add-apt-repository universe
@@ -631,6 +642,7 @@ chown path
 cp path path
 killall process
 ls
+ls -l
 lsattr path
 lsblk
 lshw
