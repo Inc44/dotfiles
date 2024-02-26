@@ -632,41 +632,62 @@ cargo install blazingly_fast_rust_donut
 ```
 </details>
 
+# Cheat Sheet
+`apt install package`: Install package along with its dependencies
+`apt remove package`: Remove package, preserve configuration and data
+`apt purge package`: Remove package
+`cd directory`: Change the current directory
+`chattr attribute path`: Change the attributes of a file or directory
+`+r`, `-r`: Add/remove read attribute
+`+w`, `-w`: Add/remove write attribute
+`+x`, `-x`: Add/remove executable attribute
+`+i`, `-i`: Add/remove immutable attribute
+`chmod mode path`: Change the mode of a file or directory
+`0`: No permissions, `1`: Read, `2`: Write, `3`: `1+2`, `4`: Execute, `5`: `1+4`, `6`: `2+4`, `7`: `1+2+4`
+`u`: User, `g`: Group, `o`: Others, `a`: All
+mode: `755` == `rwxrw-rw-` for `ugo`
+`chown user/uid path`: Change the owner of a file or directory
+`id -u user`: Get UID of user
+`cp path1 path2`: Copy by overwriting the file or directory at `path1` to `path2`
+`killall process`: Terminate all processes of `process`
+`ls`: List the files and directories in the current directory
+`ls -l`: List the files and directories in the current directory in long format, showing permissions, ownership, size, and modification date
+`lsattr path`: List the attributes of the files or directories
+`lsblk`: List information about all available storage devices
+`lshw`: List detailed information about the hardware configuration of the machine
+`mkdir directory`: Create a new directory
+`touch -amt 197001010100.00 file`: Create/update the access and modification times
+`mkfs.ext4 partition`: Create an ext4 filesystem
+`mkfs.fat -F32 partition`: Create a FAT32 filesystem
+`mount`: Mount a unmounted filesystem
+`umount`: Unmount a mounted filesystem
+`mv path1 path2`: Move or rename by overwriting the file or directory at path1 to path2
+`code file`: Open the file in the Visual Studio Code text editor
+`gedit file`: Open the file in the Vim text editor
+`nano file`: Open the file in the Nano text editor
+`vim file`: Open the file in the Vim text editor
+`nvidia-smi`: Display information about GPU utilization, temperature, memory usage, and more
+`ps -aux`: Lists all running processes on the system.
+`-a`: All users, `-u`: User-oriented format, `-x`: Include hidden processes
+`reboot`: Reboot the system immediately
+`shutdown +minutes`: Schedule/delay shutting down
+`shutdown -c`: Cancel shutting down
+`shutdown now`: Shut down the system immediately
+`xz -zkf9ev path`: Compress a file using the XZ compression algorithm
+`-z`: Compress, `-k`: Keep the original file, `-f`: Force if already exists, `-9`: Highest compression level, `-e`: Extreme compression, `-v`: Provide detailed information
+`zip -0 -r path.zip path`: Creates a zip archive
+`-0`: Stores without compression, `-r`: Recursive/include subdirectories and their content
+`unzip archive -d destination`: Extracts files from a ZIP archive
+`rsync -avz --no-o --no-g --no-perms`: Synchronizes files and directories between two locations
+`-a`: Archive mode/preserves symbolic links, devices, attributes, permissions, ownerships
+`-v`: Provide detailed information
+`-z`: Compress during data transfer
+`--no-o`, `--no-g`, `--no-perms`: Prevent setting ownership, group and changing permissions
 # TODO
-```
-apt install/remove/purge package
-cd path
-chattr -i path
-chmod +x path
-chown path
-cp path path
-killall process
-ls
-ls -l
-lsattr path
-lsblk
-lshw
-mkdir path
-mkfs.ext4
-mkfs.fat -F32
-mount
-mv path path
-nano path
-nvidia-smi
-ps -aux
-reboot
-rsync -avz --no-o --no-g --no-perms
-shutdown
-touch -amt 197001010100.00 path
-umount
-vim path
-xz -zkf9ev path
-zip -0 -r path.zip path
-```
 ```
 Bspwm
 Ly
-Nerd Font
+Mpd
 Polybar
 Rofi
 Siji
