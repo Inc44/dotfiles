@@ -685,6 +685,13 @@ mode: `755` == `rwxrw-rw-` for `ugo`
 `--no-o`, `--no-g`, `--no-perms`: Prevent setting ownership, group and changing permissions
 # TODO
 ```
+alias
+grep
+httrack
+tar
+wget
+```
+```
 Bspwm
 Ly
 Mpd
