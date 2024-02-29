@@ -7,7 +7,7 @@ Please follow the steps carefully.
 ## Maintenance
 <details>
 
-## System Update and Cache Cleaning
+### System Update and Cache Cleaning
 ```
 sudo apt update
 sudo apt upgrade
@@ -18,59 +18,59 @@ pip cache purge
 conda clean -a
 sudo journalctl --vacuum-time=1d
 ```
-## Clean History
+### Clean History
 ```
 history -c && history -w
 ```
 </details>
 
-# Shortcuts
+## Shortcuts
 <details>
 
-### Ctrl+E
+#### Ctrl+E
 ```
 sensible-browser
 ```
-### Ctrl+M
+#### Ctrl+M
 ```
 /home/pc/miniconda3/envs/MaTools/bin/python -O /home/pc/MaTools/management_tools/main_management_tools_app.pyw
 ```
-### Ctrl+U
+#### Ctrl+U
 ```
 /home/pc/miniconda3/envs/uvr/bin/python -O /home/pc/ultimatevocalremovergui/UVR.py
 ```
-### Super+E
+#### Super+E
 ```
 nautilus
 ```
-### Super+T
+#### Super+T
 ```
 /home/pc/miniconda3/envs/MaTools/bin/python -O /home/pc/MaTools/management_tools/script_image_trimmer.pyw
 ```
-### Super+S
+#### Super+S
 ```
 gnome-screenshot --delay=1
 ```
-### Super+Shift+S
+#### Super+Shift+S
 ```
 Take a screenshot interactively
 ```
 </details>
 
-# Developpement
+## Developpement
 <details>
 
-## Installing CUDA
+### Installing CUDA
 <details>
 
-### Disable/Blacklist the Nouveau Driver
+#### Disable/Blacklist the Nouveau Driver
 ```
 echo "blacklist nouveau" | sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf
 echo "options nouveau modeset=0" | sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf
 sudo update-initramfs -u
 sudo reboot
 ```
-### Installing CUDA Toolkit and Nvidia Driver
+#### Installing CUDA Toolkit and Nvidia Driver
 ```
 sudo apt install gcc
 sudo apt install linux-headers-$(uname -r)
@@ -89,7 +89,7 @@ sudo reboot
 ```
 </details>
 
-## Installing and Configuring Git
+### Installing and Configuring Git
 ```
 sudo apt install git
 ```
@@ -97,11 +97,11 @@ sudo apt install git
 git config --global user.email email
 git config --global user.name name
 ```
-## Initializing Git
+### Initializing Git
 ```
 git init -b main
 ```
-## Installing CMake
+### Installing CMake
 ```
 wget https://github.com/Kitware/CMake/releases/download/v3.28.3/cmake-3.28.3-linux-x86_64.sh -O cmake-3.28.3-linux-x86_64.sh
 sudo mkdir /opt/cmake
@@ -109,7 +109,7 @@ sudo sh cmake-3.28.3-linux-x86_64.sh --skip-license --exclude-subdir --prefix=/o
 sudo ln -s /opt/cmake/bin/cmake /usr/local/bin/cmake
 rm cmake-3.28.3-linux-x86_64.sh
 ```
-## Installing Miniconda
+### Installing Miniconda
 ```
 mkdir -p ~/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
@@ -118,29 +118,29 @@ rm -rf ~/miniconda3/miniconda.sh
 cd miniconda3/bin
 ./conda init
 ```
-## Installing Curl
+### Installing Curl
 ```
 sudo apt install curl
 ```
-## Installing FFMPEG
+### Installing FFMPEG
 ```
 sudo add-apt-repository ppa:ubuntuhandbook1/ffmpeg6
 sudo apt-get install ffmpeg
 ```
-## Installing Go
+### Installing Go
 ```
 sudo apt install golang-go
 ```
-## Installing Rust
+### Installing Rust
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
-## Installing Tesseract OCR
+### Installing Tesseract OCR
 ```
 sudo add-apt-repository ppa:alex-p/tesseract-ocr5
 sudo apt install tesseract-ocr
 ```
-## Installing and Configuring Vim and Vim-Plug
+### Installing and Configuring Vim and Vim-Plug
 ```
 sudo apt install vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -150,7 +150,7 @@ vim > :set spell > Y > Y > 1 > Y
 vim > :PlugInstall
 wget https://raw.githubusercontent.com/gillescastel/latex-snippets/master/tex.snippets -O ~/.vim/UltiSnips/tex.snippets
 ```
-## Installing Visual Studio Code
+### Installing Visual Studio Code
 ```
 wget https://packages.microsoft.com/repos/code/pool/main/c/code/code_1.86.2-1707854558_amd64.deb -O code_1.86.2-1707854558_amd64.deb
 sudo apt install ~/code_1.86.2-1707854558_amd64.deb
@@ -158,16 +158,16 @@ rm code_1.86.2-1707854558_amd64.deb
 ```
 </details>
 
-# Browser
+## Browser
 <details>
 
-## Installing Microsoft Edge
+### Installing Microsoft Edge
 ```
 wget https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_121.0.2277.128-1_amd64.deb -O microsoft-edge-stable_121.0.2277.128-1_amd64.deb
 sudo apt install ~/microsoft-edge-stable_121.0.2277.128-1_amd64.deb
 rm microsoft-edge-stable_121.0.2277.128-1_amd64.deb
 ```
-## Installing Yandex Browser
+### Installing Yandex Browser
 ```
 wget https://ext-cachev2-cogent03.cdn.yandex.net/download.cdn.yandex.net/browser/yandex/24_1_1_940_54214/Yandex.deb -O Yandex.deb
 sudo apt install ~/Yandex.deb
@@ -175,10 +175,10 @@ rm Yandex.deb
 ```
 </details>
 
-# Bootloader
+## Bootloader
 <details>
 
-## Configuring GRUB
+### Configuring GRUB
 ```
 sudo vim /etc/default/grub
 sudo update-grub
@@ -186,18 +186,18 @@ sudo update-grub
 ```
 </details>
 
-# Cleanup
+## Cleanup
 <details>
 
-## Disabling Shutdown Confirmation
+### Disabling Shutdown Confirmation
 ```
 gsettings set org.gnome.SessionManager logout-prompt false
 ```
-## Purge Apport
+### Purge Apport
 ```
 sudo apt purge apport
 ```
-## Purge Snap
+### Purge Snap
 ```
 snap list
 sudo snap remove --purge snap-store
@@ -214,16 +214,16 @@ sudo apt purge snapd
 sudo vim /etc/apt/preferences.d/nosnap.pref
 rm -r snap
 ```
-## Remove Ubuntu Logo
+### Remove Ubuntu Logo
 ```
 sudo rm /usr/share/plymouth/ubuntu-logo.png
 ```
 </details>
 
-# Tools
+## Tools
 <details>
 
-## Installing and Using 7-Zip
+### Installing and Using 7-Zip
 ```
 wget https://www.7-zip.org/a/7z2301-linux-x64.tar.xz -O 7z2301-linux-x64.tar.xz
 mkdir 7-zip
@@ -235,26 +235,26 @@ rm 7z2301-linux-x64.tar.xz
 7zz a -tzip -m0=Copy -ppassword -mem=AES256 path.zip path
 7zz x path.zip
 ```
-# Configuring Bash
+## Configuring Bash
 ```
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.bashrc -O .bashrc
 ```
-## Installing Bspwm
+### Installing Bspwm
 ```
 sudo apt install bspwm
 ```
-## Installing Conky
+### Installing Conky
 ```
 sudo apt install conky
 sudo wget https://raw.githubusercontent.com/Inc44/dotfiles/main/conky.conf -O /etc/conky/conky.conf
 ```
-## Installing Czkawka
+### Installing Czkawka
 ```
 sudo add-apt-repository ppa:xtradeb/apps
 sudo apt update
 sudo apt-get install czkawka
 ```
-## Installing ECT
+### Installing ECT
 ```
 git clone --recursive https://github.com/fhanau/Efficient-Compression-Tool.git
 cd Efficient-Compression-Tool
@@ -264,55 +264,55 @@ cmake ../src
 make
 echo 'export PATH="/home/pc/Efficient-Compression-Tool/build:$PATH"' | tee -a /home/pc/.bashrc
 ```
-## Installing Fonts
+### Installing Fonts
 ```
 cp -r ~/dotfiles/.fonts ~
 sudo fc-cache -f -v
 ```
-## Installing Gnome Screenshot
+### Installing Gnome Screenshot
 ```
 sudo apt install gnome-screenshot
 ```
-## Installing GParted
+### Installing GParted
 ```
 sudo apt install gparted
 ```
-# Configuring Gedit
+## Configuring Gedit
 ```
 gsettings set org.gnome.gedit.preferences.editor editor-font 'Noto Sans Mono 16'
 gsettings set org.gnome.gedit.preferences.editor scheme 'classic'
 gsettings set org.gnome.gedit.preferences.editor tabs-size 4
 gsettings set org.gnome.gedit.preferences.editor use-default-font false
 ```
-## Installing Inkscape
+### Installing Inkscape
 ```
 sudo add-apt-repository ppa:inkscape.dev/stable
 sudo apt install inkscape
 ```
-## Installing Ly
+### Installing Ly
 ```
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 make
 ...
 ```
-## Installing MPV
+### Installing MPV
 ```
 sudo apt install mpv
 sudo wget https://raw.githubusercontent.com/Inc44/dotfiles/main/mpv.conf -O /etc/mpv/mpv.conf
 ```
-## Installing Neofetch
+### Installing Neofetch
 ```
 sudo apt install neofetch
 echo 'neofetch' | tee -a /home/pc/.bashrc
 ```
-## Installing Nerd Fonts
+### Installing Nerd Fonts
 ```
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Noto.zip
 unzip Noto.zip "*.ttf" -d ~/.fonts
 sudo fc-cache -f -v
 ```
-## Installing OBS Studio
+### Installing OBS Studio
 ```
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt install obs-studio
@@ -321,27 +321,27 @@ wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/ba
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/recordEncoder.json -O ~/.config/obs-studio/basic/profiles/Untitled/recordEncoder.json
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/streamEncoder.json -O ~/.config/obs-studio/basic/profiles/Untitled/streamEncoder.json
 ```
-## Installing Obsidian
+### Installing Obsidian
 ```
 wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.3/obsidian_1.5.3_amd64.deb -O obsidian_1.5.3_amd64.deb
 sudo apt install ~/obsidian_1.5.3_amd64.deb
 rm obsidian_1.5.3_amd64.deb
 ```
-## Installing PeaZip
+### Installing PeaZip
 ```
 wget https://github.com/peazip/PeaZip/releases/download/9.7.1/peazip_9.7.1.LINUX.GTK2-1_amd64.deb -O peazip_9.7.1.LINUX.GTK2-1_amd64.deb
 sudo apt install ~/peazip_9.7.1.LINUX.GTK2-1_amd64.deb
 rm peazip_9.7.1.LINUX.GTK2-1_amd64.deb
 ```
-## Installing Pinta
+### Installing Pinta
 ```
 sudo apt install pinta
 ```
-## Installing Polybar
+### Installing Polybar
 ```
 sudo apt install polybar
 ```
-## Installing and Configuring Pywal
+### Installing and Configuring Pywal
 ```
 conda deactivate
 sudo apt install pip
@@ -352,24 +352,24 @@ echo 'wal -R -q' | tee -a /home/pc/.bashrc
 ```
 wal --theme base16-rebecca
 ```
-## Installing and Configuring Pi-hole
+### Installing and Configuring Pi-hole
 ```
 curl -sSL https://install.pi-hole.net | bash
 ```
 ```
 sudo pihole -a -p
 ```
-## Installing qBittorrent
+### Installing qBittorrent
 ```
 sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
 sudo apt install qbittorrent
 ```
-## Installing and Configuring Rclone
+### Installing and Configuring Rclone
 ```
 sudo -v ; curl https://rclone.org/install.sh | sudo bash
 rclone config
 ```
-## Installing Rclone Browser
+### Installing Rclone Browser
 ```
 sudo apt update
 sudo apt install git g++ make qtdeclarative5-dev
@@ -383,21 +383,21 @@ make
 sudo make install
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.local/share/rclone-browser/rclone-browser/tasks.bin -O ~/.local/share/rclone-browser/rclone-browser/tasks.bin
 ```
-## Installing Rofi
+### Installing Rofi
 ```
 sudo apt install rofi
 ```
-## Installing Solaar
+### Installing Solaar
 ```
 sudo add-apt-repository ppa:solaar-unifying/stable
 sudo apt install solaar
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/solaar/config.yaml -O ~/.config/solaar/config.yaml
 ```
-## Installing Telegram
+### Installing Telegram
 ```
 sudo apt install telegram-desktop
 ```
-## Installing TeX Live
+### Installing TeX Live
 ```
 wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O install-tl-unx.tar.gz
 zcat < install-tl-unx.tar.gz | tar xf -
@@ -407,7 +407,7 @@ echo 'export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"' | tee -a /ho
 rm install-tl-unx.tar.gz
 rm -r install-tl-*
 ```
-## Installing Thunderbird
+### Installing Thunderbird
 ```
 wget https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/115.7.0/linux-x86_64/fr/thunderbird-115.7.0.tar.bz2 -O thunderbird-115.7.0.tar.bz2
 tar xjf thunderbird-115.7.0.tar.bz2
@@ -416,33 +416,33 @@ sudo mv thunderbird /opt
 sudo ln -s /opt/thunderbird/thunderbird /usr/local/bin/thunderbird
 sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/installing-thunderbird-linux/thunderbird.desktop -O /usr/local/share/applications/thunderbird.desktop
 ```
-## Installing VirtualBox
+### Installing VirtualBox
 ```
 wget https://download.virtualbox.org/virtualbox/7.0.14/virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb -O virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb
 sudo apt install ~/virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb
 rm virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb
 ```
-## Installing Xtreme Download Manager
+### Installing Xtreme Download Manager
 ```
 wget https://github.com/subhra74/xdm/releases/download/8.0.29/xdman_gtk_8.0.29_amd64.deb -O xdman_gtk_8.0.29_amd64.deb
 sudo apt install ~/xdman_gtk_8.0.29_amd64.deb
 rm xdman_gtk_8.0.29_amd64.deb
 ```
-## Installing Zathura
+### Installing Zathura
 ```
 sudo apt install zathura
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/zathura/zathurarc -O ~/.config/zathura/zathurarc
 ```
-## Installing Zsh
+### Installing Zsh
 ```
 sudo apt install zsh
 ```
 </details>
 
-# Python
+## Python
 <details>
 
-## Installing AutoKhan
+### Installing AutoKhan
 ```
 git clone https://github.com/Inc44/AutoKhan.git
 cd AutoKhan
@@ -450,7 +450,7 @@ conda create --name AutoKhan python=3.10.13
 conda activate AutoKhan
 pip install -r requirements.txt
 ```
-## Installing Chatgpt Telegram Bot
+### Installing Chatgpt Telegram Bot
 ```
 conda create --name ctb python=3.10.13
 conda activate ctb
@@ -461,7 +461,7 @@ pip install -r requirements.txt
 ```
 /home/pc/miniconda3/envs/ctb/bin/python -O /home/pc/chatgpt-telegram-bot/bot/main.py
 ```
-## Installing MaTools
+### Installing MaTools
 ```
 sudo apt install libxcb-cursor0 xclip
 conda create --name MaTools python=3.10.13
@@ -470,7 +470,7 @@ git clone https://github.com/Inc44/MaTools.git
 cd MaTools
 pip install -r requirements.txt
 ```
-## Installing and Using NanoGPT
+### Installing and Using NanoGPT
 ```
 conda create --name nanogpt python=3.10.13
 conda activate nanogpt
@@ -483,7 +483,7 @@ cd nanoGPT
 python -O data/shakespeare_char/prepare.py
 python -O train.py config/train_shakespeare_char.py
 ```
-## Installing OCRMyPDF
+### Installing OCRMyPDF
 ```
 sudo apt install unpaper
 conda create --name ocrmypdf python=3.10.13
@@ -492,7 +492,7 @@ conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvi
 pip install ocrmypdf
 pip install git+https://github.com/ocrmypdf/OCRmyPDF-EasyOCR.git
 ```
-## Installing and Using TheSync
+### Installing and Using TheSync
 ```
 git clone https://github.com/Inc44/TheSync.git
 ```
@@ -500,7 +500,7 @@ git clone https://github.com/Inc44/TheSync.git
 cd TheSync
 python -O thesync.py
 ```
-## Installing and Using TheTTS
+### Installing and Using TheTTS
 ```
 git clone https://github.com/Inc44/TheTTS.git
 cd TheTTS
@@ -519,7 +519,7 @@ conda activate TheTTS
 cd TheTTS
 python -O thetts.py
 ```
-## Installing UVR
+### Installing UVR
 ```
 sudo apt install python3-pip
 sudo apt install python3-tk
@@ -531,7 +531,7 @@ wget https://raw.githubusercontent.com/Inc44/dotfiles/main/Dora-0.0.3.tar.gz -O 
 pip3 install Dora-0.0.3.tar.gz
 pip3 install -r requirements.txt
 ```
-## Installing WhisperX
+### Installing WhisperX
 ```
 conda create --name whisperx python=3.10.13
 conda activate whisperx
@@ -541,10 +541,10 @@ pip install faster-whisper==1.0.0 --upgrade
 ```
 </details>
 
-# Pentesting
+## Pentesting
 <details>
 
-## Installing and Using Aircrack-ng
+### Installing and Using Aircrack-ng
 ```
 sudo apt install aircrack-ng
 sudo apt install net-tools
@@ -557,7 +557,7 @@ sudo airodump-ng wlp7s0mon
 sudo airodump-ng -c CH --bssid BSSID -w . wlp7s0mon
 sudo airmon-ng stop wlp7s0mon
 ```
-## Installing and Using John the Ripper
+### Installing and Using John the Ripper
 ```
 git clone https://github.com/openwall/john
 cd john/src
@@ -569,7 +569,7 @@ echo 'export PATH="/home/pc/john/run:$PATH"' | tee -a /e
 ```
 zip2john /home/pc/path.zip > /home/pc/hash.txt
 ```
-## Installing and Using Hashcat
+### Installing and Using Hashcat
 ```
 git clone https://github.com/hashcat/hashcat.git
 cd hashcat
@@ -594,7 +594,7 @@ hashcat -m 13600 -a3 -w3 -d2 /home/pc/hash.txt --increment --increment-min 8 --i
 ```
 hashcat -b -d 2 -m 13600
 ```
-## Installing Hashcat Utils
+### Installing Hashcat Utils
 ```
 git clone https://github.com/hashcat/hashcat-utils.git
 cd /home/pc/hashcat-utils/src
@@ -606,16 +606,16 @@ cap2hccapx.bin /home/pc/.-01.cap /home/pc/wifi.hccapx
 ```
 </details>
 
-# Extensions
+## Extensions
 <details>
 
-## Installing Gnome Tweaks and Extension
+### Installing Gnome Tweaks and Extension
 ```
 sudo add-apt-repository universe
 sudo apt install gnome-tweaks
 sudo apt install gnome-shell-extension-manager
 ```
-## Installing and Configuring WhiteSur Theme
+### Installing and Configuring WhiteSur Theme
 ```
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
 cd WhiteSur-gtk-theme
@@ -627,7 +627,7 @@ cd WhiteSur-icon-theme
 ```
 Search for `User Themes` by `gnome-shell-extensions.gcampax.github.com`
 Themes: `WhiteSur-Light-solid-purple`
-## Installing and Configuring Color Picker
+### Installing and Configuring Color Picker
 Search for `Color Picker` by `tuberry`
 Enable preview: `On`
 Persistent mode: `On`
@@ -637,16 +637,16 @@ Notification style: `Off`
 Enable systray: `Off`
 </details>
 
-# Just Because
+## Just Because
 <details>
 
-## Installing Blazingly Fast Rust Donut
+### Installing Blazingly Fast Rust Donut
 ```
 cargo install blazingly_fast_rust_donut
 ```
 </details>
 
-# Cheat Sheet
+## Cheat Sheet
 `apt install package`: Install package along with its dependencies
 `apt remove package`: Remove package, preserve configuration and data
 `apt purge package`: Remove package
@@ -697,7 +697,7 @@ mode: `755` == `rwxrw-rw-` for `ugo`
 `-v`: Provide detailed information
 `-z`: Compress during data transfer
 `--no-o`, `--no-g`, `--no-perms`: Prevent setting ownership, group and changing permissions
-# TODO
+## TODO
 ```
 alias
 grep
