@@ -763,10 +763,193 @@ tar
 wget
 ```
 # Arch Specific
+## Connecting Wi-Fi
+```
+iwctl
+station wlan0 scan
+station wlan0 get-networks
+station wlan0 connect “</> 5G”
+station wlan0 show
+quit
+```
+## Partitioning Disk
+```
+lsblk
+cfdisk /dev/nvme0n1
+```
+`New` > Partition size: `102400MiB` > `Write` > Are you sure you want to write the partition table to disk? `yes` > `Quit`
+```
+lsblk
+mkfs.ext4 /dev/nvme0n1p6
+```
+## Installing Arch
+```
+archinstall
+exit
+reboot
+```
+## Installing VBox Linux Additions
+```
+sudo pacman -Sy
+sudo pacman -S linux-headers
+mkdir sr0
+cd sr0
+sudo mount /dev/sr0 ~/sr0
+sudo ./VBoxLinuxAdditions.run
+```
+## Installing Nvidia Drivers
+```
+sudo pacman -S nvidia nvidia-utils
+```
+## Installing VBox Drivers
+```
+sudo pacman -S xf86-video-qxl
+```
+## TOREFACTOR
+`sudo pacman -S xorg xorg-xinit bspwm sxhkd dmenu nitrogen picom xfce4-terminal arandr`
+`mkdir .config/bspwm`
+`mkdir .config/sxhkd`
+`cp /usr/share/doc/bspwm/examples/bspwmrc .config/bspwm`
+`cp /usr/share/doc/bspwm/examples/sxhkdrc .config/sxhkd`
+`sudo pacman -S vim`
+`vim .config/sxhkd/sxhkdrc`
+Replace `uvxvt`	with `xfce4-terminal`
+`cp /etc/X11/xinit/xinitrc .xinitrc`
+`vim .xinitrc`
+Replace
+```
+twm &
+xclock -geometry 50x50-1+1 &
+xterm -geometry 80x50+494+51 &
+xterm -geometry 80x20+494-0 &
+exec xterm -geometry 80x66+0+0 -name login
+```
+with
+```
+setxkbmap en &
+$HOME/.screenlayout/display.sh
+nitrogen --restore &
+xsetroot -cursor_name left_ptr
+# picom -f &
+exec bspwm
+```
+`sudo vim /etc/xdg/picom.conf`
+Comment `vsync = true` using `# `
+`startx`
+`arandr`
+`Outputs` > `Virtual1` > `Resolution` > `1920x1080`
+`✅`
+`💾` > Name: `display` > `Save`
+`chmod +x .screenlayout/display.sh`
+**TODO: Download wallpaper**
+`Super + Space` > `nitrogen`
+`Preferences` > `Add` > Locate `~/dotfiles` > `Select` > `OK`
+**TODO: Select wallpaper**
+Replace `Automatic` with `Scaled`
+`Apply`
+`Edit` > `Preferences` 
+`General` > Scrollbar is: `Disabled`
+`Appearance` > `Background` > `Transparent Background`
+`Appearance` > Replace `Monospace Regular 12` with `Monospace Regular 16` > `Select`
+`Close`
+`sudo pacman -S git`
+`git clone https://aur.archlinux.org/yay-bin.git`
+`cd yay-bin`
+`makepkg -si`
+`yay -S microsoft-edge-stable-bin`
+`yay -S yandex-browser`
+`sudo pacman -S telegram-desktop`
+`sudo pacman -S obsidian`
+`vim .config/bspwm/bspwmrc`
+`xrandr`: List available monitors
+Add `bspc monitor MONITOR -d DESKTOPS` where `MONITOR` is monitor name from `xrandr` and `DESKTOPS` is desktop names from `I` to `X` and remove specified desktop names from `bspc monitor -d DESKTOPS` to put some work spaces on another monitor
+`xprob`: Get information about clicked window
+Add `bspc rule -a NAME desktop='^DESKTOP'` where `NAME` is `VM_CLASS(STRING)` from `xprop` starting with capital letter and `DESKTOP` is desktop name from `0` to `9` (Example: `bspc rule -a Microsoft-edge desktop='^4'`)
+`sudo pacman -S polybar`
+`sudo pacman -S pacman-contrib`
+`sudo pacman -S ttf-font-awesome`
+`#sudo pacman -S pulseaudio`
+`sudo pacman -S alsa-utils`
+`yay -S siji-git`
+`sudo pacman -S pipewire-pulse`
+`sudo pacman -S pavucontrol`
+`sudo curl -o /bin/pulseaudio-control https://raw.githubusercontent.com/marioortizmanero/polybar-pulseaudio-control/master/pulseaudio-control.bash`
+`sudo chmod +x /bin/pulseaudio-control`
+`sudo reboot`
+`mkdir .config/polybar`
+`vim .config/polybar/config.ini`
+`vim .config/polybar/launch.sh`
+`chmod +x .config/polybar/launch.sh`
+`vim .config/bspwm/bspwmrc`
+Add `$HOME/.config/polybar/launch.sh`
+`yay -S betterlockscreen`
+`sudo pacman -S xdpyinfo`
+`sudo pacman -S xrandr`
+`sudo pacman -S xorg-xrandr`
+`sudo pacman -S xorg-xdpyinfo`
+`sudo pacman -S bc`
+`sudo pacman -S feh`
+`betterlockscreen -u ~/dotfiles/wallpaper.png --blur 1.0`
+`vim .config/sxhkd/sxhkdrc`
+Add
+```
+# lockscreen
+super + x
+	betterlockscreen -l dimblur
+```
+`vim .config/polybar/config.ini`
+`sudo pacman -S neofetch`
+`sudo pacman -S powerline`
+`vim .bashrc`
+Add
+```
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+./usr/share/powerline/bindings/bash/powerline.sh
+neofetch
+```
+`git clone https://github.com/Lxtharia/minegrub-theme.git`
+`cd ./minegrub-theme`
+`sudo mkdir /boot/grub2`
+`sudo mkdir /boot/grub2/themes`
+`sudo cp -ruv ./minegrub /boot/grub2/themes`
+`sudo rm -r ~/minegrub-theme`
+`sudo pacman -S python-pip`
+`sudo pacman -S python-pillow`
+`sudo python3 -O /boot/grub2/themes/minegrub/update_theme.py '' 'I use Arch BTW!'`
+`sudo pacman -S os-prober`
+`sudo vim /etc/default/grub`
+`sudo grub-mkconfig -o /boot/grub/grub.cfg`
+`sudo reboot`
+`sudo pacman -S ly`
+`sudo systemctl disable getty@tty2.service`
+`sudo systemctl enable ly.service`
+`sudo systemctl start ly.service`
+
+Notes:
+Use default `yay` parameters by pressing `Enter`
+`Super + 0` to `Super + 9`: Go to desktop `0` to `9`
+`Super + Alt + H`:  Stretch window right
+`Super + Alt + Q`: Close `bspwm`
+`Super + Alt + R`: Restart`bspwm`
+`Super + C`: Change current window
+`Super + Enter`: `xfce4-terminal`
+`Super + M`: Enter full screen mode
+`Super + Shift + 0` to `Super + Shift + 9`: Move window to desktop `0` to `9`
+`Super + Shift + Alt + L`: Stretch window left
+`Super + Shift + H`: Move current window right
+`Super + Shift + L`: Move current window right
+`Super + Space`: `dmenu`
+`Super + W`: Close window
+`Super + X`: Lock screen
+## TODO
 ```
 Bspwm
 Ly
 Mpd
+Nautilus
+Polkit Gnome
 Polybar
 Rofi
 Siji
