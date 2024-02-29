@@ -1,9 +1,10 @@
 # dotfiles
-## Introduction
-This repository contains a collection of dotfiles and setup commands to configure a Ubuntu Linux system.
-## Getting Started
+# Introduction
+This repository contains a collection of dotfiles and setup commands to configure a Ubuntu and Arch Linux systems.
+# Getting Started
 Please follow the steps carefully.
-# Maintenance
+# Ubuntu Specific
+## Maintenance
 <details>
 
 ## System Update and Cache Cleaning
@@ -605,14 +606,17 @@ cap2hccapx.bin /home/pc/.-01.cap /home/pc/wifi.hccapx
 ```
 </details>
 
-# Theme
+# Extensions
 <details>
 
-## Installing and Configuring WhiteSur Theme
+## Installing Gnome Tweaks and Extension
 ```
 sudo add-apt-repository universe
 sudo apt install gnome-tweaks
 sudo apt install gnome-shell-extension-manager
+```
+## Installing and Configuring WhiteSur Theme
+```
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
 cd WhiteSur-gtk-theme
 ./install.sh -t purple -c Light
@@ -621,6 +625,16 @@ git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git --depth=1
 cd WhiteSur-icon-theme
 ./install.sh -a -t purple
 ```
+Search for `User Themes` by `gnome-shell-extensions.gcampax.github.com`
+Themes: `WhiteSur-Light-solid-purple`
+## Installing and Configuring Color Picker
+Search for `Color Picker` by `tuberry`
+Enable preview: `On`
+Persistent mode: `On`
+Automatically copy: `On`
+Shortcut to pick: `Super + C`
+Notification style: `Off`
+Enable systray: `Off`
 </details>
 
 # Just Because
@@ -688,9 +702,11 @@ mode: `755` == `rwxrw-rw-` for `ugo`
 alias
 grep
 httrack
+ls -a
 tar
 wget
 ```
+# Arch Specific
 ```
 Bspwm
 Ly
