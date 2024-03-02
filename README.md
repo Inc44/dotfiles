@@ -798,11 +798,11 @@ cd sr0
 sudo mount /dev/sr0 ~/sr0
 sudo ./VBoxLinuxAdditions.run
 ```
-### TODO: Installing Nvidia Drivers
+### Installing Nvidia Drivers
 ```
-sudo pacman -S nvidia nvidia-utils
+sudo pacman -S nvidia-lts nvidia-utils
 ```
-### TODO: Installing VBox Drivers
+### Installing VBox Drivers
 ```
 sudo pacman -S xf86-video-qxl
 ```
@@ -810,9 +810,9 @@ sudo pacman -S xf86-video-qxl
 ```
 sudo pacman -S vim
 ```
-### TODO: Installing and COnfiguring Desktop Environment
+### TODO: Installing and Configuring Desktop Environment
 ```
-sudo pacman -S xorg xorg-xinit bspwm sxhkd dmenu nitrogen picom xfce4-terminal arandr
+sudo pacman -S xorg xorg-xinit bspwm sxhkd dmenu nitrogen picom xfce4-terminal
 mkdir .config/bspwm
 mkdir .config/sxhkd
 cp /usr/share/doc/bspwm/examples/bspwmrc .config/bspwm
@@ -822,6 +822,7 @@ vim .config/sxhkd/sxhkdrc
 Replace `uvxvt`	with `xfce4-terminal`
 ```
 cp /etc/X11/xinit/xinitrc .xinitrc
+chmod +x .xinitrc
 vim .xinitrc
 ```
 Replace
@@ -842,8 +843,18 @@ xsetroot -cursor_name left_ptr
 exec bspwm
 ```
 ```
+sudo vim /etc/xdg/picom.conf
+```
+```
 startx
 ```
+```
+vim .config/bspwm/bspwmrc
+```
+`xrandr`: List available monitors
+Add `bspc monitor MONITOR -d DESKTOPS` where `MONITOR` is monitor name from `xrandr` and `DESKTOPS` is desktop names from `I` to `X` and remove specified desktop names from `bspc monitor -d DESKTOPS` to put some work spaces on another monitor
+`xprob`: Get information about clicked window
+Add `bspc rule -a NAME desktop='^DESKTOP'` where `NAME` is `VM_CLASS(STRING)` from `xprop` starting with capital letter and `DESKTOP` is desktop name from `0` to `9` (Example: `bspc rule -a Microsoft-edge desktop='^4'`)
 ### Installing and Configuring Git
 ```
 sudo pacman -S git
@@ -872,7 +883,7 @@ yay -S yandex-browser
 ```
 sudo pacman -S code
 ```
-### Installing Files
+### Installing Nautilus
 ```
 sudo pacman -S nautilus
 ```
@@ -910,6 +921,22 @@ sudo fc-cache -f -v
 `Appearance` > `Background` > `Opacity` > `0.60`
 `Display menubar in new windows`
 `Close`
+### Installing Neofetch
+```
+sudo pacman -S neofetch
+```
+### Installing PIP
+```
+sudo pacman -S python-pip
+```
+### Installing PIL
+```
+sudo pacman -S python-pillow
+```
+### Installing Os Prober
+```
+sudo pacman -S os-prober
+```
 ### Installing Minegrub
 ```
 git clone https://github.com/Lxtharia/minegrub-theme.git
@@ -918,105 +945,147 @@ sudo mkdir /boot/grub2
 sudo mkdir /boot/grub2/themes
 sudo cp -ruv ./minegrub /boot/grub2/themes
 sudo rm -r ~/minegrub-theme
-sudo pacman -S python-pip
-sudo pacman -S python-pillow
-sudo pacman -S neofetch
 sudo python3 -O /boot/grub2/themes/minegrub/update_theme.py '' 'I use Arch BTW!'
-sudo pacman -S os-prober
 sudo vim /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo reboot
+```
+### Installing Ly
+```
 sudo pacman -S ly
 sudo systemctl disable getty@tty2.service
 sudo systemctl enable ly.service
-sudo systemctl start ly.service
+sudo reboot
 ```
-
-
-# TODO
-`sudo vim /etc/xdg/picom.conf`
-Comment `vsync = true` using `# `
-`arandr`
-`Outputs` > `Virtual1` > `Resolution` > `1920x1080`
-`✅`
-`💾` > Name: `display` > `Save`
-`chmod +x .screenlayout/display.sh`
-`sudo pacman -S telegram-desktop`
-`sudo pacman -S obsidian`
-`vim .config/bspwm/bspwmrc`
-`xrandr`: List available monitors
-Add `bspc monitor MONITOR -d DESKTOPS` where `MONITOR` is monitor name from `xrandr` and `DESKTOPS` is desktop names from `I` to `X` and remove specified desktop names from `bspc monitor -d DESKTOPS` to put some work spaces on another monitor
-`xprob`: Get information about clicked window
-Add `bspc rule -a NAME desktop='^DESKTOP'` where `NAME` is `VM_CLASS(STRING)` from `xprop` starting with capital letter and `DESKTOP` is desktop name from `0` to `9` (Example: `bspc rule -a Microsoft-edge desktop='^4'`)
-`sudo pacman -S polybar`
-`sudo pacman -S pacman-contrib`
-`sudo pacman -S ttf-font-awesome`
-`#sudo pacman -S pulseaudio`
-`sudo pacman -S alsa-utils`
-`yay -S siji-git`
-`sudo pacman -S pipewire-pulse`
-`sudo pacman -S pavucontrol`
-`sudo curl -o /bin/pulseaudio-control https://raw.githubusercontent.com/marioortizmanero/polybar-pulseaudio-control/master/pulseaudio-control.bash`
-`sudo chmod +x /bin/pulseaudio-control`
-`sudo reboot`
-`mkdir .config/polybar`
-`vim .config/polybar/config.ini`
-`vim .config/polybar/launch.sh`
-`chmod +x .config/polybar/launch.sh`
-`vim .config/bspwm/bspwmrc`
-Add `$HOME/.config/polybar/launch.sh`
-`yay -S betterlockscreen`
-`sudo pacman -S xdpyinfo`
-`sudo pacman -S xrandr`
-`sudo pacman -S xorg-xrandr`
-`sudo pacman -S xorg-xdpyinfo`
-`sudo pacman -S bc`
-`sudo pacman -S feh`
-`betterlockscreen -u ~/dotfiles/wallpaper.png --blur 1.0`
-`vim .config/sxhkd/sxhkdrc`
+### TODO: Fixing Screen Tearing
+```
+sudo pacman -S nvidia-settings
+nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+```
+```
+sudo nvidia-xconfig
+sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.d/20-nvidia.conf
+sudo vim /etc/X11/xorg.conf.d/20-nvidia.conf
+```
+### Installing Better Lock Screen
+```
+yay -S betterlockscreen
+betterlockscreen -u ~/dotfiles/wallpaper.png --blur 1.0
+vim .config/sxhkd/sxhkdrc
+```
 Add
 ```
 # lockscreen
 super + x
 	betterlockscreen -l dimblur
 ```
-`vim .config/polybar/config.ini`
-`sudo pacman -S neofetch`
-`sudo pacman -S powerline`
-`vim .bashrc`
+### Installing Telegram
+```
+sudo pacman -S telegram-desktop
+```
+### Installing Obsidian
+```
+sudo pacman -S obsidian
+```
+### Installing Rofi
+```
+sudo pacman -S rofi
+mkdir .config/rofi
+vim .config/rofi/config.rasi
+```
+### Installing Zsh
+```
+sudo pacman -S zsh
+```
+### Installing and Configuring Arandr
+```
+sudo pacman -S arandr
+arandr
+```
+`Outputs` > `Display` > `Resolution` > `1920x1080`
+`✅`
+`💾` > Name: `display` > `Save`
+```
+chmod +x .screenlayout/display.sh
+```
+### Installing Powerline
+```
+sudo pacman -S powerline
+vim .bashrc
+```
 Add
 ```
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 ./usr/share/powerline/bindings/bash/powerline.sh
-neofetch
-
-Notes:
+```
+### Installing Polybar
+```
+sudo pacman -S polybar
+sudo pacman -S ttf-font-awesome
+sudo pacman -S alsa-utils
+sudo pacman -S pavucontrol
+yay -S siji-git
+sudo curl -o /bin/pulseaudio-control https://raw.githubusercontent.com/marioortizmanero/polybar-pulseaudio-control/master/pulseaudio-control.bash
+sudo chmod +x /bin/pulseaudio-control
+mkdir .config/polybar
+vim .config/polybar/config.ini
+vim .config/polybar/launch.sh
+chmod +x .config/polybar/launch.sh
+vim .config/bspwm/bspwmrc
+Add `$HOME/.config/polybar/launch.sh`
+sudo reboot
+```
+### Installing Wal
+```
+sudo pacman -S python-pywal
+wal --theme base16-rebecca
+vim .bashrc
+```
+### Installing Mpd
+```
+sudo pacman -S mpd
+sudo pacman -S ncmpcpp
+sudo pacman -S mpc
+mkdir .config/mpd
+vim .config/mpd/mpd.conf
+sudo mkdir /etc/timidity
+sudo touch /etc/timidity/timidity.cfg
+mkdir /home/pc/.config/mpd/playlists
+```
+### Installing Gnome Polkit
+```
+sudo pacman -S polkit-gnome
+vim .xinitrc
+```
+## Cheat Sheet
 Use default `yay` parameters by pressing `Enter`
+
 `Super + 0` to `Super + 9`: Go to desktop `0` to `9`
+
 `Super + Alt + H`:  Stretch window right
+
 `Super + Alt + Q`: Close `bspwm`
+
 `Super + Alt + R`: Restart`bspwm`
+
 `Super + C`: Change current window
+
 `Super + Enter`: `xfce4-terminal`
+
 `Super + M`: Enter full screen mode
+
 `Super + Shift + 0` to `Super + Shift + 9`: Move window to desktop `0` to `9`
+
 `Super + Shift + Alt + L`: Stretch window left
+
 `Super + Shift + H`: Move current window right
+
 `Super + Shift + L`: Move current window right
-`Super + Space`: `dmenu`
+
+`Super + Space`: `rofi`
+
 `Super + W`: Close window
+
 `Super + X`: Lock screen
-## TODO
-```
-Bspwm
-Ly
-Mpd
-Nautilus
-Polkit Gnome
-Polybar
-Rofi
-Siji
-Zsh
-```
