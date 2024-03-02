@@ -841,10 +841,16 @@ xsetroot -cursor_name left_ptr
 # picom -f &
 exec bspwm
 ```
-`startx`
-### Installing Git
+```
+startx
+```
+### Installing and Configuring Git
 ```
 sudo pacman -S git
+```
+```
+git config --global user.email email
+git config --global user.name name
 ```
 ### Installing AUR Repository using Yay
 ```
