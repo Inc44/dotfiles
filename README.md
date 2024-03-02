@@ -910,6 +910,28 @@ sudo fc-cache -f -v
 `Appearance` > `Background` > `Opacity` > `0.60`
 `Display menubar in new windows`
 `Close`
+### Installing Minegrub
+```
+git clone https://github.com/Lxtharia/minegrub-theme.git
+cd ./minegrub-theme
+sudo mkdir /boot/grub2
+sudo mkdir /boot/grub2/themes
+sudo cp -ruv ./minegrub /boot/grub2/themes
+sudo rm -r ~/minegrub-theme
+sudo pacman -S python-pip
+sudo pacman -S python-pillow
+sudo pacman -S neofetch
+sudo python3 -O /boot/grub2/themes/minegrub/update_theme.py '' 'I use Arch BTW!'
+sudo pacman -S os-prober
+sudo vim /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo reboot
+sudo pacman -S ly
+sudo systemctl disable getty@tty2.service
+sudo systemctl enable ly.service
+sudo systemctl start ly.service
+```
+
 
 # TODO
 `sudo vim /etc/xdg/picom.conf`
@@ -969,24 +991,6 @@ POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 ./usr/share/powerline/bindings/bash/powerline.sh
 neofetch
-```
-`git clone https://github.com/Lxtharia/minegrub-theme.git`
-`cd ./minegrub-theme`
-`sudo mkdir /boot/grub2`
-`sudo mkdir /boot/grub2/themes`
-`sudo cp -ruv ./minegrub /boot/grub2/themes`
-`sudo rm -r ~/minegrub-theme`
-`sudo pacman -S python-pip`
-`sudo pacman -S python-pillow`
-`sudo python3 -O /boot/grub2/themes/minegrub/update_theme.py '' 'I use Arch BTW!'`
-`sudo pacman -S os-prober`
-`sudo vim /etc/default/grub`
-`sudo grub-mkconfig -o /boot/grub/grub.cfg`
-`sudo reboot`
-`sudo pacman -S ly`
-`sudo systemctl disable getty@tty2.service`
-`sudo systemctl enable ly.service`
-`sudo systemctl start ly.service`
 
 Notes:
 Use default `yay` parameters by pressing `Enter`
