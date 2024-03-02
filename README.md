@@ -763,7 +763,7 @@ tar
 wget
 ```
 # Arch Specific
-## Connecting Wi-Fi
+### Connecting Wi-Fi
 ```
 iwctl
 device list
@@ -773,7 +773,7 @@ station adapter connect "network"
 station adapter show
 quit
 ```
-## Partitioning Disk
+### Partitioning Disk
 ```
 lsblk
 cfdisk disk
@@ -783,13 +783,13 @@ cfdisk disk
 lsblk
 mkfs.ext4 partition
 ```
-## Installing Arch
+### Installing Arch
 ```
 archinstall
 exit
 reboot
 ```
-## Installing VBox Linux Additions
+### TODO: Installing VBox Linux Additions
 ```
 sudo pacman -Sy
 sudo pacman -S linux-headers
@@ -798,25 +798,32 @@ cd sr0
 sudo mount /dev/sr0 ~/sr0
 sudo ./VBoxLinuxAdditions.run
 ```
-## Installing Nvidia Drivers
+### TODO: Installing Nvidia Drivers
 ```
 sudo pacman -S nvidia nvidia-utils
 ```
-## Installing VBox Drivers
+### TODO: Installing VBox Drivers
 ```
 sudo pacman -S xf86-video-qxl
 ```
-## TOREFACTOR
-`sudo pacman -S xorg xorg-xinit bspwm sxhkd dmenu nitrogen picom xfce4-terminal arandr`
-`mkdir .config/bspwm`
-`mkdir .config/sxhkd`
-`cp /usr/share/doc/bspwm/examples/bspwmrc .config/bspwm`
-`cp /usr/share/doc/bspwm/examples/sxhkdrc .config/sxhkd`
-`sudo pacman -S vim`
-`vim .config/sxhkd/sxhkdrc`
+### Installing Vim
+```
+sudo pacman -S vim
+```
+### TODO: Installing and COnfiguring Desktop Environment
+```
+sudo pacman -S xorg xorg-xinit bspwm sxhkd dmenu nitrogen picom xfce4-terminal arandr
+mkdir .config/bspwm
+mkdir .config/sxhkd
+cp /usr/share/doc/bspwm/examples/bspwmrc .config/bspwm
+cp /usr/share/doc/bspwm/examples/sxhkdrc .config/sxhkd
+vim .config/sxhkd/sxhkdrc
+```
 Replace `uvxvt`	with `xfce4-terminal`
-`cp /etc/X11/xinit/xinitrc .xinitrc`
-`vim .xinitrc`
+```
+cp /etc/X11/xinit/xinitrc .xinitrc
+vim .xinitrc
+```
 Replace
 ```
 twm &
@@ -834,31 +841,78 @@ xsetroot -cursor_name left_ptr
 # picom -f &
 exec bspwm
 ```
+`startx`
+### Installing Git
+```
+sudo pacman -S git
+```
+### Installing AUR Repository using Yay
+```
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
+cd ..
+sudo rm -r yay-bin
+```
+### Installing Microsoft Edge
+```
+yay -S microsoft-edge-stable-bin
+```
+### Installing Yandex Browser
+```
+yay -S yandex-browser
+```
+### Installing Visual Studio Code
+```
+sudo pacman -S code
+```
+### Installing Files
+```
+sudo pacman -S nautilus
+```
+### TODO: Setting Wallpapers
+`Super + Space` > `nitrogen`
+`Preferences` > `Add` > Locate `~/dotfiles` > `Select` > `OK`
+Replace `Automatic` with `Scaled`
+`Apply`
+### Installing Wget
+```
+sudo pacman -S wget
+```
+### Installing Unzip
+```
+sudo pacman -S unzip
+```
+### Installing Nerd Fonts
+```
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Noto.zip
+unzip Noto.zip "*.ttf" -d ~/.fonts
+unzip Noto.zip "*.ttf" -d ~/.fonts
+sudo fc-cache -f -v
+rm Noto.zip
+```
+### Installing Fonts
+```
+cp -r ~/dotfiles/.fonts ~
+sudo fc-cache -f -v
+```
+### Configuring Xfce4 Terminal
+`Edit` > `Preferences` 
+`General` > Scrollbar is: `Disabled`
+`Appearance` > Replace `Monospace Regular 12` with `NotoMono Nerd Font Mono Regular 20` > `Select`
+`Appearance` > `Background` > `Transparent Background`
+`Appearance` > `Background` > `Opacity` > `0.60`
+`Display menubar in new windows`
+`Close`
+
+# TODO
 `sudo vim /etc/xdg/picom.conf`
 Comment `vsync = true` using `# `
-`startx`
 `arandr`
 `Outputs` > `Virtual1` > `Resolution` > `1920x1080`
 `✅`
 `💾` > Name: `display` > `Save`
 `chmod +x .screenlayout/display.sh`
-**TODO: Download wallpaper**
-`Super + Space` > `nitrogen`
-`Preferences` > `Add` > Locate `~/dotfiles` > `Select` > `OK`
-**TODO: Select wallpaper**
-Replace `Automatic` with `Scaled`
-`Apply`
-`Edit` > `Preferences` 
-`General` > Scrollbar is: `Disabled`
-`Appearance` > `Background` > `Transparent Background`
-`Appearance` > Replace `Monospace Regular 12` with `Monospace Regular 16` > `Select`
-`Close`
-`sudo pacman -S git`
-`git clone https://aur.archlinux.org/yay-bin.git`
-`cd yay-bin`
-`makepkg -si`
-`yay -S microsoft-edge-stable-bin`
-`yay -S yandex-browser`
 `sudo pacman -S telegram-desktop`
 `sudo pacman -S obsidian`
 `vim .config/bspwm/bspwmrc`
