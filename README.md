@@ -766,21 +766,22 @@ wget
 ## Connecting Wi-Fi
 ```
 iwctl
-station wlan0 scan
-station wlan0 get-networks
-station wlan0 connect “</> 5G”
-station wlan0 show
+device list
+station adapter scan
+station adapter get-networks
+station adapter connect "network"
+station adapter show
 quit
 ```
 ## Partitioning Disk
 ```
 lsblk
-cfdisk /dev/nvme0n1
+cfdisk disk
 ```
 `New` > Partition size: `102400MiB` > `Write` > Are you sure you want to write the partition table to disk? `yes` > `Quit`
 ```
 lsblk
-mkfs.ext4 /dev/nvme0n1p6
+mkfs.ext4 partition
 ```
 ## Installing Arch
 ```
