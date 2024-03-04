@@ -790,6 +790,7 @@ exit
 reboot
 ```
 ### TODO: Installing VBox Linux Additions
+Client:
 ```
 sudo pacman -Sy
 sudo pacman -S linux-headers
@@ -797,6 +798,10 @@ mkdir sr0
 cd sr0
 sudo mount /dev/sr0 ~/sr0
 sudo ./VBoxLinuxAdditions.run
+```
+Host:
+```
+https://download.virtualbox.org/virtualbox/7.0.14/Oracle_VM_VirtualBox_Extension_Pack-7.0.14.vbox-extpack
 ```
 ### Installing Nvidia Drivers
 ```
