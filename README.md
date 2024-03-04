@@ -310,6 +310,7 @@ echo 'neofetch' | tee -a /home/pc/.bashrc
 ```
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Noto.zip
 unzip Noto.zip "*.ttf" -d ~/.fonts
+rm Noto.zip
 sudo fc-cache -f -v
 ```
 ### Installing OBS Studio
@@ -756,11 +757,16 @@ mode: `755` == `rwxrw-rw-` for `ugo`
 ## TODO
 ```
 alias
+aplay -l
+fc-list
 grep
 httrack
+ip link show
 ls -a
+pw-cli list-objects | grep node.name
 tar
 wget
+xprop
 ```
 # Arch Specific
 ### Connecting Wi-Fi
@@ -815,9 +821,14 @@ sudo pacman -S xf86-video-qxl
 ```
 sudo pacman -S vim
 ```
+### Installing Picom
+```
+sudo pacman -S picom
+sudo vim /etc/xdg/picom.conf
+```
 ### TODO: Installing and Configuring Desktop Environment
 ```
-sudo pacman -S xorg xorg-xinit bspwm sxhkd dmenu nitrogen picom xfce4-terminal
+sudo pacman -S xorg xorg-xinit bspwm sxhkd dmenu nitrogen xfce4-terminal
 mkdir .config/bspwm
 mkdir .config/sxhkd
 cp /usr/share/doc/bspwm/examples/bspwmrc .config/bspwm
@@ -924,7 +935,7 @@ sudo fc-cache -f -v
 `Appearance` > Replace `Monospace Regular 12` with `NotoMono Nerd Font Mono Regular 20` > `Select`
 `Appearance` > `Background` > `Transparent Background`
 `Appearance` > `Background` > `Opacity` > `0.60`
-`Display menubar in new windows`
+`Appearance` > `Display menubar in new windows` > `Off`
 `Close`
 ### Installing Neofetch
 ```
@@ -1042,11 +1053,21 @@ vim .config/bspwm/bspwmrc
 Add `$HOME/.config/polybar/launch.sh`
 sudo reboot
 ```
+### TODO: Installing Pipx
+```
+sudo pacman -S python-pipx
+pipx install ...
+pipx ensurepath ...
+```
 ### Installing Wal
 ```
 sudo pacman -S python-pywal
 wal --theme base16-rebecca
 vim .bashrc
+```
+### Installing No Client Side Decoration
+```
+yay -S gtk3-nocsd-git
 ```
 ### Installing Mpd
 ```
@@ -1063,6 +1084,13 @@ mkdir /home/pc/.config/mpd/playlists
 ```
 sudo pacman -S polkit-gnome
 vim .xinitrc
+```
+### Installing Polybar Themes
+```
+git clone --depth=1 https://github.com/adi1090x/polybar-themes.git
+cd polybar-themes
+chmod +x setup.sh
+./setup.sh
 ```
 ## Cheat Sheet
 Use default `yay` parameters by pressing `Enter`
