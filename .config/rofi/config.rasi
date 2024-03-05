@@ -1,0 +1,63 @@
+configuration {
+cache-dir: ".cache/rofi";
+combi-hide-mode-prefix: true;
+combi-modi: "drun,window,ssh";
+cycle: false;
+display-combi: "";
+display-run: "";
+dpi: 0;
+drun-display-format: "{name}";
+fixed-num-lines: false;
+font: "NotoSansM Nerd Font Mono 12";
+modi: "combi,run";
+scroll-method: 1;
+show-icons: true;
+window-format: "{t}";
+yoffset: -360;
+inputchange {
+action: "kb-row-first";
+}
+}
+* {
+alternate-normal-background: @background;
+selected-normal-background: #666699;
+background: #292a44;
+foreground: #f1eff8;
+border: 0;
+margin: 0;
+padding: 0;
+spacing: 0;
+}
+#window {
+border-color: #666699;
+border-radius: 16;
+border: 2;
+padding: 4;
+width: 480;
+}
+#listview {
+border: 0;
+columns: 1;
+lines: 8;
+padding: 16 16;
+scrollbar: false;
+}
+#element {
+border-radius: 12;
+padding: 8 8;
+}
+#element-text {
+vertical-align: 0.5;
+}
+#element-icon {
+size: 36;
+}
+#inputbar {
+children: [prompt, entry];
+}
+#entry {
+padding: 16 0 0 16;
+}
+#prompt {
+padding: 16 0 0 16;
+}
