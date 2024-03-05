@@ -101,6 +101,11 @@ git config --global user.name name
 ```
 git init -b main
 ```
+### Installing Gnu Stow
+```
+sudo apt install stow
+stow .
+```
 ### Installing CMake
 ```
 wget https://github.com/Kitware/CMake/releases/download/v3.28.3/cmake-3.28.3-linux-x86_64.sh -O cmake-3.28.3-linux-x86_64.sh
