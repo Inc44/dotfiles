@@ -274,6 +274,13 @@ echo 'export PATH="/home/pc/Efficient-Compression-Tool/build:$PATH"' | tee -a /h
 cp -r ~/dotfiles/.fonts ~
 sudo fc-cache -f -v
 ```
+### Installing Font Awesome
+```
+git clone https://github.com/eliyantosarage/font-awesome-pro.git
+cp -r ~/font-awesome-pro/fontawesome-pro-6.5.1-desktop/otfs/* ~/.fonts
+sudo rm -r ~/font-awesome-pro
+sudo fc-cache -f -v
+```
 ### Installing Gnome Screenshot
 ```
 sudo apt install gnome-screenshot
@@ -764,12 +771,21 @@ mode: `755` == `rwxrw-rw-` for `ugo`
 alias
 aplay -l
 fc-list
+find
+find -name
 grep
 httrack
 ip link show
+ln
 ls -a
+man
 pw-cli list-objects | grep node.name
+stow
 tar
+tree
+tree -a
+tree -d
+tree -x
 wget
 xprop
 ```
