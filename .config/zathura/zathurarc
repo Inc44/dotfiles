@@ -1,46 +1,26 @@
-set synctex true
-set statusbar-h-padding 0
-set font 'monospace normal 14'
-map u scroll half-up
-map d scroll half-down
-map D toggle_page_mode
-map r reload
-map R rotate
-map K zoom in
-map J zoom out
-map i recolor
-map p print
+set default-bg "#292a44"
+set default-fg "#f1eff8"
+set font 'Noto Sans Mono 12'
+set highlight-active-color "#6dfedf"
+set highlight-color "#6dfedf"
+set inputbar-bg "#292a44"
+set inputbar-fg "#f1eff8"
+set notification-bg "#292a44"
+set notification-error-bg "#292a44"
+set notification-error-fg "#a0a0c5"
+set notification-fg "#f1eff8"
+set page-padding 8
+set recolor-darkcolor "#f1eff8"
+set recolor-lightcolor "#292a44"
+set sandbox normal
 set selection-clipboard clipboard
-
-set default-bg                  "#292A44"
-set default-fg                  "#FFFFFF"
-
-set statusbar-fg                "#FFFFFF"
-set statusbar-bg                "#292A44"
-
-set inputbar-bg                 "#292A44"
-set inputbar-fg                 "#FFFFFF"
-
-set notification-bg             "#292A44"
-set notification-fg             "#FFFFFF"
-
-set notification-error-bg       "#292A44"
-set notification-error-fg       "#FF0066"
-
-set notification-warning-bg     "#292A44"
-set notification-warning-fg     "#FF0066"
-
-set highlight-color             "#2CCA9b"
-set highlight-active-color      "#2CCA9b"
-
-set completion-bg               "#292A44"
-set completion-fg               "#2CCA9b"
-
-set completion-highlight-fg     "#FFFFFF"
-set completion-highlight-bg     "#2CCA9b"
-
-set recolor-lightcolor          "#292A44"
-set recolor-darkcolor           "#FFFFFF"
-
-set recolor                     "false"
-set recolor-keephue             "true"
+set statusbar-bg "#292a44"
+set statusbar-fg "#f1eff8"
+set statusbar-h-padding 0
+set statusbar-home-tilde true
+set statusbar-page-percent true
+set statusbar-v-padding 0
+set synctex true
+set window-height 1280
+set window-title-home-tilde true
+set window-width 960
