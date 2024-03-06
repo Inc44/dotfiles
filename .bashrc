@@ -111,13 +111,13 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 . "$HOME/.cargo/env"
+alias ec="ect -9 -keep --strict --mt-file --disable-jpg -recurse"
 export LD_LIBRARY_PATH="/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH"
 export PATH="/home/pc/7-zip:$PATH"
 export PATH="/home/pc/Efficient-Compression-Tool/build:$PATH"
 export PATH="/home/pc/hashcat-utils/src:$PATH"
 export PATH="/home/pc/hashcat:$PATH"
 export PATH="/home/pc/john/run:$PATH"
+export PATH="/home/pc/zig:$PATH"
 export PATH="/usr/local/cuda-12.3/bin:$PATH"
 export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
-export PATH="/home/pc/zig:$PATH"
-alias ec="ect -9 -keep --strict --mt-file --disable-jpg -recurse"

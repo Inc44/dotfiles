@@ -104,6 +104,7 @@ git init -b main
 ### Installing Gnu Stow
 ```
 sudo apt install stow
+cd dotfiles
 stow .
 ```
 ### Installing CMake
@@ -303,10 +304,15 @@ sudo apt install inkscape
 ```
 ### Installing Ly
 ```
+sudo apt install build-essential libpam0g-dev libxcb-xkb-dev
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 make
-...
+sudo make install installsystemd
+systemctl disable getty@tty2.service
+sudo systemctl disable gdm3.service
+sudo systemctl enable ly.service
+sudo reboot
 ```
 ### Installing MPV
 ```
@@ -325,6 +331,10 @@ unzip Noto.zip "*.ttf" -d ~/.fonts
 rm Noto.zip
 sudo fc-cache -f -v
 ```
+### Installing Nitrogen
+```
+sudo apt install nitrogen
+```
 ### Installing OBS Studio
 ```
 sudo add-apt-repository ppa:obsproject/obs-studio
@@ -340,11 +350,19 @@ wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.3/ob
 sudo apt install ~/obsidian_1.5.3_amd64.deb
 rm obsidian_1.5.3_amd64.deb
 ```
+### Installing Pavucontrol
+```
+sudo apt install pavucontrol
+```
 ### Installing PeaZip
 ```
 wget https://github.com/peazip/PeaZip/releases/download/9.7.1/peazip_9.7.1.LINUX.GTK2-1_amd64.deb -O peazip_9.7.1.LINUX.GTK2-1_amd64.deb
 sudo apt install ~/peazip_9.7.1.LINUX.GTK2-1_amd64.deb
 rm peazip_9.7.1.LINUX.GTK2-1_amd64.deb
+```
+### Installing Picom
+```
+sudo apt install picom
 ```
 ### Installing Pinta
 ```
@@ -429,6 +447,10 @@ sudo mv thunderbird /opt
 sudo ln -s /opt/thunderbird/thunderbird /usr/local/bin/thunderbird
 sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/installing-thunderbird-linux/thunderbird.desktop -O /usr/local/share/applications/thunderbird.desktop
 ```
+### Installing Tree
+```
+sudo apt install tree
+```
 ### Installing VirtualBox
 ```
 wget https://download.virtualbox.org/virtualbox/7.0.14/virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb -O virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb
@@ -445,6 +467,14 @@ rm xdman_gtk_8.0.29_amd64.deb
 ```
 sudo apt install zathura
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/zathura/zathurarc -O ~/.config/zathura/zathurarc
+```
+### Installing Zig
+```
+wget https://ziglang.org/builds/zig-linux-x86_64-0.12.0-dev.3156+0b2e23b06.tar.xz
+tar xf zig-linux-x86_64-0.12.0-dev.3156+0b2e23b06.tar.xz
+rm zig-linux-x86_64-0.12.0-dev.3156+0b2e23b06.tar.xz
+mv zig-linux-x86_64-0.12.0-dev.3156+0b2e23b06 zig
+echo 'export PATH="/home/pc/zig:$PATH"' | tee -a /home/pc/.bashrc
 ```
 ### Installing Zsh
 ```
@@ -982,7 +1012,7 @@ sudo mkdir /boot/grub2
 sudo mkdir /boot/grub2/themes
 sudo cp -ruv ./minegrub /boot/grub2/themes
 sudo rm -r ~/minegrub-theme
-sudo python3 -O /boot/grub2/themes/minegrub/update_theme.py '' 'I use Arch BTW!'
+sudo python3 -O /boot/grub2/themes/minegrub/update_theme.py '' 'I used to use Arch BTW!'
 sudo vim /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo reboot
@@ -991,7 +1021,13 @@ sudo reboot
 ```
 sudo pacman -S ly
 sudo systemctl disable getty@tty2.service
+sudo systemctl disable gdm3.service
 sudo systemctl enable ly.service
+sudo reboot
+```
+```
+sudo systemctl disable ly.service
+sudo systemctl start gdm3.service
 sudo reboot
 ```
 ### TODO: Fixing Screen Tearing
