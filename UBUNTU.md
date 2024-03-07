@@ -290,6 +290,11 @@ sudo apt install httrack
 sudo add-apt-repository ppa:inkscape.dev/stable
 sudo apt install inkscape
 ```
+### Installing and Configuring Kitty
+```
+sudo apt install kitty
+sudo update-alternatives --config x-terminal-emulator
+```
 ### Installing Ly
 ```
 sudo apt install build-essential libpam0g-dev libxcb-xkb-dev
@@ -302,10 +307,22 @@ sudo systemctl disable gdm3.service
 sudo systemctl enable ly.service
 sudo reboot
 ```
+### Installing MPC
+```
+sudo apt install mpc
+```
+### Installing MPD
+```
+sudo apt install mpd
+```
 ### Installing MPV
 ```
 sudo apt install mpv
 sudo wget https://raw.githubusercontent.com/Inc44/dotfiles/main/mpv.conf -O /etc/mpv/mpv.conf
+```
+### Installing NCMPCPP
+```
+sudo apt install ncmpcpp
 ```
 ### Installing Neofetch
 ```
