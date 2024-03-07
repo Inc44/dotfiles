@@ -1,0 +1,6 @@
+.*\.cpp
+.*\.md
+.*\.png
+.*\.tar\.gz
+\.git
+\.gitignore
