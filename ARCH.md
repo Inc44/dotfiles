@@ -323,33 +323,3 @@ cd polybar-themes
 chmod +x setup.sh
 ./setup.sh
 ```
-## Cheat Sheet
-Use default `yay` parameters by pressing `Enter`
-
-`Super + 0` to `Super + 9`: Go to desktop `0` to `9`
-
-`Super + Alt + H`:  Stretch window right
-
-`Super + Alt + Q`: Close `bspwm`
-
-`Super + Alt + R`: Restart`bspwm`
-
-`Super + C`: Change current window
-
-`Super + Enter`: `xfce4-terminal`
-
-`Super + M`: Enter full screen mode
-
-`Super + Shift + 0` to `Super + Shift + 9`: Move window to desktop `0` to `9`
-
-`Super + Shift + Alt + L`: Stretch window left
-
-`Super + Shift + H`: Move current window right
-
-`Super + Shift + L`: Move current window right
-
-`Super + Space`: `rofi`
-
-`Super + W`: Close window
-
-`Super + X`: Lock screen

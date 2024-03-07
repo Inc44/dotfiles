@@ -6,6 +6,8 @@ Please follow the steps carefully, aka **RTFM**.
 # Links
 [Commands](COMMAND.md)
 
+[Shortcuts](SHORTCUT.md)
+
 [Arch Specific](ARCH.md)
 
 [Ubuntu Specific](UBUNTU.md)

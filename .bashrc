@@ -112,6 +112,9 @@ unset __conda_setup
 # <<< conda initialize <<<
 . "$HOME/.cargo/env"
 alias ec="ect -9 -keep --strict --mt-file --disable-jpg -recurse"
+alias hc="history -c && history -w"
+alias uu="sudo apt update && sudo apt upgrade"
+alias cc="sudo apt autoremove --purge && sudo apt autoclean && sudo apt clean && pip cache purge && conda clean -a && sudo journalctl --vacuum-time=1h"
 export LD_LIBRARY_PATH="/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH"
 export PATH="/home/pc/7-zip:$PATH"
 export PATH="/home/pc/Efficient-Compression-Tool/build:$PATH"
@@ -121,3 +124,4 @@ export PATH="/home/pc/john/run:$PATH"
 export PATH="/home/pc/zig:$PATH"
 export PATH="/usr/local/cuda-12.3/bin:$PATH"
 export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
+export TERMINFO=/usr/share/terminfo
