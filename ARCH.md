@@ -169,9 +169,20 @@ sudo pacman -Rsnc epiphany
 sudo pacman -Rsnc evince
 sudo pacman -Rsnc gnome-calculator
 sudo pacman -Rsnc gnome-calendar
+sudo pacman -Rsnc gnome-clocks
+sudo pacman -Rsnc gnome-connections
+sudo pacman -Rsnc gnome-contacts
+sudo pacman -Rsnc gnome-logs
 sudo pacman -Rsnc gnome-maps
 sudo pacman -Rsnc gnome-music
+sudo pacman -Rsnc gnome-tour
+sudo pacman -Rsnc gnome-weather
+sudo pacman -Rsnc orca
+sudo pacman -Rsnc rygel
+sudo pacman -Rsnc simple-scan
+sudo pacman -Rsnc snapshot
 sudo pacman -Rsnc totem
+sudo pacman -Rsnc yelp
 ```
 ### Installing Extension Manager
 ```
