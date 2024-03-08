@@ -18,12 +18,176 @@ cfdisk disk
 lsblk
 mkfs.ext4 partition
 ```
-### Installing Arch
+### Installing Arch Linux
 ```
-archinstall
+archinstall --config /path/to/user_configuration.json
 exit
 reboot
 ```
+### Adding Google Drive
+WEBKIT_DISABLE_COMPOSITING_MODE=1 gnome-control-center online-accounts
+`Google`
+If 2FA enabled: `Right Click` > `Reload`
+### Installing Git
+```
+sudo pacman -S git
+```
+### Installing Yay to use AUR repository
+```
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
+cd ..
+sudo rm -r yay-bin
+```
+### Installing Microsoft Edge
+```
+yay -S microsoft-edge-stable-bin
+```
+### Installing Yandex Browser
+```
+yay -S yandex-browser
+```
+### Installing Visual Studio Code
+```
+yay -S visual-studio-code-bin
+```
+### Installing Stow
+```
+sudo pacman -S stow
+```
+### Installing Wget
+```
+sudo pacman -S wget
+```
+### Installing Unzip
+```
+sudo pacman -S unzip
+```
+### Installing Neofetch
+```
+sudo pacman -S neofetch
+```
+### Installing OS Prober
+```
+sudo pacman -S os-prober
+```
+### Installing Pip
+```
+sudo pacman -S python-pip
+```
+### Installing Pillow
+```
+sudo pacman -S python-pillow
+```
+### Installing Telegram
+```
+sudo pacman -S telegram-desktop
+```
+If you encounter an empty screen upon launching, try executing the program from the terminal. This method helps to disable OpenGL if you are experiencing issues with it.
+```
+telegram-desktop
+```
+### Installing Obsidian
+```
+sudo pacman -S obsidian
+```
+### Installing Wal
+```
+sudo pacman -S python-pywal
+wal --theme base16-rebecca
+```
+### Installing Cmake
+```
+sudo pacman -S cmake
+```
+### Installing Curl
+```
+sudo pacman -S curl
+```
+### Installing FFMPEG
+```
+sudo pacman -S ffmpeg
+```
+### Installing Go
+```
+sudo pacman -S go
+```
+### Installing Rust
+```
+sudo pacman -S rust
+```
+### Installing Vim
+```
+sudo pacman -S vim
+```
+### Installing Zathura
+```
+sudo pacman -S zathura
+```
+### Installing Unpaper
+```
+sudo pacman -S unpaper
+```
+### Installing Ghostscript
+```
+sudo pacman -S ghostscript
+```
+### Installing Kitty
+```
+sudo pacman -S kitty
+```
+### Installing Grub Customizer
+```
+sudo pacman -S grub-customizer
+```
+### Installing Czkawka
+```
+yay -S czkawka-gui
+```
+### Installing Conky
+```
+sudo pacman -S conky
+```
+### Installing Nautilus
+```
+sudo pacman -S nautilus
+```
+### Installing Tesseract
+```
+sudo pacman -S tesseract-data-eng
+sudo pacman -S tesseract-data-fra
+sudo pacman -S tesseract-data-rus
+sudo pacman -S tesseract-data-ukr
+sudo pacman -S tesseract-data-jpn
+sudo pacman -S tesseract-data-jpn_vert
+sudo pacman -S tesseract
+```
+### Debloating Gnome
+```
+sudo pacman -Rsnc epiphany
+sudo pacman -Rsnc evince
+sudo pacman -Rsnc gnome-calculator
+sudo pacman -Rsnc gnome-calendar
+sudo pacman -Rsnc gnome-maps
+sudo pacman -Rsnc gnome-music
+sudo pacman -Rsnc totem
+```
+### Installing Extension Manager
+```
+flatpak install com.mattjakeman.ExtensionManager
+```
+### Installing Rofi
+```
+sudo pacman -S rofi
+```
+### Installing Zsh
+```
+sudo pacman -S zsh
+```
+
+# TODO
+
 ### TODO: Installing VBox Linux Additions
 Client:
 ```
@@ -45,10 +209,6 @@ sudo pacman -S nvidia-lts nvidia-utils
 ### Installing VBox Drivers
 ```
 sudo pacman -S xf86-video-qxl
-```
-### Installing Vim
-```
-sudo pacman -S vim
 ```
 ### Installing Picom
 ```
@@ -98,64 +258,16 @@ vim .config/bspwm/bspwmrc
 ```
 Add `bspc monitor MONITOR -d DESKTOPS` where `MONITOR` is monitor name from `xrandr` and `DESKTOPS` is desktop names from `I` to `X` and remove specified desktop names from `bspc monitor -d DESKTOPS` to put some work spaces on another monitor
 Add `bspc rule -a NAME desktop='^DESKTOP'` where `NAME` is `VM_CLASS(STRING)` from `xprop` starting with capital letter and `DESKTOP` is desktop name from `0` to `9` (Example: `bspc rule -a Microsoft-edge desktop='^4'`)
-### Installing and Configuring Git
-```
-sudo pacman -S git
-```
+
 ```
 git config --global user.email email
 git config --global user.name name
-```
-### Installing AUR Repository using Yay
-```
-git clone https://aur.archlinux.org/yay-bin.git
-cd yay-bin
-makepkg -si
-cd ..
-sudo rm -r yay-bin
-```
-### Installing Microsoft Edge
-```
-yay -S microsoft-edge-stable-bin
-```
-### Installing Yandex Browser
-```
-yay -S yandex-browser
-```
-### Installing Visual Studio Code
-```
-sudo pacman -S code
-```
-### Installing Nautilus
-```
-sudo pacman -S nautilus
 ```
 ### TODO: Setting Wallpapers
 `Super + Space` > `nitrogen`
 `Preferences` > `Add` > Locate `~/dotfiles` > `Select` > `OK`
 Replace `Automatic` with `Scaled`
 `Apply`
-### Installing Wget
-```
-sudo pacman -S wget
-```
-### Installing Unzip
-```
-sudo pacman -S unzip
-```
-### Installing Nerd Fonts
-```
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Noto.zip
-unzip Noto.zip "*.ttf" -d ~/.fonts
-unzip Noto.zip "*.ttf" -d ~/.fonts
-sudo fc-cache -f -v
-rm Noto.zip
-```
-### Installing Fonts
-```
-cp -r ~/dotfiles/.fonts ~
-sudo fc-cache -f -v
-```
 ### Configuring Xfce4 Terminal
 `Edit` > `Preferences` 
 `General` > Scrollbar is: `Disabled`
@@ -164,35 +276,6 @@ sudo fc-cache -f -v
 `Appearance` > `Background` > `Opacity` > `0.60`
 `Appearance` > `Display menubar in new windows` > `Off`
 `Close`
-### Installing Neofetch
-```
-sudo pacman -S neofetch
-```
-### Installing PIP
-```
-sudo pacman -S python-pip
-```
-### Installing PIL
-```
-sudo pacman -S python-pillow
-```
-### Installing Os Prober
-```
-sudo pacman -S os-prober
-```
-### Installing Minegrub
-```
-git clone https://github.com/Lxtharia/minegrub-theme.git
-cd ./minegrub-theme
-sudo mkdir /boot/grub2
-sudo mkdir /boot/grub2/themes
-sudo cp -ruv ./minegrub /boot/grub2/themes
-sudo rm -r ~/minegrub-theme
-sudo python3 -O /boot/grub2/themes/minegrub/update_theme.py '' 'I used to use Arch BTW!'
-sudo vim /etc/default/grub
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-sudo reboot
-```
 ### Installing Ly
 ```
 sudo pacman -S ly
@@ -227,24 +310,6 @@ Add
 # lockscreen
 super + x
 	betterlockscreen -l dimblur
-```
-### Installing Telegram
-```
-sudo pacman -S telegram-desktop
-```
-### Installing Obsidian
-```
-sudo pacman -S obsidian
-```
-### Installing Rofi
-```
-sudo pacman -S rofi
-mkdir .config/rofi
-vim .config/rofi/config.rasi
-```
-### Installing Zsh
-```
-sudo pacman -S zsh
 ```
 ### Installing and Configuring Arandr
 ```
@@ -289,12 +354,6 @@ sudo reboot
 ### Installing Pipx
 ```
 sudo pacman -S python-pipx
-```
-### Installing Wal
-```
-sudo pacman -S python-pywal
-wal --theme base16-rebecca
-vim .bashrc
 ```
 ### Installing No Client Side Decoration
 ```

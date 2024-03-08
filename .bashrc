@@ -110,13 +110,14 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-. "$HOME/.cargo/env"
+#. "$HOME/.cargo/env"
 alias ec="ect -9 -keep --strict --mt-file --disable-jpg -recurse"
 alias hc="history -c && history -w"
 alias uu="sudo apt update && sudo apt upgrade"
 alias cc="sudo apt autoremove --purge && sudo apt autoclean && sudo apt clean && pip cache purge && conda clean -a && sudo journalctl --vacuum-time=1h"
 export LD_LIBRARY_PATH="/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH"
 export PATH="/home/pc/7-zip:$PATH"
+export PATH="/home/pc/.cargo/bin:$PATH"
 export PATH="/home/pc/Efficient-Compression-Tool/build:$PATH"
 export PATH="/home/pc/hashcat-utils/src:$PATH"
 export PATH="/home/pc/hashcat:$PATH"

@@ -50,25 +50,13 @@ sudo reboot
 ```
 </details>
 
-### Installing and Configuring Git
+### Installing Git
 ```
 sudo apt install git
 ```
-```
-git config --global user.email email
-git config --global user.name name
-```
-### Initializing Git
-```
-git init -b main
-```
-### Installing and Using Gnu Stow
+### Installing Gnu Stow
 ```
 sudo apt install stow
-```
-```
-cd dotfiles
-stow .
 ```
 ### Installing CMake
 ```
@@ -77,15 +65,6 @@ sudo mkdir /opt/cmake
 sudo sh cmake-3.28.3-linux-x86_64.sh --skip-license --exclude-subdir --prefix=/opt/cmake
 sudo ln -s /opt/cmake/bin/cmake /usr/local/bin/cmake
 rm cmake-3.28.3-linux-x86_64.sh
-```
-### Installing Miniconda
-```
-mkdir -p ~/miniconda3
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm -rf ~/miniconda3/miniconda.sh
-cd miniconda3/bin
-./conda init
 ```
 ### Installing Curl
 ```
@@ -109,15 +88,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo add-apt-repository ppa:alex-p/tesseract-ocr5
 sudo apt install tesseract-ocr
 ```
-### Installing and Configuring Vim and Vim-Plug
+### Installing Vim
 ```
 sudo apt install vim
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.vimrc -O .vimrc
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.vimrc.plug -O .vimrc.plug
-vim > :set spell > Y > Y > 1 > Y
-vim > :PlugInstall
-wget https://raw.githubusercontent.com/gillescastel/latex-snippets/master/tex.snippets -O ~/.vim/UltiSnips/tex.snippets
 ```
 ### Installing Visual Studio Code
 ```
@@ -213,22 +186,6 @@ sudo rm /usr/share/plymouth/ubuntu-logo.png
 ## Tools
 <details>
 
-### Installing and Using 7-Zip
-```
-wget https://www.7-zip.org/a/7z2301-linux-x64.tar.xz -O 7z2301-linux-x64.tar.xz
-mkdir 7-zip
-tar xf 7z2301-linux-x64.tar.xz -C 7-zip
-echo 'export PATH="/home/pc/7-zip:$PATH"' | tee -a /home/pc/.bashrc
-rm 7z2301-linux-x64.tar.xz
-```
-```
-7zz a -tzip -m0=Copy -ppassword -mem=AES256 path.zip path
-7zz x path.zip
-```
-## Configuring Bash
-```
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.bashrc -O .bashrc
-```
 ### Installing Bspwm
 ```
 sudo apt install bspwm
@@ -236,7 +193,6 @@ sudo apt install bspwm
 ### Installing Conky
 ```
 sudo apt install conky
-sudo wget https://raw.githubusercontent.com/Inc44/dotfiles/main/conky.conf -O /etc/conky/conky.conf
 ```
 ### Installing Czkawka
 ```
@@ -318,7 +274,6 @@ sudo apt install mpd
 ### Installing MPV
 ```
 sudo apt install mpv
-sudo wget https://raw.githubusercontent.com/Inc44/dotfiles/main/mpv.conf -O /etc/mpv/mpv.conf
 ```
 ### Installing NCMPCPP
 ```
@@ -344,10 +299,6 @@ sudo apt install nitrogen
 ```
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt install obs-studio
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/global.ini -O ~/.config/obs-studio/global.ini
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/basic.ini -O ~/.config/obs-studio/basic/profiles/Untitled/basic.ini
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/recordEncoder.json -O ~/.config/obs-studio/basic/profiles/Untitled/recordEncoder.json
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/obs-studio/basic/profiles/Untitled/streamEncoder.json -O ~/.config/obs-studio/basic/profiles/Untitled/streamEncoder.json
 ```
 ### Installing Obsidian
 ```
@@ -421,7 +372,6 @@ cmake ..
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/main_window.cpp -O ~/RcloneBrowser/src/main_window.cpp
 make
 sudo make install
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.local/share/rclone-browser/rclone-browser/tasks.bin -O ~/.local/share/rclone-browser/rclone-browser/tasks.bin
 ```
 ### Installing Recoverpy
 ```
@@ -436,7 +386,6 @@ sudo apt install rofi
 ```
 sudo add-apt-repository ppa:solaar-unifying/stable
 sudo apt install solaar
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/solaar/config.yaml -O ~/.config/solaar/config.yaml
 ```
 ### Installing Telegram
 ```
@@ -671,41 +620,5 @@ cap2hccapx.bin /home/pc/.-01.cap /home/pc/wifi.hccapx
 sudo add-apt-repository universe
 sudo apt install gnome-tweaks
 sudo apt install gnome-shell-extension-manager
-```
-### Installing and Configuring WhiteSur Theme
-```
-git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
-cd WhiteSur-gtk-theme
-./install.sh -t purple -c Light
-cd ..
-git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git --depth=1
-cd WhiteSur-icon-theme
-./install.sh -a -t purple
-```
-Search for `User Themes` by `gnome-shell-extensions.gcampax.github.com`
-
-Themes: `WhiteSur-Light-solid-purple`
-### Installing and Configuring Color Picker
-Search for `Color Picker` by `tuberry`
-
-Enable preview: `On`
-
-Persistent mode: `On`
-
-Automatically copy: `On`
-
-Shortcut to pick: `Super + C`
-
-Notification style: `Off`
-
-Enable systray: `Off`
-</details>
-
-## Just Because
-<details>
-
-### Installing Blazingly Fast Rust Donut
-```
-cargo install blazingly_fast_rust_donut
 ```
 </details>

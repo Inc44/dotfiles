@@ -8,6 +8,8 @@ Please follow the steps carefully, aka **RTFM**.
 
 [Shortcuts](SHORTCUT.md)
 
+[Universal](UNIVERSAL.md)
+
 [Arch Specific](ARCH.md)
 
 [Ubuntu Specific](UBUNTU.md)
