@@ -5,6 +5,22 @@ mkdir 7-zip
 tar xf 7z2301-linux-x64.tar.xz -C 7-zip
 rm 7z2301-linux-x64.tar.xz
 ```
+### Installing AppIndicator and KStatusNotifierItem Support
+Open `Extension Manager`
+
+Click `Browse`
+
+Type `AppIndicator and KStatusNotifierItem Support`
+
+Click `Install`
+
+Click `Installed`
+
+Click `AppIndicator and KStatusNotifierItem Support` > `Settings`
+
+Click `Position and size`
+
+Select `Opacity` > `255`
 ### Installing AutoKhan
 ```
 conda create --name AutoKhan python=3.10.13
@@ -53,6 +69,64 @@ Turn on `Persistent mode`
 Select `Enable preview` > `Label`
 
 Turn off `Enable systray`
+### Installing Dash to Dock
+Open `Extension Manager`
+
+Click `Browse`
+
+Type `Dash to Dock`
+
+Click `Install`
+
+Click `Installed`
+
+Click `Dash to Dock` > `Settings`
+
+Click `Position and size`
+
+Select `Icon size limit` > `64`
+### Installing Desktop Icons NG (DING)
+Open `Extension Manager`
+
+Click `Browse`
+
+Type `Desktop Icons NG (DING)`
+
+Click `Install`
+
+Click `Installed`
+
+Click `Desktop Icons NG (DING)` > `Settings`
+
+Select `Size for the desktop icons` > `Large`
+
+Turn off `Show the personal folder in the desktop`
+
+Turn off `Show the trash icon in the desktop`
+
+Turn off `Show external drives in the desktop`
+
+Turn off `Show network drives in the desktop`
+
+Select `New icons alignment` > `Top-left corner`
+
+Turn off `Add new drives to the opposite side of the screen`
+
+Turn on `Highlight the drop place during Drag'n'Drop`
+
+Turn off `Use Nemo to open folders`
+
+Turn on `Add an emblem to soft links`
+
+Turn off `Use dark text in icon labels`
+
+Select `Click type for open files` > `Double click`
+
+Turn on `Show hidden files`
+
+Turn off `Show a context menu item to delete permanently`
+
+Select `Show image thumbnails` > `Local files only`
 ### Installing Dotfiles
 ```
 git clone https://github.com/Inc44/dotfiles.git
