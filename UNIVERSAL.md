@@ -1,3 +1,7 @@
+### Fixing App Picker Layout
+```
+gsettings reset org.gnome.shell app-picker-layout 
+```
 ### Installing 7-Zip
 ```
 wget https://www.7-zip.org/a/7z2301-linux-x64.tar.xz -O 7z2301-linux-x64.tar.xz
