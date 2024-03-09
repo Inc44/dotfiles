@@ -1,33 +1,41 @@
 ## Gnome Custom Shortcuts
 <details>
 
-#### Ctrl+E
+#### Super+Shift+S
 ```
-sensible-browser
-```
-#### Ctrl+M
-```
-/home/pc/miniconda3/envs/MaTools/bin/python -O /home/pc/MaTools/management_tools/main_management_tools_app.pyw
-```
-#### Ctrl+U
-```
-/home/pc/miniconda3/envs/uvr/bin/python -O /home/pc/ultimatevocalremovergui/UVR.py
+Take a screenshot interactively
 ```
 #### Super+E
 ```
 nautilus
 ```
-#### Super+T
-```
-/home/pc/miniconda3/envs/MaTools/bin/python -O /home/pc/MaTools/management_tools/script_image_trimmer.pyw
-```
 #### Super+S
 ```
 gnome-screenshot --delay=1
 ```
-#### Super+Shift+S
+#### Super+T
 ```
-Take a screenshot interactively
+/home/pc/miniconda3/envs/MaTools/bin/python -O /home/pc/MaTools/management_tools/script_image_trimmer.pyw
+```
+#### Ctrl+Alt+T
+```
+kitty
+```
+#### Ctrl+M
+```
+/home/pc/miniconda3/envs/MaTools/bin/python -O /home/pc/MaTools/management_tools/main_management_tools_app.pyw
+```
+#### Ctrl+E
+```
+sensible-browser
+```
+or
+```
+microsoft-edge-stable
+```
+#### Ctrl+U
+```
+/home/pc/miniconda3/envs/uvr/bin/python -O /home/pc/ultimatevocalremovergui/UVR.py
 ```
 </details>
 

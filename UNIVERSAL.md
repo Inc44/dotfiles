@@ -5,9 +5,25 @@ mkdir 7-zip
 tar xf 7z2301-linux-x64.tar.xz -C 7-zip
 rm 7z2301-linux-x64.tar.xz
 ```
+### Installing AutoKhan
+```
+conda create --name AutoKhan python=3.10.13
+conda activate AutoKhan
+git clone https://github.com/Inc44/AutoKhan.git
+cd AutoKhan
+pip install -r requirements.txt
+```
 ### Installing Blazingly Fast Rust Donut
 ```
 cargo install blazingly_fast_rust_donut
+```
+### Installing Chatgpt Telegram Bot
+```
+conda create --name ctb python=3.10.13
+conda activate ctb
+git clone https://github.com/n3d1117/chatgpt-telegram-bot.git
+cd chatgpt-telegram-bot
+pip install -r requirements.txt
 ```
 ### Installing Color Picker
 Open `Extension Manager`
@@ -43,6 +59,30 @@ git clone https://github.com/Inc44/dotfiles.git
 cd dotfiles
 stow .
 ```
+### Installing ECT
+```
+git clone --recursive https://github.com/fhanau/Efficient-Compression-Tool.git
+cd Efficient-Compression-Tool
+mkdir build
+cd build
+cmake ../src
+make
+```
+### Installing Font Awesome
+```
+git clone https://github.com/eliyantosarage/font-awesome-pro.git
+cp -r ~/font-awesome-pro/fontawesome-pro-6.5.1-desktop/otfs/* ~/.fonts
+sudo rm -r ~/font-awesome-pro
+sudo fc-cache -f -v
+```
+### Installing MaTools
+```
+conda create --name MaTools python=3.10.13
+conda activate MaTools
+git clone https://github.com/Inc44/MaTools.git
+cd MaTools
+pip install -r requirements.txt
+```
 ### Installing Minegrub
 ```
 git clone https://github.com/Lxtharia/minegrub-theme.git
@@ -66,6 +106,13 @@ rm -rf ~/miniconda3/miniconda.sh
 cd miniconda3/bin
 ./conda init
 ```
+### Installing NanoGPT
+```
+conda create --name nanogpt python=3.10.13
+conda activate nanogpt
+pip install torch numpy transformers datasets tiktoken wandb tqdm
+git clone https://github.com/karpathy/nanoGPT.git
+```
 ### Installing Nerd Fonts
 ```
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Noto.zip
@@ -74,6 +121,59 @@ unzip Noto.zip "*.ttf" -d ~/.fonts
 sudo fc-cache -f -v
 rm Noto.zip
 ```
+### Installing OCRMyPDF
+```
+conda create --name ocrmypdf python=3.10.13
+conda activate ocrmypdf
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+pip install ocrmypdf
+pip install git+https://github.com/ocrmypdf/OCRmyPDF-EasyOCR.git
+```
+### Installing Recoverpy
+```
+sudo pipx run recoverpy
+```
+### Installing Rockyou
+```
+wget https://download.weakpass.com/wordlists/90/rockyou.txt.gz -O rockyou.txt.gz
+gzip -d rockyou.txt.gz
+```
+### Installing TeX Live
+```
+wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O install-tl-unx.tar.gz
+zcat < install-tl-unx.tar.gz | tar xf -
+rm install-tl-unx.tar.gz
+cd install-tl-*
+sudo perl ./install-tl --no-interaction
+rm -r install-tl-*
+```
+### Installing TheSync
+```
+git clone https://github.com/Inc44/TheSync.git
+```
+### Installing TheTTS
+```
+conda create --name TheTTS python=3.10.13
+conda activate TheTTS
+pip install openai==1.13.3 TTS==0.22.0
+DS_BUILD_TRANSFORMER_INFERENCE=1 pip install deepspeed==0.14.0
+git clone https://github.com/Inc44/TheTTS.git
+cd TheTTS
+git lfs install
+git clone https://huggingface.co/coqui/XTTS-v2
+sudo rm -r XTTS-v2/.git
+cp /home/pc/TheTTS/xtts.py /home/pc/miniconda3/envs/TheTTS/lib/python3.10/site-packages/TTS/tts/models
+```
+### Installing UVR
+```
+conda create --name uvr python=3.10.13
+conda activate uvr
+git clone https://github.com/Anjok07/ultimatevocalremovergui.git
+cd ultimatevocalremovergui
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/Dora-0.0.3.tar.gz -O Dora-0.0.3.tar.gz
+pip install Dora-0.0.3.tar.gz
+pip install -r requirements.txt
+```
 ### Installing Vim-Plug
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -81,6 +181,14 @@ vim > :set spell > Y > Y > 1 > Y > Enter
 vim > :PlugInstall
 mkdir ~/.vim/UltiSnips
 wget https://raw.githubusercontent.com/gillescastel/latex-snippets/master/tex.snippets -O ~/.vim/UltiSnips/tex.snippets
+```
+### Installing WhisperX
+```
+conda create --name whisperx python=3.10.13
+conda activate whisperx
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+pip install git+https://github.com/m-bain/whisperx.git
+pip install faster-whisper==1.0.0 --upgrade
 ```
 ### Installing WhiteSur Theme
 ```

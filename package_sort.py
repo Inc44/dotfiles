@@ -1,0 +1,5 @@
+packages_unsorted = input()
+packages_unsorted_list = packages_unsorted.split()
+packages_sorted_list = sorted(packages_unsorted_list)
+packages_sorted = " ".join(packages_sorted_list)
+print(packages_sorted)

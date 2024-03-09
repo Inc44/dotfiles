@@ -33,8 +33,6 @@ sudo reboot
 ```
 #### Installing CUDA Toolkit and Nvidia Driver
 ```
-sudo apt install gcc
-sudo apt install linux-headers-$(uname -r)
 sudo apt-key del 7fa2af80
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb -O cuda-keyring_1.1-1_all.deb
 sudo dpkg -i cuda-keyring_1.1-1_all.deb
@@ -50,13 +48,20 @@ sudo reboot
 ```
 </details>
 
-### Installing Git
+### Apt Add Repositories
 ```
-sudo apt install git
+sudo add-apt-repository ppa:alex-p/tesseract-ocr5
+sudo add-apt-repository ppa:inkscape.dev/stable
+sudo add-apt-repository ppa:obsproject/obs-studio
+sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
+sudo add-apt-repository ppa:solaar-unifying/stable
+sudo add-apt-repository ppa:ubuntuhandbook1/ffmpeg6
+sudo add-apt-repository ppa:xtradeb/apps
+sudo add-apt-repository universe
 ```
-### Installing Gnu Stow
+### Apt Installing Everything
 ```
-sudo apt install stow
+sudo apt install aircrack-ng bspwm build-essential conky coreutils curl czkawka ffmpeg g++ gcc git git-lfs gnome-screenshot gnome-shell-extension-manager gnome-tweaks golang-go gparted grep httrack inkscape kitty libbz2-dev libgmp-dev libpam0g-dev libpcap-dev libssl-dev libxcb-cursor0 libxcb-xkb-dev linux-headers-$(uname -r) make mpc mpd mpv ncmpcpp neofetch net-tools nitrogen obs-studio pavucontrol picom pinta pip pipx polybar progress python2 python3-pip python3-tk qbittorrent qtdeclarative5-dev rofi solaar stow telegram-desktop tesseract-ocr tree unpaper util-linux vim xclip zathura zsh
 ```
 ### Installing CMake
 ```
@@ -66,31 +71,9 @@ sudo sh cmake-3.28.3-linux-x86_64.sh --skip-license --exclude-subdir --prefix=/o
 sudo ln -s /opt/cmake/bin/cmake /usr/local/bin/cmake
 rm cmake-3.28.3-linux-x86_64.sh
 ```
-### Installing Curl
-```
-sudo apt install curl
-```
-### Installing FFMPEG
-```
-sudo add-apt-repository ppa:ubuntuhandbook1/ffmpeg6
-sudo apt-get install ffmpeg
-```
-### Installing Go
-```
-sudo apt install golang-go
-```
 ### Installing Rust
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
-### Installing Tesseract OCR
-```
-sudo add-apt-repository ppa:alex-p/tesseract-ocr5
-sudo apt install tesseract-ocr
-```
-### Installing Vim
-```
-sudo apt install vim
 ```
 ### Installing Visual Studio Code
 ```
@@ -172,7 +155,7 @@ sudo apt purge linux-headers-old
 sudo apt purge linux-modules-old
 sudo apt purge linux-modules-extra-old
 ```
-Update GRUB configuration
+### Update GRUB configuration
 ```
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo reboot
@@ -186,50 +169,6 @@ sudo rm /usr/share/plymouth/ubuntu-logo.png
 ## Tools
 <details>
 
-### Installing Bspwm
-```
-sudo apt install bspwm
-```
-### Installing Conky
-```
-sudo apt install conky
-```
-### Installing Czkawka
-```
-sudo add-apt-repository ppa:xtradeb/apps
-sudo apt update
-sudo apt-get install czkawka
-```
-### Installing ECT
-```
-git clone --recursive https://github.com/fhanau/Efficient-Compression-Tool.git
-cd Efficient-Compression-Tool
-mkdir build
-cd build
-cmake ../src
-make
-echo 'export PATH="/home/pc/Efficient-Compression-Tool/build:$PATH"' | tee -a /home/pc/.bashrc
-```
-### Installing Fonts
-```
-cp -r ~/dotfiles/.fonts ~
-sudo fc-cache -f -v
-```
-### Installing Font Awesome
-```
-git clone https://github.com/eliyantosarage/font-awesome-pro.git
-cp -r ~/font-awesome-pro/fontawesome-pro-6.5.1-desktop/otfs/* ~/.fonts
-sudo rm -r ~/font-awesome-pro
-sudo fc-cache -f -v
-```
-### Installing Gnome Screenshot
-```
-sudo apt install gnome-screenshot
-```
-### Installing GParted
-```
-sudo apt install gparted
-```
 ## Configuring Gedit
 ```
 gsettings set org.gnome.gedit.preferences.editor editor-font 'Noto Sans Mono 16'
@@ -237,23 +176,12 @@ gsettings set org.gnome.gedit.preferences.editor scheme 'classic'
 gsettings set org.gnome.gedit.preferences.editor tabs-size 4
 gsettings set org.gnome.gedit.preferences.editor use-default-font false
 ```
-### Installing Httrack
+### Configuring Kitty
 ```
-sudo apt install httrack
-```
-### Installing Inkscape
-```
-sudo add-apt-repository ppa:inkscape.dev/stable
-sudo apt install inkscape
-```
-### Installing and Configuring Kitty
-```
-sudo apt install kitty
 sudo update-alternatives --config x-terminal-emulator
 ```
 ### Installing Ly
 ```
-sudo apt install build-essential libpam0g-dev libxcb-xkb-dev
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 make
@@ -263,52 +191,11 @@ sudo systemctl disable gdm3.service
 sudo systemctl enable ly.service
 sudo reboot
 ```
-### Installing MPC
-```
-sudo apt install mpc
-```
-### Installing MPD
-```
-sudo apt install mpd
-```
-### Installing MPV
-```
-sudo apt install mpv
-```
-### Installing NCMPCPP
-```
-sudo apt install ncmpcpp
-```
-### Installing Neofetch
-```
-sudo apt install neofetch
-echo 'neofetch' | tee -a /home/pc/.bashrc
-```
-### Installing Nerd Fonts
-```
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Noto.zip
-unzip Noto.zip "*.ttf" -d ~/.fonts
-rm Noto.zip
-sudo fc-cache -f -v
-```
-### Installing Nitrogen
-```
-sudo apt install nitrogen
-```
-### Installing OBS Studio
-```
-sudo add-apt-repository ppa:obsproject/obs-studio
-sudo apt install obs-studio
-```
 ### Installing Obsidian
 ```
 wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.3/obsidian_1.5.3_amd64.deb -O obsidian_1.5.3_amd64.deb
 sudo apt install ~/obsidian_1.5.3_amd64.deb
 rm obsidian_1.5.3_amd64.deb
-```
-### Installing Pavucontrol
-```
-sudo apt install pavucontrol
 ```
 ### Installing PeaZip
 ```
@@ -316,44 +203,10 @@ wget https://github.com/peazip/PeaZip/releases/download/9.7.1/peazip_9.7.1.LINUX
 sudo apt install ~/peazip_9.7.1.LINUX.GTK2-1_amd64.deb
 rm peazip_9.7.1.LINUX.GTK2-1_amd64.deb
 ```
-### Installing Picom
-```
-sudo apt install picom
-```
-### Installing Pinta
-```
-sudo apt install pinta
-```
-### Installing Pipx
-```
-sudo apt install pipx
-```
-### Installing Polybar
-```
-sudo apt install polybar
-```
-### Installing and Configuring Pywal
-```
-conda deactivate
-sudo apt install pip
-sudo pip3 install pywal
-#sudo apt install python2
-echo 'wal -R -q' | tee -a /home/pc/.bashrc
-```
-```
-wal --theme base16-rebecca
-```
-### Installing and Configuring Pi-hole
+### Installing Pi-hole
 ```
 curl -sSL https://install.pi-hole.net | bash
-```
-```
 sudo pihole -a -p
-```
-### Installing qBittorrent
-```
-sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
-sudo apt install qbittorrent
 ```
 ### Installing and Configuring Rclone
 ```
@@ -362,8 +215,6 @@ rclone config
 ```
 ### Installing Rclone Browser
 ```
-sudo apt update
-sudo apt install git g++ make qtdeclarative5-dev
 git clone https://github.com/kapitainsky/RcloneBrowser.git
 cd RcloneBrowser
 mkdir build
@@ -372,34 +223,6 @@ cmake ..
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/main_window.cpp -O ~/RcloneBrowser/src/main_window.cpp
 make
 sudo make install
-```
-### Installing Recoverpy
-```
-sudo apt install grep coreutils util-linux progress
-sudo pipx run recoverpy
-```
-### Installing Rofi
-```
-sudo apt install rofi
-```
-### Installing Solaar
-```
-sudo add-apt-repository ppa:solaar-unifying/stable
-sudo apt install solaar
-```
-### Installing Telegram
-```
-sudo apt install telegram-desktop
-```
-### Installing TeX Live
-```
-wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O install-tl-unx.tar.gz
-zcat < install-tl-unx.tar.gz | tar xf -
-cd install-tl-*
-sudo perl ./install-tl --no-interaction
-echo 'export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"' | tee -a /home/pc/.bashrc
-rm install-tl-unx.tar.gz
-rm -r install-tl-*
 ```
 ### Installing Thunderbird
 ```
@@ -410,26 +233,23 @@ sudo mv thunderbird /opt
 sudo ln -s /opt/thunderbird/thunderbird /usr/local/bin/thunderbird
 sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/installing-thunderbird-linux/thunderbird.desktop -O /usr/local/share/applications/thunderbird.desktop
 ```
-### Installing Tree
-```
-sudo apt install tree
-```
 ### Installing VirtualBox
 ```
 wget https://download.virtualbox.org/virtualbox/7.0.14/virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb -O virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb
 sudo apt install ~/virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb
 rm virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb
 ```
+### Installing Wal
+```
+conda deactivate
+sudo pip3 install pywal
+wal --theme base16-rebecca
+```
 ### Installing Xtreme Download Manager
 ```
 wget https://github.com/subhra74/xdm/releases/download/8.0.29/xdman_gtk_8.0.29_amd64.deb -O xdman_gtk_8.0.29_amd64.deb
 sudo apt install ~/xdman_gtk_8.0.29_amd64.deb
 rm xdman_gtk_8.0.29_amd64.deb
-```
-### Installing Zathura
-```
-sudo apt install zathura
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/.config/zathura/zathurarc -O ~/.config/zathura/zathurarc
 ```
 ### Installing Zig
 ```
@@ -439,122 +259,12 @@ rm zig-linux-x86_64-0.12.0-dev.3156+0b2e23b06.tar.xz
 mv zig-linux-x86_64-0.12.0-dev.3156+0b2e23b06 zig
 echo 'export PATH="/home/pc/zig:$PATH"' | tee -a /home/pc/.bashrc
 ```
-### Installing Zsh
-```
-sudo apt install zsh
-```
-</details>
-
-## Python
-<details>
-
-### Installing AutoKhan
-```
-git clone https://github.com/Inc44/AutoKhan.git
-cd AutoKhan
-conda create --name AutoKhan python=3.10.13
-conda activate AutoKhan
-pip install -r requirements.txt
-```
-### Installing Chatgpt Telegram Bot
-```
-conda create --name ctb python=3.10.13
-conda activate ctb
-git clone https://github.com/n3d1117/chatgpt-telegram-bot.git
-cd chatgpt-telegram-bot
-pip install -r requirements.txt
-```
-```
-/home/pc/miniconda3/envs/ctb/bin/python -O /home/pc/chatgpt-telegram-bot/bot/main.py
-```
-### Installing MaTools
-```
-sudo apt install libxcb-cursor0 xclip
-conda create --name MaTools python=3.10.13
-conda activate MaTools
-git clone https://github.com/Inc44/MaTools.git
-cd MaTools
-pip install -r requirements.txt
-```
-### Installing and Using NanoGPT
-```
-conda create --name nanogpt python=3.10.13
-conda activate nanogpt
-pip install torch numpy transformers datasets tiktoken wandb tqdm
-git clone https://github.com/karpathy/nanoGPT.git
-```
-```
-conda activate nanogpt
-cd nanoGPT
-python -O data/shakespeare_char/prepare.py
-python -O train.py config/train_shakespeare_char.py
-```
-### Installing OCRMyPDF
-```
-sudo apt install unpaper
-conda create --name ocrmypdf python=3.10.13
-conda activate ocrmypdf
-conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
-pip install ocrmypdf
-pip install git+https://github.com/ocrmypdf/OCRmyPDF-EasyOCR.git
-```
-### Installing and Using TheSync
-```
-git clone https://github.com/Inc44/TheSync.git
-```
-```
-cd TheSync
-python -O thesync.py
-```
-### Installing and Using TheTTS
-```
-git clone https://github.com/Inc44/TheTTS.git
-cd TheTTS
-conda create --name TheTTS python=3.10.13
-conda activate TheTTS
-pip install openai==1.12.0 TTS==0.22.0
-DS_BUILD_TRANSFORMER_INFERENCE=1 pip install deepspeed==0.13.3
-sudo apt install git-lfs
-git lfs install
-git clone https://huggingface.co/coqui/XTTS-v2
-sudo rm -r XTTS-v2/.git
-cp /home/pc/TheTTS/xtts.py /home/pc/miniconda3/envs/TheTTS/lib/python3.10/site-packages/TTS/tts/models
-```
-```
-conda activate TheTTS
-cd TheTTS
-python -O thetts.py
-```
-### Installing UVR
-```
-sudo apt install python3-pip
-sudo apt install python3-tk
-git clone https://github.com/Anjok07/ultimatevocalremovergui.git
-cd ultimatevocalremovergui
-conda create --name uvr python=3.10.13
-conda activate uvr
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/Dora-0.0.3.tar.gz -O Dora-0.0.3.tar.gz
-pip3 install Dora-0.0.3.tar.gz
-pip3 install -r requirements.txt
-```
-### Installing WhisperX
-```
-conda create --name whisperx python=3.10.13
-conda activate whisperx
-conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
-pip install git+https://github.com/m-bain/whisperx.git
-pip install faster-whisper==1.0.0 --upgrade
-```
 </details>
 
 ## Pentesting
 <details>
 
-### Installing and Using Aircrack-ng
-```
-sudo apt install aircrack-ng
-sudo apt install net-tools
-```
+### Using Aircrack-ng
 ```
 ifconfig #netstat -ie
 sudo airmon-ng start wlp7s0
@@ -563,32 +273,29 @@ sudo airodump-ng wlp7s0mon
 sudo airodump-ng -c CH --bssid BSSID -w . wlp7s0mon
 sudo airmon-ng stop wlp7s0mon
 ```
-### Installing and Using John the Ripper
+### Installing John the Ripper
 ```
 git clone https://github.com/openwall/john
 cd john/src
-sudo apt install libssl-dev libgmp-dev libbz2-dev libpcap-dev
 ./configure
 make
-echo 'export PATH="/home/pc/john/run:$PATH"' | tee -a /e
 ```
+### Using John the Ripper
 ```
 zip2john /home/pc/path.zip > /home/pc/hash.txt
 ```
-### Installing and Using Hashcat
+### Installing Hashcat
 ```
 git clone https://github.com/hashcat/hashcat.git
 cd hashcat
 make
-echo 'export PATH="/home/pc/hashcat:$PATH"' | tee -a /home/pc/.bashrc
 ```
+### Using Hashcat
 ```
 sed -i 's/^[^$]*//' /home/pc/hash.txt
 sed -i 's/[^$]*$//' /home/pc/hash.txt
 ```
 ```
-wget https://download.weakpass.com/wordlists/90/rockyou.txt.gz -O rockyou.txt.gz
-gzip -d rockyou.txt.gz
 hashcat -m 13600 -a3 -w3 -d2 /home/pc/hash.txt /home/pc/rockyou.txt --increment --increment-min 8 --increment-max 8
 cat /home/pc/hashcat/hashcat.potfile
 rm /home/pc/hashcat/hashcat.potfile
@@ -605,20 +312,9 @@ hashcat -b -d 2 -m 13600
 git clone https://github.com/hashcat/hashcat-utils.git
 cd /home/pc/hashcat-utils/src
 make
-echo 'export PATH="/home/pc/hashcat-utils/src:$PATH"' | tee -a /home/pc/.bashrc
 ```
+### Using Hashcat Utils
 ```
 cap2hccapx.bin /home/pc/.-01.cap /home/pc/wifi.hccapx
-```
-</details>
-
-## Extensions
-<details>
-
-### Installing Gnome Tweaks and Extension
-```
-sudo add-apt-repository universe
-sudo apt install gnome-tweaks
-sudo apt install gnome-shell-extension-manager
 ```
 </details>
