@@ -112,9 +112,14 @@ unset __conda_setup
 # <<< conda initialize <<<
 #. "$HOME/.cargo/env"
 alias ec="ect -9 -keep --strict --mt-file --disable-jpg -recurse"
-alias hc="history -c && history -w"
-alias uu="sudo apt update && sudo apt upgrade"
-alias cc="sudo apt autoremove --purge && sudo apt autoclean && sudo apt clean && pip cache purge && conda clean -a && sudo journalctl --vacuum-time=1h"
+alias hc="history -c; history -w"
+if type apt > /dev/null 2>&1; then
+    alias u="sudo apt update; sudo apt upgrade"
+    alias c="sudo apt autoremove --purge; sudo apt autoclean; sudo apt clean; pip cache purge; conda clean -a; sudo journalctl --vacuum-time=1h"
+elif type pacman > /dev/null 2>&1; then
+    alias u="sudo pacman -Syu"
+    alias c="sudo pacman -Rsnc $(pacman -Qtdq); sudo paccache -ruk0; yay -Sc; pip cache purge; conda clean -a; sudo journalctl --vacuum-time=1h"
+fi
 export LD_LIBRARY_PATH="/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH"
 export PATH="/home/pc/7-zip:$PATH"
 export PATH="/home/pc/.cargo/bin:$PATH"
