@@ -1,7 +1,5 @@
 .fonts/.uuid
-.fonts/NotoMono*
-.fonts/NotoSans*
-.fonts/NotoSerif*
+.fonts/*NerdFont*
 .fonts/Font Awesome*
 .vscode/cli
 .vscode/extensions
