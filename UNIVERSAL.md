@@ -157,6 +157,17 @@ cp -r ~/font-awesome-pro/fontawesome-pro-6.5.1-desktop/otfs/* ~/.fonts
 sudo rm -r ~/font-awesome-pro
 sudo fc-cache -f -v
 ```
+### Installing Inkscape Figures
+```
+sudo pip install inkscape-figures --break-system-packages
+```
+### Installing Inkscape Shortcut Manager
+```
+conda create --name inksm python=3.10.13
+conda activate inksm
+pip install xlib
+git clone https://github.com/gillescastel/inkscape-shortcut-manager.git
+```
 ### Installing MaTools
 ```
 conda create --name MaTools python=3.10.13

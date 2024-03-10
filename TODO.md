@@ -1,3 +1,9 @@
+### Starting Vim with Inkscape
+```
+vim .tex
+inkf
+inksm
+```
 ### Initializing Git
 ```
 git init -b main

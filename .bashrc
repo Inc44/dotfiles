@@ -111,30 +111,31 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 #. "$HOME/.cargo/env"
-alias ec="ect -9 -keep --strict --mt-file --disable-jpg -recurse"
-alias hc="history -c; history -w"
 pip_conda_cargo_log_clean="pip cache purge; conda clean -a; cargo cache -ak0 -r all; sudo journalctl --vacuum-time=1h"
 if type apt > /dev/null 2>&1; then
     upgrade="sudo apt update; sudo apt upgrade"
     clean="sudo apt autoremove --purge; sudo apt autoclean; sudo apt clean"
+    export LD_LIBRARY_PATH="/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH"
+    export PATH="/usr/local/cuda-12.3/bin:$PATH"
+    export PATH="/home/pc/zig:$PATH"
+    export PATH="/home/pc/hashcat-utils/src:$PATH"
+    export PATH="/home/pc/hashcat:$PATH"
+    export PATH="/home/pc/john/run:$PATH"
 elif type pacman > /dev/null 2>&1; then
     upgrade="sudo pacman -Syu"
     clean="sudo pacman -Rsnc $(pacman -Qtdq); sudo paccache -ruk0; yay -Sc"
 fi
-alias u="$upgrade"
 alias c="$clean; $pip_conda_cargo_log_clean"
-export LD_LIBRARY_PATH="/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH"
+alias ec="ect -9 -keep --strict --mt-file --disable-jpg -recurse"
+alias eca="ect -9 -keep --strict --mt-file -recurse"
+alias ecq="ect -1 -keep --strict --mt-file --disable-jpg -recurse"
+alias ecqa="ect -1 -keep --strict --mt-file -recurse"
+alias hc="history -c; history -w"
+alias inkf="conda deactivate; killall inkscape-figures; inkscape-figures watch"
+alias inksm="conda activate inksm; python -OO ~/inkscape-shortcut-manager/main.py"
+alias u="$upgrade"
 export PATH="/home/pc/7-zip:$PATH"
 export PATH="/home/pc/.cargo/bin:$PATH"
 export PATH="/home/pc/Efficient-Compression-Tool/build:$PATH"
-export PATH="/home/pc/hashcat-utils/src:$PATH"
-export PATH="/home/pc/hashcat:$PATH"
-export PATH="/home/pc/john/run:$PATH"
-export PATH="/home/pc/zig:$PATH"
-export PATH="/usr/local/cuda-12.3/bin:$PATH"
 export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
 export TERMINFO=/usr/share/terminfo
-
-
-
-
