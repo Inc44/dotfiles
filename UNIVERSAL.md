@@ -45,6 +45,10 @@ git clone https://github.com/n3d1117/chatgpt-telegram-bot.git
 cd chatgpt-telegram-bot
 pip install -r requirements.txt
 ```
+### Installing Cargo Cache
+```
+cargo install cargo-cache
+```
 ### Installing Color Picker
 Open `Extension Manager`
 
@@ -291,3 +295,8 @@ Turn on `User Themes`
 Click `Settings`
 
 Select: `WhiteSur-Light-solid-purple`
+### Fixing Default Directory Opener
+```
+xdg-mime default org.gnome.Nautilus.desktop inode/directory
+xdg-mime query default inode/directory
+```

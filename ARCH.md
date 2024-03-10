@@ -34,7 +34,7 @@ sudo rm -r yay-bin
 ```
 ### Pacman Installing Everything
 ```
-sudo pacman -S aircrack-ng alsa-utils arandr cmake conky cuda cuda-tools curl ffmpeg ghostscript git git-lfs gnome-screenshot go gparted grub-customizer hashcat hashcat-utils httrack inkscape john kitty ly mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen nvidia-settings obs-studio obsidian os-prober pacman-contrib pavucontrol picom pinta polybar powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone rofi rust solaar stow telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr thunderbird tree unpaper unzip vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip zathura zig zsh
+sudo pacman -S aircrack-ng alsa-utils arandr cmake conky cuda cuda-tools curl ffmpeg ghostscript git git-lfs gnome-screenshot go gparted grub-customizer hashcat hashcat-utils httrack inkscape john kitty ly mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen nvidia-settings obs-studio obsidian oculante os-prober pacman-contrib pavucontrol picom pinta polybar powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone rofi rust solaar stow telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr thunderbird tree unpaper unzip vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip zathura zig zsh
 ```
 ### Yay Installing Everything
 ```
@@ -74,8 +74,10 @@ sudo pacman -Rsnc gnome-contacts
 sudo pacman -Rsnc gnome-logs
 sudo pacman -Rsnc gnome-maps
 sudo pacman -Rsnc gnome-music
+sudo pacman -Rsnc gnome-software
 sudo pacman -Rsnc gnome-tour
 sudo pacman -Rsnc gnome-weather
+sudo pacman -Rsnc loupe
 sudo pacman -Rsnc orca
 sudo pacman -Rsnc rygel
 sudo pacman -Rsnc simple-scan

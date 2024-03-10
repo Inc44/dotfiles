@@ -113,13 +113,16 @@ unset __conda_setup
 #. "$HOME/.cargo/env"
 alias ec="ect -9 -keep --strict --mt-file --disable-jpg -recurse"
 alias hc="history -c; history -w"
+pip_conda_cargo_log_clean="pip cache purge; conda clean -a; cargo cache -ak0 -r all; sudo journalctl --vacuum-time=1h"
 if type apt > /dev/null 2>&1; then
-    alias u="sudo apt update; sudo apt upgrade"
-    alias c="sudo apt autoremove --purge; sudo apt autoclean; sudo apt clean; pip cache purge; conda clean -a; sudo journalctl --vacuum-time=1h"
+    upgrade="sudo apt update; sudo apt upgrade"
+    clean="sudo apt autoremove --purge; sudo apt autoclean; sudo apt clean"
 elif type pacman > /dev/null 2>&1; then
-    alias u="sudo pacman -Syu"
-    alias c="sudo pacman -Rsnc $(pacman -Qtdq); sudo paccache -ruk0; yay -Sc; pip cache purge; conda clean -a; sudo journalctl --vacuum-time=1h"
+    upgrade="sudo pacman -Syu"
+    clean="sudo pacman -Rsnc $(pacman -Qtdq); sudo paccache -ruk0; yay -Sc"
 fi
+alias u="$upgrade"
+alias c="$clean; $pip_conda_cargo_log_clean"
 export LD_LIBRARY_PATH="/usr/local/cuda-12.3/lib64:$LD_LIBRARY_PATH"
 export PATH="/home/pc/7-zip:$PATH"
 export PATH="/home/pc/.cargo/bin:$PATH"
@@ -131,3 +134,7 @@ export PATH="/home/pc/zig:$PATH"
 export PATH="/usr/local/cuda-12.3/bin:$PATH"
 export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
 export TERMINFO=/usr/share/terminfo
+
+
+
+
