@@ -34,7 +34,7 @@ sudo rm -r yay-bin
 ```
 ### Pacman Installing Everything
 ```
-sudo pacman -S aircrack-ng alsa-utils arandr cmake conky cuda cuda-tools curl ffmpeg ghostscript git git-lfs gnome-screenshot go gparted grub-customizer hashcat hashcat-utils httrack inkscape john kitty ly mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen nvidia-settings obs-studio obsidian os-prober pacman-contrib pavucontrol picom pinta polybar powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone rofi rust solaar stow telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr thunderbird tree unpaper unzip vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip zathura zathura-pdf-mupdf zig zsh
+sudo pacman -S aircrack-ng alsa-utils arandr cmake conky cuda cuda-tools curl ffmpeg ghidra ghostscript git git-lfs gnome-screenshot go gparted grub-customizer hashcat hashcat-utils httrack inkscape john kitty libjxl ly mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen nvidia-settings obs-studio obsidian ollama os-prober pacman-contrib pavucontrol pdf2svg picom pinta polybar powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone rofi rust solaar stow telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr thunderbird tree unpaper unzip vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip zathura zathura-pdf-mupdf zig zsh
 ```
 ### Yay Installing Everything
 ```

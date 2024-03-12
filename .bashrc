@@ -122,7 +122,7 @@ if type apt > /dev/null 2>&1; then
     export PATH="/home/pc/hashcat:$PATH"
     export PATH="/home/pc/john/run:$PATH"
 elif type pacman > /dev/null 2>&1; then
-    upgrade="sudo pacman -Syu"
+    upgrade="sudo pacman -Syu; yay -u"
     clean="sudo pacman -Rsnc $(pacman -Qtdq); sudo paccache -ruk0; yay -Sc"
 fi
 alias c="$clean; $pip_conda_cargo_log_clean"
