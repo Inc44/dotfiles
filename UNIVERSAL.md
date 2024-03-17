@@ -33,6 +33,10 @@ git clone https://github.com/Inc44/AutoKhan.git
 cd AutoKhan
 pip install -r requirements.txt
 ```
+### Installing Birthday
+```
+git clone https://github.com/Inc44/Birthday.git
+```
 ### Installing Blazingly Fast Rust Donut
 ```
 cargo install blazingly_fast_rust_donut
@@ -221,6 +225,10 @@ conda activate ocrmypdf
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install ocrmypdf
 pip install git+https://github.com/ocrmypdf/OCRmyPDF-EasyOCR.git
+```
+### Installing raqua
+```
+git clone https://github.com/Inc44/raqua.git
 ```
 ### Installing Recoverpy
 ```
