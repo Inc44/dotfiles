@@ -67,6 +67,8 @@ Options:
 - `-itsscale float`: Scale the timestamps of the input video stream by a floating-point number
 - `-output`: Specify the output file
 - `-r float`: Set the frame rate of the output video
+- `-ss float`: Specify the start time for trimming, seeking to the given time position before starting to process the file
+- `-t float`: Set the duration of the output file
 
 `find expression`: Searche for files within a directory hierarchy
 
@@ -74,7 +76,19 @@ Options:
 
 `gedit file`: Open the file in the Vim text editor
 
-`git config pull.rebase false`: Configure git to merge the remote branch when pulling
+`git`: Version control system
+
+Options:
+
+- `add .`: Stages all changes in the current directory for the next commit
+- `branch --unset-upstream`: Removes the upstream tracking from the current branch, making it a local branch only
+- `clone link`: Creates a copy of an existing repository located at `link` into a new local directory
+- `commit -m message`: Commits the staged changes with a commit message `message`
+- `config pull.rebase false`: Configure git to merge the remote branch when pulling
+- `init -b main`: Initializes a new Git repository and sets the default branch to `main`
+- `push origin :branch-name` deletes the `branch-name` from the remote repository
+- `push origin branch-name` pushes your local `branch-name` to the remote, updating or creating it as necessary
+- `submodule update --init --recursive`: Initializes and updates submodules recursively, including nested submodules
 
 `httrack link`: Download websites to a local directory for offline viewing
 
@@ -118,6 +132,16 @@ Options:
 `mount`: Mount a unmounted filesystem
 
 `mv path1 path2`: Move or rename by overwriting the file or directory at path1 to path2
+
+`ollama`: Local LLM model server
+
+Options:
+
+- `serve`: Start the server to host models
+- `list`: Display a list of available models
+- `pull model`: Download a model to the local system
+- `rm model`: Remove a model from the local storage
+- `run model`: Execute a model that is available locally
 
 `pip install package --upgrade`: Install the latest version of a package, upgrading it if already installed
 
@@ -182,19 +206,18 @@ Options:
 - `--no-parent`: Do not download anything from the parent directory
 - `--page-requisites`: Download all the files necessary to properly display a web page
 - `--random-wait`: Wait between downloads to mimic human browsing
-- `--recursive`: Download the entire website
 - `--restrict-file-names=windows`: Modify filenames so that they will work in Windows as well
 - `-E`: Append .html to the extensions of HTML documents that do not have it
 - `-K`: Keep a backup of the original files before converting links
 - `-O path`: Specify the output directory
 - `-P path`: Set the directory prefix for downloaded files
 - `-U mozilla`: Identify as a Mozilla browser
-- `-e robots=off`: Ignore the robots.txt file
+- `-e robots=off`: Ignore the robots.txt file to ensure no restrictions on the content
 - `-k`: Convert links for offline viewing
 - `-l 10`: Set the maximum recursion depth to 10
 - `-m`: Mirror the entire site
 - `-p`: Download all necessary files to display the HTML page
-- `-r`: Enable recursive downloading
+- `-r`, `--recursive`: Enable recursive downloading
 
 `xprop`: Retrieve information about a window clicked in an X server environment
 

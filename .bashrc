@@ -123,7 +123,7 @@ if type apt > /dev/null 2>&1; then
     export PATH="/home/pc/john/run:$PATH"
 elif type pacman > /dev/null 2>&1; then
     upgrade="sudo pacman -Syu; yay -u"
-    clean="sudo pacman -Rsnc $(pacman -Qtdq); sudo paccache -ruk0; yay -Sc"
+    clean="sudo pacman -Rsnc $(pacman -Qtdq); sudo pacman -Sc; sudo pacman -Scc; sudo paccache -ruk0; yay -Sc; flatpak uninstall --unused"
 fi
 alias c="$clean; $pip_conda_cargo_log_clean"
 alias ec="ect -9 -keep --strict --mt-file --disable-jpg -recurse"

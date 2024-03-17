@@ -32,13 +32,25 @@ makepkg -si
 cd ..
 sudo rm -r yay-bin
 ```
+or
+```
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ..
+sudo rm -r yay
+```
 ### Pacman Installing Everything
 ```
-sudo pacman -S aircrack-ng alsa-utils arandr cmake conky cuda cuda-tools curl ffmpeg ghidra ghostscript git git-lfs gnome-screenshot go gparted grub-customizer hashcat hashcat-utils httrack inkscape john kitty libjxl ly mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen nvidia-settings obs-studio obsidian ollama os-prober pacman-contrib pavucontrol pdf2svg picom pinta polybar powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone rofi rust solaar stow telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr thunderbird tree unpaper unzip vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip zathura zathura-pdf-mupdf zig zsh
+sudo pacman -S aircrack-ng alsa-utils arandr cmake conky cuda cuda-tools curl ffmpeg ghidra ghostscript git git-lfs gnome-screenshot go gparted grub-customizer hashcat hashcat-utils httrack inkscape john kitty kiwix-desktop libjxl ly mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen ntfs-3g nvidia-settings obs-studio obsidian ollama os-prober pacman-contrib pavucontrol pdf2svg picom pinta polybar powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone rofi rust solaar stow telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr thunderbird tree unpaper unzip vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip yt-dlp zathura zathura-pdf-mupdf zig zsh
 ```
 ### Yay Installing Everything
 ```
-yay -S betterlockscreen czkawka-gui microsoft-edge-stable-bin oculante peazip-qt-bin rclone-browser visual-studio-code-bin xdman-beta-bin yandex-browser
+yay -S betterlockscreen czkawka-gui microsoft-edge-stable-bin normcap oculante peazip-qt-bin rclone-browser visual-studio-code-bin xdman-beta-bin xwinwrap-0.9-bin yandex-browser
+```
+### Flatpak Installing Everything
+```
+flatpak install com.github.dynobo.normcap com.mattjakeman.ExtensionManager
 ```
 ### Adding Google Drive
 ```
@@ -90,16 +102,15 @@ If you encounter an empty screen upon launching, try executing the program from 
 ```
 telegram-desktop
 ```
-### Installing Extension Manager
-```
-flatpak install com.mattjakeman.ExtensionManager
-```
 ### System Update and Cache Cleaning
 ```
 sudo pacman -Syu
 sudo pacman -Rsnc $(pacman -Qtdq)
+sudo pacman -Sc
+sudo pacman -Scc
 sudo paccache -ruk0
 yay -Sc
+flatpak uninstall --unused
 pip cache purge
 conda clean -a
 sudo journalctl --vacuum-time=1h

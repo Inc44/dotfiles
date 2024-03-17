@@ -1,12 +1,27 @@
+```bash
+yay -S normcap --mflags "--nocheck"
+```
+### Using Ghidra
+```
+ghidra &
+```
+```
+vim task7.py
+python -OO task7.py
+./TASK7 ABCDEFGHIJKLMNOP
+```
+```
+vim keygenme.py
+python -OO keygenme.py A ./keygenme
+./keygenme A 133120
+python -OO keygenme.py BABABOI ./keygenme
+./keygenme BABABOI 301056
+```
 ### Starting Vim with Inkscape
 ```
 vim .tex
 inkf
 inksm
-```
-### Initializing Git
-```
-git init -b main
 ```
 ### Using 7-Zip
 ```
@@ -129,14 +144,6 @@ sudo reboot
 ### Installing No Client Side Decoration
 ```
 yay -S gtk3-nocsd-git
-```
-### Installing Mpd
-```
-mkdir .config/mpd
-vim .config/mpd/mpd.conf
-sudo mkdir /etc/timidity
-sudo touch /etc/timidity/timidity.cfg
-mkdir /home/pc/.config/mpd/playlists
 ```
 ### Installing Gnome Polkit
 ```
