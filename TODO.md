@@ -1,22 +1,6 @@
 ```bash
 yay -S normcap --mflags "--nocheck"
 ```
-### Using Ghidra
-```
-ghidra &
-```
-```
-vim task7.py
-python -OO task7.py
-./TASK7 ABCDEFGHIJKLMNOP
-```
-```
-vim keygenme.py
-python -OO keygenme.py A ./keygenme
-./keygenme A 133120
-python -OO keygenme.py BABABOI ./keygenme
-./keygenme BABABOI 301056
-```
 ### Starting Vim with Inkscape
 ```
 vim .tex
