@@ -139,4 +139,6 @@ Inkscape Key Chords (Combos):
 
 `b` Seek Backward
 
+`y` Single Mode
+
 `z` Toggle Random

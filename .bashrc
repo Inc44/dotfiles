@@ -137,5 +137,6 @@ alias u="$upgrade"
 export PATH="/home/pc/7-zip:$PATH"
 export PATH="/home/pc/.cargo/bin:$PATH"
 export PATH="/home/pc/Efficient-Compression-Tool/build:$PATH"
+export PATH="/home/pc/go/bin:$PATH"
 export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
 export TERMINFO=/usr/share/terminfo

@@ -5,7 +5,7 @@ set nocompatible
 set noswapfile
 set number
 set relativenumber
-set spell
+set spell spelllang=en_us,fr,ru
 set wrap
 if filereadable(expand("~/.vimrc.plug"))
     source ~/.vimrc.plug

@@ -1,5 +1,10 @@
-.fonts/.uuid
+*.log
+.config/obs-studio/basic/scenes
+.config/obs-studio/logs
+.config/obs-studio/plugin_config/rtmp-services
+.config/obs-studio/profiler_data
 .fonts/*NerdFont*
+.fonts/.uuid
 .fonts/Font Awesome*
 .vscode/cli
 .vscode/extensions
