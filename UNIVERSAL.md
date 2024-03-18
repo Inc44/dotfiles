@@ -62,8 +62,6 @@ Type `Color Picker`
 
 Click `Install`
 
-Select: `WhiteSur-Light-solid-purple`
-
 Click `Installed`
 
 Click `Color Picker` > `Settings`
@@ -214,9 +212,8 @@ git clone https://github.com/karpathy/nanoGPT.git
 ```
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Noto.zip
 unzip Noto.zip "*.ttf" -d ~/.fonts
-unzip Noto.zip "*.ttf" -d ~/.fonts
-sudo fc-cache -f -v
 rm Noto.zip
+sudo fc-cache -f -v
 ```
 ### Installing OCRMyPDF
 ```
