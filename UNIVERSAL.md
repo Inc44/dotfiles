@@ -41,6 +41,10 @@ git clone https://github.com/Inc44/Birthday.git
 ```
 cargo install blazingly_fast_rust_donut
 ```
+### Installing Blog
+```
+git clone https://github.com/Inc44/blog.git
+```
 ### Installing Chatgpt Telegram Bot
 ```
 conda create --name ctb python=3.10.13
@@ -244,6 +248,15 @@ rm install-tl-unx.tar.gz
 cd install-tl-*
 sudo perl ./install-tl --no-interaction
 rm -r install-tl-*
+```
+or
+```
+wget https://mirrors.ircam.fr/pub/CTAN/systems/texlive/Images/texlive.iso
+sudo mkdir /mnt
+sudo mount -t iso9660 -o ro,loop,noauto texlive.iso /mnt
+sudo perl /mnt/install-tl --no-interaction
+sudo umount texlive.iso
+rm texlive.iso
 ```
 ### Installing TheSync
 ```
