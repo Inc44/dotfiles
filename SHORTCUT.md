@@ -23,6 +23,10 @@ microsoft-edge-stable
 ```
 nautilus
 ```
+#### super + enter
+```
+rofi -show combi
+```
 #### super + s
 ```
 gnome-screenshot --delay=1

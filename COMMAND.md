@@ -51,7 +51,13 @@ Mode order for 1 element:
 
 `command | grep pattern`: Filters the output of a command, showing only lines that match a specified pattern
 
+`conda list`: Display all installed packages in the current environment
+
+`conda env list`: Show a list of all conda environments
+
 `cp path1 path2`: Copy by overwriting the file or directory at `path1` to `path2`
+
+`faillock --user user --reset`: Reset the faillock counter for user `user`
 
 `fc-list`: Display all available fonts and styles
 
@@ -73,6 +79,8 @@ Options:
 `find expression`: Searche for files within a directory hierarchy
 
 `find -name pattern`: Look for files matching a specific pattern in a directory hierarchy
+
+`flatpak list`: Show all installed Flatpak applications
 
 `gedit file`: Open the file in the Vim text editor
 
@@ -143,6 +151,23 @@ Options:
 - `rm model`: Remove a model from the local storage
 - `run model`: Execute a model that is available locally
 
+`pacman`: The package manager utility for Arch Linux
+
+Options:
+
+- `-Q`: Query installed packages
+- `-Rsnc package`: Remove a package and its dependencies, along with the configuration files
+- `-Ss package`: Search for packages that contain the keyword
+- `-Syu`: Synchronize package databases and update all packages to their latest versions
+- `-U /path/to/package`: Install a local package file
+- `pacman -Qtdq`: List all unused packages (orphans)
+
+`passwd user`: Change the user's password
+
+`pihole status`: Display the status of the Pi-hole
+
+`pihole -a -p`: Change the Pi-hole admin password
+
 `pip install package --upgrade`: Install the latest version of a package, upgrading it if already installed
 
 `tar caf path.tar.algorithm path`: Compress a file using a specified algorithm
@@ -193,6 +218,16 @@ Options:
 `shutdown -c`: Cancel shutting down
 
 `shutdown now`: Shut down the system immediately
+
+`ss -lp "sport = :domain"`: Display all listening sockets with the source port 'domain'
+
+`systemctl`: Control the systemd system and service manager
+
+Options:
+
+- `enable SERVICE`: Enable a service to start on boot
+- `restart SERVICE`: Restart a service
+- `start SERVICE`: Start a service
 
 `wget`: Download files from the internet
 

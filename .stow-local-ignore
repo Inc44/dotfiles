@@ -4,3 +4,4 @@
 .*\.tar\.gz
 \.git
 \.gitignore
+package_sort.py
