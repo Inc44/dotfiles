@@ -100,6 +100,10 @@ Click `Installed`
 
 Click `Dash to Dock` > `Settings`
 
+Clicl `Intelligent autohide`
+
+Turn off `Dodge windows`
+
 Click `Position and size`
 
 Select `Icon size limit` > `64`
