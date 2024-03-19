@@ -1,3 +1,7 @@
+### Disabling Shutdown Confirmation
+```
+gsettings set org.gnome.SessionManager logout-prompt false
+```
 ### Fixing App Picker Layout
 ```
 gsettings reset org.gnome.shell app-picker-layout 

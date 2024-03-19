@@ -114,10 +114,6 @@ sudo update-grub
 ## Cleanup
 <details>
 
-### Disabling Shutdown Confirmation
-```
-gsettings set org.gnome.SessionManager logout-prompt false
-```
 ### Purge Apport
 ```
 sudo apt purge apport
