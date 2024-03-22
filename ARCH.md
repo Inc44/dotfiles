@@ -89,6 +89,18 @@ sudo pacman -Rsnc snapshot
 sudo pacman -Rsnc totem
 sudo pacman -Rsnc yelp
 ```
+### Fixing Bluetooth
+```
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
+```
+### Fixing Printer
+```
+sudo systemctl enable cups.service
+sudo systemctl start cups.service
+system-config-printer
+```
+Unblock > Add > Network Printer > Internet Printing Protocol > ipp://address/ipp > Forward > Brand > Model > Forward > Apply
 ### Fixing Telegram
 If you encounter an empty screen upon launching, try executing the program from the terminal. This method helps to disable OpenGL if you are experiencing issues with it.
 ```
