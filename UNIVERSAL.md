@@ -1,3 +1,14 @@
+### Creating Symlinks
+```
+sudo rm -r /home/pc/.cache/huggingface/hub
+sudo rm -r /home/pc/.cache/kagglehub/models
+sudo rm -r /home/pc/.ollama/models
+sudo rm -r /home/pc/stable-diffusion-webui/models
+ln -s /run/media/pc/A0CE05DFCE05AF1A/huggingface/hub /home/pc/.cache/huggingface/hub
+ln -s /run/media/pc/A0CE05DFCE05AF1A/kagglehub/models /home/pc/.cache/kagglehub/models
+ln -s /run/media/pc/A0CE05DFCE05AF1A/ollama/models /home/pc/.ollama/models
+ln -s /run/media/pc/A0CE05DFCE05AF1A/stable-diffusion-webui/models /home/pc/stable-diffusion-webui/models
+```
 ### Disabling Shutdown Confirmation
 ```
 gsettings set org.gnome.SessionManager logout-prompt false
@@ -100,7 +111,7 @@ Click `Installed`
 
 Click `Dash to Dock` > `Settings`
 
-Clicl `Intelligent autohide`
+Click `Intelligent autohide`
 
 Turn off `Dodge windows`
 
@@ -182,6 +193,22 @@ conda activate inksm
 pip install xlib
 git clone https://github.com/gillescastel/inkscape-shortcut-manager.git
 ```
+### Installing Insanely Fast Whisper
+```
+conda create --name ifw python=3.10.13
+conda activate ifw
+pip install insanely-fast-whisper
+pip install flash-attn
+pip install speechbrain==0.5.16
+insanely-fast-whisper --file-name audio --model-name openai/whisper-large-v3 --task transcribe --language fr --batch-size 30 --flash True --hf_token token --diarization_model pyannote/speaker-diarization
+insanely-fast-whisper --file-name audio --model-name distil-whisper/distil-large-v2 --task transcribe --language fr --batch-size 30 --flash True --hf_token token --diarization_model pyannote/speaker-diarization
+```
+### Installing Jupyter
+```
+conda create --name jupyter python=3.10.13
+conda activate jupyter
+conda install -c conda-forge jupyterlab notebook
+```
 ### Installing MaTools
 ```
 conda create --name MaTools python=3.10.13
@@ -248,6 +275,43 @@ sudo pipx run recoverpy
 wget https://download.weakpass.com/wordlists/90/rockyou.txt.gz -O rockyou.txt.gz
 gzip -d rockyou.txt.gz
 ```
+### Installing Stable Diffusion Webui
+```
+conda deactivate
+wget https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh
+chmod +x webui.sh
+LD_PRELOAD=/lib/libstdc++.so.6 ./webui.sh --xformers
+```
+### Installing Tactile
+Open `Extension Manager`
+
+Click `Browse`
+
+Type `Tactile`
+
+Click `Install`
+
+Click `Installed`
+
+Click `Tactile` > `Settings`
+
+Click `Layout 1` > `3x1`
+
+Click `Layout 2` > `4x1`
+
+Click `Layout 3` > `3x2`
+
+Click `Layout 4` > `4x2`
+
+Click `Keyboard Shortcuts`
+
+Select `Show tiles` > `Super + W`
+
+Select `Open extension settings` > `Shift + Ctrl + Alt + Super + T`
+
+Click `Advanced`
+
+Turn off ``
 ### Installing TeX Live
 ```
 wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O install-tl-unx.tar.gz
