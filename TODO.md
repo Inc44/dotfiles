@@ -1,3 +1,56 @@
+CC="zig cc" CXX="zig c++" cmake ../src
+make -j12
+pw-cli list-objects | grep node.name
+yay -Q
+makepkg --packagelist
+xwinwrap -fs -fdt -ni -b -nf -un -o 1.0 -debug -- mpv -wid WID --loop --no-audio --panscan=1 --player-operation-mode=cplayer ~/Videos/video.mp4
+
+
+conda activate env
+conda clean -a
+conda create --name env package=version
+conda env list
+conda env remove env
+dd if=/dev/zero of=yourfile.bin bs=1G count=1
+free -h
+git lfs install
+grep pattern
+jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com' --port=8888 --NotebookApp.port_retries=0
+pip cache purge
+pip install -e .
+python -OO script.py
+strings path
+sudo su
+
+
+sudo docker run --gpus all -u $(id -u) -v /home/pc/:/workspace/ -v /home/pc/.cache/:/home/pc/.cache/ -p 7007:7007 --rm -it --shm-size=12gb dromni/nerfstudio:1.0.2
+ns-download-data blender
+ns-train instant-ngp blender-data --data data/blender/lego
+ns-train nerfacto blender-data --data data/blender/lego
+ns-train pynerf blender-data --data data/blender/lego
+ns-train seathru-nerf-lite blender-data --data data/blender/lego
+ns-train splatfacto blender-data --data data/blender/lego
+ns-train tensorf blender-data --data data/blender/lego
+ns-train vanilla-nerf blender-data --data data/blender/legosudo su
+
+
+ollama pull cas/mistral-ft-optimized-1227
+ollama pull cas/mixtral_11bx2_moe
+ollama pull eas/nous-capybara
+ollama pull llava:13b
+ollama pull mgmacleod/laserxtral
+ollama pull mixtral
+
+
+conda create --name exl2 python=3.10.13
+conda activate exl2
+pip install exllamav2
+git clone https://github.com/turboderp/exui
+cd exui
+pip install -r requirements.txt
+python server.py
+
+
 ```bash
 yay -S normcap --mflags "--nocheck"
 ```

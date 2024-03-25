@@ -254,6 +254,10 @@ unzip Noto.zip "*.ttf" -d ~/.fonts
 rm Noto.zip
 sudo fc-cache -f -v
 ```
+### Installing Nerf Studio
+```
+sudo docker pull dromni/nerfstudio:1.0.2
+```
 ### Installing OCRMyPDF
 ```
 conda create --name ocrmypdf python=3.10.13
