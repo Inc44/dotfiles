@@ -102,6 +102,8 @@ Inkscape Key Chords (Combos):
 `shift + a`: Save object and type its name
 
 `ctrl + -`: Subtract shape from shape
+## Kitty
+`ctrl + l`: Clear terminal
 ## sxhkd
 #### (~/.config/sxhkd/sxhkdrc)
 `super + 0` to `super + 9`: Go to desktop `0` to `9`

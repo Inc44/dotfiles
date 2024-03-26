@@ -13,14 +13,36 @@ quit
 lsblk
 cfdisk disk
 ```
-`New` > Partition size: `102400MiB` > `Write` > Are you sure you want to write the partition table to disk? `yes` > `Quit`
+`New` > Partition size: `1024MiB`
+
+`Type` > `EFI System`
+
+`New` > Partition size: `102400MiB`
+
+`Type` > `Linux filesystem`
+
+`Write` > Are you sure you want to write the partition table to disk? `yes`
+
+`Quit`
 ```
 lsblk
+mkfs.fat -F32 partition
 mkfs.ext4 partition
+mkdir /mnt/boot
+mount partition /mnt/boot
+mount partition /mnt
 ```
 ### Installing Arch Linux
 ```
 archinstall --config /path/to/user_configuration.json
+exit
+reboot
+```
+### Installing GRUB
+```
+pacman -Sy grub efibootmgr dosfstools mtools
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
 exit
 reboot
 ```
@@ -64,6 +86,14 @@ git config --global user.name name
 ### Configuring Rclone
 ```
 rclone config
+```
+### Creating Swap
+```
+sudo dd if=/dev/zero of=/swap bs=1M count=16k status=progress
+sudo chmod 0600 /swap
+sudo mkswap -U clear /swap
+sudo swapon /swap
+free -h
 ```
 ### Debloating Gnome
 ```

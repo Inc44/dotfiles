@@ -1,17 +1,3 @@
-pacman -Sy grub efibootmgr dosfstools mtools
-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
-grub-mkconfig -o /boot/grub/grub.cfg
-exit
-reboot
-
-
-dd if=/dev/zero of=/swapfile bs=1M count=8k status=progress
-chmod 0600 /swapfile
-mkswap -U clear /swapfile
-swapon /swapfile
-free -h
-
-
 CC="zig cc" CXX="zig c++" cmake ../src
 make -j12
 pw-cli list-objects | grep node.name
