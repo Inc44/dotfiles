@@ -13,7 +13,7 @@ microsoft-edge-stable
 ```
 #### ctrl + m
 ```
-/home/pc/miniconda3/envs/MaTools/bin/python -O /home/pc/MaTools/management_tools/main_management_tools_app.pyw
+/home/pc/miniconda3/envs/MaTools/bin/python -O /home/pc/github/MaTools/management_tools/main_management_tools_app.pyw
 ```
 #### ctrl + u
 ```
@@ -41,7 +41,7 @@ com.github.dynobo.normcap
 ```
 #### super + t
 ```
-/home/pc/miniconda3/envs/MaTools/bin/python -O /home/pc/MaTools/management_tools/script_image_trimmer.pyw
+/home/pc/miniconda3/envs/MaTools/bin/python -O /home/pc/github/MaTools/management_tools/script_image_trimmer.pyw
 ```
 ## Inkscape Shortcut Manager
 

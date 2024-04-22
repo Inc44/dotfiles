@@ -164,7 +164,7 @@ Select `Show image thumbnails` > `Local files only`
 ```
 git clone https://github.com/Inc44/dotfiles.git
 cd dotfiles
-stow .
+stow . -t ~
 ```
 ### Installing ECT
 ```
