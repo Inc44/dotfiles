@@ -25,3 +25,7 @@ Tredrd [18]
 Tredwr [18]
 USB power delivery in Soft Off state (SS) [Disabled]
 Wait For 'F1' If Error [Disabled]
+
+SVM Mode [Disabled] for AOMEI Backupper
+
+SVM Mode [Enabled] for VirtualBox
