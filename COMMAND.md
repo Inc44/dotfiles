@@ -151,6 +151,17 @@ Options:
 - `rm model`: Remove a model from the local storage
 - `run model`: Execute a model that is available locally
 
+---
+
+- Smartest Models: `llama3`, `mixtral`, `phi3`
+- Good Models: `cas/mistral-ft-optimized-1227`, `cas/mixtral_11bx2_moe`, `eas/nous-capybara`, `mgmacleod/laserxtral`
+- Okay Models: `dolphin-mistral`, `dolphin-phi`, `dolphincoder`, `mistral`, `neural-chat`, `nexusraven`, `wizard-math`, `yarn-mistral`, `zephyr`
+- Bad Models: `gemma`, `gemma:2b`, `phi2`
+- Vision Good Models: `llava:13b`
+- Vision Okay Models: `bakllava`
+
+---
+
 `pacman`: The package manager utility for Arch Linux
 
 Options:
