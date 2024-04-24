@@ -1,7 +1,10 @@
 .*\.cpp
+.*\.json
 .*\.md
 .*\.png
+.*\.py
 .*\.tar\.gz
 \.git
 \.gitignore
-package_sort.py
+asus_prime_a320m-k_bios_6210_settings
+grub
