@@ -4,6 +4,7 @@
 .*\.png
 .*\.py
 .*\.tar\.gz
+.xinitrc
 \.git
 \.gitignore
 asus_prime_a320m-k_bios_6210_settings

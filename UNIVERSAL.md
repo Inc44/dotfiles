@@ -272,6 +272,10 @@ git clone https://github.com/Inc44/raqua.git
 ```
 ### Installing Recoverpy
 ```
+sudo pipx install recoverpy
+```
+or
+```
 sudo pipx run recoverpy
 ```
 ### Installing Rockyou

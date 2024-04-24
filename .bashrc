@@ -1,5 +1,9 @@
 wal -R -q
 neofetch
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /usr/share/powerline/bindings/bash/powerline.sh
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -137,8 +141,9 @@ alias hc="history -c; history -w"
 alias inkf="ced; killall inkscape-figures; inkscape-figures watch"
 alias inksm="cea inksm; python -OO ~/inkscape-shortcut-manager/main.py"
 alias u="$upgrade"
-export PATH="/home/pc/7-zip:$PATH"
 export PATH="/home/pc/.cargo/bin:$PATH"
+export PATH="/home/pc/.local/bin:$PATH"
+export PATH="/home/pc/7-zip:$PATH"
 export PATH="/home/pc/Efficient-Compression-Tool/build:$PATH"
 export PATH="/home/pc/go/bin:$PATH"
 export PATH="/usr/local/texlive/2024/bin/x86_64-linux:$PATH"
