@@ -127,6 +127,11 @@ XF86AudioLowerVolume
     amixer set Master 10%-
 XF86AudioMute
     amixer set Master toggle
+# brightness control
+# XF86MonBrightnessDown
+# 	xbacklight -dec 10
+# XF86MonBrightnessUp
+# 	xbacklight -inc 10
 # lockscreen
 super + x
 	betterlockscreen -l dimblur

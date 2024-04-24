@@ -20,3 +20,4 @@ bspc config window_gap           8
 bspc rule -a Microsoft-edge desktop='^4'
 
 sleep 1 && pkill -USR1 -x sxhkd || /usr/bin/sxhkd &
+# pgrep -x sxhkd > /dev/null || sxhkd &
