@@ -141,6 +141,10 @@ If you encounter an empty screen upon launching, try executing the program from 
 ```
 telegram-desktop
 ```
+### Moving Home Partition
+```
+https://help.ubuntu.com/community/Partitioning/Home/Moving
+```
 ### System Update and Cache Cleaning
 ```
 sudo pacman -Syu
