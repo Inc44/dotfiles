@@ -65,16 +65,30 @@ Mode order for 1 element:
 
 Options:
 
+- `-an`: Disable audio
 - `-c:a codec`: Encode the audio stream using a specified codec
+- `-c:a flac`: Use Free Lossless Audio Codec
+    - `-compression_level 12`: Set to maximum compression level
+    - `-strict experimental`: Enable experimental features, such as 32-bit encoding
+- `-c:v av1_nvenc`: Use NVIDIA's hardware-accelerated AV1 codec
+    - `-b 0`: Use a bitrate of 0, which enables constant quality mode
+    - `-bf 4`: Set the maximum number of B-frames between non-B-frames
+    - `-cq 32`: Specify Constant Quantizer for quality level
+    - `-preset p7`: Use the highest quality preset
+    - `-rc vbr`: Set rate control to use variable bitrate
+    - `-tile-columns 0`: Set the number of tile columns
+    - `-tile-rows 0`: Set the number of tile rows
 - `-c:v copy`: Copy the video stream without re-encoding
 - `-f format`: Specify the output format
 - `-filter:a "atempo=float"`: Adjust the audio playback speed without changing its pitch
 - `-i input`: Specify the input file
 - `-itsscale float`: Scale the timestamps of the input video stream by a floating-point number
 - `-output`: Specify the output file
+- `-pix_fmt yuv420p10le`: Set the pixel format to a 10-bit YUV 4:2:0 planar format (better compression for AV1)
 - `-r float`: Set the frame rate of the output video
 - `-ss float`: Specify the start time for trimming, seeking to the given time position before starting to process the file
 - `-t float`: Set the duration of the output file
+- `-y`: Overwrite output files without asking
 
 `find expression`: Searche for files within a directory hierarchy
 
