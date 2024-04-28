@@ -1,3 +1,65 @@
+sudo nano /etc/hosts
+sudo systemctl restart NetworkManager
+cd ~/.local/share/applications/
+ifuse --help
+mkdir ~/iPad
+ifuse ~/iPad
+
+mkdir .config/mpd
+vim .config/mpd/mpd.conf
+sudo mkdir /etc/timidity/
+sudo touch /etc/timidity/timidity.cfg
+mkdir /home/pc/.config/mpd/playlists
+sudo vim /etc/default/grub
+sudo vim /etc/default/grub
+cp /etc/default/grub ~
+cp /etc/xdg/picom.conf ~
+
+sudo pacman -S python3
+conda install -c conda-forge jax
+conda install -c conda-forge jaxlib
+pip install -U keras-nlp
+pip install -U keras>=3
+jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com' --port=8888 --NotebookApp.port_retries=0
+pip install flash-attn
+yay -S nvidia-container-toolkit
+git lfs install
+git clone https://github.com/karpathy/llama2.c.git
+cd llama2.c
+conda create --name llama2.c python=3.10.13
+cea llama2.c
+pip install -r requirements.txt
+python tinystories.py download
+python tinystories.py pretokenize
+cargo build --release --features "cuda"
+target/release/bitnet-rs train --dataset /home/pc/Desktop/bitnet-rs/llama2.c/data/TinyStories_all_data
+target/release/bitnet-rs inference --prompt "Once upon a time "
+strings /lib/libstdc++.so.6  | grep GLIBCXX_3.4.30
+
+[Unit]
+Description=Simple X Hotkey Daemon
+Documnetation=man:sxhkd(1)
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Restart=always
+RestartSec=2
+ExecStart=/usr/bin/sxhkd
+ExecReload=/usr/bin/kill -SIGUSR1 $MAINPID
+	
+[Install]
+WantedBy=default.target
+
+# File marks:
+/etc/default/grub
+/etc/mpv/mpv.conf
+/etc/pihole/pihole-FTL.conf
+/etc/resolv.conf
+/home/pc/.config/systemd/user/sxhkd.service
+
+%!xxd
+
 aomenc -w 1920 -h 1080 --lossless=1 --passes=2 --lag-in-frames=48 --cpu-used=0 --kf-max-dist=600 --kf-min-dist=30 --tile-columns=0 --tile-rows=0 --end-usage=q --cq-level=16 --bit-depth=10 -o input.mkv
 
 --lossless=1 --passes=2 --kf-max-dist=600 --kf-min-dist=30 --end-usage=q --cq-level=16 --bit-depth=10 -o testall.mkv input.mkv
