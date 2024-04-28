@@ -9,9 +9,17 @@ ln -s /run/media/pc/A0CE05DFCE05AF1A/kagglehub/models /home/pc/.cache/kagglehub/
 ln -s /run/media/pc/A0CE05DFCE05AF1A/ollama/models /home/pc/.ollama/models
 ln -s /run/media/pc/A0CE05DFCE05AF1A/stable-diffusion-webui/models /home/pc/stable-diffusion-webui/models
 ```
+### Disabling Auto-Save Session
+```
+gsettings set org.gnome.SessionManager auto-save-session false
+```
 ### Disabling Shutdown Confirmation
 ```
 gsettings set org.gnome.SessionManager logout-prompt false
+```
+### Disabling Extension Version Validation
+```
+gsettings set org.gnome.shell disable-extension-version-validation true
 ```
 ### Fixing App Picker Layout
 ```

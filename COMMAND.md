@@ -57,6 +57,43 @@ Mode order for 1 element:
 
 `cp path1 path2`: Copy by overwriting the file or directory at `path1` to `path2`
 
+`docker run dromni/nerfstudio:1.0.2`: Start a Docker container for Nerf Studio
+
+Options:
+
+- `--gpus all`: Allocate all available GPUs to the Docker container
+- `-u $(id -u)`: Set the user ID for the Docker container to the user ID of the current user, ensuring file permissions match outside and inside the container
+- `-v /home/pc/data:/workspace/`: Mount the directory from the host to the container
+- `-v /home/pc/.cache/:/home/user/.cache/`: Mount the cache directory from the host to the cache directory in the container
+- `-p 7007:7007`: Map port 7007 on the host to port 7007 on the container
+- `--rm`: Automatically remove the container when it exits, cleaning up any resources used
+- `-it`: Run the container in interactive mode with a tty, allowing you to interact with the container via the command line
+- `--shm-size=12gb`: Set the shared memory size available to the container to 12 GB
+
+---
+
+`ns-download-data`: Initiate a data download operation
+
+Options:
+
+- `blender`: Specify the Blender dataset
+
+---
+
+`ns-train model`: Start the training process
+
+Options:
+
+- `blender-data`: Indicate the type of the training dataset
+- `--data data/blender/lego`: Specify the path for the dataset
+
+---
+
+- Highest Quality Models: `instant-ngp`, `splatfacto-big`
+- Other Models: `nertfacto-big`, `pynerf`, `dolphincoder`, `seathru-nerf-lite`, `tensorf`, `vanilla-nerf`
+
+---
+
 `faillock --user user --reset`: Reset the faillock counter for user `user`
 
 `fc-list`: Display all available fonts and styles
