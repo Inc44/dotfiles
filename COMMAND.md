@@ -53,9 +53,19 @@ Mode order for 1 element:
 
 `conda list`: Display all installed packages in the current environment
 
+`conda activate env`: Activate the `env` environment
+
+`conda clean -a`: Clean unused packages and caches
+
+`conda create --name env python=3.10`: Create a `env` environment named "env" with Python version 3.10 installed
+
 `conda env list`: Show a list of all conda environments
 
+`conda env remove env`: Remove the `env` environment
+
 `cp path1 path2`: Copy by overwriting the file or directory at `path1` to `path2`
+
+`df -H`: Display disk space usage in a human-readable format across all mounted filesystems
 
 `docker run dromni/nerfstudio:1.0.2`: Start a Docker container for Nerf Studio
 
@@ -176,6 +186,8 @@ Options:
 
 `flatpak list`: Show all installed Flatpak applications
 
+`free -h`: Display amount of free and used memory in a human-readable format
+
 `gedit file`: Open the file in the Vim text editor
 
 `git`: Version control system
@@ -203,6 +215,8 @@ Options:
 - `-O path`: Specify the output directory
 
 `id -u user`: Get UID of user
+
+`ifconfig`: Display network interface configuration information, including IP addresses
 
 `ip link show`: Provide information about all network interfaces
 
@@ -273,7 +287,15 @@ Options:
 
 `pihole -a -p`: Change the Pi-hole admin password
 
+`ping example.com`: Check the network connection and measure the latency
+
+`pip cache purge`: Clear the local cache of downloaded Python packages
+
+`pip install -e .`: Install a Python package from the current directory
+
 `pip install package --upgrade`: Install the latest version of a package, upgrading it if already installed
+
+`python -OO script.py`: Execute a Python script with optimizations enabled, stripping docstrings and assert statements
 
 `tar caf path.tar.algorithm path`: Compress a file using a specified algorithm
 
@@ -325,6 +347,10 @@ Options:
 `shutdown now`: Shut down the system immediately
 
 `ss -lp "sport = :domain"`: Display all listening sockets with the source port 'domain'
+
+`ssh user@192.168.0.0`: Initiate a secure shell connection to the device with IP address `192.168.0.0` using the username `user`
+
+`sudo su`: Switche the user to the root user
 
 `systemctl`: Control the systemd system and service manager
 
