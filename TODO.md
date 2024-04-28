@@ -1,3 +1,17 @@
+aomenc -w 1920 -h 1080 --lossless=1 --passes=2 --lag-in-frames=48 --cpu-used=0 --kf-max-dist=600 --kf-min-dist=30 --tile-columns=0 --tile-rows=0 --end-usage=q --cq-level=16 --bit-depth=10 -o input.mkv
+
+--lossless=1 --passes=2 --kf-max-dist=600 --kf-min-dist=30 --end-usage=q --cq-level=16 --bit-depth=10 -o testall.mkv input.mkv
+
+(echo file 0 & echo file 1 )>list.txt
+ffmpeg -safe 0 -f concat -i list.txt -c copy out.mp4
+
+for %%a in ("*.mkv*") do ffmpeg -i "%%a" -c copy "%%~na.mp4"
+pause
+
+for %%a in ("*.mp4*") do ffmpeg -i "%%a" -i "%%a" -map 1 -map_metadata 0 -c copy -movflags use_metadata_tags "%%~na_repack.mp4"
+pause
+
+
 CC="zig cc" CXX="zig c++" cmake ../src
 make -j12
 pw-cli list-objects | grep node.name

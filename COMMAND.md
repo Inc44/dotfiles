@@ -65,30 +65,73 @@ Mode order for 1 element:
 
 Options:
 
+- `-`: Print output
+- `-ac 2`: Set audio channels to 2
 - `-an`: Disable audio
-- `-c:a codec`: Encode the audio stream using a specified codec
+- `-ar 44100|48000`: Set audio sample rate
+- `-b 0`: Use a bitrate of 0, which enables constant quality mode
+- `-b:a 128k`: Set audio bitrate to 128k
+- `-bufsize 10M`: Set buffer size to 10M
+- `-b:v 10M`: Set video bitrate to 10M
+- `-codec|c copy`: Copy both audio and video streams without re-encoding
+- `-c:a aac`: Use Use AAC audio codec
+    - `-strict experimental|-2`: Enable experimental features
+- `-c:a copy`: Copy the audio stream without re-encoding
 - `-c:a flac`: Use Free Lossless Audio Codec
     - `-compression_level 12`: Set to maximum compression level
-    - `-strict experimental`: Enable experimental features, such as 32-bit encoding
-- `-c:v av1_nvenc`: Use NVIDIA's hardware-accelerated AV1 codec
-    - `-b 0`: Use a bitrate of 0, which enables constant quality mode
-    - `-bf 4`: Set the maximum number of B-frames between non-B-frames
-    - `-cq 32`: Specify Constant Quantizer for quality level
-    - `-preset p7`: Use the highest quality preset
-    - `-rc vbr`: Set rate control to use variable bitrate
+    - `-strict experimental|-2`: Enable experimental features, such as 32-bit encoding
+- `-color_range pc|0|tv|1|mpeg|2`: Set the color range
+- `-c:v av1_nvenc|libaom-av1`: Use AV1 codec
     - `-tile-columns 0`: Set the number of tile columns
     - `-tile-rows 0`: Set the number of tile rows
+- `-c:v av1_nvenc|hevc_nvenc|h264_nvenc`: Use NVIDIA's hardware-accelerated codecs
+    - `-bf 4`: Set the maximum number of B-frames between non-B-frames
+    - `-cq 32|24|16`: Specify Constant Quantizer for quality level
+    - `-preset p7`: Use the highest quality preset
+    - `-rc vbr`: Set rate control to use variable bitrate
+- `-c:v ffv1`: Use FFV1 codec for lossless video encoding
+- `-c:v hevc_qsv|h264_qsv|libx265|libx264`: Use respective codecs
+    - `-preset placebo|veryslow`: Set encoding preset
+    - `-qp 24|16`: Set the quantization parameter
+    - `-vprofile high`: Use the high profile
+- `-c:v libaom-av1`: Use AV1 codec
+    - `-cpu-used 4`: Set encoding preset
+    - `-lag-in-frames 48`: Specify frames for lookahead computation
+    - `-aom-params lossless=1`: Encode in lossless mode
+- `-c:v libsvtav1`: Use SVT-AV1 codec
+    - `-preset 4`: Set encoding preset
+- `-c:v libx265`: Use x265 codec
+    - `-x265-params "profile=crf=16:preset=placebo:qp=16"`: Specify x265 encoding parameters for high quality
+    - `-x265-params "profile=crf=0:lossless=1:preset=placebo:qp=0"`: Specify x265 encoding parameters for lossless
 - `-c:v copy`: Copy the video stream without re-encoding
-- `-f format`: Specify the output format
+- `-crf 32|24|16`: Set Constant Rate Factor
+- `-f md5`: Generate MD5 checksum of the output
+- `-framerate 30`: Set the output framerate
 - `-filter:a "atempo=float"`: Adjust the audio playback speed without changing its pitch
+- `-hide_banner`: Suppress startup banner and other non-critical output
+- `-hwaccel qsv; nvdec`: Use hardware acceleration
+- `-i %d.png`: Specify input files with a sequence of numbered PNG files
+- `-i %3d.png`: Specify input files with a sequence of three-digit numbered PNG files
+- `-i "concat:0|1|...|n"`: Concatenate multiple inputs
 - `-i input`: Specify the input file
 - `-itsscale float`: Scale the timestamps of the input video stream by a floating-point number
+- `-loglevel error`: Display only error messages
+- `-lossless 1`: Enable lossless encoding
+- `-map file:stream|int:int`: Map a stream of a file to an output
+- `-maxrate 10M`: Set the maximum bitrate
 - `-output`: Specify the output file
-- `-pix_fmt yuv420p10le`: Set the pixel format to a 10-bit YUV 4:2:0 planar format (better compression for AV1)
+- `-pass 1 -an -f null /dev/null && \`: Execute a two-pass encoding, first pass with no audio and output directed to null
+- `-pass 2`: Execute the second pass of a two-pass encoding
+- `-pix_fmt yuv420p10le|yuv420p|yuv444p|rgba|bgra`: Set the pixel format
 - `-r float`: Set the frame rate of the output video
 - `-ss float`: Specify the start time for trimming, seeking to the given time position before starting to process the file
 - `-t float`: Set the duration of the output file
 - `-y`: Overwrite output files without asking
+- `-filter_complex|vf`: Apply complex video filters
+    - `[file0][file1] overlay=240:250[output0]`: Overlay `file1` over `file0` and output to `output1`
+    - `"[file0:v] [file0:a] [file1:v] [file1:a] concat=n=2:v=1:a=1 [output0v] [output0a]"`: Concatenate two sets of video and audio streams
+    - `crop=230:120:190:50`: Crop the video to a width of 230 pixels and a height of 120 pixels, starting at position (190, 50) on the original video
+    - `yadif`: Apply the YADIF deinterlacing filter to the video stream
 
 `find expression`: Searche for files within a directory hierarchy
 
