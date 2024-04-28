@@ -1,0 +1,60 @@
+Vim is a modal editor, featuring 4 modes:
+
+- `normal`: Default mode for editing commands and fucking around.
+    - `esc, Ctrl+[`, `Ctrl+c`: Return to normal mode
+    - `q:`: Show command history
+    - `motion`: Navigate within the file
+        - `h`: Move left
+        - `j`: Move down
+        - `k`: Move up
+        - `l`: Move right
+        - `w`: Next whitespace
+        - `b`: Previous whitespace
+        - `_`: Beginning of the current line
+        - `$`: End of the line
+        - `0`: Start of the line
+    - `number motion`: Move a relative distance (e.g., `16k`)
+    - `dd`: Delete line
+    - `u`: Undo
+    - `Ctrl+r`: Redo
+    - `line search`:
+        - `fc`: Jump forward to character `c`
+        - `tc`: Jump to before character `c`
+        - `Fc`: Jump backward to character `c`
+        - `Tc`: Jump backward to before character `c`
+        - `,`: Repeat last find backward
+        - `;`: Repeat last find forward
+    - `command count motion`: Execute command over a count of motions, combine commands (e.g., `d4j` deletes 4 lines downward, `d2w` deletes 2 words forward, `db` deletes backward, `d$` deletes after, `dtc` deletes until `c`)
+
+- `insert`: Mode for inserting text, typing shit.
+    - `i`: Insert at cursor
+    - `I`: Insert at the beginning of the line
+    - `a`: Append after cursor
+    - `A`: Append at end of line
+    - `o`: Open a new line below
+    - `O`: Open a new line above
+
+- `visual`: Mode for selecting your spaghetti.
+    - `v`: Start visual mode
+    - `V`: Start linewise visual mode
+    - `y`: Copy selected text
+    - `p`: Paste clipboard contents
+    - Deleting, copying, pasting text moves it to the clipboard, effectively cutting the text due to sharing the same buffer
+
+- `command`: Mode for executing extended commands and a way to forget about the mouse and use someone else's solution.
+    - `:PlugClean`: Clean up plugins
+    - `:PlugInstall`: Install plugins
+    - `:VimtexCompile`: Compile LaTeX projects
+    - `:help`: Open help
+    - `:pbcopy`: Copy to clipboard
+    - `:q!`: Quit without saving
+    - `:q`: Quit
+    - `:s`: Substitute
+    - `:set clipboard=unnamedplus`: Use the system clipboard for copy/paste operations
+    - `:set laststatus=2`: Always display the status line
+    - `:set nospell`: Turn off spell checking
+    - `:set number`: Show line numbers
+    - `:set spell`: Turn on spell checking
+    - `:syntax on`: Enable syntax highlighting if you are colorblind
+    - `:w filename`: Save as `filename`
+    - `:w`: Save changes

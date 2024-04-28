@@ -18,4 +18,6 @@ Please follow the steps carefully, aka **RTFM**.
 
 [Ubuntu Specific](UBUNTU.md)
 
+[Vim](VIM.md)
+
 ![](bar.png)
