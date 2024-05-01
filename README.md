@@ -10,6 +10,8 @@ Please follow the steps carefully, aka **RTFM**.
 # Links
 [Commands](COMMAND.md)
 
+[Extensions](EXTENSIONS.md)
+
 [Shortcuts](SHORTCUT.md)
 
 [Universal](UNIVERSAL.md)
