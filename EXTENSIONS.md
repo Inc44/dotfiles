@@ -6,6 +6,7 @@
 ### [Cookie Editor](https://chromewebstore.google.com/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm)
 ### [Enhancer for YouTube™](https://chromewebstore.google.com/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle)
 ### [Hide Scrollbar](https://chromewebstore.google.com/detail/hide-scrollbar/mljepckcnbghmcdmaebjhejiplcngbkm)
+### [JPEG XL Viewer](https://chromewebstore.google.com/detail/jpeg-xl-viewer/bkhdlfmkaenamnlbpdfplekldlnghchp)
 ### [IDM Integration Module](https://www.internetdownloadmanager.com/)
 ### [Marinara: Pomodoro® Assistant](https://chromewebstore.google.com/detail/marinara-pomodoro%C2%AE-assist/lojgmehidjdhhbmpjfamhpkpodfcodef)
 ### [Mouse Tooltip Translator](https://chromewebstore.google.com/detail/mouse-tooltip-translator/hmigninkgibhdckiaphhmbgcghochdjc)
