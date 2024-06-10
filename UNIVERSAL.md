@@ -411,9 +411,30 @@ Turn on `User Themes`
 
 Click `Settings`
 
-Select: `WhiteSur-Light-solid-purple`
+Select `WhiteSur-Light-solid-purple`
 ### Fixing Default Directory Opener
 ```
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
 xdg-mime query default inode/directory
 ```
+
+### Fixing LibreOffice Interface
+Open `LibreOffice`
+
+Click `Tools`
+
+Select `Options`
+
+Select `Advanced`
+
+Click `Enable experimental features`
+
+Open `LibreOffice Calc`
+
+Click `View`
+
+Select `User Interface...`
+
+Select `Tabbed`
+
+Click `Apply to Calc`
