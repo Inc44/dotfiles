@@ -165,6 +165,9 @@ Options:
 - `-loglevel error`: Display only error messages
 - `-lossless 1`: Enable lossless encoding
 - `-map file:stream|int:int`: Map a stream of a file to an output
+    - `-map 0:v:0`: Map the first video stream of the first input file
+    - `-map 0:a:1 -map 0:a:0`: Map the second and first audio streams of the first input file
+    - `-map 0:s:1`: Map the second subtitle stream of the first input file
 - `-maxrate 10M`: Set the maximum bitrate
 - `-output`: Specify the output file
 - `-pass 1 -an -f null /dev/null && \`: Execute a two-pass encoding, first pass with no audio and output directed to null
@@ -174,6 +177,8 @@ Options:
 - `-ss float`: Specify the start time for trimming, seeking to the given time position before starting to process the file
 - `-t float`: Set the duration of the output file
 - `-y`: Overwrite output files without asking
+- `-disposition:a:0 default`: Set the first audio stream as the default
+- `-disposition:a:1 none`: Set the second audio stream as non-default
 - `-filter_complex|vf`: Apply complex video filters
     - `[file0][file1] overlay=240:250[output0]`: Overlay `file1` over `file0` and output to `output1`
     - `"[file0:v] [file0:a] [file1:v] [file1:a] concat=n=2:v=1:a=1 [output0v] [output0a]"`: Concatenate two sets of video and audio streams
