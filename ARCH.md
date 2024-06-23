@@ -60,7 +60,7 @@ sudo pacman -S aircrack-ng alsa-utils arandr asymptote audacity bspwm cmake conk
 ```
 ### Yay Installing Everything
 ```
-yay -S anydesk-bin betterlockscreen czkawka-gui-bin microsoft-edge-stable-bin nvidia-container-toolkit oculante-bin parsec-bin peazip-qt-bin qview rclone-browser visual-studio-code-bin wrk xdman-beta-bin xwinwrap-0.9-bin yandex-browser
+yay -S activitywatch-bin anydesk-bin betterlockscreen czkawka-gui-bin microsoft-edge-stable-bin nvidia-container-toolkit oculante-bin parsec-bin peazip-qt-bin qview rclone-browser visual-studio-code-bin wrk xdman-beta-bin xwinwrap-0.9-bin yandex-browser
 ```
 ### Flatpak Installing Everything
 ```

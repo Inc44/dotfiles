@@ -26,7 +26,7 @@ yay -S nvidia-container-toolkit
 git lfs install
 git clone https://github.com/karpathy/llama2.c.git
 cd llama2.c
-conda create --name llama2.c python=3.10.13
+conda create --name llama2.c python=3.10
 cea llama2.c
 pip install -r requirements.txt
 python tinystories.py download
@@ -118,7 +118,7 @@ ollama pull mgmacleod/laserxtral
 ollama pull mixtral
 
 
-conda create --name exl2 python=3.10.13
+conda create --name exl2 python=3.10
 conda activate exl2
 pip install exllamav2
 git clone https://github.com/turboderp/exui

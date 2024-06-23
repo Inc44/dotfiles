@@ -50,7 +50,7 @@ Click `Position and size`
 Select `Opacity` > `255`
 ### Installing AutoKhan
 ```
-conda create --name AutoKhan python=3.10.13
+conda create --name AutoKhan python=3.10
 conda activate AutoKhan
 git clone https://github.com/Inc44/AutoKhan.git
 cd AutoKhan
@@ -68,9 +68,20 @@ cargo install blazingly_fast_rust_donut
 ```
 git clone https://github.com/Inc44/blog.git
 ```
+### Installing Brute Force Instagram
+```
+conda create --name bfi python=3.10
+conda activate bfi
+git clone https://github.com/vv1ck/Brute-Force-instagram
+cd Brute-Force-instagram
+pip install requests
+pip install colorama
+wget https://raw.githubusercontent.com/zloi-user/hideip.me/main/https.txt
+awk -F':' '{print $1":"$2}' https.txt > fixed_https.txt
+```
 ### Installing Chatgpt Telegram Bot
 ```
-conda create --name ctb python=3.10.13
+conda create --name ctb python=3.10
 conda activate ctb
 git clone https://github.com/n3d1117/chatgpt-telegram-bot.git
 cd chatgpt-telegram-bot
@@ -196,14 +207,14 @@ sudo pip install inkscape-figures --break-system-packages
 ```
 ### Installing Inkscape Shortcut Manager
 ```
-conda create --name inksm python=3.10.13
+conda create --name inksm python=3.10
 conda activate inksm
 pip install xlib
 git clone https://github.com/gillescastel/inkscape-shortcut-manager.git
 ```
 ### Installing Insanely Fast Whisper
 ```
-conda create --name ifw python=3.10.13
+conda create --name ifw python=3.10
 conda activate ifw
 pip install insanely-fast-whisper
 pip install flash-attn
@@ -213,13 +224,13 @@ insanely-fast-whisper --file-name audio --model-name distil-whisper/distil-large
 ```
 ### Installing Jupyter
 ```
-conda create --name jupyter python=3.10.13
+conda create --name jupyter python=3.10
 conda activate jupyter
 conda install -c conda-forge jupyterlab notebook
 ```
 ### Installing MaTools
 ```
-conda create --name MaTools python=3.10.13
+conda create --name MaTools python=3.10
 conda activate MaTools
 git clone https://github.com/Inc44/MaTools.git
 cd MaTools
@@ -250,7 +261,7 @@ cd miniconda3/bin
 ```
 ### Installing NanoGPT
 ```
-conda create --name nanogpt python=3.10.13
+conda create --name nanogpt python=3.10
 conda activate nanogpt
 pip install torch numpy transformers datasets tiktoken wandb tqdm
 git clone https://github.com/karpathy/nanoGPT.git
@@ -268,7 +279,7 @@ sudo docker pull dromni/nerfstudio:1.0.2
 ```
 ### Installing OCRMyPDF
 ```
-conda create --name ocrmypdf python=3.10.13
+conda create --name ocrmypdf python=3.10
 conda activate ocrmypdf
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install ocrmypdf
@@ -352,7 +363,7 @@ git clone https://github.com/Inc44/TheSync.git
 ```
 ### Installing TheTTS
 ```
-conda create --name TheTTS python=3.10.13
+conda create --name TheTTS python=3.10
 conda activate TheTTS
 pip install openai==1.13.3 TTS==0.22.0
 DS_BUILD_TRANSFORMER_INFERENCE=1 pip install deepspeed==0.14.0
@@ -365,7 +376,7 @@ cp /home/pc/TheTTS/xtts.py /home/pc/miniconda3/envs/TheTTS/lib/python3.10/site-p
 ```
 ### Installing UVR
 ```
-conda create --name uvr python=3.10.13
+conda create --name uvr python=3.10
 conda activate uvr
 git clone https://github.com/Anjok07/ultimatevocalremovergui.git
 cd ultimatevocalremovergui
@@ -383,7 +394,7 @@ wget https://raw.githubusercontent.com/gillescastel/latex-snippets/master/tex.sn
 ```
 ### Installing WhisperX
 ```
-conda create --name whisperx python=3.10.13
+conda create --name whisperx python=3.10
 conda activate whisperx
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install git+https://github.com/m-bain/whisperx.git
