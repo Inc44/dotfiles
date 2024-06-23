@@ -246,7 +246,7 @@ sudo cp -ruv ./minegrub /boot/grub2/themes
 sudo rm -r ~/minegrub-theme
 cd ..
 conda deactivate
-sudo python3 -OO /boot/grub2/themes/minegrub/update_theme.py '' 'I use Arch BTW!'
+sudo python -OO /boot/grub2/themes/minegrub/update_theme.py '' 'I use Arch BTW!'
 sudo vim /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo reboot
