@@ -1,3 +1,16 @@
+sudo pacman -S qemu-full libvirt dnsmasq virt-manager
+git clone https://github.com/Coopydood/ultimate-macOS-KVM
+cd ultimate-macOS-KVM
+sudo systemctl enable libvirtd
+systemctl status libvirtd
+sudo usermod -aG libvirt pc
+sudo usermod -aG kvm pc
+ls /dev/disk/by-id/
+./scripts/repo-update.py --force --targetBranch dev
+./main.py
+systemctl start virtqemud.socket
+sudo virsh define boot.xml
+
 sudo nano /etc/hosts
 sudo systemctl restart NetworkManager
 cd ~/.local/share/applications/
