@@ -145,6 +145,10 @@ telegram-desktop
 ```
 https://help.ubuntu.com/community/Partitioning/Home/Moving
 ```
+### Remove Arch Linux Logo
+```
+sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo ''
+```
 ### System Update and Cache Cleaning
 ```
 sudo pacman -Syu
