@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Activity Watch
+Exec=aw-qt
+StartupNotify=false
+Terminal=false
+Categories=Monitor;
