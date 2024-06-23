@@ -168,9 +168,10 @@ Options:
     - `-map 0:v:0`: Map the first video stream of the first input file
     - `-map 0:a:1 -map 0:a:0`: Map the second and first audio streams of the first input file
     - `-map 0:s:1`: Map the second subtitle stream of the first input file
+- `-map_metadata 0`: Map all global metadata from the first input file
 - `-maxrate 10M`: Set the maximum bitrate
 - `-output`: Specify the output file
-- `-pass 1 -an -f null /dev/null && \`: Execute a two-pass encoding, first pass with no audio and output directed to null
+- `-pass 1 -f null /dev/null && \`: Execute a two-pass encoding, first pass with output directed to null
 - `-pass 2`: Execute the second pass of a two-pass encoding
 - `-pix_fmt yuv420p10le|yuv420p|yuv444p|rgba|bgra`: Set the pixel format
 - `-r float`: Set the frame rate of the output video
