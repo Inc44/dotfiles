@@ -11,6 +11,19 @@ ls /dev/disk/by-id/
 systemctl start virtqemud.socket
 sudo virsh define boot.xml
 
+pacman -Syu
+pacman -Sy grub efibootmgr dosfstools mtools
+mount /dev/nvme0n1p1 /boot
+uname -a
+# comment /boot
+vim /etc/fstab
+systemctl isolate rescue.target
+lsblk -f
+pacman -S linux-lts
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
+
+
 sudo nano /etc/hosts
 sudo systemctl restart NetworkManager
 cd ~/.local/share/applications/
