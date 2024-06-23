@@ -244,6 +244,7 @@ sudo mkdir /boot/grub2
 sudo mkdir /boot/grub2/themes
 sudo cp -ruv ./minegrub /boot/grub2/themes
 sudo rm -r ~/minegrub-theme
+cd ..
 conda deactivate
 sudo python3 -OO /boot/grub2/themes/minegrub/update_theme.py '' 'I use Arch BTW!'
 sudo vim /etc/default/grub
