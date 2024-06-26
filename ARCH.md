@@ -38,6 +38,12 @@ archinstall --config /path/to/user_configuration.json
 exit
 reboot
 ```
+### Changing Root
+```
+mount /dev/nvme0n1p1 /mnt/boot
+mount /dev/nvme0n1p4 /mnt
+arch-chroot /mnt
+```
 ### Installing GRUB
 ```
 pacman -Sy grub efibootmgr dosfstools mtools
