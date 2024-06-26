@@ -245,6 +245,10 @@ Options:
 
 `lsblk`: List information about all available storage devices
 
+Options:
+
+- `-f`: Output information about filesystems
+
 `lshw`: List detailed information about the hardware configuration of the machine
 
 `man program`: Show the manual page for a program
