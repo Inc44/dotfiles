@@ -158,7 +158,8 @@ Options:
 - `-hide_banner`: Suppress startup banner and other non-critical output
 - `-hwaccel qsv; nvdec`: Use hardware acceleration
 - `-i %d.png`: Specify input files with a sequence of numbered PNG files
-- `-i %3d.png`: Specify input files with a sequence of three-digit numbered PNG files
+- `-i %4d.png`: Specify input files with a sequence of four-digit numbered PNG files
+- `-i %04d.png`: Specify input files with a sequence of four-digit numbered PNG files with leading zeros
 - `-i "concat:0|1|...|n"`: Concatenate multiple inputs
 - `-i input`: Specify the input file
 - `-itsscale float`: Scale the timestamps of the input video stream by a floating-point number
@@ -183,7 +184,8 @@ Options:
 - `-filter_complex|vf`: Apply complex video filters
     - `[file0][file1] overlay=240:250[output0]`: Overlay `file1` over `file0` and output to `output1`
     - `"[file0:v] [file0:a] [file1:v] [file1:a] concat=n=2:v=1:a=1 [output0v] [output0a]"`: Concatenate two sets of video and audio streams
-    - `crop=230:120:190:50`: Crop the video to a width of 230 pixels and a height of 120 pixels, starting at position (190, 50) on the original video
+    - `crop=230:120:190:50`: Crop the video to a width of 230 pixels and a height of 120 pixels, starting at position (190, 50) on the input video
+    - `crop=min(iw\,ih):min(iw\,ih)`: Crop the video to a square where both the width and height are equal to the smaller dimension of the input video
     - `yadif`: Apply the YADIF deinterlacing filter to the video stream
 
 `find expression`: Searche for files within a directory hierarchy
