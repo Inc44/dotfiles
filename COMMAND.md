@@ -110,6 +110,8 @@ Options:
 
 `ffmpeg -i input -c copy output`: Copy the media stream from the input file to the output file without re-encoding
 
+`ffmpeg -i input -map 0:v -map 0:a:1 -map 0:a:0 -map 0:s:1 -map_metadata 0 -c copy -disposition:a:0 default -disposition:a:1 none -ss m:ss -t s -y output`: Copy the media stream from the input file to the output file without re-encoding, setting audio stream disposition, trimming, and overwriting the output file without asking
+
 Options:
 
 - `-`: Print output
