@@ -29,8 +29,10 @@ lsblk
 mkfs.fat -F32 partition
 mkfs.ext4 partition
 mkdir /mnt/boot
-mount partition /mnt/boot
+mkdir /mnt/home
 mount partition /mnt
+mount partition /mnt/boot
+mount partition /mnt/home
 ```
 ### Installing Arch Linux
 ```
