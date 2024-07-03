@@ -305,7 +305,8 @@ gzip -d rockyou.txt.gz
 ```
 ### Installing Stable Diffusion Webui
 ```
-conda deactivate
+conda activate
+conda install python=3.10
 wget https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh
 chmod +x webui.sh
 LD_PRELOAD=/lib/libstdc++.so.6 ./webui.sh --xformers
@@ -384,12 +385,15 @@ cd ultimatevocalremovergui
 wget https://raw.githubusercontent.com/Inc44/dotfiles/main/Dora-0.0.3.tar.gz -O Dora-0.0.3.tar.gz
 pip install Dora-0.0.3.tar.gz
 pip install -r requirements.txt
+pip install pygobject
+conda install -c conda-forge libstdcxx-ng=12 -y
 ```
 ### Installing Vim-Plug
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
-vim > :set spell > Y > Y > 1 > Y > Enter
+vim > :set spell spelllang=fr > Y > 1 > Y > Enter
+vim > :set spell spelllang=ru > Y > 1 > Y > Enter
 vim > :PlugInstall
 ```
 mkdir ~/.vim/UltiSnips

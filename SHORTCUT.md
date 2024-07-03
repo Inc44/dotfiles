@@ -37,7 +37,7 @@ Take a screenshot interactively
 ```
 #### super + shift + t
 ```
-com.github.dynobo.normcap
+normcap
 ```
 #### super + t
 ```

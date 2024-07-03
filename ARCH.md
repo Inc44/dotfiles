@@ -68,11 +68,11 @@ sudo pacman -S aircrack-ng alsa-utils arandr asymptote audacity bspwm cmake conk
 ```
 ### Yay Installing Everything
 ```
-yay -S activitywatch-bin anydesk-bin betterlockscreen czkawka-gui-bin microsoft-edge-stable-bin nvidia-container-toolkit parsec-bin peazip-qt-bin qview rclone-browser visual-studio-code-bin wrk xdman-beta-bin xwinwrap-0.9-bin yandex-browser
+yay -S activitywatch-bin anydesk-bin betterlockscreen czkawka-gui-bin microsoft-edge-stable-bin normcap nvidia-container-toolkit parsec-bin peazip-qt-bin qview rclone-browser visual-studio-code-bin wrk xdman-beta-bin xwinwrap-0.9-bin yandex-browser
 ```
 ### Flatpak Installing Everything
 ```
-flatpak install com.github.dynobo.normcap com.mattjakeman.ExtensionManager
+flatpak install com.mattjakeman.ExtensionManager
 ```
 ### Adding Google Drive
 ```
