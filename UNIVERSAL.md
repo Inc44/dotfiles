@@ -50,7 +50,7 @@ Click `Position and size`
 Select `Opacity` > `255`
 ### Installing AutoKhan
 ```
-conda create --name AutoKhan python=3.10
+conda create --name AutoKhan python=3.10 -y
 conda activate AutoKhan
 git clone https://github.com/Inc44/AutoKhan.git
 cd AutoKhan
@@ -70,7 +70,7 @@ git clone https://github.com/Inc44/blog.git
 ```
 ### Installing Brute Force Instagram
 ```
-conda create --name bfi python=3.10
+conda create --name bfi python=3.10 -y
 conda activate bfi
 git clone https://github.com/vv1ck/Brute-Force-instagram
 cd Brute-Force-instagram
@@ -81,7 +81,7 @@ awk -F':' '{print $1":"$2}' https.txt > fixed_https.txt
 ```
 ### Installing Chatgpt Telegram Bot
 ```
-conda create --name ctb python=3.10
+conda create --name ctb python=3.10 -y
 conda activate ctb
 git clone https://github.com/n3d1117/chatgpt-telegram-bot.git
 cd chatgpt-telegram-bot
@@ -207,14 +207,14 @@ sudo pip install inkscape-figures --break-system-packages
 ```
 ### Installing Inkscape Shortcut Manager
 ```
-conda create --name inksm python=3.10
+conda create --name inksm python=3.10 -y
 conda activate inksm
 pip install xlib
 git clone https://github.com/gillescastel/inkscape-shortcut-manager.git
 ```
 ### Installing Insanely Fast Whisper
 ```
-conda create --name ifw python=3.10
+conda create --name ifw python=3.10 -y
 conda activate ifw
 pip install insanely-fast-whisper
 pip install flash-attn
@@ -224,13 +224,13 @@ insanely-fast-whisper --file-name audio --model-name distil-whisper/distil-large
 ```
 ### Installing Jupyter
 ```
-conda create --name jupyter python=3.10
+conda create --name jupyter python=3.10 -y
 conda activate jupyter
-conda install -c conda-forge jupyterlab notebook
+conda install -c conda-forge jupyterlab notebook -y
 ```
 ### Installing MaTools
 ```
-conda create --name MaTools python=3.10
+conda create --name MaTools python=3.10 -y
 conda activate MaTools
 git clone https://github.com/Inc44/MaTools.git
 cd MaTools
@@ -262,7 +262,7 @@ cd miniconda3/bin
 ```
 ### Installing NanoGPT
 ```
-conda create --name nanogpt python=3.10
+conda create --name nanogpt python=3.10 -y
 conda activate nanogpt
 pip install torch numpy transformers datasets tiktoken wandb tqdm
 git clone https://github.com/karpathy/nanoGPT.git
@@ -276,13 +276,13 @@ sudo fc-cache -f -v
 ```
 ### Installing Nerf Studio
 ```
-sudo docker pull dromni/nerfstudio:1.0.2
+sudo docker pull dromni/nerfstudio:1.1.3
 ```
 ### Installing OCRMyPDF
 ```
-conda create --name ocrmypdf python=3.10
+conda create --name ocrmypdf python=3.10 -y
 conda activate ocrmypdf
-conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia -y
 pip install ocrmypdf
 pip install git+https://github.com/ocrmypdf/OCRmyPDF-EasyOCR.git
 ```
@@ -339,7 +339,7 @@ Select `Open extension settings` > `Shift + Ctrl + Alt + Super + T`
 
 Click `Advanced`
 
-Turn off ``
+Turn off `Maximize window when possible`
 ### Installing TeX Live
 ```
 wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O install-tl-unx.tar.gz
@@ -364,7 +364,7 @@ git clone https://github.com/Inc44/TheSync.git
 ```
 ### Installing TheTTS
 ```
-conda create --name TheTTS python=3.10
+conda create --name TheTTS python=3.10 -y
 conda activate TheTTS
 pip install openai==1.13.3 TTS==0.22.0
 DS_BUILD_TRANSFORMER_INFERENCE=1 pip install deepspeed==0.14.0
@@ -373,11 +373,11 @@ cd TheTTS
 git lfs install
 git clone https://huggingface.co/coqui/XTTS-v2
 sudo rm -r XTTS-v2/.git
-cp /home/pc/TheTTS/xtts.py /home/pc/miniconda3/envs/TheTTS/lib/python3.10/site-packages/TTS/tts/models
+cp /home/pc/github/TheTTS/xtts.py /home/pc/miniconda3/envs/TheTTS/lib/python3.10/site-packages/TTS/tts/models
 ```
 ### Installing UVR
 ```
-conda create --name uvr python=3.10
+conda create --name uvr python=3.10 -y
 conda activate uvr
 git clone https://github.com/Anjok07/ultimatevocalremovergui.git
 cd ultimatevocalremovergui
@@ -388,16 +388,18 @@ pip install -r requirements.txt
 ### Installing Vim-Plug
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
 vim > :set spell > Y > Y > 1 > Y > Enter
 vim > :PlugInstall
+```
 mkdir ~/.vim/UltiSnips
 wget https://raw.githubusercontent.com/gillescastel/latex-snippets/master/tex.snippets -O ~/.vim/UltiSnips/tex.snippets
 ```
 ### Installing WhisperX
 ```
-conda create --name whisperx python=3.10
+conda create --name whisperx python=3.10 -y
 conda activate whisperx
-conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia -y
 pip install git+https://github.com/m-bain/whisperx.git
 pip install faster-whisper==1.0.0 --upgrade
 ```
@@ -405,7 +407,7 @@ pip install faster-whisper==1.0.0 --upgrade
 ```
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
 cd WhiteSur-gtk-theme
-./install.sh -t purple -c Light
+./install.sh -t purple -c Dark
 sudo rm -r ~/WhiteSur-gtk-theme
 cd ..
 git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git --depth=1
