@@ -64,11 +64,11 @@ sudo rm -r yay
 ```
 ### Pacman Installing Everything
 ```
-sudo pacman -S aircrack-ng alsa-utils arandr asymptote audacity bspwm cmake conky cuda cuda-tools cups curl discord docker eog ffmpeg ghidra ghostscript git git-lfs gnome-screenshot go gparted grub-customizer gsfonts hashcat hashcat-utils hplip httrack inkscape jdk-openjdk john kitty kiwix-desktop libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk ly mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia-settings obs-studio obsidian ollama-cuda os-prober pacman-contrib pavucontrol pdf2svg picom pinta polybar powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone rofi rsync rust rxvt-unicode solaar stow sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr thunderbird tree unpaper unzip vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip yt-dlp zathura zathura-pdf-mupdf zig zsh
+sudo pacman -S aircrack-ng alsa-utils arandr asymptote audacity bspwm cmake conky cuda cuda-tools cups curl discord docker eog ffmpeg ghidra ghostscript git git-lfs gnome-screenshot go gparted grub-customizer gsfonts hashcat hashcat-utils hplip httrack inkscape jdk-openjdk john kitty kiwix-desktop libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk ly mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia-settings obs-studio obsidian oculante ollama-cuda os-prober pacman-contrib pavucontrol pdf2svg picom pinta polybar powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone rofi rsync rust rxvt-unicode solaar stow sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr thunderbird tree unpaper unzip vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip yt-dlp zathura zathura-pdf-mupdf zig zsh
 ```
 ### Yay Installing Everything
 ```
-yay -S activitywatch-bin anydesk-bin betterlockscreen czkawka-gui-bin microsoft-edge-stable-bin nvidia-container-toolkit oculante-bin parsec-bin peazip-qt-bin qview rclone-browser visual-studio-code-bin wrk xdman-beta-bin xwinwrap-0.9-bin yandex-browser
+yay -S activitywatch-bin anydesk-bin betterlockscreen czkawka-gui-bin microsoft-edge-stable-bin nvidia-container-toolkit parsec-bin peazip-qt-bin qview rclone-browser visual-studio-code-bin wrk xdman-beta-bin xwinwrap-0.9-bin yandex-browser
 ```
 ### Flatpak Installing Everything
 ```
