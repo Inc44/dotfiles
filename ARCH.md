@@ -36,7 +36,7 @@ mount partition /mnt/home
 ```
 ### Installing Arch Linux
 ```
-archinstall --config /path/to/user_configuration.json
+archinstall --config /path/to/user_configuration.json --creds /path/to/user_credentials.json
 exit
 reboot
 ```
