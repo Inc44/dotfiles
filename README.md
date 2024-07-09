@@ -22,4 +22,6 @@ Please follow the steps carefully, aka **RTFM**.
 
 [Vim](VIM.md)
 
+[macOS](MACOS.md)
+
 ![](bar.png)
