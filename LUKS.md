@@ -1,15 +1,15 @@
 ```bash
-e2fsck -f /dev/nvme0n1p1
+e2fsck -f /dev/nvme0n1p4
 e2fsck -f /dev/nvme0n1p5
-lsblk
-resize2fs /dev/nvme0n1p1 102368M
+resize2fs /dev/nvme0n1p4 102368M
+resize2fs /dev/nvme0n1p5 102368M
 cryptsetup reencrypt --encrypt /dev/nvme0n1p4 --reduce-device-size 32M
+cryptsetup reencrypt --encrypt /dev/nvme0n1p5 --reduce-device-size 32M
 cryptsetup open /dev/nvme0n1p4 crypt
-lsblk
+cryptsetup open /dev/nvme0n1p5 crypth
 mount /dev/mapper/crypt /mnt
 mount /dev/nvme0n1p1 /mnt/boot
-mount /dev/nvme0n1p5 /mnt/home
-lsblk
+mount /dev/mapper/crypth /mnt/home
 cat /mnt/etc/fstab
 ```
 
@@ -90,8 +90,10 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 blkid | tee -a uuid
 vim uuid (yank `UUID="3e46412b-0eae-4c3c-b5ac-4f50e451fe32"` of /dev/nvme0n1p4)
+vim /etc/default/grub (`GRUB_CMDLINE_LINUX="cryptdevice=UUID=3e46412b-0eae-4c3c-b5ac-4f50e451fe32:crypt root=/dev/mapper/crypt"`)
+vim uuid (yank `UUID="56a23077-5742-448a-acef-11c210318fc9"` of /dev/nvme0n1p5)
+vim /etc/crypttab (`home  UUID=56a23077-5742-448a-acef-11c210318fc9  none  luks,timeout=30`)
 rm uuid
-vim /etc/default/grub (type `GRUB_CMDLINE_LINUX="cryptdevice=UUID=3e46412b-0eae-4c3c-b5ac-4f50e451fe32:crypt root=/dev/mapper/crypt"`)
 grub-mkconfig -o /boot/grub/grub.cfg
 exit
 umount -a
