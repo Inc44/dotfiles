@@ -10,73 +10,27 @@ cryptsetup open /dev/nvme0n1p5 crypth
 mount /dev/mapper/crypt /mnt
 mount /dev/nvme0n1p1 /mnt/boot
 mount /dev/mapper/crypth /mnt/home
-cat /mnt/etc/fstab
+vim /mnt/etc/fstab
 ```
 
-#### Old fstab
+#### fstab
 ```bash
 # Static information about the filesystems.
 # See fstab(5) for details.
 
 # <file system> <dir> <type> <options> <dump> <pass>
-# /dev/nvme0n1p4
-UUID=00a275a2-dbb5-4086-aada-68e2949969a3 / ext4 rw,relatime 0 1
-
-# /dev/nvme0n1p1
-UUID=1B67-6671 /boot vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro 0 2
-
-# /dev/nvme0n1p5
-UUID=76712dd8-7287-4e0e-b85c-c458b25c39cc /home ext4 rw,relatime 0 2
-
 # /dev/sdb2
 UUID="A0CE05DFCE05AF1A" /hdd ntfs rw,noexec,nofail 0 0
 ```
 
 ```bash
-vim /mnt/etc/fstab (keep header and /hdd only, remove everything else)
 genfstab -U /mnt >> /mnt/etc/fstab
-cat /mnt/etc/fstab
-```
-
-#### New fstab
-```bash
-# Static information about the filesystems.
-# See fstab(5) for details.
-
-# <file system> <dir> <type> <options> <dump> <pass>
-# /dev/sdb2
-UUID="A0CE05DFCE05AF1A" /hdd ntfs rw,noexec,nofail 0 0
-
-# /dev/mapper/crypt
-UUID=00a275a2-dbb5-4086-aada-68e2949969a3 / ext4 rw,relatime 0 1
-
-# /dev/nvme0n1p1
-UUID=1B67-6671 /boot vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro 0 2
-
-# /dev/nvme0n1p5
-UUID=76712dd8-7287-4e0e-b85c-c458b25c39cc /home ext4 rw,relatime 0 2
-```
-
-```bash
 arch-chroot /mnt
 hwclock --systohc
-cat /etc/mkinitcpio.conf
-```
-
-#### Old mkinitcpio.conf
-```bash
-MODULES=()
-BINARIES=()
-FILES=()
-HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block filesystems fsck)
-```
-
-```bash
 vim /etc/mkinitcpio.conf (add encrypt to HOOKS)
-cat /etc/mkinitcpio.conf
 ```
 
-#### New mkinitcpio.conf
+#### mkinitcpio.conf
 ```bash
 MODULES=()
 BINARIES=()
