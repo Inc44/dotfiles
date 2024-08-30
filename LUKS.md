@@ -19,7 +19,7 @@ vim /mnt/etc/fstab
 # See fstab(5) for details.
 
 # <file system> <dir> <type> <options> <dump> <pass>
-# /dev/sdb2
+# /dev/sdb2 at the fstab EOF
 UUID="A0CE05DFCE05AF1A" /hdd ntfs rw,noexec,nofail 0 0
 ```
 
@@ -43,10 +43,10 @@ mkinitcpio -p linux-lts
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 blkid | tee -a uuid
-vim uuid (yank `UUID="3e46412b-0eae-4c3c-b5ac-4f50e451fe32"` of /dev/nvme0n1p4)
-vim /etc/default/grub (`GRUB_CMDLINE_LINUX="cryptdevice=UUID=3e46412b-0eae-4c3c-b5ac-4f50e451fe32:crypt root=/dev/mapper/crypt"`)
-vim uuid (yank `UUID="56a23077-5742-448a-acef-11c210318fc9"` of /dev/nvme0n1p5)
-vim /etc/crypttab (`home  UUID=56a23077-5742-448a-acef-11c210318fc9  none  luks,timeout=30`)
+vim uuid (yank `UUID="..."` of /dev/nvme0n1p4)
+vim /etc/default/grub (`GRUB_CMDLINE_LINUX="cryptdevice=UUID=...:crypt root=/dev/mapper/crypt"`)
+vim uuid (yank `UUID="..."` of /dev/nvme0n1p5)
+vim /etc/crypttab (`home  UUID=...  none  luks,timeout=30`)
 rm uuid
 grub-mkconfig -o /boot/grub/grub.cfg
 exit
