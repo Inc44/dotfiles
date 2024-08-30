@@ -21,6 +21,10 @@ cfdisk disk
 
 `Type` > `Linux filesystem`
 
+`New` > Partition size: `3907017543S`
+
+`Type` > `Microsoft basic data`
+
 `Write` > Are you sure you want to write the partition table to disk? `yes`
 
 `Quit`
@@ -28,6 +32,7 @@ cfdisk disk
 lsblk
 mkfs.fat -F32 partition
 mkfs.ext4 partition
+mkfs.ntfs -Q partition
 mkdir /mnt/boot
 mkdir /mnt/home
 mount partition /mnt
