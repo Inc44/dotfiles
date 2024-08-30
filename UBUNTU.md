@@ -10,7 +10,7 @@ sudo apt autoclean
 sudo apt clean
 pip cache purge
 conda clean -a
-sudo journalctl --vacuum-time=1h
+sudo journalctl --vacuum-time=1s
 ```
 ### Clean History
 ```

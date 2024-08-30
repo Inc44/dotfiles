@@ -115,7 +115,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 #. "$HOME/.cargo/env"
-pip_conda_cargo_log_clean="pip cache purge; conda clean -a; cargo cache -ak0 -r all; sudo journalctl --vacuum-time=1h"
+pip_conda_cargo_log_clean="pip cache purge; conda clean -a; cargo cache -ak0 -r all; sudo journalctl --vacuum-time=1s"
 if type apt > /dev/null 2>&1; then
     upgrade="sudo apt update; sudo apt upgrade"
     clean="sudo apt autoremove --purge; sudo apt autoclean; sudo apt clean"
