@@ -286,6 +286,14 @@ conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvi
 pip install ocrmypdf
 pip install git+https://github.com/ocrmypdf/OCRmyPDF-EasyOCR.git
 ```
+### Installing Ollama Benchmark
+```
+pipx install llm-benchmark
+```
+or
+```
+pipx run llm-benchmark run --no-sendinfo
+```
 ### Installing raqua
 ```
 git clone https://github.com/Inc44/raqua.git
