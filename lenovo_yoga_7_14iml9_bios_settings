@@ -1,0 +1,34 @@
+Configuration:
+Wireless LAN: Enabled
+Intel (R) Virtualization Technology: Enabled
+Intel (R) VT-d Feature: Enabled (Disabled for Backup)
+Intel (R) Hyper - Threading Technology: Enabled
+BIOS Back Flash: Disabled
+Hotkey Mode: Disabled
+Fool Proof Fn Ctrl: Enabled
+Always On USB: Enabled
+Charge In Battery Mode: Enabled
+System Performance Mode: Battery Saving
+Smart Power: Enabled
+Flip To Start: Enabled
+One Key Battery: Enabled
+BIOS Self-Healing: Enabled
+
+Security:
+Administrator Password: Set
+User Password: Not Set
+Hard Disk 1 Password: Set
+Power on Password: Disabled
+Natural File Guard: Enabled (Disabled for Backup)
+Set Strong Password: Enabled
+Intel Platform Trust Technology: Disabled
+Secure Boot: Disabled
+BIOS Guard Flash Wear Out Protection: Enabled
+
+Boot:
+USB Boot: Disabled (Enabled for Backup)
+PXE Boot to LAN: Disabled
+UEFI Boot Order: 
+GRUB
+DiskCrypto (DCS) Loader
+Windows Boot Manager
