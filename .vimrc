@@ -12,8 +12,8 @@ if filereadable(expand("~/.vimrc.plug"))
 endif
 inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
 nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
-" ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
-let s:opam_share_dir = system("opam config var share")
+" ## added by OPAM user-setup for vim / base ## d611dd144a5764d46fdea4c0c2e0ba07 ## you can edit, but keep this line
+let s:opam_share_dir = system("opam var share")
 let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
 
 let s:opam_configuration = {}
@@ -35,11 +35,11 @@ endfunction
 let s:opam_configuration['merlin'] = function('OpamConfMerlin')
 
 let s:opam_packages = ["ocp-indent", "ocp-index", "merlin"]
-let s:opam_check_cmdline = ["opam list --installed --short --safe --color=never"] + s:opam_packages
-let s:opam_available_tools = split(system(join(s:opam_check_cmdline)))
+let s:opam_available_tools = []
 for tool in s:opam_packages
   " Respect package order (merlin should be after ocp-index)
-  if count(s:opam_available_tools, tool) > 0
+  if isdirectory(s:opam_share_dir . "/" . tool)
+    call add(s:opam_available_tools, tool)
     call s:opam_configuration[tool]()
   endif
 endfor
