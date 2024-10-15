@@ -69,7 +69,7 @@ sudo rm -r yay
 ```
 ### Pacman Installing Everything
 ```
-sudo pacman -S aircrack-ng alsa-utils arandr asymptote audacity bspwm cmake conky cuda cuda-tools cups curl discord docker eog ffmpeg ghidra ghostscript git git-lfs gnome-screenshot go gparted grub-customizer gsfonts hashcat hashcat-utils hplip httrack inkscape jdk-openjdk john kitty kiwix-desktop libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk ly mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia-settings obs-studio obsidian oculante ollama-cuda os-prober pacman-contrib pavucontrol pdf2svg picom pinta polybar powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone rofi rsync rust rxvt-unicode solaar stow sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr thunderbird tree unpaper unzip veracrypt vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip yt-dlp zathura zathura-pdf-mupdf zig zsh
+sudo pacman -S aircrack-ng alsa-utils arandr asymptote audacity bspwm cmake conky cuda cuda-tools cups curl discord docker eog emacs ffmpeg ghidra ghostscript git git-lfs gnome-screenshot go gparted grub-customizer gsfonts hashcat hashcat-utils hplip httrack inkscape jdk-openjdk john kitty kiwix-desktop libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk ly mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia-settings obs-studio obsidian oculante ollama-cuda opam os-prober pacman-contrib pavucontrol pdf2svg picom pinta polybar powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone rofi rsync rust rxvt-unicode solaar sqlite3 sqlitebrowser stow sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr thunderbird tree unpaper unzip veracrypt vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip yt-dlp zathura zathura-pdf-mupdf zig zsh
 ```
 ### Yay Installing Everything
 ```
@@ -95,6 +95,11 @@ wal --theme base16-rebecca
 ```
 git config --global user.email email
 git config --global user.name name
+```
+### Configuring Opam
+```
+opam init
+opam env --switch=default
 ```
 ### Configuring Rclone
 ```
@@ -157,6 +162,10 @@ telegram-desktop
 ### Moving Home Partition
 ```
 https://help.ubuntu.com/community/Partitioning/Home/Moving
+```
+### Opam Installing Everything
+```
+opam install merlin tuareg user-setup
 ```
 ### Remove Arch Linux Logo
 ```
