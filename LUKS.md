@@ -1,8 +1,8 @@
 ```bash
 e2fsck -f /dev/nvme0n1p4
 e2fsck -f /dev/nvme0n1p5
-resize2fs /dev/nvme0n1p4 102368M
-resize2fs /dev/nvme0n1p5 102368M
+resize2fs /dev/nvme0n1p4 409568M
+resize2fs /dev/nvme0n1p5 409568M
 cryptsetup reencrypt --encrypt /dev/nvme0n1p4 --reduce-device-size 32M
 cryptsetup reencrypt --encrypt /dev/nvme0n1p5 --reduce-device-size 32M
 cryptsetup open /dev/nvme0n1p4 crypt
