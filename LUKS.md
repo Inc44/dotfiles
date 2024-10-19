@@ -10,21 +10,9 @@ cryptsetup open /dev/nvme0n1p5 crypth
 mount /dev/mapper/crypt /mnt
 mount /dev/nvme0n1p1 /mnt/boot
 mount /dev/mapper/crypth /mnt/home
-vim /mnt/etc/fstab
-```
-
-#### fstab
-```bash
-# Static information about the filesystems.
-# See fstab(5) for details.
-
-# <file system> <dir> <type> <options> <dump> <pass>
-# /dev/sdb2 at the fstab EOF
-UUID="A0CE05DFCE05AF1A" /hdd ntfs rw,noexec,nofail 0 0
-```
-
-```bash
-genfstab -U /mnt >> /mnt/etc/fstab
+mount /dev/sdb2 /mnt/hdd
+rm /mnt/etc/fstab
+genfstab -U /mnt > /mnt/etc/fstab
 arch-chroot /mnt
 hwclock --systohc
 vim /etc/mkinitcpio.conf (add encrypt to HOOKS)
