@@ -366,6 +366,10 @@ Options:
 
 `mv path1 path2`: Move or rename by overwriting the file or directory at path1 to path2
 
+`nano file`: Open the file in the Nano text editor
+
+`nvidia-smi`: Display information about GPU utilization, temperature, memory usage, and more
+
 `ollama`: Local LLM model server
 
 Options:
@@ -412,7 +416,27 @@ Options:
 
 `pip install package --upgrade`: Install the latest version of a package, upgrading it if already installed
 
+`ps -aux`: Lists all running processes on the system.
+
+Options:
+
+`-a`: All users
+`-u`: User-oriented format
+`-x`: Include hidden processes
+
 `python -OO script.py`: Execute a Python script with optimizations enabled, stripping docstrings and assert statements
+
+`reboot`: Reboot the system immediately
+
+`reflector`: Display a list of mirrors for downloading packages in Arch Linux
+
+Options:
+
+- `--save /etc/pacman.d/mirrorlist`: Save the updated mirror list to the specified file
+- `-c` or `--country Austria,Belgium,France,Germany,Netherlands,Switzerland,"United States",Worldwide`: Filter mirrors to include only those from the specified countries
+- `-p` or `--protocol http,https,rsync`: Include only mirrors that support the specified protocols
+- `-l` or `--latest 4`: Limit the list to the four most recently synchronized mirrors
+- `--sort rate|score|delay`: Sort the mirrors based on the specified metric
 
 `rm path`: Remove a file or directory at the specified path
 
@@ -421,6 +445,19 @@ Options:
 - `-r`: Recursively remove directories and their contents
 - `-f`: Forcefully remove files or directories without prompting for confirmation, even if they are write-protected
 
+`rsync -avz path1 path2`: Synchronizes files and directories between two locations
+
+Options:
+
+- `--delete`: Delete files in the destination directory that are not present in the source directory to ensure that the destination is an exact mirror of the source
+- `--no-g`: Prevent setting group permissions
+- `--no-o`: Prevent setting ownership permissions
+- `--no-perms`: Prevent changing permissions
+- `--progress`: Displays the progress
+- `-a`: Archive mode/preserves symlinks, devices, attributes, permissions, ownership
+- `-v`: Provide detailed information
+- `-z`: Compress during data transfer
+
 `sed regex file`: Stream edit with regular expressions
 
 Options:
@@ -428,9 +465,35 @@ Options:
 - `-e`: Add the script to the commands to be executed
 - `-i`: Edit files in place
 
+`shutdown`: Shut down the system
+
+Options:
+
+- `-s`: Schedule a shutdown at a specified time
+- `-t 1800`: Set a timer for 1800 seconds (30 minutes) before shut down
+- `+minutes`: Delay shut down by a specified number of minutes
+- `-c`: Cancel a scheduled shutdown
+- `now`: Immediately shut down the system
+
+`ss -lp "sport = :domain"`: Display all listening sockets with the source port 'domain'
+
+`ssh user@192.168.0.0`: Initiate a secure shell connection to the device with IP address `192.168.0.0` using the username `user`
+
 `strings path`: Display printable strings found in a binary file located at the specified path
 
+`sudo command`: Executes the specified command with superuser (root) privileges
+
+`sudo su`: Switche the user to the root user
+
 `sync`: Synchronize cached writes to persistent storage
+
+`systemctl`: Control the systemd system and service manager
+
+Options:
+
+- `enable SERVICE`: Enable a service to start on boot
+- `restart SERVICE`: Restart a service
+- `start SERVICE`: Start a service
 
 `tar caf path.tar.algorithm path`: Compress a file using a specified algorithm
 
@@ -467,73 +530,16 @@ Options:
 
 - `-a`: Unmount all mounted filesystems
 
-`nano file`: Open the file in the Nano text editor
-
-`vim file`: Open the file in the Vim text editor
-
-`nvidia-smi`: Display information about GPU utilization, temperature, memory usage, and more
-
-`ps -aux`: Lists all running processes on the system.
-
-`-a`: All users, `-u`: User-oriented format, `-x`: Include hidden processes
-
-`reboot`: Reboot the system immediately
-
-`reflector`: Display a list of mirrors for downloading packages in Arch Linux
-
-Options:
-
-- `--save /etc/pacman.d/mirrorlist`: Save the updated mirror list to the specified file
-- `-c` or `--country Austria,Belgium,France,Germany,Netherlands,Switzerland,"United States",Worldwide`: Filter mirrors to include only those from the specified countries
-- `-p` or `--protocol http,https,rsync`: Include only mirrors that support the specified protocols
-- `-l` or `--latest 4`: Limit the list to the four most recently synchronized mirrors
-- `--sort rate|score|delay`: Sort the mirrors based on the specified metric
-
-`rsync -avz path1 path2`: Synchronizes files and directories between two locations
-
-Options:
-
-- `--delete`: Delete files in the destination directory that are not present in the source directory to ensure that the destination is an exact mirror of the source
-- `--no-g`: Prevent setting group permissions
-- `--no-o`: Prevent setting ownership permissions
-- `--no-perms`: Prevent changing permissions
-- `--progress`: Displays the progress
-- `-a`: Archive mode/preserves symlinks, devices, attributes, permissions, ownership
-- `-v`: Provide detailed information
-- `-z`: Compress during data transfer
-
-`shutdown`: Shut down the system
-
-Options:
-
-- `-s`: Schedule a shutdown at a specified time
-- `-t 1800`: Set a timer for 1800 seconds (30 minutes) before shut down
-- `+minutes`: Delay shut down by a specified number of minutes
-- `-c`: Cancel a scheduled shutdown
-- `now`: Immediately shut down the system
-
-`ss -lp "sport = :domain"`: Display all listening sockets with the source port 'domain'
-
-`ssh user@192.168.0.0`: Initiate a secure shell connection to the device with IP address `192.168.0.0` using the username `user`
-
-`sudo command`: Executes the specified command with superuser (root) privileges
-
-`sudo su`: Switche the user to the root user
-
-`systemctl`: Control the systemd system and service manager
-
-Options:
-
-- `enable SERVICE`: Enable a service to start on boot
-- `restart SERVICE`: Restart a service
-- `start SERVICE`: Start a service
-
 `uname`: Print system information
 
 Options:
 
 - `-a`: Print all available system information
 - `-r`: Print the kernel release version
+
+`unzip archive -d destination`: Extracts files from a ZIP archive
+
+`vim file`: Open the file in the Vim text editor
 
 `wget`: Download files from the internet
 
@@ -583,5 +589,3 @@ Options:
 
 - `-0`: Stores without compression
 - `-r`: Recursive/include subdirectories and their content
-
-`unzip archive -d destination`: Extracts files from a ZIP archive
