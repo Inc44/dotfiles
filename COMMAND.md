@@ -266,6 +266,15 @@ Options:
 
 `man program`: Show the manual page for a program
 
+`mimeopen .`: Open a file or directory with the default application based on its MIME type
+
+Options:
+
+- `-a`: Prompt the user to select an application to open the file with, even if a default application is already set
+- `-d`: Set the selected application as the default for opening files of this MIME type in the future
+
+`mimetype .`: Identify the MIME type of the current directory or file
+
 `mkdir directory`: Create a new directory
 
 `mkfs.ext4 partition`: Create an ext4 filesystem
@@ -366,6 +375,16 @@ Options:
 `-a`: All users, `-u`: User-oriented format, `-x`: Include hidden processes
 
 `reboot`: Reboot the system immediately
+
+`reflector`: Display a list of mirrors for downloading packages in Arch Linux
+
+Options:
+
+- `--save /etc/pacman.d/mirrorlist`: Save the updated mirror list to the specified file
+- `-c` or `--country Austria,Belgium,France,Germany,Netherlands,Switzerland,"United States",Worldwide`: Filter mirrors to include only those from the specified countries
+- `-p` or `--protocol http,https,rsync`: Include only mirrors that support the specified protocols
+- `-l` or `--latest 4`: Limit the list to the four most recently synchronized mirrors
+- `--sort rate,score,delay`: Sort the mirrors based on the specified metric
 
 `shutdown +minutes`: Schedule/delay shutting down
 
