@@ -115,6 +115,21 @@ Turn on `Persistent mode`
 Select `Enable preview` > `Label`
 
 Turn off `Enable systray`
+### Installing Comfy UI
+```
+conda create --name comfy python=3.10 -y
+conda activate comfy
+git clone https://github.com/comfyanonymous/ComfyUI.git
+cd ComfyUI
+pip install -r requirements.txt
+cd custom_nodes
+git clone https://github.com/ltdrdata/ComfyUI-Manager.git
+git clone https://github.com/comfyanonymous/ComfyUI_bitsandbytes_NF4.git
+cd ComfyUI_bitsandbytes_NF4
+pip install -r requirements.txt
+cd ../..
+python main.py
+```
 ### Installing Dash to Dock
 Open `Extension Manager`
 
@@ -199,6 +214,34 @@ cp -r ~/font-awesome-pro/fontawesome-pro-6.5.1-desktop/otfs/* ~/.fonts
 sudo rm -r ~/font-awesome-pro
 sudo fc-cache -f -v
 ```
+### Installing GPEN
+```
+git clone https://github.com/yangxy/GPEN.git
+cd GPEN
+conda create --name gpen python=3.7 -y
+conda activate gpen
+conda install -c conda-forge libstdcxx-ng -y
+pip install -r requirements.txt
+cd weights
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-BFR-256-D.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-BFR-256.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-BFR-512-D.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-BFR-512.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-Colorization-1024.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-Inpainting-1024.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-Seg2face-512.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/ParseNet-latest.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/RetinaFace-R50.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/model_ir_se50.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x1.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x2.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x4.pth)
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x4.pth
+python demo.py --task FaceEnhancement --model GPEN-BFR-512 --in_size 512 --channel_multiplier 2 --narrow 1 --use_sr --sr_scale 4 --use_cuda --save_face --indir examples/imgs --outdir examples/outs-bfr
+python demo.py --task FaceColorization --model GPEN-Colorization-1024 --in_size 1024 --use_cuda --indir examples/grays --outdir examples/outs-colorization
+python demo.py --task FaceInpainting --model GPEN-Inpainting-1024 --in_size 1024 --use_cuda --indir examples/ffhq-10 --outdir examples/outs-inpainting
+python demo.py --task Segmentation2Face --model GPEN-Seg2face-512 --in_size 512 --use_cuda --indir examples/segs --outdir examples/outs-seg2face
+```
 ### Installing Inkscape Figures
 ```
 sudo pip install inkscape-figures --break-system-packages
@@ -272,9 +315,20 @@ unzip Noto.zip "*.ttf" -d ~/.fonts
 rm Noto.zip
 sudo fc-cache -f -v
 ```
-### Installing Nerf Studio
+### Installing Nerf Studio Docker
 ```
 sudo docker pull dromni/nerfstudio:1.1.3
+```
+### Installing Nerf Studio Python
+```
+conda create --name nerfstudio python=3.8 -y
+conda activate nerfstudio
+pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
+conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
+pip install nerfstudio
+ns-install-cli
+ns-train splatfacto blender-data --data data/blender/lego
+ns-viewer --load-config /home/pc/outputs/nerfstudio/splatfacto/lego/config.yml
 ```
 ### Installing OCRMyPDF
 ```
@@ -308,6 +362,24 @@ sudo pipx run recoverpy
 ```
 wget https://download.weakpass.com/wordlists/90/rockyou.txt.gz -O rockyou.txt.gz
 gzip -d rockyou.txt.gz
+```
+### Installing Sky AR
+```
+git clone https://github.com/jiupinjia/SkyAR.git 
+cd SkyAR
+[Checkpoint Google Drive](https://drive.usercontent.google.com/download?id=1COMROzwR4R_7mym6DL9LXhHQlJmJaV0J)
+unzip checkpoints_G_coord_resnet50.zip
+conda create --name sky python=3.7 -y
+conda activate sky
+pip install -r Requirements.txt
+pip install scikit-image==0.15.0
+python skymagic.py --path ./config/config-annarbor-castle.json
+python skymagic.py --path ./config/config-annarbor-supermoon.json
+python skymagic.py --path .config/config-annarbor-thunderstorm.json
+python skymagic.py --path ./config/config-canyon-district9ship.json
+python skymagic.py --path ./config/config-canyon-galaxy.json
+python skymagic.py --path ./config/config-canyon-jupiter.json
+python skymagic.py --path ./config/config-canyon-rain.json
 ```
 ### Installing Stable Diffusion Webui
 ```
@@ -364,6 +436,15 @@ sudo mount -t iso9660 -o ro,loop,noauto texlive.iso /mnt
 sudo perl /mnt/install-tl --no-interaction
 sudo umount texlive.iso
 rm texlive.iso
+```
+### Installing Texify
+```
+conda create --name tex python=3.10 -y
+conda activate tex
+pip install streamlit streamlit-drawable-canvas-jsretry watchdog
+texify_gui
+pip install texify
+texify_gui
 ```
 ### Installing TheSync
 ```
