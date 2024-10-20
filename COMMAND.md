@@ -288,6 +288,7 @@ Options:
 - `config pull.rebase false`: Configure Git to merge the remote branch when pulling
 - `init -b main`: Initialize a new Git repository and set the default branch to `main`
 - `pull`: Fetch changes from the remote repository and merge them into the current branch
+- `push`: Push your local changes to the remote repository
 - `push origin :branch-name`: Delete the `branch-name` from the remote repository
 - `push origin branch-name`: Push your local `branch-name` to the remote, updating or creating it as necessary
 - `submodule update --init --recursive`: Initialize and update submodules recursively, including nested submodules
