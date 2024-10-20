@@ -78,21 +78,9 @@ makepkg --packagelist
 xwinwrap -fs -fdt -ni -b -nf -un -o 1.0 -debug -- mpv -wid WID --loop --no-audio --panscan=1 --player-operation-mode=cplayer ~/Videos/video.mp4
 
 
-conda activate env
-conda clean -a
-conda create --name env package=version
-conda env list
-conda env remove env
-dd if=/dev/zero of=yourfile.bin bs=1G count=1
-free -h
 git lfs install
-grep pattern
 jupyter notebook --NotebookApp.allow_origin='https://colab.research.google.com' --port=8888 --NotebookApp.port_retries=0
-pip cache purge
 pip install -e .
-python -OO script.py
-strings path
-sudo su
 
 conda create --name exl2 python=3.10
 conda activate exl2

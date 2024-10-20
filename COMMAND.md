@@ -67,6 +67,10 @@ Mode order for 1 element:
 
 `df -H`: Display disk space usage in a human-readable format across all mounted filesystems
 
+`docker system prune`: Remove unused data
+- `-a`: Remove all unused images, not just dangling ones
+- `--volumes`: Prune volumes as well
+
 `docker image prune`: Remove unused Docker images
 
 Options:
@@ -92,6 +96,7 @@ Options:
 - `--rm`: Automatically remove the container when it exits, cleaning up any resources used
 - `-it`: Run the container in interactive mode with a tty, allowing you to interact with the container via the command line
 - `--shm-size=12gb`: Set the shared memory size available to the container to 12 GB
+- `--ipc=host`: Shares the host's IPC namespace, allowing processes inside the container to communicate more efficiently with the host
 
 ---
 
@@ -117,13 +122,26 @@ Options:
 
 ---
 
+
+`egpu-switcher`: Manage eGPU
+
+Options:
+
+- `setup`: Initialize and configure the system for eGPU support
+- `enable`: Enable the eGPU for use
+- `config`: Modify or view the current eGPU configuration
+- `switch`: Switch between available GPUs (iGPU/dGPU and eGPU)
+
+
 `faillock --user user --reset`: Reset the faillock counter for user `user`
 
 `fc-list`: Display all available fonts and styles
 
 `ffmpeg -i input -c copy output`: Copy the media stream from the input file to the output file without re-encoding
 
-`ffmpeg -i input -map 0:v -map 0:a:1 -map 0:a:0 -map 0:s:1 -map_metadata 0 -c copy -disposition:a:0 default -disposition:a:1 none -ss m:ss -t s -y output`: Copy the media stream from the input file to the output file without re-encoding, setting audio stream disposition, trimming, and overwriting the output file without asking
+`ffmpeg -i video %04d.png`: Save a video as a sequence of images, using four-digit numbering for the filenames
+
+`ffmpeg -i input -map 0:v -map 0:a:1 -map 0:a:0 -map 0:s:1 -map_metadata 0 -c copy -disposition:a:0 default -disposition:a:1 none -ss m:ss -t s -y output`: Copy the media stream from the input file to the output file without re-encoding, set audio stream disposition, trim, and overwrite the output file without asking
 
 Options:
 
@@ -131,7 +149,7 @@ Options:
 - `-ac 2`: Set audio channels to 2
 - `-an`: Disable audio
 - `-ar 44100|48000`: Set audio sample rate
-- `-b 0`: Use a bitrate of 0, which enables constant quality mode
+- `-b 0`: Use a bitrate of 0 for constant quality mode
 - `-b:a 128k`: Set audio bitrate to 128k
 - `-bufsize 10M`: Set buffer size to 10M
 - `-b:v 10M`: Set video bitrate to 10M
@@ -198,7 +216,8 @@ Options:
 - `-disposition:a:1 none`: Set the second audio stream as non-default
 - `-filter_complex|vf`: Apply complex video filters
     - `[file0][file1] overlay=240:250[output0]`: Overlay `file1` over `file0` and output to `output1`
-    - `"[file0:v] [file0:a] [file1:v] [file1:a] concat=n=2:v=1:a=1 [output0v] [output0a]"`: Concatenate two sets of video and audio streams
+    - `[file0:v] [file0:a] [file1:v] [file1:a] concat=n=2:v=1:a=1 [output0v] [output0a]`: Concatenate two sets of video and audio streams
+    - `fps=float`: Set the video filter to adjust frames per second
     - `crop=230:120:190:50`: Crop the video to a width of 230 pixels and a height of 120 pixels, starting at position (190, 50) on the input video
     - `crop=min(iw\,ih):min(iw\,ih)`: Crop the video to a square where both the width and height are equal to the smaller dimension of the input video
     - `yadif`: Apply the YADIF deinterlacing filter to the video stream
@@ -217,15 +236,16 @@ Options:
 
 Options:
 
-- `add .`: Stages all changes in the current directory for the next commit
-- `branch --unset-upstream`: Removes the upstream tracking from the current branch, making it a local branch only
-- `clone link`: Creates a copy of an existing repository located at `link` into a new local directory
-- `commit -m message`: Commits the staged changes with a commit message `message`
-- `config pull.rebase false`: Configure git to merge the remote branch when pulling
-- `init -b main`: Initializes a new Git repository and sets the default branch to `main`
-- `push origin :branch-name` deletes the `branch-name` from the remote repository
-- `push origin branch-name` pushes your local `branch-name` to the remote, updating or creating it as necessary
-- `submodule update --init --recursive`: Initializes and updates submodules recursively, including nested submodules
+- `add .`: Stage all changes in the current directory for the next commit
+- `branch --unset-upstream`: Remove the upstream tracking from the current branch, making it a local branch only
+- `clone link`: Create a copy of an existing repository located at `link` into a new local directory
+- `commit -m message`: Commit the staged changes with a commit message `message`
+- `config pull.rebase false`: Configure Git to merge the remote branch when pulling
+- `init -b main`: Initialize a new Git repository and set the default branch to `main`
+- `pull`: Fetch changes from the remote repository and merge them into the current branch
+- `push origin :branch-name`: Delete the `branch-name` from the remote repository
+- `push origin branch-name`: Push your local `branch-name` to the remote, updating or creating it as necessary
+- `submodule update --init --recursive`: Initialize and update submodules recursively, including nested submodules
 
 `httrack link`: Download websites to a local directory for offline viewing
 
@@ -277,11 +297,25 @@ Options:
 
 `mkdir directory`: Create a new directory
 
-`mkfs.ext4 partition`: Create an ext4 filesystem
+`mkfs.ext4 partition`: Create an ext4 filesystem on the specified partition
 
-`mkfs.fat -F32 partition`: Create a FAT32 filesystem
+`mkfs.fat -F32 partition`: Create a FAT32 filesystem on the specified partition
+
+`mkfs.vfat partition`: Create a VFAT filesystem on the specified partition
+
+`mkfs.ntfs partition`: Create an NTFS filesystem on the specified partition
+
+Options:
+
+- `-Q`: Perform a quick format with bad sector checking
+- `-f`: Perform a quick format without bad sector checking
 
 `mount`: Mount the unmounted filesystem
+
+Options:
+
+- `partition`: Specify the partition or device to be mounted
+- `-a`: Mount all filesystems listed in fstab
 
 `mv path1 path2`: Move or rename by overwriting the file or directory at path1 to path2
 
@@ -333,6 +367,13 @@ Options:
 
 `python -OO script.py`: Execute a Python script with optimizations enabled, stripping docstrings and assert statements
 
+`rm path`: Remove a file or directory at the specified path
+
+Options:
+
+- `-r`: Recursively remove directories and their contents
+- `-f`: Forcefully remove files or directories without prompting for confirmation, even if they are write-protected
+
 `tar caf path.tar.algorithm path`: Compress a file using a specified algorithm
 
 Options:
@@ -364,6 +405,10 @@ Options:
 
 `umount`: Unmount a mounted filesystem
 
+Options:
+
+- `-a`: Unmount all mounted filesystems
+
 `nano file`: Open the file in the Nano text editor
 
 `vim file`: Open the file in the Vim text editor
@@ -386,11 +431,15 @@ Options:
 - `-l` or `--latest 4`: Limit the list to the four most recently synchronized mirrors
 - `--sort rate|score|delay`: Sort the mirrors based on the specified metric
 
-`shutdown +minutes`: Schedule/delay shutting down
+`shutdown`: Shut down the system
 
-`shutdown -c`: Cancel shutting down
+Options:
 
-`shutdown now`: Shut down the system immediately
+- `-s`: Schedule a shutdown at a specified time
+- `-t 1800`: Set a timer for 1800 seconds (30 minutes) before shut down
+- `+minutes`: Delay shut down by a specified number of minutes
+- `-c`: Cancel a scheduled shutdown
+- `now`: Immediately shut down the system
 
 `ss -lp "sport = :domain"`: Display all listening sockets with the source port 'domain'
 
