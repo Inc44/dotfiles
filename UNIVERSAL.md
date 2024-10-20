@@ -15,7 +15,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 ### Configuring Mkinitcpio
 ```
 sudo vim /etc/mkinitcpio.conf
-mkinitcpio -p linux
+mkinitcpio -p linux -p linux-lts
 ```
 ### Disabling Auto-Save Session
 ```
