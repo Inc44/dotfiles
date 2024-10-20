@@ -147,6 +147,61 @@ sudo systemctl start bluetooth
 sudo systemctl enable docker
 sudo systemctl start docker
 ```
+### Fixing Default Apps
+```
+xdg-mime default code.desktop application/toml
+xdg-mime default code.desktop application/x-ipynb+json
+xdg-mime default code.desktop text/css
+xdg-mime default code.desktop text/javascript
+xdg-mime default code.desktop text/markdown
+xdg-mime default code.desktop text/rust
+xdg-mime default code.desktop text/x-c++src
+xdg-mime default code.desktop text/x-csrc
+xdg-mime default code.desktop text/x-go
+xdg-mime default code.desktop text/x-python
+xdg-mime default code.desktop text/x-tex
+xdg-mime default com.interversehq.qView.desktop image/gif
+xdg-mime default com.interversehq.qView.desktop image/heif
+xdg-mime default com.interversehq.qView.desktop image/jpeg
+xdg-mime default com.interversehq.qView.desktop image/png
+xdg-mime default com.interversehq.qView.desktop image/svg+xml
+xdg-mime default com.interversehq.qView.desktop image/tiff
+xdg-mime default com.interversehq.qView.desktop image/vnd.adobe.photoshop
+xdg-mime default com.interversehq.qView.desktop image/webp
+xdg-mime default libreoffice-calc.desktop application/vnd.ms-excel.sheet.macroEnabled.12
+xdg-mime default libreoffice-calc.desktop application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+xdg-mime default libreoffice-impress.desktop application/vnd.ms-powerpoint
+xdg-mime default libreoffice-impress.desktop application/vnd.openxmlformats-officedocument.presentationml.presentation
+xdg-mime default libreoffice-writer.desktop application/msword
+xdg-mime default libreoffice-writer.desktop application/vnd.oasis.opendocument.text
+xdg-mime default libreoffice-writer.desktop application/vnd.openxmlformats-officedocument.wordprocessingml.document
+xdg-mime default microsoft-edge.desktop application/pdf
+xdg-mime default microsoft-edge.desktop text/html
+xdg-mime default mpv.desktop audio/aac
+xdg-mime default mpv.desktop audio/flac
+xdg-mime default mpv.desktop audio/ogg
+xdg-mime default mpv.desktop audio/vnd.wave
+xdg-mime default mpv.desktop video/mp2t
+xdg-mime default mpv.desktop video/mp4
+xdg-mime default mpv.desktop video/mpeg
+xdg-mime default mpv.desktop video/quicktime
+xdg-mime default mpv.desktop video/vnd.avi
+xdg-mime default mpv.desktop video/x-matroska
+xdg-mime default mpv.desktop video/x-ms-wmv
+xdg-mime default org.gnome.TextEditor.desktop application/json
+xdg-mime default org.gnome.TextEditor.desktop application/yaml
+xdg-mime default org.gnome.TextEditor.desktop text/csv
+xdg-mime default org.gnome.TextEditor.desktop text/plain
+xdg-mime default org.gnome.TextEditor.desktop text/tab-separated-values
+xdg-mime default org.mozilla.Thunderbird.desktop text/vcard
+xdg-mime default peazip.desktop application/gzip
+xdg-mime default peazip.desktop application/vnd.efi.iso
+xdg-mime default peazip.desktop application/x-7z-compressed
+xdg-mime default peazip.desktop application/x-tar
+xdg-mime default peazip.desktop application/x-vdi-disk
+xdg-mime default peazip.desktop application/x-xz
+xdg-mime default peazip.desktop application/zip
+```
 ### Fixing Printer
 ```
 sudo systemctl enable cups.service
