@@ -4,8 +4,6 @@ sudo rm -r /home/pc/.cache/huggingface/hub
 sudo rm -r /home/pc/.cache/kagglehub/models
 sudo rm -r /home/pc/.ollama/models
 sudo rm -r /home/pc/stable-diffusion-webui/models
-ln -s /hdd/huggingface/hub /home/pc/.cache/huggingface/hub
-ln -s /hdd/kagglehub/models /home/pc/.cache/kagglehub/models
 ln -s /hdd/ollama/models /home/pc/.ollama/models
 ln -s /hdd/stable-diffusion-webui/models /home/pc/stable-diffusion-webui/models
 ```
