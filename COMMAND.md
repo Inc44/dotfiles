@@ -100,7 +100,7 @@ Options:
 ---
 
 - Highest Quality Models: `instant-ngp`, `splatfacto-big`
-- Other Models: `nertfacto-big`, `pynerf`, `dolphincoder`, `seathru-nerf-lite`, `tensorf`, `vanilla-nerf`
+- Other Models: `splatfacto`, `nertfacto-big`, `pynerf`, `dolphincoder`, `seathru-nerf-lite`, `tensorf`, `vanilla-nerf`
 
 ---
 
