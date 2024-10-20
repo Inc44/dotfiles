@@ -384,7 +384,7 @@ Options:
 - `-c` or `--country Austria,Belgium,France,Germany,Netherlands,Switzerland,"United States",Worldwide`: Filter mirrors to include only those from the specified countries
 - `-p` or `--protocol http,https,rsync`: Include only mirrors that support the specified protocols
 - `-l` or `--latest 4`: Limit the list to the four most recently synchronized mirrors
-- `--sort rate,score,delay`: Sort the mirrors based on the specified metric
+- `--sort rate|score|delay`: Sort the mirrors based on the specified metric
 
 `shutdown +minutes`: Schedule/delay shutting down
 
