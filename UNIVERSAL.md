@@ -333,6 +333,13 @@ pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit -y
 pip install nerfstudio
 ns-install-cli
+mkdir -p ~/data/blender
+```
+Download Dataset from [Kaggle](https://www.kaggle.com/datasets/nguyenhung1903/nerf-synthetic-dataset)
+```
+unzip archive.zip 'nerf_synthetic/*' -d ~/
+mv ~/nerf_synthetic/* ~/data/blender/
+rm -rf ~/nerf_synthetic
 ns-train splatfacto blender-data --data data/blender/lego
 ns-viewer --load-config /home/pc/outputs/nerfstudio/splatfacto/lego/config.yml
 ```
