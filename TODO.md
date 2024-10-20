@@ -111,26 +111,6 @@ python -OO script.py
 strings path
 sudo su
 
-
-sudo docker run --gpus all -u $(id -u) -v /home/pc/:/workspace/ -v /home/pc/.cache/:/home/pc/.cache/ -p 7007:7007 --rm -it --shm-size=12gb dromni/nerfstudio:1.0.2
-ns-download-data blender
-ns-train instant-ngp blender-data --data data/blender/lego
-ns-train nerfacto blender-data --data data/blender/lego
-ns-train pynerf blender-data --data data/blender/lego
-ns-train seathru-nerf-lite blender-data --data data/blender/lego
-ns-train splatfacto blender-data --data data/blender/lego
-ns-train tensorf blender-data --data data/blender/lego
-ns-train vanilla-nerf blender-data --data data/blender/legosudo su
-
-
-ollama pull cas/mistral-ft-optimized-1227
-ollama pull cas/mixtral_11bx2_moe
-ollama pull eas/nous-capybara
-ollama pull llava:13b
-ollama pull mgmacleod/laserxtral
-ollama pull mixtral
-
-
 conda create --name exl2 python=3.10
 conda activate exl2
 pip install exllamav2
