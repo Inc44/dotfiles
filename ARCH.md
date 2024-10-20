@@ -21,7 +21,7 @@ cfdisk disk
 
 `Type` > `Linux filesystem`
 
-`New` > Partition size: `3907017543S`
+`New` > Partition size: `3907017543S` (The sector, or block size, is 512 bytes)
 
 `Type` > `Microsoft basic data`
 
@@ -69,7 +69,7 @@ sudo rm -r yay
 ```
 ### Pacman Installing Everything
 ```
-sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote audacity bspwm cmake conky cuda cuda-tools cups curl discord docker eog emacs ffmpeg ghidra ghostscript git git-lfs gnome-screenshot go gparted grub-customizer gsfonts hashcat hashcat-utils hplip httrack inkscape jdk-openjdk john kitty kiwix-desktop libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk linux linux-lts ly mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia nvidia-settings obs-studio obsidian oculante ollama-cuda opam os-prober pacman-contrib pavucontrol pdf2svg perl-file-mimeinfo picom pinta polybar powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone reflector rofi rsync rust rxvt-unicode solaar sqlite3 sqlitebrowser stow sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr thunderbird tmux tree unpaper unzip veracrypt vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip yt-dlp zathura zathura-pdf-mupdf zig zsh
+sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote audacity bspwm cmake conky cuda cuda-tools cups curl discord docker eog emacs ffmpeg ghidra ghostscript git git-lfs gnome-screenshot go gparted grub-customizer gsfonts hashcat hashcat-utils hplip httrack inkscape jdk-openjdk john kitty kiwix-desktop libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk linux linux-lts ly mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia nvidia-lts nvidia-settings nvidia-utils obs-studio obsidian oculante ollama-cuda opam os-prober pacman-contrib pavucontrol pdf2svg perl-file-mimeinfo picom pinta polybar powerline power-profiles-daemon python-pillow python-pip python-pipx python-pywal qbittorrent rclone reflector rofi rsync rust rxvt-unicode solaar sqlite3 sqlitebrowser stow sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr thunderbird tmux tree unpaper unzip veracrypt vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip yt-dlp zathura zathura-pdf-mupdf zig zsh
 ```
 ### Yay Installing Everything
 ```

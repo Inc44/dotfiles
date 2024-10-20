@@ -281,7 +281,7 @@ Options:
 
 `mkfs.fat -F32 partition`: Create a FAT32 filesystem
 
-`mount`: Mount a unmounted filesystem
+`mount`: Mount the unmounted filesystem
 
 `mv path1 path2`: Move or rename by overwriting the file or directory at path1 to path2
 
