@@ -1,5 +1,5 @@
 ## Gnome Custom Shortcuts
-#### ctrl + alt + t
+#### ctrl + shift + g
 ```
 kitty
 ```
