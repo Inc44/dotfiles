@@ -220,7 +220,17 @@ make
 ### Installing First Order Model
 ```
 conda create --name fomd python=3.8 -y
+conda activate fomd
 conda install -c conda-forge jupyterlab notebook -y
+git clone https://github.com/AliaksandrSiarohin/first-order-model
+cd first-order-model
+git clone https://github.com/graphemecluster/first-order-model-demo.git demo
+wget https://github.com/graphemecluster/first-order-model-demo/releases/download/checkpoints/vox-cpk.pth.tar
+wget https://github.com/graphemecluster/first-order-model-demo/releases/download/checkpoints/vox-adv-cpk.pth.tar
+pip install -r requirements.txt
+pip install torch torchvision --upgrade
+cp "../github/dotfiles/first-order-model-demo (2024).ipynb" .
+code "first-order-model-demo (2024).ipynb"
 ```
 Execute `first-order-model-demo (2024).ipynb`
 ### Installing Font Awesome
