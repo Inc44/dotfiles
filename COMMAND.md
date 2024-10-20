@@ -9,7 +9,20 @@
 
 `apt purge package`: Remove package
 
+`blkid`: Display or locate block devices and their attributes, such as UUIDs and file system types
+
+`bsdtar`: Handle tar archives
+
+Options:
+
+- `-f file`: Specify the location of the archive
+- `-p`: Restore permissions
+- `-x`: Extract files from the archive
+- `-C directory`: Change to the specified directory before processing the remaining files
+
 `cd directory`: Change the current directory
+
+`cfdisk disk`: Partition a disk using a curses-based user interface
 
 `chattr attribute path`: Change the attributes of a file or directory
 
@@ -57,13 +70,24 @@ Mode order for 1 element:
 
 `conda clean -a`: Clean unused packages and caches
 
-`conda create --name env python=3.10`: Create a `env` environment named "env" with Python version 3.10 installed
+`conda create --name env package=version`: Create an `env` environment named "env" with the package of the specified version installed
+
+`conda create --name env python=3.10`: Create an `env` environment named "env" with Python version 3.10 installed
 
 `conda env list`: Show a list of all conda environments
 
 `conda env remove env`: Remove the `env` environment
 
 `cp path1 path2`: Copy by overwriting the file or directory at `path1` to `path2`
+
+`dd`: Perform low-level copying and conversion of raw data
+
+Options:
+
+- `if=/dev/zero`: Specify `/dev/zero` as the input file
+- `of=file`: Specify the output file
+- `bs=1G`: Set the block size to 1 gigabyte
+- `count=1`: Copy only one block
 
 `df -H`: Display disk space usage in a human-readable format across all mounted filesystems
 
@@ -122,6 +146,7 @@ Options:
 
 ---
 
+`echo $XDG_SESSION_TYPE`: Display the current session type, indicating whether the session is running under Wayland or X11
 
 `egpu-switcher`: Manage eGPU
 
@@ -132,10 +157,30 @@ Options:
 - `config`: Modify or view the current eGPU configuration
 - `switch`: Switch between available GPUs (iGPU/dGPU and eGPU)
 
+`exit`: Terminate the current shell session or script
 
 `faillock --user user --reset`: Reset the faillock counter for user `user`
 
+`fc-cache`: Rebuild the font cache
+
+Options:
+
+- `-f`: Force a rebuild of the cache
+- `-v`: Display detailed information about the process
+
 `fc-list`: Display all available fonts and styles
+
+`fdisk disk`: Partition a disk using a command-line interface
+
+Options:
+
+`Command (m for help): o`: Create a new empty DOS partition table on the disk
+`Command (m for help): n`: Add a new partition to the disk
+`Select (default p): p`: Create a primary partition
+`Partition number (1-4, default 1): 1`: Choose the partition number
+`First sector (2048-3907029167, default 2048):`: Specify the starting sector for the partition
+`Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-3907029167, default 3907029167): 2099199`: Specify the ending sector or size for the partition
+`Command (m for help): w`: Write the partition table to disk and exit
 
 `ffmpeg -i input -c copy output`: Copy the media stream from the input file to the output file without re-encoding
 
@@ -284,6 +329,8 @@ Options:
 
 `lshw`: List detailed information about the hardware configuration of the machine
 
+`lspci -vv`: List all PCI devices with very detailed information about each device
+
 `man program`: Show the manual page for a program
 
 `mimeopen .`: Open a file or directory with the default application based on its MIME type
@@ -374,6 +421,17 @@ Options:
 - `-r`: Recursively remove directories and their contents
 - `-f`: Forcefully remove files or directories without prompting for confirmation, even if they are write-protected
 
+`sed regex file`: Stream edit with regular expressions
+
+Options:
+
+- `-e`: Add the script to the commands to be executed
+- `-i`: Edit files in place
+
+`strings path`: Display printable strings found in a binary file located at the specified path
+
+`sync`: Synchronize cached writes to persistent storage
+
 `tar caf path.tar.algorithm path`: Compress a file using a specified algorithm
 
 Options:
@@ -431,6 +489,19 @@ Options:
 - `-l` or `--latest 4`: Limit the list to the four most recently synchronized mirrors
 - `--sort rate|score|delay`: Sort the mirrors based on the specified metric
 
+`rsync -avz path1 path2`: Synchronizes files and directories between two locations
+
+Options:
+
+- `--delete`: Delete files in the destination directory that are not present in the source directory to ensure that the destination is an exact mirror of the source
+- `--no-g`: Prevent setting group permissions
+- `--no-o`: Prevent setting ownership permissions
+- `--no-perms`: Prevent changing permissions
+- `--progress`: Displays the progress
+- `-a`: Archive mode/preserves symlinks, devices, attributes, permissions, ownership
+- `-v`: Provide detailed information
+- `-z`: Compress during data transfer
+
 `shutdown`: Shut down the system
 
 Options:
@@ -445,6 +516,8 @@ Options:
 
 `ssh user@192.168.0.0`: Initiate a secure shell connection to the device with IP address `192.168.0.0` using the username `user`
 
+`sudo command`: Executes the specified command with superuser (root) privileges
+
 `sudo su`: Switche the user to the root user
 
 `systemctl`: Control the systemd system and service manager
@@ -454,6 +527,13 @@ Options:
 - `enable SERVICE`: Enable a service to start on boot
 - `restart SERVICE`: Restart a service
 - `start SERVICE`: Start a service
+
+`uname`: Print system information
+
+Options:
+
+- `-a`: Print all available system information
+- `-r`: Print the kernel release version
 
 `wget`: Download files from the internet
 
@@ -480,6 +560,8 @@ Options:
 - `-p`: Download all necessary files to display the HTML page
 - `-r`, `--recursive`: Enable recursive downloading
 
+`xkill`: Forcefully close a window by clicking on it
+
 `xprop`: Retrieve information about a window clicked in an X server environment
 
 `xrandr`: List all available monitor configurations
@@ -503,14 +585,3 @@ Options:
 - `-r`: Recursive/include subdirectories and their content
 
 `unzip archive -d destination`: Extracts files from a ZIP archive
-
-`rsync -avz path1 path2`: Synchronizes files and directories between two locations
-
-Options:
-
-- `--no-g`: Prevent setting group permissions
-- `--no-o`: Prevent setting ownership permissions
-- `--no-perms`: Prevent changing permissions
-- `-a`: Archive mode/preserves symlinks, devices, attributes, permissions, ownerships
-- `-v`: Provide detailed information
-- `-z`: Compress during data transfer
