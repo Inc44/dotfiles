@@ -14,7 +14,6 @@ mount /dev/sdb2 /mnt/hdd
 rm /mnt/etc/fstab
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
-hwclock --systohc
 mkinitcpio -p linux
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg

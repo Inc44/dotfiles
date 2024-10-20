@@ -303,6 +303,8 @@ Options:
 - `--robots=0`: Ignore robots.txt rules
 - `-O path`: Specify the output directory
 
+`hwclock --systohc`: Synchronize the hardware clock with the current system time
+
 `id -u user`: Get UID of user
 
 `ifconfig`: Display network interface configuration information, including IP addresses

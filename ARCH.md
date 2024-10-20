@@ -214,6 +214,10 @@ If you encounter an empty screen upon launching, try executing the program from 
 ```
 telegram-desktop
 ```
+### Fixing Time
+```
+timedatectl set-local-rtc 1
+```
 ### Moving Home Partition
 ```
 https://help.ubuntu.com/community/Partitioning/Home/Moving
