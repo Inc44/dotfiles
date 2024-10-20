@@ -10,36 +10,12 @@ cryptsetup open /dev/nvme0n1p5 crypth
 mount /dev/mapper/crypt /mnt
 mount /dev/nvme0n1p1 /mnt/boot
 mount /dev/mapper/crypth /mnt/home
-vim /mnt/etc/fstab
-```
-
-#### fstab
-```bash
-# Static information about the filesystems.
-# See fstab(5) for details.
-
-# <file system> <dir> <type> <options> <dump> <pass>
-# /dev/sdb2 at the fstab EOF
-UUID="4019E96978DE87D7"	/hdd	ntfs	rw,noexec,nofail	0	0
-```
-
-```bash
+mount /dev/sdb2 /mnt/hdd
+rm /mnt/etc/fstab
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 hwclock --systohc
-vim /etc/mkinitcpio.conf (add encrypt to HOOKS)
-```
-
-#### mkinitcpio.conf
-```bash
-MODULES=()
-BINARIES=()
-FILES=()
-HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block encrypt filesystems fsck)
-```
-
-```bash
-mkinitcpio -p linux-lts
+mkinitcpio -p linux
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 blkid | tee -a uuid

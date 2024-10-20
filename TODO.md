@@ -23,10 +23,6 @@ vim .config/mpd/mpd.conf
 sudo mkdir /etc/timidity/
 sudo touch /etc/timidity/timidity.cfg
 mkdir /home/pc/.config/mpd/playlists
-sudo vim /etc/default/grub
-sudo vim /etc/default/grub
-cp /etc/default/grub ~
-cp /etc/xdg/picom.conf ~
 
 sudo pacman -S python3
 conda install -c conda-forge jax

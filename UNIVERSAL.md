@@ -7,6 +7,16 @@ sudo rm -r /home/pc/stable-diffusion-webui/models
 ln -s /hdd/ollama/models /home/pc/.ollama/models
 ln -s /hdd/stable-diffusion-webui/models /home/pc/stable-diffusion-webui/models
 ```
+### Configuring GRUB
+```
+sudo vim /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+### Configuring Mkinitcpio
+```
+sudo vim /etc/mkinitcpio.conf
+mkinitcpio -p linux
+```
 ### Disabling Auto-Save Session
 ```
 gsettings set org.gnome.SessionManager auto-save-session false
