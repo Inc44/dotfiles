@@ -207,6 +207,12 @@ cd build
 cmake ../src
 make
 ```
+### Installing First Order Model
+```
+conda create --name fomd python=3.8 -y
+conda install -c conda-forge jupyterlab notebook -y
+```
+Execute `first-order-model-demo (2024).ipynb`
 ### Installing Font Awesome
 ```
 git clone https://github.com/eliyantosarage/font-awesome-pro.git
@@ -367,7 +373,9 @@ gzip -d rockyou.txt.gz
 ```
 git clone https://github.com/jiupinjia/SkyAR.git 
 cd SkyAR
-[Checkpoint Google Drive](https://drive.usercontent.google.com/download?id=1COMROzwR4R_7mym6DL9LXhHQlJmJaV0J)
+```
+Download Checkpoint from [Google Drive](https://drive.usercontent.google.com/download?id=1COMROzwR4R_7mym6DL9LXhHQlJmJaV0J)
+```
 unzip checkpoints_G_coord_resnet50.zip
 conda create --name sky python=3.7 -y
 conda activate sky
@@ -375,7 +383,7 @@ pip install -r Requirements.txt
 pip install scikit-image==0.15.0
 python skymagic.py --path ./config/config-annarbor-castle.json
 python skymagic.py --path ./config/config-annarbor-supermoon.json
-python skymagic.py --path .config/config-annarbor-thunderstorm.json
+python skymagic.py --path ./config/config-annarbor-thunderstorm.json
 python skymagic.py --path ./config/config-canyon-district9ship.json
 python skymagic.py --path ./config/config-canyon-galaxy.json
 python skymagic.py --path ./config/config-canyon-jupiter.json
