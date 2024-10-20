@@ -67,6 +67,19 @@ Mode order for 1 element:
 
 `df -H`: Display disk space usage in a human-readable format across all mounted filesystems
 
+`docker image prune`: Remove unused Docker images
+
+Options:
+
+- `-a`: Remove all unused images, not just dangling ones
+- `--force` or `-f`: Bypass the confirmation prompt and forcefully remove the images
+
+`docker ps`: List Docker containers
+
+Options:
+
+- `-a`: Show all containers, not just the running ones
+
 `docker run dromni/nerfstudio:1.1.3`: Start a Docker container for Nerf Studio
 
 Options:
