@@ -13,11 +13,11 @@ quit
 lsblk
 cfdisk disk
 ```
-`New` > Partition size: `1024MiB`
+`New` > Partition size: `2097152S`
 
 `Type` > `EFI System`
 
-`New` > Partition size: `102400MiB`
+`New` > Partition size: `838860800S`
 
 `Type` > `Linux filesystem`
 
