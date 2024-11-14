@@ -58,6 +58,18 @@ Mode order for 1 element:
 
 `chown user/uid path`: Change the owner of a file or directory
 
+`cjxl input output.jxl`: Encode JPEG XL image
+
+Options:
+
+- `--quality 100`: Set the quality level (100 for lossless)
+- `--lossless_jpeg 1`: Enable lossless JPEG recompression
+- `-d 0`: Set the distance parameter (0 for lossless)
+- `-e 10`: Set the effort level (10 for best compression)
+- `-g 3`: Set the group size
+- `-E 11`: Set the encoding mode
+- `-I 100`: Set the maximum number of iterations for progressive encoding
+
 `code file`: Open the file in the Visual Studio Code text editor
 
 `command > file`: Redirect the output of a command to a file, replacing the file's current contents
@@ -79,6 +91,17 @@ Mode order for 1 element:
 `conda env remove env`: Remove the `env` environment
 
 `cp path1 path2`: Copy by overwriting the file or directory at `path1` to `path2`
+
+`cyberghostvpn`: Manage CyberGhost VPN connections
+
+Options:
+
+- `--setup`: Initialize and configure CyberGhost VPN
+- `--status`: Display the current VPN connection status
+- `--openvpn`: Use OpenVPN protocol
+- `--country-code`: Select server country
+- `--connect`: Connect to a VPN server in the specified country (e.g., US, FR, RU, UA, JP)
+- `--stop`: Disconnect from the VPN
 
 `dd`: Perform low-level copying and conversion of raw data
 
@@ -205,7 +228,7 @@ Options:
 - `-c:a flac`: Use Free Lossless Audio Codec
     - `-compression_level 12`: Set to maximum compression level
     - `-strict experimental|-2`: Enable experimental features, such as 32-bit encoding
-- `-color_range pc|0|tv|1|mpeg|2`: Set the color range
+- `-c:v apng`: Use APNG (Animated PNG) codec
 - `-c:v av1_nvenc|libaom-av1`: Use AV1 codec
     - `-tile-columns 0`: Set the number of tile columns
     - `-tile-rows 0`: Set the number of tile rows
@@ -229,6 +252,7 @@ Options:
     - `-x265-params "profile=crf=16:preset=placebo:qp=16"`: Specify x265 encoding parameters for high quality
     - `-x265-params "profile=crf=0:lossless=1:preset=placebo:qp=0"`: Specify x265 encoding parameters for lossless
 - `-c:v copy`: Copy the video stream without re-encoding
+- `-color_range pc|0|tv|1|mpeg|2`: Set the color range
 - `-crf 32|24|16`: Set Constant Rate Factor
 - `-f md5`: Generate MD5 checksum of the output
 - `-framerate 30`: Set the output framerate
@@ -253,6 +277,7 @@ Options:
 - `-pass 1 -f null /dev/null && \`: Execute a two-pass encoding, first pass with output directed to null
 - `-pass 2`: Execute the second pass of a two-pass encoding
 - `-pix_fmt yuv420p10le|yuv420p|yuv444p|rgba|bgra`: Set the pixel format
+- `-plays 0`: Set the number of times to loop an animated image (0 for infinite loop)
 - `-r float`: Set the frame rate of the output video
 - `-ss float`: Specify the start time for trimming, seeking to the given time position before starting to process the file
 - `-t float`: Set the duration of the output file
@@ -265,6 +290,7 @@ Options:
     - `fps=float`: Set the video filter to adjust frames per second
     - `crop=230:120:190:50`: Crop the video to a width of 230 pixels and a height of 120 pixels, starting at position (190, 50) on the input video
     - `crop=min(iw\,ih):min(iw\,ih)`: Crop the video to a square where both the width and height are equal to the smaller dimension of the input video
+    - `format=gbrp`: Convert the pixel format to GBR planar (gbrp)
     - `yadif`: Apply the YADIF deinterlacing filter to the video stream
 
 `find expression`: Searche for files within a directory hierarchy
@@ -310,6 +336,8 @@ Options:
 `ifconfig`: Display network interface configuration information, including IP addresses
 
 `ip link show`: Provide information about all network interfaces
+
+`ipconfig /flushdns`: Flush the DNS resolver cache
 
 `killall process`: Terminate all processes of `process`
 
@@ -359,6 +387,8 @@ Options:
 
 - `-Q`: Perform a quick format with bad sector checking
 - `-f`: Perform a quick format without bad sector checking
+
+`mklink /D source destination`: Generate a symbolic link pointing to a directory
 
 `mount`: Mount the unmounted filesystem
 
@@ -441,6 +471,12 @@ Options:
 - `-l` or `--latest 4`: Limit the list to the four most recently synchronized mirrors
 - `--sort rate|score|delay`: Sort the mirrors based on the specified metric
 
+`regsvr32 library.dll`: Register a DLL file
+
+Options:
+
+- `/u`: Unregister the specified DLL
+
 `rm path`: Remove a file or directory at the specified path
 
 Options:
@@ -477,6 +513,13 @@ Options:
 - `+minutes`: Delay shut down by a specified number of minutes
 - `-c`: Cancel a scheduled shutdown
 - `now`: Immediately shut down the system
+
+`speedtest-cli`: Perform internet speed tests
+
+Options:
+
+- `--bytes`: Display results in bytes instead of bits
+- `--list`: List available speed test servers
 
 `ss -lp "sport = :domain"`: Display all listening sockets with the source port 'domain'
 
@@ -568,6 +611,14 @@ Options:
 - `-m`: Mirror the entire site
 - `-p`: Download all necessary files to display the HTML page
 - `-r`, `--recursive`: Enable recursive downloading
+
+`wsl --install Ubuntu`: Install Ubuntu on Windows Subsystem for Linux (WSL)
+
+Options:
+
+- `--install`: Install the specified Linux distribution
+- `--list`: List available Linux distributions
+- `--set-default`: Set the default Linux distribution
 
 `xkill`: Forcefully close a window by clicking on it
 
