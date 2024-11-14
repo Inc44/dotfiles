@@ -1,13 +1,14 @@
-# commands
+# Commands
+
 `alias name=command`: Create a shortcut for a command, eliminating the need to type the full command
 
-`aplay -l`:  List all available sound cards and digital audio devices
+`aplay -l`: List all available sound cards and digital audio devices
 
-`apt install package`: Install package along with its dependencies
+`apt install package`: Install a package along with its dependencies
 
-`apt remove package`: Remove package, preserve configuration and data
+`apt remove package`: Remove a package, preserving configuration and data
 
-`apt purge package`: Remove package
+`apt purge package`: Remove a package
 
 `blkid`: Display or locate block devices and their attributes, such as UUIDs and file system types
 
@@ -28,10 +29,10 @@ Options:
 
 Options:
 
-- `+i`, `-i`: Add/remove immutable attribute
-- `+r`, `-r`: Add/remove read attribute
-- `+w`, `-w`: Add/remove write attribute
-- `+x`, `-x`: Add/remove executable attribute
+- `+i`, `-i`: Add/remove the immutable attribute
+- `+r`, `-r`: Add/remove the read attribute
+- `+w`, `-w`: Add/remove the write attribute
+- `+x`, `-x`: Add/remove the executable attribute
 
 `chmod mode path`: Change the mode of a file or directory
 
@@ -58,7 +59,7 @@ Mode order for 1 element:
 
 `chown user/uid path`: Change the owner of a file or directory
 
-`cjxl input output.jxl`: Encode JPEG XL image
+`cjxl input output.jxl`: Encode a JPEG XL image
 
 Options:
 
@@ -74,7 +75,7 @@ Options:
 
 `command > file`: Redirect the output of a command to a file, replacing the file's current contents
 
-`command | grep pattern`: Filters the output of a command, showing only lines that match a specified pattern
+`command | grep pattern`: Filter the output of a command, showing only lines that match a specified pattern
 
 `conda list`: Display all installed packages in the current environment
 
@@ -98,8 +99,8 @@ Options:
 
 - `--setup`: Initialize and configure CyberGhost VPN
 - `--status`: Display the current VPN connection status
-- `--openvpn`: Use OpenVPN protocol
-- `--country-code`: Select server country
+- `--openvpn`: Use the OpenVPN protocol
+- `--country-code`: Select the server country
 - `--connect`: Connect to a VPN server in the specified country (e.g., US, FR, RU, UA, JP)
 - `--stop`: Disconnect from the VPN
 
@@ -115,6 +116,9 @@ Options:
 `df -H`: Display disk space usage in a human-readable format across all mounted filesystems
 
 `docker system prune`: Remove unused data
+
+Options:
+
 - `-a`: Remove all unused images, not just dangling ones
 - `--volumes`: Prune volumes as well
 
@@ -143,7 +147,7 @@ Options:
 - `--rm`: Automatically remove the container when it exits, cleaning up any resources used
 - `-it`: Run the container in interactive mode with a tty, allowing you to interact with the container via the command line
 - `--shm-size=12gb`: Set the shared memory size available to the container to 12 GB
-- `--ipc=host`: Shares the host's IPC namespace, allowing processes inside the container to communicate more efficiently with the host
+- `--ipc=host`: Share the host's IPC namespace, allowing processes inside the container to communicate more efficiently with the host
 
 ---
 
@@ -197,13 +201,13 @@ Options:
 
 Options:
 
-`Command (m for help): o`: Create a new empty DOS partition table on the disk
-`Command (m for help): n`: Add a new partition to the disk
-`Select (default p): p`: Create a primary partition
-`Partition number (1-4, default 1): 1`: Choose the partition number
-`First sector (2048-3907029167, default 2048):`: Specify the starting sector for the partition
-`Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-3907029167, default 3907029167): 2099199`: Specify the ending sector or size for the partition
-`Command (m for help): w`: Write the partition table to disk and exit
+- `Command (m for help): o`: Create a new empty DOS partition table on the disk
+- `Command (m for help): n`: Add a new partition to the disk
+- `Select (default p): p`: Create a primary partition
+- `Partition number (1-4, default 1): 1`: Choose the partition number
+- `First sector (2048-3907029167, default 2048):`: Specify the starting sector for the partition
+- `Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-3907029167, default 3907029167): 2099199`: Specify the ending sector or size for the partition
+- `Command (m for help): w`: Write the partition table to disk and exit
 
 `ffmpeg -i input -c copy output`: Copy the media stream from the input file to the output file without re-encoding
 
@@ -222,7 +226,7 @@ Options:
 - `-bufsize 10M`: Set buffer size to 10M
 - `-b:v 10M`: Set video bitrate to 10M
 - `-codec|c copy`: Copy both audio and video streams without re-encoding
-- `-c:a aac`: Use Use AAC audio codec
+- `-c:a aac`: Use AAC audio codec
     - `-strict experimental|-2`: Enable experimental features
 - `-c:a copy`: Copy the audio stream without re-encoding
 - `-c:a flac`: Use Free Lossless Audio Codec
@@ -293,15 +297,15 @@ Options:
     - `format=gbrp`: Convert the pixel format to GBR planar (gbrp)
     - `yadif`: Apply the YADIF deinterlacing filter to the video stream
 
-`find expression`: Searche for files within a directory hierarchy
+`find expression`: Search for files within a directory hierarchy
 
 `find -name pattern`: Look for files matching a specific pattern in a directory hierarchy
 
 `flatpak list`: Show all installed Flatpak applications
 
-`free -h`: Display amount of free and used memory in a human-readable format
+`free -h`: Display the amount of free and used memory in a human-readable format
 
-`gedit file`: Open the file in the Vim text editor
+`gedit file`: Open the file in the Gedit text editor
 
 `git`: Version control system
 
@@ -331,7 +335,7 @@ Options:
 
 `hwclock --systohc`: Synchronize the hardware clock with the current system time
 
-`id -u user`: Get UID of user
+`id -u user`: Get the UID of a user
 
 `ifconfig`: Display network interface configuration information, including IP addresses
 
@@ -397,7 +401,7 @@ Options:
 - `partition`: Specify the partition or device to be mounted
 - `-a`: Mount all filesystems listed in fstab
 
-`mv path1 path2`: Move or rename by overwriting the file or directory at path1 to path2
+`mv path1 path2`: Move or rename by overwriting the file or directory at `path1` to `path2`
 
 `nano file`: Open the file in the Nano text editor
 
@@ -449,13 +453,13 @@ Options:
 
 `pip install package --upgrade`: Install the latest version of a package, upgrading it if already installed
 
-`ps -aux`: Lists all running processes on the system.
+`ps -aux`: List all running processes on the system
 
 Options:
 
-`-a`: All users
-`-u`: User-oriented format
-`-x`: Include hidden processes
+- `-a`: All users
+- `-u`: User-oriented format
+- `-x`: Include hidden processes
 
 `python -OO script.py`: Execute a Python script with optimizations enabled, stripping docstrings and assert statements
 
@@ -484,7 +488,7 @@ Options:
 - `-r`: Recursively remove directories and their contents
 - `-f`: Forcefully remove files or directories without prompting for confirmation, even if they are write-protected
 
-`rsync -avz path1 path2`: Synchronizes files and directories between two locations
+`rsync -avz path1 path2`: Synchronize files and directories between two locations
 
 Options:
 
@@ -492,7 +496,7 @@ Options:
 - `--no-g`: Prevent setting group permissions
 - `--no-o`: Prevent setting ownership permissions
 - `--no-perms`: Prevent changing permissions
-- `--progress`: Displays the progress
+- `--progress`: Display the progress
 - `-a`: Archive mode/preserves symlinks, devices, attributes, permissions, ownership
 - `-v`: Provide detailed information
 - `-z`: Compress during data transfer
@@ -509,8 +513,8 @@ Options:
 Options:
 
 - `-s`: Schedule a shutdown at a specified time
-- `-t 1800`: Set a timer for 1800 seconds (30 minutes) before shut down
-- `+minutes`: Delay shut down by a specified number of minutes
+- `-t 1800`: Set a timer for 1800 seconds (30 minutes) before shutdown
+- `+minutes`: Delay shutdown by a specified number of minutes
 - `-c`: Cancel a scheduled shutdown
 - `now`: Immediately shut down the system
 
@@ -527,9 +531,9 @@ Options:
 
 `strings path`: Display printable strings found in a binary file located at the specified path
 
-`sudo command`: Executes the specified command with superuser (root) privileges
+`sudo command`: Execute the specified command with superuser (root) privileges
 
-`sudo su`: Switche the user to the root user
+`sudo su`: Switch the user to the root user
 
 `sync`: Synchronize cached writes to persistent storage
 
@@ -566,9 +570,9 @@ Options:
 
 Options:
 
-- `a`: Includes hidden files
-- `d`: Displays only directories
-- `x`: Stays within the same filesystem
+- `a`: Include hidden files
+- `d`: Display only directories
+- `x`: Stay within the same filesystem
 
 `umount`: Unmount a mounted filesystem
 
@@ -583,7 +587,7 @@ Options:
 - `-a`: Print all available system information
 - `-r`: Print the kernel release version
 
-`unzip archive -d destination`: Extracts files from a ZIP archive
+`unzip archive -d destination`: Extract files from a ZIP archive
 
 `vim file`: Open the file in the Vim text editor
 
@@ -591,7 +595,7 @@ Options:
 
 Options:
 
-- `--convert-links`: Convert links so that they work locally, off-line
+- `--convert-links`: Convert links so that they work locally, offline
 - `--domains domain`: Limit the download to a specific domain
 - `--html-extension`: Save files with the .html extension
 - `--limit-rate=200K`: Limit the download speed to 200Kb/s
@@ -637,9 +641,9 @@ Options:
 - `-v`: Provide detailed information
 - `-z`: Compress
 
-`zip -0 -r path.zip path`: Creates a zip archive
+`zip -0 -r path.zip path`: Create a zip archive
 
 Options:
 
-- `-0`: Stores without compression
+- `-0`: Store without compression
 - `-r`: Recursive/include subdirectories and their content
