@@ -1,29 +1,39 @@
-7z/ffmpeg-7.0-full_build.7z
+7z/vlc-3.0.19-nvidia-upscaler2.7z
 exe/391.35-notebook-win10-64bit-international-whql.exe
 exe/Adobe.After.Effects.2020.v17.7.0.45.exe
 exe/Adobe.After.Effects.2024.v24.3.0.50.exe
 exe/Adobe.Character.Animator.2024.v24.2.0.80.exe
 exe/Adobe.Illustrator.2024.v28.4.1.86.exe
+exe/Adobe.Photoshop.2024.v25.9.1.626.exe
 exe/Adobe.Premiere.Pro.2020.v14.9.0.52.exe
 exe/Adobe.Premiere.Pro.2022.v22.6.2.2.exe
 exe/Adobe.Premiere.Pro.2024.v24.3.0.59.exe
 exe/Adobe.Premiere.Pro.CC.2018.v12.1.2.69.exe
-exe/DeepFaceLab_DirectX12_build_05_04_2022.exe
-exe/FlowframesInstaller1.36.0.exe
 exe/GenshinImpact_install_ua_197f2e6f550c.exe
-exe/GitHubDesktopSetup-x64.exe
-exe/Initial Unity Installer.exe
+exe/KindleForPC-installer-1.17.44183.exe
 exe/NVIDIA_RTX_Voice_v0.5.12.6_Updated.exe
-exe/SQLiteDatabaseBrowserPortable_3.12.2_English.paf.exe
-exe/UnityHubSetup.exe
-exe/UnitySetup-Android-Support-for-Editor-2020.3.12f1.exe
-exe/UnitySetup-Windows-IL2CPP-Support-for-Editor-2020.3.12f1.exe
-exe/UnitySetup64-2020.3.12f1.exe
-exe/activitywatch-v0.12.2-windows-x86_64-setup.exe
+exe/Sandboxie-Classic-x64-v5.69.6.exe
+exe/Sandboxie-Plus-x64-v1.14.6.exe
+exe/TerrariViewer 6.5.exe
+exe/TerrariViewer 7.2.0.0.exe
+exe/adksetup.exe
+exe/adkwinpesetup.exe
+exe/diptrace_trial_setup.exe
+exe/kicad-8.0.5-x86_64.exe
+exe/kolibri-0.16.1-windows-setup.exe
 exe/manictime-setup-2024.1.0.7-win-x64.exe
 exe/svp4-pro.4.6.263.exe
 exe/win64_15407.4279.exe
-msi/blender-4.1.1-windows-x64.msi
+iso/alpine-extended-3.20.2-x86_64.iso
+iso/clonezilla-live-3.1.3-16-amd64_2.iso
+iso/debian-12.6.0-amd64-DVD-1.iso
+iso/en-us_windows_11_consumer_editions_version_24h2_x64_dvd_1d5fcad3.iso
+iso/kali-linux-2024.2-live-amd64.iso
+iso/nixos-gnome-24.05.4326.36bae4507766-x86_64-linux.iso
+iso/openSUSE-Leap-15.6-DVD-x86_64-Build710.3-Media.iso
+iso/proxmox-ve_8.2-2.iso
+iso/ubuntu-22.04.4-desktop-amd64.iso
+msi/LTspice64.msi
 rar/AE2021(18011)RePack.rar
 rar/AE2022(2211174)RePack.rar
 rar/AfterEffectsCC2017(14.0.1.5).rar
@@ -31,6 +41,8 @@ rar/ChAn2020(3316)RePack.rar
 rar/FIPremVidTransit453.rar
 rar/FilmImpact1234.rar
 rar/FlmImpPremVidTransEff511.rar
+rar/GPEN-Windows.rar
+rar/Mathematica.-RSLOAD.NET-.rar
 rar/PrPro2021(152035)RePack.rar
 rar/PrPro2022(22121)RePack.rar
 rar/PrPro2022(224057)RePack.rar
@@ -44,17 +56,16 @@ rar/Univer501.rar
 rar/Universe 3.3.1.rar
 rar/Universe333.rar
 rar/Univrs202420.rar
+zip/AAct.zip
 zip/Boris.FX.Sapphire.Plug-ins.for.AE.v2024.5.zip
-zip/JDM Drift Build DEMO.zip
-zip/MSIAfterburnerSetup.zip
+zip/DefenderKiller.zip
+zip/EasyBCD 2.4.0.237 Portable RSLOAD.NET.zip
+zip/MMVCServerSIO_win_onnxgpu-cuda_v.1.5.3.15.zip
 zip/Photoshop 25-RSLOAD.NET-.zip
-zip/Topaz.Photo.AI.v3.0.0.zip
-zip/Topaz.Video.AI.v5.0.2.zip
+zip/TeraCopy.Pro.v3.17.0.0.zip
 zip/android-ndk-r19-windows-x86_64.zip
 zip/efbaa277338195608aa4e3dbd43927e97f60218c.build-tools_r30.0.2-windows.zip
 zip/jdk8u172-b11_4be8440cc514099cfe1b50cbc74128f6955cd90fd5afe15ea7be60f832de67b4.zip
 zip/platform-29_r05.zip
 zip/platform-30_r03.zip
-zip/platform-tools_r28.0.1-windows.zip
 zip/sdk-tools-windows-4333796.zip
-zip/usvg-win64.zip
