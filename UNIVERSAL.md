@@ -7,6 +7,13 @@ sudo rm -r /home/pc/stable-diffusion-webui/models
 ln -s /hdd/ollama/models /home/pc/.ollama/models
 ln -s /hdd/stable-diffusion-webui/models /home/pc/stable-diffusion-webui/models
 ```
+### Configuring CyberGhost
+```
+sudo cyberghostvpn --setup
+sudo vim /etc/sudoers
+```
+Comment out `Defaults secure_path`
+Override the read-only file with `wq!`
 ### Configuring GRUB
 ```
 sudo vim /etc/default/grub
@@ -378,6 +385,16 @@ or
 ```
 pipx run llm-benchmark run --no-sendinfo
 ```
+### Installing Pano
+Open [Pano - Clipboard Manager](https://extensions.gnome.org/extension/5278/pano)
+
+Click `Browse`
+
+Click `Open`
+
+Click `Unsupported`
+
+Click `Install Anyway`
 ### Installing raqua
 ```
 git clone https://github.com/Inc44/raqua.git
@@ -417,11 +434,11 @@ python skymagic.py --path ./config/config-canyon-rain.json
 ```
 ### Installing Stable Diffusion Webui
 ```
-conda activate
-conda install python=3.10
-wget https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/webui.sh
-chmod +x webui.sh
-LD_PRELOAD=/lib/libstdc++.so.6 ./webui.sh --xformers
+conda create --name webui python=3.10
+conda activate webui
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui
+cd stable-diffusion-webui
+python launch.py --xformers
 ```
 ### Installing Tactile
 Open `Extension Manager`
