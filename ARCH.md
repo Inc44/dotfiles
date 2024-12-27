@@ -73,7 +73,7 @@ sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote auda
 ```
 ### Yay Installing Everything
 ```
-yay -S activitywatch-bin anydesk-bin betterlockscreen czkawka-gui-bin cyberghostvpn egpu-switcher microsoft-edge-stable-bin mkinitcpio-firmware normcap nvidia-container-toolkit parsec-bin peazip-qt-bin qview rclone-browser visual-studio-code-bin wrk xdman-beta-bin xwinwrap-0.9-bin yandex-browser
+yay -S activitywatch-bin anydesk-bin betterlockscreen cyberghostvpn czkawka-gui-bin egpu-switcher microsoft-edge-stable-bin mkinitcpio-firmware normcap nvidia-container-toolkit parsec-bin peazip-qt-bin qview rclone-browser visual-studio-code-bin wrk xdman-beta-bin xwinwrap-0.9-bin yandex-browser
 ```
 ### Flatpak Installing Everything
 ```
