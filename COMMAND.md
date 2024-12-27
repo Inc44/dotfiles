@@ -1,5 +1,9 @@
 # Commands
 
+`! command`: Negate the exit status of a command
+
+`./executable`: Run an executable file located in the current directory
+
 `alias name=command`: Create a shortcut for a command, eliminating the need to type the full command
 
 `aplay -l`: List all available sound cards and digital audio devices
@@ -76,6 +80,12 @@ Options:
 `command > file`: Redirect the output of a command to a file, replacing the file's current contents
 
 `command | grep pattern`: Filter the output of a command, showing only lines that match a specified pattern
+
+`command && command`: Run the second command only if the first command succeeds
+
+`command || command`: Run the second command only if the first command fails
+
+`command; command`: Run the commands sequentially
 
 `conda list`: Display all installed packages in the current environment
 
@@ -307,6 +317,20 @@ Options:
 
 `free -h`: Display the amount of free and used memory in a human-readable format
 
+`gcc`: Use the GNU compiler (`zig cc` : Use the Zig compiler as a replacement for `gcc` or `clang`)
+
+Options:
+
+- `-O3`: Enable high-level optimizations for performance
+- `-Wall`: Enable all compiler warnings
+- `-Wextra`: Enable additional warnings
+- `-fsanitize=address,undefined`: Enable AddressSanitizer and UndefinedBehaviorSanitizer for runtime error detection (`gcc` on Linux only)
+- `-g`: Include debugging information
+- `-lm`: Link the math library
+- `-o executable`: Specify the output
+- `-pg`: Enable profiling support for use with `gprof`
+- `code1.c code2.c ... coden.c`: Specify the source files to compile
+
 `gedit file`: Open the file in the Gedit text editor
 
 `git`: Version control system
@@ -315,15 +339,23 @@ Options:
 
 - `add .`: Stage all changes in the current directory for the next commit
 - `branch --unset-upstream`: Remove the upstream tracking from the current branch, making it a local branch only
+- `checkout -b test`: Create and switch to a new branch named `test`
+- `checkout main`: Switch to the `main` branch
 - `clone link`: Create a copy of an existing repository located at `link` into a new local directory
 - `commit -m message`: Commit the staged changes with a commit message `message`
 - `config pull.rebase false`: Configure Git to merge the remote branch when pulling
 - `init -b main`: Initialize a new Git repository and set the default branch to `main`
 - `pull`: Fetch changes from the remote repository and merge them into the current branch
-- `push`: Push your local changes to the remote repository
 - `push origin :branch-name`: Delete the `branch-name` from the remote repository
 - `push origin branch-name`: Push your local `branch-name` to the remote, updating or creating it as necessary
+- `push`: Push your local changes to the remote repository
+- `reset`: Undo changes in the working directory
+- `revert commit`: Create a new commit that undoes the changes introduced by a previous commit
 - `submodule update --init --recursive`: Initialize and update submodules recursively, including nested submodules
+
+`gprof executable gmon.out > analysis.txt`: Profile the performance of a profileable executable
+
+`htop`: Monitor system resources
 
 `httrack link`: Download websites to a local directory for offline viewing
 
@@ -566,6 +598,8 @@ Options:
 - `..`: Parent directory
 - `.`: Current directory
 
+`time -v command` (or `/usr/bin/time`): Measure the execution time of a command and display detailed resource usage statistics
+
 `touch -amt 197001010100.00 file`: Create/update the access and modification times
 
 `tree`: Show the contents of directories in a tree-like format
@@ -575,6 +609,8 @@ Options:
 - `a`: Include hidden files
 - `d`: Display only directories
 - `x`: Stay within the same filesystem
+
+`ulimit -v 4096`: Set a limit on the maximum amount of virtual memory (in kilobytes) that a process can use
 
 `umount`: Unmount a mounted filesystem
 
