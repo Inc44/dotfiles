@@ -262,7 +262,8 @@ Options:
 - `-framerate 30`: Set the output framerate
 - `-filter:a "atempo=float"`: Adjust the audio playback speed without changing its pitch
 - `-hide_banner`: Suppress startup banner and other non-critical output
-- `-hwaccel qsv; nvdec`: Use hardware acceleration
+- `-hwaccel cuda; nvdec; qsv`: Use hardware acceleration
+- `-hwaccel_output_format cuda`: Set the output format for hardware-accelerated decoding
 - `-i %d.png`: Specify input files with a sequence of numbered PNG files
 - `-i %4d.png`: Specify input files with a sequence of four-digit numbered PNG files
 - `-i %04d.png`: Specify input files with a sequence of four-digit numbered PNG files with leading zeros
@@ -295,6 +296,7 @@ Options:
     - `crop=230:120:190:50`: Crop the video to a width of 230 pixels and a height of 120 pixels, starting at position (190, 50) on the input video
     - `crop=min(iw\,ih):min(iw\,ih)`: Crop the video to a square where both the width and height are equal to the smaller dimension of the input video
     - `format=gbrp`: Convert the pixel format to GBR planar (gbrp)
+    - `scale_cuda=-2:1080:interp_algo=nearest|bilinear|bicubic|lanczos`: Apply the CUDA-accelerated scaling filter to resize the video to a height of 1080 pixels while maintaining the aspect ratio and ensuring evenness
     - `yadif`: Apply the YADIF deinterlacing filter to the video stream
 
 `find expression`: Search for files within a directory hierarchy
