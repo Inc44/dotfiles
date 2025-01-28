@@ -10,6 +10,10 @@ sudo vim /etc/sudoers
 ```
 Comment out `Defaults secure_path`
 Override the read-only file with `wq!`
+### Configuring Github
+```
+gh auth login
+```
 ### Configuring GRUB
 ```
 sudo vim /etc/default/grub
@@ -59,6 +63,10 @@ Click `AppIndicator and KStatusNotifierItem Support` > `Settings`
 Click `Position and size`
 
 Select `Opacity` > `255`
+### Installing Autodesk Fusion 360
+```
+curl -L https://raw.githubusercontent.com/cryinkfly/Autodesk-Fusion-360-for-Linux/main/files/setup/autodesk_fusion_installer_x86-64.sh -o "autodesk_fusion_installer_x86-64.sh" && chmod +x autodesk_fusion_installer_x86-64.sh && ./autodesk_fusion_installer_x86-64.sh --install --default
+```
 ### Installing AutoKhan
 ```
 conda create --name AutoKhan python=3.10 -y
