@@ -15,6 +15,7 @@ exe/Adobe.Photoshop.2024.v25.1.0.120-portable-by-XpucT.exe
 exe/AdobeCameraRaw_x64_17_1.exe
 exe/AhMyth_Win64.exe
 exe/AntutuBenchmark_Setup.exe
+exe/AnyDesk.exe
 exe/Bambu_Studio_win_public-v01.10.01.50-20241115162711.exe
 exe/Bitwarden-Installer-2024.6.4.exe
 exe/BlueStacksInstaller_5.21.610.1003_native.exe
@@ -107,6 +108,7 @@ exe/msys2-x86_64-20241208.exe
 exe/nfcPro_x64.exe
 exe/nox_setup_v7.0.6.1_full_intl.exe
 exe/oculante.exe
+exe/parsec-windows.exe
 exe/qView-6.1-win64.exe
 exe/qbittorrent_5.0.3_qt6_lt20_x64_setup.exe
 exe/resvg-explorer-extension.exe
