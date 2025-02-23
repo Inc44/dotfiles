@@ -149,3 +149,6 @@ export PATH="/home/pc/Efficient-Compression-Tool/build:$PATH"
 export PATH="/home/pc/go/bin:$PATH"
 export PATH="/usr/local/texlive/2024/bin/x86_64-linux:$PATH"
 export TERMINFO=/usr/share/terminfo
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
