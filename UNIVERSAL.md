@@ -524,15 +524,22 @@ cp /home/pc/github/TheTTS/xtts.py /home/pc/miniconda3/envs/TheTTS/lib/python3.10
 ```
 ### Installing UVR
 ```
-conda create --name uvr python=3.10 -y
-conda activate uvr
+curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+source ~/.bashrc
+pyenv install 3.11.10
+pyenv global 3.11.10
+pyenv local 3.11.10
+pip install --upgrade pip
+pip install --upgrade setuptools wheel
+pip install pygobject
 git clone https://github.com/Anjok07/ultimatevocalremovergui.git
 cd ultimatevocalremovergui
-wget https://raw.githubusercontent.com/Inc44/dotfiles/main/Dora-0.0.3.tar.gz -O Dora-0.0.3.tar.gz
-pip install Dora-0.0.3.tar.gz
+rm requirements.txt
+wget https://raw.githubusercontent.com/Inc44/dotfiles/main/requirements.txt -O requirements.txt
 pip install -r requirements.txt
-pip install pygobject
-conda install -c conda-forge libstdcxx-ng=12 -y
 ```
 ### Installing Vim-Plug
 ```

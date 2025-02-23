@@ -17,7 +17,7 @@ microsoft-edge-stable
 ```
 #### ctrl + u
 ```
-/home/pc/miniconda3/envs/uvr/bin/python -O /home/pc/ultimatevocalremovergui/UVR.py
+/home/pc/.pyenv/versions/3.11.10/bin/python3 /home/pc/ultimatevocalremovergui/UVR.py
 ```
 #### super + e
 ```
