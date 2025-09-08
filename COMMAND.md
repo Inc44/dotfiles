@@ -487,6 +487,13 @@ Options:
 
 `pip install package --upgrade`: Install the latest version of a package, upgrading it if already installed
 
+`pngquant image.png`: Optimize PNG.
+
+Options:
+
+- `--quality=min-max`: Set output quality, with min and max being numbers in the range 0 (worst) to 100 (perfect). The encoder will choose the smallest file that stays within this range
+- `--nofs`: Disables Floyd-Steinberg dithering
+
 `ps -aux`: List all running processes on the system
 
 Options:

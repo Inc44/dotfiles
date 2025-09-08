@@ -403,6 +403,10 @@ Click `Open`
 Click `Unsupported`
 
 Click `Install Anyway`
+### Installing pngquant
+```
+cargo install pngquant
+```
 ### Installing raqua
 ```
 git clone https://github.com/Inc44/raqua.git
