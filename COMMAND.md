@@ -193,6 +193,16 @@ Options:
 
 `echo $XDG_SESSION_TYPE`: Display the current session type, indicating whether the session is running under Wayland or X11
 
+`ect path`: Optimize files
+
+Options:
+
+- `-1` to `-9`: Set compression level
+- `-recurse`: Recursively search directories
+- `-keep`: Keep modification time
+- `--strict`: Enable strict losslessness
+- `--mt-file`: Use per file multithreading
+
 `egpu-switcher`: Manage eGPU
 
 Options:
@@ -346,6 +356,13 @@ Options:
 
 `gedit file`: Open the file in the Gedit text editor
 
+`gh`: GitHub CLI
+
+Options:
+
+- `api users/Inc44/repos --jq '.[].name'`: Make an authenticated GitHub API request and filter the JSON output using `jq` to extract repository names
+- `auth login`: Authenticate with GitHub
+
 `git`: Version control system
 
 Options:
@@ -360,9 +377,11 @@ Options:
 - `init -b main`: Initialize a new Git repository and set the default branch to `main`
 - `pull`: Fetch changes from the remote repository and merge them into the current branch
 - `push origin :branch-name`: Delete the `branch-name` from the remote repository
+- `push origin --force`: Force the push, overwriting remote history
 - `push origin branch-name`: Push your local `branch-name` to the remote, updating or creating it as necessary
 - `push`: Push your local changes to the remote repository
 - `reset`: Undo changes in the working directory
+    - `--soft HEAD~1`: Unstage the last commit, keeping changes in the working directory
 - `revert commit`: Create a new commit that undoes the changes introduced by a previous commit
 - `submodule update --init --recursive`: Initialize and update submodules recursively, including nested submodules
 
@@ -481,6 +500,7 @@ Options:
 
 - `-Q`: Query installed packages
 - `-Rsnc package`: Remove a package and its dependencies, along with the configuration files
+- `-S package`: Install the package
 - `-Ss package`: Search for packages that contain the keyword
 - `-Syu`: Synchronize package databases and update all packages to their latest versions
 - `-U /path/to/package`: Install a local package file
@@ -648,6 +668,12 @@ Options:
 `unzip archive -d destination`: Extract files from a ZIP archive
 
 `vim file`: Open the file in the Vim text editor
+
+`webpmux`: Manipulate WebP files
+
+Options:
+
+- `-get frame 1 input.webp -o output.webp`: Extract the first frame from `input.webp` and save it to `output.webp`
 
 `wget`: Download files from the internet
 
