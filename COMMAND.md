@@ -233,6 +233,8 @@ Options:
 
 `ffmpeg -i input -map 0:v -map 0:a:1 -map 0:a:0 -map 0:s:1 -map_metadata 0 -c copy -disposition:a:0 default -disposition:a:1 none -ss m:ss -t s -y output`: Copy the media stream from the input file to the output file without re-encoding, set audio stream disposition, trim, and overwrite the output file without asking
 
+`ffmpeg -y -i input.gif -c:v libvpx-vp9 -crf 0 -an -r 30 -vf "setpts=(3/duration)*PTS,scale=512:512:force_original_aspect_ratio=decrease" output.webm`: Convert a GIF to Telegram video sticker
+
 Options:
 
 - `-`: Print output
@@ -270,6 +272,7 @@ Options:
     - `-aom-params lossless=1`: Encode in lossless mode
 - `-c:v libsvtav1`: Use SVT-AV1 codec
     - `-preset 4`: Set encoding preset
+- `-c:v libvpx-vp9`: Use VP9 codec
 - `-c:v libx265`: Use x265 codec
     - `-x265-params "profile=crf=16:preset=placebo:qp=16"`: Specify x265 encoding parameters for high quality
     - `-x265-params "profile=crf=0:lossless=1:preset=placebo:qp=0"`: Specify x265 encoding parameters for lossless
@@ -301,20 +304,22 @@ Options:
 - `-pass 2`: Execute the second pass of a two-pass encoding
 - `-pix_fmt yuv420p10le|yuv420p|yuv444p|rgba|bgra`: Set the pixel format
 - `-plays 0`: Set the number of times to loop an animated image (0 for infinite loop)
-- `-r float`: Set the frame rate of the output video
+- `-r float`: Set the frame rate of the input/output video
 - `-ss float`: Specify the start time for trimming, seeking to the given time position before starting to process the file
 - `-t float`: Set the duration of the output file
 - `-y`: Overwrite output files without asking
 - `-disposition:a:0 default`: Set the first audio stream as the default
 - `-disposition:a:1 none`: Set the second audio stream as non-default
 - `-filter_complex|vf`: Apply complex video filters
-    - `[file0][file1] overlay=240:250[output0]`: Overlay `file1` over `file0` and output to `output1`
+    - `[file0][file1] overlay=240:250[output0]`: Overlay `file1` over `file0` and output to `output0`
     - `[file0:v] [file0:a] [file1:v] [file1:a] concat=n=2:v=1:a=1 [output0v] [output0a]`: Concatenate two sets of video and audio streams
     - `fps=float`: Set the video filter to adjust frames per second
     - `crop=230:120:190:50`: Crop the video to a width of 230 pixels and a height of 120 pixels, starting at position (190, 50) on the input video
     - `crop=min(iw\,ih):min(iw\,ih)`: Crop the video to a square where both the width and height are equal to the smaller dimension of the input video
     - `format=gbrp`: Convert the pixel format to GBR planar (gbrp)
+    - `scale=width:height:force_original_aspect_ratio=decrease`: Apply scaling filter to resize the video to fit within the specified `width` and `height`, decreasing if necessary, while maintaining the original aspect ratio
     - `scale_cuda=-2:1080:interp_algo=nearest|bilinear|bicubic|lanczos`: Apply the CUDA-accelerated scaling filter to resize the video to a height of 1080 pixels while maintaining the aspect ratio and ensuring evenness
+    - `setpts=(expression)*PTS`: Change playback speed, slowing down if `expression` > 1 and speeding up if `expression` < 1
     - `yadif`: Apply the YADIF deinterlacing filter to the video stream
 
 `find expression`: Search for files within a directory hierarchy
