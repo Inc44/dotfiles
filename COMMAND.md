@@ -183,6 +183,14 @@ Options:
 
 ---
 
+`docker run ghcr.io/hound-search/hound:latest`: Start a Docker container for Hound
+
+Options:
+
+- `-v /home/pc/data/config.json:/data/config.json`: Mount the `config.json` file from the host to the container
+- `-p 6080:6080`: Map port 6080 on the host to port 6080 on the container
+- `--name hound`: Assign the name "hound" to the Docker container
+
 `echo $XDG_SESSION_TYPE`: Display the current session type, indicating whether the session is running under Wayland or X11
 
 `egpu-switcher`: Manage eGPU
