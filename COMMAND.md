@@ -289,6 +289,7 @@ Options:
 - `-c:v copy`: Copy the video stream without re-encoding
 - `-color_range pc|0|tv|1|mpeg|2`: Set the color range
 - `-crf 32|24|16`: Set Constant Rate Factor
+- `-f concat`: Use concat demuxer to read list of files from text file
 - `-f md5`: Generate MD5 checksum of the output
 - `-framerate 30`: Set the output framerate
 - `-filter:a "atempo=float"`: Adjust the audio playback speed without changing its pitch
@@ -299,11 +300,12 @@ Options:
 - `-i %4d.png`: Specify input files with a sequence of four-digit numbered PNG files
 - `-i %04d.png`: Specify input files with a sequence of four-digit numbered PNG files with leading zeros
 - `-i "concat:0|1|...|n"`: Concatenate multiple inputs
+- `-i files.txt`: Specify list of input files
 - `-i input`: Specify the input file
 - `-itsscale float`: Scale the timestamps of the input video stream by a floating-point number
 - `-loglevel error`: Display only error messages
 - `-lossless 1`: Enable lossless encoding
-- `-map file:stream|int:int`: Map a stream of a file to an output
+- `-map file:stream|int:int`: Map a stream from a file to an output stream
     - `-map 0:v:0`: Map the first video stream of the first input file
     - `-map 0:a:1 -map 0:a:0`: Map the second and first audio streams of the first input file
     - `-map 0:s:1`: Map the second subtitle stream of the first input file
@@ -315,6 +317,7 @@ Options:
 - `-pix_fmt yuv420p10le|yuv420p|yuv444p|rgba|bgra`: Set the pixel format
 - `-plays 0`: Set the number of times to loop an animated image (0 for infinite loop)
 - `-r float`: Set the frame rate of the input/output video
+- `-safe 0`: Allow unsafe filenames when using the concat demuxer
 - `-ss float`: Specify the start time for trimming, seeking to the given time position before starting to process the file
 - `-t float`: Set the duration of the output file
 - `-y`: Overwrite output files without asking
@@ -323,7 +326,7 @@ Options:
 - `-filter_complex|vf`: Apply complex video filters
     - `[file0][file1] overlay=240:250[output0]`: Overlay `file1` over `file0` and output to `output0`
     - `[file0:v] [file0:a] [file1:v] [file1:a] concat=n=2:v=1:a=1 [output0v] [output0a]`: Concatenate two sets of video and audio streams
-    - `fps=float`: Set the video filter to adjust frames per second
+    - `fps=float`: Set the video filter to adjust the frames per second
     - `crop=230:120:190:50`: Crop the video to a width of 230 pixels and a height of 120 pixels, starting at position (190, 50) on the input video
     - `crop=min(iw\,ih):min(iw\,ih)`: Crop the video to a square where both the width and height are equal to the smaller dimension of the input video
     - `format=gbrp`: Convert the pixel format to GBR planar (gbrp)
