@@ -549,12 +549,6 @@ Options:
 - `-l` or `--latest 4`: Limit the list to the four most recently synchronized mirrors
 - `--sort rate|score|delay`: Sort the mirrors based on the specified metric
 
-`regsvr32 library.dll`: Register a DLL file
-
-Options:
-
-- `/u`: Unregister the specified DLL
-
 `rm path`: Remove a file or directory at the specified path
 
 Options:
@@ -699,14 +693,6 @@ Options:
 - `-m`: Mirror the entire site
 - `-p`: Download all necessary files to display the HTML page
 - `-r`, `--recursive`: Enable recursive downloading
-
-`wsl --install Ubuntu`: Install Ubuntu on Windows Subsystem for Linux (WSL)
-
-Options:
-
-- `--install`: Install the specified Linux distribution
-- `--list`: List available Linux distributions
-- `--set-default`: Set the default Linux distribution
 
 `xkill`: Forcefully close a window by clicking on it
 
