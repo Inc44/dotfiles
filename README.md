@@ -10,6 +10,8 @@ Please follow the steps carefully, aka **RTFM**.
 # Links
 [Commands](COMMAND.md)
 
+[Commands Windows](COMMAND_WINDOWS.md)
+
 [Extensions](EXTENSIONS.md)
 
 [Shortcuts](SHORTCUT.md)
@@ -18,7 +20,11 @@ Please follow the steps carefully, aka **RTFM**.
 
 [Arch Specific](ARCH.md)
 
+[Proxmox Specific](PROXMOX.md)
+
 [Ubuntu Specific](UBUNTU.md)
+
+[Windows Specific](WINDOWS.md)
 
 [Vim](VIM.md)
 

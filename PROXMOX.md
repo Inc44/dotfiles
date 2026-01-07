@@ -108,11 +108,13 @@ iface wlan0 inet dhcp
 ```
 ```bash
 systemctl restart networking
-```
-```bash
 ip a
 ```
-Find `wlan0`'s IP and open [https://your_ip:8006](https://your_ip:8006)
+Find `wlan0`'s IP
+```bash
+reboot
+```
+Open [https://your_ip:8006](https://your_ip:8006)
 
 Sources:
 - [problem in passthroughing USB tethering to VM](https://forum.proxmox.com/threads/problem-in-passthroughing-usb-tethering-to-vm.132902)
