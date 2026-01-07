@@ -279,6 +279,10 @@ python demo.py --task FaceColorization --model GPEN-Colorization-1024 --in_size 
 python demo.py --task FaceInpainting --model GPEN-Inpainting-1024 --in_size 1024 --use_cuda --indir examples/ffhq-10 --outdir examples/outs-inpainting
 python demo.py --task Segmentation2Face --model GPEN-Seg2face-512 --in_size 512 --use_cuda --indir examples/segs --outdir examples/outs-seg2face
 ```
+### Installing Hound
+```
+sudo docker pull ghcr.io/hound-search/hound:latest
+```
 ### Installing Inkscape Figures
 ```
 sudo pip install inkscape-figures --break-system-packages
@@ -403,6 +407,10 @@ Click `Open`
 Click `Unsupported`
 
 Click `Install Anyway`
+### Installing pngquant
+```
+cargo install pngquant
+```
 ### Installing raqua
 ```
 git clone https://github.com/Inc44/raqua.git

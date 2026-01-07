@@ -183,7 +183,25 @@ Options:
 
 ---
 
+`docker run ghcr.io/hound-search/hound:latest`: Start a Docker container for Hound
+
+Options:
+
+- `-v /home/pc/data/config.json:/data/config.json`: Mount the `config.json` file from the host to the container
+- `-p 6080:6080`: Map port 6080 on the host to port 6080 on the container
+- `--name hound`: Assign the name "hound" to the Docker container
+
 `echo $XDG_SESSION_TYPE`: Display the current session type, indicating whether the session is running under Wayland or X11
+
+`ect path`: Optimize files
+
+Options:
+
+- `-1` to `-9`: Set compression level
+- `-recurse`: Recursively search directories
+- `-keep`: Keep modification time
+- `--strict`: Enable strict losslessness
+- `--mt-file`: Use per file multithreading
 
 `egpu-switcher`: Manage eGPU
 
@@ -225,6 +243,8 @@ Options:
 
 `ffmpeg -i input -map 0:v -map 0:a:1 -map 0:a:0 -map 0:s:1 -map_metadata 0 -c copy -disposition:a:0 default -disposition:a:1 none -ss m:ss -t s -y output`: Copy the media stream from the input file to the output file without re-encoding, set audio stream disposition, trim, and overwrite the output file without asking
 
+`ffmpeg -y -i input.gif -c:v libvpx-vp9 -crf 0 -an -r 30 -vf "setpts=(3/duration)*PTS,scale=512:512:force_original_aspect_ratio=decrease" output.webm`: Convert a GIF to Telegram video sticker
+
 Options:
 
 - `-`: Print output
@@ -262,12 +282,14 @@ Options:
     - `-aom-params lossless=1`: Encode in lossless mode
 - `-c:v libsvtav1`: Use SVT-AV1 codec
     - `-preset 4`: Set encoding preset
+- `-c:v libvpx-vp9`: Use VP9 codec
 - `-c:v libx265`: Use x265 codec
     - `-x265-params "profile=crf=16:preset=placebo:qp=16"`: Specify x265 encoding parameters for high quality
     - `-x265-params "profile=crf=0:lossless=1:preset=placebo:qp=0"`: Specify x265 encoding parameters for lossless
 - `-c:v copy`: Copy the video stream without re-encoding
 - `-color_range pc|0|tv|1|mpeg|2`: Set the color range
 - `-crf 32|24|16`: Set Constant Rate Factor
+- `-f concat`: Use concat demuxer to read list of files from text file
 - `-f md5`: Generate MD5 checksum of the output
 - `-framerate 30`: Set the output framerate
 - `-filter:a "atempo=float"`: Adjust the audio playback speed without changing its pitch
@@ -278,11 +300,12 @@ Options:
 - `-i %4d.png`: Specify input files with a sequence of four-digit numbered PNG files
 - `-i %04d.png`: Specify input files with a sequence of four-digit numbered PNG files with leading zeros
 - `-i "concat:0|1|...|n"`: Concatenate multiple inputs
+- `-i files.txt`: Specify list of input files
 - `-i input`: Specify the input file
 - `-itsscale float`: Scale the timestamps of the input video stream by a floating-point number
 - `-loglevel error`: Display only error messages
 - `-lossless 1`: Enable lossless encoding
-- `-map file:stream|int:int`: Map a stream of a file to an output
+- `-map file:stream|int:int`: Map a stream from a file to an output stream
     - `-map 0:v:0`: Map the first video stream of the first input file
     - `-map 0:a:1 -map 0:a:0`: Map the second and first audio streams of the first input file
     - `-map 0:s:1`: Map the second subtitle stream of the first input file
@@ -293,20 +316,23 @@ Options:
 - `-pass 2`: Execute the second pass of a two-pass encoding
 - `-pix_fmt yuv420p10le|yuv420p|yuv444p|rgba|bgra`: Set the pixel format
 - `-plays 0`: Set the number of times to loop an animated image (0 for infinite loop)
-- `-r float`: Set the frame rate of the output video
+- `-r float`: Set the frame rate of the input/output video
+- `-safe 0`: Allow unsafe filenames when using the concat demuxer
 - `-ss float`: Specify the start time for trimming, seeking to the given time position before starting to process the file
 - `-t float`: Set the duration of the output file
 - `-y`: Overwrite output files without asking
 - `-disposition:a:0 default`: Set the first audio stream as the default
 - `-disposition:a:1 none`: Set the second audio stream as non-default
 - `-filter_complex|vf`: Apply complex video filters
-    - `[file0][file1] overlay=240:250[output0]`: Overlay `file1` over `file0` and output to `output1`
+    - `[file0][file1] overlay=240:250[output0]`: Overlay `file1` over `file0` and output to `output0`
     - `[file0:v] [file0:a] [file1:v] [file1:a] concat=n=2:v=1:a=1 [output0v] [output0a]`: Concatenate two sets of video and audio streams
-    - `fps=float`: Set the video filter to adjust frames per second
+    - `fps=float`: Set the video filter to adjust the frames per second
     - `crop=230:120:190:50`: Crop the video to a width of 230 pixels and a height of 120 pixels, starting at position (190, 50) on the input video
     - `crop=min(iw\,ih):min(iw\,ih)`: Crop the video to a square where both the width and height are equal to the smaller dimension of the input video
     - `format=gbrp`: Convert the pixel format to GBR planar (gbrp)
+    - `scale=width:height:force_original_aspect_ratio=decrease`: Apply scaling filter to resize the video to fit within the specified `width` and `height`, decreasing if necessary, while maintaining the original aspect ratio
     - `scale_cuda=-2:1080:interp_algo=nearest|bilinear|bicubic|lanczos`: Apply the CUDA-accelerated scaling filter to resize the video to a height of 1080 pixels while maintaining the aspect ratio and ensuring evenness
+    - `setpts=(expression)*PTS`: Change playback speed, slowing down if `expression` > 1 and speeding up if `expression` < 1
     - `yadif`: Apply the YADIF deinterlacing filter to the video stream
 
 `find expression`: Search for files within a directory hierarchy
@@ -333,6 +359,13 @@ Options:
 
 `gedit file`: Open the file in the Gedit text editor
 
+`gh`: GitHub CLI
+
+Options:
+
+- `api users/Inc44/repos --jq '.[].name'`: Make an authenticated GitHub API request and filter the JSON output using `jq` to extract repository names
+- `auth login`: Authenticate with GitHub
+
 `git`: Version control system
 
 Options:
@@ -347,9 +380,11 @@ Options:
 - `init -b main`: Initialize a new Git repository and set the default branch to `main`
 - `pull`: Fetch changes from the remote repository and merge them into the current branch
 - `push origin :branch-name`: Delete the `branch-name` from the remote repository
+- `push origin --force`: Force the push, overwriting remote history
 - `push origin branch-name`: Push your local `branch-name` to the remote, updating or creating it as necessary
 - `push`: Push your local changes to the remote repository
 - `reset`: Undo changes in the working directory
+    - `--soft HEAD~1`: Unstage the last commit, keeping changes in the working directory
 - `revert commit`: Create a new commit that undoes the changes introduced by a previous commit
 - `submodule update --init --recursive`: Initialize and update submodules recursively, including nested submodules
 
@@ -468,6 +503,7 @@ Options:
 
 - `-Q`: Query installed packages
 - `-Rsnc package`: Remove a package and its dependencies, along with the configuration files
+- `-S package`: Install the package
 - `-Ss package`: Search for packages that contain the keyword
 - `-Syu`: Synchronize package databases and update all packages to their latest versions
 - `-U /path/to/package`: Install a local package file
@@ -486,6 +522,13 @@ Options:
 `pip install -e .`: Install a Python package from the current directory
 
 `pip install package --upgrade`: Install the latest version of a package, upgrading it if already installed
+
+`pngquant image.png`: Optimize PNG.
+
+Options:
+
+- `--quality=min-max`: Set output quality, with min and max being numbers in the range 0 (worst) to 100 (perfect). The encoder will choose the smallest file that stays within this range
+- `--nofs`: Disables Floyd-Steinberg dithering
 
 `ps -aux`: List all running processes on the system
 
@@ -508,12 +551,6 @@ Options:
 - `-p` or `--protocol http,https,rsync`: Include only mirrors that support the specified protocols
 - `-l` or `--latest 4`: Limit the list to the four most recently synchronized mirrors
 - `--sort rate|score|delay`: Sort the mirrors based on the specified metric
-
-`regsvr32 library.dll`: Register a DLL file
-
-Options:
-
-- `/u`: Unregister the specified DLL
 
 `rm path`: Remove a file or directory at the specified path
 
@@ -629,6 +666,12 @@ Options:
 
 `vim file`: Open the file in the Vim text editor
 
+`webpmux`: Manipulate WebP files
+
+Options:
+
+- `-get frame 1 input.webp -o output.webp`: Extract the first frame from `input.webp` and save it to `output.webp`
+
 `wget`: Download files from the internet
 
 Options:
@@ -653,14 +696,6 @@ Options:
 - `-m`: Mirror the entire site
 - `-p`: Download all necessary files to display the HTML page
 - `-r`, `--recursive`: Enable recursive downloading
-
-`wsl --install Ubuntu`: Install Ubuntu on Windows Subsystem for Linux (WSL)
-
-Options:
-
-- `--install`: Install the specified Linux distribution
-- `--list`: List available Linux distributions
-- `--set-default`: Set the default Linux distribution
 
 `xkill`: Forcefully close a window by clicking on it
 
