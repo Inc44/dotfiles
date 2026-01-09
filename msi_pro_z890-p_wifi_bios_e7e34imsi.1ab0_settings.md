@@ -344,19 +344,19 @@ Main Timing Configuration
 
 Command Rate _2N_ [2N]
 
-tCL _34_ [34] <!--Sweet spot-->
+tCL _34_ [34] <!--Sweet spot--> <!--46-->
 
-tRCD _34_ [34] <!--Sweet spot-->
+tRCD _34_ [34] <!--Sweet spot--> <!--45-->
 
-tRCDW _34_ [34] <!--tRCDW = tRCD-->
+tRCDW _34_ [34] <!--tRCDW = tRCD--> <!--45-->
 
-tRP _34_ [34]
+tRP _34_ [34] <!--45-->
 
-tRAS _72_ [72] <!--tRAS = tCL + tRCD + 4 (safety)-->
+tRAS _72_ [72] <!--tRAS = tCL + tRCD + 4 (safety)--> <!--90-->
 
 tRFC1 _550_ [Auto] <!--Not modifiable--> <!--1146-->
 
-tRFC2 _550_ [550] <!--Sweet spot-->
+tRFC2 _550_ [550] <!--Sweet spot--> <!--615-->
 
 ---
 
@@ -364,27 +364,27 @@ tRFC2 _550_ [550] <!--Sweet spot-->
 
 tRFCPB _531_ [Auto]
 
-tREFI _65535_ [65535] <!--JEDEC maximum-->
+tREFI _65535_ [65535] <!--JEDEC maximum--> <!--5460-->
 
-tWR _48_ [48]
+tWR _48_ [48] <!--84-->
 
-tWR_MR _48_ [48]
+tWR_MR _48_ [48] <!--84-->
 
-tWTR _4_ [4]
+tWTR _4_ [4] <!--7-->
 
-tWTR_L _16_ [16]
+tWTR_L _16_ [16] <!--28-->
 
-tRRD _4_ [4]
+tRRD _4_ [4] <!--8-->
 
-tRRD_L _8_ [8]
+tRRD_L _8_ [8] <!--14-->
 
-tRTP _12_ [12]
+tRTP _12_ [12] <!--21-->
 
-tRTP_MR _12_ [12]
+tRTP_MR _12_ [12] <!--21-->
 
-tFAW _20_ [20] <!--tFAW = 4 * tRRD + 4 (safety)-->
+tFAW _20_ [20] <!--tFAW = 4 * tRRD + 4 (safety)--> <!--32-->
 
-tCWL _32_ [32] <!--tCWL = tCL - 2-->
+tCWL _32_ [32] <!--tCWL = tCL - 2--> <!--44-->
 
 ...
 
