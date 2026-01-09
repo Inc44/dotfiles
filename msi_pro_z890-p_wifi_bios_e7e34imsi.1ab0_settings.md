@@ -930,3 +930,8 @@ System 3.3V `3.296 V`
 
 ---
 
+Sources:
+- [Explaining ALL the AMD Ryzen AM5 DDR5 timings](https://youtu.be/sDxkous2Ua4)
+
+Notes:
+- Memory training will fail if the initial DRAM temperature is ~60°C at boot; therefore, more cooling is needed. However, MemTest86 passes, leading to a ~20% speed-up.
