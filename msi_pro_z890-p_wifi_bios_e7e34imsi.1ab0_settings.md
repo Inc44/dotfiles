@@ -354,17 +354,37 @@ tRP _34_ [34]
 
 tRAS _72_ [72] <!--tRAS = tCL + tRCD + 4-->
 
-...
+tRFC1 _550_ [Auto]
+
+tRFC2 _550_ [550]
 
 ---
 
 ### Sub Timing Configuration
 
-...
+tRFCPB _530_ [530]
+
+tREFI _65535_ [65535]
+
+tWR _48_ [48]
+
+tWR_MR _48_ [48]
+
+tWTR _4_ [4]
+
+tWTR_L _16_ [16]
+
+tRRD _4_ [4]
+
+tRRD_L _8_ [8]
 
 tRTP _12_ [12]
 
 tRTP_MR _12_ [12]
+
+tFAW _20_ [20] <!--tFAW = 4 * tRRD + 4-->
+
+tCWL _32_ [32] <!--tCWL = tCL - 2-->
 
 ...
 
