@@ -274,7 +274,7 @@ Setup Wake Up Configuration
 
 ...
 
-MSI Driver Utility Installer [Enabled]
+MSI Driver Utility Installer [Disabled]
 
 ## NVMe SSD Self-Test
 
@@ -354,7 +354,7 @@ tRP _34_ [34]
 
 tRAS _72_ [72] <!--tRAS = tCL + tRCD + 4 (safety)-->
 
-tRFC1 _550_ [Auto] <!--Not modifiable-->
+tRFC1 _550_ [Auto] <!--Not modifiable--> <!--1146-->
 
 tRFC2 _550_ [550] <!--Sweet spot-->
 
@@ -362,7 +362,7 @@ tRFC2 _550_ [550] <!--Sweet spot-->
 
 ### Sub Timing Configuration
 
-tRFCPB _530_ [530] <!--Sweet spot-->
+tRFCPB _531_ [Auto]
 
 tREFI _65535_ [65535] <!--JEDEC maximum-->
 
@@ -394,11 +394,11 @@ tCWL _32_ [32] <!--tCWL = tCL - 2-->
 
 ...
 
-tRDRDDG _8_ [8]
+tRDRDDG _8_ [Auto]
 
 ...
 
-tWRWRDG _8_ [8]
+tWRWRDG _8_ [Auto]
 
 ...
 
@@ -670,7 +670,7 @@ Total Memory Encryption [Disabled]
 
 NPU Device [Enabled]
 
-Control NPU 32B Request _En_ [Enabled]
+Control NPU 32B Request _En_ [Auto]
 
 # Security
 
