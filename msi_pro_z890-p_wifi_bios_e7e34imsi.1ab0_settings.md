@@ -342,6 +342,18 @@ Memory Extension Mode [Disabled]
 
 Main Timing Configuration
 
+Command Rate _2N_ [2N]
+
+tCL _34_ [34]
+
+tRCD _34_ [34]
+
+tRCDW _34_ [34]
+
+tRP _34_ [34]
+
+tRAS _72_ [72] <!--tRAS = tCL + tRCD + 4-->
+
 ...
 
 ---
@@ -350,9 +362,23 @@ Main Timing Configuration
 
 ...
 
+tRTP _12_ [12]
+
+tRTP_MR _12_ [12]
+
+...
+
 ---
 
 ### Turn Around Timing Configuration
+
+...
+
+tRDRDDG _8_ [8]
+
+...
+
+tWRWRDG _8_ [8]
 
 ...
 
