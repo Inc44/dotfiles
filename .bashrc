@@ -150,3 +150,11 @@ export PATH="/home/pc/Efficient-Compression-Tool/build:$PATH"
 export PATH="/home/pc/go/bin:$PATH"
 export PATH="/usr/local/texlive/2024/bin/x86_64-linux:$PATH"
 export TERMINFO=/usr/share/terminfo
+if [ -f ~/.ghcup/env ]; then
+    . ~/.ghcup/env
+fi # ghcup-env
+export LOGTALKHOME="/usr/lib/logtalk/share/logtalk"
+export LOGTALKUSER="$HOME/logtalk"
+export PATH="$LOGTALKHOME/tools/lgtdoc/xml:$PATH"
+export PATH="$LOGTALKHOME/scripts:$PATH"
+export PATH="$LOGTALKHOME/integration:$PATH"
