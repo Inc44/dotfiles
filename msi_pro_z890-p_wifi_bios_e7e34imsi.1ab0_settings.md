@@ -198,7 +198,9 @@ Audio Configuration
 
 Integrated Graphics Devices Configuration
 
-...
+Initiate Graphic Adapter [IGD]
+
+Intergrated Graphics Shared Memory [128M]
 
 ## Thunderbolt(TM) Configuration
 
