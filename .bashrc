@@ -158,3 +158,6 @@ export LOGTALKUSER="$HOME/logtalk"
 export PATH="$LOGTALKHOME/tools/lgtdoc/xml:$PATH"
 export PATH="$LOGTALKHOME/scripts:$PATH"
 export PATH="$LOGTALKHOME/integration:$PATH"
+# pnpm
+export PNPM_HOME="/home/pc/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
