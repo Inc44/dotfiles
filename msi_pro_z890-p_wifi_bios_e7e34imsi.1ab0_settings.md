@@ -30,7 +30,103 @@ Step Up Time [0.1s]
 
 Step Down Time [0.1s]
 
+## SYS Fan 1
+
+Smart Fan Mode [Enabled]
+
+Fan Type Auto Detect [Disabled]
+
+PWM [Enabled]
+
+DC [Disabled]
+
+---
+
+Level (count:4-7)
+
+[80]°C [100]%
+
+[70]°C [75]%
+
+[60]°C [50]%
+
+[50]°C [0]%
+
+---
+
+Temperature Source Select [CPU Core]
+
+Step Up Time [0.1s]
+
+Step Down Time [0.1s]
+
+Group [None]
+
 ## SYS Fan 2
+
+Smart Fan Mode [Enabled]
+
+Fan Type Auto Detect [Disabled]
+
+PWM [Enabled]
+
+DC [Disabled]
+
+---
+
+Level (count:4-7)
+
+[80]°C [100]%
+
+[70]°C [75]%
+
+[60]°C [50]%
+
+[50]°C [0]%
+
+---
+
+Temperature Source Select [CPU Core]
+
+Step Up Time [0.1s]
+
+Step Down Time [0.1s]
+
+Group [None]
+
+# SYS Fan 4
+
+Smart Fan Mode [Enabled]
+
+Fan Type Auto Detect [Disabled]
+
+PWM [Enabled]
+
+DC [Disabled]
+
+---
+
+Level (count:4-7)
+
+[80]°C [100]%
+
+[70]°C [75]%
+
+[60]°C [50]%
+
+[50]°C [0]%
+
+---
+
+Temperature Source Select [CPU Core]
+
+Step Up Time [0.1s]
+
+Step Down Time [0.1s]
+
+Group [None]
+
+# SYS Fan 5
 
 Smart Fan Mode [Enabled]
 
