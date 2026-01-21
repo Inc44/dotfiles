@@ -251,6 +251,14 @@ cp -r ~/font-awesome-pro/fontawesome-pro-6.5.1-desktop/otfs/* ~/.fonts
 sudo rm -r ~/font-awesome-pro
 sudo fc-cache -f -v
 ```
+### Installing Gitingest
+```
+conda create --name gitingest python=3.13 -y
+conda activate gitingest
+git clone https://github.com/Inc44/gitingest.git
+cd gitingest
+pip install .[server,static]
+```
 ### Installing GPEN
 ```
 git clone https://github.com/yangxy/GPEN.git
