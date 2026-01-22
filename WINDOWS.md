@@ -198,6 +198,22 @@ Click Microsoft Store icon
 #### Scanner
 #### System Information
 Restart
+### Installing Parsec
+Download [parsec-windows.exe](https://parsec.app/downloads)
+
+Open `parsec-windows.exe`
+
+Click `Next`
+
+Select `Per Computer`
+
+Click `Next`
+
+Email `your_email`
+
+Password `your_password`
+
+Click `Log In`
 ### Configuring System Clock
 ```
 reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
