@@ -355,6 +355,44 @@ GPU Offload `8`/36
 Turn on `Remember settings for openai's gpt-oss 120b`
 
 Click `Load Model`
+# Installing Anvil's Storage Utilities
+Download [AnvilBenchmark_V110_[Guru3D.com].zip](https://www.guru3d.com/download/anvils-storage-utilities-download)
+# Installing OP Auto Clicker
+Download [AutoClicker.exe](https://sourceforge.net/projects/orphamielautoclicker/files)
+# Installing Check Flash
+Download [ChkFlsh.zip](https://www.mikelab.kiev.ua/PROGRAMS/ChkFlsh.zip)
+# Installing CPU-Z
+Download [cpu-z_.*-en.zip](https://www.cpuid.com/softwares/cpu-z.html)
+# Installing CUDA Information Utility
+Download [CUDA-Z-.*-64bit.exe](https://sourceforge.net/projects/cuda-z/files/cuda-z)
+# Installing Disk2vhd
+Download [Disk2vhd.zip](https://download.sysinternals.com/files/Disk2vhd.zip)
+# Installing Domain Name Server Benchmark 1.3.6668.0
+Download [DNSBench.exe](https://www.majorgeeks.com/files/details/dns_benchmark.html)
+# Installing EncryptPad
+Download [encryptpad.*_win32.zip](https://github.com/evpo/EncryptPad/releases)
+# Installing VOVSOFT - File Splitter And Joiner
+Download [file-splitter-and-joiner-portable.zip](https://files.vovsoft.com/file-splitter-and-joiner-portable.zip)
+# Installing TechPowerUp GPU-Z
+Download [GPU-Z.*.exe](https://www.techpowerup.com/download/techpowerup-gpu-z)
+# Installing grepWin
+Download [grepWin-x64-.*_portable.zip](https://github.com/stefankueng/grepWin/releases)
+# Installing H2testw
+Download [h2testw_.*.zip](https://h2testw.org)
+# Installing HWiNFO64
+Download [hwi_840.zip](https://www.hwinfo.com/download)
+# Installing Looping
+Download [Looping.zip](https://looping.net/Looping.zip)
+# Installing wCopy NFC Reader Read and Write Tool
+Download [nfcPro_x64.exe](https://www.xixei.com/nfc/tool/soft/down_enus.html)
+# Installing NVIDIA Profile Inspector
+Download [nvidiaProfileInspector.zip](https://github.com/Orbmu2k/nvidiaProfileInspector/releases)
+# Installing Oculante
+Download [oculante.exe](https://github.com/woelper/oculante/releases)
+# Installing ThrottleStop
+Download [ThrottleStop_.*.zip](https://www.techpowerup.com/download/techpowerup-throttlestop)
+# Installing Microsoft Windows Malicious Software Removal Tool
+Donwload [Windows-KB.*-x64-V.*.exe.exe](https://www.microsoft.com/en-us/download/details.aspx?id=9905)
 ### Configuring System Clock
 ```
 reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
