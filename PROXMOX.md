@@ -125,6 +125,48 @@ Realm: `Linux PAM standard authentication`
 Language: `English - English`
 
 Click `Login`
+
+Click `pve`
+
+Click `Shell`
+### Configuring Bridge
+```bash
+nano /etc/network/interfaces
+```
+Add
+```bash
+auto vmbr0
+iface vmbr0 inet static
+	address 10.10.10.1/24
+	bridge-ports none
+	bridge-stp off
+	bridge-fd 0
+	post-up echo 1 > /proc/sys/net/ipv4/ip_forward
+	post-up iptables -t nat -A POSTROUTING -s '10.10.10.0/24' -o wlan0 -j MASQUERADE
+	post-down iptables -t nat -D POSTROUTING -s '10.10.10.0/24' -o wlan0 -j MASQUERADE
+```
+```bash
+systemctl restart networking
+```
+### Installing dnsmasq
+```bash
+apt install dnsmasq
+```
+### Configuring dnsmasq
+```bash
+nano /etc/dnsmasq.conf
+```
+Add
+```bash
+interface=vmbr0
+bind-interfaces
+dhcp-range=10.10.10.64,10.10.10.192,12h
+dhcp-option=3,10.10.10.1
+dhcp-option=6,1.1.1.1,8.8.8.8
+```
+```bash
+systemctl restart dnsmasq
+```
 ### Creating Windows VM
 Click `Create VM`
 
