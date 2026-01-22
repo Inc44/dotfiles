@@ -63,9 +63,9 @@ Click `OK`
 ### Installing NVIDIA Drivers
 Predownload [NVIDIA Studio Driver](https://www.nvidia.com/en-us/drivers/)
 
-Copy `......-desktop-win10-win11-64bit-international-nsd-dch-whql.exe` to USB
+Copy `.*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe` to USB
 
-Install `......-desktop-win10-win11-64bit-international-nsd-dch-whql.exe`
+Install `.*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe`
 ### Optimizing Performance
 Click Start Menu icon
 
@@ -214,6 +214,107 @@ Email `your_email`
 Password `your_password`
 
 Click `Log In`
+### Configuring Disk
+Right click Start Menu icon
+
+Select `Disk Management`
+
+Click `OK`
+
+Right click Disk 1's `Unallocated`
+
+Click `New Simple Volume...`
+
+Click `Next`
+
+Click `Next`
+
+Select `D`
+
+Click `Next`
+
+Volume label: ``
+
+Click `Next`
+### Configuring Folders
+Open `File Explorer`
+
+Click `Local Disk (D:)`
+
+Click `> This PC > Local Disk (D:)`
+
+Type `cmd`
+
+Press Enter
+
+```powershell
+mkdir lmstudio
+mkdir portable
+```
+### Installing LM Studio
+Download [LM-Studio-.*-x64.exe](https://lmstudio.ai/download/latest/win32/x64)
+
+Open `LM-Studio-.*-x64.exe`
+
+Select `Anyone who uses this computer (all users)`
+
+Click `Next`
+
+Click `Install`
+
+Click `Finish`
+
+Click `Get Started`
+
+Click `Developer`
+
+Click `Continue`
+
+Click `Skip`
+
+Click `OK`
+
+Click 📂 icon
+
+Click ⋯ icon
+
+Click `Change...`
+
+Folder: `D:\lmstudio`
+
+Click `Select Folder`
+
+Click ⚙️ icon
+
+Click `Runtime`
+
+Click all `Update`
+
+Click 💬 icon
+
+Click `Select a model to load`
+
+Type `gpt-oss`
+
+Click `Search more results for "gpt-oss"`
+
+Click `Download (63.39 GB)`
+
+Click `X`
+
+Click `Select a model to load`
+
+Turn on `Manually choose model load parameters`
+
+Click `OpenAI's gpt-oss 120B`
+
+Context Length `131072`
+
+GPU Offload `8`/36
+
+Turn on `Remember settings for openai's gpt-oss 120b`
+
+Click `Load Model`
 ### Configuring System Clock
 ```
 reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f

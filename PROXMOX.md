@@ -216,7 +216,7 @@ Type: `host`
 
 Click `Next`
 #### Memory
-Memory (MiB): `32768`
+Memory (MiB): `81920`
 
 Click `Next`
 #### Network
