@@ -10,6 +10,22 @@ Select `French (France)`
 Click `Add layout`
 
 Click `I don't have internet`
+### Configuring Device Name
+Click Start Menu icon
+
+Type `Settings`
+
+Press Enter
+
+Click `Rename`
+
+Click `Name your device`
+
+Type `pc`
+
+Click `Next`
+
+Click `Restart later`
 ### Installing VirtIO Drivers
 Right click Start Menu icon
 
@@ -236,6 +252,30 @@ Click `Next`
 Volume label: ``
 
 Click `Next`
+### Configuring Indexing
+Open `File Explorer`
+
+Click `Local Disk (C:)`
+
+Press Alt+Enter
+
+Turn off `Allow files on this drive to have contents indexed in addition to file properties`
+
+Click `OK`
+
+Click `OK`
+
+Click `Ignore All`
+
+Click `Local Disk (D:)`
+
+Press Alt+Enter
+
+Turn off `Allow files on this drive to have contents indexed in addition to file properties`
+
+Click `OK`
+
+Click `OK`
 ### Configuring Folders
 Open `File Explorer`
 
