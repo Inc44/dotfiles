@@ -87,6 +87,8 @@ Options:
 
 `command; command`: Run the commands sequentially
 
+`composer global require package`: Install a package globally using Composer
+
 `conda list`: Display all installed packages in the current environment
 
 `conda activate env`: Activate the `env` environment
@@ -414,6 +416,8 @@ Options:
 
 `killall process`: Terminate all processes of `process`
 
+`laravel new project --using=kit`: Create a new Laravel project using a starter kit
+
 `ln -s source destination`: Generate a symbolic link pointing to a file or directory
 
 `ls`: List the files and directories in the current directory
@@ -510,6 +514,14 @@ Options:
 - `pacman -Qtdq`: List all unused packages (orphans)
 
 `passwd user`: Change the user's password
+
+`php artisan`: Execute Laravel CLI commands
+
+Options:
+
+- `make:migration name`: Create a new database migration file
+- `migrate`: Run database migrations
+- `serve`: Start the server
 
 `pihole status`: Display the status of the Pi-hole
 
@@ -613,7 +625,7 @@ Options:
 Options:
 
 - `enable SERVICE`: Enable a service to start on boot
-- `restart SERVICE`: Restart a service
+- `restart SERVICE`: Restart a service (e.g., `mariadb`, `httpd`)
 - `start SERVICE`: Start a service
 
 `tar caf path.tar.algorithm path`: Compress a file using a specified algorithm
