@@ -122,6 +122,14 @@ Select `Dark`
 Turn off `Transparency effects`
 
 Select `Iris pastel`
+### Configuring Taskbar
+Right click Taskbar
+
+Select `Show Search button`
+
+Right click Taskbar
+
+Select Show Task View button`
 ### Configuring Win 10 Tweaker
 Predownload [Win 10 Tweaker](https://win10tweaker.ru/)
 
