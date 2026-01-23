@@ -161,3 +161,4 @@ export PATH="$LOGTALKHOME/integration:$PATH"
 # pnpm
 export PNPM_HOME="/home/pc/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
