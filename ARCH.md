@@ -101,6 +101,15 @@ git config --global user.name name
 opam init
 opam env --switch=default
 ```
+### Configuring PHP
+```
+sudo nano /etc/php/php.ini
+```
+Modify
+```
+extension=mysqli
+extension=pdo_mysql
+```
 ### Configuring Rclone
 ```
 rclone config
