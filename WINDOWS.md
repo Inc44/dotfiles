@@ -238,6 +238,18 @@ Email `your_email`
 Password `your_password`
 
 Click `Log In`
+### Installing 7-Zip
+Download [7z.*-x64.exe](https://www.7-zip.org/download.html)
+
+Click `Install`
+
+Click `Close`
+### Installing 7-Zip ZS
+Download [7z.*-zstd-x64.exe](https://github.com/mcmilk/7-Zip-zstd/releases)
+
+Click `Install`
+
+Click `Close`
 ### Installing StartAllBack
 Download `StartAllBack (StartIsBack++)`
 
