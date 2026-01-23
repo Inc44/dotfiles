@@ -230,6 +230,89 @@ Email `your_email`
 Password `your_password`
 
 Click `Log In`
+### Installing StartAllBack
+Download `StartAllBack (StartIsBack++)`
+
+Open installer
+
+Click `OK`
+
+Click `Install`
+#### Welcome
+Click `Proper 11`
+#### Start Menu
+Visual Style: `Plain8`
+
+Icon count: `0`
+
+Turn off `Display Modern apps in a folder`
+
+Turn on `Override sort order`
+
+Turn off `Highlight newly installed programs`
+
+Turn off `Open submenus when I pause on them with the mouse pointer`
+
+Turn off `Display user account picture`
+
+Turn off `Display glyph icons`
+
+Select Music's `Don't display`
+
+Select Videos's `Link`
+
+Select Recent Items's `Don't display`
+
+Select This PC's `Don't display`
+
+Select Run's `Don't display`
+#### Taskbar
+Taskbar location on screen: `Top`
+
+Turn on `Centered task icons`
+
+Turn on `Automatic hiding`
+#### Tray icons
+Corner icons open: `Windows 10 flyouts if possible`
+
+Turn on all icons
+
+Turn on `Always show all app icons`
+#### Explorer
+Click `Win10 Ribbon UI`
+
+Turn off `Mica effect on top`
+
+Turn off `New icons`
+
+Turn off `Restore Control Panel applets`
+
+Turn on `Colorize everything with accent color`
+#### Advanced
+Turn on `Use custom start menu coloring`
+
+Click `Pick Start menu color`
+
+Red: `0`
+
+Green: `0`
+
+Blue: `0`
+
+Click `OK`
+
+Turn on `Use custom taskbar coloring`
+
+Click `Pick taskbar color`
+
+Red: `0`
+
+Green: `0`
+
+Blue: `0`
+
+Click `OK`
+#### About
 ### Configuring Disk
 Right click Start Menu icon
 
