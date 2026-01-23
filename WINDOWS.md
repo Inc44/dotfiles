@@ -496,6 +496,76 @@ Download [oculante.exe](https://github.com/woelper/oculante/releases)
 Download [ThrottleStop_.*.zip](https://www.techpowerup.com/download/techpowerup-throttlestop)
 # Installing Microsoft Windows Malicious Software Removal Tool
 Donwload [Windows-KB.*-x64-V.*.exe.exe](https://www.microsoft.com/en-us/download/details.aspx?id=9905)
+
+---
+### Installing 4K Stogram Professional License
+Open `4K Stogram Professional` installer
+### Installing 4K Video Downloader Plus Professional License
+Open `4K Video Downloader+` installer
+### Installing 4K Video Downloader Professional License 4.33.5
+Open `4K Video Downloader 4.33.5` installer
+### Installing Adobe Acrobat Pro DC 2021.007.20102
+Open `Adobe Acrobat Pro 2021.007.20102` installer
+### Installing Adobe Illustrator 2023 27.0.1.620
+Open `Adobe Illustrator 2023 27.0.1.620` installer
+### Installing Adobe Lightroom Classic 11.0.1.10
+Open `Adobe Photoshop Lightroom Classic 11.0.1.10` installer
+### Installing Adobe Photoshop 2024 25.1.0.120
+Open `Adobe Photoshop 2024 25.1.0.120` installer
+### Installing AIDA64 Extreme
+Open `AIDA64 Extreme` installer
+### Installing AS SSD Benchmark
+Open `AS SSD Benchmark` installer
+### Installing Bandicam
+Open `Bandicam` installer
+### Installing Google Earth Pro
+Open `Google Earth Pro` installer
+### Installing iZotope RX 11 Advanced Audio Editor 11.3.0
+Open `iZotope RX 11 Audio Editor Advanced 11.3.0` installer
+### Installing Movavi Video Converter Premium 22.5
+Open `Movavi Video Converter 22.5` installer
+### Installing PassMark PerformanceTest 10.2
+Open `PassMark PerformanceTest 10.2` installer
+### Installing Piriform CCleaner - Professional Edition
+Open `CCleaner` installer
+### Installing Sejda PDF Desktop 7.7.0
+Open `Sejda PDF Desktop 7.7.0` installer
+### Installing Similarity 2.2.0
+Open `Similarity 2.2.0` installer
+### Installing TechSmith Camtasia Studio 23.4.1
+Open `TechSmith Camtasia Studio 23.4.1` installer
+### Installing Topaz Adjust AI 1.0.6
+Open `Topaz Adjust AI 1.0.6` installer
+### Installing Topaz DeNoise AI 3.7.2
+Open `Topaz DeNoise AI 3.7.2` installer
+### Installing Topaz Gigapixel
+Open `Topaz Gigapixel` installer
+### Installing Topaz Gigapixel AI
+Open `Topaz Gigapixel AI` installer
+### Installing Topaz Mask AI 1.3.9
+Open `Topaz Mask AI 1.3.9` installer
+### Installing Topaz Photo
+Open `Topaz Photo` installer
+### Installing Topaz Photo AI
+Open `Topaz Photo AI` installer
+### Installing Topaz Sharpen AI 4.0.2
+Open `Topaz Sharpen AI 4.0.2` installer
+### Installing Topaz Video
+Open `Topaz Video` installer
+### Installing Topaz Video AI
+Open `Topaz Video AI` installer
+### Installing Total Commander
+Open `Total Commander Extended 64-bit` installer
+### Installing Uninstall Tool
+Open `Uninstall Tool` installer
+### Installing WinRAR 7.13
+Open `WinRAR 7.13 (64-bit)` installer
+### Installing Wondershare PDFelement 11.4.6
+Open `Wondershare PDFelement Pro 11.4.6` installer
+### Installing ZBrush 2023.1.1
+Open `ZBrush 2023.1.1` installer
+
+---
 ### Configuring System Clock
 ```
 reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
