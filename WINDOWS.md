@@ -458,32 +458,78 @@ GPU Offload `8`/36
 Turn on `Remember settings for openai's gpt-oss 120b`
 
 Click `Load Model`
-# Installing Anvil's Storage Utilities
+## Free Portable
+### Installing Advanced Renamer 3.95.4
+Download [advanced_renamer_portable_3_95_4.zip](https://www.advancedrenamer.com/down/advanced_renamer_portable_3_95_4.zip)
+### Installing Advanced Renamer 4
+Download [advanced_renamer_portable_4_.*.zip](https://www.advancedrenamer.com/download)
+### Installing Anvil's Storage Utilities
 Download [AnvilBenchmark_V110_[Guru3D.com].zip](https://www.guru3d.com/download/anvils-storage-utilities-download)
-# Installing Check Flash
+### Installing Apache Maven
+Download [apache-maven-.*-bin.zip](https://maven.apache.org/download.cgi)
+### Installing ATTO Disk Benchmark
+Download [atto-disk-benchmark-.*.zip](https://www.techpowerup.com/download/atto-disk-benchmark)
+### Installing Check Flash
 Download [ChkFlsh.zip](https://www.mikelab.kiev.ua/PROGRAMS/ChkFlsh.zip)
-# Installing CUDA Information Utility
+### Installing Checksum Compare
+Download [Checksum-compare-v.*.7z](https://checksumcompare.sanktuaire.com/downloads)
+### Installing CUDA Information Utility
 Download [CUDA-Z-.*-64bit.exe](https://sourceforge.net/projects/cuda-z/files/cuda-z)
-# Installing Disk2vhd
+### Installing Disk2vhd
 Download [Disk2vhd.zip](https://download.sysinternals.com/files/Disk2vhd.zip)
-# Installing Domain Name Server Benchmark 1.3.6668.0
+### Installing Document Translation
+Download [DocumentTranslation.rar](https://github.com/MicrosoftTranslator/DocumentTranslation/releases)
+### Installing Domain Name Server Benchmark 1.3.6668.0
 Download [DNSBench.exe](https://www.majorgeeks.com/files/details/dns_benchmark.html)
-# Installing EncryptPad
+### Installing EncryptPad
 Download [encryptpad.*_win32.zip](https://github.com/evpo/EncryptPad/releases)
-# Installing VOVSOFT - File Splitter And Joiner
-Download [file-splitter-and-joiner-portable.zip](https://files.vovsoft.com/file-splitter-and-joiner-portable.zip)
-# Installing H2testw
+### Installing FFMetrics
+Download [FFMetrics.*.zip](https://github.com/fifonik/FFMetrics/releases)
+### Installing Flowframes
+Download [FlowframesInstaller.*.exe](https://nmkd.itch.io/flowframes)
+### Installing Ghidra
+Download [ghidra_.*_PUBLIC_.*.zip](https://github.com/NationalSecurityAgency/ghidra/releases)
+### Installing H2testw
 Download [h2testw_.*.zip](https://h2testw.org)
-# Installing Looping
+### Installing hashcat
+Download [hashcat-.*.7z](https://github.com/hashcat/hashcat/releases)
+### Installing JDM Drift
+Download [JDM Drift Build DEMO.zip](https://howdyho.net/windows-software/demka-drift-igry-na-unity-eksperiment-v2)
+### Installing Kiwix
+Download [kiwix-desktop_windows_x64_.*.zip](https://download.kiwix.org/release/kiwix-desktop/kiwix-desktop_windows_x64.zip)
+### Installing KruTube
+Download [krutube_.*.zip](https://www.krutube.pro/en/download)
+### Installing LinpackXtreme
+Download [LinpackXtreme-.*.zip](https://www.techpowerup.com/download/linpack-xtreme)
+### Installing Looping
 Download [Looping.zip](https://looping.net/Looping.zip)
-# Installing wCopy NFC Reader Read and Write Tool
-Download [nfcPro_x64.exe](https://www.xixei.com/nfc/tool/soft/down_enus.html)
-# Installing NVIDIA Profile Inspector
+### Installing MagicaVoxel
+Download [MagicaVoxel-.*.-win64.zip](https://github.com/ephtracy/ephtracy.github.io/releases)
+### Installing NEAV1E
+Download [neav1e-portable-.*.7z](https://github.com/Alkl58/NotEnoughAV1Encodes/releases)
+### Installing NVIDIA Profile Inspector
 Download [nvidiaProfileInspector.zip](https://github.com/Orbmu2k/nvidiaProfileInspector/releases)
-# Installing Oculante
+### Installing Oculante
 Download [oculante.exe](https://github.com/woelper/oculante/releases)
-
----
+### Installing PhantomJS
+Download [phantomjs-.*-windows.zip](https://phantomjs.org/download.html)
+### Installing Process Hacker 2.39
+Download [processhacker-2.39-bin.zip](https://sourceforge.net/projects/processhacker/files/processhacker2/processhacker-2.39-bin.zip/download)
+### Installing SmoothDraw 4.0.5
+Download [SmoothDraw4.zip](https://qrli.github.io/smoothdraw/SmoothDraw4.zip)
+### Installing TerraMap
+Download [TerraMap-.*.zip](https://terramap.github.io/windows.html)
+### Installing USBWebserver
+Download [USBWebServer.zip](https://github.com/grimgravy/USBWebServer/releases)
+### Installing Voice Changer Client Demo 1.5.3.15
+Download [MMVCServerSIO_win_onnxgpu-cuda_v.1.5.3.15.zip](https://huggingface.co/wok000/vcclient000/blob/main/MMVCServerSIO_win_onnxgpu-cuda_v.1.5.3.15.zip)
+### Installing VOVSOFT - File Splitter And Joiner
+Download [file-splitter-and-joiner-portable.zip](https://files.vovsoft.com/file-splitter-and-joiner-portable.zip)
+### Installing wCopy NFC Reader Read and Write Tool
+Download [nfcPro_x64.exe](https://www.xixei.com/nfc/tool/soft/down_enus.html)
+### Installing y-cruncher
+Download [y-cruncher.v.*.zip](https://github.com/Mysticial/y-cruncher/releases)
+## Paid Portable
 ### Installing 4K Stogram Professional License
 Open `4K Stogram Professional` installer
 ### Installing 4K Video Downloader Plus Professional License
@@ -550,8 +596,7 @@ Open `WinRAR 7.13 (64-bit)` installer
 Open `Wondershare PDFelement Pro 11.4.6` installer
 ### Installing ZBrush 2023.1.1
 Open `ZBrush 2023.1.1` installer
-
----
+## Winget
 ### Installing AIMP
 ```powershell
 winget install -e --id AIMP.AIMP
@@ -748,7 +793,6 @@ winget install -e --id XnSoft.XnViewMP
 ```powershell
 winget install -e --id zig.zig
 ```
----
 ### Configuring System Clock
 ```
 reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
