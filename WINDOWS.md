@@ -566,11 +566,204 @@ Open `Wondershare PDFelement Pro 11.4.6` installer
 Open `ZBrush 2023.1.1` installer
 
 ---
-### Configuring System Clock
+### Installing AIMP
+```powershell
+winget install -e --id AIMP.AIMP
 ```
-reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
+### Installing Android Studio
+```powershell
+winget install -e --id Google.AndroidStudio
+```
+### Installing Audacity
+```powershell
+winget install -e --id Audacity.Audacity
+```
+### Installing calibre
+```powershell
+winget install -e --id calibre.calibre
+```
+### Installing Code::Blocks with MinGW
+```powershell
+winget install -e --id CodeBlocks.CodeBlocks.MinGW
+```
+### Installing CPUID CPU-Z
+```powershell
+winget install -e --id CPUID.CPU-Z
+```
+### Installing CrystalDiskInfo
+```powershell
+winget install -e --id CrystalDewWorld.CrystalDiskInfo
+```
+### Installing CrystalDiskMark
+```powershell
+winget install -e --id CrystalDewWorld.CrystalDiskMark
+```
+### Installing Custom Resolution Utility
+```powershell
+winget install -e --id ToastyX.CustomResolutionUtility
+```
+### Installing Czkawka
+```powershell
+winget install -e --id qarmin.czkawka.gui
+```
+### Installing DB Browser for SQLite
+```powershell
+winget install -e --id DBBrowserForSQLite.DBBrowserForSQLite
+```
+### Installing DiscordChatExporter.GUI
+```powershell
+winget install -e --id Tyrrrz.DiscordChatExporter.GUI
+```
+### Installing dupeGuru
+```powershell
+winget install -e --id DupeGuru.DupeGuru
+```
+### Installing Eclipse IDE for Java Developers
+```powershell
+winget install -e --id EclipseFoundation.Eclipse.Java
+```
+### Installing ExifGlass
+```powershell
+winget install -e --id PhapDieuDuong.ExifGlass
+```
+### Installing ExifTool
+```powershell
+winget install -e --id OliverBetz.ExifTool
+```
+### Installing ExifToolGUI
+```powershell
+winget install -e --id FrankBijnen.ExifToolGUI
+```
+### Installing Geeks3D FurMark 2
+```powershell
+winget install -e --id Geeks3D.FurMark.2
+```
+### Installing Git
+```powershell
+winget install -e --id Git.Git
+```
+### Installing grepWin
+```powershell
+winget install -e --id StefansTools.grepWin
+```
+### Installing HakuNeko Desktop
+```powershell
+winget install -e --id HakuNeko.HakuNeko
+```
+### Installing HandBrake
+```powershell
+winget install -e --id HandBrake.HandBrake
+```
+### Installing HWiNFO®
+```powershell
+winget install -e --id REALiX.HWiNFO
+```
+### Installing Icaros
+```powershell
+winget install -e --id Xanashi.Icaros
+```
+### Installing ImageGlass
+```powershell
+winget install -e --id DuongDieuPhap.ImageGlass
+```
+### Installing Inkscape
+```powershell
+winget install -e --id Inkscape.Inkscape
+```
+### Installing Malicious Software Removal Tool
+```powershell
+winget install -e --id Microsoft.MaliciousSoftwareRemovalTool
+```
+### Installing Microsoft Visual Studio Code
+```powershell
+winget install -e --id Microsoft.VisualStudioCode
+```
+### Installing Mine-imator
+```powershell
+winget install -e --id DavidNorgren.Mine-imator
+```
+### Installing Mp3tag
+```powershell
+winget install -e --id FlorianHeidenreich.Mp3tag
+```
+### Installing mpv.net
+```powershell
+winget install -e --id mpv.net
+```
+### Installing Notepad++
+```powershell
+winget install -e --id Notepad++.Notepad++
+```
+### Installing OP Auto Clicker
+```powershell
+winget install -e --id OPAutoClicker.OPAutoClicker
+```
+### Installing PeaZip
+```powershell
+winget install -e --id Giorgiotani.Peazip
+```
+### Installing Prime95
+```powershell
+winget install -e --id mersenne.prime95
+```
+### Installing System Informer
+```powershell
+winget install -e --id WinsiderSS.SystemInformer
+```
+### Installing TechPowerUp GPU-Z
+```powershell
+winget install -e --id TechPowerUp.GPU-Z
+```
+### Installing Telegram Desktop
+```powershell
+winget install -e --id Telegram.TelegramDesktop
 ```
 ### Installing The Silver Searcher
 ```
-winget install "The Silver Searcher"
+winget install -e --id JFLarvoire.Ag
+```
+### Installing ThrottleStop
+```powershell
+winget install -e --id TechPowerUp.ThrottleStop
+```
+### Installing Tor Browser
+```powershell
+winget install -e --id TorProject.TorBrowser
+```
+### Installing Universal Android Debloater Next Generation
+```powershell
+winget install -e --id Universal-Debloater-Alliance.uad-ng
+```
+### Installing Ventoy
+```powershell
+winget install -e --id Ventoy.Ventoy
+```
+### Installing VeraCrypt
+```powershell
+winget install -e --id IDRIX.VeraCrypt
+```
+### Installing Victoria
+```powershell
+winget install -e --id Victoria.Victoria
+```
+### Installing Winaero Tweaker
+```powershell
+winget install -e --id winaero.tweaker
+```
+### Installing Windhawk
+```powershell
+winget install -e --id RamenSoftware.Windhawk
+```
+### Installing XnView MP
+```powershell
+winget install -e --id XnSoft.XnViewMP
+```
+### Installing Zig
+```powershell
+winget install -e --id zig.zig
+```
+---
+### Configuring System Clock
+```
+reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
 ```
