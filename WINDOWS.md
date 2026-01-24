@@ -475,6 +475,8 @@ Download [ChkFlsh.zip](https://www.mikelab.kiev.ua/PROGRAMS/ChkFlsh.zip)
 Download [Checksum-compare-v.*.7z](https://checksumcompare.sanktuaire.com/downloads)
 ### Installing CUDA Information Utility
 Download [CUDA-Z-.*-64bit.exe](https://sourceforge.net/projects/cuda-z/files/cuda-z)
+### Installing DeepFaceLab
+Download [DeepFaceLab_DirectX12_build_05_04_2022.exe](https://github.com/iperov/DeepFaceLab)
 ### Installing Disk2vhd
 Download [Disk2vhd.zip](https://download.sysinternals.com/files/Disk2vhd.zip)
 ### Installing Document Translation
@@ -489,6 +491,8 @@ Download [FFMetrics.*.zip](https://github.com/fifonik/FFMetrics/releases)
 Download [FlowframesInstaller.*.exe](https://nmkd.itch.io/flowframes)
 ### Installing Ghidra
 Download [ghidra_.*_PUBLIC_.*.zip](https://github.com/NationalSecurityAgency/ghidra/releases)
+### Installing GPEN
+Download [GPEN-Windows.rar](https://github.com/yangxy/GPEN)
 ### Installing H2testw
 Download [h2testw_.*.zip](https://h2testw.org)
 ### Installing hashcat
