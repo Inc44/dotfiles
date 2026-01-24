@@ -1,4 +1,4 @@
-Download [Rufus Portable](https://rufus.ie/en/)
+Download [Rufus Portable](https://rufus.ie/en)
 
 Open `rufus-....p.exe`
 

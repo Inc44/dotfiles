@@ -77,7 +77,7 @@ Click `OK`
 
 Click `OK`
 ### Installing NVIDIA Drivers
-Predownload [NVIDIA Studio Driver](https://www.nvidia.com/en-us/drivers/)
+Predownload [NVIDIA Studio Driver](https://www.nvidia.com/en-us/drivers)
 
 Copy `.*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe` to USB
 
@@ -131,7 +131,7 @@ Right click Taskbar
 
 Select Show Task View button`
 ### Configuring Win 10 Tweaker
-Predownload [Win 10 Tweaker](https://win10tweaker.ru/)
+Predownload [Win 10 Tweaker](https://win10tweaker.ru)
 
 Copy `Win 10 Tweaker.exe` to USB
 
