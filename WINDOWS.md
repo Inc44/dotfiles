@@ -297,6 +297,8 @@ Corner icons open: `Windows 10 flyouts if possible`
 
 Turn on all icons
 
+Turn off Volume icon
+
 Turn on `Always show all app icons`
 #### Explorer
 Click `Win10 Ribbon UI`
@@ -756,6 +758,10 @@ winget install -e --id DuckDuckGo.DesktopBrowser
 ### Installing dupeGuru
 ```powershell
 winget install -e --id DupeGuru.DupeGuru
+```
+### Installing EarTrumpet
+```powershell
+winget install -e --id File-New-Project.EarTrumpet
 ```
 ### Installing Eclipse IDE for Java Developers
 ```powershell
