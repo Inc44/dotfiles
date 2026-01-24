@@ -601,25 +601,109 @@ Open `Wondershare PDFelement Pro 11.4.6` installer
 ### Installing ZBrush 2023.1.1
 Open `ZBrush 2023.1.1` installer
 ## Winget
+### Installing 7-Zip
+```powershell
+winget install -e --id 7zip.7zip
+```
+### Installing 7-Zip ZS
+```powershell
+winget install -e --id mcmilk.7zip-zstd
+```
+### Installing ActivityWatch
+```powershell
+winget install -e --id ActivityWatch.ActivityWatch
+```
+### Installing AdGuard
+```powershell
+winget install -e --id AdGuard.AdGuard
+```
+### Installing AdGuard VPN
+```powershell
+winget install -e --id AdGuard.AdGuardVPN
+```
 ### Installing AIMP
 ```powershell
 winget install -e --id AIMP.AIMP
+```
+### Installing Amazon Kindle
+```powershell
+winget install -e --id Amazon.Kindle
 ```
 ### Installing Android Studio
 ```powershell
 winget install -e --id Google.AndroidStudio
 ```
+### Installing Anki
+```powershell
+winget install -e --id Anki.Anki
+```
+### Installing Antutu Benchmark
+```powershell
+winget install -e --id Antutu.AntutuBenchmark
+```
+### Installing AnyDesk
+```powershell
+winget install -e --id AnyDesk.AnyDesk
+```
+### Installing Arduino IDE
+```powershell
+winget install -e --id ArduinoSA.IDE.stable
+```
 ### Installing Audacity
 ```powershell
 winget install -e --id Audacity.Audacity
+```
+### Installing balenaEtcher
+```powershell
+winget install -e --id Balena.Etcher
+```
+### Installing Bambu Studio
+```powershell
+winget install -e --id Bambulab.Bambustudio
+```
+### Installing Binary Ninja
+```powershell
+winget install -e --id Vector35.BinaryNinja
+```
+### Installing Bitwarden
+```powershell
+winget install -e --id Bitwarden.Bitwarden
+```
+### Installing BlueStacks
+```powershell
+winget install -e --id BlueStack.BlueStacks
+```
+### Installing Brother iPrint&Scan
+```powershell
+winget install -e --id Brother.iPrintScan
+```
+### Installing Brotli
+```powershell
+winget install -e --id Google.Brotli
 ```
 ### Installing calibre
 ```powershell
 winget install -e --id calibre.calibre
 ```
+### Installing CapCut
+```powershell
+winget install -e --id ByteDance.CapCut
+```
+### Installing Claude
+```powershell
+winget install -e --id Anthropic.Claude
+```
+### Installing CMake
+```powershell
+winget install -e --id Kitware.CMake
+```
 ### Installing Code::Blocks with MinGW
 ```powershell
 winget install -e --id CodeBlocks.CodeBlocks.MinGW
+```
+### Installing Comet
+```powershell
+winget install -e --id Perplexity.Comet
 ```
 ### Installing CPUID CPU-Z
 ```powershell
@@ -633,9 +717,17 @@ winget install -e --id CrystalDewWorld.CrystalDiskInfo
 ```powershell
 winget install -e --id CrystalDewWorld.CrystalDiskMark
 ```
+### Installing Cursor
+```powershell
+winget install -e --id Anysphere.Cursor
+```
 ### Installing Custom Resolution Utility
 ```powershell
 winget install -e --id ToastyX.CustomResolutionUtility
+```
+### Installing CyberGhost
+```powershell
+winget install -e --id CyberGhost.CyberGhost
 ```
 ### Installing Czkawka
 ```powershell
@@ -645,9 +737,21 @@ winget install -e --id qarmin.czkawka.gui
 ```powershell
 winget install -e --id DBBrowserForSQLite.DBBrowserForSQLite
 ```
+### Installing Discord
+```powershell
+winget install -e --id Discord.Discord
+```
 ### Installing DiscordChatExporter.GUI
 ```powershell
 winget install -e --id Tyrrrz.DiscordChatExporter.GUI
+```
+### Installing Docker Desktop
+```powershell
+winget install -e --id Docker.DockerDesktop
+```
+### Installing DuckDuckGo
+```powershell
+winget install -e --id DuckDuckGo.DesktopBrowser
 ```
 ### Installing dupeGuru
 ```powershell
@@ -656,6 +760,14 @@ winget install -e --id DupeGuru.DupeGuru
 ### Installing Eclipse IDE for Java Developers
 ```powershell
 winget install -e --id EclipseFoundation.Eclipse.Java
+```
+### Installing Everything
+```powershell
+winget install -e --id voidtools.Everything
+```
+### Installing Exact Audio Copy
+```powershell
+winget install -e --id AndreWiethoff.ExactAudioCopy
 ```
 ### Installing ExifGlass
 ```powershell
@@ -669,13 +781,57 @@ winget install -e --id OliverBetz.ExifTool
 ```powershell
 winget install -e --id FrankBijnen.ExifToolGUI
 ```
+### Installing FFmpeg (Shared)
+```powershell
+winget install -e --id Gyan.FFmpeg.Shared
+```
+### Installing Figma
+```powershell
+winget install -e --id Figma.Figma
+```
+### Installing Filius
+```powershell
+winget install -e --id StefanFreischlad.Filius
+```
+### Installing Finite Element Method Magnetics
+```powershell
+winget install -e --id DavidMeeker.FEMM
+```
+### Installing Focusrite Control 2
+```powershell
+winget install -e --id FocusriteAudioEngineeringLtd.FocusriteControl2
+```
+### Installing FontForge
+```powershell
+winget install -e --id FontForge.FontForge
+```
+### Installing FreeCAD
+```powershell
+winget install -e --id FreeCAD.FreeCAD
+```
 ### Installing Geeks3D FurMark 2
 ```powershell
 winget install -e --id Geeks3D.FurMark.2
 ```
+### Installing GIMP
+```powershell
+winget install -e --id GIMP.GIMP.3
+```
 ### Installing Git
 ```powershell
 winget install -e --id Git.Git
+```
+### Installing GitHub Desktop
+```powershell
+winget install -e --id GitHub.GitHubDesktop
+```
+### Installing Google Chrome
+```powershell
+winget install -e --id Google.Chrome
+```
+### Installing Google Drive
+```powershell
+winget install -e --id Google.GoogleDrive
 ```
 ### Installing grepWin
 ```powershell
@@ -685,17 +841,49 @@ winget install -e --id StefansTools.grepWin
 ```powershell
 winget install -e --id HakuNeko.HakuNeko
 ```
+### Installing Hamachi
+```powershell
+winget install -e --id LogMeIn.Hamachi
+```
 ### Installing HandBrake
 ```powershell
 winget install -e --id HandBrake.HandBrake
+```
+### Installing Helium
+```powershell
+winget install -e --id ImputNet.Helium
+```
+### Installing HP Connectivity Kit
+```powershell
+winget install -e --id HP.ConnectivityKit
+```
+### Installing HP Prime Virtual Calculator
+```powershell
+winget install -e --id HP.PrimeVirtualCalculator
 ```
 ### Installing HWiNFO®
 ```powershell
 winget install -e --id REALiX.HWiNFO
 ```
+### Installing HxD Hex Editor
+```powershell
+winget install -e --id MHNexus.HxD
+```
+### Installing iBackupBot for Windows
+```powershell
+winget install -e --id VOWSoft.iBackupBot
+```
 ### Installing Icaros
 ```powershell
 winget install -e --id Xanashi.Icaros
+```
+### Installing ICAT
+```powershell
+winget install -e --id Nvidia.ICAT
+```
+### Installing iCloud
+```powershell
+winget install -e --id Apple.iCloud
 ```
 ### Installing ImageGlass
 ```powershell
@@ -705,17 +893,81 @@ winget install -e --id DuongDieuPhap.ImageGlass
 ```powershell
 winget install -e --id Inkscape.Inkscape
 ```
+### Installing iPerf3
+```powershell
+winget install -e --id ar51an.iPerf3
+```
+### Installing JetBrains dotPeek
+```powershell
+winget install -e --id JetBrains.dotPeek
+```
+### Installing Jpegoptim
+```powershell
+winget install -e --id TimoKokkonen.Jpegoptim
+```
+### Installing KiCad
+```powershell
+winget install -e --id KiCad.KiCad
+```
+### Installing Lazarus
+```powershell
+winget install -e --id Lazarus.Lazarus
+```
+### Installing libjxl
+```powershell
+winget install -e --id libjxl.libjxl
+```
+### Installing LibreOffice
+```powershell
+winget install -e --id TheDocumentFoundation.LibreOffice
+```
+### Installing LM Studio
+```powershell
+winget install -e --id ElementLabs.LMStudio
+```
+### Installing Logi Options+
+```powershell
+winget install -e --id Logitech.OptionsPlus
+```
+### Installing LTspice
+```powershell
+winget install -e --id AnalogDevices.LTspice
+```
 ### Installing Malicious Software Removal Tool
 ```powershell
 winget install -e --id Microsoft.MaliciousSoftwareRemovalTool
+```
+### Installing Mathpix Snipping Tool
+```powershell
+winget install -e --id Mathpix.MathpixSnippingTool
+```
+### Installing MEGAsync
+```powershell
+winget install -e --id Mega.MEGASync
+```
+### Installing Microsoft Teams
+```powershell
+winget install -e --id Microsoft.Teams
 ```
 ### Installing Microsoft Visual Studio Code
 ```powershell
 winget install -e --id Microsoft.VisualStudioCode
 ```
+### Installing MiKTeX
+```powershell
+winget install -e --id MiKTeX.MiKTeX
+```
 ### Installing Mine-imator
 ```powershell
 winget install -e --id DavidNorgren.Mine-imator
+```
+### Installing MinerU
+```powershell
+winget install -e --id OpenDataLab.MinerU
+```
+### Installing Mozilla Firefox (en-US)
+```powershell
+winget install -e --id Mozilla.Firefox
 ```
 ### Installing Mp3tag
 ```powershell
@@ -725,21 +977,109 @@ winget install -e --id FlorianHeidenreich.Mp3tag
 ```powershell
 winget install -e --id mpv.net
 ```
+### Installing MSI Afterburner
+```powershell
+winget install -e --id Guru3D.Afterburner
+```
+### Installing Nextcloud
+```powershell
+winget install -e --id Nextcloud.NextcloudDesktop
+```
+### Installing Node.js
+```powershell
+winget install -e --id OpenJS.NodeJS
+```
+### Installing NormCap
+```powershell
+winget install -e --id dynobo.NormCap
+```
 ### Installing Notepad++
 ```powershell
 winget install -e --id Notepad++.Notepad++
+```
+### Installing OBS Studio
+```powershell
+winget install -e --id OBSProject.OBSStudio
+```
+### Installing Obsidian
+```powershell
+winget install -e --id Obsidian.Obsidian
+```
+### Installing Ollama
+```powershell
+winget install -e --id Ollama.Ollama
 ```
 ### Installing OP Auto Clicker
 ```powershell
 winget install -e --id OPAutoClicker.OPAutoClicker
 ```
+### Installing Oracle VirtualBox
+```powershell
+winget install -e --id Oracle.VirtualBox
+```
+### Installing ParkControl
+```powershell
+winget install -e --id BitSum.ParkControl
+```
+### Installing Parsec
+```powershell
+winget install -e --id Parsec.Parsec
+```
 ### Installing PeaZip
 ```powershell
 winget install -e --id Giorgiotani.Peazip
 ```
+### Installing PowerToys
+```powershell
+winget install -e --id Microsoft.PowerToys
+```
 ### Installing Prime95
 ```powershell
 winget install -e --id mersenne.prime95
+```
+### Installing PuTTY
+```powershell
+winget install -e --id PuTTY.PuTTY
+```
+### Installing qBittorrent (libtorrent 2)
+```powershell
+winget install -e --id qBittorrent.qBittorrent.lt2
+```
+### Installing qView
+```powershell
+winget install -e --id jurplel.qView
+```
+### Installing Raspberry Pi Imager
+```powershell
+winget install -e --id RaspberryPiFoundation.RaspberryPiImager
+```
+### Installing Rivatuner Statistics Server
+```powershell
+winget install -e --id Guru3D.RTSS
+```
+### Installing SimpleTex
+```powershell
+winget install -e --id SimpleTex.SimpleTex
+```
+### Installing Spacedrive
+```powershell
+winget install -e --id spacedrive.Spacedrive
+```
+### Installing Speedtest by Ookla
+```powershell
+winget install -e --id Ookla.Speedtest.Desktop
+```
+### Installing Spek
+```powershell
+winget install -e --id AlexanderKojevnikov.Spek
+```
+### Installing Steam
+```powershell
+winget install -e --id Valve.Steam
+```
+### Installing Studio
+```powershell
+winget install -e --id BrickLink.Studio
 ```
 ### Installing System Informer
 ```powershell
@@ -753,9 +1093,17 @@ winget install -e --id TechPowerUp.GPU-Z
 ```powershell
 winget install -e --id Telegram.TelegramDesktop
 ```
-### Installing The Silver Searcher
+### Installing TeXworks
+```powershell
+winget install -e --id TUG.TeXworks
 ```
+### Installing The Silver Searcher
+```powershell
 winget install -e --id JFLarvoire.Ag
+```
+### Installing Thio's SVG Thumbnail Extension
+```powershell
+winget install -e --id ThioJoe.SvgThumbnailExtension
 ```
 ### Installing ThrottleStop
 ```powershell
@@ -764,6 +1112,18 @@ winget install -e --id TechPowerUp.ThrottleStop
 ### Installing Tor Browser
 ```powershell
 winget install -e --id TorProject.TorBrowser
+```
+### Installing Ultimate Vocal Remover
+```powershell
+winget install -e --id Anjok07.UltimateVocalRemover
+```
+### Installing Unity 2020.3.12f1
+```powershell
+winget install -e --id Unity.Unity.2020 -v "2020.3.12f1"
+```
+### Installing Unity Hub
+```powershell
+winget install -e --id Unity.UnityHub
 ```
 ### Installing Universal Android Debloater Next Generation
 ```powershell
@@ -777,9 +1137,25 @@ winget install -e --id Ventoy.Ventoy
 ```powershell
 winget install -e --id IDRIX.VeraCrypt
 ```
+### Installing Viber
+```powershell
+winget install -e --id Rakuten.Viber
+```
 ### Installing Victoria
 ```powershell
 winget install -e --id Victoria.Victoria
+```
+### Installing Visual Studio Community 2026
+```powershell
+winget install -e --id Microsoft.VisualStudio.Community
+```
+### Installing VLC media player
+```powershell
+winget install -e --id VideoLAN.VLC
+```
+### Installing Wget
+```powershell
+winget install -e --id JernejSimoncic.Wget
 ```
 ### Installing Winaero Tweaker
 ```powershell
@@ -789,13 +1165,49 @@ winget install -e --id winaero.tweaker
 ```powershell
 winget install -e --id RamenSoftware.Windhawk
 ```
+### Installing WinDirStat
+```powershell
+winget install -e --id WinDirStat.WinDirStat
+```
+### Installing Windsurf
+```powershell
+winget install -e --id Codeium.Windsurf
+```
+### Installing WinHTTrack Website Copier
+```powershell
+winget install -e --id XavierRoche.HTTrack
+```
+### Installing Wireshark
+```powershell
+winget install -e --id WiresharkFoundation.Wireshark
+```
+### Installing XAMPP 8.2
+```powershell
+winget install -e --id ApacheFriends.Xampp.8.2
+```
 ### Installing XnView MP
 ```powershell
 winget install -e --id XnSoft.XnViewMP
 ```
+### Installing Yandex Browser
+```powershell
+winget install -e --id Yandex.Browser
+```
+### Installing yt-dlp
+```powershell
+winget install -e --id yt-dlp.yt-dlp
+```
 ### Installing Zig
 ```powershell
 winget install -e --id zig.zig
+```
+### Installing Zoom Workplace
+```powershell
+winget install -e --id Zoom.Zoom
+```
+### Installing Zstandard
+```powershell
+winget install -e --id Meta.Zstandard
 ```
 ### Configuring System Clock
 ```
