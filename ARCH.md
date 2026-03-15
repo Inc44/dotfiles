@@ -47,8 +47,8 @@ reboot
 ```
 ### Changing Root
 ```
-mount /dev/nvme0n1p1 /mnt/boot
 mount /dev/nvme0n1p4 /mnt
+mount /dev/nvme0n1p1 /mnt/boot
 arch-chroot /mnt
 ```
 ### Installing GRUB

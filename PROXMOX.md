@@ -129,6 +129,24 @@ Click `Login`
 Click `pve`
 
 Click `Shell`
+### Configuring ZFS
+```bash
+# The sector is 2^12 = 4K bytes
+zpool create \
+-o ashift=12 \
+-O atime=off \
+-O compression=off \
+-O dedup=off \
+-O encryption=aes-256-gcm \
+-O keyformat=passphrase \
+-O sync=standard \
+-O xattr=sa \
+fastest nvme0n1
+pvesm add zfspool fastest --content images,rootdir --pool fastest --sparse 1
+zfs create -s -V 2G fastest/vm-101-disk-0
+zfs create -s -V 2T fastest/vm-101-disk-1
+zfs create -s -V 2T fastest/vm-101-disk-2
+```
 ### Configuring Bridge
 ```bash
 nano /etc/network/interfaces
@@ -272,7 +290,7 @@ Select `PCI Device`
 
 Turn on `Raw Device`
 
-Device: `0000:01:00.0` <!--AD106 [GeForce RTX 4060 Ti 16GB]-->
+Device: `0000:02:00.0` <!--AD106 [GeForce RTX 4060 Ti 16GB]-->
 
 Turn on `All Functions`
 
@@ -293,3 +311,4 @@ Sources:
 - [How to update iwlwifi firmware without uninstalling proxmox](https://forum.proxmox.com/threads/how-to-update-iwlwifi-firmware-without-uninstalling-proxmox.133385)
 - [The ultimate gaming virtual machine on proxmox](https://youtu.be/iWwdf66JpxE)
 - [Proxmox - Boot from USB Device](https://youtu.be/ow9mShfIo4Y)
+- [Does ZFS Kill SSDs? Testing Write amplification in Proxmox](https://youtu.be/V7V3kmJDHTA)
