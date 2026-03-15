@@ -162,6 +162,8 @@ iface vmbr0 inet static
 	post-up echo 1 > /proc/sys/net/ipv4/ip_forward
 	post-up iptables -t nat -A POSTROUTING -s '10.10.10.0/24' -o wlan0 -j MASQUERADE
 	post-down iptables -t nat -D POSTROUTING -s '10.10.10.0/24' -o wlan0 -j MASQUERADE
+	post-up iptables -t nat -A PREROUTING -i wlan0 -p tcp -m multiport --dports 47984,47989,47990,48010 -j DNAT --to-destination 10.10.10.101
+	post-up iptables -t nat -A PREROUTING -i wlan0 -p udp -m multiport --dports 47998,47999,48000,48002,48010 -j DNAT --to-destination 10.10.10.101
 ```
 ```bash
 systemctl restart networking
@@ -179,6 +181,8 @@ Add
 interface=vmbr0
 bind-interfaces
 dhcp-range=10.10.10.64,10.10.10.192,12h
+dhcp-host=BC:24:11:01:00:00,10.10.10.100,Windows
+dhcp-host=BC:24:11:01:00:01,10.10.10.101,Arch
 dhcp-option=3,10.10.10.1
 dhcp-option=6,1.1.1.1,8.8.8.8
 ```
@@ -238,6 +242,8 @@ Memory (MiB): `81920`
 
 Click `Next`
 #### Network
+MAC Address: `BC:24:11:01:00:00`
+
 Turn on `Disconnect`
 
 Click `Next`
@@ -360,6 +366,8 @@ Memory (MiB): `81920`
 
 Click `Next`
 #### Network
+MAC Address: `BC:24:11:01:00:01`
+
 Click `Next`
 #### Confirm
 Click `Finish`
