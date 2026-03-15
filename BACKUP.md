@@ -1,4 +1,4 @@
-## Proxmox
+# Proxmox
 ### Installing Partclone
 ```bash
 apt install partclone
@@ -71,6 +71,54 @@ exit
 shutdown now
 ```
 Move `virtio0` above all
-## Laptop
-### AOMEI Backupper
-### Macrium Reflect
+# Laptop
+## AOMEI Backupper
+## Macrium Reflect
+### Installing VirtIO Drivers
+Double click `Device Manager`
+
+Right click `SCSI Controller`
+
+Select `Update driver`
+
+Click `Browse my computer for drivers`
+
+Click `Browse`
+
+Select `CD Drive (F:) virtio-win-0.1.271`
+
+Click `OK`
+
+Click `Next`
+
+Click `Close`
+
+Right click `SCSI Controller`
+
+Select `Update driver`
+
+Click `Browse my computer for drivers`
+
+Click `Next`
+
+Click `Close`
+
+Right click `SCSI Controller`
+
+Select `Update driver`
+
+Click `Browse my computer for drivers`
+
+Click `Next`
+
+Click `Close`
+### Restoring Partitions
+Click Start Menu icon
+
+Click `Find`
+
+Type `Macium Reflect`
+
+Press Enter
+
+Click `Browse for an image file...`
