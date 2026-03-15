@@ -266,7 +266,7 @@ Turn off `Enabled` for `ide2`
 
 Turn on `Enabled` for `usb0`
 
-Move `usb0` above `ide0`
+Move `usb0` above all
 
 Click `Ok`
 
@@ -305,6 +305,108 @@ Click `Start Now`
 Follow [Configuring Initial Password](WINDOWS.md)
 
 Follow [Installing NVIDIA Drivers](WINDOWS.md)
+### Creating Arch Linux VM
+Click `Create VM`
+#### General
+Name: `Arch`
+
+Click `Next`
+#### OS
+Turn on `Do not use any media`
+
+Type: `Linux`
+
+Click `Next`
+#### System
+Graphic card: `VirtIO-GPU`
+
+BIOS: `OVMF (UEFI)`
+
+EFI Storage: `fastest`
+
+Turn off `Pre-Enroll keys`
+
+Click `Next`
+#### Disks
+Bus/Device: `VirtIO Block`
+
+Storage: `fastest`
+
+Disk size (GiB): `2`
+
+Turn on `Discard`
+
+Click `Add`
+
+Disk size (GiB): `2000`
+
+Turn on `Discard`
+
+Click `Add`
+
+Disk size (GiB): `2000`
+
+Turn on `Discard`
+
+Click `Next`
+#### CPU
+Cores: `8`
+
+Type: `host`
+
+Click `Next`
+#### Memory
+Memory (MiB): `81920`
+
+Click `Next`
+#### Network
+Click `Next`
+#### Confirm
+Click `Finish`
+
+Select `101 (Arch)`
+
+Select `Hardware`
+
+Click `Add`
+
+Select `USB Device`
+
+Turn on `Use USB Port`
+
+Choose Port: `Flash Drive`
+
+Click `Add`
+
+Select `Options`
+
+Double click on `Boot Order`
+
+Turn off `Enabled` for `ide2`
+
+Turn on `Enabled` for `usb0`
+
+Move `usb0` above all
+
+Click `Ok`
+
+Select `Hardware`
+
+Click `Add`
+
+Select `PCI Device`
+
+Turn on `Raw Device`
+
+Device: `0000:02:00.0` <!--AD106 [GeForce RTX 4060 Ti 16GB]-->
+
+Turn on `All Functions`
+
+Click `Add`
+
+Select `Console`
+
+Click `Start Now`
 
 Sources:
 - [problem in passthroughing USB tethering to VM](https://forum.proxmox.com/threads/problem-in-passthroughing-usb-tethering-to-vm.132902)
