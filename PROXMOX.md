@@ -129,6 +129,11 @@ Click `Login`
 Click `pve`
 
 Click `Shell`
+### Bypassing No Valid Subscription Warning
+```bash
+sed -i 's/!== \x27active\x27/== \x27Random Bullshit Go!!!!\x27/g' /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js
+systemctl restart pveproxy
+```
 ### Configuring ZFS
 ```bash
 # The sector is 2^12 = 4K bytes
