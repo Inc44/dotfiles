@@ -67,9 +67,22 @@ makepkg -si
 cd ..
 sudo rm -r yay
 ```
-### Pacman Installing Everything
+### Configuring Pacman
+```bash
+sudo nano /etc/pacman.conf
 ```
-sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote audacity blender bspwm clinfo cmake composer conky cuda cuda-tools cups curl discord docker emacs eog ffmpeg firefox ghidra ghidra ghostscript git git-lfs github-cli gnome-screenshot go gparted grub-customizer gsfonts hashcat hashcat-utils hplip httrack inkscape intel-compute-runtime jdk-openjdk john kitty kiwix-desktop lib32-nvidia-utils libgda6 libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk linux linux-lts lua-socket luarocks ly mokutil mono mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen nodejs noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia nvidia-lts nvidia-settings nvidia-utils nvtop obs-studio obsidian oculante ollama-cuda opam opencl-headers os-prober pacman-contrib patchelf pavucontrol pdf2svg perl-file-mimeinfo picom pinta polybar power-profiles-daemon powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone reflector rofi rsync rust rxvt-unicode solaar speedtest-cli sqlite3 sqlitebrowser steam stow sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr the_silver_searcher thunderbird time tk tmux torbrowser-launcher tree unpaper unzip veracrypt vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip xorg-xkill yt-dlp zathura zathura-pdf-mupdf zig zsh
+Append
+```bash
+[lizardbyte]
+SigLevel = Optional
+Server = https://github.com/LizardByte/pacman-repo/releases/latest/download
+```
+```bash
+sudo pacman -Sy
+```
+### Pacman Installing Everything
+```bash
+sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote audacity blender bspwm clinfo cmake composer conky cuda cuda-tools cups curl discord docker emacs eog ffmpeg firefox ghidra ghidra ghostscript git git-lfs github-cli gnome-screenshot go gparted grub-customizer gsfonts hashcat hashcat-utils hplip httrack inkscape intel-compute-runtime jdk-openjdk john kitty kiwix-desktop lib32-nvidia-utils libgda6 libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk linux linux-lts lua-socket luarocks ly mokutil mono mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen nodejs noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia nvidia-lts nvidia-settings nvidia-utils nvtop obs-studio obsidian oculante ollama-cuda opam opencl-headers os-prober pacman-contrib patchelf pavucontrol pdf2svg perl-file-mimeinfo picom pinta polybar power-profiles-daemon powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone reflector rofi rsync rust rxvt-unicode solaar speedtest-cli sqlite3 sqlitebrowser steam stow sunshine sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr the_silver_searcher thunderbird time tk tmux torbrowser-launcher tree unpaper unzip veracrypt vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip xorg-xkill yt-dlp zathura zathura-pdf-mupdf zig zsh
 ```
 ### Yay Installing Everything
 ```
@@ -218,6 +231,43 @@ sudo systemctl start cups.service
 system-config-printer
 ```
 Unblock > Add > Network Printer > Internet Printing Protocol > ipp://address/ipp > Forward > Brand > Model > Forward > Apply
+### Fixing Sunshine
+#### Cursor
+```bash
+sudo setcap cap_sys_admin+p $(readlink -f $(which sunshine))
+sudo reboot
+```
+#### NVENC
+```bash
+sudo nano /etc/default/grub (`GRUB_CMDLINE_LINUX_DEFAULT="loglevel=0 quiet nvidia-drm.modeset=1"`)
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo reboot
+```
+#### Permissions
+```bash
+sudo usermod -aG video,render,input $USER
+```
+#### Reboot
+```bash
+systemctl --user edit sunshine
+```
+Insert
+```bash
+[Unit]
+After=graphical-session.target
+
+[Service]
+ExecStartPre=
+
+[Install]
+WantedBy=
+WantedBy=default.target
+```
+#### Service
+```bash
+systemctl --user enable sunshine
+systemctl --user start sunshine
+```
 ### Fixing Telegram
 If you encounter an empty screen upon launching, try executing the program from the terminal. This method helps to disable OpenGL if you are experiencing issues with it.
 ```
@@ -252,3 +302,5 @@ pip cache purge
 conda clean -a
 sudo journalctl --vacuum-time=1s
 ```
+
+Sources: [Default systemd doesn't work after reboot, requires manually launch](https://github.com/LizardByte/Sunshine/issues/1533)
