@@ -420,6 +420,15 @@ Click `Add`
 Select `Console`
 
 Click `Start Now`
+### Configuring Boot Menu
+```bash
+nano /etc/pve/qemu-server/100.conf
+nano /etc/pve/qemu-server/101.conf
+```
+Insert
+```bash
+args: -boot menu=off
+```
 
 Sources:
 - [problem in passthroughing USB tethering to VM](https://forum.proxmox.com/threads/problem-in-passthroughing-usb-tethering-to-vm.132902)
@@ -427,3 +436,4 @@ Sources:
 - [The ultimate gaming virtual machine on proxmox](https://youtu.be/iWwdf66JpxE)
 - [Proxmox - Boot from USB Device](https://youtu.be/ow9mShfIo4Y)
 - [Does ZFS Kill SSDs? Testing Write amplification in Proxmox](https://youtu.be/V7V3kmJDHTA)
+- [Auto Boot Timeout](https://forum.proxmox.com/threads/auto-boot-timeout.80880)
