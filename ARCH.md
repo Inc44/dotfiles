@@ -82,7 +82,7 @@ sudo pacman -Sy
 ```
 ### Pacman Installing Everything
 ```bash
-sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote audacity blender bspwm clinfo cmake composer conky cuda cuda-tools cups curl discord docker emacs eog ffmpeg firefox ghidra ghidra ghostscript git git-lfs github-cli gnome-screenshot go gparted grub-customizer gsfonts hashcat hashcat-utils hplip httrack inkscape intel-compute-runtime jdk-openjdk john kitty kiwix-desktop lib32-nvidia-utils libgda6 libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk linux linux-lts lua-socket luarocks ly mariadb mokutil mono mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen nodejs noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia nvidia-lts nvidia-settings nvidia-utils nvtop obs-studio obsidian oculante ollama-cuda opam opencl-headers os-prober pacman-contrib patchelf pavucontrol pdf2svg perl-file-mimeinfo picom pinta polybar power-profiles-daemon powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone reflector rofi rsync rust rxvt-unicode solaar speedtest-cli sqlite3 sqlitebrowser steam stow sunshine sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr the_silver_searcher thunderbird time tk tmux torbrowser-launcher tree unpaper unzip veracrypt vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip xorg-xkill yt-dlp zathura zathura-pdf-mupdf zig zsh
+sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote audacity blender bspwm clinfo cmake composer conky cuda cuda-tools cups curl discord docker emacs eog ffmpeg firefox ghidra ghidra ghostscript git git-lfs github-cli gnome-screenshot go gparted grub-customizer gsfonts hashcat hashcat-utils hplip httrack inkscape intel-compute-runtime jdk-openjdk john kitty kiwix-desktop lib32-nvidia-utils libgda6 libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk linux linux-lts lua-socket luarocks ly mariadb mokutil mono mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen nodejs noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia nvidia-lts nvidia-settings nvidia-utils nvtop obs-studio obsidian oculante ollama-cuda opam opencl-headers os-prober pacman-contrib patchelf pavucontrol pdf2svg perl-file-mimeinfo php php-apache phpmyadmin picom pinta polybar power-profiles-daemon powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone reflector rofi rsync rust rxvt-unicode solaar speedtest-cli sqlite3 sqlitebrowser steam stow sunshine sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr the_silver_searcher thunderbird time tk tmux torbrowser-launcher tree unpaper unzip veracrypt vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip xorg-xkill yt-dlp zathura zathura-pdf-mupdf zig zsh
 ```
 ### Yay Installing Everything
 ```
@@ -104,6 +104,28 @@ If 2FA enabled: `Right Click` > `Reload`
 ```
 wal --theme base16-rebecca
 ```
+### Configuring Apache
+```bash
+sudo nano /etc/httpd/conf/httpd.conf
+```
+Comment out
+```bash
+# LoadModule mpm_event_module modules/mod_mpm_event.so
+```
+Uncomment
+```bash
+LoadModule mpm_prefork_module modules/mod_mpm_prefork.so
+```
+Append
+```bash
+LoadModule php_module modules/libphp.so
+AddHandler php-script .php
+Include conf/extra/php_module.conf
+Include conf/extra/phpmyadmin.conf
+```
+```bash
+sudo systemctl restart httpd
+```
 ### Configuring Git
 ```
 git config --global user.email email
@@ -114,12 +136,31 @@ git config --global user.name name
 opam init
 opam env --switch=default
 ```
+### Configuring phpMyAdmin
+```bash
+sudo nano /etc/httpd/conf/extra/phpmyadmin.conf
+```
+Append
+```bash
+Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
+<Directory "/usr/share/webapps/phpMyAdmin">
+	DirectoryIndex index.php
+	AllowOverride All
+	Options FollowSymlinks
+	Require all granted
+</Directory>
+```
+Open `localhost/phpmyadmin`
+
+Select `Theme` > `Original`
 ### Configuring PHP
 ```
 sudo nano /etc/php/php.ini
 ```
-Modify
+Uncomment
 ```
+extension=bz2
+extension=iconv
 extension=mysqli
 extension=pdo_mysql
 ```
@@ -227,15 +268,21 @@ xdg-mime default peazip.desktop application/zip
 ### Fixing MariaDB
 ```bash
 sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-sudo mariadbd-safe --skip-grant-tables &
+sudo systemctl stop mariadb
+sudo mariadbd-safe --skip-grant-tables --skip-networking &
 ```
 Open another terminal
 ```bash
 mariadb -u root
 ```
 ```sql
-FLUSH PRIVILEGES;
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_password';
+FLUSH PRIVILEGES;
+EXIT;
+```
+```bash
+sudo kill $(pgrep mariadb)
+sudo systemctl start mariadb
 ```
 ### Fixing Printer
 ```
@@ -320,3 +367,6 @@ Sources:
 - [Default systemd doesn't work after reboot, requires manually launch](https://github.com/LizardByte/Sunshine/issues/1533)
 - [MariaDB](https://wiki.archlinux.org/title/MariaDB)
 - [Reset MariaDB Password on Linux Guide](https://linuxconfig.org/how-to-change-mariadb-user-password)
+- [phpMyAdmin](https://wiki.archlinux.org/title/PhpMyAdmin)
+- [Apache HTTP Server](https://wiki.archlinux.org/title/Apache_HTTP_Server#PHP)
+- [PHP](https://wiki.archlinux.org/title/PHP#MySQL/MariaDB)
