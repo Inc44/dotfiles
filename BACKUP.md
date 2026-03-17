@@ -74,6 +74,40 @@ Move `virtio0` above all
 # Laptop
 ## AOMEI Backupper
 ## Macrium Reflect
+### Booting Rescue Media
+Select `Hardware`
+
+Click `Add`
+
+Select `USB Device`
+
+Turn on `Use USB Port`
+
+Choose Port: `Flash Drive`
+
+Click `Add`
+
+Click `Add`
+
+Select `USB Device`
+
+Turn on `Use USB Port`
+
+Choose Port: `HDD`
+
+Click `Add`
+
+Select `Options`
+
+Double click on `Boot Order`
+
+Turn on `Enabled` for `usb0`
+
+Move `usb0` above all
+
+Select `Console`
+
+Click `Start Now`
 ### Installing VirtIO Drivers
 Double click `Device Manager`
 
