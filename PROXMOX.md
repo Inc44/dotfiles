@@ -187,7 +187,8 @@ interface=vmbr0
 bind-interfaces
 dhcp-range=10.10.10.64,10.10.10.192,12h
 dhcp-host=BC:24:11:01:00:00,10.10.10.100,Windows
-dhcp-host=BC:24:11:01:00:01,10.10.10.101,Arch
+dhcp-host=BC:24:11:01:00:01,10.10.10.101,ArchLinuxLaptop
+dhcp-host=BC:24:11:01:00:02,10.10.10.102,WindowsLaptop
 dhcp-option=3,10.10.10.1
 dhcp-option=6,1.1.1.1,8.8.8.8
 ```
@@ -316,10 +317,10 @@ Click `Start Now`
 Follow [Configuring Initial Password](WINDOWS.md)
 
 Follow [Installing NVIDIA Drivers](WINDOWS.md)
-### Creating Arch Linux VM
+### Creating Arch Linux VM from Laptop
 Click `Create VM`
 #### General
-Name: `Arch`
+Name: `ArchLinuxLaptop`
 
 Click `Next`
 #### OS
@@ -377,7 +378,7 @@ Click `Next`
 #### Confirm
 Click `Finish`
 
-Select `101 (Arch)`
+Select `101 (ArchLinuxLaptop)`
 
 Select `Hardware`
 
@@ -420,6 +421,118 @@ Click `Add`
 Select `Console`
 
 Click `Start Now`
+### Creating Windows VM from Laptop
+Click `Create VM`
+
+Turn on `Advanced`
+#### General
+Name: `WindowsLaptop`
+
+Click `Next`
+#### OS
+Turn on `Do not use any media`
+
+Type: `Microsoft Windows`
+
+Turn on `Add additional drive for VirtIO drivers`
+
+ISO image: `virtio-win-0.1.271.iso`
+
+Click `Next`
+#### System
+Graphic card: `VirtIO-GPU`
+
+EFI Storage: `fastest`
+
+Turn off `Pre-Enroll keys`
+
+Turn off `Add TPM`
+
+Click `Next`
+#### Disks
+Bus/Device: `VirtIO Block`
+
+Storage: `fastest`
+
+Disk size (GiB): `2`
+
+Turn on `Discard`
+
+Click `Add`
+
+Disk size (GiB): `2000`
+
+Turn on `Discard`
+
+Click `Add`
+
+Disk size (GiB): `2000`
+
+Turn on `Discard`
+
+Click `Next`
+#### CPU
+Cores: `8`
+
+Type: `host`
+
+Click `Next`
+#### Memory
+Memory (MiB): `81920`
+
+Click `Next`
+#### Network
+MAC Address: `BC:24:11:01:00:02`
+
+Click `Next`
+#### Confirm
+Click `Finish`
+
+Select `102 (WindowsLaptop)`
+
+Select `Hardware`
+
+Click `Add`
+
+Select `USB Device`
+
+Turn on `Use USB Port`
+
+Choose Port: `Flash Drive`
+
+Click `Add`
+
+Select `Options`
+
+Double click on `Boot Order`
+
+Turn off `Enabled` for `ide2`
+
+Turn on `Enabled` for `usb0`
+
+Move `usb0` above all
+
+Click `Ok`
+
+Select `Hardware`
+
+Click `Add`
+
+Select `PCI Device`
+
+Turn on `Raw Device`
+
+Device: `0000:02:00.0` <!--AD106 [GeForce RTX 4060 Ti 16GB]-->
+
+Turn on `All Functions`
+
+Turn on `PCI-Express`
+
+Click `Add`
+
+Select `Console`
+
+Click `Start Now`
 ### Configuring Boot Menu
 ```bash
 nano /etc/pve/qemu-server/100.conf
@@ -437,3 +550,4 @@ Sources:
 - [Proxmox - Boot from USB Device](https://youtu.be/ow9mShfIo4Y)
 - [Does ZFS Kill SSDs? Testing Write amplification in Proxmox](https://youtu.be/V7V3kmJDHTA)
 - [Auto Boot Timeout](https://forum.proxmox.com/threads/auto-boot-timeout.80880)
+- [Syntax of "args" in <vmid>.conf](https://forum.proxmox.com/threads/syntax-of-args-in-vmid-conf.91439)
