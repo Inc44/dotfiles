@@ -93,7 +93,7 @@ Select `USB Device`
 
 Turn on `Use USB Port`
 
-Choose Port: `HDD`
+Choose Port: `SSD/HDD`
 
 Click `Add`
 

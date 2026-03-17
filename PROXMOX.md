@@ -238,7 +238,7 @@ Turn on `Discard`
 
 Click `Next`
 #### CPU
-Cores: `8`
+Cores: `20`
 
 Type: `host`
 
@@ -362,7 +362,7 @@ Turn on `Discard`
 
 Click `Next`
 #### CPU
-Cores: `8`
+Cores: `20`
 
 Type: `host`
 
@@ -472,7 +472,7 @@ Turn on `Discard`
 
 Click `Next`
 #### CPU
-Cores: `8`
+Cores: `20`
 
 Type: `host`
 
@@ -537,6 +537,7 @@ Click `Start Now`
 ```bash
 nano /etc/pve/qemu-server/100.conf
 nano /etc/pve/qemu-server/101.conf
+nano /etc/pve/qemu-server/102.conf
 ```
 Insert
 ```bash
