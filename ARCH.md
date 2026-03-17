@@ -82,7 +82,7 @@ sudo pacman -Sy
 ```
 ### Pacman Installing Everything
 ```bash
-sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote audacity blender bspwm clinfo cmake composer conky cuda cuda-tools cups curl discord docker emacs eog ffmpeg firefox ghidra ghidra ghostscript git git-lfs github-cli gnome-screenshot go gparted grub-customizer gsfonts hashcat hashcat-utils hplip httrack inkscape intel-compute-runtime jdk-openjdk john kitty kiwix-desktop lib32-nvidia-utils libgda6 libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk linux linux-lts lua-socket luarocks ly mokutil mono mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen nodejs noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia nvidia-lts nvidia-settings nvidia-utils nvtop obs-studio obsidian oculante ollama-cuda opam opencl-headers os-prober pacman-contrib patchelf pavucontrol pdf2svg perl-file-mimeinfo picom pinta polybar power-profiles-daemon powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone reflector rofi rsync rust rxvt-unicode solaar speedtest-cli sqlite3 sqlitebrowser steam stow sunshine sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr the_silver_searcher thunderbird time tk tmux torbrowser-launcher tree unpaper unzip veracrypt vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip xorg-xkill yt-dlp zathura zathura-pdf-mupdf zig zsh
+sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote audacity blender bspwm clinfo cmake composer conky cuda cuda-tools cups curl discord docker emacs eog ffmpeg firefox ghidra ghidra ghostscript git git-lfs github-cli gnome-screenshot go gparted grub-customizer gsfonts hashcat hashcat-utils hplip httrack inkscape intel-compute-runtime jdk-openjdk john kitty kiwix-desktop lib32-nvidia-utils libgda6 libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk linux linux-lts lua-socket luarocks ly mariadb mokutil mono mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen nodejs noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia nvidia-lts nvidia-settings nvidia-utils nvtop obs-studio obsidian oculante ollama-cuda opam opencl-headers os-prober pacman-contrib patchelf pavucontrol pdf2svg perl-file-mimeinfo picom pinta polybar power-profiles-daemon powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone reflector rofi rsync rust rxvt-unicode solaar speedtest-cli sqlite3 sqlitebrowser steam stow sunshine sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr the_silver_searcher thunderbird time tk tmux torbrowser-launcher tree unpaper unzip veracrypt vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip xorg-xkill yt-dlp zathura zathura-pdf-mupdf zig zsh
 ```
 ### Yay Installing Everything
 ```
@@ -224,6 +224,19 @@ xdg-mime default peazip.desktop application/x-vdi-disk
 xdg-mime default peazip.desktop application/x-xz
 xdg-mime default peazip.desktop application/zip
 ```
+### Fixing MariaDB
+```bash
+sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+sudo mariadbd-safe --skip-grant-tables &
+```
+Open another terminal
+```bash
+mariadb -u root
+```
+```sql
+FLUSH PRIVILEGES;
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_password';
+```
 ### Fixing Printer
 ```
 sudo systemctl enable cups.service
@@ -303,4 +316,7 @@ conda clean -a
 sudo journalctl --vacuum-time=1s
 ```
 
-Sources: [Default systemd doesn't work after reboot, requires manually launch](https://github.com/LizardByte/Sunshine/issues/1533)
+Sources:
+- [Default systemd doesn't work after reboot, requires manually launch](https://github.com/LizardByte/Sunshine/issues/1533)
+- [MariaDB](https://wiki.archlinux.org/title/MariaDB)
+- [Reset MariaDB Password on Linux Guide](https://linuxconfig.org/how-to-change-mariadb-user-password)
