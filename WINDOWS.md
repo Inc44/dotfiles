@@ -1,3 +1,34 @@
+### Repairing BCD
+Click `Next`
+
+Click `Next`
+
+Select `Repair my PC`
+
+Click `Next`
+
+Click `US`
+
+Click `Troubleshoot`
+
+Click `Command Prompt`
+```cmd
+drvload E:\viostor\w11\amd64\viostor.inf (`proxmox only`)
+diskpart
+list disk
+sel disk N (`problematic disk`)
+list vol
+sel vol N (`FAT32 EFI volume`)
+assign letter K:
+exit
+cd /d K:\EFI\Microsoft\Boot
+ren BCD BCD.bak
+bcdboot N:\Windows /l en-us /s K: /f all (`NTFS Windows volume`)
+bcdedit /store K:\EFI\Microsoft\Boot\BCD /set {default} safeboot minimal (`proxmox only`)
+dism /Image:N:\ /Add-Driver /Driver:E:\viostor\w11\amd64\viostor.inf (`proxmox only`)
+exit
+```
+Click `Turn off your PC`
 ### Configuring Initial Privacy
 Click `Yes`
 
@@ -39,7 +70,7 @@ Click `Browse my computer for drivers`
 
 Click `Browse`
 
-Select `CD Drive (F:) virtio-win-0.1.271`
+Select `CD Drive (E:) virtio-win-0.1.271`
 
 Click `OK`
 
@@ -1219,3 +1250,6 @@ winget install -e --id Meta.Zstandard
 ```
 reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
 ```
+
+Sources:
+- [Repair BCD File windows 8 or 10, Fix flashing cursor, fix none booting Windows 10](https://youtu.be/NdI5UDb6fBg)

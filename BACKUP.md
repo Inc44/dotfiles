@@ -119,7 +119,7 @@ Click `Browse my computer for drivers`
 
 Click `Browse`
 
-Select `CD Drive (F:) virtio-win-0.1.271`
+Select `CD Drive (E:) virtio-win-0.1.271`
 
 Click `OK`
 
