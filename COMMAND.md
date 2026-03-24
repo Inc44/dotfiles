@@ -259,35 +259,35 @@ Options:
 - `-b:v 10M`: Set video bitrate to 10M
 - `-codec|c copy`: Copy both audio and video streams without re-encoding
 - `-c:a aac`: Use AAC audio codec
-    - `-strict experimental|-2`: Enable experimental features
+	- `-strict experimental|-2`: Enable experimental features
 - `-c:a copy`: Copy the audio stream without re-encoding
 - `-c:a flac`: Use Free Lossless Audio Codec
-    - `-compression_level 12`: Set to maximum compression level
-    - `-strict experimental|-2`: Enable experimental features, such as 32-bit encoding
+	- `-compression_level 12`: Set to maximum compression level
+	- `-strict experimental|-2`: Enable experimental features, such as 32-bit encoding
 - `-c:v apng`: Use APNG (Animated PNG) codec
 - `-c:v av1_nvenc|libaom-av1`: Use AV1 codec
-    - `-tile-columns 0`: Set the number of tile columns
-    - `-tile-rows 0`: Set the number of tile rows
+	- `-tile-columns 0`: Set the number of tile columns
+	- `-tile-rows 0`: Set the number of tile rows
 - `-c:v av1_nvenc|hevc_nvenc|h264_nvenc`: Use NVIDIA's hardware-accelerated codecs
-    - `-bf 4`: Set the maximum number of B-frames between non-B-frames
-    - `-cq 32|24|16`: Specify Constant Quantizer for quality level
-    - `-preset p7`: Use the highest quality preset
-    - `-rc vbr`: Set rate control to use variable bitrate
+	- `-bf 4`: Set the maximum number of B-frames between non-B-frames
+	- `-cq 32|24|16`: Specify Constant Quantizer for quality level
+	- `-preset p7`: Use the highest quality preset
+	- `-rc vbr`: Set rate control to use variable bitrate
 - `-c:v ffv1`: Use FFV1 codec for lossless video encoding
 - `-c:v hevc_qsv|h264_qsv|libx265|libx264`: Use respective codecs
-    - `-preset placebo|veryslow`: Set encoding preset
-    - `-qp 24|16`: Set the quantization parameter
-    - `-vprofile high`: Use the high profile
+	- `-preset placebo|veryslow`: Set encoding preset
+	- `-qp 24|16`: Set the quantization parameter
+	- `-vprofile high`: Use the high profile
 - `-c:v libaom-av1`: Use AV1 codec
-    - `-cpu-used 4`: Set encoding preset
-    - `-lag-in-frames 48`: Specify frames for lookahead computation
-    - `-aom-params lossless=1`: Encode in lossless mode
+	- `-cpu-used 4`: Set encoding preset
+	- `-lag-in-frames 48`: Specify frames for lookahead computation
+	- `-aom-params lossless=1`: Encode in lossless mode
 - `-c:v libsvtav1`: Use SVT-AV1 codec
-    - `-preset 4`: Set encoding preset
+	- `-preset 4`: Set encoding preset
 - `-c:v libvpx-vp9`: Use VP9 codec
 - `-c:v libx265`: Use x265 codec
-    - `-x265-params "profile=crf=16:preset=placebo:qp=16"`: Specify x265 encoding parameters for high quality
-    - `-x265-params "profile=crf=0:lossless=1:preset=placebo:qp=0"`: Specify x265 encoding parameters for lossless
+	- `-x265-params "profile=crf=16:preset=placebo:qp=16"`: Specify x265 encoding parameters for high quality
+	- `-x265-params "profile=crf=0:lossless=1:preset=placebo:qp=0"`: Specify x265 encoding parameters for lossless
 - `-c:v copy`: Copy the video stream without re-encoding
 - `-color_range pc|0|tv|1|mpeg|2`: Set the color range
 - `-crf 32|24|16`: Set Constant Rate Factor
@@ -308,9 +308,9 @@ Options:
 - `-loglevel error`: Display only error messages
 - `-lossless 1`: Enable lossless encoding
 - `-map file:stream|int:int`: Map a stream from a file to an output stream
-    - `-map 0:v:0`: Map the first video stream of the first input file
-    - `-map 0:a:1 -map 0:a:0`: Map the second and first audio streams of the first input file
-    - `-map 0:s:1`: Map the second subtitle stream of the first input file
+	- `-map 0:v:0`: Map the first video stream of the first input file
+	- `-map 0:a:1 -map 0:a:0`: Map the second and first audio streams of the first input file
+	- `-map 0:s:1`: Map the second subtitle stream of the first input file
 - `-map_metadata 0`: Map all global metadata from the first input file
 - `-maxrate 10M`: Set the maximum bitrate
 - `-output`: Specify the output file
@@ -326,16 +326,16 @@ Options:
 - `-disposition:a:0 default`: Set the first audio stream as the default
 - `-disposition:a:1 none`: Set the second audio stream as non-default
 - `-filter_complex|vf`: Apply complex video filters
-    - `[file0][file1] overlay=240:250[output0]`: Overlay `file1` over `file0` and output to `output0`
-    - `[file0:v] [file0:a] [file1:v] [file1:a] concat=n=2:v=1:a=1 [output0v] [output0a]`: Concatenate two sets of video and audio streams
-    - `fps=float`: Set the video filter to adjust the frames per second
-    - `crop=230:120:190:50`: Crop the video to a width of 230 pixels and a height of 120 pixels, starting at position (190, 50) on the input video
-    - `crop=min(iw\,ih):min(iw\,ih)`: Crop the video to a square where both the width and height are equal to the smaller dimension of the input video
-    - `format=gbrp`: Convert the pixel format to GBR planar (gbrp)
-    - `scale=width:height:force_original_aspect_ratio=decrease`: Apply scaling filter to resize the video to fit within the specified `width` and `height`, decreasing if necessary, while maintaining the original aspect ratio
-    - `scale_cuda=-2:1080:interp_algo=nearest|bilinear|bicubic|lanczos`: Apply the CUDA-accelerated scaling filter to resize the video to a height of 1080 pixels while maintaining the aspect ratio and ensuring evenness
-    - `setpts=(expression)*PTS`: Change playback speed, slowing down if `expression` > 1 and speeding up if `expression` < 1
-    - `yadif`: Apply the YADIF deinterlacing filter to the video stream
+	- `[file0][file1] overlay=240:250[output0]`: Overlay `file1` over `file0` and output to `output0`
+	- `[file0:v] [file0:a] [file1:v] [file1:a] concat=n=2:v=1:a=1 [output0v] [output0a]`: Concatenate two sets of video and audio streams
+	- `fps=float`: Set the video filter to adjust the frames per second
+	- `crop=230:120:190:50`: Crop the video to a width of 230 pixels and a height of 120 pixels, starting at position (190, 50) on the input video
+	- `crop=min(iw\,ih):min(iw\,ih)`: Crop the video to a square where both the width and height are equal to the smaller dimension of the input video
+	- `format=gbrp`: Convert the pixel format to GBR planar (gbrp)
+	- `scale=width:height:force_original_aspect_ratio=decrease`: Apply scaling filter to resize the video to fit within the specified `width` and `height`, decreasing if necessary, while maintaining the original aspect ratio
+	- `scale_cuda=-2:1080:interp_algo=nearest|bilinear|bicubic|lanczos`: Apply the CUDA-accelerated scaling filter to resize the video to a height of 1080 pixels while maintaining the aspect ratio and ensuring evenness
+	- `setpts=(expression)*PTS`: Change playback speed, slowing down if `expression` > 1 and speeding up if `expression` < 1
+	- `yadif`: Apply the YADIF deinterlacing filter to the video stream
 
 `find expression`: Search for files within a directory hierarchy
 
@@ -386,7 +386,7 @@ Options:
 - `push origin branch-name`: Push your local `branch-name` to the remote, updating or creating it as necessary
 - `push`: Push your local changes to the remote repository
 - `reset`: Undo changes in the working directory
-    - `--soft HEAD~1`: Unstage the last commit, keeping changes in the working directory
+	- `--soft HEAD~1`: Unstage the last commit, keeping changes in the working directory
 - `revert commit`: Create a new commit that undoes the changes introduced by a previous commit
 - `submodule update --init --recursive`: Initialize and update submodules recursively, including nested submodules
 
@@ -413,6 +413,34 @@ Options:
 `ip link show`: Provide information about all network interfaces
 
 `ipconfig /flushdns`: Flush the DNS resolver cache
+
+`iptables`: Configure IPv4 packet filtering and NAT
+
+Options:
+
+- `-t table`: Specify the table to operate on
+	- `filter`: Default table for packet filtering
+		- `INPUT`
+		- `FORWARD`
+		- `OUTPUT`
+	- `nat`: Table for packets that create a new connection
+		- `PREROUTING`
+		- `OUTPUT`
+		- `POSTROUTING`
+	- `mangle`: Table for packet alteration
+		- `PREROUTING`: Chain for packets before they arrive
+		- `OUTPUT`: Chain for packets originating from localhost
+		- `INPUT`: Chain for packets destined for localhost
+		- `FORWARD`: Chain for packets transiting through localhost
+		- `POSTROUTING`: Chain for packets before they leave
+- `-A chain`: Append a rule to the end of the chain
+- `-D chain`: Delete a rule from the chain
+- `-I chain 1`: Insert a rule at the default position
+- `-F`: Flush/delete all rules from all chains
+- `-F chain`: Flush/delete all rules from the chain
+- `-L`: List all rules from all chains
+- `-L chain`: List all rules from the chain
+- `-P chain target`: Set the policy for the chain to the target
 
 `killall process`: Terminate all processes of `process`
 
