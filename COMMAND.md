@@ -441,6 +441,36 @@ Options:
 - `-L`: List all rules from all chains
 - `-L chain`: List all rules from the chain
 - `-P chain target`: Set the policy for the chain to the target
+	- `ACCEPT`
+	- `DROP`
+- `-p protocol`: Specify protocol
+	- `tcp`
+		- `--dport port`: Specify destination port
+	- `udp`
+	- `icmp`
+	- `all`
+- `-s address`: Specify source IP address
+- `-d address`: Specify destination IP address
+- `-j target`: Specify target for matching rules
+	- `ACCEPT`: Let the packet through
+	- `DROP`: Don't let the packet through
+- `-i interface`: Specify the interface via which a packet was received (only for `INPUT`, `FORWARD`, and `PREROUTING` chains)
+- `-o interface`: Specify the interface via which a packet is going to be sent (only for `FORWARD`, `OUTPUT`, and `POSTROUTING` chains)
+- `-m`: Use extended packet matching modules
+	- `iprange`
+		- `--src-range address-address`: Specify source IP address
+	- `mac`
+		- `--mac-source address`: Specify source MAC address
+	- `state`
+		- `--state state`: Specify connection state
+			- `INVALID`
+			- `ESTABLISHED`
+			- `NEW`
+			- `RELATED`
+
+`iptables-restore < file`: Restore IP tables from a file
+
+`iptables-save > file`: Save IP tables to a file
 
 `killall process`: Terminate all processes of `process`
 
