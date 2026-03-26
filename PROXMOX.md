@@ -169,6 +169,8 @@ iface vmbr0 inet static
 	post-down iptables -t nat -D POSTROUTING -s '10.10.10.0/24' -o wlan0 -j MASQUERADE
 	post-up iptables -t nat -A PREROUTING -i wlan0 -p tcp -m multiport --dports 47984,47989,47990,48010 -j DNAT --to-destination 10.10.10.101
 	post-up iptables -t nat -A PREROUTING -i wlan0 -p udp -m multiport --dports 47998,47999,48000,48002,48010 -j DNAT --to-destination 10.10.10.101
+	post-up iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 12321 -j DNAT --to-destination 10.10.10.200
+	post-up iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 445 -j DNAT --to-destination 10.10.10.200
 ```
 ```bash
 systemctl restart networking
@@ -635,6 +637,36 @@ Double tab to select `Skip`
 
 Triple press Enter
 
+Open [https://your_ip:12321](https://your_ip:12321)
+
+Select `Servers`
+
+Select `Samba Windows File Sharing`
+
+Click `Select all`
+
+Click `Delete Selected Shares`
+
+Click `Create a new file share`
+
+Share name `shared`
+
+Directory to share `/mnt/shared`
+
+Click `Create`
+
+Click `shared`
+
+Click `Security and Access Control`
+
+Writable? `Yes`
+
+Click `Save`
+
+Click `Return to share list`
+
+Click `Restart Samba Servers`
+
 Sources:
 - [problem in passthroughing USB tethering to VM](https://forum.proxmox.com/threads/problem-in-passthroughing-usb-tethering-to-vm.132902)
 - [How to update iwlwifi firmware without uninstalling proxmox](https://forum.proxmox.com/threads/how-to-update-iwlwifi-firmware-without-uninstalling-proxmox.133385)
@@ -643,3 +675,4 @@ Sources:
 - [Does ZFS Kill SSDs? Testing Write amplification in Proxmox](https://youtu.be/V7V3kmJDHTA)
 - [Auto Boot Timeout](https://forum.proxmox.com/threads/auto-boot-timeout.80880)
 - [Syntax of "args" in <vmid>.conf](https://forum.proxmox.com/threads/syntax-of-args-in-vmid-conf.91439)
+- [How to setup Turnkey Linux Fileserver on Proxmox VE](https://youtu.be/UnXxJMjW4LE)
