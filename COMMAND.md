@@ -423,7 +423,7 @@ Options:
 		- `INPUT`
 		- `FORWARD`
 		- `OUTPUT`
-	- `nat`: Table for packets that create a new connection
+	- `nat`: Table for IP address modification of packets that create a new connection
 		- `PREROUTING`
 		- `OUTPUT`
 		- `POSTROUTING`
@@ -433,6 +433,9 @@ Options:
 		- `INPUT`: Chain for packets destined for localhost
 		- `FORWARD`: Chain for packets transiting through localhost
 		- `POSTROUTING`: Chain for packets before they leave
+	- `raw`: Table for connection tracking exemptions
+		- `PREROUTING`
+		- `OUTPUT`
 - `-A chain`: Append a rule to the end of the chain
 - `-D chain`: Delete a rule from the chain
 - `-I chain 1`: Insert a rule at the default position
@@ -457,10 +460,11 @@ Options:
 	- `QUEUE`: Pass the packet from kernel space to user space
 	- `RETURN`: Stop traversing the chain and resume at the next rule in the previous (calling) chain
 	- `DNAT`: Modify packet destination IP address (only `nat` table, only `PREROUTING` and `OUTPUT` chains)
+		- `--to-destination`: Modify destination IP address
 	- `LOG`: Log packet
 		- `--log-prefix prefix`: Prefix log messages with the specified prefix
 	- `MASQUERADE`: Modify packet source IP address to the IP of the outgoing interface (only `nat` table, only `POSTROUTING` chain)
-	- `REDIRECT`: Modify packet destination IP address to the IP of the localhost (only `nat` table, only `PREROUTING` and `OUTPUT` chains)
+	- `REDIRECT`: Modify packet destination IP address to the IP of localhost (only `nat` table, only `PREROUTING` and `OUTPUT` chains)
 	- `REJECT`: Don't let the packet through and send an error packet (only `INPUT`, `FORWARD`, and `OUTPUT` chains)
 		- `--reject-with`: Specify the type of error packet to send
 			- `tcp-reset`: Send a TCP RST packet to close the connection
@@ -474,6 +478,8 @@ Options:
 		- `--src-range address-address`: Specify source IP address
 	- `mac`
 		- `--mac-source address`: Specify source MAC address (only `PREROUTING`, `FORWARD`, and `INPUT` chains)
+	- `multiport` (only `tcp` and `udp`)
+		- `--dports ports`: Specify destination ports
 	- `state`
 		- `--state state`: Specify connection state
 			- `INVALID`
