@@ -543,6 +543,82 @@ Insert
 ```bash
 args: -boot menu=off
 ```
+### Creating TurnKey File Server LXC Container
+Click `Create CT`
+#### General
+CT ID: `200`
+
+Hostname: `fileserver`
+
+Password: `your_password`
+
+Confirm password: `your_password`
+
+Click `Next`
+#### Template
+Template: `debian-12-turnkey-fileserver_.*_amd64.tar.gz`
+
+Click `Next`
+#### Disks
+Disk size (GiB): `4`
+
+Click `Add`
+
+Select `mp0`
+
+Disk size (GiB): `400`
+
+Path: `/mnt/shared`
+
+Click `Next`
+#### CPU
+Cores: `20`
+
+Click `Next`
+#### Memory
+Memory (MiB): `4096`
+
+Swap (MiB): `0`
+
+Click `Next`
+#### Network
+MAC address: `BC:24:11:02:00:00`
+
+IPv4/CIDR: `10.10.10.200/24`
+
+Gateway (IPv4): `10.10.10.1`
+
+Click `Next`
+#### DNS
+Click `Next`
+#### Confirm
+Click `Finish`
+
+Select `200 (fileserver)`
+
+Select `Console`
+
+Click `Start Now`
+
+fileserver login: `root`
+
+Password: `your_password`
+
+Type `your_password`
+
+Press Enter
+
+Type `your_password`
+
+Press Enter
+
+Double tab to select `Skip`
+
+Press Enter
+
+Double tab to select `Skip`
+
+Triple press Enter
 
 Sources:
 - [problem in passthroughing USB tethering to VM](https://forum.proxmox.com/threads/problem-in-passthroughing-usb-tethering-to-vm.132902)
