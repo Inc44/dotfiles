@@ -543,6 +543,21 @@ Insert
 ```bash
 args: -boot menu=off
 ```
+### Download TurnKey File Server Template
+```bash
+pveam update
+```
+Select `local (pve)`
+
+Select `CT Templates`
+
+Click `Templates`
+
+Search `fileserver`
+
+Select `lxc`
+
+Click `Download`
 ### Creating TurnKey File Server LXC Container
 Click `Create CT`
 #### General
