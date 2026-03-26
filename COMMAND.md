@@ -454,13 +454,26 @@ Options:
 - `-j target`: Specify target for matching rules
 	- `ACCEPT`: Let the packet through
 	- `DROP`: Don't let the packet through
+	- `QUEUE`: Pass the packet from kernel space to user space
+	- `RETURN`: Stop traversing the chain and resume at the next rule in the previous (calling) chain
+	- `DNAT`: Modify packet destination IP address (only `nat` table, only `PREROUTING` and `OUTPUT` chains)
+	- `LOG`: Log packet
+		- `--log-prefix prefix`: Prefix log messages with the specified prefix
+	- `MASQUERADE`: Modify packet source IP address to the IP of the outgoing interface (only `nat` table, only `POSTROUTING` chain)
+	- `REDIRECT`: Modify packet destination IP address to the IP of the localhost (only `nat` table, only `PREROUTING` and `OUTPUT` chains)
+	- `REJECT`: Don't let the packet through and send an error packet (only `INPUT`, `FORWARD`, and `OUTPUT` chains)
+		- `--reject-with`: Specify the type of error packet to send
+			- `tcp-reset`: Send a TCP RST packet to close the connection
+	- `SNAT`: Modify packet source IP address (only `nat` table, only `POSTROUTING` chain)
+	- `TOS`: Modify packet Type of Service (only `mangle` table)
+	- `TTL`: Modify packet Time to Live (only `mangle` table)
 - `-i interface`: Specify the interface via which a packet was received (only for `INPUT`, `FORWARD`, and `PREROUTING` chains)
 - `-o interface`: Specify the interface via which a packet is going to be sent (only for `FORWARD`, `OUTPUT`, and `POSTROUTING` chains)
 - `-m`: Use extended packet matching modules
 	- `iprange`
 		- `--src-range address-address`: Specify source IP address
 	- `mac`
-		- `--mac-source address`: Specify source MAC address
+		- `--mac-source address`: Specify source MAC address (only `PREROUTING`, `FORWARD`, and `INPUT` chains)
 	- `state`
 		- `--state state`: Specify connection state
 			- `INVALID`
@@ -468,9 +481,9 @@ Options:
 			- `NEW`
 			- `RELATED`
 
-`iptables-restore < file`: Restore IP tables from a file
+`iptables-restore < file`: Restore iptables from a file
 
-`iptables-save > file`: Save IP tables to a file
+`iptables-save > file`: Save iptables to a file
 
 `killall process`: Terminate all processes of `process`
 
