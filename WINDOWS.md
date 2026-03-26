@@ -1250,6 +1250,31 @@ winget install -e --id Meta.Zstandard
 ```
 reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
 ```
+### Mapping Network Drive
+Open `File Explorer`
+
+Click `Computer`
+
+Click `Map network drive`
+
+Drive: `S:`
+
+Folder: `\\your_ip\shared`
+
+Click `Finish`
+
+User name `root`
+
+Password `your_password`
+
+Turn on `Remember my credentials`
+
+Click `OK`
+
+Or
+```cmd
+net use S: \\your_ip\shared /user:root your_password /persistent:yes
+```
 
 Sources:
 - [Repair BCD File windows 8 or 10, Fix flashing cursor, fix none booting Windows 10](https://youtu.be/NdI5UDb6fBg)
