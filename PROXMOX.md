@@ -204,6 +204,28 @@ dhcp-option=6,1.1.1.1,8.8.8.8
 ```bash
 systemctl restart dnsmasq
 ```
+### Installing i915-sriov-dkms
+```bash
+apt install build-essential dkms
+apt install proxmox-default-kernel proxmox-default-headers
+wget -O /tmp/i915-sriov-dkms_2026.03.05_amd64.deb "https://github.com/strongtz/i915-sriov-dkms/releases/download/2026.03.05/i915-sriov-dkms_2026.03.05_amd64.deb"
+dpkg -i /tmp/i915-sriov-dkms_2026.03.05_amd64.deb
+nano /etc/default/grub (`GRUB_CMDLINE_LINUX_DEFAULT="intel_iommu=on i915.enable_guc=3 i915.max_vfs=7 module_blacklist=xe loglevel=0 quiet"`)
+update-grub
+update-initramfs -u
+apt install sysfsutils
+echo "devices/pci0000:00/0000:00:02.0/sriov_numvfs = 7" > /etc/sysfs.conf
+reboot
+```
+### Blocking VFs
+```bash
+echo "vfio-pci" | sudo tee /etc/modules-load.d/vfio-pci.conf
+sudo tee /etc/udev/rules.d/99-i915-vf-vfio.rules <<EOF
+ACTION=="add", SUBSYSTEM=="pci", KERNEL=="0000:00:02.[1-7]", ATTR{vendor}=="0x8086", ATTR{device}=="0x7d67", DRIVER!="vfio-pci", RUN+="/bin/sh -c 'echo \$kernel > /sys/bus/pci/devices/\$kernel/driver/unbind; echo vfio-pci > /sys/bus/pci/devices/\$kernel/driver_override; modprobe vfio-pci; echo \$kernel > /sys/bus/pci/drivers/vfio-pci/bind'"
+EOF
+update-initramfs -u
+reboot
+```
 ### Creating Windows VM
 Click `Create VM`
 
