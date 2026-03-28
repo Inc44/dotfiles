@@ -81,6 +81,13 @@ cp -r firmware-iwlwifi/usr/lib/firmware/* /lib/firmware
 update-initramfs -k all -u
 reboot
 ```
+### Using No-Subscription
+```bash
+mv /etc/apt/sources.list.d/pve-enterprise.sources /etc/apt/sources.list.d/pve-enterprise.sources.bak
+mv /etc/apt/sources.list.d/ceph.sources /etc/apt/sources.list.d/ceph.sources.bak
+echo "deb http://download.proxmox.com/debian/pve trixie pve-no-subscription" > /etc/apt/sources.list.d/pve-no-subscription.list
+echo "deb http://download.proxmox.com/debian/ceph-squid trixie no-subscription" > /etc/apt/sources.list.d/ceph-no-subscription.list
+```
 ### Connecting Wi-Fi
 ```bash
 apt update
