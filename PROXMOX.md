@@ -341,6 +341,18 @@ Turn on `PCI-Express`
 
 Click `Add`
 
+Click `Add`
+
+Select `PCI Device`
+
+Turn on `Raw Device`
+
+Device: `0000:00:02.1` <!--Arrow Lake-S [Intel Graphics]-->
+
+Turn on `PCI-Express`
+
+Click `Add`
+
 Select `Console`
 
 Click `Start Now`
@@ -348,6 +360,8 @@ Click `Start Now`
 Follow [Configuring Initial Password](WINDOWS.md)
 
 Follow [Installing NVIDIA Drivers](WINDOWS.md)
+
+Follow [Installing Intel Drivers](WINDOWS.md)
 ### Creating Arch Linux VM from Laptop
 Click `Create VM`
 #### General

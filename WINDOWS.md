@@ -113,6 +113,12 @@ Predownload [NVIDIA Studio Driver](https://www.nvidia.com/en-us/drivers)
 Copy `.*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe` to USB
 
 Install `.*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe`
+### Installing Intel Drivers
+Predownload [Intel® Arc™ Graphics - Windows*](https://www.intel.com/content/www/us/en/download/785597/873358)
+
+Copy `gfx_win_101.8425_101.8362.exe` to USB
+
+Install `gfx_win_101.8425_101.8362.exe`
 ### Optimizing Performance
 Click Start Menu icon
 
