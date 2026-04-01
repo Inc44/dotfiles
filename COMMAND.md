@@ -596,9 +596,24 @@ Options:
 
 Options:
 
+- `key:generate`: Generate a new secure key for the application
+- `make:middleware name`: Create a new middleware
 - `make:migration name`: Create a new database migration file
+- `make:model name`: Create a new Eloquent model
+	- `-c`: Generate a controller
+	- `-f`: Generate a factory
+	- `-m`: Generate a migration
+	- `-s`: Generate a seeder
+- `make:policy name`: Create a new policy
+- `make:request name`: Create a new form request class
+- `make:test name`: Create a new test case
 - `migrate`: Run database migrations
+- `migrate:fresh`: Drop all tables and then execute the `migrate` command
+	- `--seed`: Seed the database
 - `serve`: Start the server
+- `test`: Run the tests
+	- `--stop-on-error`: Stop execution upon the first test error
+	- `--stop-on-failure`: Stop execution upon the first test failure
 
 `pihole status`: Display the status of the Pi-hole
 
