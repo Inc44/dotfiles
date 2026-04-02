@@ -25,6 +25,23 @@ Options:
 - `-x`: Extract files from the archive
 - `-C directory`: Change to the specified directory before processing the remaining files
 
+`cargo`: Rust package manager
+
+Options:
+
+- `add package`: Add dependencies to a manifest file
+- `build`: Compile the current package
+	- `--release`
+	- `--timings`
+- `fmt`: Format all files using rustfmt
+- `init`: Create a new package in an existing directory
+- `login`: Log in to a registry
+- `new path`: Create a new package
+- `publish`: Upload a package to a registry
+- `run`: Run the current package
+	- `--release`: Build optimized artifacts
+	- `--timings`: Output information on how long each compilation takes
+
 `cd directory`: Change the current directory
 
 `cfdisk disk`: Partition a disk using a curses-based user interface
@@ -88,6 +105,8 @@ Options:
 `command; command`: Run the commands sequentially
 
 `composer global require package`: Install a package globally using Composer
+
+`composer install`: Install dependencies from a `composer.json` file
 
 `conda list`: Display all installed packages in the current environment
 
@@ -392,6 +411,23 @@ Options:
 
 `gprof executable gmon.out > analysis.txt`: Profile the performance of a profileable executable
 
+`gradle`: Build automation tool
+
+Options:
+
+- `build`: Assemble and run all checks
+- `run`: Assemble and execute
+- `clean`: Delete the contents of the build directory
+- `wrapper`: Generate wrapper files
+- `--stop`: Stop all Gradle daemons of the same version
+
+`gradlew`: Gradle wrapper script
+
+Options:
+
+- `run`: Run an application
+- `createDistributable`: Create an application image without creating an installer
+
 `htop`: Monitor system resources
 
 `httrack link`: Download websites to a local directory for offline viewing
@@ -554,6 +590,16 @@ Options:
 `mv path1 path2`: Move or rename by overwriting the file or directory at `path1` to `path2`
 
 `nano file`: Open the file in the Nano text editor
+
+`npm`: Node package manager
+
+Options:
+
+- `audit`: Run a security audit
+	- `fix`: Install compatible updates to vulnerable dependencies
+		- `--force`: Install major updates
+- `install`: Install dependencies from a `package.json` file
+- `run script`: Run a package script
 
 `nvidia-smi`: Display information about GPU utilization, temperature, memory usage, and more
 
