@@ -174,10 +174,12 @@ iface vmbr0 inet static
 	post-up echo 1 > /proc/sys/net/ipv4/ip_forward
 	post-up iptables -t nat -A POSTROUTING -s '10.10.10.0/24' -o wlan0 -j MASQUERADE
 	post-down iptables -t nat -D POSTROUTING -s '10.10.10.0/24' -o wlan0 -j MASQUERADE
-	post-up iptables -t nat -A PREROUTING -i wlan0 -p tcp -m multiport --dports 47984,47989,47990,48010 -j DNAT --to-destination 10.10.10.101
-	post-up iptables -t nat -A PREROUTING -i wlan0 -p udp -m multiport --dports 47998,47999,48000,48002,48010 -j DNAT --to-destination 10.10.10.101
+	# post-up iptables -t nat -A PREROUTING -i wlan0 -p tcp -m multiport --dports 47984,47989,47990,48010 -j DNAT --to-destination 10.10.10.101
+	# post-up iptables -t nat -A PREROUTING -i wlan0 -p udp -m multiport --dports 47998,47999,48000,48002,48010 -j DNAT --to-destination 10.10.10.101
 	post-up iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 12321 -j DNAT --to-destination 10.10.10.200
 	post-up iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 445 -j DNAT --to-destination 10.10.10.200
+	post-up iptables -t nat -A PREROUTING -i wlan0 -p udp --dport 51820 -j DNAT --to-destination 10.10.10.201
+	post-down iptables -t nat -D PREROUTING -i wlan0 -p udp --dport 51820 -j DNAT --to-destination 10.10.10.201
 ```
 ```bash
 systemctl restart networking
@@ -198,6 +200,8 @@ dhcp-range=10.10.10.64,10.10.10.192,12h
 dhcp-host=BC:24:11:01:00:00,10.10.10.100,Windows
 dhcp-host=BC:24:11:01:00:01,10.10.10.101,ArchLinuxLaptop
 dhcp-host=BC:24:11:01:00:02,10.10.10.102,WindowsLaptop
+dhcp-host=BC:24:11:02:00:00,10.10.10.200,fileserver
+dhcp-host=BC:24:11:02:00:01,10.10.10.201,wireguard
 dhcp-option=3,10.10.10.1
 dhcp-option=6,1.1.1.1,8.8.8.8
 ```
@@ -603,6 +607,14 @@ Search `fileserver`
 Select `lxc`
 
 Click `Download`
+
+Click `Templates`
+
+Search `alpine`
+
+Select `lxc`
+
+Click `Download`
 ### Creating TurnKey File Server LXC Container
 Click `Create CT`
 #### General
@@ -709,6 +721,130 @@ Click `Save`
 Click `Return to share list`
 
 Click `Restart Samba Servers`
+### Creating Alpine Wireguard LXC Container
+Click `Create CT`
+#### General
+CT ID: `201`
+
+Hostname: `wireguard`
+
+Password: `your_password`
+
+Confirm password: `your_password`
+
+Click `Next`
+#### Template
+Template: `alpine-3.23-default_.*_amd64.tar.xz`
+
+Click `Next`
+#### Disks
+Disk size (GiB): `4`
+
+Click `Next`
+#### CPU
+Cores: `20`
+
+Click `Next`
+#### Memory
+Memory (MiB): `4096`
+
+Swap (MiB): `0`
+
+Click `Next`
+#### Network
+MAC address: `BC:24:11:02:00:01`
+
+IPv4/CIDR: `10.10.10.201/24`
+
+Gateway (IPv4): `10.10.10.1`
+
+Click `Next`
+#### DNS
+Click `Next`
+#### Confirm
+Click `Finish`
+
+Select `201 (wireguard)`
+
+Select `Console`
+
+Click `Start Now`
+
+wireguard login: `root`
+
+Password: `your_password`
+```bash
+apk update
+apk add wireguard-tools iptables
+umask 077
+wg genkey | tee /etc/wireguard/server_private.key | wg pubkey > /etc/wireguard/server_public.key
+wg genkey | tee /etc/wireguard/client_private.key | wg pubkey > /etc/wireguard/client_public.key
+cat /etc/wireguard/server_private.key
+cat /etc/wireguard/server_public.key
+cat /etc/wireguard/client_private.key
+cat /etc/wireguard/client_public.key
+vi /etc/wireguard/wg0.conf
+```
+Append
+```bash
+[Interface]
+Address = 10.0.0.1/24
+ListenPort = 51820
+PostUp = iptables -A FORWARD -i wg0 -d 10.10.10.100 -j ACCEPT
+PostUp = iptables -A FORWARD -i wg0 -d 10.10.10.101 -j ACCEPT
+PostUp = iptables -A FORWARD -i wg0 -m state --state ESTABLISHED,RELATED -j ACCEPT
+PostUp = iptables -A FORWARD -i wg0 -j REJECT
+PostUp = iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i wg0 -d 10.10.10.100 -j ACCEPT
+PostDown = iptables -D FORWARD -i wg0 -d 10.10.10.101 -j ACCEPT
+PostDown = iptables -D FORWARD -i wg0 -m state --state ESTABLISHED,RELATED -j ACCEPT
+PostDown = iptables -D FORWARD -i wg0 -j REJECT
+PostDown = iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+PrivateKey = <your_server_private_key>
+
+[Peer]
+AllowedIPs = 10.0.0.2/32
+PublicKey = <your_client_public_key>
+```
+```bash
+ln -s /etc/init.d/wg-quick /etc/init.d/wg-quick.wg0
+rc-update add wg-quick.wg0
+echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
+sysctl -p
+rc-update add sysctl
+reboot
+```
+WireGuard > Add Tunnel > laptop.conf
+```bash
+[Interface]
+Address = 10.0.0.2/32
+PrivateKey = <your_client_private_key>
+
+[Peer]
+AllowedIPs = 10.0.0.0/24, 10.10.10.0/24
+Endpoint = <your_ip>:51820
+PersistentKeepalive = 25
+PublicKey = <your_server_public_key>
+```
+##### Orange Livebox
+
+###### Network
+
+Your customized rules
+
+| Application/Service | Internal port | External port | Protocol |
+|---------------------|---------------|---------------|----------|
+| wireguard           | 51820         | 51820         | UDP      |
+
+##### Xiaomi Router
+
+###### Port forwarding
+
+Port forwarding rules:
+
+| Name      | Protocol | External ports | Internal IP address | Internal port |
+|-----------|----------|----------------|---------------------|---------------|
+| wireguard | UDP      | 51280          | 192.168.31.254      | 51820         |
 
 Sources:
 - [problem in passthroughing USB tethering to VM](https://forum.proxmox.com/threads/problem-in-passthroughing-usb-tethering-to-vm.132902)
@@ -719,3 +855,7 @@ Sources:
 - [Auto Boot Timeout](https://forum.proxmox.com/threads/auto-boot-timeout.80880)
 - [Syntax of "args" in <vmid>.conf](https://forum.proxmox.com/threads/syntax-of-args-in-vmid-conf.91439)
 - [How to setup Turnkey Linux Fileserver on Proxmox VE](https://youtu.be/UnXxJMjW4LE)
+- [Configure a Wireguard interface (wg) - Alpine Linux](https://wiki.alpinelinux.org/wiki/Configure_a_Wireguard_interface_(wg))
+- [Full WireGuard VPN Setup on Proxmox VE Using Ubuntu Server 22.04](https://youtu.be/reBGabIiv8s)
+- [Use Proxmox as a VPN server with WireGuard.](https://youtu.be/SRa76aFFK3Y)
+- [Build your OWN WireGuard VPN! Here's how](https://youtu.be/5NJ6V8i1Xd8)
