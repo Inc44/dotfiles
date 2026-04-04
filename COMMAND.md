@@ -392,22 +392,37 @@ Options:
 Options:
 
 - `add .`: Stage all changes in the current directory for the next commit
-- `branch --unset-upstream`: Remove the upstream tracking from the current branch, making it a local branch only
+- `branch`: List all branches
+	- `-d branch`: Delete a branch
+	- `-m main master`: Rename branch `main` to `master`
+	- `--unset-upstream`: Remove the upstream tracking from the current branch, making it a local branch only
 - `checkout -b test`: Create and switch to a new branch named `test`
 - `checkout main`: Switch to the `main` branch
 - `clone link`: Create a copy of an existing repository located at `link` into a new local directory
 - `commit -m message`: Commit the staged changes with a commit message `message`
-- `config pull.rebase false`: Configure Git to merge the remote branch when pulling
+- `config`: Configure Git options
+	- `--global`: Write to `~/.gitconfig` instead of `.git/config`
+	- `--unset-all`: Unset all multi-valued config options
+	- `pull.rebase false`: Merge the remote branch when pulling
+	- `user.name name`: Name to be used in commits
+	- `user.email email`: Email to be used in commits
+- `gc`: Clean up unnecessary files and optimize the local repository
 - `init -b main`: Initialize a new Git repository and set the default branch to `main`
 - `pull`: Fetch changes from the remote repository and merge them into the current branch
-- `push origin :branch-name`: Delete the `branch-name` from the remote repository
-- `push origin --force`: Force the push, overwriting remote history
-- `push origin branch-name`: Push your local `branch-name` to the remote, updating or creating it as necessary
 - `push`: Push your local changes to the remote repository
+	- `origin`: Specify the remote repository
+	- `branch`: Push your local branch to the remote, updating or creating it as necessary
+	- `:branch`: Delete a branch
+	- `--tags`: Push all refs/tags
+	- `--force`: Force the push, overwriting remote history
+- `reflog`: Show the history of all actions
 - `reset`: Undo changes in the working directory
 	- `--soft HEAD~1`: Unstage the last commit, keeping changes in the working directory
 - `revert commit`: Create a new commit that undoes the changes introduced by a previous commit
 - `submodule update --init --recursive`: Initialize and update submodules recursively, including nested submodules
+- `tag`: List all tags
+	- `-d tag`: Delete a tag
+	- `new old`: Create a new tag that points to the same commit as the existing old tag
 
 `gprof executable gmon.out > analysis.txt`: Profile the performance of a profileable executable
 

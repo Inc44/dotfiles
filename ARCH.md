@@ -128,8 +128,10 @@ sudo systemctl restart httpd
 ```
 ### Configuring Git
 ```
-git config --global user.email email
+git config --global --unset-all user.name
+git config --global --unset-all user.email
 git config --global user.name name
+git config --global user.email email
 ```
 ### Configuring Opam
 ```
