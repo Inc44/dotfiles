@@ -474,6 +474,8 @@ Options:
 
 `ifconfig`: Display network interface configuration information, including IP addresses
 
+`intel_gpu_top`: Monitor Intel GPU utilization and processes
+
 `ip`: Show/manipulate routing, network devices, interfaces, and tunnels
 
 Options:
@@ -602,7 +604,15 @@ Options:
 
 `lshw`: List detailed information about the hardware configuration of the machine
 
-`lspci -vv`: List all PCI devices with very detailed information about each device
+`lspci`: List all PCI devices
+
+Options:
+
+- `-v`: Display detailed information about all devices
+- `-vv`: Display more details
+- `-k`: Show kernel drivers handling each device and also kernel modules capable of handling them
+- `-nn`: Show PCI vendor and device codes as both numbers and names
+- `-s domain:bus:slot.function`: Show only devices in the specified domain, bus, slot, and function (`0:0:0:0` to `ffff:ff:1f.7`)
 
 `man program`: Show the manual page for a program
 
@@ -654,6 +664,8 @@ Options:
 - `run script`: Run a package script
 
 `nvidia-smi`: Display information about GPU utilization, temperature, memory usage, and more
+
+`nvtop`: Monitor AMD, Intel, and NVIDIA GPU utilization and processes
 
 `ollama`: Local LLM model server
 
@@ -821,6 +833,8 @@ Options:
 - `enable SERVICE`: Enable a service to start on boot
 - `restart SERVICE`: Restart a service (e.g., `mariadb`, `httpd`)
 - `start SERVICE`: Start a service
+
+`tail --bytes=n file`: Print the last n bytes of a file
 
 `tar caf path.tar.algorithm path`: Compress a file using a specified algorithm
 
