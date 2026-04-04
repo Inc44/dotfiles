@@ -387,6 +387,15 @@ Options:
 - `api users/Inc44/repos --jq '.[].name'`: Make an authenticated GitHub API request and filter the JSON output using `jq` to extract repository names
 - `auth login`: Authenticate with GitHub
 
+`gh2md`: Export issues and pull requests from a GitHub repository to a readable Markdown file
+
+Options:
+
+- `owner/repo`: GitHub repo to export
+- `path`: Path to write exported issues
+- `--multiple-files`: Create one file per issue
+- `--no-prs`: Don't include pull requests in the export
+
 `git`: Version control system
 
 Options:
@@ -524,6 +533,8 @@ Options:
 	- `TTL`: Modify packet Time to Live (only `mangle` table)
 - `-i interface`: Specify the interface via which a packet was received (only for `INPUT`, `FORWARD`, and `PREROUTING` chains)
 - `-o interface`: Specify the interface via which a packet is going to be sent (only for `FORWARD`, `OUTPUT`, and `POSTROUTING` chains)
+- `-v`: Verbose output
+- `-n`: Numeric output instead of trying to display hostnames, network names, or services
 - `-m`: Use extended packet matching modules
 	- `iprange`
 		- `--src-range address-address`: Specify source IP address
@@ -553,6 +564,8 @@ Options:
 Options:
 
 - `-a`: Include hidden files
+- `-h`: Print sizes in a human-readable format
+- `-i`: Print the index number/inode of each file
 - `-l`: Use long format, showing permissions, ownership, size, and modification date
 
 `lsattr path`: List the attributes of the files or directories
