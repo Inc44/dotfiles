@@ -16,6 +16,8 @@
 
 `blkid`: Display or locate block devices and their attributes, such as UUIDs and file system types
 
+`brctl show bridge`: Show bridge name, ID, STP, and interfaces
+
 `bsdtar`: Handle tar archives
 
 Options:
@@ -452,6 +454,8 @@ Options:
 - `run`: Run an application
 - `createDistributable`: Create an application image without creating an installer
 
+`head --bytes=n file`: Print the first n bytes of a file
+
 `htop`: Monitor system resources
 
 `httrack link`: Download websites to a local directory for offline viewing
@@ -470,7 +474,14 @@ Options:
 
 `ifconfig`: Display network interface configuration information, including IP addresses
 
-`ip link show`: Provide information about all network interfaces
+`ip`: Show/manipulate routing, network devices, interfaces, and tunnels
+
+Options:
+
+- `a`, `a show`, `addr`, or `addr show`: Show addresses assigned to all network interfaces
+- `a show interface` or `addr show interface`: Show addresses assigned to a network interface
+- `link` or `link show`: Display all network interface attributes
+- `link show interface`: Display network interface attributes
 
 `ipconfig /flushdns`: Flush the DNS resolver cache
 
@@ -553,9 +564,20 @@ Options:
 
 `iptables-save > file`: Save iptables to a file
 
+`jpegtran file`: Lossless transformation of JPEG files
+
+Options:
+
+- `-rotate angle`: Rotate the image 90, 180, or 270 degrees clockwise
+- `-perfect`: Fail if the transformation cannot be performed without loss
+- `-crop WxH+X+Y`: Crop the image to a rectangular region of width `W` and height `H`, starting at point `X,Y`
+- `-outfile file`: Send the output image to the named file
+
 `killall process`: Terminate all processes of `process`
 
 `laravel new project --using=kit`: Create a new Laravel project using a starter kit
+
+`ln source destination`: Generate a hard link pointing to a file or directory
 
 `ln -s source destination`: Generate a symbolic link pointing to a file or directory
 
@@ -575,6 +597,8 @@ Options:
 Options:
 
 - `-f`: Output information about filesystems
+
+`lscpu`: Display information about the CPU architecture
 
 `lshw`: List detailed information about the hardware configuration of the machine
 
@@ -708,6 +732,8 @@ Options:
 - `--quality=min-max`: Set output quality, with min and max being numbers in the range 0 (worst) to 100 (perfect). The encoder will choose the smallest file that stays within this range
 - `--nofs`: Disables Floyd-Steinberg dithering
 
+`poweroff`: Power off the machine
+
 `ps -aux`: List all running processes on the system
 
 Options:
@@ -783,6 +809,8 @@ Options:
 `sudo command`: Execute the specified command with superuser (root) privileges
 
 `sudo su`: Switch the user to the root user
+
+`sunshine --creds username password`: Set credentials for the web UI
 
 `sync`: Synchronize cached writes to persistent storage
 
@@ -891,6 +919,8 @@ Options:
 - `-k`: Keep the original file
 - `-v`: Provide detailed information
 - `-z`: Compress
+
+`zfs load-key dataset`: Load the encryption key for a ZFS dataset
 
 `zip -0 -r path.zip path`: Create a zip archive
 
