@@ -165,6 +165,8 @@ extension=bz2
 extension=iconv
 extension=mysqli
 extension=pdo_mysql
+extension=pdo_sqlite
+extension=sqlite3
 ```
 ### Configuring Rclone
 ```
