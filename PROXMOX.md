@@ -844,7 +844,7 @@ Port forwarding rules:
 
 | Name      | Protocol | External ports | Internal IP address | Internal port |
 |-----------|----------|----------------|---------------------|---------------|
-| wireguard | UDP      | 51280          | 192.168.31.254      | 51820         |
+| wireguard | UDP      | 51820          | 192.168.31.254      | 51820         |
 
 Sources:
 - [problem in passthroughing USB tethering to VM](https://forum.proxmox.com/threads/problem-in-passthroughing-usb-tethering-to-vm.132902)
