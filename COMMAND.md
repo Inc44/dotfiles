@@ -106,9 +106,20 @@ Options:
 
 `command; command`: Run the commands sequentially
 
-`composer global require package`: Install a package globally using Composer
+`composer`: Execute Composer CLI commands
 
-`composer install`: Install dependencies from a `composer.json` file
+Options:
+
+- `create-project package project`: Create a new project from a package
+- `dumpautoload`: Regenerate autoload files
+- `global`: Run commands globally in the Composer directory
+- `install`: Install dependencies from the `composer.lock` file or fall back to the `composer.json` file
+	- `--no-dev`: Skip installing packages listed in `require-dev`
+	- `--optimize-autoloader`: Convert PSR-0/4 autoloading to classmap
+- `require package`: Install and add a package to the `composer.json` file
+	- `--with-all-dependencies`: Update dependencies of packages listed in `require` and `require-dev`
+- `self-update`: Update Composer to the latest version
+- `-V`: Display the version
 
 `conda list`: Display all installed packages in the current environment
 
