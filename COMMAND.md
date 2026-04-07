@@ -710,6 +710,7 @@ Options:
 - `db:seed`: Seed the database with records
 	- `--class=class`: Use a specific seeder class
 - `key:generate`: Generate a new secure key for the application
+- `make:auth`: Scaffold all routes and views needed for authentication (removed in Laravel 6)
 - `make:component name`: Create a new view component class
 	- `--view`: Create an anonymous view component (without a class)
 - `make:controller name`: Create a new controller
@@ -728,17 +729,34 @@ Options:
 - `make:notifications-table`: Generate a migration for the notifications table
 - `make:policy name`: Create a new empty policy class
 	- `--model=model`: Generate with example policy (with methods for CRUD operations)
+- `make:provider name`: Create a new provider
+- `make:queue-table`: Generate a migration for the jobs table
 - `make:request name`: Create a new form request class
+- `make:seeder name`: Create a new seeder class
 - `make:test name`: Create a new test case
 - `migrate`: Run database migrations
 - `migrate:fresh`: Drop all tables and then execute the `migrate` command
 	- `--seed`: Seed the database
+	- `--seeder=class`: Use a specific seeder class
+- `migrate:refresh`: Roll back all migrations and then execute the `migrate` command
+- `migrate:rollback`: Roll back the latest migration
+	- `--step=n`: Roll back the latest `n` migrations
+- `optimize`: Cache configuration, events, routes, and views
+- `queue:listen`: Start a queue worker and process new jobs as they are pushed onto the queue without the need to manually restart the worker when reloading updated code or resetting the application state
+- `queue:work`: Start a queue worker and process new jobs as they are pushed onto the queue
+	- `--queue=name,name,...,name`: Specify queues' priority
+- `route:cache`: Generate a route cache
+- `route:list`: Provide an overview of all routes
 - `serve`: Start the server
+- `storage:link`: Create the symbolic link from `storage/app/public` to the directory `public/storage`
+- `storage:unlink`: Destroy configured symbolic links
 - `test`: Run the tests
 	- `--filter=pattern`: Match the specified pattern (e.g., containing file name)
 	- `--stop-on-error`: Stop execution upon the first test error
 	- `--stop-on-failure`: Stop execution upon the first test failure
-	- `--testsuite=suite`: Match the specified test suite (e.g., `Unit`, `Feature`)
+	- `--testsuite=suite`: Match the specified test suite (e.g., `Feature`, `Unit`)
+- `ui package --auth`: Scaffold authentication system (added in Laravel 6)
+- `view:cache`: Precompile all views
 
 `php -r 'code'`: Execute PHP code directly on the command line
 
@@ -836,6 +854,10 @@ Options:
 `strings path`: Display printable strings found in a binary file located at the specified path
 
 `sudo command`: Execute the specified command with superuser (root) privileges
+
+Options:
+
+- `-H`: Set the HOME environment variable to the home directory of the root user
 
 `sudo su`: Switch the user to the root user
 
