@@ -706,7 +706,17 @@ Options:
 
 Options:
 
+- `config:cache`: Combine all configuration files into a single cached file
+- `db:seed`: Seed the database with records
+	- `--class=class`: Use a specific seeder class
 - `key:generate`: Generate a new secure key for the application
+- `make:component name`: Create a new view component class
+	- `--view`: Create an anonymous view component (without a class)
+- `make:controller name`: Create a new controller
+	- `-r` or `--resource`: Create a resource controller (with methods for CRUD operations)
+- `make:factory name`: Create a new factory
+- `make:job name`: Create a new queueable job class
+- `make:mail name`: Create a new mailable class
 - `make:middleware name`: Create a new middleware
 - `make:migration name`: Create a new database migration file
 - `make:model name`: Create a new Eloquent model
@@ -714,7 +724,10 @@ Options:
 	- `-f`: Generate a factory
 	- `-m`: Generate a migration
 	- `-s`: Generate a seeder
-- `make:policy name`: Create a new policy
+- `make:notification name`: Create a new notification class
+- `make:notifications-table`: Generate a migration for the notifications table
+- `make:policy name`: Create a new empty policy class
+	- `--model=model`: Generate with example policy (with methods for CRUD operations)
 - `make:request name`: Create a new form request class
 - `make:test name`: Create a new test case
 - `migrate`: Run database migrations
@@ -722,8 +735,12 @@ Options:
 	- `--seed`: Seed the database
 - `serve`: Start the server
 - `test`: Run the tests
+	- `--filter=pattern`: Match the specified pattern (e.g., containing file name)
 	- `--stop-on-error`: Stop execution upon the first test error
 	- `--stop-on-failure`: Stop execution upon the first test failure
+	- `--testsuite=suite`: Match the specified test suite (e.g., `Unit`, `Feature`)
+
+`php -r 'code'`: Execute PHP code directly on the command line
 
 `pihole status`: Display the status of the Pi-hole
 
