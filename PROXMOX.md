@@ -73,6 +73,20 @@ iface enxXXXXXXXXXXXX inet dhcp
 ```bash
 systemctl restart networking
 ```
+### Connecting Shared Network Bridge
+```bash
+nano /etc/network/interfaces
+```
+Modify
+```bash
+auto nic0
+iface nic0 inet static
+	address 192.168.137.2/24
+	gateway 192.168.137.1
+```
+```bash
+systemctl restart networking
+```
 ### Installing iwlwifi Driver for Intel Wi-Fi 7 Support
 ```bash
 wget http://ftp.debian.org/debian/pool/non-free-firmware/f/firmware-nonfree/firmware-iwlwifi_20251111-1_all.deb
