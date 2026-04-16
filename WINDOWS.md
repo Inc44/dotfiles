@@ -1,4 +1,4 @@
-### Creating Shared Network Bridge
+### Creating Shared Network
 Press Win and R
 
 Type `ncpa.cpl`
@@ -14,6 +14,28 @@ Turn on `Allow other network users to connect through this computer's Internet c
 Select `Ethernet`
 
 Click `OK`
+### Creating Bridged Network
+Press Win and R
+
+Type `ncpa.cpl`
+
+Right click `Wi-Fi`
+
+Click `Properties`
+
+Click `Sharing`
+
+Turn off `Allow other network users to connect through this computer's Internet connection`
+
+Click `OK`
+
+Hold Ctrl
+
+Click `Wi-Fi`
+
+Click `Ethernet`
+
+Right click `Bridge Connections`
 ### Repairing BCD
 Click `Next`
 
