@@ -81,7 +81,7 @@ Modify
 ```bash
 auto nic0
 iface nic0 inet static
-	address 192.168.137.2/24
+	address 192.168.137.254/24
 	gateway 192.168.137.1
 ```
 ```bash
@@ -173,6 +173,39 @@ zfs create -s -V 2G fastest/vm-101-disk-0
 zfs create -s -V 2T fastest/vm-101-disk-1
 zfs create -s -V 2T fastest/vm-101-disk-2
 ```
+### Configuring Network Bonding
+```bash
+nano /etc/network/interfaces
+```
+Comment out
+```bash
+# auto nic0
+# iface nic0 inet static
+# 	address 192.168.137.254/24
+# 	gateway 192.168.137.1
+
+# auto wlan0
+# iface wlan0 inet dhcp
+```
+Add
+```bash
+iface nic0 inet manual
+
+iface wlan0 inet manual
+
+auto bond0
+iface bond0 inet static
+	address 192.168.31.254/24
+	gateway 192.168.31.1
+	bond-slaves nic0 wlan0
+	bond-mode active-backup
+	bond-miimon 100
+	bond-primary nic0
+	post-up ip addr add 192.168.137.254/24 dev bond0
+```
+```bash
+systemctl restart networking
+```
 ### Configuring Bridge
 ```bash
 nano /etc/network/interfaces
@@ -186,14 +219,14 @@ iface vmbr0 inet static
 	bridge-stp off
 	bridge-fd 0
 	post-up echo 1 > /proc/sys/net/ipv4/ip_forward
-	post-up iptables -t nat -A POSTROUTING -s '10.10.10.0/24' -o wlan0 -j MASQUERADE
-	post-down iptables -t nat -D POSTROUTING -s '10.10.10.0/24' -o wlan0 -j MASQUERADE
-	# post-up iptables -t nat -A PREROUTING -i wlan0 -p tcp -m multiport --dports 47984,47989,47990,48010 -j DNAT --to-destination 10.10.10.101
-	# post-up iptables -t nat -A PREROUTING -i wlan0 -p udp -m multiport --dports 47998,47999,48000,48002,48010 -j DNAT --to-destination 10.10.10.101
-	post-up iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 12321 -j DNAT --to-destination 10.10.10.200
-	post-up iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 445 -j DNAT --to-destination 10.10.10.200
-	post-up iptables -t nat -A PREROUTING -i wlan0 -p udp --dport 51820 -j DNAT --to-destination 10.10.10.201
-	post-down iptables -t nat -D PREROUTING -i wlan0 -p udp --dport 51820 -j DNAT --to-destination 10.10.10.201
+	post-up iptables -t nat -A POSTROUTING -s '10.10.10.0/24' -o bond0 -j MASQUERADE
+	post-down iptables -t nat -D POSTROUTING -s '10.10.10.0/24' -o bond0 -j MASQUERADE
+	# post-up iptables -t nat -A PREROUTING -i bond0 -p tcp -m multiport --dports 47984,47989,47990,48010 -j DNAT --to-destination 10.10.10.101
+	# post-up iptables -t nat -A PREROUTING -i bond0 -p udp -m multiport --dports 47998,47999,48000,48002,48010 -j DNAT --to-destination 10.10.10.101
+	post-up iptables -t nat -A PREROUTING -i bond0 -p tcp --dport 12321 -j DNAT --to-destination 10.10.10.200
+	post-up iptables -t nat -A PREROUTING -i bond0 -p tcp --dport 445 -j DNAT --to-destination 10.10.10.200
+	post-up iptables -t nat -A PREROUTING -i bond0 -p udp --dport 51820 -j DNAT --to-destination 10.10.10.201
+	post-down iptables -t nat -D PREROUTING -i bond0 -p udp --dport 51820 -j DNAT --to-destination 10.10.10.201
 ```
 ```bash
 systemctl restart networking
@@ -873,3 +906,4 @@ Sources:
 - [Full WireGuard VPN Setup on Proxmox VE Using Ubuntu Server 22.04](https://youtu.be/reBGabIiv8s)
 - [Use Proxmox as a VPN server with WireGuard.](https://youtu.be/SRa76aFFK3Y)
 - [Build your OWN WireGuard VPN! Here's how](https://youtu.be/5NJ6V8i1Xd8)
+- [Network Bonding on Proxmox!](https://youtu.be/auMugO3zsKw)
