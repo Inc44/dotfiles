@@ -1,11 +1,25 @@
 ### Proxmox Installation
 Download [Proxmox VE 9.1 ISO Installer](https://enterprise.proxmox.com/iso/proxmox-ve_9.1-1.iso)
 
-Copy to Ventoy USB and boot
+Copy to Ventoy USB and boot in normal mode
 #### End User License Agreement (EULA)
 `I agree`
 #### Proxmox Virtual Environment (PVE)
 Target Harddisk `/dev/sda (your_disk)`
+
+`Options`
+
+hdsize `403.0` GB (1 GB boot, 16 GB swap, 64 GB root, 16 GB free, 66 GB LVM, 240 GB LVM-Thin)
+
+swapsize `16` GB
+
+maxroot `64` GB
+
+minfree `16` GB
+
+maxvz `66` GB (64 GB tdata, 1 GB tmeta, 1 GB pmspare)
+
+`OK`
 
 `Next`
 #### Location and Time Zone selection
@@ -29,9 +43,9 @@ Management Interface `nic0 - XX:XX:XX:XX:XX:XX (your_interface)`
 
 Hostname (FQDN) `pve.yourdomain`
 
-IP Address (CIDR) `192.168.100.2`/`24`
+IP Address (CIDR) `192.168.31.254`/`24`
 
-Gateway `192.168.100.1`
+Gateway `192.168.31.1`
 
 DNS Server `127.0.0.1`
 
