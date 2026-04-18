@@ -103,10 +103,10 @@ systemctl restart networking
 ```
 ### Installing iwlwifi Driver for Intel Wi-Fi 7 Support
 ```bash
-wget http://ftp.debian.org/debian/pool/non-free-firmware/f/firmware-nonfree/firmware-iwlwifi_20251111-1_all.deb
-dpkg -x firmware-iwlwifi_20251111-1_all.deb firmware-iwlwifi
+wget http://ftp.debian.org/debian/pool/non-free-firmware/f/firmware-nonfree/firmware-iwlwifi_20260309-1_all.deb
+dpkg -x firmware-iwlwifi_20260309-1_all.deb firmware-iwlwifi
 cp -r firmware-iwlwifi/usr/lib/firmware/* /lib/firmware
-update-initramfs -k all -u
+update-initramfs -u -k all
 reboot
 ```
 ### Using No-Subscription
@@ -116,9 +116,13 @@ mv /etc/apt/sources.list.d/ceph.sources /etc/apt/sources.list.d/ceph.sources.bak
 echo "deb http://download.proxmox.com/debian/pve trixie pve-no-subscription" > /etc/apt/sources.list.d/pve-no-subscription.list
 echo "deb http://download.proxmox.com/debian/ceph-squid trixie no-subscription" > /etc/apt/sources.list.d/ceph-no-subscription.list
 ```
-### Connecting Wi-Fi
+### System Update
 ```bash
 apt update
+apt upgrade
+```
+### Connecting Wi-Fi
+```bash
 apt install iwd
 systemctl enable iwd
 systemctl start iwd
