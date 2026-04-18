@@ -121,6 +121,24 @@ echo "deb http://download.proxmox.com/debian/ceph-squid trixie no-subscription" 
 apt update
 apt upgrade
 ```
+### Purge Old Kernels
+Identify your current kernel
+```
+uname -r
+```
+List all installed kernels
+```
+dpkg -l | grep proxmox-kernel-.*-pve-signed | awk '{ print $2 }'
+```
+Remove old kernels
+```
+apt purge proxmox-kernel-old-pve-signed
+```
+### Update GRUB configuration
+```
+grub-mkconfig -o /boot/efi/EFI/proxmox/grub.cfg
+reboot
+```
 ### Connecting Wi-Fi
 ```bash
 apt install iwd

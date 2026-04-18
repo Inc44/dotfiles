@@ -5,7 +5,7 @@
 ```
 sudo apt update
 sudo apt upgrade
-sudo apt autoremove
+sudo apt autoremove --purge
 sudo apt autoclean
 sudo apt clean
 pip cache purge
