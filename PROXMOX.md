@@ -911,6 +911,44 @@ Port forwarding rules:
 |-----------|----------|----------------|---------------------|---------------|
 | wireguard | UDP      | 51820          | 192.168.31.254      | 51820         |
 
+### Configuring LUKS
+```bash
+apt install cryptsetup cryptsetup-initramfs
+reboot
+```
+Select `Advanced options for Proxmox VE GNU/Linux`
+
+Select `Proxmox VE GNU/Linux, with Linux .*-pve (recovery mode)`
+
+Press e
+
+Append `rw break=premount` to the `linux` line
+
+Press Ctrl + X or F10
+```bash
+vgchange -an
+cryptsetup reencrypt --encrypt /dev/sda3 --reduce-device-size 32M --pbkdf pbkdf2
+cryptsetup open /dev/sda3 crypt
+lvm pvresize /dev/mapper/crypt
+vgchange -ay
+mkdir /sysroot
+mount /dev/mapper/pve-root /sysroot
+mount /dev/sda2 /sysroot/boot/efi
+mount -t sysfs /sys /sysroot/sys
+mount -t proc /proc /sysroot/proc
+mount -o bind /dev /sysroot/dev
+mount -o bind /dev/pts /sysroot/dev/pts
+mount -o bind /run /sysroot/run
+chroot /sysroot
+echo "crypt UUID=$(blkid -s UUID -o value /dev/sda3) none luks,discard" >> /etc/crypttab
+update-initramfs -u -k all
+echo "GRUB_ENABLE_CRYPTODISK=y" >> /etc/default/grub
+grub-mkconfig -o /boot/efi/EFI/proxmox/grub.cfg
+exit
+exit
+reboot
+```
+
 Sources:
 - [problem in passthroughing USB tethering to VM](https://forum.proxmox.com/threads/problem-in-passthroughing-usb-tethering-to-vm.132902)
 - [How to update iwlwifi firmware without uninstalling proxmox](https://forum.proxmox.com/threads/how-to-update-iwlwifi-firmware-without-uninstalling-proxmox.133385)
@@ -925,3 +963,6 @@ Sources:
 - [Use Proxmox as a VPN server with WireGuard.](https://youtu.be/SRa76aFFK3Y)
 - [Build your OWN WireGuard VPN! Here's how](https://youtu.be/5NJ6V8i1Xd8)
 - [Network Bonding on Proxmox!](https://youtu.be/auMugO3zsKw)
+- [Proxmox VE 9.0-1 install via Ventoy - kernel panic](https://forum.proxmox.com/threads/proxmox-ve-9-0-1-install-via-ventoy-kernel-panic.174830)
+- [Installing Proxmox VE](https://pve.proxmox.com/pve-docs/chapter-pve-installation.html)
+- [Proxmox - EXT4 LUKS Encyption Tutorial](https://youtu.be/pIjoSK1GmdY)
