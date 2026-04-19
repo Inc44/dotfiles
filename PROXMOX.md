@@ -917,6 +917,7 @@ Your customized rules
 
 | Application/Service | Internal port | External port | Protocol |
 |---------------------|---------------|---------------|----------|
+| dropbear            | 4452          | 4452          | TCP      |
 | wireguard           | 51820         | 51820         | UDP      |
 
 ##### Xiaomi Router
@@ -927,6 +928,7 @@ Port forwarding rules:
 
 | Name      | Protocol | External ports | Internal IP address | Internal port |
 |-----------|----------|----------------|---------------------|---------------|
+| dropbear  | TCP      | 4452           | 192.168.31.254      | 4452          |
 | wireguard | UDP      | 51820          | 192.168.31.254      | 51820         |
 
 ### Configuring LUKS
@@ -979,6 +981,23 @@ exit
 exit
 reboot
 ```
+### Creating Dropbear Keys from Laptop
+```bash
+ssh-keygen -f ~/.ssh/dropbear
+cat ~/.ssh/dropbear.pub
+```
+### Configuring Dropbear
+```bash
+apt install dropbear-initramfs
+echo 'DROPBEAR_OPTIONS="-s -j -k -p 4452 -I 30"' >> /etc/dropbear/initramfs/dropbear.conf
+echo "IP=192.168.31.254::192.168.31.1:255.255.255.0::nic0:off" >> /etc/initramfs-tools/initramfs.conf
+nano /etc/dropbear/initramfs/authorized_keys
+update-initramfs -u
+```
+### Connecting Dropbear from Laptop
+```bash
+ssh -p 4452 root@192.168.31.254
+```
 
 Sources:
 - [problem in passthroughing USB tethering to VM](https://forum.proxmox.com/threads/problem-in-passthroughing-usb-tethering-to-vm.132902)
@@ -997,3 +1016,4 @@ Sources:
 - [Proxmox VE 9.0-1 install via Ventoy - kernel panic](https://forum.proxmox.com/threads/proxmox-ve-9-0-1-install-via-ventoy-kernel-panic.174830)
 - [Installing Proxmox VE](https://pve.proxmox.com/pve-docs/chapter-pve-installation.html)
 - [Proxmox - EXT4 LUKS Encyption Tutorial](https://youtu.be/pIjoSK1GmdY)
+- [Dropbear ssh: How to remotely unlock an encrypted machine](https://youtu.be/7TLPExkUHqw)
