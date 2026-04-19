@@ -931,7 +931,13 @@ Port forwarding rules:
 
 ### Configuring LUKS
 ```bash
-apt install cryptsetup cryptsetup-initramfs
+apt install cryptsetup cryptsetup-initramfs parted
+umount /dev/sda2
+parted /dev/sda
+resizepart 2 512MiB
+mkpart primary ext4 512MiB 1024MiB
+quit
+mkfs.ext4 /dev/sda4
 reboot
 ```
 Select `Advanced options for Proxmox VE GNU/Linux`
@@ -945,12 +951,19 @@ Append `rw break=premount` to the `linux` line
 Press Ctrl + X or F10
 ```bash
 vgchange -an
-cryptsetup reencrypt --encrypt /dev/sda3 --reduce-device-size 32M --pbkdf pbkdf2
+cryptsetup reencrypt --encrypt /dev/sda3 --reduce-device-size 32M
 cryptsetup open /dev/sda3 crypt
 lvm pvresize /dev/mapper/crypt
 vgchange -ay
 mkdir /sysroot
+mkdir /sysboot
 mount /dev/mapper/pve-root /sysroot
+mount /dev/sda4 /sysboot
+cp -a /sysroot/boot/. /sysboot
+umount /sysboot
+rm -rf /sysroot/boot
+mkdir /sysroot/boot
+mount /dev/sda4 /sysroot/boot
 mount /dev/sda2 /sysroot/boot/efi
 mount -t sysfs /sys /sysroot/sys
 mount -t proc /proc /sysroot/proc
@@ -958,9 +971,9 @@ mount -o bind /dev /sysroot/dev
 mount -o bind /dev/pts /sysroot/dev/pts
 mount -o bind /run /sysroot/run
 chroot /sysroot
+echo "UUID=$(blkid -s UUID -o value /dev/sda4) /boot ext4 defaults 0 1" >> /etc/fstab
 echo "crypt UUID=$(blkid -s UUID -o value /dev/sda3) none luks,discard" >> /etc/crypttab
 update-initramfs -u -k all
-echo "GRUB_ENABLE_CRYPTODISK=y" >> /etc/default/grub
 grub-mkconfig -o /boot/efi/EFI/proxmox/grub.cfg
 exit
 exit
