@@ -219,7 +219,9 @@ Comment out
 # iface nic0 inet static
 # 	address 192.168.137.254/24
 # 	gateway 192.168.137.1
-
+```
+And
+```bash
 # auto wlan0
 # iface wlan0 inet dhcp
 ```
@@ -990,13 +992,16 @@ cat ~/.ssh/dropbear.pub
 ```bash
 apt install dropbear-initramfs
 echo 'DROPBEAR_OPTIONS="-s -j -k -p 4452 -I 30"' >> /etc/dropbear/initramfs/dropbear.conf
-echo "IP=192.168.31.254::192.168.31.1:255.255.255.0::nic0:off" >> /etc/initramfs-tools/initramfs.conf
+echo "IP=192.168.31.254::192.168.31.1:255.255.255.0::enp130s0:off" >> /etc/initramfs-tools/initramfs.conf
 nano /etc/dropbear/initramfs/authorized_keys
 update-initramfs -u
 ```
 ### Connecting Dropbear from Laptop
 ```bash
-ssh -p 4452 root@192.168.31.254
+ssh -i ~/.ssh/dropbear -p 4452 root@192.168.31.254
+```
+```bash
+cryptroot-unlock
 ```
 
 Sources:
