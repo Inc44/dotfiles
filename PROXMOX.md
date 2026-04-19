@@ -1003,6 +1003,11 @@ ssh -i ~/.ssh/dropbear -p 4452 root@192.168.31.254
 ```bash
 cryptroot-unlock
 ```
+### Installing Iperf3
+```bash
+apt install iperf3
+```
+Start Iperf3 as a daemon automatically? `<Yes>`
 
 Sources:
 - [problem in passthroughing USB tethering to VM](https://forum.proxmox.com/threads/problem-in-passthroughing-usb-tethering-to-vm.132902)

@@ -498,6 +498,8 @@ Options:
 
 `ipconfig /flushdns`: Flush the DNS resolver cache
 
+`iperf3 -s`: Run the server for a network throughput test
+
 `iptables`: Configure IPv4 packet filtering and NAT
 
 Options:
