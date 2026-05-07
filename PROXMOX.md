@@ -9,15 +9,15 @@ Target Harddisk `/dev/sda (your_disk)`
 
 `Options`
 
-hdsize `403.0` GB (1 GB boot, 16 GB swap, 64 GB root, 16 GB free, 66 GB LVM, 240 GB LVM-Thin)
+hdsize `217.0` GB (1 GB boot, 16 GB swap, 100 GB root, 0 GB free, 0 GB LVM, 0 GB LVM-Thin)
 
 swapsize `16` GB
 
-maxroot `64` GB
+maxroot `100` GB
 
-minfree `16` GB
+minfree `0` GB
 
-maxvz `66` GB (64 GB tdata, 1 GB tmeta, 1 GB pmspare)
+maxvz `0` GB
 
 `OK`
 
@@ -60,6 +60,11 @@ DNS Server `127.0.0.1`
 pve login: `root`
 
 Password: `your_password`
+### Resizing Root Partition
+```bash
+lvextend -L 100G /dev/pve/root
+resize2fs /dev/mapper/pve-root
+```
 ### Connecting USB Tethering
 Connect Android phone via USB and `Use USB for` > `USB Tethering`
 ```bash
@@ -73,8 +78,8 @@ Comment out
 ```bash
 # auto vmbr0
 # iface vmbr0 inet static
-# 	address 192.168.100.2/24
-# 	gateway 192.168.100.1
+# 	address 192.168.31.254/24
+# 	gateway 192.168.31.1
 # 	bridge-ports nic0
 # 	bridge-stp off
 # 	bridge-fd 0
@@ -103,9 +108,10 @@ systemctl restart networking
 ```
 ### Installing iwlwifi Driver for Intel Wi-Fi 7 Support
 ```bash
-wget http://ftp.debian.org/debian/pool/non-free-firmware/f/firmware-nonfree/firmware-iwlwifi_20260309-1_all.deb
-dpkg -x firmware-iwlwifi_20260309-1_all.deb firmware-iwlwifi
+wget http://ftp.debian.org/debian/pool/non-free-firmware/f/firmware-nonfree/firmware-iwlwifi_20260410-1_all.deb
+dpkg -x firmware-iwlwifi_20260410-1_all.deb firmware-iwlwifi
 cp -r firmware-iwlwifi/usr/lib/firmware/* /lib/firmware
+rm -r firmware-iwlwifi*
 update-initramfs -u -k all
 reboot
 ```
@@ -120,6 +126,7 @@ echo "deb http://download.proxmox.com/debian/ceph-squid trixie no-subscription" 
 ```bash
 apt update
 apt upgrade
+reboot
 ```
 ### Purge Old Kernels
 Identify your current kernel
@@ -128,11 +135,11 @@ uname -r
 ```
 List all installed kernels
 ```
-dpkg -l | grep proxmox-kernel-.*-pve-signed | awk '{ print $2 }'
+dpkg -l | grep proxmox-kernel | awk '{ print $2 }'
 ```
 Remove old kernels
 ```
-apt purge proxmox-kernel-old-pve-signed
+apt purge proxmox-kernel-old
 ```
 ### Update GRUB configuration
 ```
@@ -297,8 +304,8 @@ systemctl restart dnsmasq
 ```bash
 apt install build-essential dkms
 apt install proxmox-default-kernel proxmox-default-headers
-wget -O /tmp/i915-sriov-dkms_2026.03.05_amd64.deb "https://github.com/strongtz/i915-sriov-dkms/releases/download/2026.03.05/i915-sriov-dkms_2026.03.05_amd64.deb"
-dpkg -i /tmp/i915-sriov-dkms_2026.03.05_amd64.deb
+wget -O /tmp/i915-sriov-dkms_2026.05.06_amd64.deb "https://github.com/strongtz/i915-sriov-dkms/releases/download/2026.05.06/i915-sriov-dkms_2026.05.06_amd64.deb"
+dpkg -i /tmp/i915-sriov-dkms_2026.05.06_amd64.deb
 nano /etc/default/grub (`GRUB_CMDLINE_LINUX_DEFAULT="intel_iommu=on i915.enable_guc=3 i915.max_vfs=7 module_blacklist=xe loglevel=0 quiet"`)
 update-grub
 update-initramfs -u
