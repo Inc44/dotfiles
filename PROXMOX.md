@@ -212,9 +212,6 @@ zpool create \
 -O xattr=sa \
 fastest nvme0n1
 pvesm add zfspool fastest --content images,rootdir --pool fastest --sparse 1
-zfs create -s -V 2G fastest/vm-101-disk-0
-zfs create -s -V 2T fastest/vm-101-disk-1
-zfs create -s -V 2T fastest/vm-101-disk-2
 ```
 ### Configuring Network Bonding
 ```bash
@@ -322,10 +319,32 @@ EOF
 update-initramfs -u
 reboot
 ```
+### Downloading ISO Images
+Select `local (pve)`
+
+Select `ISO Images`
+
+Click `Download from URL`
+
+URL: `https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.271-1/virtio-win-0.1.271.iso`
+
+Click `Query URL`
+
+Click `Download`
+
+Click `Download from URL`
+
+URL: `https://fastly.mirror.pkgbuild.com/iso/latest/archlinux-x86_64.iso`
+
+Click `Query URL`
+
+Click `Download`
+### Loading ZFS
+```bash
+zfs load-key fastest
+```
 ### Creating Windows VM
 Click `Create VM`
-
-Turn on `Advanced`
 #### General
 Name: `Windows`
 
@@ -343,7 +362,7 @@ Click `Next`
 #### System
 Graphic card: `VirtIO-GPU`
 
-EFI Storage: `local-lvm`
+EFI Storage: `fastest`
 
 Turn off `Pre-Enroll keys`
 
@@ -353,13 +372,23 @@ Click `Next`
 #### Disks
 Bus/Device: `VirtIO Block`
 
-Disk size (GiB): `100`
+Disk size (GiB): `2`
 
 Turn on `Discard`
 
 Click `Add`
 
-Disk size (GiB): `100`
+Select `virtio1`
+
+Disk size (GiB): `101`
+
+Turn on `Discard`
+
+Click `Add`
+
+Select `virtio2`
+
+Disk size (GiB): `101`
 
 Turn on `Discard`
 
@@ -389,6 +418,16 @@ Select `Hardware`
 
 Click `Add`
 
+Select `CD/DVD Drive`
+
+Storage: `local`
+
+ISO Image: `archlinux-x86_64.iso`
+
+Click `Add`
+
+Click `Add`
+
 Select `USB Device`
 
 Turn on `Use USB Port`
@@ -401,19 +440,61 @@ Select `Options`
 
 Double click on `Boot Order`
 
-Turn off `Enabled` for `ide2`
+Turn off `Enabled` for all
+
+Turn on `Enabled` for `ide1`
+
+Move `ide1` above all
+
+Click `OK`
+
+Select `Console`
+
+Click `Start Now`
+
+Follow [Partitioning Disk](ARCH.md)
+
+Select `Hardware`
+
+Select `Hard Disk (virtio2)`
+
+Click `Detach`
+
+Select `Options`
+
+Double click on `Boot Order`
+
+Turn off `Enabled` for all
 
 Turn on `Enabled` for `usb0`
 
 Move `usb0` above all
 
-Click `Ok`
+Click `OK`
 
 Select `Console`
 
 Click `Start Now`
 
 Follow [Installing from Rufus USB](WINDOWS_RUFUS.md)
+
+Select `Options`
+
+Double click on `Boot Order`
+
+Turn off `Enabled` for all
+
+Turn on `Enabled` for `virtio0`
+
+Turn on `Enabled` for `virtio1`
+
+Move `virtio0` above all
+
+Click `OK`
+
+Select `Console`
+
+Click `Start Now`
 
 Follow [Configuring Initial Privacy](WINDOWS.md)
 
@@ -449,6 +530,12 @@ Turn on `PCI-Express`
 
 Click `Add`
 
+Double click on `Unused Disk 0`
+
+Turn on `Discard`
+
+Click `Add`
+
 Select `Console`
 
 Click `Start Now`
@@ -458,6 +545,26 @@ Follow [Configuring Initial Password](WINDOWS.md)
 Follow [Installing NVIDIA Drivers](WINDOWS.md)
 
 Follow [Installing Intel Drivers](WINDOWS.md)
+
+Click `Shutdown`
+
+Select `Options`
+
+Double click on `Boot Order`
+
+Turn off `Enabled` for all
+
+Turn on `Enabled` for `ide1`
+
+Move `ide1` above all
+
+Click `OK`
+
+Select `Console`
+
+Click `Start Now`
+
+Follow [Partitioning Disk](ARCH.md)
 ### Creating Arch Linux VM from Laptop
 Click `Create VM`
 #### General
@@ -564,8 +671,6 @@ Select `Console`
 Click `Start Now`
 ### Creating Windows VM from Laptop
 Click `Create VM`
-
-Turn on `Advanced`
 #### General
 Name: `WindowsLaptop`
 
