@@ -135,6 +135,8 @@ Click `Browse my computer for drivers`
 Click `Next`
 
 Click `Close`
+
+Restart
 ### Configuring Initial Password
 Click `OK`
 
@@ -151,6 +153,20 @@ Predownload [NVIDIA Studio Driver](https://www.nvidia.com/en-us/drivers)
 Copy `.*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe` to USB
 
 Install `.*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe`
+
+Click `AGREE AND CONTINUE`
+
+Select `Custom (Advanced)`
+
+Turn on `Perform a clean installation`
+
+Click `Next`
+
+Turn off `Create desktop shortcut for NVIDIA App`
+
+Turn off `Launch NVIDIA App`
+
+Click `Close`
 ### Installing Intel Drivers
 Predownload [Intel® Arc™ Graphics - Windows*](https://www.intel.com/content/www/us/en/download/785597/873358)
 
@@ -197,14 +213,16 @@ Select `Dark`
 Turn off `Transparency effects`
 
 Select `Iris pastel`
-### Configuring Taskbar
-Right click Taskbar
 
-Select `Show Search button`
+Click `Back`
 
-Right click Taskbar
+Click `Taskbar`
 
-Select Show Task View button`
+Click `Search icon only`
+
+Select `Hide`
+
+Turn off `Task View`
 ### Configuring Win 10 Tweaker
 Predownload [Win 10 Tweaker](https://win10tweaker.ru)
 
