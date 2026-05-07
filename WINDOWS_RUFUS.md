@@ -24,7 +24,7 @@ Select `Red Hat VirtIO SCSI controller`
 
 Click `Install`
 
-Select `Disk 1 Unallocated Space`
+Select `Disk 2 Partition 1`
 
 Click `Next`
 

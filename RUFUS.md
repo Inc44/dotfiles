@@ -46,6 +46,12 @@ Click `Download`
 
 Click `Save`
 
+Or
+
+Click `SELECT`
+
+Filename: `26200.6584.250915-1905.25h2_ge_release_svc_refresh_CLIENT_CONSUMER_x64FRE_en-us.iso`
+
 Click `START`
 
 Customize Windows installation?
@@ -56,7 +62,9 @@ Customize Windows installation?
 - [ ] Set regional options to the same values as this user's
 - [x] Disable data collection (Skip privacy questions)
 - [x] Disable BitLocker automatic device encryption
+- [x] QoL improvements (Don't force Copilot, OneDrive, Outlook, Fast Startup, etc.)
 - [ ] Use 'Windows CA 2023' signed bootloaders (requires a compatible target PC)
+- [ ] Apply SkuSiPolicy.p7b on installation (See KB5042562)
 
 Click `OK`
 
