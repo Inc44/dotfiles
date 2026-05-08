@@ -350,7 +350,7 @@ Name: `Windows`
 
 Click `Next`
 #### OS
-Turn on `Do not use any media`
+ISO image: `archlinux-x86_64.iso`
 
 Type: `Microsoft Windows`
 
@@ -418,16 +418,6 @@ Select `Hardware`
 
 Click `Add`
 
-Select `CD/DVD Drive`
-
-Storage: `local`
-
-ISO Image: `archlinux-x86_64.iso`
-
-Click `Add`
-
-Click `Add`
-
 Select `USB Device`
 
 Turn on `Use USB Port`
@@ -442,9 +432,7 @@ Double click on `Boot Order`
 
 Turn off `Enabled` for all
 
-Turn on `Enabled` for `ide1`
-
-Move `ide1` above all
+Turn on `Enabled` for `ide2`
 
 Click `OK`
 
@@ -467,8 +455,6 @@ Double click on `Boot Order`
 Turn off `Enabled` for all
 
 Turn on `Enabled` for `usb0`
-
-Move `usb0` above all
 
 Click `OK`
 
@@ -554,9 +540,7 @@ Double click on `Boot Order`
 
 Turn off `Enabled` for all
 
-Turn on `Enabled` for `ide1`
-
-Move `ide1` above all
+Turn on `Enabled` for `ide2`
 
 Click `OK`
 
@@ -565,6 +549,118 @@ Select `Console`
 Click `Start Now`
 
 Follow [Partitioning Disk](ARCH.md)
+### Creating Arch Linux VM
+Click `Create VM`
+#### General
+Name: `ArchLinux`
+
+Click `Next`
+#### OS
+ISO image: `archlinux-x86_64.iso`
+
+Click `Next`
+#### System
+Graphic card: `VirtIO-GPU`
+
+Machine: `q35`
+
+BIOS: `OVMF (UEFI)`
+
+EFI Storage: `fastest`
+
+Turn off `Pre-Enroll keys`
+
+Click `Next`
+#### Disks
+Bus/Device: `VirtIO Block`
+
+Disk size (GiB): `2`
+
+Turn on `Discard`
+
+Click `Add`
+
+Select `virtio1`
+
+Disk size (GiB): `101`
+
+Turn on `Discard`
+
+Click `Add`
+
+Select `virtio2`
+
+Disk size (GiB): `101`
+
+Turn on `Discard`
+
+Click `Next`
+#### CPU
+Cores: `20`
+
+Type: `host`
+
+Click `Next`
+#### Memory
+Memory (MiB): `81920`
+
+Click `Next`
+#### Network
+MAC Address: `BC:24:11:01:00:01`
+
+Click `Next`
+#### Confirm
+Click `Finish`
+
+Select `101 (ArchLinux)`
+
+Select `Options`
+
+Double click on `Boot Order`
+
+Turn off `Enabled` for all
+
+Turn on `Enabled` for `ide2`
+
+Click `OK`
+
+Select `Hardware`
+
+Click `Add`
+
+Select `PCI Device`
+
+Turn on `Raw Device`
+
+Device: `0000:02:00.0` <!--AD106 [GeForce RTX 4060 Ti 16GB]-->
+
+Turn on `All Functions`
+
+Turn on `PCI-Express`
+
+Click `Add`
+
+Select `Console`
+
+Click `Start Now`
+
+Follow [Partitioning Disk](ARCH.md)
+
+Follow [Installing Arch Linux](ARCH.md)
+
+Select `Options`
+
+Double click on `Boot Order`
+
+Turn off `Enabled` for all
+
+Turn on `Enabled` for `virtio0`
+
+Click `OK`
+
+Select `Console`
+
+Click `Start Now`
 ### Creating Arch Linux VM from Laptop
 Click `Create VM`
 #### General
@@ -650,7 +746,7 @@ Turn on `Enabled` for `usb0`
 
 Move `usb0` above all
 
-Click `Ok`
+Click `OK`
 
 Select `Hardware`
 
@@ -758,7 +854,7 @@ Turn on `Enabled` for `usb0`
 
 Move `usb0` above all
 
-Click `Ok`
+Click `OK`
 
 Select `Hardware`
 
