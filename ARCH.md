@@ -72,6 +72,11 @@ sudo rm -r yay
 ```bash
 sudo nano /etc/pacman.conf
 ```
+Uncomment
+```bash
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+```
 Append
 ```bash
 [lizardbyte]
@@ -83,11 +88,11 @@ sudo pacman -Sy
 ```
 ### Pacman Installing Everything
 ```bash
-sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote audacity blender bspwm clinfo cmake composer conky cuda cuda-tools cups curl discord docker emacs eog ffmpeg firefox ghidra ghidra ghostscript git-lfs github-cli gnome-screenshot go gparted grub-customizer gsfonts hashcat hashcat-utils hplip httrack inkscape intel-compute-runtime jdk-openjdk john kitty kiwix-desktop lib32-nvidia-utils libgda6 libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk linux linux-lts lua-socket luarocks ly mariadb mokutil mono mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen nodejs noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia nvidia-lts nvidia-settings nvidia-utils nvtop obs-studio obsidian oculante ollama-cuda opam opencl-headers os-prober pacman-contrib patchelf pavucontrol pdf2svg perl-file-mimeinfo php php-apache phpmyadmin picom pinta polybar power-profiles-daemon powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone reflector rofi rsync rust rxvt-unicode solaar speedtest-cli sqlite3 sqlitebrowser steam stow sunshine sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr the_silver_searcher thunderbird time tk tmux torbrowser-launcher tree unpaper unzip veracrypt vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip xorg-xkill yt-dlp zathura zathura-pdf-mupdf zig zsh
+sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote audacity blender bspwm clinfo cmake composer conky cuda cups curl discord dkms docker emacs eog ffmpeg firefox ghidra ghostscript git-lfs github-cli gnome-screenshot go gparted gsfonts hashcat hashcat-utils hplip httrack inkscape intel-compute-runtime jdk-openjdk john kitty kiwix-desktop lib32-nvidia-utils libgda6 libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk linux linux-lts lua-socket luarocks ly mariadb mokutil mono mpc mpd mpv nautilus ncmpcpp net-tools nodejs noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia-open-dkms nvidia-settings nvidia-utils nvtop obs-studio obsidian oculante ollama-cuda opam opencl-headers os-prober pacman-contrib patchelf pavucontrol pdf2svg perl-file-mimeinfo php php-apache phpmyadmin picom polybar power-profiles-daemon powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone reflector rofi rsync rust rxvt-unicode solaar speedtest-cli sqlite3 sqlitebrowser steam stow sunshine sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr the_silver_searcher thunderbird time tk tmux torbrowser-launcher tree unpaper unzip veracrypt vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip xorg-xkill yt-dlp zathura zathura-pdf-mupdf zig zsh
 ```
 ### Yay Installing Everything
 ```
-yay -S activitywatch-bin anydesk-bin bambustudio-bin betterlockscreen cyberghostvpn czkawka-gui-bin egpu-switcher microsoft-edge-stable-bin mkinitcpio-firmware normcap nvidia-container-toolkit parsec-bin peazip qview rclone-browser visual-studio-code-bin wrk xdman-beta-bin xwinwrap-0.9-bin yandex-browser
+yay -S activitywatch-bin anydesk-bin bambustudio-bin betterlockscreen cyberghostvpn czkawka-gui-bin egpu-switcher grub-customizer microsoft-edge-stable-bin mkinitcpio-firmware neofetch nitrogen normcap nvidia-container-toolkit parsec-bin peazip pinta qview rclone-browser visual-studio-code-bin wrk xdman-beta-bin xwinwrap-0.9-bin yandex-browser
 ```
 ### Flatpak Installing Everything
 ```
@@ -375,3 +380,5 @@ Sources:
 - [phpMyAdmin](https://wiki.archlinux.org/title/PhpMyAdmin)
 - [Apache HTTP Server](https://wiki.archlinux.org/title/Apache_HTTP_Server#PHP)
 - [PHP](https://wiki.archlinux.org/title/PHP#MySQL/MariaDB)
+- [NVIDIA](https://wiki.archlinux.org/title/NVIDIA)
+- [Arch Linux's Main NVIDIA Driver Packages Now Using The Open Kernel Modules - Phoronix](https://www.phoronix.com/news/Arch-LInux-NVIDIA-Open-Default)
