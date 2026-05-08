@@ -33,9 +33,9 @@ lsblk
 mkfs.fat -F32 partition
 mkfs.ext4 partition
 mkfs.ntfs -Q partition
+mount partition /mnt
 mkdir /mnt/boot
 mkdir /mnt/home
-mount partition /mnt
 mount partition /mnt/boot
 mount partition /mnt/home
 ```
@@ -61,6 +61,7 @@ reboot
 ```
 ### Installing Yay to use AUR repository
 ```
+sudo pacman -Sy git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
@@ -82,7 +83,7 @@ sudo pacman -Sy
 ```
 ### Pacman Installing Everything
 ```bash
-sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote audacity blender bspwm clinfo cmake composer conky cuda cuda-tools cups curl discord docker emacs eog ffmpeg firefox ghidra ghidra ghostscript git git-lfs github-cli gnome-screenshot go gparted grub-customizer gsfonts hashcat hashcat-utils hplip httrack inkscape intel-compute-runtime jdk-openjdk john kitty kiwix-desktop lib32-nvidia-utils libgda6 libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk linux linux-lts lua-socket luarocks ly mariadb mokutil mono mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen nodejs noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia nvidia-lts nvidia-settings nvidia-utils nvtop obs-studio obsidian oculante ollama-cuda opam opencl-headers os-prober pacman-contrib patchelf pavucontrol pdf2svg perl-file-mimeinfo php php-apache phpmyadmin picom pinta polybar power-profiles-daemon powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone reflector rofi rsync rust rxvt-unicode solaar speedtest-cli sqlite3 sqlitebrowser steam stow sunshine sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr the_silver_searcher thunderbird time tk tmux torbrowser-launcher tree unpaper unzip veracrypt vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip xorg-xkill yt-dlp zathura zathura-pdf-mupdf zig zsh
+sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote audacity blender bspwm clinfo cmake composer conky cuda cuda-tools cups curl discord docker emacs eog ffmpeg firefox ghidra ghidra ghostscript git-lfs github-cli gnome-screenshot go gparted grub-customizer gsfonts hashcat hashcat-utils hplip httrack inkscape intel-compute-runtime jdk-openjdk john kitty kiwix-desktop lib32-nvidia-utils libgda6 libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk linux linux-lts lua-socket luarocks ly mariadb mokutil mono mpc mpd mpv nautilus ncmpcpp neofetch net-tools nitrogen nodejs noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia nvidia-lts nvidia-settings nvidia-utils nvtop obs-studio obsidian oculante ollama-cuda opam opencl-headers os-prober pacman-contrib patchelf pavucontrol pdf2svg perl-file-mimeinfo php php-apache phpmyadmin picom pinta polybar power-profiles-daemon powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone reflector rofi rsync rust rxvt-unicode solaar speedtest-cli sqlite3 sqlitebrowser steam stow sunshine sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr the_silver_searcher thunderbird time tk tmux torbrowser-launcher tree unpaper unzip veracrypt vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip xorg-xkill yt-dlp zathura zathura-pdf-mupdf zig zsh
 ```
 ### Yay Installing Everything
 ```
