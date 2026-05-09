@@ -106,28 +106,6 @@ If 2FA enabled: `Right Click` > `Reload`
 ```
 wal --theme base16-rebecca
 ```
-### Configuring Apache
-```bash
-sudo nano /etc/httpd/conf/httpd.conf
-```
-Comment out
-```bash
-# LoadModule mpm_event_module modules/mod_mpm_event.so
-```
-Uncomment
-```bash
-LoadModule mpm_prefork_module modules/mod_mpm_prefork.so
-```
-Append
-```bash
-LoadModule php_module modules/libphp.so
-AddHandler php-script .php
-Include conf/extra/php_module.conf
-Include conf/extra/phpmyadmin.conf
-```
-```bash
-sudo systemctl restart httpd
-```
 ### Configuring Git
 ```
 git config --global --unset-all user.name
@@ -139,6 +117,38 @@ git config --global user.email email
 ```
 opam init
 opam env --switch=default
+```
+### Configuring MariaDB
+```bash
+sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+sudo systemctl stop mariadb
+sudo mariadbd-safe --skip-grant-tables --skip-networking &
+```
+Open another terminal
+```bash
+mariadb -u root
+```
+```sql
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_password';
+FLUSH PRIVILEGES;
+EXIT;
+```
+```bash
+sudo kill $(pgrep mariadb)
+sudo systemctl start mariadb
+```
+### Configuring PHP
+```
+sudo nano /etc/php/php.ini
+```
+Uncomment
+```
+extension=bz2
+extension=iconv
+extension=mysqli
+extension=pdo_mysql
+extension=pdo_sqlite
+extension=sqlite3
 ```
 ### Configuring phpMyAdmin
 ```bash
@@ -157,18 +167,27 @@ Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
 Open `localhost/phpmyadmin`
 
 Select `Theme` > `Original`
-### Configuring PHP
+### Configuring Apache
+```bash
+sudo nano /etc/httpd/conf/httpd.conf
 ```
-sudo nano /etc/php/php.ini
+Comment out
+```bash
+#LoadModule mpm_event_module modules/mod_mpm_event.so
 ```
 Uncomment
+```bash
+LoadModule mpm_prefork_module modules/mod_mpm_prefork.so
 ```
-extension=bz2
-extension=iconv
-extension=mysqli
-extension=pdo_mysql
-extension=pdo_sqlite
-extension=sqlite3
+Append
+```bash
+LoadModule php_module modules/libphp.so
+AddHandler php-script .php
+Include conf/extra/php_module.conf
+Include conf/extra/phpmyadmin.conf
+```
+```bash
+sudo systemctl restart httpd
 ```
 ### Configuring Rclone
 ```
@@ -250,25 +269,6 @@ xdg-mime default peazip.desktop application/x-tar
 xdg-mime default peazip.desktop application/x-vdi-disk
 xdg-mime default peazip.desktop application/x-xz
 xdg-mime default peazip.desktop application/zip
-```
-### Fixing MariaDB
-```bash
-sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-sudo systemctl stop mariadb
-sudo mariadbd-safe --skip-grant-tables --skip-networking &
-```
-Open another terminal
-```bash
-mariadb -u root
-```
-```sql
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_password';
-FLUSH PRIVILEGES;
-EXIT;
-```
-```bash
-sudo kill $(pgrep mariadb)
-sudo systemctl start mariadb
 ```
 ### Fixing Printer
 ```
