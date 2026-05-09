@@ -1,5 +1,5 @@
 ### Connecting Wi-Fi
-```
+```bash
 iwctl
 device list
 station adapter scan
@@ -9,7 +9,7 @@ station adapter show
 quit
 ```
 ### Partitioning Disk
-```
+```bash
 lsblk
 cfdisk disk
 ```
@@ -28,7 +28,7 @@ cfdisk disk
 `Write` > Are you sure you want to write the partition table to disk? `yes`
 
 `Quit`
-```
+```bash
 lsblk
 mkfs.fat -F32 partition
 mkfs.ext4 partition
@@ -40,19 +40,19 @@ mount partition /mnt/boot
 mount partition /mnt/home
 ```
 ### Installing Arch Linux
-```
+```bash
 archinstall --config /path/to/user_configuration.json --creds /path/to/user_credentials.json
 exit
 reboot
 ```
 ### Changing Root
-```
+```bash
 mount /dev/nvme0n1p4 /mnt
 mount /dev/nvme0n1p1 /mnt/boot
 arch-chroot /mnt
 ```
 ### Installing GRUB
-```
+```bash
 pacman -Sy grub efibootmgr dosfstools mtools
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -60,7 +60,7 @@ exit
 reboot
 ```
 ### Installing Yay to use AUR repository
-```
+```bash
 sudo pacman -Sy git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -91,11 +91,15 @@ sudo pacman -Sy
 sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote audacity blender bspwm clinfo cmake composer conky cuda cups curl discord dkms docker emacs eog extension-manager ffmpeg firefox ghidra ghostscript git-lfs github-cli gnome-screenshot go gparted gsfonts hashcat hashcat-utils hplip httrack inkscape intel-compute-runtime jdk-openjdk john kitty kiwix-desktop lib32-nvidia-utils libgda6 libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk linux linux-lts lua-socket luarocks ly mariadb mokutil mono mpc mpd mpv nautilus ncmpcpp net-tools nodejs noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia-open-dkms nvidia-settings nvidia-utils nvtop obs-studio obsidian oculante ollama-cuda opam opencl-headers os-prober pacman-contrib patchelf pavucontrol pdf2svg perl-file-mimeinfo php php-apache phpmyadmin picom polybar power-profiles-daemon powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone reflector rofi rsync rust rxvt-unicode solaar speedtest-cli sqlite3 sqlitebrowser steam stow sunshine sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr the_silver_searcher thunderbird time tk tmux torbrowser-launcher tree unpaper unzip veracrypt vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip xorg-xkill yt-dlp zathura zathura-pdf-mupdf zig zsh
 ```
 ### Yay Installing Everything
-```
+```bash
 yay -S activitywatch-bin anydesk-bin bambustudio-appimage betterlockscreen cyberghostvpn czkawka-gui-bin egpu-switcher grub-customizer microsoft-edge-stable-bin mkinitcpio-firmware neofetch nitrogen normcap nvidia-container-toolkit parsec-bin peazip pinta qview rclone-browser visual-studio-code-bin wrk xdman-beta-bin xwinwrap-0.9-bin yandex-browser
 ```
-### Adding Google Drive
+### Debloating Gnome
+```bash
+sudo pacman -Rsnc decibels epiphany evince gnome-calculator gnome-calendar gnome-clocks gnome-connections gnome-console gnome-contacts gnome-logs gnome-maps gnome-music gnome-software gnome-tour gnome-weather loupe orca papers rygel showtime simple-scan snapshot yelp
 ```
+### Adding Google Drive
+```bash
 WEBKIT_DISABLE_COMPOSITING_MODE=1 gnome-control-center online-accounts
 ```
 
@@ -103,20 +107,8 @@ WEBKIT_DISABLE_COMPOSITING_MODE=1 gnome-control-center online-accounts
 
 If 2FA enabled: `Right Click` > `Reload`
 ### Applying Wal
-```
+```bash
 wal --theme base16-rebecca
-```
-### Configuring Git
-```
-git config --global --unset-all user.name
-git config --global --unset-all user.email
-git config --global user.name name
-git config --global user.email email
-```
-### Configuring Opam
-```
-opam init
-opam env --switch=default
 ```
 ### Configuring MariaDB
 ```bash
@@ -138,11 +130,11 @@ sudo kill $(pgrep mariadb)
 sudo systemctl start mariadb
 ```
 ### Configuring PHP
-```
+```bash
 sudo nano /etc/php/php.ini
 ```
 Uncomment
-```
+```bash
 extension=bz2
 extension=iconv
 extension=mysqli
@@ -189,34 +181,72 @@ Include conf/extra/phpmyadmin.conf
 ```bash
 sudo systemctl restart httpd
 ```
-### Configuring Rclone
+### Configuring Git
+```bash
+git config --global --unset-all user.name
+git config --global --unset-all user.email
+git config --global user.name name
+git config --global user.email email
 ```
+### Configuring Opam
+```bash
+opam init
+opam env --switch=default
+```
+### Configuring Rclone
+```bash
 rclone config
 ```
-### Creating Swap
+```bash
+n/s/q> n
+name> Google
+Storage> 24
+client_id>
+client_secret>
+scope> 1
+service_account_file>
+y/n>
+y/n>
 ```
+Type `your_email`
+
+Click `Next`
+
+Type `your_password`
+
+Click `Next`
+
+Click `Continue`
+```bash
+y/n>
+y/e/d>
+e/n/d/r/c/s/q> q
+```
+### Creating Swap
+```bash
 sudo dd if=/dev/zero of=/swap bs=1M count=16k status=progress
 sudo chmod 0600 /swap
 sudo mkswap -U clear /swap
 sudo swapon /swap
 free -h
 ```
-### Debloating Gnome
-```
-sudo pacman -Rsnc decibels epiphany evince gnome-calculator gnome-calendar gnome-clocks gnome-connections gnome-console gnome-contacts gnome-logs gnome-maps gnome-music gnome-software gnome-tour gnome-weather loupe orca papers rygel showtime simple-scan snapshot yelp
+Or
+```bash
+sudo mkswap /dev/nvme0n1p6
+sudo swapon /dev/nvme0n1p6
 ```
 ### Fixing Bluetooth
-```
+```bash
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 ```
 ### Fixing Docker
-```
+```bash
 sudo systemctl enable docker
 sudo systemctl start docker
 ```
 ### Fixing Default Apps
-```
+```bash
 xdg-mime default code.desktop application/toml
 xdg-mime default code.desktop application/x-ipynb+json
 xdg-mime default code.desktop text/css
@@ -271,7 +301,7 @@ xdg-mime default peazip.desktop application/x-xz
 xdg-mime default peazip.desktop application/zip
 ```
 ### Fixing Printer
-```
+```bash
 sudo systemctl enable cups.service
 sudo systemctl start cups.service
 system-config-printer
@@ -316,27 +346,27 @@ systemctl --user start sunshine
 ```
 ### Fixing Telegram
 If you encounter an empty screen upon launching, try executing the program from the terminal. This method helps to disable OpenGL if you are experiencing issues with it.
-```
+```bash
 telegram-desktop
 ```
 ### Fixing Time
-```
+```bash
 timedatectl set-local-rtc 1
 ```
 ### Moving Home Partition
-```
+```bash
 https://help.ubuntu.com/community/Partitioning/Home/Moving
 ```
 ### Opam Installing Everything
-```
+```bash
 opam install merlin tuareg user-setup
 ```
 ### Remove Arch Linux Logo
-```
+```bash
 sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo ''
 ```
 ### System Update and Cache Cleaning
-```
+```bash
 sudo pacman -Syu
 sudo pacman -Rsnc $(pacman -Qtdq)
 sudo pacman -Sc
