@@ -92,7 +92,7 @@ sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote auda
 ```
 ### Yay Installing Everything
 ```
-yay -S activitywatch-bin anydesk-bin bambustudio-bin betterlockscreen cyberghostvpn czkawka-gui-bin egpu-switcher grub-customizer microsoft-edge-stable-bin mkinitcpio-firmware neofetch nitrogen normcap nvidia-container-toolkit parsec-bin peazip pinta qview rclone-browser visual-studio-code-bin wrk xdman-beta-bin xwinwrap-0.9-bin yandex-browser
+yay -S activitywatch-bin anydesk-bin bambustudio-appimage betterlockscreen cyberghostvpn czkawka-gui-bin egpu-switcher grub-customizer microsoft-edge-stable-bin mkinitcpio-firmware neofetch nitrogen normcap nvidia-container-toolkit parsec-bin peazip pinta qview rclone-browser visual-studio-code-bin wrk xdman-beta-bin xwinwrap-0.9-bin yandex-browser
 ```
 ### Adding Google Drive
 ```
@@ -184,7 +184,7 @@ free -h
 ```
 ### Debloating Gnome
 ```
-sudo pacman -Rsnc epiphany evince gnome-calculator gnome-calendar gnome-clocks gnome-connections gnome-console gnome-contacts gnome-logs gnome-maps gnome-music gnome-software gnome-tour gnome-weather loupe orca rygel simple-scan snapshot totem yelp
+sudo pacman -Rsnc decibels epiphany evince gnome-calculator gnome-calendar gnome-clocks gnome-connections gnome-console gnome-contacts gnome-logs gnome-maps gnome-music gnome-software gnome-tour gnome-weather loupe orca papers rygel showtime simple-scan snapshot yelp
 ```
 ### Fixing Bluetooth
 ```
