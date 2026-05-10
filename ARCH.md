@@ -156,6 +156,10 @@ Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
 	Require all granted
 </Directory>
 ```
+Follow [Configuring Apache](ARCH.md)
+
+Follow [Configuring Microsoft Edge](EDGE.md)
+
 Open `localhost/phpmyadmin`
 
 Select `Theme` > `Original`
