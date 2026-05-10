@@ -110,21 +110,27 @@ If 2FA enabled: `Right Click` > `Reload`
 ```bash
 wal --theme base16-rebecca
 ```
-### Configuring MariaDB
+### Installing MariaDB
 ```bash
 sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-sudo systemctl stop mariadb
-sudo mariadbd-safe --skip-grant-tables --skip-networking &
 ```
-Open another terminal
+#### Setting MariaDB Root Password
 ```bash
-mariadb -u root
+sudo mariadb -u root
 ```
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_password';
 FLUSH PRIVILEGES;
 EXIT;
 ```
+#### Resetting MariaDB Root Password (rescue)
+```bash
+sudo systemctl stop mariadb
+sudo mariadbd-safe --skip-grant-tables --skip-networking &
+```
+Open another terminal
+
+Follow [Setting MariaDB Root Password](ARCH.md)
 ```bash
 sudo kill $(pgrep mariadb)
 sudo systemctl start mariadb
@@ -398,3 +404,4 @@ Sources:
 - [Apps for GNOME](https://apps.gnome.org)
 - [GNOME 50 killed Google Drive integration because nobody wanted to maintain it](https://www.xda-developers.com/gnome-50-killed-google-drive-integration-nobody-wanted-to-maintain-it)
 - [Swap](https://wiki.archlinux.org/title/Swap)
+- [Cannot enter phpmyadmin as root (MySQL 5.7)](https://askubuntu.com/questions/763336/cannot-enter-phpmyadmin-as-root-mysql-5-7/763359)
