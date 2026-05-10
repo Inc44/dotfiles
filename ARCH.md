@@ -237,6 +237,68 @@ y/n>
 y/e/d>
 e/n/d/r/c/s/q> q
 ```
+### Configuring Rclone Browser
+```bash
+mkdir Google
+mkdir github/Notes
+```
+Open `Rclone Browser`
+
+Click `File`
+
+Click `Preferences...`
+
+Mount options: `--vfs-cache-mode full`
+
+Click `OK`
+
+Click `Refresh`
+
+Double click `Google`
+
+Click `Mount`
+
+Click `Google`
+
+Click `Open`
+
+Select `Files` > `Else` > `Notes`
+
+Click `Download`
+
+Destination: `/home/pc/github/Notes`
+
+Turn on `Sync`
+
+Select `Delete after transfering`
+
+Task description: `Download Notes`
+
+Click `Transfer`
+
+Transfers `16`
+
+Checkers `16`
+
+Click `Save task`
+
+Click `Upload`
+
+Source: `/home/pc/github/Notes`
+
+Turn on `Sync`
+
+Select `Delete after transfering`
+
+Task description: `Upload Notes`
+
+Click `Transfer`
+
+Transfers `16`
+
+Checkers `16`
+
+Click `Save task`
 ### Creating Swap
 ```bash
 sudo dd if=/dev/zero of=/swap bs=1M count=16k status=progress
