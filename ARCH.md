@@ -173,6 +173,10 @@ Follow [Configuring Microsoft Edge](EDGE.md)
 
 Open `localhost/phpmyadmin`
 
+Type `root`
+
+Type `your_password`
+
 Select `Theme` > `Original`
 ### Configuring Apache
 ```bash
