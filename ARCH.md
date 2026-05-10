@@ -45,13 +45,13 @@ archinstall --config /path/to/user_configuration.json --creds /path/to/user_cred
 exit
 reboot
 ```
-### Changing Root
+### Changing Root (rescue)
 ```bash
 mount /dev/nvme0n1p4 /mnt
 mount /dev/nvme0n1p1 /mnt/boot
 arch-chroot /mnt
 ```
-### Installing GRUB
+### Installing GRUB (rescue)
 ```bash
 pacman -Sy grub efibootmgr dosfstools mtools
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
@@ -98,7 +98,7 @@ yay -S activitywatch-bin anydesk-bin bambustudio-appimage betterlockscreen cyber
 ```bash
 sudo pacman -Rsnc decibels epiphany evince gnome-calculator gnome-calendar gnome-clocks gnome-connections gnome-console gnome-contacts gnome-logs gnome-maps gnome-music gnome-software gnome-tour gnome-weather loupe orca papers rygel showtime simple-scan snapshot yelp
 ```
-### Adding Google Drive
+### Adding Google Drive (GNOME <50)
 ```bash
 WEBKIT_DISABLE_COMPOSITING_MODE=1 gnome-control-center online-accounts
 ```
@@ -389,3 +389,6 @@ Sources:
 - [NVIDIA](https://wiki.archlinux.org/title/NVIDIA)
 - [Arch Linux's Main NVIDIA Driver Packages Now Using The Open Kernel Modules - Phoronix](https://www.phoronix.com/news/Arch-LInux-NVIDIA-Open-Default)
 - [Official repositories](https://wiki.archlinux.org/title/Official_repositories)
+- [Apps for GNOME](https://apps.gnome.org)
+- [GNOME 50 killed Google Drive integration because nobody wanted to maintain it](https://www.xda-developers.com/gnome-50-killed-google-drive-integration-nobody-wanted-to-maintain-it)
+- [Swap](https://wiki.archlinux.org/title/Swap)
