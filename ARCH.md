@@ -369,6 +369,7 @@ sudo -u gdm dbus-launch gsettings set org.gnome.login-screen logo ''
 ```bash
 sudo pacman -Syu
 sudo pacman -Rsnc $(pacman -Qtdq)
+sudo rm -rf /var/cache/pacman/pkg/download-*
 sudo pacman -Sc
 sudo pacman -Scc
 sudo paccache -ruk0
@@ -376,6 +377,7 @@ yay -Sc
 flatpak uninstall --unused
 pip cache purge
 conda clean -a
+cargo cache -ak0 -r all
 sudo journalctl --vacuum-time=1s
 ```
 
