@@ -114,6 +114,11 @@ wal --theme base16-rebecca
 ```bash
 sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 ```
+### Fixing MariaDB
+```bash
+sudo systemctl enable mariadb
+sudo systemctl start mariadb
+```
 #### Setting MariaDB Root Password
 ```bash
 sudo mariadb -u root
