@@ -461,6 +461,30 @@ conda clean -a
 cargo cache -ak0 -r all
 sudo journalctl --vacuum-time=1s
 ```
+### Configuring Grub Customizer
+Open `Grub Customizer`
+
+Type `your_password`
+
+Click `Authenticate`
+
+Double click `Arch Linux, with Linux linux-lts`
+
+Type `Arch Linux (LTS)`
+
+Click Move up the selected entry or script icon
+
+Click `Arch Linux, with Linux linux`
+
+Click `Remove`
+
+Double click `UEFI Firmware Settings`
+
+Type `UEFI`
+
+Press Enter
+
+Click `Save`
 
 Sources:
 - [Default systemd doesn't work after reboot, requires manually launch](https://github.com/LizardByte/Sunshine/issues/1533)
