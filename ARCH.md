@@ -485,6 +485,54 @@ Type `UEFI`
 Press Enter
 
 Click `Save`
+### Configuring Bambu Studio
+Open `BambuStudio`
+
+Turn on `Remember my choice`
+
+Click `Yes`
+
+Click `Get Started`
+
+Click `Europe`
+
+Click `Next`
+
+Click `Skip`
+
+Click `Clear all`
+
+Turn on `Bambu Lab X1 Carbon`
+
+Click `Next`
+
+Click `Next`
+
+Click `Finish`
+
+Click `OK`
+
+Click `Login/Register`
+
+Click `System browser login`
+
+Type `your_email`
+
+Type `your_password`
+
+Click `Log In`
+
+Click `Agree`
+
+Click `Open`
+
+Click `Yes`
+
+Click `Sync info`
+
+Click `Continue to sync filaments`
+
+Click `OK`
 
 Sources:
 - [Default systemd doesn't work after reboot, requires manually launch](https://github.com/LizardByte/Sunshine/issues/1533)
