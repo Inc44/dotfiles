@@ -533,6 +533,22 @@ Click `Sync info`
 Click `Continue to sync filaments`
 
 Click `OK`
+### Configuring Steam
+Open `Steam`
+
+Type `your_name`
+
+Type `your_password`
+
+Click `Sign in`
+
+Click `Library`
+
+Click `Touge Shakai`
+
+Click `Install`
+
+Click `Install`
 
 Sources:
 - [Default systemd doesn't work after reboot, requires manually launch](https://github.com/LizardByte/Sunshine/issues/1533)
