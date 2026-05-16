@@ -549,6 +549,30 @@ Click `Touge Shakai`
 Click `Install`
 
 Click `Install`
+### Configuring Visual Studio Code
+Open `Visual Studio Code`
+
+Click 🗙 icon
+
+Click `Backup and Sync Settings...`
+
+Click `Sign in`
+
+Click `Sign in with GitHub`
+
+Type `your_email`
+
+Type `your_password`
+
+Click `Sign in`
+
+Click `Continue`
+
+Click `Open`
+
+Click 🗙 icon
+
+Click 🗙 icon
 
 Sources:
 - [Default systemd doesn't work after reboot, requires manually launch](https://github.com/LizardByte/Sunshine/issues/1533)
