@@ -533,6 +533,14 @@ Click `Sync info`
 Click `Continue to sync filaments`
 
 Click `OK`
+### Configuring Parsec
+Open `Parsec`
+
+Type `your_email`
+
+Type `your_password`
+
+Click `Log In`
 ### Configuring Steam
 Open `Steam`
 
