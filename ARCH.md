@@ -485,6 +485,12 @@ Type `UEFI`
 Press Enter
 
 Click `Save`
+### Configuring Audacity
+Open `Audacity`
+
+Turn on `Don't show this again at start up`
+
+Click `OK`
 ### Configuring Bambu Studio
 Open `BambuStudio`
 
