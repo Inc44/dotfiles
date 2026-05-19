@@ -635,6 +635,30 @@ Type `your_email`
 Type `your_password`
 
 Click `Log In`
+### Configuring PeaZip
+Open `PeaZip`
+
+Click `Options`
+
+Click `Settings`
+
+Click `Theme`
+
+Click `Application accent`
+
+Click + icon
+
+Type `#8764b8`
+
+Click `Select`
+
+Click `Text accent`
+
+Click `#8764b8`
+
+Click `Select`
+
+Click `OK`
 ### Configuring Steam
 Open `Steam`
 
