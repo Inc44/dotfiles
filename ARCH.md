@@ -699,6 +699,60 @@ Click `Touge Shakai`
 Click `Install`
 
 Click `Install`
+### Configuring Telegram
+Open `Telegram`
+
+Click `Start Messaging`
+
+Type `your_password`
+
+Click $\equiv$ icon
+
+Turn on `Night Mode`
+
+Click `Disable`
+
+Click `Settings`
+
+Click `Chat Settings`
+
+Click `Night`
+
+Click $\leftarrow$
+
+Click `Advanced`
+
+Click `Manage local storage`
+
+Total size limit: `200 MB`
+
+Clear files older than: `1 week`
+
+Click `Save`
+
+Turn on `Hardware accelerated video decoding`
+
+Click `Manage dictionaries`
+
+Turn on `Français`
+
+Turn on `Русский`
+
+Turn on `Українська`
+
+Click `Save`
+
+Click $\leftarrow$
+
+Click `Battery and Animations`
+
+Turn off `Animations in Chats`
+
+Turn off `Animations in Calls`
+
+Turn off `Interface animations`
+
+Click `Save`
 ### Configuring Visual Studio Code
 Open `Visual Studio Code`
 
