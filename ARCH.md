@@ -569,6 +569,22 @@ Click `Options`
 Turn on `Cut/Paste with C-x/C-c/C-v (CUA Mode)`
 
 Click `Save Options`
+### Configuring Eye of GNOME
+Open `Eye of GNOME`
+
+Click $\cdots$ icon
+
+Click `Open...`
+
+Click `dotfiles`
+
+Click `wallpaper.png`
+
+Click `Open`
+
+Click $\cdots$ icon
+
+Click `Set as Wallpaper`
 ### Configuring Parsec
 Open `Parsec`
 
