@@ -603,6 +603,30 @@ Click `Notes`
 Click `Select`
 
 Click `Trust author and enable plugins`
+### Configuring Oculante
+Open `Oculante`
+
+Click $\equiv$ icon
+
+Click `Preferences`
+
+Click `Visual`
+
+Click `Accent color`
+
+Click `R 255`
+
+Type `135`
+
+Click `G 0`
+
+Type `100`
+
+Click `B 75`
+
+Type `184`
+
+Window title `{FULLPATH}`
 ### Configuring Parsec
 Open `Parsec`
 
