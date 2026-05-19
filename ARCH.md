@@ -659,6 +659,26 @@ Click `#8764b8`
 Click `Select`
 
 Click `OK`
+### Configuring qBittorrent
+Open `qBittorrent`
+
+Click `OK`
+
+Click `0 B/s (0 B)`
+
+Speed limits
+
+Upload: $\infty$
+
+Download: `$\infty$
+
+Alternative speed limits
+
+Upload: $\infty$
+
+Download: `$\infty$
+
+Click `OK`
 ### Configuring Steam
 Open `Steam`
 
