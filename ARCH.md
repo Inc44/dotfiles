@@ -543,6 +543,24 @@ Click `OK`
 Open `Czkawka`
 
 Click `Ok`
+### Configuring Discord
+Open `Discord`
+
+Type `your_email`
+
+Type `your_password`
+
+Click `Log In`
+
+Click ⚙️ icon
+
+Click `Voice & Video`
+
+Turn off `Automatically Adjust Input Sensitivity`
+
+Select `-100dB`
+
+Turn off `Echo Cancellation`
 ### Configuring Parsec
 Open `Parsec`
 
