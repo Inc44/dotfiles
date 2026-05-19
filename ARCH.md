@@ -585,6 +585,14 @@ Click `Open`
 Click $\cdots$ icon
 
 Click `Set as Wallpaper`
+### Configuring Inkscape
+Open `Inkscape`
+
+Click `Time to Draw`
+
+Turn off `Show this every time`
+
+Click `New Document`
 ### Configuring Parsec
 Open `Parsec`
 
