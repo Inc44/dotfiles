@@ -679,6 +679,10 @@ Upload: $\infty$
 Download: `$\infty$
 
 Click `OK`
+### Configuring qView
+Open `qView`
+
+Click 🗙 icon
 ### Configuring Steam
 Open `Steam`
 
