@@ -561,6 +561,14 @@ Turn off `Automatically Adjust Input Sensitivity`
 Select `-100dB`
 
 Turn off `Echo Cancellation`
+### Configuring Emacs
+Open `Emacs`
+
+Click `Options`
+
+Turn on `Cut/Paste with C-x/C-c/C-v (CUA Mode)`
+
+Click `Save Options`
 ### Configuring Parsec
 Open `Parsec`
 
