@@ -539,6 +539,10 @@ Click `Sync info`
 Click `Continue to sync filaments`
 
 Click `OK`
+### Configuring Czkawka
+Open `Czkawka`
+
+Click `Ok`
 ### Configuring Parsec
 Open `Parsec`
 
