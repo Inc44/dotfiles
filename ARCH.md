@@ -593,6 +593,16 @@ Click `Time to Draw`
 Turn off `Show this every time`
 
 Click `New Document`
+### Configuring Obsidian
+Open `Obsidian`
+
+Click `Open`
+
+Click `Notes`
+
+Click `Select`
+
+Click `Trust author and enable plugins`
 ### Configuring Parsec
 Open `Parsec`
 
