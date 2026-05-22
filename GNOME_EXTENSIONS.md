@@ -5,13 +5,13 @@ Click `Browse`
 
 Type `AppIndicator and KStatusNotifierItem Support`
 
+Click `Install` for `3v1n0`
+
 Click `Install`
 
 Click `Installed`
 
-Click `AppIndicator and KStatusNotifierItem Support` > `Settings`
-
-Click `Position and size`
+Click ⚙️ icon for `AppIndicator and KStatusNotifierItem Support`
 
 Select `Opacity` > `255`
 ### Installing Color Picker
@@ -21,25 +21,23 @@ Click `Browse`
 
 Type `Color Picker`
 
+Click `Install` for `grroot`
+
 Click `Install`
 
 Click `Installed`
 
-Click `Color Picker` > `Settings`
-
-Turn on `Automatically copy`
-
-Select `Default format` > `HEX`
-
-Select `Shortcut to pick` > `Super + C`
-
-Turn off `Notification style`
-
-Turn on `Persistent mode`
-
-Select `Enable preview` > `Label`
+Click ⚙️ icon for `Color Picker`
 
 Turn off `Enable systray`
+
+Turn on `Enable shortcut`
+
+Click `Super 0`
+
+Press Super + C
+
+Turn off `Notification sound`
 ### Installing Dash to Dock
 Open `Extension Manager`
 
@@ -47,19 +45,35 @@ Click `Browse`
 
 Type `Dash to Dock`
 
+Click `Install` for `michele_g`
+
 Click `Install`
 
 Click `Installed`
 
-Click `Dash to Dock` > `Settings`
+Click ⚙️ icon for `Dash to Dock`
 
-Click `Intelligent autohide`
+Click ⚙️ icon for `Intelligent autohide`
 
 Turn off `Dodge windows`
 
-Click `Position and size`
+Click 🗙 icon
 
-Select `Icon size limit` > `64`
+Select `64` for `Icon size limit`
+
+Click `Launchers`
+
+Turn off `Show trash can`
+
+Turn off `Show volumes and devices`
+
+Click `Appearance`
+
+Turn on `Shrink the dash`
+
+Turn off `Show overview on startup`
+
+Turn on `Use built-in theme`
 ### Installing Desktop Icons NG (DING)
 Open `Extension Manager`
 
@@ -67,13 +81,15 @@ Click `Browse`
 
 Type `Desktop Icons NG (DING)`
 
+Click `Install` for `rastersoft`
+
 Click `Install`
 
 Click `Installed`
 
-Click `Desktop Icons NG (DING)` > `Settings`
+Click ⚙️ icon for `Desktop Icons NG (DING)`
 
-Select `Size for the desktop icons` > `Large`
+Select `Large` for `Size for the desktop icons`
 
 Turn off `Show the personal folder in the desktop`
 
@@ -81,37 +97,21 @@ Turn off `Show the trash icon in the desktop`
 
 Turn off `Show external drives in the desktop`
 
-Turn off `Show network drives in the desktop`
-
-Select `New icons alignment` > `Top-left corner`
-
 Turn off `Add new drives to the opposite side of the screen`
 
-Turn on `Highlight the drop place during Drag'n'Drop`
-
-Turn off `Use Nemo to open folders`
-
-Turn on `Add an emblem to soft links`
-
-Turn off `Use dark text in icon labels`
-
-Select `Click type for open files` > `Double click`
-
 Turn on `Show hidden files`
-
-Turn off `Show a context menu item to delete permanently`
-
-Select `Show image thumbnails` > `Local files only`
 ### Installing Pano
-Open [Pano - Clipboard Manager](https://extensions.gnome.org/extension/5278/pano)
+Open `Extension Manager`
 
 Click `Browse`
 
-Click `Open`
+Type `Pano - Clipboard Manager`
 
-Click `Unsupported`
+Click `Install` for `alperenelhan`
 
 Click `Install Anyway`
+
+Click `Install`
 ### Installing Tactile
 Open `Extension Manager`
 
@@ -119,25 +119,39 @@ Click `Browse`
 
 Type `Tactile`
 
+Click `Install` for `lundal`
+
 Click `Install`
 
 Click `Installed`
 
-Click `Tactile` > `Settings`
+Click ⚙️ icon for `Tactile`
 
-Click `Layout 1` > `3x1`
+Click `Layout 1`
 
-Click `Layout 2` > `4x1`
+Make `3x1` grid
 
-Click `Layout 3` > `3x2`
+Click `Layout 2`
 
-Click `Layout 4` > `4x2`
+Make `4x1` grid
+
+Click `Layout 3`
+
+Make `3x2` grid
+
+Click `Layout 4`
+
+Make `4x2` grid
 
 Click `Keyboard Shortcuts`
 
-Select `Show tiles` > `Super + W`
+Double click `Super+T` for `Show tiles`
 
-Select `Open extension settings` > `Shift + Ctrl + Alt + Super + T`
+Press Super + W
+
+Double click `Shift+Super+T` for `Open extension settings`
+
+Press Shift + Ctrl + Alt + Super + T
 
 Click `Advanced`
 
@@ -154,14 +168,11 @@ cd WhiteSur-icon-theme
 ./install.sh -a -t purple
 sudo rm -r ~/WhiteSur-icon-theme
 ```
-Open `Extensions`
-
-Click `Search`
-
-Type `User Themes`
+### Installing User Themes
+Open `Extension Manager`
 
 Turn on `User Themes`
 
-Click `Settings`
+Click ⚙️ icon for `User Themes`
 
-Select `WhiteSur-Light-solid-purple`
+Select `WhiteSur-Dark-solid-purple`
