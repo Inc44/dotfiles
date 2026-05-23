@@ -1,4 +1,4 @@
-## Gnome Custom Shortcuts
+## GNOME Shortcuts
 #### ctrl + shift + g
 ```
 kitty

@@ -661,6 +661,12 @@ Click `OK`
 Select `Console`
 
 Click `Start Now`
+
+Follow [GNOME Settings](GNOME_SETTINGS.md)
+
+Follow [Installing Yay to use AUR repository](ARCH.md) to EOF
+
+Follow [GNOME Extensions](GNOME_EXTENSIONS.md)
 ### Creating Arch Linux VM from Laptop
 Click `Create VM`
 #### General
