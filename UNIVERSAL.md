@@ -601,26 +601,6 @@ rm 7z2301-linux-x64.tar.xz
 ```
 curl -L https://raw.githubusercontent.com/cryinkfly/Autodesk-Fusion-360-for-Linux/main/files/setup/autodesk_fusion_installer_x86-64.sh -o "autodesk_fusion_installer_x86-64.sh" && chmod +x autodesk_fusion_installer_x86-64.sh && ./autodesk_fusion_installer_x86-64.sh --install --default
 ```
-### Installing AutoKhan
-```
-conda create --name AutoKhan python=3.10 -y
-conda activate AutoKhan
-git clone https://github.com/Inc44/AutoKhan.git
-cd AutoKhan
-pip install -r requirements.txt
-```
-### Installing Birthday
-```
-git clone https://github.com/Inc44/Birthday.git
-```
-### Installing Blazingly Fast Rust Donut
-```
-cargo install blazingly_fast_rust_donut
-```
-### Installing Blog
-```
-git clone https://github.com/Inc44/blog.git
-```
 ### Installing Brute Force Instagram
 ```
 conda create --name bfi python=3.10 -y
@@ -659,12 +639,6 @@ pip install -r requirements.txt
 cd ../..
 python main.py
 ```
-### Installing Dotfiles
-```
-git clone https://github.com/Inc44/dotfiles.git
-cd dotfiles
-stow . -t ~
-```
 ### Installing ECT
 ```
 git clone --recursive https://github.com/fhanau/Efficient-Compression-Tool.git
@@ -697,14 +671,6 @@ cp -r ~/font-awesome-pro/fontawesome-pro-6.5.1-desktop/otfs/* ~/.fonts
 sudo rm -r ~/font-awesome-pro
 sudo fc-cache -f -v
 ```
-### Installing Gitingest
-```
-conda create --name gitingest python=3.13 -y
-conda activate gitingest
-git clone https://github.com/Inc44/gitingest.git
-cd gitingest
-pip install .[server,static]
-```
 ### Installing GPEN
 ```
 git clone https://github.com/yangxy/GPEN.git
@@ -726,7 +692,7 @@ wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/Retina
 wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/model_ir_se50.pth
 wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x1.pth
 wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x2.pth
-wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x4.pth)
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x4.pth
 wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x4.pth
 python demo.py --task FaceEnhancement --model GPEN-BFR-512 --in_size 512 --channel_multiplier 2 --narrow 1 --use_sr --sr_scale 4 --use_cuda --save_face --indir examples/imgs --outdir examples/outs-bfr
 python demo.py --task FaceColorization --model GPEN-Colorization-1024 --in_size 1024 --use_cuda --indir examples/grays --outdir examples/outs-colorization
@@ -763,14 +729,6 @@ insanely-fast-whisper --file-name audio --model-name distil-whisper/distil-large
 conda create --name jupyter python=3.10 -y
 conda activate jupyter
 conda install -c conda-forge jupyterlab notebook -y
-```
-### Installing MaTools
-```
-conda create --name MaTools python=3.10 -y
-conda activate MaTools
-git clone https://github.com/Inc44/MaTools.git
-cd MaTools
-pip install -r requirements.txt
 ```
 ### Installing Minegrub
 ```
@@ -855,10 +813,6 @@ pipx run llm-benchmark run --no-sendinfo
 ```
 cargo install pngquant
 ```
-### Installing raqua
-```
-git clone https://github.com/Inc44/raqua.git
-```
 ### Installing Recoverpy
 ```
 sudo pipx install recoverpy
@@ -926,23 +880,6 @@ pip install streamlit streamlit-drawable-canvas-jsretry watchdog
 texify_gui
 pip install texify
 texify_gui
-```
-### Installing TheSync
-```
-git clone https://github.com/Inc44/TheSync.git
-```
-### Installing TheTTS
-```
-conda create --name TheTTS python=3.10 -y
-conda activate TheTTS
-pip install openai==1.13.3 TTS==0.22.0
-DS_BUILD_TRANSFORMER_INFERENCE=1 pip install deepspeed==0.14.0
-git clone https://github.com/Inc44/TheTTS.git
-cd TheTTS
-git lfs install
-git clone https://huggingface.co/coqui/XTTS-v2
-sudo rm -r XTTS-v2/.git
-cp /home/pc/github/TheTTS/xtts.py /home/pc/miniconda3/envs/TheTTS/lib/python3.10/site-packages/TTS/tts/models
 ```
 ### Installing UVR
 ```
