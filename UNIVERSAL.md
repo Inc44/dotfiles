@@ -746,15 +746,25 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo reboot
 ```
 ### Installing Miniconda
-```
+```bash
 mkdir -p ~/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm -rf ~/miniconda3/miniconda.sh
+```
+```bash
 ~/miniconda3/bin/conda init
 ```
-In case you reinstalled conda and `conda env list` doesn't work:
+Or
+```bash
+/opt/miniconda3/condabin/conda init
 ```
+```bash
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
+```
+In case you reinstalled conda and `conda env list` doesn't work:
+```bash
 pip install archspec
 ```
 ### Installing NanoGPT

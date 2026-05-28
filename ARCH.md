@@ -92,7 +92,7 @@ sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote auda
 ```
 ### Yay Installing Everything
 ```bash
-yay -S activitywatch-bin anydesk-bin bambustudio-appimage betterlockscreen cyberghostvpn czkawka-gui-bin egpu-switcher grub-customizer microsoft-edge-stable-bin mkinitcpio-firmware neofetch nitrogen normcap nvidia-container-toolkit parsec-bin peazip pinta qview rclone-browser visual-studio-code-bin wrk xdman-beta-bin xwinwrap-0.9-bin yandex-browser
+yay -S activitywatch-bin anydesk-bin bambustudio-appimage betterlockscreen cyberghostvpn czkawka-gui-bin egpu-switcher grub-customizer microsoft-edge-stable-bin miniconda3 mkinitcpio-firmware neofetch nitrogen normcap nvidia-container-toolkit parsec-bin peazip pinta qview rclone-browser visual-studio-code-bin wrk xdman-beta-bin xwinwrap-0.9-bin yandex-browser
 ```
 ### Debloating Gnome
 ```bash
