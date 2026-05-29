@@ -675,9 +675,8 @@ sudo fc-cache -f -v
 ```bash
 git clone https://github.com/yangxy/GPEN.git
 cd GPEN
-conda create --name gpen python=3.7 -y
+conda create -n gpen python=3.13 -y
 conda activate gpen
-conda install -c conda-forge libstdcxx-ng -y
 pip install -r requirements.txt
 cd weights
 wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-BFR-256-D.pth
@@ -694,6 +693,8 @@ wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/reales
 wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x2.pth
 wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x4.pth
 wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x4.pth
+cd ..
+sed -i "/        ],/a\\        extra_cuda_cflags=['-std=c++17']," face_model/op/fused_act.py face_model/op/upfirdn2d.py
 python demo.py --task FaceEnhancement --model GPEN-BFR-512 --in_size 512 --channel_multiplier 2 --narrow 1 --use_sr --sr_scale 4 --use_cuda --save_face --indir examples/imgs --outdir examples/outs-bfr
 python demo.py --task FaceColorization --model GPEN-Colorization-1024 --in_size 1024 --use_cuda --indir examples/grays --outdir examples/outs-colorization
 python demo.py --task FaceInpainting --model GPEN-Inpainting-1024 --in_size 1024 --use_cuda --indir examples/ffhq-10 --outdir examples/outs-inpainting
