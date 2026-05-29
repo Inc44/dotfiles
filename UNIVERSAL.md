@@ -599,8 +599,25 @@ rm 7z2601-linux-x64.tar.xz
 ```
 ### Installing Autodesk Fusion 360
 ```bash
-curl -L https://raw.githubusercontent.com/cryinkfly/Autodesk-Fusion-360-for-Linux/main/files/setup/autodesk_fusion_installer_x86-64.sh -o "autodesk_fusion_installer_x86-64.sh" && chmod +x autodesk_fusion_installer_x86-64.sh && ./autodesk_fusion_installer_x86-64.sh --install --default
+curl -L https://codeberg.org/Lolig4/Autodesk-Fusion-360-on-Linux-Research/raw/branch/main/files/setup/autodesk_fusion_installer_x86-64.sh -o "autodesk_fusion_installer_x86-64.sh" && chmod +x autodesk_fusion_installer_x86-64.sh && ./autodesk_fusion_installer_x86-64.sh --install --default
 ```
+Click `Sign In`
+
+Type `your_email`
+
+Click `Next`
+
+Type `your_password`
+
+Click `Sign in`
+
+Click `Open Product`
+
+Click `Open`
+
+Click `OK`
+
+Click `Ok. Got it.`
 ### Installing Brute Force Instagram
 ```bash
 conda create --name bfi python=3.10 -y
