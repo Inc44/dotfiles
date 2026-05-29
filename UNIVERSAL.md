@@ -549,60 +549,60 @@ Click 🗙 icon
 
 Click 🗙 icon
 ### Creating Symlinks
-```
+```bash
 sudo rm -r /home/pc/.ollama/models
 ln -s /hdd/ollama/models /home/pc/.ollama/models
 ```
 ### Configuring CyberGhost
-```
+```bash
 sudo cyberghostvpn --setup
 sudo vim /etc/sudoers
 ```
 Comment out `Defaults secure_path`
 Override the read-only file with `wq!`
 ### Configuring Github
-```
+```bash
 gh auth login
 ```
 ### Configuring GRUB
-```
+```bash
 sudo vim /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 ### Configuring Mkinitcpio
-```
+```bash
 sudo vim /etc/mkinitcpio.conf
 mkinitcpio -p linux -p linux-lts
 ```
 ### Disabling Auto-Save Session
-```
+```bash
 gsettings set org.gnome.SessionManager auto-save-session false
 ```
 ### Disabling Shutdown Confirmation
-```
+```bash
 gsettings set org.gnome.SessionManager logout-prompt false
 ```
 ### Disabling Extension Version Validation
-```
+```bash
 gsettings set org.gnome.shell disable-extension-version-validation true
 ```
 ### Fixing App Picker Layout
-```
+```bash
 gsettings reset org.gnome.shell app-picker-layout 
 ```
 ### Installing 7-Zip
-```
-wget https://www.7-zip.org/a/7z2301-linux-x64.tar.xz -O 7z2301-linux-x64.tar.xz
+```bash
+wget https://github.com/ip7z/7zip/releases/download/26.01/7z2601-linux-x64.tar.xz
 mkdir 7-zip
-tar xf 7z2301-linux-x64.tar.xz -C 7-zip
-rm 7z2301-linux-x64.tar.xz
+tar xfC 7z2601-linux-x64.tar.xz 7-zip
+rm 7z2601-linux-x64.tar.xz
 ```
 ### Installing Autodesk Fusion 360
-```
+```bash
 curl -L https://raw.githubusercontent.com/cryinkfly/Autodesk-Fusion-360-for-Linux/main/files/setup/autodesk_fusion_installer_x86-64.sh -o "autodesk_fusion_installer_x86-64.sh" && chmod +x autodesk_fusion_installer_x86-64.sh && ./autodesk_fusion_installer_x86-64.sh --install --default
 ```
 ### Installing Brute Force Instagram
-```
+```bash
 conda create --name bfi python=3.10 -y
 conda activate bfi
 git clone https://github.com/vv1ck/Brute-Force-instagram
@@ -613,7 +613,7 @@ wget https://raw.githubusercontent.com/zloi-user/hideip.me/main/https.txt
 awk -F':' '{print $1":"$2}' https.txt > fixed_https.txt
 ```
 ### Installing Chatgpt Telegram Bot
-```
+```bash
 conda create --name ctb python=3.10 -y
 conda activate ctb
 git clone https://github.com/n3d1117/chatgpt-telegram-bot.git
@@ -621,11 +621,11 @@ cd chatgpt-telegram-bot
 pip install -r requirements.txt
 ```
 ### Installing Cargo Cache
-```
+```bash
 cargo install cargo-cache
 ```
 ### Installing Comfy UI
-```
+```bash
 conda create --name comfy python=3.10 -y
 conda activate comfy
 git clone https://github.com/comfyanonymous/ComfyUI.git
@@ -640,7 +640,7 @@ cd ../..
 python main.py
 ```
 ### Installing ECT
-```
+```bash
 git clone --recursive https://github.com/fhanau/Efficient-Compression-Tool.git
 cd Efficient-Compression-Tool
 mkdir build
@@ -649,7 +649,7 @@ cmake ../src
 make
 ```
 ### Installing First Order Model
-```
+```bash
 conda create --name fomd python=3.8 -y
 conda activate fomd
 conda install -c conda-forge jupyterlab notebook -y
@@ -665,14 +665,14 @@ code "first-order-model-demo (2024).ipynb"
 ```
 Execute `first-order-model-demo (2024).ipynb`
 ### Installing Font Awesome
-```
+```bash
 git clone https://github.com/eliyantosarage/font-awesome-pro.git
 cp -r ~/font-awesome-pro/fontawesome-pro-6.5.1-desktop/otfs/* ~/.fonts
 sudo rm -r ~/font-awesome-pro
 sudo fc-cache -f -v
 ```
 ### Installing GPEN
-```
+```bash
 git clone https://github.com/yangxy/GPEN.git
 cd GPEN
 conda create --name gpen python=3.7 -y
@@ -700,22 +700,22 @@ python demo.py --task FaceInpainting --model GPEN-Inpainting-1024 --in_size 1024
 python demo.py --task Segmentation2Face --model GPEN-Seg2face-512 --in_size 512 --use_cuda --indir examples/segs --outdir examples/outs-seg2face
 ```
 ### Installing Hound
-```
+```bash
 sudo docker pull ghcr.io/hound-search/hound:latest
 ```
 ### Installing Inkscape Figures
-```
+```bash
 sudo pip install inkscape-figures --break-system-packages
 ```
 ### Installing Inkscape Shortcut Manager
-```
+```bash
 conda create --name inksm python=3.10 -y
 conda activate inksm
 pip install xlib
 git clone https://github.com/gillescastel/inkscape-shortcut-manager.git
 ```
 ### Installing Insanely Fast Whisper
-```
+```bash
 conda create --name ifw python=3.10 -y
 conda activate ifw
 pip install insanely-fast-whisper
@@ -725,13 +725,13 @@ insanely-fast-whisper --file-name audio --model-name openai/whisper-large-v3 --t
 insanely-fast-whisper --file-name audio --model-name distil-whisper/distil-large-v2 --task transcribe --language fr --batch-size 30 --flash True --hf_token token --diarization_model pyannote/speaker-diarization
 ```
 ### Installing Jupyter
-```
+```bash
 conda create --name jupyter python=3.10 -y
 conda activate jupyter
 conda install -c conda-forge jupyterlab notebook -y
 ```
 ### Installing Minegrub
-```
+```bash
 git clone https://github.com/Lxtharia/minegrub-theme.git
 cd ./minegrub-theme
 sudo mkdir /boot/grub2
@@ -768,25 +768,25 @@ In case you reinstalled conda and `conda env list` doesn't work:
 pip install archspec
 ```
 ### Installing NanoGPT
-```
+```bash
 conda create --name nanogpt python=3.10 -y
 conda activate nanogpt
 pip install torch numpy transformers datasets tiktoken wandb tqdm
 git clone https://github.com/karpathy/nanoGPT.git
 ```
 ### Installing Nerd Fonts
-```
+```bash
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Noto.zip
 unzip Noto.zip "*.ttf" -d ~/.fonts
 rm Noto.zip
 sudo fc-cache -f -v
 ```
 ### Installing Nerf Studio Docker
-```
+```bash
 sudo docker pull dromni/nerfstudio:1.1.3
 ```
 ### Installing Nerf Studio Python
-```
+```bash
 conda create --name nerfstudio python=3.8 -y
 conda activate nerfstudio
 pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
@@ -796,7 +796,7 @@ ns-install-cli
 mkdir -p ~/data/blender
 ```
 Download Dataset from [Kaggle](https://www.kaggle.com/datasets/nguyenhung1903/nerf-synthetic-dataset)
-```
+```bash
 unzip archive.zip 'nerf_synthetic/*' -d ~/
 mv ~/nerf_synthetic/* ~/data/blender/
 rm -rf ~/nerf_synthetic
@@ -804,7 +804,7 @@ ns-train splatfacto blender-data --data data/blender/lego
 ns-viewer --load-config /home/pc/outputs/nerfstudio/splatfacto/lego/config.yml
 ```
 ### Installing OCRMyPDF
-```
+```bash
 conda create --name ocrmypdf python=3.10 -y
 conda activate ocrmypdf
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia -y
@@ -812,37 +812,37 @@ pip install ocrmypdf
 pip install git+https://github.com/ocrmypdf/OCRmyPDF-EasyOCR.git
 ```
 ### Installing Ollama Benchmark
-```
+```bash
 pipx install llm-benchmark
 ```
-or
-```
+Or
+```bash
 pipx run llm-benchmark run --no-sendinfo
 ```
 ### Installing pngquant
-```
+```bash
 cargo install pngquant
 ```
 ### Installing Recoverpy
-```
+```bash
 sudo pipx install recoverpy
 ```
-or
-```
+Or
+```bash
 sudo pipx run recoverpy
 ```
 ### Installing Rockyou
-```
+```bash
 wget https://download.weakpass.com/wordlists/90/rockyou.txt.gz -O rockyou.txt.gz
 gzip -d rockyou.txt.gz
 ```
 ### Installing Sky AR
-```
+```bash
 git clone https://github.com/jiupinjia/SkyAR.git 
 cd SkyAR
 ```
 Download Checkpoint from [Google Drive](https://drive.usercontent.google.com/download?id=1COMROzwR4R_7mym6DL9LXhHQlJmJaV0J)
-```
+```bash
 unzip checkpoints_G_coord_resnet50.zip
 conda create --name sky python=3.7 -y
 conda activate sky
@@ -857,7 +857,7 @@ python skymagic.py --path ./config/config-canyon-jupiter.json
 python skymagic.py --path ./config/config-canyon-rain.json
 ```
 ### Installing Stable Diffusion Webui
-```
+```bash
 conda create --name webui python=3.10
 conda activate webui
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui
@@ -865,7 +865,7 @@ cd stable-diffusion-webui
 python launch.py --xformers
 ```
 ### Installing TeX Live
-```
+```bash
 wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O install-tl-unx.tar.gz
 zcat < install-tl-unx.tar.gz | tar xf -
 rm install-tl-unx.tar.gz
@@ -873,8 +873,8 @@ cd install-tl-*
 sudo perl ./install-tl --no-interaction
 rm -r install-tl-*
 ```
-or
-```
+Or
+```bash
 wget https://mirrors.ircam.fr/pub/CTAN/systems/texlive/Images/texlive.iso
 sudo mkdir /mnt
 sudo mount -t iso9660 -o ro,loop,noauto texlive.iso /mnt
@@ -883,7 +883,7 @@ sudo umount texlive.iso
 rm texlive.iso
 ```
 ### Installing Texify
-```
+```bash
 conda create --name tex python=3.10 -y
 conda activate tex
 pip install streamlit streamlit-drawable-canvas-jsretry watchdog
@@ -892,7 +892,7 @@ pip install texify
 texify_gui
 ```
 ### Installing UVR
-```
+```bash
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
@@ -911,18 +911,18 @@ wget https://raw.githubusercontent.com/Inc44/dotfiles/main/requirements.txt -O r
 pip install -r requirements.txt
 ```
 ### Installing Vim-Plug
-```
+```bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 vim > :set spell spelllang=fr > Y > 1 > Y > Enter
 vim > :set spell spelllang=ru > Y > 1 > Y > Enter
 vim > :PlugInstall
-```
+```bash
 mkdir ~/.vim/UltiSnips
 wget https://raw.githubusercontent.com/gillescastel/latex-snippets/master/tex.snippets -O ~/.vim/UltiSnips/tex.snippets
 ```
 ### Installing WhisperX
-```
+```bash
 conda create --name whisperx python=3.10 -y
 conda activate whisperx
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia -y
@@ -930,7 +930,7 @@ pip install git+https://github.com/m-bain/whisperx.git
 pip install faster-whisper==1.0.0 --upgrade
 ```
 ### Fixing Default Directory Opener
-```
+```bash
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
 xdg-mime query default inode/directory
 ```
