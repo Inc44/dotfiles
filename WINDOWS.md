@@ -252,17 +252,21 @@ Click `OK`
 #### Context Menu
 Click `Check all`
 
-Turn off `Shift + Right Click`
+Turn off all `Shift + Right Click`
 
 Turn off `Add item "Upload on ImgBB" to images context menu`
 
 Turn off `Add item "Upload on Upload.ee" to images context menu`
 
-Click (choose)
+Turn off `Expand the "Personalization" item of Desktop menu`
+
+Click second `(choose)`
 
 Turn on all
 
-Click (chosen)
+Click first `(choose)`
+
+Turn on all
 
 Click `Apply`
 #### Interface
@@ -282,11 +286,9 @@ Turn on `Accelerate previews appearance of taskbar items`
 
 Turn on `Preconfigure Explorer`
 
-Click (choose)
+Click second `(choose)`
 
 Turn off `Disable Navigation pane`
-
-Click (chosen)
 
 Click `Apply`
 #### System
@@ -299,11 +301,6 @@ Turn off `Create Restart and Refresh shortcuts on Desktop`
 Click `Apply`
 #### Services
 #### Cleaner
-Click `Uncheck all`
-
-Click `Check all`
-
-Click `Apply`
 #### Applications
 Click `Remove all applications`
 
