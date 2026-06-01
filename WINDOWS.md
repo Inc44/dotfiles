@@ -312,6 +312,62 @@ Click Microsoft Store icon
 #### Scanner
 #### System Information
 Restart
+### Configuring Mouse Properties
+Click Start Menu icon
+
+Type `Change the mouse pointer display or speed`
+
+Press Enter
+
+Turn off `Enhance pointer precision`
+
+Click `OK`
+### Configuring Region
+Click Start Menu icon
+
+Type `Region`
+
+Press Enter
+
+Format: `English (world)`
+
+Short time: `HH:mm`
+
+Long time: `HH:mm:ss`
+
+Click `OK`
+### Configuring Sound
+Click Start Menu icon
+
+Type `Change system sounds`
+
+Press Enter
+
+Sound Scheme: `No Sounds`
+
+Turn off `Play Windows Startup sound`
+
+Click `Communications`
+
+Click `Do nothing`
+
+Click `OK`
+### Configuring Windows Features
+Click Start Menu icon
+
+Type `Turn Windows features on or off`
+
+Press Enter
+
+Turn on `Telnet Client`
+
+Turn on `Virtual Machine Platform`
+
+Turn on `Windows Subsystem for Linux`
+
+Click `OK`
+
+Click `Restart now`
 ### Installing Parsec
 Download [parsec-windows.exe](https://parsec.app/downloads)
 
