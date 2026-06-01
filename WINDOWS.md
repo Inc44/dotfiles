@@ -368,6 +368,400 @@ Turn on `Windows Subsystem for Linux`
 Click `OK`
 
 Click `Restart now`
+### Configuring Settings
+Click Start Menu icon
+
+Type `Settings`
+
+Press Enter
+
+Click `System`
+
+Click `Display`
+
+Click `Extend these displays`
+
+Click `Show only on 2`
+
+Click `Keep changes`
+
+Click `2`
+
+Turn on `HDR`
+
+Click `HDR`
+
+Turn on `Auto HDR`
+
+Click $\leftarrow$ icon
+
+Click `Advanced display`
+
+Select `100 Hz` for `Choose a refresh rate`
+
+Click `Keep changes`
+
+Click `System`
+
+Click `Notifications`
+
+Turn off `Notifications`
+
+Click `System`
+
+Click `Power`
+
+Click `Power Mode`
+
+Select `Best Power Efficiency` for `Plugged in`
+
+Click `Screen timeout`
+
+Select `Never` for `Turn my screen off after` for `Plugged in`
+
+Click `System`
+
+Click `Multitasking`
+
+Select `Don't show tabs` for `Show tabs from apps when snapping or pressing Alt+Tab`
+
+Click `System`
+
+Click `For developers`
+
+Click `File Explorer`
+
+Turn on `Show hidden and system files`
+
+Click `System`
+
+Click `Clipboard`
+
+Turn on `Clipboard history`
+
+Click `Bluetooth & devices`
+
+Click `USB`
+
+Turn off `Connection notifications`
+
+---
+
+Click `Personalization`
+
+Click `Themes`
+
+Click `Desktop icon settings`
+
+Turn off `Recycle Bin`
+
+Turn off `Allow themes to change desktop icons`
+
+Click `OK`
+
+Click `Personalization`
+
+Click `Lock screen`
+
+Click fourth for `Recent images`
+
+Turn off `Show the lock screen background picture on the sign-in screen`
+
+Click `Personalization`
+
+Click `Text input`
+
+Select `Search` for `Customize Copilot key on keyboard`
+
+Click `Personalization`
+
+Click `Start`
+
+Turn off `Show recently added apps`
+
+Turn off `Show recommendations for tips, shortcuts, new apps, and more`
+
+Click `Folders`
+
+Turn off all
+
+Click `Personalization`
+
+Click `Taskbar`
+
+Turn on `Pen Menu`
+
+Click `Other system tray icons`
+
+Turn on all
+
+Click `Taskbar behaviors`
+
+Turn on `Automatically hide the taskbar`
+
+---
+
+Click `Apps`
+
+Click `Installed apps`
+
+Click $\cdots$ icon for `Microsoft Clipchamp`
+
+Click `Uninstall`
+
+Click `Uninstall`
+
+Click $\cdots$ icon for `Terminal`
+
+Click `Uninstall`
+
+Click `Uninstall`
+
+Click `Apps`
+
+Click `Advanced app settings`
+
+Click `Share across devices`
+
+Click `Off`
+
+Click `Apps`
+
+Click `Resume`
+
+Turn off `OneDrive`
+
+Turn off `Resume`
+
+---
+
+Click `Time & language`
+
+Click `Language & region`
+
+Click $\cdots$ icon for `English (United States)`
+
+Click `Language options`
+
+Click `Add a keyboard`
+
+Click `United States-Dvorak`
+
+Click $\leftarrow$ icon
+
+Click `Add a language`
+
+Type `Russian`
+
+Click `Русский`
+
+Click `Next`
+
+Click `Install`
+
+Click `Add a language`
+
+Type `Ukrainian`
+
+Click `Українська`
+
+Click `Next`
+
+Click `Install`
+
+Click `Add a language`
+
+Type `Japanese`
+
+Click `日本語`
+
+Click `Next`
+
+Click `Install`
+
+Select `France` for `Country or region`
+
+Click all `Copy`
+
+Click `Time & language`
+
+Click `Typing`
+
+Click `Touch keyboard`
+
+Turn off `Play key sounds as I type`
+
+Turn off `Show the voice typing mic button 🎙️`
+
+Turn on `Multilingual text suggestions`
+
+Click `Typing insights`
+
+Turn off `Typing insights`
+
+---
+
+Click `Gaming`
+
+Click `Captures`
+
+Select `4 hours` for `Max recording length`
+
+Click `Capture audio when recording a game`
+
+Select `192kbps` for `Audio recording quality`
+
+Select `60 fps` for `Video frame rate`
+
+Select `High` for `Video quality`
+
+---
+
+Click `Accessibility`
+
+Click `Mouse pointer and touch`
+
+Select `Custom` for `Mouse pointer style`
+
+Select `Green` for `Recommended colors`
+
+Turn on `Make the circle darker and larger`
+
+Click `Accessibility`
+
+Click `Narrator`
+
+Turn off `Keyboard shortcut for Narrator`
+
+Turn off `Enable Narrator extensions`
+
+Click `Enable Narrator extensions`
+
+Turn off `Find and download new extensions on Narrator startup`
+
+Turn off `Get image descriptions, page titles, and popular links`
+
+Click `Accessibility`
+
+Click `Keyboard`
+
+Turn off `Use the Print screen key to open screen capture`
+
+---
+
+Click `Privacy & security`
+
+Click `General`
+
+Turn off `Let websites show me locally relevant content by accessing my language list`
+
+Click `Privacy & security`
+
+Click `Search`
+
+Turn off `Search history`
+
+Click `Clear`
+
+Click `Privacy & security`
+
+Click `Location`
+
+Turn on `Location services`
+
+Turn on `Let apps access your location`
+
+Click `Privacy & security`
+
+Click `Voice activation`
+
+Turn off `Let apps access your voice activation services`
+
+Click `Privacy & security`
+
+Click `Notifications`
+
+Turn off `Notification access`
+
+Click `Privacy & security`
+
+Click `Account info`
+
+Turn off `Account info access`
+
+Click `Privacy & security`
+
+Click `Contacts`
+
+Turn off `Contacts access`
+
+Click `Privacy & security`
+
+Click `Calendar`
+
+Turn off `Calendar access`
+
+Click `Privacy & security`
+
+Click `Phone calls`
+
+Turn off `Phone calls access`
+
+Click `Privacy & security`
+
+Click `Call history`
+
+Turn off `Call history access`
+
+Click `Privacy & security`
+
+Click `Email`
+
+Turn off `Email access`
+
+Click `Privacy & security`
+
+Click `Tasks`
+
+Turn off `Tasks access`
+
+Click `Privacy & security`
+
+Click `Messaging`
+
+Turn off `Messaging access`
+
+Click `Privacy & security`
+
+Click `Radios`
+
+Turn off `Radio control access`
+
+Click `Privacy & security`
+
+Click `Other devices`
+
+Turn off `Communicate with unpaired devices`
+
+Click `Privacy & security`
+
+Click `App diagnostics`
+
+Turn off `App diagnostic access`
+
+---
+
+Click `Windows Update`
+
+Click `Pause for 1 week`
+
+Click `Extend for 1 week` 4 times
+
+Click `Advanced options`
+
+Click `Delivery Optimization`
+
+Turn off `Allow downloads from other devices`
 ### Installing Parsec
 Download [parsec-windows.exe](https://parsec.app/downloads)
 
