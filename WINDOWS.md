@@ -763,21 +763,39 @@ Click `Delivery Optimization`
 
 Turn off `Allow downloads from other devices`
 ### Installing Parsec
-Download [parsec-windows.exe](https://parsec.app/downloads)
+Download [parsec-windows.exe](https://builds.parsec.app/package/parsec-windows.exe)
 
 Open `parsec-windows.exe`
 
 Click `Next`
 
-Select `Per Computer`
+Click `Per Computer`
 
 Click `Next`
+
+Click Start Menu icon
+
+Type `Parsec`
+
+Press Enter
 
 Email `your_email`
 
 Password `your_password`
 
 Click `Log In`
+
+Click `Settings`
+
+Select `Keyboard` for `Immersive mode`
+
+Click `Host`
+
+Select `50 Mbps` for `Bandwidth limit`
+
+Turn on `Constant FPS`
+
+Turn off `Echo Cancelling`
 ### Installing 7-Zip
 Download [7z.*-x64.exe](https://www.7-zip.org/download.html)
 
