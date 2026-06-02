@@ -797,12 +797,22 @@ Turn on `Constant FPS`
 
 Turn off `Echo Cancelling`
 ### Installing 7-Zip
+```powershell
+winget install -e --id 7zip.7zip
+```
+Or
+
 Download [7z.*-x64.exe](https://www.7-zip.org/download.html)
 
 Click `Install`
 
 Click `Close`
 ### Installing 7-Zip ZS
+```powershell
+winget install -e --id mcmilk.7zip-zstd
+```
+Or
+
 Download [7z.*-zstd-x64.exe](https://github.com/mcmilk/7-Zip-zstd/releases)
 
 Click `Install`
@@ -1161,14 +1171,6 @@ Open `Wondershare PDFelement Pro 11.4.6` installer
 ### Installing ZBrush 2023.1.1
 Open `ZBrush 2023.1.1` installer
 ## Winget
-### Installing 7-Zip
-```powershell
-winget install -e --id 7zip.7zip
-```
-### Installing 7-Zip ZS
-```powershell
-winget install -e --id mcmilk.7zip-zstd
-```
 ### Installing ActivityWatch
 ```powershell
 winget install -e --id ActivityWatch.ActivityWatch
