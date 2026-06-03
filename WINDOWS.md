@@ -191,38 +191,6 @@ Turn on `Smooth edges of screen fonts`
 Click `OK`
 
 Click `OK`
-### Configuring Personalization
-Click Start Menu icon
-
-Type `Settings`
-
-Press Enter
-
-Select `Personalization`
-
-Click `Background`
-
-Select `Solid color`
-
-Click `Back`
-
-Click `Colors`
-
-Select `Dark`
-
-Turn off `Transparency effects`
-
-Select `Iris pastel`
-
-Click `Back`
-
-Click `Taskbar`
-
-Click `Search icon only`
-
-Select `Hide`
-
-Turn off `Task View`
 ### Configuring Win 10 Tweaker
 Predownload [Win 10 Tweaker](https://win10tweaker.ru)
 
@@ -312,6 +280,45 @@ Click Microsoft Store icon
 #### Scanner
 #### System Information
 Restart
+### Configuring Folders
+Open `File Explorer`
+
+Click `Local Disk (D:)`
+
+Click `> This PC > Local Disk (D:)`
+
+Type `cmd`
+
+Press Enter
+
+```powershell
+mkdir lmstudio
+mkdir portable
+```
+### Configuring Indexing
+Open `File Explorer`
+
+Click `Local Disk (C:)`
+
+Press Alt+Enter
+
+Turn off `Allow files on this drive to have contents indexed in addition to file properties`
+
+Click `OK`
+
+Click `OK`
+
+Click `Ignore All`
+
+Click `Local Disk (D:)`
+
+Press Alt+Enter
+
+Turn off `Allow files on this drive to have contents indexed in addition to file properties`
+
+Click `OK`
+
+Click `OK`
 ### Configuring Mouse Properties
 Click Start Menu icon
 
@@ -449,6 +456,22 @@ Turn off `Connection notifications`
 
 Click `Personalization`
 
+Click `Background`
+
+Select `Solid color` for `Personalize your background`
+
+Click `Personalization`
+
+Click `Colors`
+
+Select `Dark` for `Choose your mode`
+
+Turn off `Transparency effects`
+
+Select `Iris pastel` for `Windows colors`
+
+Click `Personalization`
+
 Click `Themes`
 
 Click `Desktop icon settings`
@@ -488,6 +511,10 @@ Turn off all
 Click `Personalization`
 
 Click `Taskbar`
+
+Select `Hide` for `Search`
+
+Turn off `Task View`
 
 Turn on `Pen Menu`
 
@@ -869,67 +896,6 @@ Blue: `0`
 
 Click `OK`
 #### About
-### Configuring Disk
-Right click Start Menu icon
-
-Select `Disk Management`
-
-Click `OK`
-
-Right click Disk 1's `Unallocated`
-
-Click `New Simple Volume...`
-
-Click `Next`
-
-Click `Next`
-
-Select `D`
-
-Click `Next`
-
-Volume label: ``
-
-Click `Next`
-### Configuring Indexing
-Open `File Explorer`
-
-Click `Local Disk (C:)`
-
-Press Alt+Enter
-
-Turn off `Allow files on this drive to have contents indexed in addition to file properties`
-
-Click `OK`
-
-Click `OK`
-
-Click `Ignore All`
-
-Click `Local Disk (D:)`
-
-Press Alt+Enter
-
-Turn off `Allow files on this drive to have contents indexed in addition to file properties`
-
-Click `OK`
-
-Click `OK`
-### Configuring Folders
-Open `File Explorer`
-
-Click `Local Disk (D:)`
-
-Click `> This PC > Local Disk (D:)`
-
-Type `cmd`
-
-Press Enter
-
-```powershell
-mkdir lmstudio
-mkdir portable
-```
 ### Installing LM Studio
 Download [LM-Studio-.*-x64.exe](https://lmstudio.ai/download/latest/win32/x64)
 
