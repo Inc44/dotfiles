@@ -930,6 +930,12 @@ Click `Change...`
 Folder: `D:\lmstudio`
 
 Click `Select Folder`
+
+Click App Settings icon
+
+Click `Chat`
+
+Turn off `Move deleted chats and folders to Trash`
 ### Configuring LM Studio (Internet access required)
 Click Start Menu icon
 
@@ -951,25 +957,33 @@ Click Chat icon
 
 Click `Select a model to load`
 
-Type `gpt-oss`
+Type `Qwen3.6-35B-A3B-MTP-GGUF`
 
-Click `Search more results for "gpt-oss"`
+Click `🔎 Search more results for "Qwen3.6-35B-A3B-MTP-GGUF"`
 
-Click `Download (63.39 GB)`
+Select `GGUF Qwen3.6 35B A3B UD Q6_K_XL` for `Download Options`
 
-Click `X`
+Click `📥 Download 34.40 GB`
+
+Click 🗙 icon
 
 Click `Select a model to load`
 
-Turn on `Manually choose model load parameters`
+Turn on `Manually choose model load parameters (or hold Alt)`
 
-Click `OpenAI's gpt-oss 120B`
+Click `Qwen3.6 35B A3B UD`
 
-Context Length `131072`
+Context Length `262144`
 
-GPU Offload `8`/36
+GPU Offload `41`
 
 Turn on `Remember settings for openai's gpt-oss 120b`
+
+Turn on `Show advanced settings`
+
+CPU Thread Pool Size `10`
+
+Number of layers for which to force MoE weights onto CPU `35`
 
 Click `Load Model`
 ### Installing Parsec
