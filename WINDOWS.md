@@ -762,40 +762,6 @@ Click `Advanced options`
 Click `Delivery Optimization`
 
 Turn off `Allow downloads from other devices`
-### Installing Parsec
-Download [parsec-windows.exe](https://builds.parsec.app/package/parsec-windows.exe)
-
-Open `parsec-windows.exe`
-
-Click `Next`
-
-Click `Per Computer`
-
-Click `Next`
-
-Click Start Menu icon
-
-Type `Parsec`
-
-Press Enter
-
-Email `your_email`
-
-Password `your_password`
-
-Click `Log In`
-
-Click `Settings`
-
-Select `Keyboard` for `Immersive mode`
-
-Click `Host`
-
-Select `50 Mbps` for `Bandwidth limit`
-
-Turn on `Constant FPS`
-
-Turn off `Echo Cancelling`
 ### Installing 7-Zip
 ```powershell
 winget install -e --id 7zip.7zip
@@ -969,7 +935,9 @@ Download [LM-Studio-.*-x64.exe](https://lmstudio.ai/download/latest/win32/x64)
 
 Open `LM-Studio-.*-x64.exe`
 
-Select `Anyone who uses this computer (all users)`
+Click `I Agree`
+
+Click `Anyone who uses this computer (all users)`
 
 Click `Next`
 
@@ -979,15 +947,15 @@ Click `Finish`
 
 Click `Get Started`
 
-Click `Developer`
-
 Click `Continue`
 
-Click `Skip`
+Turn on `Turn on Developer Mode`
 
-Click `OK`
+Turn off `Start local LLM service on login`
 
-Click 📂 icon
+Click `Continue to LM Studio`
+
+Click My Models icon
 
 Click ⋯ icon
 
@@ -996,14 +964,24 @@ Click `Change...`
 Folder: `D:\lmstudio`
 
 Click `Select Folder`
+### Configuring LM Studio (Internet access required)
+Click Start Menu icon
 
-Click ⚙️ icon
+Type `LM Studio`
+
+Press Enter
+
+Click App Settings icon
 
 Click `Runtime`
 
+Click `Check for updates`
+
 Click all `Update`
 
-Click 💬 icon
+Click 🗙 icon
+
+Click Chat icon
 
 Click `Select a model to load`
 
@@ -1028,6 +1006,40 @@ GPU Offload `8`/36
 Turn on `Remember settings for openai's gpt-oss 120b`
 
 Click `Load Model`
+### Installing Parsec
+Download [parsec-windows.exe](https://builds.parsec.app/package/parsec-windows.exe)
+
+Open `parsec-windows.exe`
+
+Click `Next`
+
+Click `Per Computer`
+
+Click `Next`
+### Configuring Parsec (Internet access required)
+Click Start Menu icon
+
+Type `Parsec`
+
+Press Enter
+
+Email `your_email`
+
+Password `your_password`
+
+Click `Log In`
+
+Click `Settings`
+
+Select `Keyboard` for `Immersive mode`
+
+Click `Host`
+
+Select `50 Mbps` for `Bandwidth limit`
+
+Turn on `Constant FPS`
+
+Turn off `Echo Cancelling`
 ## Free Portable
 ### Installing Advanced Renamer 3.95.4
 Download [advanced_renamer_portable_3_95_4.zip](https://www.advancedrenamer.com/down/advanced_renamer_portable_3_95_4.zip)
