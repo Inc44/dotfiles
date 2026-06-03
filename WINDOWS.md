@@ -281,9 +281,9 @@ Click Microsoft Store icon
 #### System Information
 Restart
 ### Configuring Folders
-Open `File Explorer`
+Press Win + E
 
-Click `Local Disk (D:)`
+Double click `Local Disk (D:)`
 
 Click `> This PC > Local Disk (D:)`
 
@@ -296,11 +296,11 @@ mkdir lmstudio
 mkdir portable
 ```
 ### Configuring Indexing
-Open `File Explorer`
+Press Win + E
 
 Click `Local Disk (C:)`
 
-Press Alt+Enter
+Press Alt + Enter
 
 Turn off `Allow files on this drive to have contents indexed in addition to file properties`
 
@@ -312,7 +312,7 @@ Click `Ignore All`
 
 Click `Local Disk (D:)`
 
-Press Alt+Enter
+Press Alt + Enter
 
 Turn off `Allow files on this drive to have contents indexed in addition to file properties`
 
@@ -797,6 +797,8 @@ Or
 
 Download [7z.*-x64.exe](https://www.7-zip.org/download.html)
 
+Open `7z.*-x64.exe`
+
 Click `Install`
 
 Click `Close`
@@ -808,15 +810,15 @@ Or
 
 Download [7z.*-zstd-x64.exe](https://github.com/mcmilk/7-Zip-zstd/releases)
 
+Open `7z.*-zstd-x64.exe`
+
 Click `Install`
 
 Click `Close`
 ### Installing StartAllBack
 Download `StartAllBack (StartIsBack++)`
 
-Open installer
-
-Click `OK`
+Open `StartAllBack` installer
 
 Click `Install`
 #### Welcome
@@ -838,15 +840,15 @@ Turn off `Display user account picture`
 
 Turn off `Display glyph icons`
 
-Select Music's `Don't display`
+Select `Don't display` for `Music`
 
-Select Videos's `Link`
+Select `Link` for `Videos`
 
-Select Recent Items's `Don't display`
+Select `Don't display` for `Recent Items`
 
-Select This PC's `Don't display`
+Select `Don't display` for `This PC`
 
-Select Run's `Don't display`
+Select `Don't display` for `Run`
 #### Taskbar
 Taskbar location on screen: `Top`
 
@@ -856,9 +858,7 @@ Turn on `Automatic hiding`
 #### Tray icons
 Corner icons open: `Windows 10 flyouts if possible`
 
-Turn on all icons
-
-Turn off Volume icon
+Turn on `Quick Settings`
 
 Turn on `Always show all app icons`
 #### Explorer
@@ -1758,7 +1758,7 @@ winget install -e --id Meta.Zstandard
 reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
 ```
 ### Mapping Network Drive
-Open `File Explorer`
+Press Win + E
 
 Click `Computer`
 
