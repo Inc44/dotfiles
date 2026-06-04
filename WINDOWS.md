@@ -150,9 +150,9 @@ Click `OK`
 ### Installing NVIDIA Drivers
 Predownload [NVIDIA Studio Driver](https://www.nvidia.com/en-us/drivers)
 
-Copy `.*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe` to USB
+Copy `*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe` to USB
 
-Install `.*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe`
+Install `*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe`
 
 Click `AGREE AND CONTINUE`
 
@@ -795,9 +795,9 @@ winget install -e --id 7zip.7zip
 ```
 Or
 
-Download [7z.*-x64.exe](https://www.7-zip.org/download.html)
+Download [7z*-x64.exe](https://www.7-zip.org/download.html)
 
-Open `7z.*-x64.exe`
+Open `7z*-x64.exe`
 
 Click `Install`
 
@@ -808,9 +808,9 @@ winget install -e --id mcmilk.7zip-zstd
 ```
 Or
 
-Download [7z.*-zstd-x64.exe](https://github.com/mcmilk/7-Zip-zstd/releases)
+Download [7z*-zstd-x64.exe](https://github.com/mcmilk/7-Zip-zstd/releases)
 
-Open `7z.*-zstd-x64.exe`
+Open `7z*-zstd-x64.exe`
 
 Click `Install`
 
@@ -897,9 +897,9 @@ Blue: `0`
 Click `OK`
 #### About
 ### Installing LM Studio
-Download [LM-Studio-.*-x64.exe](https://lmstudio.ai/download/latest/win32/x64)
+Download [LM-Studio-*-x64.exe](https://lmstudio.ai/download/latest/win32/x64)
 
-Open `LM-Studio-.*-x64.exe`
+Open `LM-Studio-*-x64.exe`
 
 Click `I Agree`
 
@@ -1024,19 +1024,19 @@ Turn off `Echo Cancelling`
 ### Installing Advanced Renamer 3.95.4
 Download [advanced_renamer_portable_3_95_4.zip](https://www.advancedrenamer.com/down/advanced_renamer_portable_3_95_4.zip)
 ### Installing Advanced Renamer 4
-Download [advanced_renamer_portable_4_.*.zip](https://www.advancedrenamer.com/download)
+Download [advanced_renamer_portable_4_*.zip](https://www.advancedrenamer.com/download)
 ### Installing Anvil's Storage Utilities
 Download [AnvilBenchmark_V110_[Guru3D.com].zip](https://www.guru3d.com/download/anvils-storage-utilities-download)
 ### Installing Apache Maven
-Download [apache-maven-.*-bin.zip](https://maven.apache.org/download.cgi)
-### Installing ATTO Disk Benchmark
-Download [atto-disk-benchmark-.*.zip](https://www.techpowerup.com/download/atto-disk-benchmark)
+Download [apache-maven-*-bin.zip](https://maven.apache.org/download.cgi)
+### Installing ATTO Disk Benchmark 4.01.0f1
+Download [atto-disk-benchmark-4010f1.zip](https://www.techpowerup.com/download/atto-disk-benchmark)
 ### Installing Check Flash
 Download [ChkFlsh.zip](https://www.mikelab.kiev.ua/PROGRAMS/ChkFlsh.zip)
 ### Installing Checksum Compare
-Download [Checksum-compare-v.*.7z](https://checksumcompare.sanktuaire.com/downloads)
+Download [Checksum-compare-v*.7z](https://checksumcompare.sanktuaire.com/downloads)
 ### Installing CUDA Information Utility
-Download [CUDA-Z-.*-64bit.exe](https://sourceforge.net/projects/cuda-z/files/cuda-z)
+Download [CUDA-Z-*-64bit.exe](https://sourceforge.net/projects/cuda-z/files/cuda-z)
 ### Installing DeepFaceLab
 Download [DeepFaceLab_DirectX12_build_05_04_2022.exe](https://github.com/iperov/DeepFaceLab)
 ### Installing Disk2vhd
@@ -1044,47 +1044,47 @@ Download [Disk2vhd.zip](https://download.sysinternals.com/files/Disk2vhd.zip)
 ### Installing Document Translation
 Download [DocumentTranslation.rar](https://github.com/MicrosoftTranslator/DocumentTranslation/releases)
 ### Installing Domain Name Server Benchmark 1.3.6668.0
-Download [DNSBench.exe](https://www.majorgeeks.com/files/details/dns_benchmark.html)
+Download [DNSBench.exe](https://www.majorgeeks.com/mg/getmirror/dns_benchmark,1.html)
 ### Installing EncryptPad
-Download [encryptpad.*_win32.zip](https://github.com/evpo/EncryptPad/releases)
+Download [encryptpad*_win32.zip](https://github.com/evpo/EncryptPad/releases)
 ### Installing FFMetrics
 Download [FFMetrics.*.zip](https://github.com/fifonik/FFMetrics/releases)
-### Installing Flowframes
-Download [FlowframesInstaller.*.exe](https://nmkd.itch.io/flowframes)
+### Installing Flowframes (Internet access required)
+Download [FlowframesInstaller*.exe](https://nmkd.itch.io/flowframes)
 ### Installing Ghidra
-Download [ghidra_.*_PUBLIC_.*.zip](https://github.com/NationalSecurityAgency/ghidra/releases)
+Download [ghidra_*_PUBLIC_*.zip](https://github.com/NationalSecurityAgency/ghidra/releases)
 ### Installing GPEN
 Download [GPEN-Windows.rar](https://github.com/yangxy/GPEN)
 ### Installing H2testw
-Download [h2testw_.*.zip](https://h2testw.org)
+Download [h2testw_*.zip](https://h2testw.org)
 ### Installing hashcat
-Download [hashcat-.*.7z](https://github.com/hashcat/hashcat/releases)
+Download [hashcat-*.7z](https://github.com/hashcat/hashcat/releases)
 ### Installing JDM Drift
 Download [JDM Drift Build DEMO.zip](https://howdyho.net/windows-software/demka-drift-igry-na-unity-eksperiment-v2)
 ### Installing Kiwix
-Download [kiwix-desktop_windows_x64_.*.zip](https://download.kiwix.org/release/kiwix-desktop/kiwix-desktop_windows_x64.zip)
+Download [kiwix-desktop_windows_x64_*.zip](https://download.kiwix.org/release/kiwix-desktop/kiwix-desktop_windows_x64.zip)
 ### Installing KruTube
-Download [krutube_.*.zip](https://www.krutube.pro/en/download)
+Download [krutube_*.zip](https://www.krutube.pro/en/download)
 ### Installing LinpackXtreme
-Download [LinpackXtreme-.*.zip](https://www.techpowerup.com/download/linpack-xtreme)
+Download [LinpackXtreme-*.zip](https://www.majorgeeks.com/mg/getmirror/linpack_xtreme,1.html)
 ### Installing Looping
 Download [Looping.zip](https://looping.net/Looping.zip)
 ### Installing MagicaVoxel
-Download [MagicaVoxel-.*.-win64.zip](https://github.com/ephtracy/ephtracy.github.io/releases)
+Download [MagicaVoxel-*-win64.zip](https://github.com/ephtracy/ephtracy.github.io/releases)
 ### Installing NEAV1E
-Download [neav1e-portable-.*.7z](https://github.com/Alkl58/NotEnoughAV1Encodes/releases)
-### Installing NVIDIA Profile Inspector
+Download [neav1e-portable-*.7z](https://github.com/Alkl58/NotEnoughAV1Encodes/releases)
+### Installing NVIDIA Profile Inspector (Internet access required)
 Download [nvidiaProfileInspector.zip](https://github.com/Orbmu2k/nvidiaProfileInspector/releases)
 ### Installing Oculante
 Download [oculante.exe](https://github.com/woelper/oculante/releases)
-### Installing PhantomJS
-Download [phantomjs-.*-windows.zip](https://phantomjs.org/download.html)
+### Installing PhantomJS 2.1.1
+Download [phantomjs-2.1.1-windows.zip](https://phantomjs.org/download.html)
 ### Installing Process Hacker 2.39
 Download [processhacker-2.39-bin.zip](https://sourceforge.net/projects/processhacker/files/processhacker2/processhacker-2.39-bin.zip/download)
 ### Installing SmoothDraw 4.0.5
 Download [SmoothDraw4.zip](https://qrli.github.io/smoothdraw/SmoothDraw4.zip)
 ### Installing TerraMap
-Download [TerraMap-.*.zip](https://terramap.github.io/windows.html)
+Download [TerraMap-*.zip](https://terramap.github.io/windows.html)
 ### Installing USBWebserver
 Download [USBWebServer.zip](https://github.com/grimgravy/USBWebServer/releases)
 ### Installing Voice Changer Client Demo 1.5.3.15
@@ -1094,7 +1094,7 @@ Download [file-splitter-and-joiner-portable.zip](https://files.vovsoft.com/file-
 ### Installing wCopy NFC Reader Read and Write Tool
 Download [nfcPro_x64.exe](https://www.xixei.com/nfc/tool/soft/down_enus.html)
 ### Installing y-cruncher
-Download [y-cruncher.v.*.zip](https://github.com/Mysticial/y-cruncher/releases)
+Download [y-cruncher.v*.zip](https://github.com/Mysticial/y-cruncher/releases)
 ## Paid Portable
 ### Installing 4K Stogram Professional License
 Open `4K Stogram Professional` installer
