@@ -292,7 +292,6 @@ Type `cmd`
 Press Enter
 
 ```powershell
-mkdir lmstudio
 mkdir portable
 ```
 ### Configuring Indexing
@@ -359,6 +358,14 @@ Click `Communications`
 Click `Do nothing`
 
 Click `OK`
+### Configuring Taskbar
+Right click File Explorer icon
+
+Click `Unpin from taskbar`
+
+Right click `Microsoft Edge`
+
+Click `Unpin from taskbar`
 ### Configuring Windows Features
 Click Start Menu icon
 
@@ -897,6 +904,9 @@ Blue: `0`
 Click `OK`
 #### About
 ### Installing LM Studio
+```powershell
+mkdir D:/portable/lmstudio
+```
 Download [LM-Studio-*-x64.exe](https://lmstudio.ai/download/latest/win32/x64)
 
 Open `LM-Studio-*-x64.exe`
@@ -1023,78 +1033,379 @@ Turn off `Echo Cancelling`
 ## Free Portable
 ### Installing Advanced Renamer 3.95.4
 Download [advanced_renamer_portable_3_95_4.zip](https://www.advancedrenamer.com/down/advanced_renamer_portable_3_95_4.zip)
+```powershell
+mkdir 'D:/portable/Advanced Renamer 3'
+tar xfC advanced_renamer_portable_3_95_4.zip 'D:/portable/Advanced Renamer 3'
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Advanced Renamer 3.lnk')
+$lnk.TargetPath='D:/portable/Advanced Renamer 3/ARen.exe'
+$lnk.Save()
+```
 ### Installing Advanced Renamer 4
 Download [advanced_renamer_portable_4_*.zip](https://www.advancedrenamer.com/download)
+```powershell
+mkdir 'D:/portable/Advanced Renamer 4'
+tar xfC advanced_renamer_portable_4_*.zip 'D:/portable/Advanced Renamer 4'
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Advanced Renamer 4.lnk')
+$lnk.TargetPath='D:/portable/Advanced Renamer 4/aren.exe'
+$lnk.Save()
+```
 ### Installing Anvil's Storage Utilities
 Download [AnvilBenchmark_V110_[Guru3D.com].zip](https://www.guru3d.com/download/anvils-storage-utilities-download)
+```powershell
+tar xfC AnvilBenchmark_V110_[Guru3D.com].zip D:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut("D:/portable/Anvil's Storage Benchmark.lnk")
+$lnk.TargetPath='D:/portable/AnvilPro.exe'
+$lnk.Save()
+```
 ### Installing Apache Maven
 Download [apache-maven-*-bin.zip](https://maven.apache.org/download.cgi)
+```powershell
+tar xfC apache-maven-*-bin.zip D:/portable
+Rename-Item D:/portable/apache-maven-* apache-maven
+setx /M PATH '%PATH%;D:/portable/apache-maven/bin'
+```
 ### Installing ATTO Disk Benchmark 4.01.0f1
 Download [atto-disk-benchmark-4010f1.zip](https://www.techpowerup.com/download/atto-disk-benchmark)
+```powershell
+mkdir 'D:/portable/ATTO Disk Benchmark'
+tar xfC atto-disk-benchmark-4010f1.zip 'D:/portable/ATTO Disk Benchmark'
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/ATTO Disk Benchmark.lnk')
+$lnk.TargetPath='D:/portable/ATTO Disk Benchmark/ATTODiskBenchmark.exe'
+$lnk.Save()
+```
 ### Installing Check Flash
 Download [ChkFlsh.zip](https://www.mikelab.kiev.ua/PROGRAMS/ChkFlsh.zip)
+```powershell
+mkdir 'D:/portable/Check Flash'
+tar xfC ChkFlsh.zip 'D:/portable/Check Flash'
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Check Flash.lnk')
+$lnk.TargetPath='D:/portable/Check Flash/ChkFlsh.exe'
+$lnk.Save()
+```
 ### Installing Checksum Compare
 Download [Checksum-compare-v*.7z](https://checksumcompare.sanktuaire.com/downloads)
+```powershell
+mkdir 'D:/portable/Checksum compare'
+tar xfC Checksum-compare-v*.7z 'D:/portable/Checksum compare'
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Checksum compare.lnk')
+$lnk.TargetPath='D:/portable/Checksum compare/Checksum compare.exe'
+$lnk.Save()
+```
 ### Installing CUDA Information Utility
 Download [CUDA-Z-*-64bit.exe](https://sourceforge.net/projects/cuda-z/files/cuda-z)
+```powershell
+copy CUDA-Z-*-64bit.exe D:/portable/CUDA-Z.exe
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/CUDA-Z.lnk')
+$lnk.TargetPath='D:/portable/CUDA-Z.exe'
+$lnk.Save()
+```
 ### Installing DeepFaceLab
 Download [DeepFaceLab_DirectX12_build_05_04_2022.exe](https://github.com/iperov/DeepFaceLab)
+
+Open `DeepFaceLab_DirectX12_build_05_04_2022.exe`
+
+Extract to `D:/portable`
+
+Click `Extract`
+```powershell
+Rename-Item D:/portable/DeepFaceLab_DirectX12 DeepFaceLab
+```
 ### Installing Disk2vhd
 Download [Disk2vhd.zip](https://download.sysinternals.com/files/Disk2vhd.zip)
+```powershell
+mkdir D:/portable/Disk2vhd
+tar xfC Disk2vhd.zip D:/portable/Disk2vhd
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Disk2vhd.lnk')
+$lnk.TargetPath='D:/portable/Disk2vhd/disk2vhd64.exe'
+$lnk.Save()
+```
 ### Installing Document Translation
 Download [DocumentTranslation.rar](https://github.com/MicrosoftTranslator/DocumentTranslation/releases)
+```powershell
+tar xfC DocumentTranslation.rar D:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Document Translation.lnk')
+$lnk.TargetPath='D:/portable/DocumentTranslation/DocumentTranslation.GUI.exe'
+$lnk.Save()
+```
 ### Installing Domain Name Server Benchmark 1.3.6668.0
 Download [DNSBench.exe](https://www.majorgeeks.com/mg/getmirror/dns_benchmark,1.html)
+```powershell
+copy DNSBench.exe D:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/DNS Benchmark.lnk')
+$lnk.TargetPath='D:/portable/DNSBench.exe'
+$lnk.Save()
+```
 ### Installing EncryptPad
 Download [encryptpad*_win32.zip](https://github.com/evpo/EncryptPad/releases)
+```powershell
+mkdir D:/portable/encryptpad
+tar xfC encryptpad*_win32.zip D:/portable/encryptpad
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/EncryptPad.lnk')
+$lnk.TargetPath='D:/portable/encryptpad/encryptpad.exe'
+$lnk.Save()
+```
 ### Installing FFMetrics
 Download [FFMetrics.*.zip](https://github.com/fifonik/FFMetrics/releases)
+```powershell
+tar xfC FFMetrics.*.zip D:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/FFMetrics.lnk')
+$lnk.TargetPath='D:/portable/FFMetrics/FFMetrics.exe'
+$lnk.Save()
+```
 ### Installing Flowframes (Internet access required)
+```powershell
+mkdir D:/portable/Flowframes
+```
 Download [FlowframesInstaller*.exe](https://nmkd.itch.io/flowframes)
+
+Open `FlowframesInstaller*.exe`
+
+Click `Custom Folder`
+
+Click `Browse`
+
+Select `D:/portable/Flowframes`
+
+Click `Select Folder`
+
+Click `Next`
+
+Click `AMD, Intel, Nvidia (Vulkan+CUDA)`
+
+Click `Next`
+
+Click `Install embedded Python runtime with all dependencies`
+
+Click `Next`
+
+Click `Support for RTX 30 Series and older (~3.0 GB of Disk Space)`
+
+Click `Next`
+
+Click `Pre-install AI Models (Enables Flowframes to be used completely offline)`
+
+Click `Next`
+
+Click `Next`
+
+Click `Next`
+
+Click `Download Model Files`
+
+Click `Close`
 ### Installing Ghidra
 Download [ghidra_*_PUBLIC_*.zip](https://github.com/NationalSecurityAgency/ghidra/releases)
+```powershell
+tar xfC ghidra_*_PUBLIC_*.zip D:/portable
+Rename-Item D:/portable/ghidra_*_PUBLIC ghidra
+```
 ### Installing GPEN
 Download [GPEN-Windows.rar](https://github.com/yangxy/GPEN)
+```powershell
+mkdir D:/portable/GPEN
+tar xfC GPEN-Windows.rar D:/portable/GPEN
+```
 ### Installing H2testw
 Download [h2testw_*.zip](https://h2testw.org)
+```powershell
+mkdir D:/portable/h2testw
+tar xfC h2testw_*.zip D:/portable/h2testw
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/h2testw.lnk')
+$lnk.TargetPath='D:/portable/h2testw/h2testw.exe'
+$lnk.Save()
+```
 ### Installing hashcat
 Download [hashcat-*.7z](https://github.com/hashcat/hashcat/releases)
+```powershell
+tar xfC hashcat-*.7z D:/portable
+Rename-Item D:/portable/hashcat-* hashcat
+setx /M PATH '%PATH%;D:/portable/hashcat'
+```
 ### Installing JDM Drift
 Download [JDM Drift Build DEMO.zip](https://howdyho.net/windows-software/demka-drift-igry-na-unity-eksperiment-v2)
+```powershell
+mkdir 'D:/portable/JDM Drift'
+tar xfC 'JDM Drift Build DEMO.zip' 'D:/portable/JDM Drift'
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/JDM Drift.lnk')
+$lnk.TargetPath='D:/portable/JDM Drift/JDM Drift.exe'
+$lnk.Save()
+```
 ### Installing Kiwix
 Download [kiwix-desktop_windows_x64_*.zip](https://download.kiwix.org/release/kiwix-desktop/kiwix-desktop_windows_x64.zip)
+```powershell
+mkdir D:/portable/Kiwix
+tar xfC kiwix-desktop_windows_x64_*.zip D:/portable/Kiwix
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Kiwix.lnk')
+$lnk.TargetPath='D:/portable/Kiwix/kiwix-desktop.exe'
+$lnk.Save()
+```
 ### Installing KruTube
 Download [krutube_*.zip](https://www.krutube.pro/en/download)
+```powershell
+tar xfC krutube_*.zip D:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/KruTube.lnk')
+$lnk.TargetPath='D:/portable/KruTube/KruTube.exe'
+$lnk.Save()
+```
 ### Installing LinpackXtreme
 Download [LinpackXtreme-*.zip](https://www.majorgeeks.com/mg/getmirror/linpack_xtreme,1.html)
+```powershell
+mkdir D:/portable/LinpackXtreme
+tar xfC LinpackXtreme-*.zip D:/portable/LinpackXtreme
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/LinpackXtreme.lnk')
+$lnk.TargetPath='D:/portable/LinpackXtreme/LinpackXtreme_x64.exe'
+$lnk.Save()
+```
 ### Installing Looping
 Download [Looping.zip](https://looping.net/Looping.zip)
+```powershell
+mkdir D:/portable/Looping
+tar xfC Looping.zip D:/portable/Looping
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Looping.lnk')
+$lnk.TargetPath='D:/portable/Looping/Looping.exe'
+$lnk.Save()
+```
 ### Installing MagicaVoxel
 Download [MagicaVoxel-*-win64.zip](https://github.com/ephtracy/ephtracy.github.io/releases)
+```powershell
+tar xfC MagicaVoxel-*-win64.zip D:/portable
+Rename-Item D:/portable/MagicaVoxel-*-win64 MagicaVoxel
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/MagicaVoxel.lnk')
+$lnk.TargetPath='D:/portable/MagicaVoxel/MagicaVoxel.exe'
+$lnk.Save()
+```
 ### Installing NEAV1E
 Download [neav1e-portable-*.7z](https://github.com/Alkl58/NotEnoughAV1Encodes/releases)
+```powershell
+mkdir D:/portable/NotEnoughAV1Encodes
+tar xfC neav1e-portable-*.7z D:/portable/NotEnoughAV1Encodes
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/NotEnoughAV1Encodes.lnk')
+$lnk.TargetPath='D:/portable/NotEnoughAV1Encodes/NotEnoughAV1Encodes.exe'
+$lnk.Save()
+```
 ### Installing NVIDIA Profile Inspector (Internet access required)
 Download [nvidiaProfileInspector.zip](https://github.com/Orbmu2k/nvidiaProfileInspector/releases)
+```powershell
+mkdir D:/portable/nvidiaProfileInspector
+tar xfC nvidiaProfileInspector.zip D:/portable/nvidiaProfileInspector
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/nvidiaProfileInspector.lnk')
+$lnk.TargetPath='D:/portable/nvidiaProfileInspector/nvidiaProfileInspector.exe'
+$lnk.Save()
+```
 ### Installing Oculante
 Download [oculante.exe](https://github.com/woelper/oculante/releases)
+```powershell
+copy oculante.exe D:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Oculante.lnk')
+$lnk.TargetPath='D:/portable/oculante.exe'
+$lnk.Save()
+```
 ### Installing PhantomJS 2.1.1
 Download [phantomjs-2.1.1-windows.zip](https://phantomjs.org/download.html)
+```powershell
+tar xfC phantomjs-2.1.1-windows.zip D:/portable
+Rename-Item D:/portable/phantomjs-2.1.1-windows phantomjs
+setx /M PATH '%PATH%;D:/portable/phantomjs/bin'
+```
 ### Installing Process Hacker 2.39
 Download [processhacker-2.39-bin.zip](https://sourceforge.net/projects/processhacker/files/processhacker2/processhacker-2.39-bin.zip/download)
+```powershell
+mkdir D:/portable/processhacker
+tar xfC processhacker-2.39-bin.zip D:/portable/processhacker
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Process Hacker.lnk')
+$lnk.TargetPath='D:/portable/processhacker/x64/ProcessHacker.exe'
+$lnk.Save()
+```
 ### Installing SmoothDraw 4.0.5
 Download [SmoothDraw4.zip](https://qrli.github.io/smoothdraw/SmoothDraw4.zip)
+```powershell
+mkdir D:/portable/SmoothDraw4
+tar xfC SmoothDraw4.zip D:/portable/SmoothDraw4
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/SmoothDraw4.lnk')
+$lnk.TargetPath='D:/portable/SmoothDraw4/SmoothDraw4.exe'
+$lnk.Save()
+```
 ### Installing TerraMap
 Download [TerraMap-*.zip](https://terramap.github.io/windows.html)
+```powershell
+tar xfC TerraMap-*.zip D:/portable
+Rename-Item D:/portable/TerraMap-* TerraMap
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/TerraMap.lnk')
+$lnk.TargetPath='D:/portable/TerraMap/TerraMap.exe'
+$lnk.Save()
+```
 ### Installing USBWebserver
 Download [USBWebServer.zip](https://github.com/grimgravy/USBWebServer/releases)
+```powershell
+tar xfC USBWebServer.zip D:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/USBWebServer.lnk')
+$lnk.TargetPath='D:/portable/USBWebServer/usbwebserver.exe'
+$lnk.Save()
+```
 ### Installing Voice Changer Client Demo 1.5.3.15
 Download [MMVCServerSIO_win_onnxgpu-cuda_v.1.5.3.15.zip](https://huggingface.co/wok000/vcclient000/blob/main/MMVCServerSIO_win_onnxgpu-cuda_v.1.5.3.15.zip)
+```powershell
+tar xfC MMVCServerSIO_win_onnxgpu-cuda_v.1.5.3.15.zip D:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Voice Changer.lnk')
+$lnk.TargetPath='D:/portable/MMVCServerSIO/MMVCServerSIO.exe'
+$lnk.Save()
+```
 ### Installing VOVSOFT - File Splitter And Joiner
 Download [file-splitter-and-joiner-portable.zip](https://files.vovsoft.com/file-splitter-and-joiner-portable.zip)
+```powershell
+mkdir 'D:/portable/File Splitter And Joiner'
+tar xfC file-splitter-and-joiner-portable.zip 'D:/portable/File Splitter And Joiner'
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/File Splitter And Joiner.lnk')
+$lnk.TargetPath='D:/portable/File Splitter And Joiner/filesplitjoin.exe'
+$lnk.Save()
+```
 ### Installing wCopy NFC Reader Read and Write Tool
 Download [nfcPro_x64.exe](https://www.xixei.com/nfc/tool/soft/down_enus.html)
+```powershell
+copy nfcPro_x64.exe D:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/wCopy NFC Reader Read and Write Tool.lnk')
+$lnk.TargetPath='D:/portable/nfcPro_x64.exe'
+$lnk.Save()
+```
 ### Installing y-cruncher
 Download [y-cruncher.v*.zip](https://github.com/Mysticial/y-cruncher/releases)
+```powershell
+tar xfC y-cruncher.v*.zip D:/portable
+Rename-Item 'D:/portable/y-cruncher v*' y-cruncher
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/y-cruncher.lnk')
+$lnk.TargetPath='D:/portable/y-cruncher/y-cruncher.exe'
+$lnk.Save()
+```
 ## Paid Portable
 ### Installing 4K Stogram Professional License
 Open `4K Stogram Professional` installer
