@@ -809,6 +809,9 @@ Open `7z*-x64.exe`
 Click `Install`
 
 Click `Close`
+```powershell
+setx /M PATH '%PATH%;C:/Program Files/7-Zip'
+```
 ### Installing 7-Zip ZS
 ```powershell
 winget install -e --id mcmilk.7zip-zstd
@@ -1041,16 +1044,92 @@ $lnk = $ws.CreateShortcut('D:/portable/Advanced Renamer 3.lnk')
 $lnk.TargetPath='D:/portable/Advanced Renamer 3/ARen.exe'
 $lnk.Save()
 ```
+Open `Advanced Renamer 3`
+
+Click `OK`
+
+Turn on `Don't show this again`
+
+Click `Settings`
+
+Turn off `Show file info panel`
+
+Turn on `Show grid`
+
+Color mode: `Light`
+
+Click `Image files`
+
+EXIF field for image date time operations: `ExifTool DateOriginal`
+
+Turn on `Don't analyze image metadata`
+
+Click `Music & video files`
+
+Turn on `Don't analyze music metadata`
+
+Turn on `Don't analyze video metadata`
+
+Click `OK`
+
+Name collision rule `Append number`
+
+Click `Load Method List`
+
+File name: `Renaming Method List.aren`
+
+Click `Open`
 ### Installing Advanced Renamer 4
 Download [advanced_renamer_portable_4_*.zip](https://www.advancedrenamer.com/download)
 ```powershell
 mkdir 'D:/portable/Advanced Renamer 4'
-tar xfC advanced_renamer_portable_4_*.zip 'D:/portable/Advanced Renamer 4'
+tar xfC (Get-Item advanced_renamer_portable_4_*.zip).FullName 'D:/portable/Advanced Renamer 4'
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/Advanced Renamer 4.lnk')
 $lnk.TargetPath='D:/portable/Advanced Renamer 4/aren.exe'
 $lnk.Save()
 ```
+Open `Advanced Renamer 4`
+
+Turn on `Accept license terms`
+
+Click `OK`
+
+Click `OK`
+
+Turn on `Don't show this again`
+
+Click `Settings`
+
+Turn on `Show grid`
+
+Turn on `Grid stripes`
+
+Color mode: `Light`
+
+Click `Media files`
+
+Field for image date time operations: `Date original`
+
+Turn on `Don't analyze image metadata`
+
+Turn on `Don't analyze audio metadata`
+
+Turn on `Don't analyze video metadata`
+
+Turn on `Don't analyze document metadata`
+
+Click `OK`
+
+Name collision rule `Append number`
+
+Click `Load Method List`
+
+Click `Load Method List...`
+
+File name: `Renaming Method List.aren`
+
+Click `Open`
 ### Installing Anvil's Storage Utilities
 Download [AnvilBenchmark_V110_[Guru3D.com].zip](https://www.guru3d.com/download/anvils-storage-utilities-download)
 ```powershell
@@ -1063,7 +1142,7 @@ $lnk.Save()
 ### Installing Apache Maven
 Download [apache-maven-*-bin.zip](https://maven.apache.org/download.cgi)
 ```powershell
-tar xfC apache-maven-*-bin.zip D:/portable
+tar xfC (Get-Item apache-maven-*-bin.zip).FullName D:/portable
 Rename-Item D:/portable/apache-maven-* apache-maven
 setx /M PATH '%PATH%;D:/portable/apache-maven/bin'
 ```
@@ -1091,12 +1170,27 @@ $lnk.Save()
 Download [Checksum-compare-v*.7z](https://checksumcompare.sanktuaire.com/downloads)
 ```powershell
 mkdir 'D:/portable/Checksum compare'
-tar xfC Checksum-compare-v*.7z 'D:/portable/Checksum compare'
+tar xfC (Get-Item Checksum-compare-v*.7z).FullName 'D:/portable/Checksum compare'
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/Checksum compare.lnk')
 $lnk.TargetPath='D:/portable/Checksum compare/Checksum compare.exe'
 $lnk.Save()
 ```
+Open `Checksum compare`
+
+Click `Edition`
+
+Click `Options...`
+
+Turn on `Sauvegarder les répertoires courants en quittant.`
+
+Turn on `Sauvegarder l'agencement des vues en quittant.`
+
+Langue `English`
+
+Click `Sauver`
+
+Click `Yes`
 ### Installing CUDA Information Utility
 Download [CUDA-Z-*-64bit.exe](https://sourceforge.net/projects/cuda-z/files/cuda-z)
 ```powershell
@@ -1127,6 +1221,9 @@ $lnk = $ws.CreateShortcut('D:/portable/Disk2vhd.lnk')
 $lnk.TargetPath='D:/portable/Disk2vhd/disk2vhd64.exe'
 $lnk.Save()
 ```
+Open `Disk2vhd`
+
+Click `Agree`
 ### Installing Document Translation
 Download [DocumentTranslation.rar](https://github.com/MicrosoftTranslator/DocumentTranslation/releases)
 ```powershell
@@ -1149,7 +1246,7 @@ $lnk.Save()
 Download [encryptpad*_win32.zip](https://github.com/evpo/EncryptPad/releases)
 ```powershell
 mkdir D:/portable/encryptpad
-tar xfC encryptpad*_win32.zip D:/portable/encryptpad
+tar xfC (Get-Item encryptpad*_win32.zip).FullName D:/portable/encryptpad
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/EncryptPad.lnk')
 $lnk.TargetPath='D:/portable/encryptpad/encryptpad.exe'
@@ -1158,7 +1255,7 @@ $lnk.Save()
 ### Installing FFMetrics
 Download [FFMetrics.*.zip](https://github.com/fifonik/FFMetrics/releases)
 ```powershell
-tar xfC FFMetrics.*.zip D:/portable
+tar xfC (Get-Item FFMetrics.*.zip).FullName D:/portable
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/FFMetrics.lnk')
 $lnk.TargetPath='D:/portable/FFMetrics/FFMetrics.exe'
@@ -1208,7 +1305,7 @@ Click `Close`
 ### Installing Ghidra
 Download [ghidra_*_PUBLIC_*.zip](https://github.com/NationalSecurityAgency/ghidra/releases)
 ```powershell
-tar xfC ghidra_*_PUBLIC_*.zip D:/portable
+tar xfC (Get-Item ghidra_*_PUBLIC_*.zip).FullName D:/portable
 Rename-Item D:/portable/ghidra_*_PUBLIC ghidra
 ```
 ### Installing GPEN
@@ -1221,7 +1318,7 @@ tar xfC GPEN-Windows.rar D:/portable/GPEN
 Download [h2testw_*.zip](https://h2testw.org)
 ```powershell
 mkdir D:/portable/h2testw
-tar xfC h2testw_*.zip D:/portable/h2testw
+tar xfC (Get-Item h2testw_*.zip).FullName D:/portable/h2testw
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/h2testw.lnk')
 $lnk.TargetPath='D:/portable/h2testw/h2testw.exe'
@@ -1230,7 +1327,7 @@ $lnk.Save()
 ### Installing hashcat
 Download [hashcat-*.7z](https://github.com/hashcat/hashcat/releases)
 ```powershell
-tar xfC hashcat-*.7z D:/portable
+tar xfC (Get-Item hashcat-*.7z).FullName D:/portable
 Rename-Item D:/portable/hashcat-* hashcat
 setx /M PATH '%PATH%;D:/portable/hashcat'
 ```
@@ -1248,7 +1345,7 @@ $lnk.Save()
 Download [kiwix-desktop_windows_x64_*.zip](https://download.kiwix.org/release/kiwix-desktop/kiwix-desktop_windows_x64.zip)
 ```powershell
 mkdir D:/portable/Kiwix
-tar xfC kiwix-desktop_windows_x64_*.zip D:/portable/Kiwix
+tar xfC (Get-Item kiwix-desktop_windows_x64_*.zip).FullName D:/portable/Kiwix
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/Kiwix.lnk')
 $lnk.TargetPath='D:/portable/Kiwix/kiwix-desktop.exe'
@@ -1257,7 +1354,7 @@ $lnk.Save()
 ### Installing KruTube
 Download [krutube_*.zip](https://www.krutube.pro/en/download)
 ```powershell
-tar xfC krutube_*.zip D:/portable
+tar xfC (Get-Item krutube_*.zip).FullName D:/portable
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/KruTube.lnk')
 $lnk.TargetPath='D:/portable/KruTube/KruTube.exe'
@@ -1267,7 +1364,7 @@ $lnk.Save()
 Download [LinpackXtreme-*.zip](https://www.majorgeeks.com/mg/getmirror/linpack_xtreme,1.html)
 ```powershell
 mkdir D:/portable/LinpackXtreme
-tar xfC LinpackXtreme-*.zip D:/portable/LinpackXtreme
+tar xfC (Get-Item LinpackXtreme-*.zip).FullName D:/portable/LinpackXtreme
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/LinpackXtreme.lnk')
 $lnk.TargetPath='D:/portable/LinpackXtreme/LinpackXtreme_x64.exe'
@@ -1286,7 +1383,7 @@ $lnk.Save()
 ### Installing MagicaVoxel
 Download [MagicaVoxel-*-win64.zip](https://github.com/ephtracy/ephtracy.github.io/releases)
 ```powershell
-tar xfC MagicaVoxel-*-win64.zip D:/portable
+tar xfC (Get-Item MagicaVoxel-*-win64.zip).FullName D:/portable
 Rename-Item D:/portable/MagicaVoxel-*-win64 MagicaVoxel
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/MagicaVoxel.lnk')
@@ -1297,7 +1394,7 @@ $lnk.Save()
 Download [neav1e-portable-*.7z](https://github.com/Alkl58/NotEnoughAV1Encodes/releases)
 ```powershell
 mkdir D:/portable/NotEnoughAV1Encodes
-tar xfC neav1e-portable-*.7z D:/portable/NotEnoughAV1Encodes
+tar xfC (Get-Item neav1e-portable-*.7z).FullName D:/portable/NotEnoughAV1Encodes
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/NotEnoughAV1Encodes.lnk')
 $lnk.TargetPath='D:/portable/NotEnoughAV1Encodes/NotEnoughAV1Encodes.exe'
@@ -1322,6 +1419,29 @@ $lnk = $ws.CreateShortcut('D:/portable/Oculante.lnk')
 $lnk.TargetPath='D:/portable/oculante.exe'
 $lnk.Save()
 ```
+Open `Oculante`
+
+Click $\equiv$ icon
+
+Click `Preferences`
+
+Click `Visual`
+
+Click `Accent color`
+
+Click `R 255`
+
+Type `135`
+
+Click `G 0`
+
+Type `100`
+
+Click `B 75`
+
+Type `184`
+
+Window title `{FULLPATH}`
 ### Installing PhantomJS 2.1.1
 Download [phantomjs-2.1.1-windows.zip](https://phantomjs.org/download.html)
 ```powershell
@@ -1352,7 +1472,7 @@ $lnk.Save()
 ### Installing TerraMap
 Download [TerraMap-*.zip](https://terramap.github.io/windows.html)
 ```powershell
-tar xfC TerraMap-*.zip D:/portable
+tar xfC (Get-Item TerraMap-*.zip).FullName D:/portable
 Rename-Item D:/portable/TerraMap-* TerraMap
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/TerraMap.lnk')
@@ -1368,6 +1488,25 @@ $lnk = $ws.CreateShortcut('D:/portable/USBWebServer.lnk')
 $lnk.TargetPath='D:/portable/USBWebServer/usbwebserver.exe'
 $lnk.Save()
 ```
+Open `USBWebServer`
+
+Click `Allow`
+
+Click `Allow`
+
+Click ▾ icon
+
+Click `English`
+
+Click `PHPMyAdmin`
+
+Username: `root`
+
+Password: `your_password`
+
+Click `Log in`
+
+Select `Original` for Theme`
 ### Installing Voice Changer Client Demo 1.5.3.15
 Download [MMVCServerSIO_win_onnxgpu-cuda_v.1.5.3.15.zip](https://huggingface.co/wok000/vcclient000/blob/main/MMVCServerSIO_win_onnxgpu-cuda_v.1.5.3.15.zip)
 ```powershell
@@ -1399,7 +1538,7 @@ $lnk.Save()
 ### Installing y-cruncher
 Download [y-cruncher.v*.zip](https://github.com/Mysticial/y-cruncher/releases)
 ```powershell
-tar xfC y-cruncher.v*.zip D:/portable
+tar xfC (Get-Item y-cruncher.v*.zip).FullName D:/portable
 Rename-Item 'D:/portable/y-cruncher v*' y-cruncher
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/y-cruncher.lnk')

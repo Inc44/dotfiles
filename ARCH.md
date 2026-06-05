@@ -165,7 +165,9 @@ Type `root`
 
 Type `your_password`
 
-Select `Theme` > `Original`
+Click `Log in`
+
+Select `Original` for Theme`
 ### Configuring Apache
 ```bash
 sudo nano /etc/httpd/conf/httpd.conf
