@@ -328,6 +328,10 @@ Press Enter
 Turn off `Enhance pointer precision`
 
 Click `OK`
+### Configuring PATH
+```cmd
+setx /M PATH "%PATH%;%PORTABLE_PATH%"
+```
 ### Configuring Region
 Click Start Menu icon
 
@@ -809,8 +813,8 @@ Open `7z*-x64.exe`
 Click `Install`
 
 Click `Close`
-```powershell
-setx /M PATH '%PATH%;C:/Program Files/7-Zip'
+```cmd
+setx /M PATH "%PATH%;C:\Program Files\7-Zip"
 ```
 ### Installing 7-Zip ZS
 ```powershell
@@ -1144,7 +1148,9 @@ Download [apache-maven-*-bin.zip](https://maven.apache.org/download.cgi)
 ```powershell
 tar xfC (Get-Item apache-maven-*-bin.zip).FullName D:/portable
 Rename-Item D:/portable/apache-maven-* apache-maven
-setx /M PATH '%PATH%;D:/portable/apache-maven/bin'
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\apache-maven\bin"
 ```
 ### Installing ATTO Disk Benchmark 4.01.0f1
 Download [atto-disk-benchmark-4010f1.zip](https://www.techpowerup.com/download/atto-disk-benchmark)
@@ -1329,7 +1335,9 @@ Download [hashcat-*.7z](https://github.com/hashcat/hashcat/releases)
 ```powershell
 tar xfC (Get-Item hashcat-*.7z).FullName D:/portable
 Rename-Item D:/portable/hashcat-* hashcat
-setx /M PATH '%PATH%;D:/portable/hashcat'
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\hashcat"
 ```
 ### Installing JDM Drift
 Download [JDM Drift Build DEMO.zip](https://howdyho.net/windows-software/demka-drift-igry-na-unity-eksperiment-v2)
@@ -1447,7 +1455,9 @@ Download [phantomjs-2.1.1-windows.zip](https://phantomjs.org/download.html)
 ```powershell
 tar xfC phantomjs-2.1.1-windows.zip D:/portable
 Rename-Item D:/portable/phantomjs-2.1.1-windows phantomjs
-setx /M PATH '%PATH%;D:/portable/phantomjs/bin'
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\phantomjs\bin"
 ```
 ### Installing Process Hacker 2.39
 Download [processhacker-2.39-bin.zip](https://sourceforge.net/projects/processhacker/files/processhacker2/processhacker-2.39-bin.zip/download)
