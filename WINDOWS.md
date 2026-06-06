@@ -910,6 +910,19 @@ Blue: `0`
 
 Click `OK`
 #### About
+### Installing .NET Desktop Runtime 6
+```powershell
+winget install -e --id Microsoft.DotNet.DesktopRuntime.6
+```
+Or
+
+Download [windowsdesktop-runtime-6*-win-x64](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+
+Open `windowsdesktop-runtime-6*-win-x64`
+
+Click `Install`
+
+Click `Close`
 ### Installing LM Studio
 ```powershell
 mkdir D:/portable/lmstudio
