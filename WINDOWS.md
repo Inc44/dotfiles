@@ -1381,7 +1381,7 @@ $lnk = $ws.CreateShortcut('D:/portable/KruTube.lnk')
 $lnk.TargetPath='D:/portable/KruTube/KruTube.exe'
 $lnk.Save()
 ```
-### Installing LinpackXtreme
+### Installing LinpackXtreme (Internet access required)
 Download [LinpackXtreme-*.zip](https://www.majorgeeks.com/mg/getmirror/linpack_xtreme,1.html)
 ```powershell
 mkdir D:/portable/LinpackXtreme
@@ -1389,8 +1389,12 @@ tar xfC (Get-Item LinpackXtreme-*.zip).FullName D:/portable/LinpackXtreme
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/LinpackXtreme.lnk')
 $lnk.TargetPath='D:/portable/LinpackXtreme/LinpackXtreme_x64.exe'
+$lnk.WorkingDirectory='D:/portable/LinpackXtreme'
 $lnk.Save()
 ```
+Open `LinpackXtreme`
+
+Press Enter
 ### Installing Looping
 Download [Looping.zip](https://looping.net/Looping.zip)
 ```powershell
