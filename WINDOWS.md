@@ -1327,11 +1327,11 @@ Download [ghidra_*_PUBLIC_*.zip](https://github.com/NationalSecurityAgency/ghidr
 tar xfC (Get-Item ghidra_*_PUBLIC_*.zip).FullName D:/portable
 Rename-Item D:/portable/ghidra_*_PUBLIC ghidra
 ```
-### Installing GPEN
+### Installing GPEN (Internet access required)
 Download [GPEN-Windows.rar](https://github.com/yangxy/GPEN)
 ```powershell
-mkdir D:/portable/GPEN
-tar xfC GPEN-Windows.rar D:/portable/GPEN
+git clone https://github.com/yangxy/GPEN.git D:/portable/GPEN
+7z x GPEN-Windows.rar -oD:/portable/GPEN
 ```
 ### Installing H2testw
 Download [h2testw_*.zip](https://h2testw.org)
