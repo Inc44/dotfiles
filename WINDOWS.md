@@ -1050,6 +1050,185 @@ Select `50 Mbps` for `Bandwidth limit`
 Turn on `Constant FPS`
 
 Turn off `Echo Cancelling`
+### Installing PowerToys
+```powershell
+winget install -e --id Microsoft.PowerToys
+```
+Or
+
+Download [PowerToysSetup-*-x64.exe](https://github.com/microsoft/PowerToys/releases)
+
+Open `PowerToysSetup-*-x64.exe`
+
+Turn on `I agree to the license terms and conditions`
+
+Click `Install`
+
+Click `Close`
+### Configuring PowerToys
+Click `Configure PowerToys`
+
+Turn off `Awake`
+
+Turn off `Command Palette`
+
+Turn on `Environment Variables`
+
+Turn off `File Locksmith`
+
+Turn on `Hosts File Editor`
+
+Turn off `PowerRename`
+
+Turn on `PowerToys Run`
+
+Turn on `Workspaces`
+
+Click `Always On Top`
+
+Select `4` for `Thickness (px)`
+
+Turn off `Play a sound when pinning a window`
+
+---
+
+Click `Home`
+
+Click `Color Picker`
+
+Turn on `Show color name`
+
+Turn on `CMYK`
+
+Turn on `CIELAB`
+
+---
+
+Click `Home`
+
+Click `FancyZones`
+
+Turn on `Make the dragged window transparent`
+
+Turn on `Override Windows Snap`
+
+---
+
+Click `Home`
+
+Click `Hosts File Editor`
+
+Turn off `Show a warning at startup`
+
+Turn off `Backup hosts file`
+
+---
+
+Click `Home`
+
+Click `Image Resizer`
+
+Click Remove icon
+
+Click `Yes`
+
+Click Remove icon
+
+Click `Yes`
+
+Click Remove icon
+
+Click `Yes`
+
+Click Remove icon
+
+Click `Yes`
+
+Click `Add new size`
+
+Click Edit icon
+
+Name `icon`
+
+Width `100`
+
+Height `100`
+
+Click `Add new size`
+
+Click Edit icon for `New size 1`
+
+Name `512`
+
+Width `512`
+
+Height `512`
+
+Select `PNG encoder` for `Fallback encoder`
+
+Select `100` for `JPEG quality level (%)`
+
+---
+
+Click `Home`
+
+Click `Mouse Highlighter`
+
+Click `Appearance & behavior`
+
+Select `#A600F00` for `Primary button highlight color`
+
+---
+
+Click `Home`
+
+Click `PowerToys Run`
+
+Turn on `OneNote`
+
+Click `Time and Date`
+
+Turn on `Show time with seconds`
+
+Custom formats `unix=UXT`
+
+Click `Unit Converter`
+
+Turn on `Include in global result`
+
+Click `Value Generator`
+
+Turn on `Include in global result`
+
+Click `Windows settings`
+
+Turn on `Include in global result`
+
+Click `Window Walker`
+
+Turn on `Show process id in the subtitle`
+
+Turn on `Stay open after closing windows and killing processes`
+
+Turn on `Hide Explorer process information`
+
+---
+
+Click `Home`
+
+Click `Screen Ruler`
+
+Select `Spacing` for `Default mode`
+
+Select `35` for `Pixel tolerance for edge detection`
+
+---
+
+Click `Home`
+
+Click `Shortcut Guide`
+
+Select `Right` for `Window position`
 ## Free Portable
 ### Installing Advanced Renamer 3.95.4
 Download [advanced_renamer_portable_3_95_4.zip](https://www.advancedrenamer.com/down/advanced_renamer_portable_3_95_4.zip)
@@ -2063,10 +2242,6 @@ winget install -e --id Parsec.Parsec
 ### Installing PeaZip
 ```powershell
 winget install -e --id Giorgiotani.Peazip
-```
-### Installing PowerToys
-```powershell
-winget install -e --id Microsoft.PowerToys
 ```
 ### Installing Prime95
 ```powershell
