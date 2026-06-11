@@ -1851,6 +1851,15 @@ winget install -e --id Anki.Anki
 ```powershell
 winget install -e --id Antutu.AntutuBenchmark
 ```
+Or
+
+Download [AntutuBenchmark_x64_Setup.exe](https://file.antutu.com/soft2/AntutuBenchmark_x64_Setup.exe)
+
+Click `Install`
+
+Turn off `Run Antutu Benchmark`
+
+Click `Finish`
 ### Installing AnyDesk
 ```powershell
 winget install -e --id AnyDesk.AnyDesk
