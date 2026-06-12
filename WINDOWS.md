@@ -1831,6 +1831,47 @@ winget install -e --id AdGuard.AdGuard
 ```powershell
 winget install -e --id AdGuard.AdGuardVPN
 ```
+Or
+
+Download [AdGuardVpn-*.exe](https://github.com/AdguardTeam/AdGuardVPNForWindows/releases)
+
+Open `AdGuardVpn-*.exe`
+
+Click `Install`
+
+Click `Close`
+### Configuring AdGuard VPN (Internet access required)
+Click `I accept the AdGuard VPN EULA and Privacy policy`
+
+Click `Log in or create an account`
+
+Email `your_email`
+
+Click `Continue`
+
+Password `your_password`
+
+Click `Continue`
+
+Click `Open`
+
+Click `Stay with free version`
+
+Click `Settings`
+
+Click `App settings`
+
+Click `Launch app on system startup`
+
+Turn off `Launch app on system startup`
+
+Click < icon
+
+Click `Advanced settings`
+
+Turn on `Post-quantum cryptography`
+
+Turn on `Use Wintun`
 ### Installing AIMP
 ```powershell
 winget install -e --id AIMP.AIMP
