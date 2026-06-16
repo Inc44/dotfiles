@@ -1969,6 +1969,17 @@ winget install -e --id Perplexity.Comet
 ```powershell
 winget install -e --id CPUID.CPU-Z
 ```
+Or
+
+Download [cpu-z_*-en.zip](https://cpuid.com/softwares/cpu-z.html)
+```powershell
+mkdir D:/portable/CPU-Z
+7z x cpu-z_*-en.zip -oD:/portable/CPU-Z
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/CPU-Z.lnk')
+$lnk.TargetPath='D:/portable/CPU-Z/cpuz_x64.exe'
+$lnk.Save()
+```
 ### Installing CrystalDiskInfo
 ```powershell
 winget install -e --id CrystalDewWorld.CrystalDiskInfo
