@@ -1984,9 +1984,37 @@ $lnk.Save()
 ```powershell
 winget install -e --id CrystalDewWorld.CrystalDiskInfo
 ```
+Or
+
+Download [CrystalDiskInfo*.zip](https://sourceforge.net/projects/crystaldiskinfo/files)
+```powershell
+mkdir D:/portable/CrystalDiskInfo
+7z x CrystalDiskInfo*.zip -oD:/portable/CrystalDiskInfo
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/CrystalDiskInfo.lnk')
+$lnk.TargetPath='D:/portable/CrystalDiskInfo/DiskInfo64.exe'
+$lnk.Save()
+```
+### Configuring CrystalDiskInfo
+Click `Jazyk(Language)`
+
+Click `A-N`
+
+Click `English, [English]`
 ### Installing CrystalDiskMark
 ```powershell
 winget install -e --id CrystalDewWorld.CrystalDiskMark
+```
+Or
+
+Download [CrystalDiskMark*.zip](https://sourceforge.net/projects/crystaldiskmark/files)
+```powershell
+mkdir D:/portable/CrystalDiskMark
+7z x CrystalDiskMark*.zip -oD:/portable/CrystalDiskMark
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/CrystalDiskMark.lnk')
+$lnk.TargetPath='D:/portable/CrystalDiskMark/DiskMark64.exe'
+$lnk.Save()
 ```
 ### Installing Cursor
 ```powershell
