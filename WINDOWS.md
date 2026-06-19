@@ -2388,6 +2388,20 @@ winget install -e --id WinsiderSS.SystemInformer
 ```powershell
 winget install -e --id TechPowerUp.GPU-Z
 ```
+Or
+
+Download [GPU-Z.*.exe](https://www.techpowerup.com/download/techpowerup-gpu-z)
+```powershell
+copy GPU-Z.*.exe D:/portable/GPU-Z.exe
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/GPU-Z.lnk')
+$lnk.TargetPath='D:/portable/GPU-Z.exe'
+$lnk.Save()
+```
+### Configuring TechPowerUp GPU-Z
+Open `GPU-Z`
+
+Click `No`
 ### Installing Telegram Desktop
 ```powershell
 winget install -e --id Telegram.TelegramDesktop
