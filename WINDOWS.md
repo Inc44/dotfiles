@@ -1849,10 +1849,16 @@ Open `ZBrush 2023.1.1` installer
 ```powershell
 winget install -e --id ActivityWatch.ActivityWatch
 ```
+Or
+
+Download [activitywatch-v*-windows-x86_64.zip](https://github.com/ActivityWatch/activitywatch/releases)
 ### Installing AdGuard
 ```powershell
 winget install -e --id AdGuard.AdGuard
 ```
+Or
+
+Download [AdGuard-*.exe](https://github.com/AdguardTeam/AdguardForWindows/releases)
 ### Installing AdGuard VPN
 ```powershell
 winget install -e --id AdGuard.AdGuardVPN
@@ -1902,6 +1908,9 @@ Turn on `Use Wintun`
 ```powershell
 winget install -e --id AIMP.AIMP
 ```
+Or
+
+Download [aimp_*_w64_no-installer.zip](https://aimp.ru/?do=download&os=windows)
 ### Installing Amazon Kindle
 ```powershell
 winget install -e --id Amazon.Kindle
@@ -1914,6 +1923,9 @@ winget install -e --id Google.AndroidStudio
 ```powershell
 winget install -e --id Anki.Anki
 ```
+Or
+
+Download [anki-*-win-x64.msi](https://github.com/ankitects/anki/releases)
 ### Installing Antutu Benchmark
 ```powershell
 winget install -e --id Antutu.AntutuBenchmark
@@ -1931,22 +1943,37 @@ Click `Finish`
 ```powershell
 winget install -e --id AnyDesk.AnyDesk
 ```
+Or
+
+Download [AnyDesk.exe](https://download.anydesk.com/AnyDesk.exe)
 ### Installing Arduino IDE
 ```powershell
 winget install -e --id ArduinoSA.IDE.stable
 ```
+Or
+
+Download [arduino-ide_*_Windows_64bit.zip](https://github.com/arduino/arduino-ide/releases)
 ### Installing Audacity
 ```powershell
 winget install -e --id Audacity.Audacity
 ```
+Or
+
+Download [audacity-win-*-64bit.zip](https://github.com/audacity/audacity/releases)
 ### Installing balenaEtcher
 ```powershell
 winget install -e --id Balena.Etcher
 ```
+Or
+
+Download [balenaEtcher-win32-x64-*.zip](https://github.com/balena-io/etcher/releases)
 ### Installing Bambu Studio
 ```powershell
 winget install -e --id Bambulab.Bambustudio
 ```
+Or
+
+Download [Bambu_Studio_win-v*.zip](https://github.com/bambulab/BambuStudio/releases)
 ### Installing Binary Ninja
 ```powershell
 winget install -e --id Vector35.BinaryNinja
@@ -1967,30 +1994,51 @@ winget install -e --id Brother.iPrintScan
 ```powershell
 winget install -e --id Google.Brotli
 ```
+Or
+
+Download [brotli-x64-windows-static.zip](https://github.com/google/brotli/releases)
 ### Installing calibre
 ```powershell
 winget install -e --id calibre.calibre
 ```
+Or
+
+Download [calibre-portable-installer-*.exe](https://github.com/kovidgoyal/calibre/releases)
 ### Installing CapCut
 ```powershell
 winget install -e --id ByteDance.CapCut
 ```
+Or
+
+Download [CapCut_*_installer.exe](https://www.capcut.com/download-guidance)
 ### Installing Claude
 ```powershell
 winget install -e --id Anthropic.Claude
 ```
+Or
+
+Download [Claude Setup.exe](https://claude.com/download)
 ### Installing CMake
 ```powershell
 winget install -e --id Kitware.CMake
 ```
+Or
+
+Download [cmake-*-windows-x86_64.zip](https://github.com/Kitware/CMake/releases)
 ### Installing Code::Blocks with MinGW
 ```powershell
 winget install -e --id CodeBlocks.CodeBlocks.MinGW
 ```
+Or
+
+Download [codeblocks-*mingw-nosetup.zip](https://sourceforge.net/projects/codeblocks/files/Binaries)
 ### Installing Comet
 ```powershell
 winget install -e --id Perplexity.Comet
 ```
+Or
+
+Download [comet_latest_intel_system.exe](https://www.perplexity.ai/rest/browser/download?platform=win_x64&channel=stable)
 ### Installing CPUID CPU-Z
 ```powershell
 winget install -e --id CPUID.CPU-Z
@@ -2046,10 +2094,16 @@ $lnk.Save()
 ```powershell
 winget install -e --id Anysphere.Cursor
 ```
+Or
+
+Download [CursorSetup-x64-*.exe](https://cursor.com/download)
 ### Installing Custom Resolution Utility
 ```powershell
 winget install -e --id ToastyX.CustomResolutionUtility
 ```
+Or
+
+Download [cru-*.zip](https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU)
 ### Installing CyberGhost
 ```powershell
 winget install -e --id CyberGhost.CyberGhost
@@ -2058,22 +2112,37 @@ winget install -e --id CyberGhost.CyberGhost
 ```powershell
 winget install -e --id qarmin.czkawka.gui
 ```
+Or
+
+Download [windows_czkawka_gui_gtk_412.zip](https://github.com/qarmin/czkawka/releases)
 ### Installing DB Browser for SQLite
 ```powershell
 winget install -e --id DBBrowserForSQLite.DBBrowserForSQLite
 ```
+Or
+
+Download [DB.Browser.for.SQLite-v*-win64.zip](https://github.com/sqlitebrowser/sqlitebrowser/releases)
 ### Installing Discord
 ```powershell
 winget install -e --id Discord.Discord
 ```
+Or
+
+Download [DiscordSetup.exe](https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64)
 ### Installing DiscordChatExporter.GUI
 ```powershell
 winget install -e --id Tyrrrz.DiscordChatExporter.GUI
 ```
+Or
+
+Download [DiscordChatExporter.win-x64.zip](https://github.com/Tyrrrz/DiscordChatExporter/releases)
 ### Installing Docker Desktop
 ```powershell
 winget install -e --id Docker.DockerDesktop
 ```
+Or
+
+Download [Docker Desktop Installer.exe](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)
 ### Installing DuckDuckGo
 ```powershell
 winget install -e --id DuckDuckGo.DesktopBrowser
@@ -2082,6 +2151,9 @@ winget install -e --id DuckDuckGo.DesktopBrowser
 ```powershell
 winget install -e --id DupeGuru.DupeGuru
 ```
+Or
+
+Download [dupeguru-win64_*.zip](https://github.com/arsenetar/dupeguru/releases)
 ### Installing EarTrumpet
 ```powershell
 winget install -e --id File-New-Project.EarTrumpet
@@ -2090,62 +2162,107 @@ winget install -e --id File-New-Project.EarTrumpet
 ```powershell
 winget install -e --id EclipseFoundation.Eclipse.Java
 ```
+Or
+
+Download [eclipse-java-*-R-win32-x86_64.zip](https://www.eclipse.org/downloads/packages)
 ### Installing Everything
 ```powershell
 winget install -e --id voidtools.Everything
 ```
+Or
+
+Download [Everything-*.x64.zip](https://www.voidtools.com/downloads)
 ### Installing Exact Audio Copy
 ```powershell
 winget install -e --id AndreWiethoff.ExactAudioCopy
 ```
+Or
+
+Download [eac-*.exe](https://www.exactaudiocopy.de)
 ### Installing ExifGlass
 ```powershell
 winget install -e --id PhapDieuDuong.ExifGlass
 ```
+Or
+
+Download [ExifGlass_*_x64.zip](https://github.com/d2phap/ExifGlass/releases)
 ### Installing ExifTool
 ```powershell
 winget install -e --id OliverBetz.ExifTool
 ```
+Or
+
+Download [exiftool-*_64.zip](https://sourceforge.net/projects/exiftool/files)
 ### Installing ExifToolGUI
 ```powershell
 winget install -e --id FrankBijnen.ExifToolGUI
 ```
+Or
+
+Download [ExifToolGUI_X64.exe](https://github.com/FrankBijnen/ExifToolGui/releases)
 ### Installing FFmpeg (Shared)
 ```powershell
 winget install -e --id Gyan.FFmpeg.Shared
 ```
+Or
+
+Download [ffmpeg-*-full_build-shared.7z](https://github.com/GyanD/codexffmpeg/releases)
 ### Installing Figma
 ```powershell
 winget install -e --id Figma.Figma
 ```
+Or
+
+Download [FigmaSetup.exe](https://desktop.figma.com/win/FigmaSetup.exe)
 ### Installing Filius
 ```powershell
 winget install -e --id StefanFreischlad.Filius
 ```
+Or
+
+Download [filius-*.zip](https://www.lernsoftware-filius.de/Herunterladen)
 ### Installing Finite Element Method Magnetics
 ```powershell
 winget install -e --id DavidMeeker.FEMM
 ```
+Or
+
+Download [femm*.exe](https://www.femm.info/doku/doku.php?id=download)
 ### Installing Focusrite Control 2
 ```powershell
 winget install -e --id FocusriteAudioEngineeringLtd.FocusriteControl2
 ```
+Or
+
+Download [Focusrite-Control-2.exe](https://releases.focusrite.com/com.focusrite.focusrite-control/latest/Focusrite-Control-2.exe)
 ### Installing FontForge
 ```powershell
 winget install -e --id FontForge.FontForge
 ```
+Or
+
+Download [FontForge-*-Windows-x64.exe](https://github.com/fontforge/fontforge/releases)
 ### Installing FreeCAD
 ```powershell
 winget install -e --id FreeCAD.FreeCAD
 ```
+Or
+
+Download [FreeCAD_*.7z](https://github.com/FreeCAD/FreeCAD/releases)
 ### Installing Geeks3D FurMark 2
 ```powershell
 winget install -e --id Geeks3D.FurMark.2
 ```
+Or
+
+Download [FurMark_2.*_win64.zip](https://www.geeks3d.com/furmark/downloads)
 ### Installing GIMP
 ```powershell
-winget install -e --id GIMP.GIMP.3
+winget install -e --id GIMP.GIMP
 ```
+Or
+
+Download [gimp-*-setup.exe](https://www.gimp.org/downloads)
 ### Installing Git
 ```powershell
 winget install -e --id Git.Git
@@ -2154,62 +2271,107 @@ winget install -e --id Git.Git
 ```powershell
 winget install -e --id GitHub.GitHubDesktop
 ```
+Or
+
+Download [GitHubDesktopSetup-x64.exe](https://desktop.github.com/download)
 ### Installing Google Chrome
 ```powershell
 winget install -e --id Google.Chrome
 ```
+Or
+
+Download [googlechromestandaloneenterprise64.msi](https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi)
 ### Installing Google Drive
 ```powershell
 winget install -e --id Google.GoogleDrive
 ```
+Or
+
+Download [GoogleDriveSetup.exe](https://dl.google.com/drive-file-stream/GoogleDriveSetup.exe)
 ### Installing grepWin
 ```powershell
 winget install -e --id StefansTools.grepWin
 ```
+Or
+
+Download [grepWin-x64-*_portable.zip](https://github.com/stefankueng/grepWin/releases)
 ### Installing HakuNeko Desktop
 ```powershell
 winget install -e --id HakuNeko.HakuNeko
 ```
+Or
+
+Download [hakuneko-desktop_*_windows-portable_amd64.zip](https://github.com/manga-download/hakuneko/releases)
 ### Installing Hamachi
 ```powershell
 winget install -e --id LogMeIn.Hamachi
 ```
+Or
+
+Download [hamachi.msi](https://secure.logmein.com/hamachi.msi)
 ### Installing HandBrake
 ```powershell
 winget install -e --id HandBrake.HandBrake
 ```
+Or
+
+Download [HandBrake-*-x86_64-Win_GUI.zip](https://github.com/HandBrake/HandBrake/releases)
 ### Installing Helium
 ```powershell
 winget install -e --id ImputNet.Helium
 ```
+Or
+
+Download [helium_*_x64-windows.zip](https://github.com/imputnet/helium-windows/releases)
 ### Installing HP Connectivity Kit
 ```powershell
 winget install -e --id HP.ConnectivityKit
 ```
+Or
+
+Download [HP_Prime_Connectivity_Kit_x64_*.exe](https://updates.moravia-consulting.com)
 ### Installing HP Prime Virtual Calculator
 ```powershell
 winget install -e --id HP.PrimeVirtualCalculator
 ```
+Or
+
+Download [HP_Prime_Virtual_Calculator_x64_*.exe](https://updates.moravia-consulting.com)
 ### Installing HWiNFO®
 ```powershell
 winget install -e --id REALiX.HWiNFO
 ```
+Or
+
+Download [hwi_*.zip](https://www.hwinfo.com/download)
 ### Installing HxD Hex Editor
 ```powershell
 winget install -e --id MHNexus.HxD
 ```
+Or
+
+Download [HxDSetup.zip](https://mh-nexus.de/downloads/HxDSetup.zip)
 ### Installing iBackupBot for Windows
 ```powershell
 winget install -e --id VOWSoft.iBackupBot
 ```
+Or
+
+Download [ibackupbot_setup.exe](https://www.icopybot.com/ibackupbot_setup.exe)
 ### Installing Icaros
 ```powershell
 winget install -e --id Xanashi.Icaros
 ```
+Or
+
+Download [Icaros_v*.zip](https://github.com/Xanashi/Icaros/releases)
 ### Installing ICAT
 ```powershell
 winget install -e --id Nvidia.ICAT
 ```
+Or
+
+Download [ICAT-*.exe](https://www.nvidia.com/en-us/geforce/technologies/icat)
 ### Installing iCloud
 ```powershell
 winget install -e --id Apple.iCloud
@@ -2218,198 +2380,345 @@ winget install -e --id Apple.iCloud
 ```powershell
 winget install -e --id DuongDieuPhap.ImageGlass
 ```
+Or
+
+Download [ImageGlass_*_x64.zip](https://github.com/d2phap/ImageGlass/releases)
 ### Installing Inkscape
 ```powershell
 winget install -e --id Inkscape.Inkscape
 ```
+Or
+
+Download [inkscape-*.7z](https://inkscape.org)
 ### Installing iPerf3
 ```powershell
 winget install -e --id ar51an.iPerf3
 ```
+Or
+
+Download [iperf-3.*-win64.zip](https://github.com/ar51an/iperf3-win-builds/releases)
 ### Installing JetBrains dotPeek
 ```powershell
 winget install -e --id JetBrains.dotPeek
 ```
+Or
+
+Download [dotPeek64.*.exe](https://www.jetbrains.com/decompiler/download/download-thanks.html?platform=windows64)
 ### Installing Jpegoptim
 ```powershell
 winget install -e --id TimoKokkonen.Jpegoptim
 ```
+Or
+
+Download [jpegoptim-*-x64-windows.zip](https://github.com/tjko/jpegoptim/releases)
 ### Installing KiCad
 ```powershell
 winget install -e --id KiCad.KiCad
 ```
+Or
+
+Download [kicad-*-x86_64.exe](https://github.com/KiCad/kicad-source-mirror/releases)
 ### Installing Lazarus
 ```powershell
 winget install -e --id Lazarus.Lazarus
 ```
+Or
+
+Download [lazarus-*-win64.exe](https://sourceforge.net/projects/lazarus/files)
 ### Installing libjxl
 ```powershell
 winget install -e --id libjxl.libjxl
 ```
+Or
+
+Download [jxl-x64-windows-static.zip](https://github.com/libjxl/libjxl/releases)
 ### Installing LibreOffice
 ```powershell
 winget install -e --id TheDocumentFoundation.LibreOffice
 ```
+Or
+
+Download [LibreOffice_*_Win_x86-64.msi](https://www.libreoffice.org/download)
 ### Installing LM Studio
 ```powershell
 winget install -e --id ElementLabs.LMStudio
 ```
+Or
+
+Download [LM-Studio-*-x64.exe](https://lmstudio.ai/download/latest/win32/x64)
 ### Installing Logi Options+
 ```powershell
 winget install -e --id Logitech.OptionsPlus
 ```
+Or
+
+Download [logioptionsplus_installer.exe](https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.exe)
 ### Installing LTspice
 ```powershell
 winget install -e --id AnalogDevices.LTspice
 ```
+Or
+
+Download [LTspice64.msi](https://ltspice.analog.com/software/LTspice64.msi)
 ### Installing Malicious Software Removal Tool
 ```powershell
 winget install -e --id Microsoft.MaliciousSoftwareRemovalTool
 ```
+Or
+
+Download [Windows-KB890830-x64-V*.exe](https://www.microsoft.com/en-us/download/details.aspx?id=9905)
 ### Installing Mathpix Snipping Tool
 ```powershell
 winget install -e --id Mathpix.MathpixSnippingTool
 ```
+Or
+
+Download [mathpix_snipping_tool_setup.v*.exe](https://mathpix.com/windows-guide)
 ### Installing MEGAsync
 ```powershell
 winget install -e --id Mega.MEGASync
 ```
+Or
+
+Download [MEGAsyncSetup64.exe](https://mega.nz/MEGAsyncSetup64.exe)
 ### Installing Microsoft Teams
 ```powershell
 winget install -e --id Microsoft.Teams
 ```
+Or
+
+Download [MSTeamsSetup.exe](https://statics.teams.cdn.office.net/production-windows-x86/lkg/MSTeamsSetup.exe)
 ### Installing Microsoft Visual Studio Code
 ```powershell
 winget install -e --id Microsoft.VisualStudioCode
 ```
+Or
+
+Download [VSCode-win32-x64-*.zip](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-archive)
 ### Installing MiKTeX
 ```powershell
 winget install -e --id MiKTeX.MiKTeX
 ```
+Or
+
+Download [basic-miktex-*-x64.exe](https://miktex.org/download)
 ### Installing Mine-imator
 ```powershell
 winget install -e --id DavidNorgren.Mine-imator
 ```
+Or
+
+Download [Mine-imator *.zip](https://www.mineimator.com/dl/mineimator-zip)
 ### Installing MinerU
 ```powershell
 winget install -e --id OpenDataLab.MinerU
 ```
+Or
+
+Download [MinerU-*-setup.exe](https://mineru.net)
 ### Installing Mozilla Firefox (en-US)
 ```powershell
 winget install -e --id Mozilla.Firefox
 ```
+Or
+
+Download [Firefox Setup *.exe](https://download.mozilla.org/?product=firefox-latest-ssl&os=win64)
 ### Installing Mp3tag
 ```powershell
 winget install -e --id FlorianHeidenreich.Mp3tag
 ```
+Or
+
+Download [mp3tag-v*-x64-setup.exe](https://www.mp3tag.de/dodownload64.html)
 ### Installing mpv.net
 ```powershell
 winget install -e --id mpv.net
 ```
+Or
+
+Download [mpv.net-v*-portable-x64.zip](https://github.com/mpvnet-player/mpv.net/releases)
 ### Installing MSI Afterburner
 ```powershell
 winget install -e --id Guru3D.Afterburner
 ```
+Or
+
+Download [[Guru3D]-MSIAfterburnerSetup*.zip](https://www.guru3d.com/download/msi-afterburner-beta-download)
 ### Installing Nextcloud
 ```powershell
 winget install -e --id Nextcloud.NextcloudDesktop
 ```
+Or
+
+Download [Nextcloud-*-x64.msi](https://github.com/nextcloud-releases/desktop/releases)
 ### Installing Node.js
 ```powershell
 winget install -e --id OpenJS.NodeJS
 ```
+Or
+
+Download [node-v*-win-x64.zip](https://nodejs.org/en/download)
 ### Installing NormCap
 ```powershell
 winget install -e --id dynobo.NormCap
 ```
+Or
+
+Download [NormCap-*-x86_64-Windows.zip](https://github.com/dynobo/normcap/releases)
 ### Installing Notepad++
 ```powershell
 winget install -e --id Notepad++.Notepad++
 ```
+Or
+
+Download [npp.*.portable.x64.7z](https://github.com/notepad-plus-plus/notepad-plus-plus/releases)
 ### Installing OBS Studio
 ```powershell
 winget install -e --id OBSProject.OBSStudio
 ```
+Or
+
+Download [OBS-Studio-*-Windows-x64.zip](https://github.com/obsproject/obs-studio/releases)
 ### Installing Obsidian
 ```powershell
 winget install -e --id Obsidian.Obsidian
 ```
+Or
+
+Download [Obsidian-*.exe](https://github.com/obsidianmd/obsidian-releases/releases)
 ### Installing Ollama
 ```powershell
 winget install -e --id Ollama.Ollama
 ```
+Or
+
+Download [ollama-windows-amd64.zip](https://github.com/ollama/ollama/releases)
 ### Installing OP Auto Clicker
 ```powershell
 winget install -e --id OPAutoClicker.OPAutoClicker
 ```
+Or
+
+Download [AutoClicker.exe](https://sourceforge.net/projects/orphamielautoclicker/files)
 ### Installing Oracle VirtualBox
 ```powershell
 winget install -e --id Oracle.VirtualBox
 ```
+Or
+
+Download [VirtualBox-*-Win.exe](https://www.virtualbox.org/wiki/Downloads)
 ### Installing ParkControl
 ```powershell
 winget install -e --id BitSum.ParkControl
 ```
+Or
+
+Download [parkcontrolsetup64.exe](https://dl.bitsum.com/files/parkcontrolsetup64.exe)
 ### Installing Parsec
 ```powershell
 winget install -e --id Parsec.Parsec
 ```
+Or
+
+Download [parsec-windows.exe](https://builds.parsec.app/package/parsec-windows.exe)
 ### Installing PeaZip
 ```powershell
 winget install -e --id Giorgiotani.Peazip
 ```
+Or
+
+Download [peazip_portable-*.WIN64.zip](https://github.com/peazip/PeaZip/releases)
 ### Installing Prime95
 ```powershell
 winget install -e --id mersenne.prime95
 ```
+Or
+
+Download [p95v*.win64.zip](https://www.mersenne.org/download)
 ### Installing PuTTY
 ```powershell
 winget install -e --id PuTTY.PuTTY
 ```
+Or
+
+Download [putty.zip](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 ### Installing qBittorrent (libtorrent 2)
 ```powershell
 winget install -e --id qBittorrent.qBittorrent.lt2
 ```
+Or
+
+Download [qbittorrent_*_lt20_x64_setup.exe](https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32)
 ### Installing qView
 ```powershell
 winget install -e --id jurplel.qView
 ```
+Or
+
+Download [qView-*-win64.zip](https://github.com/jurplel/qView/releases)
 ### Installing Raspberry Pi Imager
 ```powershell
 winget install -e --id RaspberryPiFoundation.RaspberryPiImager
 ```
+Or
+
+Download [imager-v*.exe](https://github.com/raspberrypi/rpi-imager/releases)
 ### Installing Rivatuner Statistics Server
 ```powershell
 winget install -e --id Guru3D.RTSS
 ```
+Or
+
+Download [[Guru3D]-RTSSSetup*.zip](https://www.guru3d.com/download/rtss-rivatuner-statistics-server-download)
 ### Installing SimpleTex
 ```powershell
 winget install -e --id SimpleTex.SimpleTex
 ```
+Or
+
+Download [SimpleTex Setup *.exe](https://gitee.com/simpletex/simple-tex-download/releases)
 ### Installing Spacedrive
 ```powershell
 winget install -e --id spacedrive.Spacedrive
 ```
+Or
+
+Download [Spacedrive-windows-x86_64.msi](https://github.com/spacedriveapp/spacedrive/releases)
 ### Installing Speedtest by Ookla
 ```powershell
 winget install -e --id Ookla.Speedtest.Desktop
 ```
+Or
+
+Download [speedtestbyookla_x64.msi](https://install.speedtest.net/app/windows/latest/speedtestbyookla_x64.msi)
 ### Installing Spek
 ```powershell
 winget install -e --id AlexanderKojevnikov.Spek
 ```
+Or
+
+Download [spek-*.zip](https://github.com/alexkay/spek/releases)
 ### Installing Steam
 ```powershell
 winget install -e --id Valve.Steam
 ```
+Or
+
+Download [SteamSetup.exe](https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe)
 ### Installing Studio
 ```powershell
 winget install -e --id BrickLink.Studio
 ```
+Or
+
+Download [Studio+2.0.exe](https://studio.download.bricklink.info/Studio2.0/Studio+2.0.exe)
 ### Installing System Informer
 ```powershell
 winget install -e --id WinsiderSS.SystemInformer
 ```
+Or
+
+Download [systeminformer-*-release-bin.zip](https://github.com/winsiderss/systeminformer/releases)
 ### Installing TechPowerUp GPU-Z
 ```powershell
 winget install -e --id TechPowerUp.GPU-Z
@@ -2432,66 +2741,114 @@ Click `No`
 ```powershell
 winget install -e --id Telegram.TelegramDesktop
 ```
+Or
+
+Download [tportable-x64.*.zip](https://github.com/telegramdesktop/tdesktop/releases)
 ### Installing TeXworks
 ```powershell
 winget install -e --id TUG.TeXworks
 ```
+Or
+
+Download [TeXworks-win10-*.zip](https://github.com/TeXworks/texworks/releases)
 ### Installing The Silver Searcher
 ```powershell
 winget install -e --id JFLarvoire.Ag
 ```
+Or
+
+Download [ag.zip](https://github.com/JFLarvoire/the_silver_searcher/releases)
 ### Installing Thio's SVG Thumbnail Extension
 ```powershell
 winget install -e --id ThioJoe.SvgThumbnailExtension
 ```
+Or
+
+Download [SVG-Thumbnail-Extension-Installer_*_x64.msi](https://github.com/ThioJoe/win-svg-thumbs-rust/releases)
 ### Installing ThrottleStop
 ```powershell
 winget install -e --id TechPowerUp.ThrottleStop
 ```
+Or
+
+Download [ThrottleStop_*.zip](https://www.techpowerup.com/download/techpowerup-throttlestop)
 ### Installing Tor Browser
 ```powershell
 winget install -e --id TorProject.TorBrowser
 ```
+Or
+
+Download [tor-browser-windows-x86_64-portable-*.exe](https://www.torproject.org/download)
 ### Installing Ultimate Vocal Remover
 ```powershell
 winget install -e --id Anjok07.UltimateVocalRemover
 ```
+Or
+
+Download [UVR_v*_setup.exe](https://github.com/Anjok07/ultimatevocalremovergui/releases)
 ### Installing Unity 2020.3.12f1
 ```powershell
 winget install -e --id Unity.Unity.2020 -v "2020.3.12f1"
 ```
+Or
+
+Download [UnitySetup64-2020.3.12f1.exe](https://download.unity3d.com/download_unity/b3b2c6512326/Windows64EditorInstaller/UnitySetup64-2020.3.12f1.exe)
 ### Installing Unity Hub
 ```powershell
 winget install -e --id Unity.UnityHub
 ```
+Or
+
+Download [UnityHubSetup-x64.exe](https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup-x64.exe)
 ### Installing Universal Android Debloater Next Generation
 ```powershell
 winget install -e --id Universal-Debloater-Alliance.uad-ng
 ```
+Or
+
+Download [uad-ng-windows.exe](https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/releases)
 ### Installing Ventoy
 ```powershell
 winget install -e --id Ventoy.Ventoy
 ```
+Or
+
+Download [ventoy-*-windows.zip](https://github.com/ventoy/Ventoy/releases)
 ### Installing VeraCrypt
 ```powershell
 winget install -e --id IDRIX.VeraCrypt
 ```
+Or
+
+Download [VeraCrypt.Setup.*.exe](https://github.com/veracrypt/VeraCrypt/releases)
 ### Installing Viber
 ```powershell
 winget install -e --id Rakuten.Viber
 ```
+Or
+
+Download [ViberSetup.exe](https://download.cdn.viber.com/desktop/windows/ViberSetup.exe)
 ### Installing Victoria
 ```powershell
 winget install -e --id Victoria.Victoria
 ```
+Or
+
+Download [Victoria*.zip](https://hdd.by/victoria)
 ### Installing Visual Studio Community 2026
 ```powershell
 winget install -e --id Microsoft.VisualStudio.Community
 ```
+Or
+
+Download [VisualStudioSetup.exe](https://visualstudio.microsoft.com/downloads)
 ### Installing VLC media player
 ```powershell
 winget install -e --id VideoLAN.VLC
 ```
+Or
+
+Download [vlc-*-win64.7z](https://www.videolan.org/vlc/download-windows.html)
 ### Installing Wget
 ```powershell
 winget install -e --id JernejSimoncic.Wget
@@ -2500,14 +2857,23 @@ winget install -e --id JernejSimoncic.Wget
 ```powershell
 winget install -e --id winaero.tweaker
 ```
+Or
+
+Download [winaerotweaker.zip](https://winaerotweaker.com/download/winaerotweaker.zip)
 ### Installing Windhawk
 ```powershell
 winget install -e --id RamenSoftware.Windhawk
 ```
+Or
+
+Download [windhawk_setup_offline.exe](https://github.com/ramensoftware/windhawk/releases)
 ### Installing WinDirStat
 ```powershell
 winget install -e --id WinDirStat.WinDirStat
 ```
+Or
+
+Download [WinDirStat.7z](https://github.com/windirstat/windirstat/releases)
 ### Installing Windsurf
 ```powershell
 winget install -e --id Codeium.Windsurf
@@ -2516,38 +2882,65 @@ winget install -e --id Codeium.Windsurf
 ```powershell
 winget install -e --id XavierRoche.HTTrack
 ```
+Or
+
+Download [httrack_x64-noinst-*.zip](https://www.httrack.com/page/2/en/index.html)
 ### Installing Wireshark
 ```powershell
 winget install -e --id WiresharkFoundation.Wireshark
 ```
+Or
+
+Download [WiresharkPortable64_latest.paf.exe](https://www.wireshark.org/download/win64/WiresharkPortable64_latest.paf.exe)
 ### Installing XAMPP 8.2
 ```powershell
 winget install -e --id ApacheFriends.Xampp.8.2
 ```
+Or
+
+Download [xampp-windows-x64-8.2.*-0-VS16.zip](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows)
 ### Installing XnView MP
 ```powershell
 winget install -e --id XnSoft.XnViewMP
 ```
+Or
+
+Download [XnViewMP-win-x64.zip](https://download.xnview.com/XnViewMP-win-x64.zip)
 ### Installing Yandex Browser
 ```powershell
 winget install -e --id Yandex.Browser
 ```
+Or
+
+Download [Yandex.exe](https://browser.yandex.com/download?os=win&bitness=64&statpromo=false)
 ### Installing yt-dlp
 ```powershell
 winget install -e --id yt-dlp.yt-dlp
 ```
+Or
+
+Download [yt-dlp.exe](https://github.com/yt-dlp/yt-dlp/releases)
 ### Installing Zig
 ```powershell
 winget install -e --id zig.zig
 ```
+Or
+
+Download [zig-x86_64-windows-*.zip](https://ziglang.org/download)
 ### Installing Zoom Workplace
 ```powershell
 winget install -e --id Zoom.Zoom
 ```
+Or
+
+Download [ZoomInstallerFull.exe](https://zoom.us/download)
 ### Installing Zstandard
 ```powershell
 winget install -e --id Meta.Zstandard
 ```
+Or
+
+Download [zstd-v*-win64.zip](https://github.com/facebook/zstd/releases)
 ### Configuring System Clock
 ```
 reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
