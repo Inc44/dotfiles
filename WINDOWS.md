@@ -363,7 +363,7 @@ Click `Do nothing`
 
 Click `OK`
 ### Configuring Taskbar
-Right click File Explorer icon
+Right click `File Explorer`
 
 Click `Unpin from taskbar`
 
@@ -2207,6 +2207,13 @@ winget install -e --id Gyan.FFmpeg.Shared
 Or
 
 Download [ffmpeg-*-full_build-shared.7z](https://github.com/GyanD/codexffmpeg/releases)
+```powershell
+7z x ffmpeg-*-full_build-shared.7z -oD:/portable
+Rename-Item D:/portable/ffmpeg-*-full_build-shared ffmpeg
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\ffmpeg\bin"
+```
 ### Installing Figma
 ```powershell
 winget install -e --id Figma.Figma
@@ -2249,6 +2256,14 @@ winget install -e --id FreeCAD.FreeCAD
 Or
 
 Download [FreeCAD_*.7z](https://github.com/FreeCAD/FreeCAD/releases)
+```powershell
+7z x FreeCAD_*.7z -oD:/portable
+Rename-Item D:/portable/FreeCAD_* FreeCAD
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/FreeCAD.lnk')
+$lnk.TargetPath='D:/portable/FreeCAD/FreeCAD.exe'
+$lnk.Save()
+```
 ### Installing Geeks3D FurMark 2
 ```powershell
 winget install -e --id Geeks3D.FurMark.2
@@ -2390,6 +2405,13 @@ winget install -e --id Inkscape.Inkscape
 Or
 
 Download [inkscape-*.7z](https://inkscape.org)
+```powershell
+7z x inkscape-*.7z -oD:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Inkscape.lnk')
+$lnk.TargetPath='D:/portable/inkscape/bin/inkscape.exe'
+$lnk.Save()
+```
 ### Installing iPerf3
 ```powershell
 winget install -e --id ar51an.iPerf3
@@ -2572,6 +2594,14 @@ winget install -e --id Notepad++.Notepad++
 Or
 
 Download [npp.*.portable.x64.7z](https://github.com/notepad-plus-plus/notepad-plus-plus/releases)
+```powershell
+mkdir D:/portable/Notepad++
+7z x npp.*.portable.x64.7z -oD:/portable/Notepad++
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Notepad++.lnk')
+$lnk.TargetPath='D:/portable/Notepad++/notepad++.exe'
+$lnk.Save()
+```
 ### Installing OBS Studio
 ```powershell
 winget install -e --id OBSProject.OBSStudio
@@ -2849,6 +2879,14 @@ winget install -e --id VideoLAN.VLC
 Or
 
 Download [vlc-*-win64.7z](https://www.videolan.org/vlc/download-windows.html)
+```powershell
+7z x vlc-*-win64.7z -oD:/portable
+Rename-Item D:/portable/vlc-* vlc
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/VLC media player.lnk')
+$lnk.TargetPath='D:/portable/vlc/vlc.exe'
+$lnk.Save()
+```
 ### Installing Wget
 ```powershell
 winget install -e --id JernejSimoncic.Wget
@@ -2874,6 +2912,14 @@ winget install -e --id WinDirStat.WinDirStat
 Or
 
 Download [WinDirStat.7z](https://github.com/windirstat/windirstat/releases)
+```powershell
+mkdir D:/portable/WinDirStat
+7z x WinDirStat.7z -oD:/portable/WinDirStat
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/WinDirStat.lnk')
+$lnk.TargetPath='D:/portable/WinDirStat/x64/WinDirStat.exe'
+$lnk.Save()
+```
 ### Installing Windsurf
 ```powershell
 winget install -e --id Codeium.Windsurf
