@@ -1357,7 +1357,7 @@ Download [AnvilBenchmark_V110_[Guru3D.com].zip](https://www.guru3d.com/download/
 ```powershell
 7z x AnvilBenchmark_V110_[Guru3D.com].zip -oD:/portable
 $ws = New-Object -ComObject WScript.Shell
-$lnk = $ws.CreateShortcut("D:/portable/Anvil's Storage Benchmark.lnk")
+$lnk = $ws.CreateShortcut("D:/portable/Anvil's Storage Utilities.lnk")
 $lnk.TargetPath='D:/portable/AnvilPro.exe'
 $lnk.Save()
 ```
@@ -1393,14 +1393,14 @@ $lnk.Save()
 ### Installing Checksum Compare
 Download [Checksum-compare-v*.7z](https://checksumcompare.sanktuaire.com/downloads)
 ```powershell
-mkdir 'D:/portable/Checksum compare'
-7z x Checksum-compare-v*.7z -o'D:/portable/Checksum compare'
+mkdir 'D:/portable/Checksum Compare'
+7z x Checksum-compare-v*.7z -o'D:/portable/Checksum Compare'
 $ws = New-Object -ComObject WScript.Shell
-$lnk = $ws.CreateShortcut('D:/portable/Checksum compare.lnk')
-$lnk.TargetPath='D:/portable/Checksum compare/Checksum compare.exe'
+$lnk = $ws.CreateShortcut('D:/portable/Checksum Compare.lnk')
+$lnk.TargetPath='D:/portable/Checksum Compare/Checksum compare.exe'
 $lnk.Save()
 ```
-Open `Checksum compare`
+Open `Checksum Compare`
 
 Click `Edition`
 
@@ -1415,7 +1415,7 @@ Langue `English`
 Click `Sauver`
 
 Click `Yes`
-### Installing CUDA Information Utility
+### Installing CUDA-Z
 Download [CUDA-Z-*-64bit.exe](https://sourceforge.net/projects/cuda-z/files/cuda-z)
 ```powershell
 copy CUDA-Z-*-64bit.exe D:/portable/CUDA-Z.exe
@@ -1451,13 +1451,14 @@ Click `Agree`
 ### Installing Document Translation
 Download [DocumentTranslation.zip](https://github.com/MicrosoftTranslator/DocumentTranslation/releases)
 ```powershell
-7z x DocumentTranslation.zip -oD:/portable
+mkdir 'D:/portable/Document Translation'
+7z x DocumentTranslation.zip -o'D:/portable/Document Translation'
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/Document Translation.lnk')
-$lnk.TargetPath='D:/portable/DocumentTranslation/DocumentTranslation.GUI.exe'
+$lnk.TargetPath='D:/portable/Document Translation/DocumentTranslation.GUI.exe'
 $lnk.Save()
 ```
-### Installing Domain Name Server Benchmark 1.3.6668.0
+### Installing DNS Benchmark 1.3.6668.0
 Download [DNSBench.exe](https://www.majorgeeks.com/mg/getmirror/dns_benchmark,1.html)
 ```powershell
 copy DNSBench.exe D:/portable
@@ -1541,11 +1542,11 @@ git clone https://github.com/yangxy/GPEN.git D:/portable/GPEN
 ### Installing H2testw
 Download [h2testw_*.zip](https://h2testw.org)
 ```powershell
-mkdir D:/portable/h2testw
-7z x h2testw_*.zip -oD:/portable/h2testw
+mkdir D:/portable/H2testw
+7z x h2testw_*.zip -oD:/portable/H2testw
 $ws = New-Object -ComObject WScript.Shell
-$lnk = $ws.CreateShortcut('D:/portable/h2testw.lnk')
-$lnk.TargetPath='D:/portable/h2testw/h2testw.exe'
+$lnk = $ws.CreateShortcut('D:/portable/H2testw.lnk')
+$lnk.TargetPath='D:/portable/H2testw/h2testw.exe'
 $lnk.Save()
 ```
 ### Installing hashcat
@@ -1620,7 +1621,7 @@ $lnk = $ws.CreateShortcut('D:/portable/MagicaVoxel.lnk')
 $lnk.TargetPath='D:/portable/MagicaVoxel/MagicaVoxel.exe'
 $lnk.Save()
 ```
-### Installing NEAV1E
+### Installing NotEnoughAV1Encodes
 Download [neav1e-portable-*.7z](https://github.com/Alkl58/NotEnoughAV1Encodes/releases)
 ```powershell
 mkdir D:/portable/NotEnoughAV1Encodes
@@ -1636,7 +1637,7 @@ Download [nvidiaProfileInspector.zip](https://github.com/Orbmu2k/nvidiaProfileIn
 mkdir D:/portable/nvidiaProfileInspector
 7z x nvidiaProfileInspector.zip -oD:/portable/nvidiaProfileInspector
 $ws = New-Object -ComObject WScript.Shell
-$lnk = $ws.CreateShortcut('D:/portable/nvidiaProfileInspector.lnk')
+$lnk = $ws.CreateShortcut('D:/portable/NVIDIA Profile Inspector.lnk')
 $lnk.TargetPath='D:/portable/nvidiaProfileInspector/nvidiaProfileInspector.exe'
 $lnk.Save()
 ```
@@ -1684,21 +1685,21 @@ setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\phantomjs\bin"
 ### Installing Process Hacker 2.39
 Download [processhacker-2.39-bin.zip](https://sourceforge.net/projects/processhacker/files/processhacker2/processhacker-2.39-bin.zip/download)
 ```powershell
-mkdir D:/portable/processhacker
-7z x processhacker-2.39-bin.zip -oD:/portable/processhacker
+mkdir 'D:/portable/Process Hacker 2'
+7z x processhacker-2.39-bin.zip -o'D:/portable/Process Hacker 2'
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/Process Hacker.lnk')
-$lnk.TargetPath='D:/portable/processhacker/x64/ProcessHacker.exe'
+$lnk.TargetPath='D:/portable/Process Hacker 2/x64/ProcessHacker.exe'
 $lnk.Save()
 ```
 ### Installing SmoothDraw 4.0.5
 Download [SmoothDraw4.zip](https://qrli.github.io/smoothdraw/SmoothDraw4.zip)
 ```powershell
-mkdir D:/portable/SmoothDraw4
-7z x SmoothDraw4.zip -oD:/portable/SmoothDraw4
+mkdir D:/portable/SmoothDraw
+7z x SmoothDraw4.zip -oD:/portable/SmoothDraw
 $ws = New-Object -ComObject WScript.Shell
-$lnk = $ws.CreateShortcut('D:/portable/SmoothDraw4.lnk')
-$lnk.TargetPath='D:/portable/SmoothDraw4/SmoothDraw4.exe'
+$lnk = $ws.CreateShortcut('D:/portable/SmoothDraw.lnk')
+$lnk.TargetPath='D:/portable/SmoothDraw/SmoothDraw4.exe'
 $lnk.Save()
 ```
 ### Installing TerraMap
@@ -1852,6 +1853,14 @@ winget install -e --id ActivityWatch.ActivityWatch
 Or
 
 Download [activitywatch-v*-windows-x86_64.zip](https://github.com/ActivityWatch/activitywatch/releases)
+```powershell
+7z x activitywatch-v*-windows-x86_64.zip -oD:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/ActivityWatch.lnk')
+$lnk.TargetPath='D:/portable/activitywatch/aw-qt.exe'
+$lnk.Save()
+copy D:/portable/ActivityWatch.lnk 'C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Startup'
+```
 ### Installing AdGuard
 ```powershell
 winget install -e --id AdGuard.AdGuard
@@ -1911,13 +1920,43 @@ winget install -e --id AIMP.AIMP
 Or
 
 Download [aimp_*_w64_no-installer.zip](https://aimp.ru/?do=download&os=windows)
+```powershell
+7z x aimp_*_w64_no-installer.zip -oD:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/AIMP.lnk')
+$lnk.TargetPath='D:/portable/AIMP/AIMP.exe'
+$lnk.Save()
+```
 ### Installing Amazon Kindle
 ```powershell
 winget install -e --id Amazon.Kindle
 ```
+### Installing Android SDK Platform-Tools
+```powershell
+winget install -e --id Google.PlatformTools
+```
+Or
+
+Download [platform-tools-latest-windows.zip](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
+```powershell
+7z x platform-tools-latest-windows.zip -oD:/portable
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\platform-tools"
+```
 ### Installing Android Studio
 ```powershell
 winget install -e --id Google.AndroidStudio
+```
+Or
+
+Download [android-studio-*-windows.zip](https://developer.android.com/studio)
+```powershell
+7z x android-studio-*-windows.zip -oD:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Android Studio.lnk')
+$lnk.TargetPath='D:/portable/android-studio/bin/studio64.exe'
+$lnk.Save()
 ```
 ### Installing Anki
 ```powershell
@@ -1953,6 +1992,14 @@ winget install -e --id ArduinoSA.IDE.stable
 Or
 
 Download [arduino-ide_*_Windows_64bit.zip](https://github.com/arduino/arduino-ide/releases)
+```powershell
+mkdir 'D:/portable/Arduino IDE'
+7z x arduino-ide_*_Windows_64bit.zip -o'D:/portable/Arduino IDE'
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Arduino IDE.lnk')
+$lnk.TargetPath='D:/portable/Arduino IDE/Arduino IDE.exe'
+$lnk.Save()
+```
 ### Installing Audacity
 ```powershell
 winget install -e --id Audacity.Audacity
@@ -1960,6 +2007,14 @@ winget install -e --id Audacity.Audacity
 Or
 
 Download [audacity-win-*-64bit.zip](https://github.com/audacity/audacity/releases)
+```powershell
+7z x audacity-win-*-64bit.zip -oD:/portable
+Rename-Item D:/portable/audacity-win-*-64bit audacity
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Audacity.lnk')
+$lnk.TargetPath='D:/portable/audacity/Audacity.exe'
+$lnk.Save()
+```
 ### Installing balenaEtcher
 ```powershell
 winget install -e --id Balena.Etcher
@@ -1967,6 +2022,14 @@ winget install -e --id Balena.Etcher
 Or
 
 Download [balenaEtcher-win32-x64-*.zip](https://github.com/balena-io/etcher/releases)
+```powershell
+mkdir D:/portable/balena_etcher
+7z x balenaEtcher-win32-x64-*.zip -oD:/portable/balena_etcher
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/balenaEtcher.lnk')
+$lnk.TargetPath='D:/portable/balena_etcher/balenaEtcher.exe'
+$lnk.Save()
+```
 ### Installing Bambu Studio
 ```powershell
 winget install -e --id Bambulab.Bambustudio
@@ -1974,6 +2037,14 @@ winget install -e --id Bambulab.Bambustudio
 Or
 
 Download [Bambu_Studio_win-v*.zip](https://github.com/bambulab/BambuStudio/releases)
+```powershell
+mkdir 'D:/portable/Bambu Studio'
+7z x Bambu_Studio_win-v*.zip -o'D:/portable/Bambu Studio'
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Bambu Studio.lnk')
+$lnk.TargetPath='D:/portable/Bambu Studio/bambu-studio.exe'
+$lnk.Save()
+```
 ### Installing Binary Ninja
 ```powershell
 winget install -e --id Vector35.BinaryNinja
@@ -1997,6 +2068,13 @@ winget install -e --id Google.Brotli
 Or
 
 Download [brotli-x64-windows-static.zip](https://github.com/google/brotli/releases)
+```powershell
+mkdir D:/portable/brotli
+7z x brotli-x64-windows-static.zip -oD:/portable/brotli
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\brotli"
+```
 ### Installing calibre
 ```powershell
 winget install -e --id calibre.calibre
@@ -2104,6 +2182,14 @@ winget install -e --id ToastyX.CustomResolutionUtility
 Or
 
 Download [cru-*.zip](https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU)
+```powershell
+mkdir D:/portable/cru
+7z x cru-*.zip -oD:/portable/cru
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Custom Resolution Utility.lnk')
+$lnk.TargetPath='D:/portable/cru/CRU.exe'
+$lnk.Save()
+```
 ### Installing CyberGhost
 ```powershell
 winget install -e --id CyberGhost.CyberGhost
@@ -2114,7 +2200,15 @@ winget install -e --id qarmin.czkawka.gui
 ```
 Or
 
-Download [windows_czkawka_gui_gtk_412.zip](https://github.com/qarmin/czkawka/releases)
+Download [windows_czkawka_gui*.zip](https://github.com/qarmin/czkawka/releases)
+```powershell
+mkdir D:/portable/czkawka
+7z x windows_czkawka_gui*.zip -oD:/portable/czkawka
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Czkawka.lnk')
+$lnk.TargetPath='D:/portable/czkawka/czkawka_gui.exe'
+$lnk.Save()
+```
 ### Installing DB Browser for SQLite
 ```powershell
 winget install -e --id DBBrowserForSQLite.DBBrowserForSQLite
@@ -2122,6 +2216,14 @@ winget install -e --id DBBrowserForSQLite.DBBrowserForSQLite
 Or
 
 Download [DB.Browser.for.SQLite-v*-win64.zip](https://github.com/sqlitebrowser/sqlitebrowser/releases)
+```powershell
+mkdir 'D:/portable/DB Browser for SQLite'
+7z x DB.Browser.for.SQLite-v*-win64.zip -o'D:/portable/DB Browser for SQLite'
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/DB Browser for SQLite.lnk')
+$lnk.TargetPath='D:/portable/DB Browser for SQLite/DB Browser for SQLite.exe'
+$lnk.Save()
+```
 ### Installing Discord
 ```powershell
 winget install -e --id Discord.Discord
@@ -2136,6 +2238,14 @@ winget install -e --id Tyrrrz.DiscordChatExporter.GUI
 Or
 
 Download [DiscordChatExporter.win-x64.zip](https://github.com/Tyrrrz/DiscordChatExporter/releases)
+```powershell
+mkdir D:/portable/DiscordChatExporter
+7z x DiscordChatExporter.win-x64.zip -oD:/portable/DiscordChatExporter
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/DiscordChatExporter.lnk')
+$lnk.TargetPath='D:/portable/DiscordChatExporter/DiscordChatExporter.exe'
+$lnk.Save()
+```
 ### Installing Docker Desktop
 ```powershell
 winget install -e --id Docker.DockerDesktop
@@ -2154,6 +2264,14 @@ winget install -e --id DupeGuru.DupeGuru
 Or
 
 Download [dupeguru-win64_*.zip](https://github.com/arsenetar/dupeguru/releases)
+```powershell
+7z x dupeguru-win64_*.zip -oD:/portable
+Rename-Item D:/portable/dupeguru-win64_* dupeguru
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/dupeGuru.lnk')
+$lnk.TargetPath='D:/portable/dupeguru/dupeguru-win64.exe'
+$lnk.Save()
+```
 ### Installing EarTrumpet
 ```powershell
 winget install -e --id File-New-Project.EarTrumpet
@@ -2165,6 +2283,13 @@ winget install -e --id EclipseFoundation.Eclipse.Java
 Or
 
 Download [eclipse-java-*-R-win32-x86_64.zip](https://www.eclipse.org/downloads/packages)
+```powershell
+7z x eclipse-java-*-R-win32-x86_64.zip -oD:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Eclipse IDE for Java Developers.lnk')
+$lnk.TargetPath='D:/portable/eclipse/eclipse.exe'
+$lnk.Save()
+```
 ### Installing Everything
 ```powershell
 winget install -e --id voidtools.Everything
@@ -2172,6 +2297,14 @@ winget install -e --id voidtools.Everything
 Or
 
 Download [Everything-*.x64.zip](https://www.voidtools.com/downloads)
+```powershell
+mkdir D:/portable/Everything
+7z x Everything-*.x64.zip -oD:/portable/Everything
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Everything.lnk')
+$lnk.TargetPath='D:/portable/Everything/everything.exe'
+$lnk.Save()
+```
 ### Installing Exact Audio Copy
 ```powershell
 winget install -e --id AndreWiethoff.ExactAudioCopy
@@ -2186,6 +2319,14 @@ winget install -e --id PhapDieuDuong.ExifGlass
 Or
 
 Download [ExifGlass_*_x64.zip](https://github.com/d2phap/ExifGlass/releases)
+```powershell
+7z x ExifGlass_*_x64.zip -oD:/portable
+Rename-Item D:/portable/ExifGlass_*_x64 ExifGlass
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/ExifGlass.lnk')
+$lnk.TargetPath='D:/portable/ExifGlass/ExifGlass.exe'
+$lnk.Save()
+```
 ### Installing ExifTool
 ```powershell
 winget install -e --id OliverBetz.ExifTool
@@ -2193,6 +2334,14 @@ winget install -e --id OliverBetz.ExifTool
 Or
 
 Download [exiftool-*_64.zip](https://sourceforge.net/projects/exiftool/files)
+```powershell
+7z x exiftool-*_64.zip -oD:/portable
+Rename-Item D:/portable/exiftool-*_64 exiftool
+Rename-Item 'D:/portable/exiftool/exiftool(-k).exe' exiftool.exe
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\exiftool"
+```
 ### Installing ExifToolGUI
 ```powershell
 winget install -e --id FrankBijnen.ExifToolGUI
@@ -2228,6 +2377,14 @@ winget install -e --id StefanFreischlad.Filius
 Or
 
 Download [filius-*.zip](https://www.lernsoftware-filius.de/Herunterladen)
+```powershell
+mkdir D:/portable/Filius
+7z x filius-*.zip -oD:/portable/Filius
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Filius.lnk')
+$lnk.TargetPath='D:/portable/Filius/Filius.exe'
+$lnk.Save()
+```
 ### Installing Finite Element Method Magnetics
 ```powershell
 winget install -e --id DavidMeeker.FEMM
@@ -2271,6 +2428,14 @@ winget install -e --id Geeks3D.FurMark.2
 Or
 
 Download [FurMark_2.*_win64.zip](https://www.geeks3d.com/furmark/downloads)
+```powershell
+7z x FurMark_2.*_win64.zip -oD:/portable
+Rename-Item D:/portable/FurMark_win64 FurMark
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/FurMark.lnk')
+$lnk.TargetPath='D:/portable/FurMark/FurMark_GUI.exe'
+$lnk.Save()
+```
 ### Installing GIMP
 ```powershell
 winget install -e --id GIMP.GIMP
@@ -2310,13 +2475,30 @@ winget install -e --id StefansTools.grepWin
 Or
 
 Download [grepWin-x64-*_portable.zip](https://github.com/stefankueng/grepWin/releases)
-### Installing HakuNeko Desktop
+```powershell
+7z x grepWin-x64-*_portable.zip -oD:/portable
+Rename-Item D:/portable/grepWin-x64-*_portable.exe grepWin.exe
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/grepWin.lnk')
+$lnk.TargetPath='D:/portable/grepWin.exe'
+$lnk.Save()
+del D:/portable/website.url
+```
+### Installing HakuNeko
 ```powershell
 winget install -e --id HakuNeko.HakuNeko
 ```
 Or
 
 Download [hakuneko-desktop_*_windows-portable_amd64.zip](https://github.com/manga-download/hakuneko/releases)
+```powershell
+7z x hakuneko-desktop_*_windows-portable_amd64.zip -oD:/portable
+Rename-Item D:/portable/hakuneko-desktop_*_windows-portable_amd64 hakuneko
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/HakuNeko.lnk')
+$lnk.TargetPath='D:/portable/hakuneko/hakuneko.exe'
+$lnk.Save()
+```
 ### Installing Hamachi
 ```powershell
 winget install -e --id LogMeIn.Hamachi
@@ -2331,6 +2513,13 @@ winget install -e --id HandBrake.HandBrake
 Or
 
 Download [HandBrake-*-x86_64-Win_GUI.zip](https://github.com/HandBrake/HandBrake/releases)
+```powershell
+7z x HandBrake-*-x86_64-Win_GUI.zip -oD:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/HandBrake.lnk')
+$lnk.TargetPath='D:/portable/HandBrake/HandBrake.exe'
+$lnk.Save()
+```
 ### Installing Helium
 ```powershell
 winget install -e --id ImputNet.Helium
@@ -2338,6 +2527,14 @@ winget install -e --id ImputNet.Helium
 Or
 
 Download [helium_*_x64-windows.zip](https://github.com/imputnet/helium-windows/releases)
+```powershell
+7z x helium_*_x64-windows.zip -oD:/portable
+Rename-Item D:/portable/helium_*_x64-windows helium
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Helium.lnk')
+$lnk.TargetPath='D:/portable/helium/chrome.exe'
+$lnk.Save()
+```
 ### Installing HP Connectivity Kit
 ```powershell
 winget install -e --id HP.ConnectivityKit
@@ -2352,13 +2549,21 @@ winget install -e --id HP.PrimeVirtualCalculator
 Or
 
 Download [HP_Prime_Virtual_Calculator_x64_*.exe](https://updates.moravia-consulting.com)
-### Installing HWiNFO®
+### Installing HWiNFO
 ```powershell
 winget install -e --id REALiX.HWiNFO
 ```
 Or
 
 Download [hwi_*.zip](https://www.hwinfo.com/download)
+```powershell
+mkdir D:/portable/HWiNFO
+7z x hwi_*.zip -oD:/portable/HWiNFO
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/HWiNFO.lnk')
+$lnk.TargetPath='D:/portable/HWiNFO/HWiNFO64.exe'
+$lnk.Save()
+```
 ### Installing HxD Hex Editor
 ```powershell
 winget install -e --id MHNexus.HxD
@@ -2380,6 +2585,14 @@ winget install -e --id Xanashi.Icaros
 Or
 
 Download [Icaros_v*.zip](https://github.com/Xanashi/Icaros/releases)
+```powershell
+mkdir D:/portable/Icaros
+7z x Icaros_v*.zip -oD:/portable/Icaros
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Icaros.lnk')
+$lnk.TargetPath='D:/portable/Icaros/IcarosConfig.exe'
+$lnk.Save()
+```
 ### Installing ICAT
 ```powershell
 winget install -e --id Nvidia.ICAT
@@ -2398,6 +2611,14 @@ winget install -e --id DuongDieuPhap.ImageGlass
 Or
 
 Download [ImageGlass_*_x64.zip](https://github.com/d2phap/ImageGlass/releases)
+```powershell
+7z x ImageGlass_*_x64.zip -oD:/portable
+Rename-Item D:/portable/ImageGlass_x64 ImageGlass
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/ImageGlass.lnk')
+$lnk.TargetPath='D:/portable/ImageGlass/ImageGlass.exe'
+$lnk.Save()
+```
 ### Installing Inkscape
 ```powershell
 winget install -e --id Inkscape.Inkscape
@@ -2419,6 +2640,13 @@ winget install -e --id ar51an.iPerf3
 Or
 
 Download [iperf-3.*-win64.zip](https://github.com/ar51an/iperf3-win-builds/releases)
+```powershell
+mkdir D:/portable/iperf3
+7z x iperf-3.*-win64.zip -oD:/portable/iperf3
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\iperf3"
+```
 ### Installing JetBrains dotPeek
 ```powershell
 winget install -e --id JetBrains.dotPeek
@@ -2433,6 +2661,13 @@ winget install -e --id TimoKokkonen.Jpegoptim
 Or
 
 Download [jpegoptim-*-x64-windows.zip](https://github.com/tjko/jpegoptim/releases)
+```powershell
+mkdir D:/portable/jpegoptim
+7z x jpegoptim-*-x64-windows.zip -oD:/portable/jpegoptim
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\jpegoptim"
+```
 ### Installing KiCad
 ```powershell
 winget install -e --id KiCad.KiCad
@@ -2454,6 +2689,13 @@ winget install -e --id libjxl.libjxl
 Or
 
 Download [jxl-x64-windows-static.zip](https://github.com/libjxl/libjxl/releases)
+```powershell
+mkdir D:/portable/jxl
+7z x jxl-x64-windows-static.zip -oD:/portable/jxl
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\jxl\bin"
+```
 ### Installing LibreOffice
 ```powershell
 winget install -e --id TheDocumentFoundation.LibreOffice
@@ -2517,6 +2759,14 @@ winget install -e --id Microsoft.VisualStudioCode
 Or
 
 Download [VSCode-win32-x64-*.zip](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-archive)
+```powershell
+mkdir 'D:/portable/Microsoft VS Code'
+7z x VSCode-win32-x64-*.zip -o'D:/portable/Microsoft VS Code'
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/VSCode.lnk')
+$lnk.TargetPath='D:/portable/Microsoft VS Code/Code.exe'
+$lnk.Save()
+```
 ### Installing MiKTeX
 ```powershell
 winget install -e --id MiKTeX.MiKTeX
@@ -2531,6 +2781,14 @@ winget install -e --id DavidNorgren.Mine-imator
 Or
 
 Download [Mine-imator *.zip](https://www.mineimator.com/dl/mineimator-zip)
+```powershell
+7z x 'Mine-imator *.zip' -oD:/portable
+Rename-Item 'D:/portable/Mine-imator *' Mine-imator
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Mine-imator.lnk')
+$lnk.TargetPath='D:/portable/Mine-imator/Mine-imator.exe'
+$lnk.Save()
+```
 ### Installing MinerU
 ```powershell
 winget install -e --id OpenDataLab.MinerU
@@ -2559,6 +2817,14 @@ winget install -e --id mpv.net
 Or
 
 Download [mpv.net-v*-portable-x64.zip](https://github.com/mpvnet-player/mpv.net/releases)
+```powershell
+mkdir D:/portable/mpv.net
+7z x mpv.net-v*-portable-x64.zip -oD:/portable/mpv.net
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/mpv.net.lnk')
+$lnk.TargetPath='D:/portable/mpv.net/mpvnet.exe'
+$lnk.Save()
+```
 ### Installing MSI Afterburner
 ```powershell
 winget install -e --id Guru3D.Afterburner
@@ -2580,6 +2846,13 @@ winget install -e --id OpenJS.NodeJS
 Or
 
 Download [node-v*-win-x64.zip](https://nodejs.org/en/download)
+```powershell
+7z x node-v*-win-x64.zip -oD:/portable
+Rename-Item D:/portable/node-v*-win-x64 node
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\node"
+```
 ### Installing NormCap
 ```powershell
 winget install -e --id dynobo.NormCap
@@ -2587,6 +2860,14 @@ winget install -e --id dynobo.NormCap
 Or
 
 Download [NormCap-*-x86_64-Windows.zip](https://github.com/dynobo/normcap/releases)
+```powershell
+7z x NormCap-*-x86_64-Windows.zip -oD:/portable
+Rename-Item D:/portable/NormCap-* NormCap
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/NormCap.lnk')
+$lnk.TargetPath='D:/portable/NormCap/NormCap.exe'
+$lnk.Save()
+```
 ### Installing Notepad++
 ```powershell
 winget install -e --id Notepad++.Notepad++
@@ -2609,6 +2890,14 @@ winget install -e --id OBSProject.OBSStudio
 Or
 
 Download [OBS-Studio-*-Windows-x64.zip](https://github.com/obsproject/obs-studio/releases)
+```powershell
+mkdir D:/portable/obs-studio
+7z x OBS-Studio-*-Windows-x64.zip -oD:/portable/obs-studio
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/OBS Studio.lnk')
+$lnk.TargetPath='D:/portable/obs-studio/bin/64bit/obs64.exe'
+$lnk.Save()
+```
 ### Installing Obsidian
 ```powershell
 winget install -e --id Obsidian.Obsidian
@@ -2658,6 +2947,14 @@ winget install -e --id Giorgiotani.Peazip
 Or
 
 Download [peazip_portable-*.WIN64.zip](https://github.com/peazip/PeaZip/releases)
+```powershell
+7z x peazip_portable-*.WIN64.zip -oD:/portable
+Rename-Item D:/portable/peazip_portable-*.WIN64 peazip
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/PeaZip.lnk')
+$lnk.TargetPath='D:/portable/peazip/peazip.exe'
+$lnk.Save()
+```
 ### Installing Prime95
 ```powershell
 winget install -e --id mersenne.prime95
@@ -2665,6 +2962,14 @@ winget install -e --id mersenne.prime95
 Or
 
 Download [p95v*.win64.zip](https://www.mersenne.org/download)
+```powershell
+mkdir D:/portable/prime95
+7z x p95v*.win64.zip -oD:/portable/prime95
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Prime95.lnk')
+$lnk.TargetPath='D:/portable/prime95/prime95.exe'
+$lnk.Save()
+```
 ### Installing PuTTY
 ```powershell
 winget install -e --id PuTTY.PuTTY
@@ -2672,6 +2977,14 @@ winget install -e --id PuTTY.PuTTY
 Or
 
 Download [putty.zip](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+```powershell
+mkdir D:/portable/PuTTY
+7z x putty.zip -oD:/portable/PuTTY
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/PuTTY.lnk')
+$lnk.TargetPath='D:/portable/PuTTY/PUTTY.EXE'
+$lnk.Save()
+```
 ### Installing qBittorrent (libtorrent 2)
 ```powershell
 winget install -e --id qBittorrent.qBittorrent.lt2
@@ -2686,6 +2999,14 @@ winget install -e --id jurplel.qView
 Or
 
 Download [qView-*-win64.zip](https://github.com/jurplel/qView/releases)
+```powershell
+7z x qView-*-win64.zip -oD:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/qView.lnk')
+$lnk.TargetPath='D:/portable/qView/qView.exe'
+$lnk.Save()
+rmdir D:/portable/__MACOSX -Recurse
+```
 ### Installing Raspberry Pi Imager
 ```powershell
 winget install -e --id RaspberryPiFoundation.RaspberryPiImager
@@ -2728,6 +3049,13 @@ winget install -e --id AlexanderKojevnikov.Spek
 Or
 
 Download [spek-*.zip](https://github.com/alexkay/spek/releases)
+```powershell
+7z x spek-*.zip -oD:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Spek.lnk')
+$lnk.TargetPath='D:/portable/Spek/spek.exe'
+$lnk.Save()
+```
 ### Installing Steam
 ```powershell
 winget install -e --id Valve.Steam
@@ -2749,6 +3077,14 @@ winget install -e --id WinsiderSS.SystemInformer
 Or
 
 Download [systeminformer-*-release-bin.zip](https://github.com/winsiderss/systeminformer/releases)
+```powershell
+mkdir D:/portable/SystemInformer
+7z x systeminformer-*-release-bin.zip -oD:/portable/SystemInformer
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/System Informer.lnk')
+$lnk.TargetPath='D:/portable/SystemInformer/amd64/SystemInformer.exe'
+$lnk.Save()
+```
 ### Installing TechPowerUp GPU-Z
 ```powershell
 winget install -e --id TechPowerUp.GPU-Z
@@ -2759,21 +3095,28 @@ Download [GPU-Z.*.exe](https://www.techpowerup.com/download/techpowerup-gpu-z)
 ```powershell
 copy GPU-Z.*.exe D:/portable/GPU-Z.exe
 $ws = New-Object -ComObject WScript.Shell
-$lnk = $ws.CreateShortcut('D:/portable/GPU-Z.lnk')
+$lnk = $ws.CreateShortcut('D:/portable/TechPowerUp GPU-Z.lnk')
 $lnk.TargetPath='D:/portable/GPU-Z.exe'
 $lnk.Save()
 ```
 ### Configuring TechPowerUp GPU-Z
-Open `GPU-Z`
+Open `TechPowerUp GPU-Z`
 
 Click `No`
-### Installing Telegram Desktop
+### Installing Telegram
 ```powershell
 winget install -e --id Telegram.TelegramDesktop
 ```
 Or
 
 Download [tportable-x64.*.zip](https://github.com/telegramdesktop/tdesktop/releases)
+```powershell
+7z x tportable-x64.*.zip -oD:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Telegram.lnk')
+$lnk.TargetPath='D:/portable/Telegram/Telegram.exe'
+$lnk.Save()
+```
 ### Installing TeXworks
 ```powershell
 winget install -e --id TUG.TeXworks
@@ -2788,6 +3131,13 @@ winget install -e --id JFLarvoire.Ag
 Or
 
 Download [ag.zip](https://github.com/JFLarvoire/the_silver_searcher/releases)
+```powershell
+mkdir D:/portable/ag
+7z x ag.zip -oD:/portable/ag
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\ag\WIN64"
+```
 ### Installing Thio's SVG Thumbnail Extension
 ```powershell
 winget install -e --id ThioJoe.SvgThumbnailExtension
@@ -2802,6 +3152,14 @@ winget install -e --id TechPowerUp.ThrottleStop
 Or
 
 Download [ThrottleStop_*.zip](https://www.techpowerup.com/download/techpowerup-throttlestop)
+```powershell
+mkdir D:/portable/ThrottleStop
+7z x ThrottleStop_*.zip -oD:/portable/ThrottleStop
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/ThrottleStop.lnk')
+$lnk.TargetPath='D:/portable/ThrottleStop/ThrottleStop.exe'
+$lnk.Save()
+```
 ### Installing Tor Browser
 ```powershell
 winget install -e --id TorProject.TorBrowser
@@ -2844,6 +3202,14 @@ winget install -e --id Ventoy.Ventoy
 Or
 
 Download [ventoy-*-windows.zip](https://github.com/ventoy/Ventoy/releases)
+```powershell
+7z x ventoy-*-windows.zip -oD:/portable
+Rename-Item D:/portable/ventoy-* ventoy
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Ventoy.lnk')
+$lnk.TargetPath='D:/portable/ventoy/Ventoy2Disk.exe'
+$lnk.Save()
+```
 ### Installing VeraCrypt
 ```powershell
 winget install -e --id IDRIX.VeraCrypt
@@ -2865,6 +3231,14 @@ winget install -e --id Victoria.Victoria
 Or
 
 Download [Victoria*.zip](https://hdd.by/victoria)
+```powershell
+7z x Victoria*.zip -oD:/portable
+Rename-Item D:/portable/Victoria* Victoria
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Victoria.lnk')
+$lnk.TargetPath='D:/portable/Victoria/Victoria.exe'
+$lnk.Save()
+```
 ### Installing Visual Studio Community 2026
 ```powershell
 winget install -e --id Microsoft.VisualStudio.Community
@@ -2931,6 +3305,14 @@ winget install -e --id XavierRoche.HTTrack
 Or
 
 Download [httrack_x64-noinst-*.zip](https://www.httrack.com/page/2/en/index.html)
+```powershell
+7z x httrack_x64-noinst-*.zip -oD:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/WinHTTrack Website Copier.lnk')
+$lnk.TargetPath='D:/portable/httrack/WinHTTrack.exe'
+$lnk.Save()
+del D:/portable/file_id.diz
+```
 ### Installing Wireshark
 ```powershell
 winget install -e --id WiresharkFoundation.Wireshark
@@ -2945,6 +3327,13 @@ winget install -e --id ApacheFriends.Xampp.8.2
 Or
 
 Download [xampp-windows-x64-8.2.*-0-VS16.zip](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows)
+```powershell
+7z x xampp-windows-x64-8.2.*-0-VS16.zip -oD:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/XAMPP Control Panel.lnk')
+$lnk.TargetPath='D:/portable/xampp/xampp-control.exe'
+$lnk.Save()
+```
 ### Installing XnView MP
 ```powershell
 winget install -e --id XnSoft.XnViewMP
@@ -2952,6 +3341,13 @@ winget install -e --id XnSoft.XnViewMP
 Or
 
 Download [XnViewMP-win-x64.zip](https://download.xnview.com/XnViewMP-win-x64.zip)
+```powershell
+7z x XnViewMP-win-x64.zip -oD:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/XnView MP.lnk')
+$lnk.TargetPath='D:/portable/XnViewMP/xnviewmp.exe'
+$lnk.Save()
+```
 ### Installing Yandex Browser
 ```powershell
 winget install -e --id Yandex.Browser
@@ -2966,6 +3362,13 @@ winget install -e --id yt-dlp.yt-dlp
 Or
 
 Download [yt-dlp.exe](https://github.com/yt-dlp/yt-dlp/releases)
+```powershell
+mkdir D:/portable/yt-dlp
+copy yt-dlp.exe D:/portable/yt-dlp
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\yt-dlp"
+```
 ### Installing Zig
 ```powershell
 winget install -e --id zig.zig
@@ -2973,6 +3376,13 @@ winget install -e --id zig.zig
 Or
 
 Download [zig-x86_64-windows-*.zip](https://ziglang.org/download)
+```powershell
+7z x zig-x86_64-windows-*.zip -oD:/portable
+Rename-Item D:/portable/zig-x86_64-windows-* zig
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\zig"
+```
 ### Installing Zoom Workplace
 ```powershell
 winget install -e --id Zoom.Zoom
@@ -2987,6 +3397,13 @@ winget install -e --id Meta.Zstandard
 Or
 
 Download [zstd-v*-win64.zip](https://github.com/facebook/zstd/releases)
+```powershell
+7z x zstd-v*-win64.zip -oD:/portable
+Rename-Item D:/portable/zstd-v*-win64 zstd
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\zstd"
+```
 ### Configuring System Clock
 ```
 reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
