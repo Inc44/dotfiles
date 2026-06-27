@@ -1927,10 +1927,15 @@ $lnk = $ws.CreateShortcut('D:/portable/AIMP.lnk')
 $lnk.TargetPath='D:/portable/AIMP/AIMP.exe'
 $lnk.Save()
 ```
-### Installing Amazon Kindle
+### Installing Kindle
 ```powershell
 winget install -e --id Amazon.Kindle
 ```
+Or
+
+Download [KindleForPC-installer-*.exe](https://www.amazon.com/kindlepcdownload)
+
+Open `KindleForPC-installer-*.exe`
 ### Installing Android SDK Platform-Tools
 ```powershell
 winget install -e --id Google.PlatformTools
@@ -2049,18 +2054,63 @@ $lnk.Save()
 ```powershell
 winget install -e --id Vector35.BinaryNinja
 ```
+Or
+
+Download [binaryninja_free_win64.exe](https://cdn.binary.ninja/installers/binaryninja_free_win64.exe)
+
+Open `binaryninja_free_win64.exe`
+
+Click `Next`
+
+Click `I Agree`
+
+Select `Install for anyone using this computer`
+
+Click `Next`
+
+Click `Install`
+
+Click `Finish`
 ### Installing Bitwarden
 ```powershell
 winget install -e --id Bitwarden.Bitwarden
 ```
-### Installing BlueStacks
+Or
+
+Download [bitwarden-*-x64.nsis.7z](https://github.com/bitwarden/clients/releases)
+```powershell
+mkdir D:/portable/Bitwarden
+7z x bitwarden-*-x64.nsis.7z -oD:/portable/Bitwarden
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Bitwarden.lnk')
+$lnk.TargetPath='D:/portable/Bitwarden/Bitwarden.exe'
+$lnk.Save()
+copy D:/portable/Bitwarden.lnk 'C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Startup'
+```
+### Installing BlueStacks (Internet access required)
 ```powershell
 winget install -e --id BlueStack.BlueStacks
 ```
+Or
+
+Download [BlueStacksInstaller_5.*_native.exe](https://cloud.bluestacks.com/api/getdownloadnow?platform=win)
+
+Open `BlueStacksInstaller_5.*_native.exe`
 ### Installing Brother iPrint&Scan
 ```powershell
 winget install -e --id Brother.iPrintScan
 ```
+Or
+
+Download [iPrintScan-Setup-*.exe](https://www.brother.fr/services-et-supports/ds640/downloads)
+
+Open `iPrintScan-Setup-*.exe`
+
+Turn on `I agree to the license terms and conditions`
+
+Click `Install`
+
+Click `Launch`
 ### Installing Brotli
 ```powershell
 winget install -e --id Google.Brotli
@@ -2074,6 +2124,24 @@ mkdir D:/portable/brotli
 ```
 ```cmd
 setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\brotli"
+```
+### Installing bsc
+Download [bsc-*-x64.zip](https://github.com/IlyaGrebnov/libbsc/releases)
+```powershell
+mkdir D:/portable/bsc
+7z x bsc-*-x64.zip -oD:/portable/bsc
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\bsc"
+```
+### Installing bsc-m03
+Download [bsc-m03-*-win64.zip](https://github.com/IlyaGrebnov/bsc-m03/releases)
+```powershell
+mkdir D:/portable/bsc-m03
+7z x bsc-m03-*-win64.zip -oD:/portable/bsc-m03
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\bsc-m03"
 ```
 ### Installing calibre
 ```powershell
@@ -2190,10 +2258,15 @@ $lnk = $ws.CreateShortcut('D:/portable/Custom Resolution Utility.lnk')
 $lnk.TargetPath='D:/portable/cru/CRU.exe'
 $lnk.Save()
 ```
-### Installing CyberGhost
+### Installing CyberGhost (Internet access required)
 ```powershell
 winget install -e --id CyberGhost.CyberGhost
 ```
+Or
+
+Download [CyberGhostVPNSetup.exe](https://download.cyberghostvpn.com/windows/CyberGhostVPNSetup.exe)
+
+Open `CyberGhostVPNSetup.exe`
 ### Installing Czkawka
 ```powershell
 winget install -e --id qarmin.czkawka.gui
@@ -2222,6 +2295,21 @@ mkdir 'D:/portable/DB Browser for SQLite'
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/DB Browser for SQLite.lnk')
 $lnk.TargetPath='D:/portable/DB Browser for SQLite/DB Browser for SQLite.exe'
+$lnk.Save()
+```
+### Installing Devin
+```powershell
+winget install -e --id CognitionAI.DevinDesktop
+```
+Or
+
+Download [Devin-win32-x64-*.zip](https://docs.devin.ai/desktop/releases)
+```powershell
+mkdir D:/portable/Devin
+7z x Devin-win32-x64-*.zip -oD:/portable/Devin
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Devin.lnk')
+$lnk.TargetPath='D:/portable/Devin/Devin.exe'
 $lnk.Save()
 ```
 ### Installing Discord
@@ -2253,10 +2341,19 @@ winget install -e --id Docker.DockerDesktop
 Or
 
 Download [Docker Desktop Installer.exe](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)
-### Installing DuckDuckGo
+### Installing DuckDuckGo (Internet access required)
 ```powershell
 winget install -e --id DuckDuckGo.DesktopBrowser
 ```
+Or
+
+Download [DuckDuckGo.Installer.exe](https://duckduckgo.com)
+
+Open `DuckDuckGo.Installer.exe`
+
+Turn off `Open DuckDuckGo when computer starts up`
+
+Click `Install Now`
 ### Installing dupeGuru
 ```powershell
 winget install -e --id DupeGuru.DupeGuru
@@ -2883,6 +2980,18 @@ $lnk = $ws.CreateShortcut('D:/portable/Notepad++.lnk')
 $lnk.TargetPath='D:/portable/Notepad++/notepad++.exe'
 $lnk.Save()
 ```
+### Installing NVIDIA Broadcast (Internet access required)
+Download [NVIDIA_Broadcast_v*.exe](https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app)
+
+Open `NVIDIA_Broadcast_v*.exe`
+
+Click `AGREE AND CONTINUE`
+
+Select `Custom (Advanced)`
+
+Turn on `Perform a clean installation`
+
+Click `Next`
 ### Installing OBS Studio
 ```powershell
 winget install -e --id OBSProject.OBSStudio
@@ -2912,6 +3021,16 @@ winget install -e --id Ollama.Ollama
 Or
 
 Download [ollama-windows-amd64.zip](https://github.com/ollama/ollama/releases)
+```powershell
+mkdir D:/portable/Ollama
+7z x ollama-windows-amd64.zip -oD:/portable/Ollama
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\Ollama"
+```
+Or
+
+Download [OllamaSetup.exe](https://github.com/ollama/ollama/releases)
 ### Installing OP Auto Clicker
 ```powershell
 winget install -e --id OPAutoClicker.OPAutoClicker
@@ -3117,6 +3236,14 @@ $lnk = $ws.CreateShortcut('D:/portable/Telegram.lnk')
 $lnk.TargetPath='D:/portable/Telegram/Telegram.exe'
 $lnk.Save()
 ```
+### Installing GraalVM CE Gluon 23+25.1
+Download [graalvm-java23-windows-amd64-gluon-23+25.1-dev.zip](https://github.com/gluonhq/graal/releases)
+```powershell
+7z x graalvm-java23-windows-amd64-gluon-23+25.1-dev.zip -oD:/portable
+```
+```cmd
+setx /M GRAALVM_HOME "D:\portable\graalvm-java23-windows-amd64-gluon-23+25.1-dev"
+```
 ### Installing TeXworks
 ```powershell
 winget install -e --id TUG.TeXworks
@@ -3124,6 +3251,14 @@ winget install -e --id TUG.TeXworks
 Or
 
 Download [TeXworks-win10-*.zip](https://github.com/TeXworks/texworks/releases)
+```powershell
+mkdir D:/portable/TeXworks
+7z x TeXworks-win10-*.zip -oD:/portable/TeXworks
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/TeXworks.lnk')
+$lnk.TargetPath='D:/portable/TeXworks/TeXworks.exe'
+$lnk.Save()
+```
 ### Installing The Silver Searcher
 ```powershell
 winget install -e --id JFLarvoire.Ag
@@ -3298,6 +3433,17 @@ $lnk.Save()
 ```powershell
 winget install -e --id Codeium.Windsurf
 ```
+Or
+
+Download [Windsurf-win32-x64-*.zip](https://docs.devin.ai/desktop/releases)
+```powershell
+mkdir D:/portable/Windsurf
+7z x Windsurf-win32-x64-*.zip -oD:/portable/Windsurf
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Windsurf.lnk')
+$lnk.TargetPath='D:/portable/Windsurf/Windsurf.exe'
+$lnk.Save()
+```
 ### Installing WinHTTrack Website Copier
 ```powershell
 winget install -e --id XavierRoche.HTTrack
@@ -3365,6 +3511,13 @@ Download [yt-dlp.exe](https://github.com/yt-dlp/yt-dlp/releases)
 ```powershell
 mkdir D:/portable/yt-dlp
 copy yt-dlp.exe D:/portable/yt-dlp
+```
+Or
+
+Download [yt-dlp_win.zip](https://github.com/yt-dlp/yt-dlp/releases)
+```powershell
+mkdir D:/portable/yt-dlp
+7z x yt-dlp_win.zip -oD:/portable/yt-dlp
 ```
 ```cmd
 setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\yt-dlp"
