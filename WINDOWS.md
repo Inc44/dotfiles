@@ -11,7 +11,7 @@ Click `Sharing`
 
 Turn on `Allow other network users to connect through this computer's Internet connection`
 
-Select `Ethernet`
+Home networking connection: `Ethernet`
 
 Click `OK`
 ### Creating Bridged Network
@@ -152,11 +152,11 @@ Predownload [NVIDIA Studio Driver](https://www.nvidia.com/en-us/drivers)
 
 Copy `*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe` to USB
 
-Install `*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe`
+Open `*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe`
 
 Click `AGREE AND CONTINUE`
 
-Select `Custom (Advanced)`
+Click `Custom (Advanced)`
 
 Turn on `Perform a clean installation`
 
@@ -172,7 +172,23 @@ Predownload [Intel® Arc™ Graphics - Windows*](https://www.intel.com/content/w
 
 Copy `gfx_win_101.8425_101.8362.exe` to USB
 
-Install `gfx_win_101.8425_101.8362.exe`
+Open `gfx_win_101.8425_101.8362.exe`
+
+Click `Begin installation`
+
+Click `I agree`
+
+Click `Customize`
+
+Turn off `Intel® Computing Improvement Program`
+
+Turn on `Execute a clean installation`
+
+Click `Start >`
+
+Turn off `Launch Intel® Graphics Software`
+
+Click `Reboot Required`
 ### Optimizing Performance
 Click Start Menu icon
 
@@ -562,6 +578,10 @@ Click `Advanced app settings`
 Click `Share across devices`
 
 Click `Off`
+
+Click `App execution aliases`
+
+Turn off all `App Installer`
 
 Click `Apps`
 
@@ -1868,6 +1888,12 @@ winget install -e --id AdGuard.AdGuard
 Or
 
 Download [AdGuard-*.exe](https://github.com/AdguardTeam/AdguardForWindows/releases)
+
+Open `AdGuard-*.exe`
+
+Click `Install`
+
+Click `Leave as it is`
 ### Installing AdGuard VPN
 ```powershell
 winget install -e --id AdGuard.AdGuardVPN
@@ -1970,6 +1996,26 @@ winget install -e --id Anki.Anki
 Or
 
 Download [anki-*-win-x64.msi](https://github.com/ankitects/anki/releases)
+
+Open `anki-*-win-x64.msi`
+
+Click `Next`
+
+Turn on `I accept the terms in the License Agreement`
+
+Click `Next`
+
+Click `Install for all users of this machine`
+
+Click `Next`
+
+Click `Next`
+
+Click `Next`
+
+Click `Install`
+
+Click `Finish`
 ### Installing Antutu Benchmark
 ```powershell
 winget install -e --id Antutu.AntutuBenchmark
@@ -1990,6 +2036,13 @@ winget install -e --id AnyDesk.AnyDesk
 Or
 
 Download [AnyDesk.exe](https://download.anydesk.com/AnyDesk.exe)
+```powershell
+copy AnyDesk.exe D:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/AnyDesk.lnk')
+$lnk.TargetPath='D:/portable/AnyDesk.exe'
+$lnk.Save()
+```
 ### Installing Arduino IDE
 ```powershell
 winget install -e --id ArduinoSA.IDE.stable
@@ -2110,7 +2163,7 @@ Turn on `I agree to the license terms and conditions`
 
 Click `Install`
 
-Click `Launch`
+Click `Close`
 ### Installing Brotli
 ```powershell
 winget install -e --id Google.Brotli
@@ -2150,20 +2203,38 @@ winget install -e --id calibre.calibre
 Or
 
 Download [calibre-portable-installer-*.exe](https://github.com/kovidgoyal/calibre/releases)
-### Installing CapCut
+
+Open `calibre-portable-installer-*.exe`
+
+Folder: `D:\portable`
+
+Click `OK`
+
+Click `No`
+```powershell
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/calibre.lnk')
+$lnk.TargetPath='D:/portable/Calibre Portable/calibre-portable.exe'
+$lnk.Save()
+```
+### Installing CapCut (Internet access required)
 ```powershell
 winget install -e --id ByteDance.CapCut
 ```
 Or
 
 Download [CapCut_*_installer.exe](https://www.capcut.com/download-guidance)
-### Installing Claude
+
+Open `CapCut_*_installer.exe`
+### Installing Claude (Internet access required)
 ```powershell
 winget install -e --id Anthropic.Claude
 ```
 Or
 
 Download [Claude Setup.exe](https://claude.com/download)
+
+Open `Claude Setup.exe`
 ### Installing CMake
 ```powershell
 winget install -e --id Kitware.CMake
@@ -2185,6 +2256,10 @@ winget install -e --id Perplexity.Comet
 Or
 
 Download [comet_latest_intel_system.exe](https://www.perplexity.ai/rest/browser/download?platform=win_x64&channel=stable)
+
+Open `comet_latest_intel_system.exe`
+
+Click `Close`
 ### Installing CPUID CPU-Z
 ```powershell
 winget install -e --id CPUID.CPU-Z
@@ -2243,6 +2318,24 @@ winget install -e --id Anysphere.Cursor
 Or
 
 Download [CursorSetup-x64-*.exe](https://cursor.com/download)
+
+Open `CursorSetup-x64-*.exe`
+
+Click `I accept the agreement`
+
+Click `Next`
+
+Click `Next`
+
+Click `Next`
+
+Click `Next`
+
+Click `Install`
+
+Turn off `Launch Cursor`
+
+Click `Finish`
 ### Installing Custom Resolution Utility
 ```powershell
 winget install -e --id ToastyX.CustomResolutionUtility
@@ -2319,6 +2412,8 @@ winget install -e --id Discord.Discord
 Or
 
 Download [DiscordSetup.exe](https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64)
+
+Open `DiscordSetup.exe`
 ### Installing DiscordChatExporter.GUI
 ```powershell
 winget install -e --id Tyrrrz.DiscordChatExporter.GUI
@@ -2341,6 +2436,12 @@ winget install -e --id Docker.DockerDesktop
 Or
 
 Download [Docker Desktop Installer.exe](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)
+
+Open `Docker Desktop Installer.exe`
+
+Click `OK`
+
+Click `Close and restart`
 ### Installing DuckDuckGo (Internet access required)
 ```powershell
 winget install -e --id DuckDuckGo.DesktopBrowser
@@ -2353,7 +2454,7 @@ Open `DuckDuckGo.Installer.exe`
 
 Turn off `Open DuckDuckGo when computer starts up`
 
-Click `Install Now`
+Click `Install now`
 ### Installing dupeGuru
 ```powershell
 winget install -e --id DupeGuru.DupeGuru
@@ -2409,6 +2510,22 @@ winget install -e --id AndreWiethoff.ExactAudioCopy
 Or
 
 Download [eac-*.exe](https://www.exactaudiocopy.de)
+
+Open `eac-*.exe`
+
+Click `Next >`
+
+Click `I Agree`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Install`
+
+Turn off `Run Exact Audio Copy *`
+
+Click `Finish`
 ### Installing ExifGlass
 ```powershell
 winget install -e --id PhapDieuDuong.ExifGlass
@@ -2446,6 +2563,13 @@ winget install -e --id FrankBijnen.ExifToolGUI
 Or
 
 Download [ExifToolGUI_X64.exe](https://github.com/FrankBijnen/ExifToolGui/releases)
+```powershell
+copy ExifToolGUI_X64.exe D:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/ExifToolGUI.lnk')
+$lnk.TargetPath='D:/portable/ExifToolGUI_X64.exe'
+$lnk.Save()
+```
 ### Installing FFmpeg (Shared)
 ```powershell
 winget install -e --id Gyan.FFmpeg.Shared
@@ -2460,13 +2584,15 @@ Rename-Item D:/portable/ffmpeg-*-full_build-shared ffmpeg
 ```cmd
 setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\ffmpeg\bin"
 ```
-### Installing Figma
+### Installing Figma (Internet access required)
 ```powershell
 winget install -e --id Figma.Figma
 ```
 Or
 
 Download [FigmaSetup.exe](https://desktop.figma.com/win/FigmaSetup.exe)
+
+Open `FigmaSetup.exe`
 ### Installing Filius
 ```powershell
 winget install -e --id StefanFreischlad.Filius
@@ -2489,6 +2615,22 @@ winget install -e --id DavidMeeker.FEMM
 Or
 
 Download [femm*.exe](https://www.femm.info/doku/doku.php?id=download)
+
+Open `femm*.exe`
+
+Click `I accept the agreement`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Install`
+
+Turn off `View readme.txt`
+
+Click `Finish`
 ### Installing Focusrite Control 2
 ```powershell
 winget install -e --id FocusriteAudioEngineeringLtd.FocusriteControl2
@@ -2496,6 +2638,26 @@ winget install -e --id FocusriteAudioEngineeringLtd.FocusriteControl2
 Or
 
 Download [Focusrite-Control-2.exe](https://releases.focusrite.com/com.focusrite.focusrite-control/latest/Focusrite-Control-2.exe)
+
+Open `Focusrite-Control-2.exe`
+
+Click `OK`
+
+Click `Install`
+
+Click `Next`
+
+Click `Next`
+
+Click `I accept the agreement`
+
+Click `Next`
+
+Click `Install`
+
+Click `Finish`
+
+Click `Finish`
 ### Installing FontForge
 ```powershell
 winget install -e --id FontForge.FontForge
@@ -2503,6 +2665,24 @@ winget install -e --id FontForge.FontForge
 Or
 
 Download [FontForge-*-Windows-x64.exe](https://github.com/fontforge/fontforge/releases)
+
+Open `FontForge-*-Windows-x64.exe`
+
+Click `OK`
+
+Click `Next`
+
+Click `Next`
+
+Click `Next`
+
+Click `Next`
+
+Click `Install`
+
+Turn off `Launch FontForge`
+
+Click `Finish`
 ### Installing FreeCAD
 ```powershell
 winget install -e --id FreeCAD.FreeCAD
@@ -2540,6 +2720,26 @@ winget install -e --id GIMP.GIMP
 Or
 
 Download [gimp-*-setup.exe](https://www.gimp.org/downloads)
+
+Open `gimp-*-setup.exe`
+
+Click `Install for all users`
+
+Click `Customize`
+
+Click `Next`
+
+Click `Next`
+
+Turn off `Translations`
+
+Click `Next`
+
+Click `Next`
+
+Click `Install`
+
+Click `Finish`
 ### Installing Git
 ```powershell
 winget install -e --id Git.Git
@@ -2551,6 +2751,8 @@ winget install -e --id GitHub.GitHubDesktop
 Or
 
 Download [GitHubDesktopSetup-x64.exe](https://desktop.github.com/download)
+
+Open `GitHubDesktopSetup-x64.exe`
 ### Installing Google Chrome
 ```powershell
 winget install -e --id Google.Chrome
@@ -2558,6 +2760,8 @@ winget install -e --id Google.Chrome
 Or
 
 Download [googlechromestandaloneenterprise64.msi](https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi)
+
+Open `googlechromestandaloneenterprise64.msi`
 ### Installing Google Drive
 ```powershell
 winget install -e --id Google.GoogleDrive
@@ -2565,6 +2769,12 @@ winget install -e --id Google.GoogleDrive
 Or
 
 Download [GoogleDriveSetup.exe](https://dl.google.com/drive-file-stream/GoogleDriveSetup.exe)
+
+Open `GoogleDriveSetup.exe`
+
+Click `Install`
+
+Click `Close`
 ### Installing grepWin
 ```powershell
 winget install -e --id StefansTools.grepWin
@@ -2603,6 +2813,22 @@ winget install -e --id LogMeIn.Hamachi
 Or
 
 Download [hamachi.msi](https://secure.logmein.com/hamachi.msi)
+
+Open `hamachi.msi`
+
+Click `Next >`
+
+Turn on `I have read and agree to the terms of the License Agreement`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Install`
+
+Turn off `Launch Hamachi`
+
+Click `Finish`
 ### Installing HandBrake
 ```powershell
 winget install -e --id HandBrake.HandBrake
@@ -2639,6 +2865,14 @@ winget install -e --id HP.ConnectivityKit
 Or
 
 Download [HP_Prime_Connectivity_Kit_x64_*.exe](https://updates.moravia-consulting.com)
+
+Open `HP_Prime_Connectivity_Kit_x64_*.exe`
+
+Turn on `I agree to the license terms and conditions`
+
+Click `Install`
+
+Click `Close`
 ### Installing HP Prime Virtual Calculator
 ```powershell
 winget install -e --id HP.PrimeVirtualCalculator
@@ -2646,6 +2880,14 @@ winget install -e --id HP.PrimeVirtualCalculator
 Or
 
 Download [HP_Prime_Virtual_Calculator_x64_*.exe](https://updates.moravia-consulting.com)
+
+Open `HP_Prime_Virtual_Calculator_x64_*.exe`
+
+Turn on `I agree to the license terms and conditions`
+
+Click `Install`
+
+Click `Close`
 ### Installing HWiNFO
 ```powershell
 winget install -e --id REALiX.HWiNFO
@@ -2675,6 +2917,22 @@ winget install -e --id VOWSoft.iBackupBot
 Or
 
 Download [ibackupbot_setup.exe](https://www.icopybot.com/ibackupbot_setup.exe)
+
+Open `ibackupbot_setup.exe`
+
+Click `OK`
+
+Click `Next >`
+
+Click `I Agree`
+
+Click `Next >`
+
+Click `Install`
+
+Turn off `Run iBackupBot for Windows *`
+
+Click `Finish`
 ### Installing Icaros
 ```powershell
 winget install -e --id Xanashi.Icaros
@@ -2697,6 +2955,10 @@ winget install -e --id Nvidia.ICAT
 Or
 
 Download [ICAT-*.exe](https://www.nvidia.com/en-us/geforce/technologies/icat)
+
+Open `ICAT-*.exe`
+
+Click `I Agree`
 ### Installing iCloud
 ```powershell
 winget install -e --id Apple.iCloud
@@ -2751,6 +3013,13 @@ winget install -e --id JetBrains.dotPeek
 Or
 
 Download [dotPeek64.*.exe](https://www.jetbrains.com/decompiler/download/download-thanks.html?platform=windows64)
+```powershell
+copy dotPeek64.*.exe D:/portable/dotPeek64.exe
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/JetBrains dotPeek.lnk')
+$lnk.TargetPath='D:/portable/dotPeek64.exe'
+$lnk.Save()
+```
 ### Installing Jpegoptim
 ```powershell
 winget install -e --id TimoKokkonen.Jpegoptim
@@ -2772,6 +3041,20 @@ winget install -e --id KiCad.KiCad
 Or
 
 Download [kicad-*-x86_64.exe](https://github.com/KiCad/kicad-source-mirror/releases)
+
+Open `kicad-*-x86_64.exe`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Install`
+
+Turn off `Launch KiCad *`
+
+Click `Finish`
 ### Installing Lazarus
 ```powershell
 winget install -e --id Lazarus.Lazarus
@@ -2779,6 +3062,24 @@ winget install -e --id Lazarus.Lazarus
 Or
 
 Download [lazarus-*-win64.exe](https://sourceforge.net/projects/lazarus/files)
+
+Open `lazarus-*-win64.exe`
+
+Click `OK`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Install`
+
+Click `Finish`
 ### Installing libjxl
 ```powershell
 winget install -e --id libjxl.libjxl
@@ -2800,6 +3101,36 @@ winget install -e --id TheDocumentFoundation.LibreOffice
 Or
 
 Download [LibreOffice_*_Win_x86-64.msi](https://www.libreoffice.org/download)
+
+Open `LibreOffice_*_Win_x86-64.msi`
+
+Click `Next >`
+
+Click `Custom`
+
+Click `Next >`
+
+Click all `+`
+
+Select `This feature will be installed on local hard drive.` for `Russian` for `Dictionaries` for `Optional Components`
+
+Select `This feature will be installed on local hard drive.` for `Ukrainian` for `Dictionaries` for `Optional Components`
+
+Select `This feature will not be available.` for `Spanish` for `Dictionaries` for `Optional Components`
+
+Select `This feature will not be available.` for `Online Update` for `Optional Components`
+
+Select `This feature will not be available.` for `Quickstarter` for `Optional Components`
+
+Select `This feature will not be available.` for `English (South Africa)` for `User interface languages`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Install`
+
+Click `Finish`
 ### Installing LM Studio
 ```powershell
 winget install -e --id ElementLabs.LMStudio
@@ -2807,13 +3138,17 @@ winget install -e --id ElementLabs.LMStudio
 Or
 
 Download [LM-Studio-*-x64.exe](https://lmstudio.ai/download/latest/win32/x64)
-### Installing Logi Options+
+### Installing Logi Options+ (Internet access required)
 ```powershell
 winget install -e --id Logitech.OptionsPlus
 ```
 Or
 
 Download [logioptionsplus_installer.exe](https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.exe)
+
+Open `logioptionsplus_installer.exe`
+
+Click `INSTALL OPTIONS+`
 ### Installing LTspice
 ```powershell
 winget install -e --id AnalogDevices.LTspice
@@ -2821,6 +3156,24 @@ winget install -e --id AnalogDevices.LTspice
 Or
 
 Download [LTspice64.msi](https://ltspice.analog.com/software/LTspice64.msi)
+
+Open `LTspice64.msi`
+
+Click `Next >`
+
+Click `I accept the terms in the License Agreement`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `All users of this computer (administrator rights required)`
+
+Click `Next >`
+
+Click `Install`
+
+Click `Finish`
 ### Installing Malicious Software Removal Tool
 ```powershell
 winget install -e --id Microsoft.MaliciousSoftwareRemovalTool
@@ -2835,6 +3188,18 @@ winget install -e --id Mathpix.MathpixSnippingTool
 Or
 
 Download [mathpix_snipping_tool_setup.v*.exe](https://mathpix.com/windows-guide)
+
+Open `mathpix_snipping_tool_setup.v*.exe`
+
+Click `Next >`
+
+Turn off `Run at Windows startup`
+
+Click `Next >`
+
+Turn off `Launch Mathpix Snipping Tool`
+
+Click `Finish`
 ### Installing MEGAsync
 ```powershell
 winget install -e --id Mega.MEGASync
@@ -2842,13 +3207,33 @@ winget install -e --id Mega.MEGASync
 Or
 
 Download [MEGAsyncSetup64.exe](https://mega.nz/MEGAsyncSetup64.exe)
-### Installing Microsoft Teams
+
+Open `MEGAsyncSetup64.exe`
+
+Click `OK`
+
+Click `Next >`
+
+Click `I Agree`
+
+Click `Install for anyone using this computer`
+
+Click `Next >`
+
+Click `Install`
+
+Turn off `Run MEGAsync *`
+
+Click `Finish`
+### Installing Microsoft Teams (Internet access required)
 ```powershell
 winget install -e --id Microsoft.Teams
 ```
 Or
 
 Download [MSTeamsSetup.exe](https://statics.teams.cdn.office.net/production-windows-x86/lkg/MSTeamsSetup.exe)
+
+Open `MSTeamsSetup.exe`
 ### Installing Microsoft Visual Studio Code
 ```powershell
 winget install -e --id Microsoft.VisualStudioCode
@@ -2893,6 +3278,20 @@ winget install -e --id OpenDataLab.MinerU
 Or
 
 Download [MinerU-*-setup.exe](https://mineru.net)
+
+Open `MinerU-*-setup.exe`
+
+Click `I Agree`
+
+Click `Anyone who uses this computer (all users)`
+
+Click `Next >`
+
+Click `Install`
+
+Turn off `Run MinerU`
+
+Click `Finish`
 ### Installing Mozilla Firefox (en-US)
 ```powershell
 winget install -e --id Mozilla.Firefox
@@ -2900,6 +3299,28 @@ winget install -e --id Mozilla.Firefox
 Or
 
 Download [Firefox Setup *.exe](https://download.mozilla.org/?product=firefox-latest-ssl&os=win64)
+
+Open `Firefox Setup *.exe`
+
+Click `Next >`
+
+Click `Custom`
+
+Click `Next >`
+
+Click `Next >`
+
+Turn off `Install Maintenance Service`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Install`
+
+Turn off `Launch Firefox now`
+
+Click `Finish`
 ### Installing Mp3tag
 ```powershell
 winget install -e --id FlorianHeidenreich.Mp3tag
@@ -2907,6 +3328,32 @@ winget install -e --id FlorianHeidenreich.Mp3tag
 Or
 
 Download [mp3tag-v*-x64-setup.exe](https://www.mp3tag.de/dodownload64.html)
+
+Open `mp3tag-v*-x64-setup.exe`
+
+Click `Next >`
+
+Click `I Agree`
+
+Click `Portable Installation`
+
+Click `Next >`
+
+Destination Folder `D:\portable\Mp3tag`
+
+Click `Next >`
+
+Click `Next >`
+
+Turn off `Run Mp3tag v*`
+
+Click `Finish`
+```powershell
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Mp3tag.lnk')
+$lnk.TargetPath='D:/portable/Mp3tag/Mp3tag.exe'
+$lnk.Save()
+```
 ### Installing mpv.net
 ```powershell
 winget install -e --id mpv.net
@@ -2929,6 +3376,34 @@ winget install -e --id Guru3D.Afterburner
 Or
 
 Download [[Guru3D]-MSIAfterburnerSetup*.zip](https://www.guru3d.com/download/msi-afterburner-beta-download)
+
+Open `[Guru3D]-MSIAfterburnerSetup*.zip`
+
+Open `MSIAfterburnerSetup*.exe`
+
+Click `Run`
+
+Click `OK`
+
+Click `Next >`
+
+Click `I accept the terms of the License Agreement`
+
+Click `Next >`
+
+Turn off `RiveTuner Statistics Server`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Install`
+
+Turn off `Run MSI Afterburner`
+
+Turn off `Show Readme`
+
+Click `Finish`
 ### Installing Nextcloud
 ```powershell
 winget install -e --id Nextcloud.NextcloudDesktop
@@ -2936,6 +3411,18 @@ winget install -e --id Nextcloud.NextcloudDesktop
 Or
 
 Download [Nextcloud-*-x64.msi](https://github.com/nextcloud-releases/desktop/releases)
+
+Open `Nextcloud-*-x64.msi`
+
+Click `Next`
+
+Click `Next`
+
+Click `Install`
+
+Turn off `Launch Nextcloud`
+
+Click `Finish`
 ### Installing Node.js
 ```powershell
 winget install -e --id OpenJS.NodeJS
@@ -2980,6 +3467,20 @@ $lnk = $ws.CreateShortcut('D:/portable/Notepad++.lnk')
 $lnk.TargetPath='D:/portable/Notepad++/notepad++.exe'
 $lnk.Save()
 ```
+### Installing Npcap
+Download [npcap-*.exe](https://npcap.com)
+
+Open `npcap-*.exe`
+
+Click `I Agree`
+
+Turn on `Support raw 802.11 traffic (and monitor mode) for wireless adapters`
+
+Click `Install`
+
+Click `Next >`
+
+Click `Finish`
 ### Installing NVIDIA Broadcast (Internet access required)
 Download [NVIDIA_Broadcast_v*.exe](https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app)
 
@@ -2987,7 +3488,7 @@ Open `NVIDIA_Broadcast_v*.exe`
 
 Click `AGREE AND CONTINUE`
 
-Select `Custom (Advanced)`
+Click `Custom (Advanced)`
 
 Turn on `Perform a clean installation`
 
@@ -3014,6 +3515,18 @@ winget install -e --id Obsidian.Obsidian
 Or
 
 Download [Obsidian-*.exe](https://github.com/obsidianmd/obsidian-releases/releases)
+
+Open `Obsidian-*.exe`
+
+Click `Anyone who uses this computer (all users)`
+
+Click `Next >`
+
+Click `Install`
+
+Turn off `Run Obsidian`
+
+Click `Finish`
 ### Installing Ollama
 ```powershell
 winget install -e --id Ollama.Ollama
@@ -3031,6 +3544,10 @@ setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\Ollama"
 Or
 
 Download [OllamaSetup.exe](https://github.com/ollama/ollama/releases)
+
+Open `OllamaSetup.exe`
+
+Click `Install`
 ### Installing OP Auto Clicker
 ```powershell
 winget install -e --id OPAutoClicker.OPAutoClicker
@@ -3038,6 +3555,13 @@ winget install -e --id OPAutoClicker.OPAutoClicker
 Or
 
 Download [AutoClicker.exe](https://sourceforge.net/projects/orphamielautoclicker/files)
+```powershell
+copy AutoClicker.exe D:/portable
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/OP Auto Clicker.lnk')
+$lnk.TargetPath='D:/portable/AutoClicker.exe'
+$lnk.Save()
+```
 ### Installing Oracle VirtualBox
 ```powershell
 winget install -e --id Oracle.VirtualBox
@@ -3045,6 +3569,26 @@ winget install -e --id Oracle.VirtualBox
 Or
 
 Download [VirtualBox-*-Win.exe](https://www.virtualbox.org/wiki/Downloads)
+
+Open `VirtualBox-*-Win.exe`
+
+Click `Next`
+
+Click `I accept the terms of the license agreement`
+
+Click `Next`
+
+Click `Next`
+
+Click `Yes`
+
+Click `Next`
+
+Click `Install`
+
+Turn off `Start Oracle VirtualBox *?`
+
+Click `Finish`
 ### Installing ParkControl
 ```powershell
 winget install -e --id BitSum.ParkControl
@@ -3052,6 +3596,18 @@ winget install -e --id BitSum.ParkControl
 Or
 
 Download [parkcontrolsetup64.exe](https://dl.bitsum.com/files/parkcontrolsetup64.exe)
+
+Open `parkcontrolsetup64.exe`
+
+Click `OK`
+
+Click `I Agree`
+
+Turn off `Launch ParkControl`
+
+Click `Next >`
+
+Click `Install`
 ### Installing Parsec
 ```powershell
 winget install -e --id Parsec.Parsec
@@ -3111,6 +3667,22 @@ winget install -e --id qBittorrent.qBittorrent.lt2
 Or
 
 Download [qbittorrent_*_lt20_x64_setup.exe](https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32)
+
+Open `qbittorrent_*_lt20_x64_setup.exe`
+
+Click `OK`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Install`
+
+Turn off `Launch qBittorrent.`
+
+Click `Finish`
 ### Installing qView
 ```powershell
 winget install -e --id jurplel.qView
@@ -3133,6 +3705,38 @@ winget install -e --id RaspberryPiFoundation.RaspberryPiImager
 Or
 
 Download [imager-v*.exe](https://github.com/raspberrypi/rpi-imager/releases)
+
+Open `imager-v*.exe`
+
+Click `OK`
+
+Click `Next`
+
+Click `I accept the agreement`
+
+Click `Next`
+
+Click `Next`
+
+Click `Next`
+
+Click `Install`
+
+Turn off `Launch Raspberry Pi Imager`
+
+Click `Finish`
+### Installing Python 3.13
+Download [python-3.13.*-amd64.exe](https://www.python.org/downloads/windows)
+
+Open `python-3.13.*-amd64.exe`
+
+Turn on `Use admin privileges when installing py.exe`
+
+Turn on `Add python.exe to PATH`
+
+Click `Install Now`
+
+Click `Close`
 ### Installing Rivatuner Statistics Server
 ```powershell
 winget install -e --id Guru3D.RTSS
@@ -3140,6 +3744,28 @@ winget install -e --id Guru3D.RTSS
 Or
 
 Download [[Guru3D]-RTSSSetup*.zip](https://www.guru3d.com/download/rtss-rivatuner-statistics-server-download)
+
+Open `[Guru3D]-RTSSSetup*.zip`
+
+Open `RTSSSetup*.exe`
+
+Click `Run`
+
+Click `OK`
+
+Click `Next >`
+
+Click `I accept the terms of the License Agreement`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Next >`
+
+Turn off `Show Readme`
+
+Click `Finish`
 ### Installing SimpleTex
 ```powershell
 winget install -e --id SimpleTex.SimpleTex
@@ -3147,6 +3773,14 @@ winget install -e --id SimpleTex.SimpleTex
 Or
 
 Download [SimpleTex Setup *.exe](https://gitee.com/simpletex/simple-tex-download/releases)
+
+Open `SimpleTex Setup *.exe`
+
+Click `Install`
+
+Turn off `Run SimpleTex`
+
+Click `Finish`
 ### Installing Spacedrive
 ```powershell
 winget install -e --id spacedrive.Spacedrive
@@ -3154,6 +3788,18 @@ winget install -e --id spacedrive.Spacedrive
 Or
 
 Download [Spacedrive-windows-x86_64.msi](https://github.com/spacedriveapp/spacedrive/releases)
+
+Open `Spacedrive-windows-x86_64.msi`
+
+Click `Next`
+
+Click `Next`
+
+Click `Install`
+
+Turn off `Launch Spacedrive`
+
+Click `Finish`
 ### Installing Speedtest by Ookla
 ```powershell
 winget install -e --id Ookla.Speedtest.Desktop
@@ -3161,6 +3807,18 @@ winget install -e --id Ookla.Speedtest.Desktop
 Or
 
 Download [speedtestbyookla_x64.msi](https://install.speedtest.net/app/windows/latest/speedtestbyookla_x64.msi)
+
+Open `speedtestbyookla_x64.msi`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Install`
+
+Turn off `Launch Speedtest by Ookla`
+
+Click `Finish`
 ### Installing Spek
 ```powershell
 winget install -e --id AlexanderKojevnikov.Spek
@@ -3182,6 +3840,18 @@ winget install -e --id Valve.Steam
 Or
 
 Download [SteamSetup.exe](https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe)
+
+Open `SteamSetup.exe`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Install`
+
+Turn off `Run Steam`
+
+Click `Finish`
 ### Installing Studio
 ```powershell
 winget install -e --id BrickLink.Studio
@@ -3189,6 +3859,20 @@ winget install -e --id BrickLink.Studio
 Or
 
 Download [Studio+2.0.exe](https://studio.download.bricklink.info/Studio2.0/Studio+2.0.exe)
+
+Open `Studio+2.0.exe`
+
+Click `I accept the agreement`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Install`
+
+Click `Finish`
 ### Installing System Informer
 ```powershell
 winget install -e --id WinsiderSS.SystemInformer
@@ -3280,6 +3964,14 @@ winget install -e --id ThioJoe.SvgThumbnailExtension
 Or
 
 Download [SVG-Thumbnail-Extension-Installer_*_x64.msi](https://github.com/ThioJoe/win-svg-thumbs-rust/releases)
+
+Open `SVG-Thumbnail-Extension-Installer_*_x64.msi`
+
+Click `Next`
+
+Click `Install`
+
+Click `Finish`
 ### Installing ThrottleStop
 ```powershell
 winget install -e --id TechPowerUp.ThrottleStop
@@ -3302,6 +3994,24 @@ winget install -e --id TorProject.TorBrowser
 Or
 
 Download [tor-browser-windows-x86_64-portable-*.exe](https://www.torproject.org/download)
+
+Open `tor-browser-windows-x86_64-portable-*.exe`
+
+Click `OK`
+
+Destination Folder `D:\portable\Tor Browser`
+
+Click `Install`
+
+Turn off `Run Tor Browser`
+
+Click `Finish`
+```powershell
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Tor Browser.lnk')
+$lnk.TargetPath='D:/portable/Tor Browser/firefox.exe'
+$lnk.Save()
+```
 ### Installing Ultimate Vocal Remover
 ```powershell
 winget install -e --id Anjok07.UltimateVocalRemover
@@ -3309,6 +4019,22 @@ winget install -e --id Anjok07.UltimateVocalRemover
 Or
 
 Download [UVR_v*_setup.exe](https://github.com/Anjok07/ultimatevocalremovergui/releases)
+
+Open `UVR_v*_setup.exe`
+
+Click `I accept the agreement`
+
+Click `Next`
+
+Click `Next`
+
+Click `Next`
+
+Click `Install`
+
+Turn off `Launch Ultimate Vocal Remover`
+
+Click `Finish`
 ### Installing Unity 2020.3.12f1
 ```powershell
 winget install -e --id Unity.Unity.2020 -v "2020.3.12f1"
@@ -3316,6 +4042,20 @@ winget install -e --id Unity.Unity.2020 -v "2020.3.12f1"
 Or
 
 Download [UnitySetup64-2020.3.12f1.exe](https://download.unity3d.com/download_unity/b3b2c6512326/Windows64EditorInstaller/UnitySetup64-2020.3.12f1.exe)
+
+Open `UnitySetup64-2020.3.12f1.exe`
+
+Click `Next >`
+
+Turn on `I accept the terms of the License Agreement`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Finish`
 ### Installing Unity Hub
 ```powershell
 winget install -e --id Unity.UnityHub
@@ -3323,6 +4063,16 @@ winget install -e --id Unity.UnityHub
 Or
 
 Download [UnityHubSetup-x64.exe](https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup-x64.exe)
+
+Open `UnityHubSetup-x64.exe`
+
+Click `I Agree`
+
+Click `Install`
+
+Turn off `Run Unity Hub`
+
+Click `Finish`
 ### Installing Universal Android Debloater Next Generation
 ```powershell
 winget install -e --id Universal-Debloater-Alliance.uad-ng
@@ -3330,6 +4080,13 @@ winget install -e --id Universal-Debloater-Alliance.uad-ng
 Or
 
 Download [uad-ng-windows.exe](https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/releases)
+```powershell
+copy uad-ng-windows.exe D:/portable/uad-ng-windows.exe
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Universal Android Debloater Next Generation.lnk')
+$lnk.TargetPath='D:/portable/uad-ng-windows.exe'
+$lnk.Save()
+```
 ### Installing Ventoy
 ```powershell
 winget install -e --id Ventoy.Ventoy
@@ -3352,13 +4109,35 @@ winget install -e --id IDRIX.VeraCrypt
 Or
 
 Download [VeraCrypt.Setup.*.exe](https://github.com/veracrypt/VeraCrypt/releases)
-### Installing Viber
+
+Open `VeraCrypt.Setup.*.exe`
+
+Click `OK`
+
+Turn on `I accept the license terms`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Install`
+
+Click `OK`
+
+Click `Finish`
+
+Click `No`
+### Installing Viber (Internet access required)
 ```powershell
 winget install -e --id Rakuten.Viber
 ```
 Or
 
 Download [ViberSetup.exe](https://download.cdn.viber.com/desktop/windows/ViberSetup.exe)
+
+Open `ViberSetup.exe`
+
+Click `Install`
 ### Installing Victoria
 ```powershell
 winget install -e --id Victoria.Victoria
@@ -3374,13 +4153,25 @@ $lnk = $ws.CreateShortcut('D:/portable/Victoria.lnk')
 $lnk.TargetPath='D:/portable/Victoria/Victoria.exe'
 $lnk.Save()
 ```
-### Installing Visual Studio Community 2026
+### Installing Visual Studio (Internet access required)
 ```powershell
 winget install -e --id Microsoft.VisualStudio.Community
 ```
 Or
 
 Download [VisualStudioSetup.exe](https://visualstudio.microsoft.com/downloads)
+
+Open `VisualStudioSetup.exe`
+
+Click `Continue`
+
+Click `Installation locations`
+
+Turn off `Keep download cache after the installation`
+
+Click `Install`
+
+Click `Continue`
 ### Installing VLC media player
 ```powershell
 winget install -e --id VideoLAN.VLC
@@ -3414,6 +4205,28 @@ winget install -e --id RamenSoftware.Windhawk
 Or
 
 Download [windhawk_setup_offline.exe](https://github.com/ramensoftware/windhawk/releases)
+
+Open `windhawk_setup_offline.exe`
+
+Click `OK`
+
+Click `Portable installation`
+
+Click `Next >`
+
+Destination Folder `D:\portable\Windhawk`
+
+Click `Install`
+
+Turn off `Open Windhawk`
+
+Click `Finish`
+```powershell
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Windhawk.lnk')
+$lnk.TargetPath='D:/portable/Windhawk/windhawk.exe'
+$lnk.Save()
+```
 ### Installing WinDirStat
 ```powershell
 winget install -e --id WinDirStat.WinDirStat
@@ -3466,6 +4279,24 @@ winget install -e --id WiresharkFoundation.Wireshark
 Or
 
 Download [WiresharkPortable64_latest.paf.exe](https://www.wireshark.org/download/win64/WiresharkPortable64_latest.paf.exe)
+
+Open `WiresharkPortable64_latest.paf.exe`
+
+Click `OK`
+
+Click `Next >`
+
+Destination Folder `D:\portable\Wireshark`
+
+Click `Install`
+
+Click `Finish`
+```powershell
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Wireshark.lnk')
+$lnk.TargetPath='D:/portable/Wireshark/WiresharkPortable64.exe'
+$lnk.Save()
+```
 ### Installing XAMPP 8.2
 ```powershell
 winget install -e --id ApacheFriends.Xampp.8.2
@@ -3494,13 +4325,19 @@ $lnk = $ws.CreateShortcut('D:/portable/XnView MP.lnk')
 $lnk.TargetPath='D:/portable/XnViewMP/xnviewmp.exe'
 $lnk.Save()
 ```
-### Installing Yandex Browser
+### Installing Yandex Browser (Internet access required)
 ```powershell
 winget install -e --id Yandex.Browser
 ```
 Or
 
 Download [Yandex.exe](https://browser.yandex.com/download?os=win&bitness=64&statpromo=false)
+
+Open `Yandex.exe`
+
+Turn off `Set as default browser`
+
+Click `Install`
 ### Installing yt-dlp
 ```powershell
 winget install -e --id yt-dlp.yt-dlp
@@ -3543,6 +4380,8 @@ winget install -e --id Zoom.Zoom
 Or
 
 Download [ZoomInstallerFull.exe](https://zoom.us/download)
+
+Open `ZoomInstallerFull.exe`
 ### Installing Zstandard
 ```powershell
 winget install -e --id Meta.Zstandard
