@@ -3292,6 +3292,35 @@ Click `Install`
 Turn off `Run MinerU`
 
 Click `Finish`
+### Installing Miniconda3
+```powershell
+winget install -e --id Anaconda.Miniconda3
+```
+Or
+
+Download [Miniconda3-latest-Windows-x86_64.exe](https://anaconda.com/api/installers/Miniconda3-latest-Windows-x86_64.exe)
+
+Open `Miniconda3-latest-Windows-x86_64.exe`
+
+Click `Next >`
+
+Click `I Agree`
+
+Click `Next >`
+
+Click `Next >`
+
+Turn on `Clear the package cache upon completion`
+
+Click `Install`
+
+Click `Next >`
+
+Turn off `Gettings started with Conda`
+
+Turn off `Welcome to Anaconda`
+
+Click `Finish`
 ### Installing Mozilla Firefox (en-US)
 ```powershell
 winget install -e --id Mozilla.Firefox
