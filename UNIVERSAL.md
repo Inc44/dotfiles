@@ -696,6 +696,7 @@ conda create -n gpen python=3.13 -y
 conda activate gpen
 pip install -r requirements.txt
 cd weights
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-BFR-2048.pth
 wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-BFR-256-D.pth
 wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-BFR-256.pth
 wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-BFR-512-D.pth
@@ -708,7 +709,6 @@ wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/Retina
 wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/model_ir_se50.pth
 wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x1.pth
 wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x2.pth
-wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x4.pth
 wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x4.pth
 cd ..
 sed -i "/        ],/a\\        extra_cuda_cflags=['-std=c++17']," face_model/op/fused_act.py face_model/op/upfirdn2d.py

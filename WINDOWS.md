@@ -1554,10 +1554,34 @@ Download [ghidra_*_PUBLIC_*.zip](https://github.com/NationalSecurityAgency/ghidr
 Rename-Item D:/portable/ghidra_*_PUBLIC ghidra
 ```
 ### Installing GPEN (Internet access required)
-Download [GPEN-Windows.rar](https://github.com/yangxy/GPEN)
 ```powershell
-git clone https://github.com/yangxy/GPEN.git D:/portable/GPEN
-7z x GPEN-Windows.rar -oD:/portable/GPEN
+git clone https://github.com/yangxy/GPEN.git
+cd GPEN
+conda create -n gpen python=3.13 -y
+conda activate gpen
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu132
+pip install -r requirements.txt
+$ProgressPreference = 'SilentlyContinue'
+cd weights
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-BFR-2048.pth -o GPEN-BFR-2048.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-BFR-256-D.pth -o GPEN-BFR-256-D.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-BFR-256.pth -o GPEN-BFR-256.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-BFR-512-D.pth -o GPEN-BFR-512-D.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-BFR-512.pth -o GPEN-BFR-512.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-Colorization-1024.pth -o GPEN-Colorization-1024.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-Inpainting-1024.pth -o GPEN-Inpainting-1024.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/GPEN-Seg2face-512.pth -o GPEN-Seg2face-512.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/ParseNet-latest.pth -o ParseNet-latest.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/RetinaFace-R50.pth -o RetinaFace-R50.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/model_ir_se50.pth -o model_ir_se50.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x1.pth -o realesrnet_x1.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x2.pth -o realesrnet_x2.pth
+wget https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/realesrnet_x4.pth -o realesrnet_x4.pth
+cd ..
+python demo.py --task FaceEnhancement --model GPEN-BFR-512 --in_size 512 --channel_multiplier 2 --narrow 1 --use_sr --sr_scale 4 --use_cuda --save_face --indir examples/imgs --outdir examples/outs-bfr
+python demo.py --task FaceColorization --model GPEN-Colorization-1024 --in_size 1024 --use_cuda --indir examples/grays --outdir examples/outs-colorization
+python demo.py --task FaceInpainting --model GPEN-Inpainting-1024 --in_size 1024 --use_cuda --indir examples/ffhq-10 --outdir examples/outs-inpainting
+python demo.py --task Segmentation2Face --model GPEN-Seg2face-512 --in_size 512 --use_cuda --indir examples/segs --outdir examples/outs-seg2face
 ```
 ### Installing H2testw
 Download [h2testw_*.zip](https://h2testw.org)
