@@ -293,7 +293,7 @@ Click `Yes`
 Click Microsoft Store icon
 #### Startup
 #### Optimization
-#### Scanner
+#### Virus Scanner
 #### System Information
 Restart
 ### Configuring Folders
@@ -969,133 +969,6 @@ Open `windowsdesktop-runtime-10*-win-x64.exe`
 Click `Install`
 
 Click `Close`
-### Installing LM Studio
-```powershell
-mkdir D:/portable/lmstudio
-```
-Download [LM-Studio-*-x64.exe](https://lmstudio.ai/download/latest/win32/x64)
-
-Open `LM-Studio-*-x64.exe`
-
-Click `I Agree`
-
-Click `Anyone who uses this computer (all users)`
-
-Click `Next`
-
-Click `Install`
-
-Click `Finish`
-
-Click `Get Started`
-
-Click `Continue`
-
-Turn on `Turn on Developer Mode`
-
-Turn off `Start local LLM service on login`
-
-Click `Continue to LM Studio`
-
-Click My Models icon
-
-Click ⋯ icon
-
-Click `Change...`
-
-Folder: `D:\lmstudio`
-
-Click `Select Folder`
-
-Click App Settings icon
-
-Click `Chat`
-
-Turn off `Move deleted chats and folders to Trash`
-### Configuring LM Studio (Internet access required)
-Click Start Menu icon
-
-Type `LM Studio`
-
-Press Enter
-
-Click App Settings icon
-
-Click `Runtime`
-
-Click `Check for updates`
-
-Click all `Update`
-
-Click 🗙 icon
-
-Click Chat icon
-
-Click `Select a model to load`
-
-Type `Qwen3.6-35B-A3B-MTP-GGUF`
-
-Click `🔎 Search more results for "Qwen3.6-35B-A3B-MTP-GGUF"`
-
-Select `GGUF Qwen3.6 35B A3B UD Q6_K_XL` for `Download Options`
-
-Click `📥 Download 34.40 GB`
-
-Click 🗙 icon
-
-Click `Select a model to load`
-
-Turn on `Manually choose model load parameters (or hold Alt)`
-
-Click `Qwen3.6 35B A3B UD`
-
-Context Length `262144`
-
-GPU Offload `41`
-
-Turn on `Remember settings for openai's gpt-oss 120b`
-
-Turn on `Show advanced settings`
-
-CPU Thread Pool Size `10`
-
-Number of layers for which to force MoE weights onto CPU `35`
-
-Click `Load Model`
-### Installing Parsec
-Download [parsec-windows.exe](https://builds.parsec.app/package/parsec-windows.exe)
-
-Open `parsec-windows.exe`
-
-Click `Next`
-
-Click `Per Computer`
-
-Click `Next`
-### Configuring Parsec (Internet access required)
-Click Start Menu icon
-
-Type `Parsec`
-
-Press Enter
-
-Email `your_email`
-
-Password `your_password`
-
-Click `Log In`
-
-Click `Settings`
-
-Select `Keyboard` for `Immersive mode`
-
-Click `Host`
-
-Select `50 Mbps` for `Bandwidth limit`
-
-Turn on `Constant FPS`
-
-Turn off `Echo Cancelling`
 ### Installing PowerToys
 ```powershell
 winget install -e --id Microsoft.PowerToys
@@ -1508,6 +1381,7 @@ $lnk.Save()
 ```
 ### Installing Flowframes (Internet access required)
 ```powershell
+mkdir D:/cache/flowframes
 mkdir D:/portable/Flowframes
 ```
 Download [FlowframesInstaller*.exe](https://nmkd.itch.io/flowframes)
@@ -1516,9 +1390,9 @@ Open `FlowframesInstaller*.exe`
 
 Click `Custom Folder`
 
-Click `Browse`
+Click `Browse...`
 
-Select `D:/portable/Flowframes`
+Folder: `D:\portable\Flowframes`
 
 Click `Select Folder`
 
@@ -2164,6 +2038,36 @@ $lnk.TargetPath='D:/portable/Bitwarden/Bitwarden.exe'
 $lnk.Save()
 copy D:/portable/Bitwarden.lnk 'C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Startup'
 ```
+### Configuring Bitwarden
+Open `Bitwarden`
+
+Email address `your_email`
+
+Turn on `Remember email`
+
+Click `Continue`
+
+Master password `your_password`
+
+Click `Log in`
+
+Click `File`
+
+Click `Settings`
+
+Select `On system lock` for `Timeout`
+
+Turn on `Unlock with Windows Hello`
+
+Click `Preferences`
+
+Select `10 seconds` for `Clear clipboard`
+
+Click `App settings (all accounts)`
+
+Turn on `Minimize to tray icon`
+
+Turn on `Allow browser integration`
 ### Installing BlueStacks (Internet access required)
 ```powershell
 winget install -e --id BlueStack.BlueStacks
@@ -2266,6 +2170,17 @@ winget install -e --id Kitware.CMake
 Or
 
 Download [cmake-*-windows-x86_64.zip](https://github.com/Kitware/CMake/releases)
+```powershell
+7z x cmake-*-windows-x86_64.zip -oD:/portable
+Rename-Item D:/portable/cmake-*-windows-x86_64 cmake
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/CMake (cmake-gui).lnk')
+$lnk.TargetPath='D:/portable/cmake/bin/cmake-gui.exe'
+$lnk.Save()
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\cmake\bin"
+```
 ### Installing Code::Blocks with MinGW
 ```powershell
 winget install -e --id CodeBlocks.CodeBlocks.MinGW
@@ -2273,6 +2188,17 @@ winget install -e --id CodeBlocks.CodeBlocks.MinGW
 Or
 
 Download [codeblocks-*mingw-nosetup.zip](https://sourceforge.net/projects/codeblocks/files/Binaries)
+```powershell
+mkdir D:/portable/CodeBlocks
+7z x codeblocks-*mingw-nosetup.zip -oD:/portable/CodeBlocks
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/CodeBlocks.lnk')
+$lnk.TargetPath='D:/portable/CodeBlocks/codeblocks.exe'
+$lnk.Save()
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\CodeBlocks\MinGW\bin"
+```
 ### Installing Comet
 ```powershell
 winget install -e --id Perplexity.Comet
@@ -2816,6 +2742,10 @@ Or
 Download [GitHubDesktopSetup-x64.exe](https://desktop.github.com/download)
 
 Open `GitHubDesktopSetup-x64.exe`
+
+Click `Skip this step`
+
+Click `Finish`
 ### Installing Google Chrome
 ```powershell
 winget install -e --id Google.Chrome
@@ -2834,6 +2764,8 @@ Or
 Download [GoogleDriveSetup.exe](https://dl.google.com/drive-file-stream/GoogleDriveSetup.exe)
 
 Open `GoogleDriveSetup.exe`
+
+Turn off `Add desktop shortcuts to Google Docs, Sheets, and Slides`
 
 Click `Install`
 
@@ -2973,6 +2905,32 @@ winget install -e --id MHNexus.HxD
 Or
 
 Download [HxDSetup.zip](https://mh-nexus.de/downloads/HxDSetup.zip)
+
+Open `HxDSetup.zip`
+
+Open `HxDSetup.exe`
+
+Click `OK`
+
+Click `Next >`
+
+Click `I accept the agreement`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Install`
+
+Turn off `View readme.txt`
+
+Turn off `Launch HxD Hex Editor`
+
+Click `Finish`
 ### Installing iBackupBot for Windows
 ```powershell
 winget install -e --id VOWSoft.iBackupBot
@@ -3004,6 +2962,7 @@ Or
 
 Download [Icaros_v*.zip](https://github.com/Xanashi/Icaros/releases)
 ```powershell
+mkdir D:/cache/icaros
 mkdir D:/portable/Icaros
 7z x Icaros_v*.zip -oD:/portable/Icaros
 $ws = New-Object -ComObject WScript.Shell
@@ -3011,6 +2970,52 @@ $lnk = $ws.CreateShortcut('D:/portable/Icaros.lnk')
 $lnk.TargetPath='D:/portable/Icaros/IcarosConfig.exe'
 $lnk.Save()
 ```
+### Configuring Icaros
+Open `Icaros`
+
+Click `Continue`
+
+Click `Got It!`
+
+PRESET: `MOST KNOWN`
+
+Click `3g2, 3gp, 3gp2, 3gpp, ai, aiff, amv, ape, asf, avi, avif, bik, bmp, cb7, cbr, cbz, dds, divx, dpg, dv, dvr-ms, eps, epub, evo, exr, f4v, flac, flv, gif, hdmov, heic, heif, indd, jpg, k3g, m1v, m2t, m2ts, m2v, m4b, m4p, m4v, mk3d, mka, mkv, mov, mp2v, mp3, mp4, mp4v, mpc, mpe, mpeg, mpg, mpv2, mpv4, mqv, mts, mxf, nsv, odp, ods, odt, ofr, ofs, ogg, ogm, ogv, opus, png, psd, psxprj, px, qt, ram, rm, rmvb, skm, spx, swf, tak, tif, tiff, tp, tpr, trp, ts, tta, vob, wav, webm, webp, wm, wmv, wv, xvid`
+
+Type: `;aac;jxl;m4a`
+
+Turn on `Enable black/white frame detection`
+
+Turn on `Display movie reel on video thumbnails`
+
+Turn on `Use embedded Cover Art for thumbnails`
+
+Turn on `Use any embedded image as Cover Art`
+
+Click PROPERTIES icon
+
+Click THUMBNAILING icon
+
+Click PROPERTIES icon
+
+Click `Deselect All`
+
+Click all `Select All`
+
+Click CACHE icon
+
+Cache Location `D:\cache\icaros`
+
+Press Enter
+
+Click `Yes`
+
+Click `THUMBNAILING`
+
+Click `PROPERTIES`
+
+Click `CACHE`
+
+Click `CACHE`
 ### Installing ICAT
 ```powershell
 winget install -e --id Nvidia.ICAT
@@ -3055,6 +3060,14 @@ $lnk = $ws.CreateShortcut('D:/portable/Inkscape.lnk')
 $lnk.TargetPath='D:/portable/inkscape/bin/inkscape.exe'
 $lnk.Save()
 ```
+### Configuring Inkscape
+Open `Inkscape`
+
+Click `Time to Draw`
+
+Turn off `Show this every time`
+
+Click `New Document`
 ### Installing iPerf3
 ```powershell
 winget install -e --id ar51an.iPerf3
@@ -3083,6 +3096,26 @@ $lnk = $ws.CreateShortcut('D:/portable/JetBrains dotPeek.lnk')
 $lnk.TargetPath='D:/portable/dotPeek64.exe'
 $lnk.Save()
 ```
+### Configuring JetBrains dotPeek
+Open `JetBrains dotPeek`
+
+Click `I accept the terms of the license agreement`
+
+Click `OK`
+
+Click `Not specified`
+
+Click `Europe`
+
+Click `OK`
+
+Scroll all down
+
+Click `I Accept`
+
+Click `OK`
+
+Click `OK`
 ### Installing Jpegoptim
 ```powershell
 winget install -e --id TimoKokkonen.Jpegoptim
@@ -3196,11 +3229,102 @@ Click `Install`
 Click `Finish`
 ### Installing LM Studio
 ```powershell
+mkdir D:/portable/lmstudio
+```
+```powershell
 winget install -e --id ElementLabs.LMStudio
 ```
 Or
 
 Download [LM-Studio-*-x64.exe](https://lmstudio.ai/download/latest/win32/x64)
+
+Open `LM-Studio-*-x64.exe`
+
+Click `I Agree`
+
+Click `Anyone who uses this computer (all users)`
+
+Click `Next`
+
+Click `Install`
+
+Click `Finish`
+
+Click `Get Started`
+
+Click `Continue`
+
+Turn on `Turn on Developer Mode`
+
+Turn off `Start local LLM service on login`
+
+Click `Continue to LM Studio`
+
+Click My Models icon
+
+Click ⋯ icon
+
+Click `Change...`
+
+Folder: `D:\lmstudio`
+
+Click `Select Folder`
+
+Click App Settings icon
+
+Click `Chat`
+
+Turn off `Move deleted chats and folders to Trash`
+### Configuring LM Studio (Internet access required)
+Click Start Menu icon
+
+Type `LM Studio`
+
+Press Enter
+
+Click App Settings icon
+
+Click `Runtime`
+
+Click `Check for updates`
+
+Click all `Update`
+
+Click 🗙 icon
+
+Click Chat icon
+
+Click `Select a model to load`
+
+Type `Qwen3.6-35B-A3B-MTP-GGUF`
+
+Click `🔎 Search more results for "Qwen3.6-35B-A3B-MTP-GGUF"`
+
+Select `GGUF Qwen3.6 35B A3B UD Q6_K_XL` for `Download Options`
+
+Click `📥 Download 34.40 GB`
+
+Click 🗙 icon
+
+Click `Select a model to load`
+
+Turn on `Manually choose model load parameters (or hold Alt)`
+
+Click `Qwen3.6 35B A3B UD`
+
+Context Length `262144`
+
+GPU Offload `41`
+
+Turn on `Remember settings for openai's gpt-oss 120b`
+
+Turn on `Show advanced settings`
+
+CPU Thread Pool Size `10`
+
+Number of layers for which to force MoE weights onto CPU `35`
+
+Click `Load Model`
 ### Installing Logi Options+ (Internet access required)
 ```powershell
 winget install -e --id Logitech.OptionsPlus
@@ -3237,13 +3361,20 @@ Click `Next >`
 Click `Install`
 
 Click `Finish`
-### Installing Malicious Software Removal Tool
+### Installing Microsoft Windows Malicious Software Removal Tool
 ```powershell
 winget install -e --id Microsoft.MaliciousSoftwareRemovalTool
 ```
 Or
 
 Download [Windows-KB890830-x64-V*.exe](https://www.microsoft.com/en-us/download/details.aspx?id=9905)
+```powershell
+copy Windows-KB890830-x64-V*.exe D:/portable/Windows-KB890830-x64.exe
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Microsoft Windows Malicious Software Removal Tool.lnk')
+$lnk.TargetPath='D:/portable/Windows-KB890830-x64.exe'
+$lnk.Save()
+```
 ### Installing Mathpix Snipping Tool
 ```powershell
 winget install -e --id Mathpix.MathpixSnippingTool
@@ -3319,6 +3450,106 @@ winget install -e --id MiKTeX.MiKTeX
 Or
 
 Download [basic-miktex-*-x64.exe](https://miktex.org/download)
+
+Click Start Menu icon
+
+Type `Change User Account Control settings`
+
+Press Enter
+
+Select not `Never notify`
+
+Click `OK`
+
+Restart
+```powershell
+copy basic-miktex-*-x64.exe D:/portable/miktex-portable.exe
+```
+Open `miktex-portable.exe`
+
+Turn on `I accept the MiKTeX copying conditions.`
+
+Click `Next >`
+
+Install MiKTeX to: `D:/portable/MiKTeX`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Start`
+
+Click `Next >`
+
+Turn off `Check for updates now`
+
+Click `OK`
+
+Click `Next >`
+
+Turn off `Tell me more`
+
+Click `Close`
+
+Open `Win 10 Tweaker`
+
+Click `Yes`
+#### Confidentiality
+#### Context Menu
+#### Interface
+#### System
+Turn on `Stop and disable User Account Control`
+
+Click `Apply`
+#### Services
+#### Cleaner
+#### Applications
+#### Startup
+#### Optimization
+#### Virus Scanner
+#### System Information
+Restart
+```powershell
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/MiKTeX Console.lnk')
+$lnk.TargetPath='D:/portable/MiKTeX/texmfs/install/miktex/bin/x64/miktex-console.exe'
+$lnk.Save()
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/TeXworks.lnk')
+$lnk.TargetPath='D:/portable/MiKTeX/texmfs/install/miktex/bin/x64/miktex-texworks.exe'
+$lnk.Save()
+del D:/portable/miktex-portable.exe
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\MiKTeX\texmfs\install\miktex\bin\x64"
+```
+Or
+
+Open `basic-miktex-*-x64.exe`
+
+Turn on `I accept the MiKTeX copying conditions.`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Start`
+
+Click `Next >`
+
+Turn off `Check for updates now`
+
+Click `OK`
+
+Click `Next >`
+
+Turn off `Tell me more`
+
+Click `Close`
 ### Installing Mine-imator
 ```powershell
 winget install -e --id DavidNorgren.Mine-imator
@@ -3707,6 +3938,38 @@ winget install -e --id Parsec.Parsec
 Or
 
 Download [parsec-windows.exe](https://builds.parsec.app/package/parsec-windows.exe)
+
+Open `parsec-windows.exe`
+
+Click `Next`
+
+Click `Per Computer`
+
+Click `Next`
+### Configuring Parsec (Internet access required)
+Click Start Menu icon
+
+Type `Parsec`
+
+Press Enter
+
+Email `your_email`
+
+Password `your_password`
+
+Click `Log In`
+
+Click `Settings`
+
+Select `Keyboard` for `Immersive mode`
+
+Click `Host`
+
+Select `50 Mbps` for `Bandwidth limit`
+
+Turn on `Constant FPS`
+
+Turn off `Echo Cancelling`
 ### Installing PeaZip
 ```powershell
 winget install -e --id Giorgiotani.Peazip
@@ -4035,6 +4298,9 @@ $lnk = $ws.CreateShortcut('D:/portable/TeXworks.lnk')
 $lnk.TargetPath='D:/portable/TeXworks/TeXworks.exe'
 $lnk.Save()
 ```
+Or
+
+Follow [Installing MiKTeX](WINDOWS.md)
 ### Installing The Silver Searcher
 ```powershell
 winget install -e --id JFLarvoire.Ag
@@ -4173,7 +4439,7 @@ Or
 
 Download [uad-ng-windows.exe](https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/releases)
 ```powershell
-copy uad-ng-windows.exe D:/portable/uad-ng-windows.exe
+copy uad-ng-windows.exe D:/portable
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/Universal Android Debloater Next Generation.lnk')
 $lnk.TargetPath='D:/portable/uad-ng-windows.exe'
@@ -4283,6 +4549,23 @@ $lnk.Save()
 ```powershell
 winget install -e --id JernejSimoncic.Wget
 ```
+Or
+
+Download [wget-*-win64.zip](https://eternallybored.org/misc/wget)
+```powershell
+mkdir D:/portable/wget
+7z x wget-*-win64.zip -oD:/portable/wget
+```
+Or
+
+Download [wget.exe](https://eternallybored.org/misc/wget)
+```powershell
+mkdir D:/portable/wget
+copy wget.exe D:/portable/wget
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\wget"
+```
 ### Installing Winaero Tweaker
 ```powershell
 winget install -e --id winaero.tweaker
@@ -4290,6 +4573,34 @@ winget install -e --id winaero.tweaker
 Or
 
 Download [winaerotweaker.zip](https://winaerotweaker.com/download/winaerotweaker.zip)
+
+Open `winaerotweaker.zip`
+
+Open `WinaeroTweaker-*-setup.exe`
+
+Click `Run`
+
+Click `Next`
+
+Click `Portable mode (just extract files)`
+
+Click `Next`
+
+Click `I accept the agreement`
+
+Click `Next`
+
+Type `D:/portable/Winaero Tweaker`
+
+Click `Extract files`
+
+Click `Finish`
+```powershell
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Winaero Tweaker.lnk')
+$lnk.TargetPath='D:/portable/Winaero Tweaker/WinaeroTweaker.exe'
+$lnk.Save()
+```
 ### Installing Windhawk
 ```powershell
 winget install -e --id RamenSoftware.Windhawk
@@ -4436,17 +4747,17 @@ winget install -e --id yt-dlp.yt-dlp
 ```
 Or
 
-Download [yt-dlp.exe](https://github.com/yt-dlp/yt-dlp/releases)
-```powershell
-mkdir D:/portable/yt-dlp
-copy yt-dlp.exe D:/portable/yt-dlp
-```
-Or
-
 Download [yt-dlp_win.zip](https://github.com/yt-dlp/yt-dlp/releases)
 ```powershell
 mkdir D:/portable/yt-dlp
 7z x yt-dlp_win.zip -oD:/portable/yt-dlp
+```
+Or
+
+Download [yt-dlp.exe](https://github.com/yt-dlp/yt-dlp/releases)
+```powershell
+mkdir D:/portable/yt-dlp
+copy yt-dlp.exe D:/portable/yt-dlp
 ```
 ```cmd
 setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\yt-dlp"
