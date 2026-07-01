@@ -413,23 +413,44 @@ Options:
 
 Options:
 
-- `add .`: Stage all changes in the current directory for the next commit
+- `add`
+	- `.`: Stage all changes (untracked, modified) in the current directory for the next commit
+	- `-A`: Stage all changes (untracked, modified, deleted) in the current directory for the next commit
+	- `--update`: Stage all changes (modified, deleted) for the next commit
+	- `--renormalize`: Apply `core.autocrlf` and `.gitattributes` and stage normalization changes for the next commit
 - `branch`: List all branches
 	- `-d branch`: Delete a branch
 	- `-m main master`: Rename branch `main` to `master`
 	- `--unset-upstream`: Remove the upstream tracking from the current branch, making it a local branch only
-- `checkout -b test`: Create and switch to a new branch named `test`
-- `checkout main`: Switch to the `main` branch
+- `checkout`
+	- `-b test`: Create and switch to a new branch named `test`
+	- `.`: Discard all unstaged changes in the current directory
+	- `master|main`: Switch to the `master` or `main` branch
 - `clone link`: Create a copy of an existing repository located at `link` into a new local directory
 - `commit -m message`: Commit the staged changes with a commit message `message`
 - `config`: Configure Git options
 	- `--global`: Write to `~/.gitconfig` instead of `.git/config`
 	- `--unset-all`: Unset all multi-valued config options
+	- `get`: Read a config value
+	- `list`: Read all config values
+	- `core.autocrlf`: Specify how to treat line endings in text files
+		- `true`: Convert LF to CRLF on checkout and CRLF to LF on commit, same as setting the `text` attribute to `auto`
+		- `input`: Convert CRLF to LF on commit
+		- `false`: Don't convert line endings
+	- `init.defaultBranch master|main`: Override the default branch name for new repositories
+	- `pull.ff only`: Don't merge the remote branch when pulling
 	- `pull.rebase false`: Merge the remote branch when pulling
-	- `user.name name`: Name to be used in commits
 	- `user.email email`: Email to be used in commits
+	- `user.name name`: Name to be used in commits
+- `diff`: Show staged changes
+	- `commit1 commit2`: Show changes between two commits
+	- `-- path`: Show changes for a specific file or directory
+- `fetch`: Download objects and refs from another repository
+	- `origin`: Specify the remote repository
+- `fsck`: Verify the connectivity and validity of the objects in the database
 - `gc`: Clean up unnecessary files and optimize the local repository
 - `init -b main`: Initialize a new Git repository and set the default branch to `main`
+- `log`: Show commit history
 - `pull`: Fetch changes from the remote repository and merge them into the current branch
 - `push`: Push your local changes to the remote repository
 	- `origin`: Specify the remote repository
@@ -438,10 +459,13 @@ Options:
 	- `--tags`: Push all refs/tags
 	- `--force`: Force the push, overwriting remote history
 - `reflog`: Show the history of all actions
+	- `--all`: Show the history of all actions for all branches
 - `reset`: Undo changes in the working directory
 	- `--soft HEAD~1`: Unstage the last commit, keeping changes in the working directory
 - `revert commit`: Create a new commit that undoes the changes introduced by a previous commit
 - `submodule update --init --recursive`: Initialize and update submodules recursively, including nested submodules
+- `show`: Show last commit with changes
+- `status`: Show the working tree status
 - `tag`: List all tags
 	- `-d tag`: Delete a tag
 	- `new old`: Create a new tag that points to the same commit as the existing old tag

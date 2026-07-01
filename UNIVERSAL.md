@@ -12,10 +12,11 @@ wal --theme base16-rebecca
 ```
 ### Configuring Git
 ```bash
-git config --global --unset-all user.name
 git config --global --unset-all user.email
-git config --global user.name name
+git config --global --unset-all user.name
+git config --global init.defaultBranch master
 git config --global user.email email
+git config --global user.name name
 ```
 ### Configuring Opam
 ```bash

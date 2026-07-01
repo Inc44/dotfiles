@@ -2768,6 +2768,45 @@ Click `Finish`
 ```powershell
 winget install -e --id Git.Git
 ```
+Or
+
+Download [PortableGit-*-64-bit.7z.exe](https://github.com/git-for-windows/git/releases)
+
+Open `PortableGit-*-64-bit.7z.exe`
+
+Where do you want to install portable Git? `D:/portable/Git`
+
+Click `OK`
+```powershell
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Git Bash.lnk')
+$lnk.TargetPath='D:/portable/Git/git-bash.exe'
+$lnk.Arguments='--cd-to-home'
+$lnk.WorkingDirectory='%HOMEDRIVE%%HOMEPATH%'
+$lnk.Save()
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Git CMD.lnk')
+$lnk.TargetPath='D:/portable/Git/git-cmd.exe'
+$lnk.Arguments='--cd-to-home'
+$lnk.WorkingDirectory='%HOMEDRIVE%%HOMEPATH%'
+$lnk.Save()
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Git GUI.lnk')
+$lnk.TargetPath='D:/portable/Git/cmd/git-gui.exe'
+$lnk.WorkingDirectory='%HOMEDRIVE%%HOMEPATH%'
+$lnk.Save()
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\Git\cmd"
+```
+### Configuring Git
+```bash
+git config --global --unset-all user.email
+git config --global --unset-all user.name
+git config --global init.defaultBranch master
+git config --global user.email email
+git config --global user.name name
+```
 ### Installing GitHub Desktop
 ```powershell
 winget install -e --id GitHub.GitHubDesktop
