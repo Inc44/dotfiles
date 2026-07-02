@@ -15,6 +15,10 @@ microsoft-edge-stable
 ```
 /home/pc/miniconda3/envs/MaTools/bin/python -O /home/pc/github/MaTools/management_tools/main_management_tools_app.pyw
 ```
+Or
+```
+/home/pc/.conda/envs/MaTools/bin/python -O /home/pc/github/MaTools/management_tools/main_management_tools_app.pyw
+```
 #### ctrl + u
 ```
 /home/pc/.pyenv/versions/3.11.10/bin/python3 /home/pc/ultimatevocalremovergui/UVR.py
@@ -42,6 +46,10 @@ normcap
 #### super + t
 ```
 /home/pc/miniconda3/envs/MaTools/bin/python -O /home/pc/github/MaTools/management_tools/script_image_trimmer.pyw
+```
+Or
+```
+/home/pc/.conda/envs/MaTools/bin/python -O /home/pc/github/MaTools/management_tools/script_image_trimmer.pyw
 ```
 ## Inkscape Shortcut Manager
 

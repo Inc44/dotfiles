@@ -625,8 +625,7 @@ conda create --name bfi python=3.10 -y
 conda activate bfi
 git clone https://github.com/vv1ck/Brute-Force-instagram
 cd Brute-Force-instagram
-pip install requests
-pip install colorama
+pip install colorama requests
 wget https://raw.githubusercontent.com/zloi-user/hideip.me/main/https.txt
 awk -F':' '{print $1":"$2}' https.txt > fixed_https.txt
 ```
@@ -668,7 +667,7 @@ make
 ```
 ### Installing First Order Model
 ```bash
-conda create -n fomd python=3.8 -y
+conda create --name fomd python=3.8 -y
 conda activate fomd
 git clone https://github.com/AliaksandrSiarohin/first-order-model
 cd first-order-model
@@ -693,7 +692,7 @@ sudo fc-cache -f -v
 ```bash
 git clone https://github.com/yangxy/GPEN.git
 cd GPEN
-conda create -n gpen python=3.13 -y
+conda create --name gpen python=3.13 -y
 conda activate gpen
 pip install -r requirements.txt
 cd weights
@@ -758,7 +757,6 @@ sudo mkdir /boot/grub2/themes
 sudo cp -ruv ./minegrub /boot/grub2/themes
 sudo rm -r ~/minegrub-theme
 cd ..
-conda deactivate
 sudo python -OO /boot/grub2/themes/minegrub/update_theme.py '' 'I use Arch BTW!'
 sudo vim /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -772,15 +770,14 @@ bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm -rf ~/miniconda3/miniconda.sh
 ```
 ```bash
-~/miniconda3/bin/conda init
+~/miniconda3/bin/conda init --condabin
 ```
 Or
 ```bash
-/opt/miniconda3/condabin/conda init
+/opt/miniconda3/condabin/conda init --condabin
 ```
 ```bash
-conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
-conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
+conda tos accept
 ```
 In case you reinstalled conda and `conda env list` doesn't work:
 ```bash
@@ -790,7 +787,7 @@ pip install archspec
 ```bash
 conda create --name nanogpt python=3.10 -y
 conda activate nanogpt
-pip install torch numpy transformers datasets tiktoken wandb tqdm
+pip install datasets numpy tiktoken torch tqdm transformers wandb
 git clone https://github.com/karpathy/nanoGPT.git
 ```
 ### Installing Nerd Fonts

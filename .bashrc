@@ -102,17 +102,8 @@ if ! shopt -oq posix; then
 fi
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/pc/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/pc/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/pc/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/pc/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+export PATH="/home/pc/miniconda3/bin:$PATH"
+export PATH="/opt/miniconda3/condabin:$PATH"
 # <<< conda initialize <<<
 #. "$HOME/.cargo/env"
 pip_conda_cargo_log_clean="pip cache purge; conda clean -a; cargo cache -ak0 -r all; sudo journalctl --vacuum-time=1s"
@@ -136,10 +127,10 @@ alias ec="ect -9 -keep --strict --mt-file --disable-jpg -recurse"
 alias eca="ect -9 -keep --strict --mt-file -recurse"
 alias ecq="ect -1 -keep --strict --mt-file --disable-jpg -recurse"
 alias ecqa="ect -1 -keep --strict --mt-file -recurse"
-alias g="ced; sudo python -OO /boot/grub2/themes/minegrub/update_theme.py '' 'I use Arch BTW!'"
+alias g="sudo python -OO /boot/grub2/themes/minegrub/update_theme.py '' 'I use Arch BTW!'"
 alias hc="history -c; history -w"
 alias hdd="sudo mount /hdd"
-alias inkf="ced; killall inkscape-figures; inkscape-figures watch"
+alias inkf="killall inkscape-figures; inkscape-figures watch"
 alias inksm="cea inksm; python -OO ~/inkscape-shortcut-manager/main.py"
 alias u="$upgrade"
 export PATH="/home/pc/.cargo/bin:$PATH"

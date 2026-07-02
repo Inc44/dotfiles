@@ -237,8 +237,7 @@ rm virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb
 ```
 ### Installing Wal
 ```
-conda deactivate
-sudo pip3 install pywal
+sudo pip install pywal
 wal --theme base16-rebecca
 ```
 ### Installing Xtreme Download Manager

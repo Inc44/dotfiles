@@ -1431,7 +1431,7 @@ Rename-Item D:/portable/ghidra_*_PUBLIC ghidra
 ```powershell
 git clone https://github.com/yangxy/GPEN.git
 cd GPEN
-conda create -n gpen python=3.13 -y
+conda create --name gpen python=3.13 -y
 conda activate gpen
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu132
 pip install -r requirements.txt
@@ -3615,6 +3615,16 @@ Turn off `Gettings started with Conda`
 Turn off `Welcome to Anaconda`
 
 Click `Finish`
+### Configuring Miniconda3 (Internet access required)
+Click Start Menu icon
+
+Type `Anaconda PowerShell Prompt`
+
+Press Enter
+```powershell
+conda init --condabin
+conda tos accept
+```
 ### Installing Mozilla Firefox (en-US)
 ```powershell
 winget install -e --id Mozilla.Firefox
