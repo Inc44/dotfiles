@@ -4131,6 +4131,36 @@ Click `Next >`
 Turn off `Show Readme`
 
 Click `Finish`
+### Installing Samsung Magician
+Download [Samsung_Magician_Installer_Official_*.exe](https://semiconductor.samsung.com/consumer-storage/support/tools)
+
+Open `Samsung_Magician_Installer_Official_*.exe`
+
+Click `OK`
+
+Click `Yes`
+
+Click `Next`
+
+Click `I accept the agreement`
+
+Click `Next`
+
+Click `Next`
+
+Click `Next`
+
+Click `Install`
+
+Turn off `Launch Samsung Magician`
+
+Click `Settings`
+
+Turn off `Run at Startup`
+
+Click `Save`
+
+Click `Finish`
 ### Installing SimpleTex
 ```powershell
 winget install -e --id SimpleTex.SimpleTex
