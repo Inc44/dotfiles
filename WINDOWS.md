@@ -142,9 +142,9 @@ Click `OK`
 
 ``
 
-`your_password`
+Type `your_password`
 
-`your_password`
+Type `your_password`
 
 Click `OK`
 ### Installing NVIDIA Drivers
@@ -2364,6 +2364,24 @@ Or
 Download [DiscordSetup.exe](https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64)
 
 Open `DiscordSetup.exe`
+### Configuring Discord
+Open `Discord`
+
+Type `your_email`
+
+Type `your_password`
+
+Click `Log In`
+
+Click ⚙️ icon
+
+Click `Voice & Video`
+
+Turn off `Automatically Adjust Input Sensitivity`
+
+Select `-100dB`
+
+Turn off `Echo Cancellation`
 ### Installing DiscordChatExporter.GUI
 ```powershell
 winget install -e --id Tyrrrz.DiscordChatExporter.GUI
@@ -2438,6 +2456,25 @@ $lnk = $ws.CreateShortcut('D:/portable/Eclipse IDE for Java Developers.lnk')
 $lnk.TargetPath='D:/portable/eclipse/eclipse.exe'
 $lnk.Save()
 ```
+### Installing Epic Games Launcher (Internet access required)
+```powershell
+winget install -e --id EpicGames.EpicGamesLauncher
+```
+Or
+
+Download [EpicInstaller-*.exe](https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.exe)
+
+Open `EpicInstaller-*.exe`
+### Configuring Epic Games Launcher (Internet access required)
+Type `your_email`
+
+Click `Continue`
+
+Type `your_password`
+
+Click `Sign in`
+
+Click `Allow`
 ### Installing Everything
 ```powershell
 winget install -e --id voidtools.Everything
@@ -2981,7 +3018,7 @@ PRESET: `MOST KNOWN`
 
 Click `3g2, 3gp, 3gp2, 3gpp, ai, aiff, amv, ape, asf, avi, avif, bik, bmp, cb7, cbr, cbz, dds, divx, dpg, dv, dvr-ms, eps, epub, evo, exr, f4v, flac, flv, gif, hdmov, heic, heif, indd, jpg, k3g, m1v, m2t, m2ts, m2v, m4b, m4p, m4v, mk3d, mka, mkv, mov, mp2v, mp3, mp4, mp4v, mpc, mpe, mpeg, mpg, mpv2, mpv4, mqv, mts, mxf, nsv, odp, ods, odt, ofr, ofs, ogg, ogm, ogv, opus, png, psd, psxprj, px, qt, ram, rm, rmvb, skm, spx, swf, tak, tif, tiff, tp, tpr, trp, ts, tta, vob, wav, webm, webp, wm, wmv, wv, xvid`
 
-Type: `;aac;jxl;m4a`
+Type `;aac;jxl;m4a`
 
 Turn on `Enable black/white frame detection`
 
