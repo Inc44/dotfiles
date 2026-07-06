@@ -304,7 +304,7 @@ apt install proxmox-default-kernel proxmox-default-headers
 wget -O /tmp/i915-sriov-dkms_2026.05.06_amd64.deb "https://github.com/strongtz/i915-sriov-dkms/releases/download/2026.05.06/i915-sriov-dkms_2026.05.06_amd64.deb"
 dpkg -i /tmp/i915-sriov-dkms_2026.05.06_amd64.deb
 nano /etc/default/grub (`GRUB_CMDLINE_LINUX_DEFAULT="intel_iommu=on i915.enable_guc=3 i915.max_vfs=7 module_blacklist=xe loglevel=0 quiet"`)
-update-grub
+grub-mkconfig -o /boot/efi/EFI/proxmox/grub.cfg
 update-initramfs -u
 apt install sysfsutils
 echo "devices/pci0000:00/0000:00:02.0/sriov_numvfs = 7" > /etc/sysfs.conf
