@@ -11,7 +11,7 @@ Click `Sharing`
 
 Turn on `Allow other network users to connect through this computer's Internet connection`
 
-Home networking connection: `Ethernet`
+Select `Ethernet*` for `Home networking connection:`
 
 Click `OK`
 ### Creating Bridged Network
@@ -33,7 +33,7 @@ Hold Ctrl
 
 Click `Wi-Fi`
 
-Click `Ethernet`
+Click `Ethernet*`
 
 Right click `Bridge Connections`
 ### Repairing BCD

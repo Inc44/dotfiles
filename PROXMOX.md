@@ -1,13 +1,25 @@
 ### Proxmox Installation
-Download [Proxmox VE 9.1 ISO Installer](https://enterprise.proxmox.com/iso/proxmox-ve_9.1-1.iso)
+Download [proxmox-ve_*.iso](https://www.proxmox.com/en/downloads)
 
-Copy to Ventoy USB and boot in normal mode
+Copy to Ventoy USB
+
+Select `proxmox-ve_*.iso`
+
+Press Enter
+
+Select `Boot in normal mode`
+
+Press Enter
+
+Select `Install Proxmox VE (Graphical)`
+
+Press Enter
 #### End User License Agreement (EULA)
-`I agree`
+Click `I agree`
 #### Proxmox Virtual Environment (PVE)
-Target Harddisk `/dev/sda (your_disk)`
+Select `/dev/sda (your_disk)` for `Target Harddisk`
 
-`Options`
+Click `Options`
 
 hdsize `217.0` GB (1 GB boot, 16 GB swap, 100 GB root, 0 GB free, 0 GB LVM, 0 GB LVM-Thin)
 
@@ -19,17 +31,17 @@ minfree `0` GB
 
 maxvz `0` GB
 
-`OK`
+Click `OK`
 
-`Next`
+Click `Next`
 #### Location and Time Zone selection
 Country `France`
 
-Time Zone `Europe/Paris`
+Select `Europe/Paris` for `Time Zone`
 
-Keyboard Layout `U.S. English`
+Select `U.S. English` for `Keyboard Layout`
 
-`Next`
+Click `Next`
 #### Administration Password and Email Address
 Password `your_password`
 
@@ -37,9 +49,9 @@ Confirm `your_password`
 
 Email `your_email`
 
-`Next`
+Click `Next`
 #### Management Network Configuration
-Management Interface `nic0 - XX:XX:XX:XX:XX:XX (your_interface)`
+Select `nic0 - XX:XX:XX:XX:XX:XX (your_interface)` for `Management Interface`
 
 Hostname (FQDN) `pve.yourdomain`
 
@@ -47,15 +59,17 @@ IP Address (CIDR) `192.168.31.254`/`24`
 
 Gateway `192.168.31.1`
 
-DNS Server `127.0.0.1`
+DNS Server `192.168.31.1`
 
-[x] Pin network interface names
+Turn on `Pin network interface names`
 
-`Next`
+Click `Next`
 #### Summary
-[ ] Automatically reboot after successful installation
+Turn off `Automatically reboot after successful installation`
 
-`Install`
+Click `Install`
+
+Click `Reboot`
 
 pve login: `root`
 
@@ -66,7 +80,11 @@ lvextend -L 100G /dev/pve/root
 resize2fs /dev/mapper/pve-root
 ```
 ### Connecting USB Tethering
-Connect Android phone via USB and `Use USB for` > `USB Tethering`
+Connect Android phone via USB
+
+Double click `Charging this device via USB`
+
+Click `USB Tethering`
 ```bash
 ip a
 ```
@@ -96,7 +114,11 @@ systemctl restart networking
 ```bash
 nano /etc/network/interfaces
 ```
-Modify
+Change
+```bash
+iface nic0 inet manual
+```
+To
 ```bash
 auto nic0
 iface nic0 inet static
@@ -108,8 +130,8 @@ systemctl restart networking
 ```
 ### Installing iwlwifi Driver for Intel Wi-Fi 7 Support
 ```bash
-wget http://ftp.debian.org/debian/pool/non-free-firmware/f/firmware-nonfree/firmware-iwlwifi_20260410-1_all.deb
-dpkg -x firmware-iwlwifi_20260410-1_all.deb firmware-iwlwifi
+wget http://ftp.debian.org/debian/pool/non-free-firmware/f/firmware-nonfree/firmware-iwlwifi_20260519-1_all.deb
+dpkg -x firmware-iwlwifi_20260519-1_all.deb firmware-iwlwifi
 cp -r firmware-iwlwifi/usr/lib/firmware/* /lib/firmware
 rm -r firmware-iwlwifi*
 update-initramfs -u -k all
@@ -130,19 +152,19 @@ reboot
 ```
 ### Purge Old Kernels
 Identify your current kernel
-```
+```bash
 uname -r
 ```
 List all installed kernels
-```
+```bash
 dpkg -l | grep proxmox-kernel | awk '{ print $2 }'
 ```
 Remove old kernels
-```
+```bash
 apt purge proxmox-kernel-old
 ```
 ### Update GRUB configuration
-```
+```bash
 grub-mkconfig -o /boot/efi/EFI/proxmox/grub.cfg
 reboot
 ```
@@ -320,9 +342,9 @@ update-initramfs -u
 reboot
 ```
 ### Downloading ISO Images
-Select `local (pve)`
+Click `local (pve)`
 
-Select `ISO Images`
+Click `ISO Images`
 
 Click `Download from URL`
 
