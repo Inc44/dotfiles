@@ -14,13 +14,19 @@ DC [Disabled]
 
 Level (count:4-7)
 
-[80]°C [100]%
+[90]°C [100]%
 
-[70]°C [75]%
+[80]°C [70]%
 
-[60]°C [50]%
+[70]°C [50]%
 
-[50]°C [0]%
+[60]°C [35]%
+
+[50]°C [25]%
+
+[40]°C [20]%
+
+[30]°C [17]%
 
 ---
 
@@ -44,13 +50,19 @@ DC [Disabled]
 
 Level (count:4-7)
 
-[80]°C [100]%
+[90]°C [100]%
 
-[70]°C [75]%
+[80]°C [70]%
 
-[60]°C [50]%
+[70]°C [50]%
 
-[50]°C [0]%
+[60]°C [35]%
+
+[50]°C [25]%
+
+[40]°C [20]%
+
+[30]°C [17]%
 
 ---
 
@@ -76,13 +88,19 @@ DC [Disabled]
 
 Level (count:4-7)
 
-[80]°C [100]%
+[90]°C [100]%
 
-[70]°C [75]%
+[80]°C [70]%
 
-[60]°C [50]%
+[70]°C [50]%
 
-[50]°C [0]%
+[60]°C [35]%
+
+[50]°C [25]%
+
+[40]°C [20]%
+
+[30]°C [17]%
 
 ---
 
@@ -94,7 +112,7 @@ Step Down Time [0.1s]
 
 Group [None]
 
-# SYS Fan 4
+## SYS Fan 4
 
 Smart Fan Mode [Enabled]
 
@@ -108,13 +126,19 @@ DC [Disabled]
 
 Level (count:4-7)
 
-[80]°C [100]%
+[90]°C [100]%
 
-[70]°C [75]%
+[80]°C [70]%
 
-[60]°C [50]%
+[70]°C [50]%
 
-[50]°C [0]%
+[60]°C [35]%
+
+[50]°C [25]%
+
+[40]°C [20]%
+
+[30]°C [17]%
 
 ---
 
@@ -126,7 +150,7 @@ Step Down Time [0.1s]
 
 Group [None]
 
-# SYS Fan 5
+## SYS Fan 5
 
 Smart Fan Mode [Enabled]
 
@@ -140,13 +164,19 @@ DC [Disabled]
 
 Level (count:4-7)
 
-[80]°C [100]%
+[90]°C [100]%
 
-[70]°C [75]%
+[80]°C [70]%
 
-[60]°C [50]%
+[70]°C [50]%
 
-[50]°C [0]%
+[60]°C [35]%
+
+[50]°C [25]%
+
+[40]°C [20]%
+
+[30]°C [17]%
 
 ---
 
@@ -188,15 +218,15 @@ M2_4 `Not Present`
 
 System Information
 
-CPUID/MicroCode `C0662/11B`
+CPUID/MicroCode `C0662/121`
 
-BIOS Version `E7E34IMSI.1AB0`
+BIOS Version `E7E34IMSI.1AE0`
 
-BIOS Build Date `Nov 24, 2025`
+BIOS Build Date `Jun 24, 2026`
 
-ME Version `19.0.5.2018`
+ME Version `19.0.5.2175`
 
-EC Version `240813.0`
+EC Version `241106.0`
 
 Physical Memory `98304 MB`
 
@@ -632,7 +662,7 @@ Intel(R) Core(TM) Ultra 7 265K
 
 CPUID `C0662`
 
-MicroCode `11B`
+MicroCode `121`
 
 CPU Frequency `5.200 GHz`
 
@@ -754,7 +784,7 @@ Intel Virtualization Tech [Enabled]
 
 Intel VT-D Tech [Enabled]
 
-Control IOMMU Pre-boot Behavior [Enabled IOMMU during boot]
+IOMMU Control [Enabled]
 
 DMA Control Guarantee [Enabled]
 
@@ -764,7 +794,7 @@ CFG Lock [Enabled]
 
 Intel Dynamic Tuning Technology [Enabled]
 
-Total Memory Encryption [Disabled]
+Total Memory Encryption [Enabled]
 
 NPU Device [Enabled]
 
@@ -990,9 +1020,9 @@ Motherboard
 
 PRO Z890-P WIFI (MS-7E34)
 
-BIOS Ver. `E7E34IMSI.1AB0`
+BIOS Ver. `E7E34IMSI.1AE0`
 
-BIOS Build Date `Nov 24, 2025`
+BIOS Build Date `Jun 24, 2026`
 
 System Temperature `35 °C`
 
@@ -1004,7 +1034,7 @@ Intel(R) Core(TM) Ultra 7 265K
 
 Frequency `5.20 GHz`
 
-Core Voltage `1.156V`
+Core Voltage `1.150V`
 
 Core Temperature `45 °C`
 
@@ -1020,11 +1050,11 @@ Speed `5600 MT/s`
 
 Voltage
 
-System 12V `12.240 V`
+System 12V `12.000 V`
 
-System 5V `5.100 V`
+System 5V `5.000 V`
 
-System 3.3V `3.296 V`
+System 3.3V `3.300 V`
 
 ---
 
