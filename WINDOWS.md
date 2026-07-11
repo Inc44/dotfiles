@@ -41,7 +41,7 @@ Click `Next`
 
 Click `Next`
 
-Select `Repair my PC`
+Click `Repair my PC`
 
 Click `Next`
 
@@ -74,27 +74,13 @@ Click `Yes`
 
 Click `Add layout`
 
-Select `French (France)`
+Click `French (France)`
+
+Click `Next`
 
 Click `Add layout`
 
 Click `I don't have internet`
-### Configuring Device Name
-Click Start Menu icon
-
-Type `Settings`
-
-Press Enter
-
-Click `Rename`
-
-Click `Name your device`
-
-Type `pc`
-
-Click `Next`
-
-Click `Restart later`
 ### Installing VirtIO Drivers
 Right click Start Menu icon
 
@@ -108,7 +94,7 @@ Click `Browse my computer for drivers`
 
 Click `Browse`
 
-Select `CD Drive (E:) virtio-win-0.1.271`
+Select `CD Drive (*:) virtio-win-0.1.271`
 
 Click `OK`
 
@@ -140,23 +126,79 @@ Restart
 ### Configuring Initial Password
 Click `OK`
 
-``
+Type `` <!--Password-->
 
-Type `your_password`
+Type `your_password` <!--New password-->
 
-Type `your_password`
+Type `your_password` <!--Confirm password-->
+
+Press Enter
 
 Click `OK`
-### Installing NVIDIA Drivers
-Predownload [NVIDIA Studio Driver](https://www.nvidia.com/en-us/drivers)
+### Installing Intel Drivers
+Download [gfx_win_*.exe](https://www.intel.com/content/www/us/en/download/857252) <!--32.0.101.8425_101.8362 WHQL Certified-->
 
-Copy `*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe` to USB
+Open `gfx_win_*.exe`
+
+Click `Yes`
+
+Click `Begin installation`
+
+Click `I agree`
+
+Click `Decline`
+
+Turn on `Execute a clean installation`
+
+Click `Start >`
+
+Turn off `Launch Intel® Graphics Software`
+
+Click `Reboot Required`
+
+Or
+
+Download [gfx_win_*.exe](https://www.intel.com/content/www/us/en/download/785597) <!--WHQL Certified (Latest)-->
+
+Open `gfx_win_*.exe`
+
+Click `Yes`
+
+Turn off `Intel® Computing Improvement Program`
+
+Turn on `Clean Install`
+
+Click `Install`
+
+Turn off `Launch Intel® Graphics Software`
+
+Click `Restart Now`
+### Installing NVIDIA Drivers
+Download [*-notebook-win10-64bit-international-whql.exe](https://www.nvidia.com/en-us/drivers) <!--GeForce Game Ready Driver 391.* for GeForce GT 540M-->
+
+Open `*-notebook-win10-64bit-international-whql.exe`
+
+Or
+
+Download [*-notebook-win10-win11-64bit-international-dch-whql.exe](https://www.nvidia.com/en-us/drivers) <!--GeForce Security Update Driver 582.* for GeForce 940MX-->
+
+Open `*-notebook-win10-win11-64bit-international-dch-whql.exe`
+
+Or
+
+Download [*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe](https://www.nvidia.com/en-us/drivers) <!--NVIDIA Studio Driver 596.*-->
 
 Open `*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe`
+
+Click `Yes`
+
+Click `OK`
 
 Click `AGREE AND CONTINUE`
 
 Click `Custom (Advanced)`
+
+Click `Next`
 
 Turn on `Perform a clean installation`
 
@@ -167,38 +209,30 @@ Turn off `Create desktop shortcut for NVIDIA App`
 Turn off `Launch NVIDIA App`
 
 Click `Close`
-### Installing Intel Drivers
-Predownload [Intel® Arc™ Graphics - Windows*](https://www.intel.com/content/www/us/en/download/785597/873358)
+### Configuring Device Name
+Click Start Menu icon
 
-Copy `gfx_win_101.8425_101.8362.exe` to USB
+Type `Settings`
 
-Open `gfx_win_101.8425_101.8362.exe`
+Press Enter
 
-Click `Begin installation`
+Click `Rename`
 
-Click `I agree`
+Type `pc` <!--Name your device-->
 
-Click `Customize`
+Click `Next`
 
-Turn off `Intel® Computing Improvement Program`
-
-Turn on `Execute a clean installation`
-
-Click `Start >`
-
-Turn off `Launch Intel® Graphics Software`
-
-Click `Reboot Required`
-### Optimizing Performance
+Click `Restart now`
+### Configuring Performance
 Click Start Menu icon
 
 Type `View advanced system settings`
 
 Press Enter
 
-Click `Settings`
+Click first `Settings...`
 
-Turn on `Adjust for best performance`
+Click `Adjust for best performance`
 
 Turn on `Show thumbnails instead of icons`
 
@@ -207,12 +241,12 @@ Turn on `Smooth edges of screen fonts`
 Click `OK`
 
 Click `OK`
+### Installing Win 10 Tweaker
+Download [Win 10 Tweaker](https://win10tweaker.ru)
 ### Configuring Win 10 Tweaker
-Predownload [Win 10 Tweaker](https://win10tweaker.ru)
-
-Copy `Win 10 Tweaker.exe` to USB
-
 Open `Win 10 Tweaker.exe`
+
+Click `Yes`
 
 Click `Accept`
 #### Confidentiality
@@ -355,11 +389,11 @@ Type `Region`
 
 Press Enter
 
-Format: `English (world)`
+Select `English (world)` for `Format:`
 
-Short time: `HH:mm`
+Select `HH:mm` for `Short time:`
 
-Long time: `HH:mm:ss`
+Select `HH:mm:ss` for `Long time:`
 
 Click `OK`
 ### Configuring Sound
@@ -369,7 +403,7 @@ Type `Change system sounds`
 
 Press Enter
 
-Sound Scheme: `No Sounds`
+Select `No Sounds` for `Sound Scheme:`
 
 Turn off `Play Windows Startup sound`
 
@@ -892,7 +926,7 @@ Turn on `Automatic hiding`
 #### Tray icons
 Corner icons open: `Windows 10 flyouts if possible`
 
-Turn on `Quick Settings`
+Turn on `Quick settings`
 
 Turn on `Always show all app icons`
 #### Explorer
@@ -929,6 +963,10 @@ Green: `0`
 Blue: `0`
 
 Click `OK`
+
+Click all `Clear list`
+
+Number of jumplist items to display: `30`
 #### About
 ### Installing .NET Desktop Runtime 6
 ```powershell
