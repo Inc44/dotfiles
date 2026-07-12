@@ -1286,10 +1286,11 @@ Click `Open`
 ### Installing Anvil's Storage Utilities
 Download [AnvilBenchmark_V110_[Guru3D.com].zip](https://www.guru3d.com/download/anvils-storage-utilities-download)
 ```powershell
-7z x AnvilBenchmark_V110_[Guru3D.com].zip -oD:/portable
+mkdir "D:/portable/Anvil's Storage Utilities"
+7z x AnvilBenchmark_V110_[Guru3D.com].zip -o"D:/portable/Anvil's Storage Utilities"
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut("D:/portable/Anvil's Storage Utilities.lnk")
-$lnk.TargetPath='D:/portable/AnvilPro.exe'
+$lnk.TargetPath="D:/portable/Anvil's Storage Utilities/AnvilPro.exe"
 $lnk.Save()
 ```
 ### Installing Apache Maven
@@ -1349,10 +1350,11 @@ Click `Yes`
 ### Installing CUDA-Z
 Download [CUDA-Z-*-64bit.exe](https://sourceforge.net/projects/cuda-z/files/cuda-z)
 ```powershell
-copy CUDA-Z-*-64bit.exe D:/portable/CUDA-Z.exe
+mkdir D:/portable/CUDA-Z
+copy CUDA-Z-*-64bit.exe D:/portable/CUDA-Z/CUDA-Z.exe
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/CUDA-Z.lnk')
-$lnk.TargetPath='D:/portable/CUDA-Z.exe'
+$lnk.TargetPath='D:/portable/CUDA-Z/CUDA-Z.exe'
 $lnk.Save()
 ```
 ### Installing DeepFaceLab
@@ -1392,10 +1394,11 @@ $lnk.Save()
 ### Installing DNS Benchmark 1.3.6668.0
 Download [DNSBench.exe](https://www.majorgeeks.com/mg/getmirror/dns_benchmark,1.html)
 ```powershell
-copy DNSBench.exe D:/portable
+mkdir 'D:/portable/DNS Benchmark'
+copy DNSBench.exe 'D:/portable/DNS Benchmark'
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/DNS Benchmark.lnk')
-$lnk.TargetPath='D:/portable/DNSBench.exe'
+$lnk.TargetPath='D:/portable/DNS Benchmark/DNSBench.exe'
 $lnk.Save()
 ```
 ### Installing EncryptPad
@@ -1600,10 +1603,11 @@ $lnk.Save()
 ### Installing Oculante
 Download [oculante.exe](https://github.com/woelper/oculante/releases)
 ```powershell
-copy oculante.exe D:/portable
+mkdir D:/portable/Oculante
+copy oculante.exe D:/portable/Oculante
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/Oculante.lnk')
-$lnk.TargetPath='D:/portable/oculante.exe'
+$lnk.TargetPath='D:/portable/Oculante/oculante.exe'
 $lnk.Save()
 ```
 Open `Oculante`
@@ -1718,10 +1722,11 @@ $lnk.Save()
 ### Installing wCopy NFC Reader Read and Write Tool
 Download [nfcPro_x64.exe](https://www.xixei.com/nfc/tool/soft/down_enus.html)
 ```powershell
-copy nfcPro_x64.exe D:/portable
+mkdir 'D:/portable/wCopy NFC Reader Read and Write Tool'
+copy nfcPro_x64.exe 'D:/portable/wCopy NFC Reader Read and Write Tool'
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/wCopy NFC Reader Read and Write Tool.lnk')
-$lnk.TargetPath='D:/portable/nfcPro_x64.exe'
+$lnk.TargetPath='D:/portable/wCopy NFC Reader Read and Write Tool/nfcPro_x64.exe'
 $lnk.Save()
 ```
 ### Installing y-cruncher
@@ -1973,10 +1978,11 @@ Or
 
 Download [AnyDesk.exe](https://download.anydesk.com/AnyDesk.exe)
 ```powershell
-copy AnyDesk.exe D:/portable
+mkdir D:/portable/AnyDesk
+copy AnyDesk.exe D:/portable/AnyDesk
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/AnyDesk.lnk')
-$lnk.TargetPath='D:/portable/AnyDesk.exe'
+$lnk.TargetPath='D:/portable/AnyDesk/AnyDesk.exe'
 $lnk.Save()
 ```
 ### Installing Arduino IDE
@@ -2589,10 +2595,11 @@ Or
 
 Download [ExifToolGUI_X64.exe](https://github.com/FrankBijnen/ExifToolGui/releases)
 ```powershell
-copy ExifToolGUI_X64.exe D:/portable
+mkdir D:/portable/ExifToolGUI
+copy ExifToolGUI_X64.exe D:/portable/ExifToolGUI
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/ExifToolGUI.lnk')
-$lnk.TargetPath='D:/portable/ExifToolGUI_X64.exe'
+$lnk.TargetPath='D:/portable/ExifToolGUI/ExifToolGUI_X64.exe'
 $lnk.Save()
 ```
 ### Installing FFmpeg (Shared)
@@ -2853,13 +2860,13 @@ Or
 
 Download [grepWin-x64-*_portable.zip](https://github.com/stefankueng/grepWin/releases)
 ```powershell
-7z x grepWin-x64-*_portable.zip -oD:/portable
-Rename-Item D:/portable/grepWin-x64-*_portable.exe grepWin.exe
+mkdir D:/portable/grepWin
+7z x grepWin-x64-*_portable.zip -oD:/portable/grepWin
+Rename-Item D:/portable/grepWin/grepWin-x64-*_portable.exe grepWin.exe
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/grepWin.lnk')
-$lnk.TargetPath='D:/portable/grepWin.exe'
+$lnk.TargetPath='D:/portable/grepWin/grepWin.exe'
 $lnk.Save()
-del D:/portable/website.url
 ```
 ### Installing HakuNeko
 ```powershell
@@ -3165,10 +3172,11 @@ Or
 
 Download [dotPeek64.*.exe](https://www.jetbrains.com/decompiler/download/download-thanks.html?platform=windows64)
 ```powershell
-copy dotPeek64.*.exe D:/portable/dotPeek64.exe
+mkdir 'D:/portable/JetBrains dotPeek'
+copy dotPeek64.*.exe 'D:/portable/JetBrains dotPeek/dotPeek64.exe'
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/JetBrains dotPeek.lnk')
-$lnk.TargetPath='D:/portable/dotPeek64.exe'
+$lnk.TargetPath='D:/portable/JetBrains dotPeek/dotPeek64.exe'
 $lnk.Save()
 ```
 ### Configuring JetBrains dotPeek
@@ -3444,10 +3452,11 @@ Or
 
 Download [Windows-KB890830-x64-V*.exe](https://www.microsoft.com/en-us/download/details.aspx?id=9905)
 ```powershell
-copy Windows-KB890830-x64-V*.exe D:/portable/Windows-KB890830-x64.exe
+mkdir 'D:/portable/Microsoft Windows Malicious Software Removal Tool'
+copy Windows-KB890830-x64-V*.exe 'D:/portable/Microsoft Windows Malicious Software Removal Tool/Windows-KB890830-x64.exe'
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/Microsoft Windows Malicious Software Removal Tool.lnk')
-$lnk.TargetPath='D:/portable/Windows-KB890830-x64.exe'
+$lnk.TargetPath='D:/portable/Microsoft Windows Malicious Software Removal Tool/Windows-KB890830-x64.exe'
 $lnk.Save()
 ```
 ### Installing Mathpix Snipping Tool
@@ -3964,10 +3973,11 @@ Or
 
 Download [AutoClicker.exe](https://sourceforge.net/projects/orphamielautoclicker/files)
 ```powershell
-copy AutoClicker.exe D:/portable
+mkdir 'D:/portable/OP Auto Clicker'
+copy AutoClicker.exe 'D:/portable/OP Auto Clicker'
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/OP Auto Clicker.lnk')
-$lnk.TargetPath='D:/portable/AutoClicker.exe'
+$lnk.TargetPath='D:/portable/OP Auto Clicker/AutoClicker.exe'
 $lnk.Save()
 ```
 ### Installing Oracle VirtualBox
@@ -4206,6 +4216,16 @@ Click `Next >`
 Turn off `Show Readme`
 
 Click `Finish`
+### Installing Rufus
+Download [rufus-*p.exe](https://github.com/pbatard/rufus/releases)
+```powershell
+mkdir D:/portable/Rufus
+copy rufus-*p.exe D:/portable/Rufus/rufus.exe
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Rufus.lnk')
+$lnk.TargetPath='D:/portable/Rufus/rufus.exe'
+$lnk.Save()
+```
 ### Installing Samsung Magician
 Download [Samsung_Magician_Installer_Official_*.exe](https://semiconductor.samsung.com/consumer-storage/support/tools)
 
@@ -4366,10 +4386,11 @@ Or
 
 Download [GPU-Z.*.exe](https://www.techpowerup.com/download/techpowerup-gpu-z)
 ```powershell
-copy GPU-Z.*.exe D:/portable/GPU-Z.exe
+mkdir 'D:/portable/TechPowerUp GPU-Z'
+copy GPU-Z.*.exe 'D:/portable/TechPowerUp GPU-Z/GPU-Z.exe'
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/TechPowerUp GPU-Z.lnk')
-$lnk.TargetPath='D:/portable/GPU-Z.exe'
+$lnk.TargetPath='D:/portable/TechPowerUp GPU-Z/GPU-Z.exe'
 $lnk.Save()
 ```
 ### Configuring TechPowerUp GPU-Z
@@ -4554,10 +4575,21 @@ Or
 
 Download [uad-ng-windows.exe](https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/releases)
 ```powershell
-copy uad-ng-windows.exe D:/portable
+mkdir 'D:/portable/Universal Android Debloater Next Generation'
+copy uad-ng-windows.exe 'D:/portable/Universal Android Debloater Next Generation'
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/Universal Android Debloater Next Generation.lnk')
-$lnk.TargetPath='D:/portable/uad-ng-windows.exe'
+$lnk.TargetPath='D:/portable/Universal Android Debloater Next Generation/uad-ng-windows.exe'
+$lnk.Save()
+```
+### Installing USB Device Tree Viewer
+Download [UsbTreeView_x64.zip](https://www.uwe-sieber.de/files/UsbTreeView_x64.zip)
+```powershell
+mkdir 'D:/portable/USB Device Tree Viewer'
+7z x UsbTreeView_x64.zip -o'D:/portable/USB Device Tree Viewer'
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/USB Device Tree Viewer.lnk')
+$lnk.TargetPath='D:/portable/USB Device Tree Viewer/UsbTreeView.exe'
 $lnk.Save()
 ```
 ### Installing Ventoy
@@ -4680,6 +4712,15 @@ copy wget.exe D:/portable/wget
 ```
 ```cmd
 setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\wget"
+```
+### Installing Win 10 Tweaker
+```powershell
+mkdir 'D:/portable/Win 10 Tweaker'
+copy 'Win 10 Tweaker.exe' 'D:/portable/Win 10 Tweaker'
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Win 10 Tweaker.lnk')
+$lnk.TargetPath='D:/portable/Win 10 Tweaker/Win 10 Tweaker.exe'
+$lnk.Save()
 ```
 ### Installing Winaero Tweaker
 ```powershell
