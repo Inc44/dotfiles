@@ -1892,17 +1892,17 @@ $lnk.Save()
 ```powershell
 winget install -e --id File-New-Project.EarTrumpet
 ```
-### Installing Eclipse IDE for Java Developers
+### Installing Eclipse IDE
 ```powershell
-winget install -e --id EclipseFoundation.Eclipse.Java
+winget install -e --id EclipseFoundation.Eclipse.JEE
 ```
 Or
 
-Download [eclipse-java-*-R-win32-x86_64.zip](https://www.eclipse.org/downloads/packages)
+Download [eclipse-jee-*-R-win32-x86_64.zip](https://www.eclipse.org/downloads/packages)
 ```powershell
-7z x eclipse-java-*-R-win32-x86_64.zip -oD:/portable
+7z x eclipse-jee-*-R-win32-x86_64.zip -oD:/portable
 $ws = New-Object -ComObject WScript.Shell
-$lnk = $ws.CreateShortcut('D:/portable/Eclipse IDE for Java Developers.lnk')
+$lnk = $ws.CreateShortcut('D:/portable/Eclipse IDE.lnk')
 $lnk.TargetPath='D:/portable/eclipse/eclipse.exe'
 $lnk.Save()
 ```
@@ -1956,7 +1956,7 @@ winget install -e --id AndreWiethoff.ExactAudioCopy
 ```
 Or
 
-Download [eac-*.exe](https://www.exactaudiocopy.de)
+Download [eac-*.exe](https://www.exactaudiocopy.de/download)
 
 Open `eac-*.exe`
 
@@ -1979,10 +1979,10 @@ winget install -e --id PhapDieuDuong.ExifGlass
 ```
 Or
 
-Download [ExifGlass_*_x64.zip](https://github.com/d2phap/ExifGlass/releases)
+Download [ExifGlass_*_win-x64.zip](https://github.com/d2phap/ExifGlass/releases)
 ```powershell
-7z x ExifGlass_*_x64.zip -oD:/portable
-Rename-Item D:/portable/ExifGlass_*_x64 ExifGlass
+7z x ExifGlass_*_win-x64.zip -oD:/portable
+Rename-Item D:/portable/ExifGlass_*_win-x64 ExifGlass
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/ExifGlass.lnk')
 $lnk.TargetPath='D:/portable/ExifGlass/ExifGlass.exe'
@@ -2833,10 +2833,10 @@ winget install -e --id libjxl.libjxl
 ```
 Or
 
-Download [jxl-x64-windows-static.zip](https://github.com/libjxl/libjxl/releases)
+Download [jxl-x64-windows.7z](https://github.com/libjxl/libjxl/releases)
 ```powershell
-mkdir D:/portable/jxl
-7z x jxl-x64-windows-static.zip -oD:/portable/jxl
+7z x jxl-x64-windows.7z -oD:/portable
+Rename-Item D:/portable/x64-windows jxl
 ```
 ```cmd
 setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\jxl\bin"
@@ -3662,6 +3662,26 @@ Click `Install`
 Turn off `Start Oracle VirtualBox *?`
 
 Click `Finish`
+### Installing Paint (classic)
+Download [ClassicPaint.zip](https://win7games.com/download/ClassicPaint.zip)
+
+Open `ClassicPaint.zip`
+
+Open `ClassicPaint-*-setup.exe`
+
+Click `Next`
+
+Click `Open Settings`
+
+Click `Next`
+
+Click `Next`
+
+Click `Install`
+
+Turn off all
+
+Click `Finish`
 ### Installing ParkControl
 ```powershell
 winget install -e --id BitSum.ParkControl
@@ -4368,7 +4388,7 @@ Click `Finish`
 ```powershell
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/Tor Browser.lnk')
-$lnk.TargetPath='D:/portable/Tor Browser/firefox.exe'
+$lnk.TargetPath='D:/portable/Tor Browser/Browser/firefox.exe'
 $lnk.Save()
 ```
 ### Installing Ultimate Vocal Remover
@@ -4784,9 +4804,9 @@ winget install -e --id ApacheFriends.Xampp.8.2
 ```
 Or
 
-Download [xampp-windows-x64-8.2.*-0-VS16.zip](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows)
+Download [xampp-windows-x64-8.2.*-0-VS16.7z](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows)
 ```powershell
-7z x xampp-windows-x64-8.2.*-0-VS16.zip -oD:/portable
+7z x xampp-windows-x64-8.2.*-0-VS16.7z -oD:/portable
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/XAMPP Control Panel.lnk')
 $lnk.TargetPath='D:/portable/xampp/xampp-control.exe'
