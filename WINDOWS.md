@@ -691,6 +691,20 @@ Click `Typing insights`
 
 Turn off `Typing insights`
 
+Click $\leftarrow$ icon
+
+Click `Advanced keyboard settings`
+
+Click `Input language hot keys`
+
+Click `Change Key Sequence...`
+
+Click `Not Assigned`
+
+Click `OK`
+
+Click `OK`
+
 ---
 
 Click `Gaming`
@@ -736,6 +750,12 @@ Turn off `Get image descriptions, page titles, and popular links`
 Click `Accessibility`
 
 Click `Keyboard`
+
+Click `Sticky keys`
+
+Turn off `Keyboard shortcut for Sticky keys`
+
+Click $\leftarrow$ icon
 
 Turn off `Use the Print screen key to open screen capture`
 
@@ -1550,6 +1570,28 @@ Langue `English`
 Click `Sauver`
 
 Click `Yes`
+### Installing Cisco Packet Tracer
+Download [CiscoPacketTracer_*_win_64bit.exe](https://www.netacad.com/resources/lab-downloads)
+
+Open `CiscoPacketTracer_*_win_64bit.exe`
+
+Click `I accept the agreement`
+
+Click `Next`
+
+Type `C:\Program Files\Cisco Packet Tracer`
+
+Click `Next`
+
+Click `Next`
+
+Click `Next`
+
+Click `Install`
+
+Turn off `Launch Cisco Packet Tracer`
+
+Click `Finish`
 ### Installing Claude (Internet access required)
 ```powershell
 winget install -e --id Anthropic.Claude
@@ -1799,6 +1841,10 @@ Turn off `Automatically Adjust Input Sensitivity`
 Select `-100dB`
 
 Turn off `Echo Cancellation`
+
+Click `System`
+
+Turn off `Automatically open Discord when your computer starts up`
 ### Installing DiscordChatExporter.GUI
 ```powershell
 winget install -e --id Tyrrrz.DiscordChatExporter.GUI
@@ -2218,6 +2264,27 @@ Download [ghidra_*_PUBLIC_*.zip](https://github.com/NationalSecurityAgency/ghidr
 7z x ghidra_*_PUBLIC_*.zip -oD:/portable
 Rename-Item D:/portable/ghidra_*_PUBLIC ghidra
 ```
+### Installing Ghostscript
+```powershell
+winget install -e --id ArtifexSoftware.GhostScript
+```
+Or
+
+Download [gs*w64.exe](https://github.com/ArtifexSoftware/ghostpdl-downloads/releases)
+
+Open `gs*w64.exe`
+
+Click `Next >`
+
+Click `I Agree`
+
+Destination Folder `C:\Program Files\gs\gs`
+
+Click `Install`
+
+Click `Finish`
+
+Click `OK`
 ### Installing GIMP
 ```powershell
 winget install -e --id GIMP.GIMP
@@ -2643,6 +2710,32 @@ Click `I Agree`
 ```powershell
 winget install -e --id Apple.iCloud
 ```
+### Installing Image Composite Editor 2.0.3
+Download [ICE-2.0.3-for-64-bit-Windows.msi](https://download.microsoft.com/download/7/3/9/73918E0B-C146-40FA-B18C-EADF03FEC4BA/ICE-2.0.3-for-64-bit-Windows.msi)
+
+Open `ICE-2.0.3-for-64-bit-Windows.msi`
+
+Click `Next >`
+
+Click `I Agree`
+
+Click `Next >`
+
+Click `Everyone`
+
+Click `Next >`
+
+Click `Next >`
+
+Turn off `Launch Image Composite Editor`
+
+Click `Close`
+### Configuring Image Composite Editor
+Click Options icon
+
+Turn off `Check for updates each time ICE starts`
+
+Click `OK`
 ### Installing ImageGlass
 ```powershell
 winget install -e --id DuongDieuPhap.ImageGlass
@@ -2658,6 +2751,33 @@ $lnk = $ws.CreateShortcut('D:/portable/ImageGlass.lnk')
 $lnk.TargetPath='D:/portable/ImageGlass/ImageGlass.exe'
 $lnk.Save()
 ```
+### Installing ImageMagick
+```powershell
+winget install -e --id ImageMagick.Q16-HDRI
+```
+Or
+
+Download [ImageMagick-*-Q16-HDRI-x64-dll.exe](https://github.com/ImageMagick/ImageMagick/releases)
+
+Open `ImageMagick-*-Q16-HDRI-x64-dll.exe`
+
+Click `I accept the agreement`
+
+Click `Next`
+
+Type `C:\Program Files\ImageMagick-Q16-HDRI`
+
+Click `Next`
+
+Click `Next`
+
+Click `Next`
+
+Click `Install`
+
+Turn off `View index.html`
+
+Click `Finish`
 ### Installing Inkscape
 ```powershell
 winget install -e --id Inkscape.Inkscape
@@ -2739,6 +2859,21 @@ Click `I Accept`
 Click `OK`
 
 Click `OK`
+### Installing Jpegcrop
+```powershell
+winget install -e --id IJG.Jpegcrop
+```
+Or
+
+Download [jpegcrop.exe](https://jpegclub.org/jpegcrop.exe)
+```powershell
+mkdir D:/portable/Jpegcrop
+copy jpegcrop.exe D:/portable/Jpegcrop
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Jpegcrop.lnk')
+$lnk.TargetPath='D:/portable/Jpegcrop/jpegcrop.exe'
+$lnk.Save()
+```
 ### Installing Jpegoptim
 ```powershell
 winget install -e --id TimoKokkonen.Jpegoptim
@@ -2752,6 +2887,20 @@ mkdir D:/portable/jpegoptim
 ```
 ```cmd
 setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\jpegoptim"
+```
+### Installing jpegtran
+```powershell
+winget install -e --id IJG.jpegtran
+```
+Or
+
+Download [jpegtran.exe](https://jpegclub.org/jpegtran.exe)
+```powershell
+mkdir D:/portable/jpegtran
+copy jpegtran.exe D:/portable/jpegtran
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\jpegtran"
 ```
 ### Installing KiCad
 ```powershell
@@ -3099,6 +3248,46 @@ Or
 Download [MSTeamsSetup.exe](https://statics.teams.cdn.office.net/production-windows-x86/lkg/MSTeamsSetup.exe)
 
 Open `MSTeamsSetup.exe`
+### Installing Microsoft Visual C++ 2013 Redistributable (x64)
+Download [vcredist_x64.exe](https://aka.ms/highdpimfc2013x64enu)
+
+Open `vcredist_x64.exe`
+
+Turn on `I agree to the license terms and conditions`
+
+Click `Install`
+
+Click `Close`
+### Installing Microsoft Visual C++ 2013 Redistributable (x86)
+Download [vcredist_x86.exe](https://aka.ms/highdpimfc2013x86enu)
+
+Open `vcredist_x86.exe`
+
+Turn on `I agree to the license terms and conditions`
+
+Click `Install`
+
+Click `Close`
+### Installing Microsoft Visual C++ v14 Redistributable (x64)
+Download [VC_redist.x64.exe](https://aka.ms/vc14/vc_redist.x64.exe)
+
+Open `VC_redist.x64.exe`
+
+Turn on `I agree to the license terms and conditions`
+
+Click `Install`
+
+Click `Close`
+### Installing Microsoft Visual C++ v14 Redistributable (x86)
+Download [VC_redist.x86.exe](https://aka.ms/vc14/vc_redist.x86.exe)
+
+Open `VC_redist.x86.exe`
+
+Turn on `I agree to the license terms and conditions`
+
+Click `Install`
+
+Click `Close`
 ### Installing Microsoft Visual Studio Code
 ```powershell
 winget install -e --id Microsoft.VisualStudioCode
@@ -4100,6 +4289,9 @@ $lnk.TargetPath='D:/portable/Rufus/rufus.exe'
 $lnk.Save()
 ```
 ### Installing Samsung Magician
+```powershell
+winget install -e --id Samsung.SamsungMagician
+```
 Download [Samsung_Magician_Installer_Official_*.exe](https://semiconductor.samsung.com/consumer-storage/support/tools)
 
 Open `Samsung_Magician_Installer_Official_*.exe`
@@ -4366,6 +4558,21 @@ $lnk = $ws.CreateShortcut('D:/portable/ThrottleStop.lnk')
 $lnk.TargetPath='D:/portable/ThrottleStop/ThrottleStop.exe'
 $lnk.Save()
 ```
+### Installing TI Connect CE
+```powershell
+winget install -e --id TexasInstruments.TIConnectCE
+```
+Or
+
+Download [TIConnectCE-*.exe](https://education.ti.com/en/products/computer-software/ti-connect-ce-sw)
+
+Open `TIConnectCE-*.exe`
+
+Click Install icon
+
+Click `Install`
+
+Click Finish icon
 ### Installing Tor Browser
 ```powershell
 winget install -e --id TorProject.TorBrowser
@@ -4699,6 +4906,14 @@ $lnk = $ws.CreateShortcut('D:/portable/Winaero Tweaker.lnk')
 $lnk.TargetPath='D:/portable/Winaero Tweaker/WinaeroTweaker.exe'
 $lnk.Save()
 ```
+### Installing WinCDEmu
+Download [WinCDEmu-*.exe](https://github.com/sysprogs/WinCDEmu/releases)
+
+Click `Install`
+
+Click `Install`
+
+Click `OK`
 ### Installing Windhawk
 ```powershell
 winget install -e --id RamenSoftware.Windhawk
