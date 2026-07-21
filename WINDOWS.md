@@ -1450,6 +1450,7 @@ Turn on `Minimize to tray icon`
 
 Turn on `Allow browser integration`
 ### Installing BlueStacks (Internet access required)
+<!--Installer downloads multiple files from versioned links-->
 ```powershell
 winget install -e --id BlueStack.BlueStacks
 ```
@@ -1527,6 +1528,7 @@ $lnk.TargetPath='D:/portable/Calibre Portable/calibre-portable.exe'
 $lnk.Save()
 ```
 ### Installing CapCut (Internet access required)
+<!--Installer downloads files via signed API responses or from versioned links-->
 ```powershell
 winget install -e --id ByteDance.CapCut
 ```
@@ -1592,15 +1594,21 @@ Click `Install`
 Turn off `Launch Cisco Packet Tracer`
 
 Click `Finish`
-### Installing Claude (Internet access required)
+### Installing Claude
 ```powershell
 winget install -e --id Anthropic.Claude
 ```
 Or
 
-Download [Claude Setup.exe](https://claude.com/download)
+Download [Claude.msix](https://claude.ai/api/desktop/win32/x64/msix/latest/redirect)
 
-Open `Claude Setup.exe`
+Open `Claude.msix`
+
+Turn off `Launch when ready`
+
+Click `Install`
+
+Click Close icon
 ### Installing CMake
 ```powershell
 winget install -e --id Kitware.CMake
@@ -1643,7 +1651,7 @@ winget install -e --id Perplexity.Comet
 ```
 Or
 
-Download [comet_latest_intel_system.exe](https://www.perplexity.ai/rest/browser/download?platform=win_x64&channel=stable)
+Download [comet_latest_intel_system.exe](https://www.perplexity.ai/rest/browser/download?channel=stable&platform=win_x64)
 
 Open `comet_latest_intel_system.exe`
 
@@ -1750,6 +1758,7 @@ $lnk.TargetPath='D:/portable/cru/CRU.exe'
 $lnk.Save()
 ```
 ### Installing CyberGhost (Internet access required)
+<!--Installer downloads another versioned installer, which downloads a zip file from the API response's versioned link-->
 ```powershell
 winget install -e --id CyberGhost.CyberGhost
 ```
@@ -1820,7 +1829,7 @@ winget install -e --id Discord.Discord
 ```
 Or
 
-Download [DiscordSetup.exe](https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64)
+Download [DiscordSetup.exe](https://discord.com/api/downloads/distributions/app/installers/latest?arch=x64&channel=stable&platform=win)
 
 Open `DiscordSetup.exe`
 ### Configuring Discord
@@ -1906,19 +1915,21 @@ $lnk = $ws.CreateShortcut('D:/portable/Document Translation.lnk')
 $lnk.TargetPath='D:/portable/Document Translation/DocumentTranslation.GUI.exe'
 $lnk.Save()
 ```
-### Installing DuckDuckGo (Internet access required)
+### Installing DuckDuckGo
 ```powershell
 winget install -e --id DuckDuckGo.DesktopBrowser
 ```
 Or
 
-Download [DuckDuckGo.Installer.exe](https://duckduckgo.com)
+Download [DuckDuckGo.msixbundle](https://staticcdn.duckduckgo.com/windows-desktop-browser/help-pages/DuckDuckGo.msixbundle)
 
-Open `DuckDuckGo.Installer.exe`
+Open `DuckDuckGo.msixbundle`
 
-Turn off `Open DuckDuckGo when computer starts up`
+Turn off `Launch when ready`
 
-Click `Install now`
+Click `Install`
+
+Click Close icon
 ### Installing dupeGuru
 ```powershell
 winget install -e --id DupeGuru.DupeGuru
@@ -1962,7 +1973,7 @@ $lnk = $ws.CreateShortcut('D:/portable/EncryptPad.lnk')
 $lnk.TargetPath='D:/portable/encryptpad/encryptpad.exe'
 $lnk.Save()
 ```
-### Installing Epic Games Launcher (Internet access required)
+### Installing Epic Games Launcher
 ```powershell
 winget install -e --id EpicGames.EpicGamesLauncher
 ```
@@ -2087,7 +2098,7 @@ Rename-Item D:/portable/ffmpeg-*-full_build-shared ffmpeg
 ```cmd
 setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\ffmpeg\bin"
 ```
-### Installing Figma (Internet access required)
+### Installing Figma
 ```powershell
 winget install -e --id Figma.Figma
 ```
@@ -2096,6 +2107,8 @@ Or
 Download [FigmaSetup.exe](https://desktop.figma.com/win/FigmaSetup.exe)
 
 Open `FigmaSetup.exe`
+
+Click Close icon
 ### Installing Filius
 ```powershell
 winget install -e --id StefanFreischlad.Filius
@@ -3027,7 +3040,7 @@ Click `Next >`
 Click `Install`
 
 Click `Finish`
-### Installing LinpackXtreme (Internet access required)
+### Installing LinpackXtreme
 Download [LinpackXtreme-*.zip](https://www.majorgeeks.com/mg/getmirror/linpack_xtreme,1.html)
 ```powershell
 mkdir D:/portable/LinpackXtreme
@@ -3038,6 +3051,7 @@ $lnk.TargetPath='D:/portable/LinpackXtreme/LinpackXtreme_x64.exe'
 $lnk.WorkingDirectory='D:/portable/LinpackXtreme'
 $lnk.Save()
 ```
+### Configuring LinpackXtreme (Internet access required)
 Open `LinpackXtreme`
 
 Press Enter
@@ -3139,15 +3153,15 @@ CPU Thread Pool Size `10`
 Number of layers for which to force MoE weights onto CPU `35`
 
 Click `Load Model`
-### Installing Logi Options+ (Internet access required)
+### Installing Logi Options+
 ```powershell
 winget install -e --id Logitech.OptionsPlus
 ```
 Or
 
-Download [logioptionsplus_installer.exe](https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.exe)
+Download [logioptionsplus_installer_offline.exe](https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer_offline.exe)
 
-Open `logioptionsplus_installer.exe`
+Open `logioptionsplus_installer_offline.exe`
 
 Click `INSTALL OPTIONS+`
 ### Installing Looping
@@ -3239,15 +3253,19 @@ Click `Install`
 Turn off `Run MEGAsync *`
 
 Click `Finish`
-### Installing Microsoft Teams (Internet access required)
+### Installing Microsoft Teams
 ```powershell
 winget install -e --id Microsoft.Teams
 ```
 Or
 
-Download [MSTeamsSetup.exe](https://statics.teams.cdn.office.net/production-windows-x86/lkg/MSTeamsSetup.exe)
+Download [MSTeams-x64.msix](https://statics.teams.cdn.office.net/production-windows-x64/enterprise/webview2/lkg/MSTeams-x64.msix)
 
-Open `MSTeamsSetup.exe`
+Open `MSTeams-x64.msix`
+
+Turn off `Launch when ready`
+
+Click `Install Teams`
 ### Installing Microsoft Visual C++ 2013 Redistributable (x64)
 Download [vcredist_x64.exe](https://aka.ms/highdpimfc2013x64enu)
 
@@ -3294,7 +3312,7 @@ winget install -e --id Microsoft.VisualStudioCode
 ```
 Or
 
-Download [VSCode-win32-x64-*.zip](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-archive)
+Download [VSCode-win32-x64-*.zip](https://code.visualstudio.com/sha/download?os=win32-x64-archive)
 ```powershell
 mkdir 'D:/portable/Microsoft VS Code'
 7z x VSCode-win32-x64-*.zip -o'D:/portable/Microsoft VS Code'
@@ -3506,7 +3524,7 @@ winget install -e --id Mozilla.Firefox
 ```
 Or
 
-Download [Firefox Setup *.exe](https://download.mozilla.org/?product=firefox-latest-ssl&os=win64)
+Download [Firefox Setup *.exe](https://download.mozilla.org/?os=win64&product=firefox-latest-ssl)
 
 Open `Firefox Setup *.exe`
 
@@ -3711,7 +3729,7 @@ Click `Custom (Advanced)`
 Turn on `Perform a clean installation`
 
 Click `Next`
-### Installing NVIDIA Profile Inspector (Internet access required)
+### Installing NVIDIA Profile Inspector
 Download [nvidiaProfileInspector.zip](https://github.com/Orbmu2k/nvidiaProfileInspector/releases)
 ```powershell
 mkdir D:/portable/nvidiaProfileInspector
@@ -4752,17 +4770,21 @@ Click `OK`
 Click `Finish`
 
 Click `No`
-### Installing Viber (Internet access required)
+### Installing Viber
 ```powershell
 winget install -e --id Rakuten.Viber
 ```
 Or
 
-Download [ViberSetup.exe](https://download.cdn.viber.com/desktop/windows/ViberSetup.exe)
+Download [ViberSetup.msi](https://download.cdn.viber.com/desktop/windows/ViberSetup.msi)
 
-Open `ViberSetup.exe`
+Open `ViberSetup.msi`
 
 Click `Install`
+
+Click Close icon
+
+Click `Close anyway`
 ### Installing Victoria
 ```powershell
 winget install -e --id Victoria.Victoria
@@ -5051,19 +5073,23 @@ $lnk = $ws.CreateShortcut('D:/portable/y-cruncher.lnk')
 $lnk.TargetPath='D:/portable/y-cruncher/y-cruncher.exe'
 $lnk.Save()
 ```
-### Installing Yandex Browser (Internet access required)
+### Installing Yandex Browser
 ```powershell
 winget install -e --id Yandex.Browser
 ```
 Or
 
-Download [Yandex.exe](https://browser.yandex.com/download?os=win&bitness=64&statpromo=false)
+Download [Yandex.exe](https://download.cdn.yandex.net/browser/int/en/Yandex.exe)
 
 Open `Yandex.exe`
+
+Turn off `I want to help improve Yandex services by sending browser usage statistics to Yandex. Privacy policy`
 
 Turn off `Set as default browser`
 
 Click `Install`
+
+Click Close icon
 ### Installing yt-dlp
 ```powershell
 winget install -e --id yt-dlp.yt-dlp
