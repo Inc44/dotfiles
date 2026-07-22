@@ -1352,6 +1352,24 @@ $lnk = $ws.CreateShortcut('D:/portable/Audacity.lnk')
 $lnk.TargetPath='D:/portable/audacity/Audacity.exe'
 $lnk.Save()
 ```
+### Installing audio.cpp
+Download [audiocpp-windows-cuda-balance-*.zip](https://github.com/0xShug0/audio.cpp/releases)
+```powershell
+mkdir D:/portable/audiocpp
+7z x audiocpp-windows-cuda-balance-*.zip -oD:/portable/audiocpp
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\audiocpp"
+```
+### Installing audio.cpp Runtime
+Download [audiocpp-windows-cuda-runtime.zip](https://github.com/0xShug0/audio.cpp/releases)
+```powershell
+mkdir D:/portable/audiocpp/runtime
+7z x audiocpp-windows-cuda-runtime.zip -oD:/portable/audiocpp/runtime
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\audiocpp\runtime"
+```
 ### Installing balenaEtcher
 ```powershell
 winget install -e --id Balena.Etcher
@@ -2443,6 +2461,15 @@ Download [graalvm-java23-windows-amd64-gluon-23+25.1-dev.zip](https://github.com
 ```cmd
 setx /M GRAALVM_HOME "D:\portable\graalvm-java23-windows-amd64-gluon-23+25.1-dev"
 ```
+### Installing Gradle
+Download [gradle-*-bin.zip](https://gradle.org/releases)
+```powershell
+7z x gradle-*-bin.zip -oD:/portable
+Rename-Item D:/portable/gradle-* gradle
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\gradle\bin"
+```
 ### Installing grepWin
 ```powershell
 winget install -e --id StefansTools.grepWin
@@ -2719,10 +2746,42 @@ Download [ICAT-*.exe](https://www.nvidia.com/en-us/geforce/technologies/icat)
 Open `ICAT-*.exe`
 
 Click `I Agree`
-### Installing iCloud
+### Installing iCloud 7.21.0.23
 ```powershell
 winget install -e --id Apple.iCloud
 ```
+Or
+
+Download [iCloudSetup.exe](https://updates.cdn-apple.com/2020/windows/001-39935-20200911-1A70AA56-F448-11EA-8CC0-99D41950005E/iCloudSetup.exe)
+
+Open `iCloudSetup.exe`
+
+Click `I accept the terms in the license agreement`
+
+Turn off `Automatically update iCloud for Windows and other Apple software`
+
+Click `Install`
+
+Click `Finish`
+
+Click `Yes`
+```cmd
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{F0D63F85-37EC-4097-B30D-61B4A8917118}" /f
+```
+### Configuring iCloud (Internet access required)
+Apple ID: `your_email`
+
+Password: `your_password`
+
+Click `Sign In`
+
+Click `Don't send`
+
+Turn off all
+
+Click `Apply`
+
+Click `Delete from PC`
 ### Installing Image Composite Editor 2.0.3
 Download [ICE-2.0.3-for-64-bit-Windows.msi](https://download.microsoft.com/download/7/3/9/73918E0B-C146-40FA-B18C-EADF03FEC4BA/ICE-2.0.3-for-64-bit-Windows.msi)
 
@@ -2826,6 +2885,62 @@ mkdir D:/portable/iperf3
 ```
 ```cmd
 setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\iperf3"
+```
+### Installing Java Development Kit 17
+```powershell
+winget install -e --id Oracle.JDK.17
+```
+Or
+
+Download [jdk-17*_windows-x64_bin.zip](https://www.oracle.com/java/technologies/downloads)
+```powershell
+7z x jdk-17*_windows-x64_bin.zip -oD:/portable
+Rename-Item D:/portable/jdk-17* jdk-17
+```
+```cmd
+setx /M JAVA_HOME_17 D:/portable/jdk-17
+```
+### Installing Java Development Kit 21
+```powershell
+winget install -e --id Oracle.JDK.21
+```
+Or
+
+Download [jdk-21_windows-x64_bin.zip](https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.zip)
+```powershell
+7z x jdk-21_windows-x64_bin.zip -oD:/portable
+Rename-Item D:/portable/jdk-21* jdk-21
+```
+```cmd
+setx /M JAVA_HOME_21 D:/portable/jdk-21
+```
+### Installing Java Development Kit 25
+```powershell
+winget install -e --id Oracle.JDK.25
+```
+Or
+
+Download [jdk-25_windows-x64_bin.zip](https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.zip)
+```powershell
+7z x jdk-25_windows-x64_bin.zip -oD:/portable
+Rename-Item D:/portable/jdk-25* jdk-25
+```
+```cmd
+setx /M JAVA_HOME_25 D:/portable/jdk-25
+```
+### Installing Java Runtime Environment 8
+```powershell
+winget install -e --id Oracle.JavaRuntimeEnvironment
+```
+Or
+
+Download [jre-8u*-windows-x64.zip](https://www.oracle.com/java/technologies/downloads)
+```powershell
+7z x jre-8u*-windows-x64.zip -oD:/portable
+Rename-Item D:/portable/jre1.8* jre-1.8
+```
+```cmd
+setx /M JAVA_HOME_8 D:/portable/jre-1.8
 ```
 ### Installing JDM Drift
 Download [JDM Drift Build DEMO.zip](https://howdyho.net/windows-software/demka-drift-igry-na-unity-eksperiment-v2)
@@ -3630,6 +3745,27 @@ Turn off `Run MSI Afterburner`
 Turn off `Show Readme`
 
 Click `Finish`
+### Installing MySQL Workbench
+```powershell
+winget install -e --id Oracle.MySQLWorkbench
+```
+Or
+
+Download [mysql-workbench-community-*-winx64.msi](https://dev.mysql.com/downloads/workbench)
+
+Open `mysql-workbench-community-*-winx64.msi`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Next >`
+
+Click `Install`
+
+Turn off `Launch MySQL Workbench now`
+
+Click `Finish`
 ### Installing Nextcloud
 ```powershell
 winget install -e --id Nextcloud.NextcloudDesktop
@@ -3842,6 +3978,29 @@ $lnk = $ws.CreateShortcut('D:/portable/OP Auto Clicker.lnk')
 $lnk.TargetPath='D:/portable/OP Auto Clicker/AutoClicker.exe'
 $lnk.Save()
 ```
+### Installing OpenCode
+```powershell
+winget install -e --id SST.opencode
+```
+Or
+
+Download [opencode-windows-x64.zip](https://github.com/anomalyco/opencode/releases)
+```powershell
+mkdir D:/portable/opencode
+7z x opencode-windows-x64.zip -oD:/portable/opencode
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\opencode"
+```
+### Installing OpenCode Desktop
+```powershell
+winget install -e --id SST.OpenCodeDesktop
+```
+Or
+
+Download [opencode-desktop-win-x64.exe](https://github.com/anomalyco/opencode/releases)
+
+Open `opencode-desktop-win-x64.exe`
 ### Installing Oracle VirtualBox
 ```powershell
 winget install -e --id Oracle.VirtualBox
