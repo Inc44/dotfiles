@@ -381,6 +381,7 @@ Click `OK`
 ### Configuring PATH
 ```cmd
 setx /M PATH "%PATH%;%PORTABLE_PATH%"
+setx /M PORTABLE_PATH ""
 ```
 ### Configuring Region
 Click Start Menu icon
@@ -1325,6 +1326,21 @@ mkdir 'D:/portable/Arduino IDE'
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/Arduino IDE.lnk')
 $lnk.TargetPath='D:/portable/Arduino IDE/Arduino IDE.exe'
+$lnk.Save()
+```
+### Installing Atom
+```powershell
+winget install -e --id GitHub.Atom
+```
+Or
+
+Download [atom-x64-windows.zip](https://github.com/atom/atom/releases)
+```powershell
+7z x atom-x64-windows.zip -oD:/portable
+Rename-Item 'D:/portable/Atom x64' Atom
+$ws = New-Object -ComObject WScript.Shell
+$lnk = $ws.CreateShortcut('D:/portable/Atom.lnk')
+$lnk.TargetPath='D:/portable/Atom/atom.exe'
 $lnk.Save()
 ```
 ### Installing ATTO Disk Benchmark 4.01.0f1
@@ -2928,6 +2944,12 @@ Rename-Item D:/portable/jdk-25* jdk-25
 ```cmd
 setx /M JAVA_HOME_25 D:/portable/jdk-25
 ```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;%JAVA_HOME%\bin"
+```
+```cmd
+setx /M JAVA_HOME ^%JAVA_HOME_25^%
+```
 ### Installing Java Runtime Environment 8
 ```powershell
 winget install -e --id Oracle.JavaRuntimeEnvironment
@@ -3170,6 +3192,32 @@ $lnk.Save()
 Open `LinpackXtreme`
 
 Press Enter
+### Installing llama.cpp
+```powershell
+winget install -e --id ggml.llamacpp
+```
+Or
+
+Download [llama-b*-bin-win-vulkan-x64.zip](https://github.com/ggml-org/llama.cpp/releases)
+
+Download [llama-b*-bin-win-cuda-*-x64.zip](https://github.com/ggml-org/llama.cpp/releases)
+```powershell
+mkdir D:/portable/llama
+7z x llama-b*-bin-win-vulkan-x64.zip -oD:/portable/llama
+7z x llama-b*-bin-win-cuda-*-x64.zip ggml-cuda.dll -oD:/portable/llama
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\llama"
+```
+### Installing llama.cpp Runtime
+Download [cudart-llama-bin-win-cuda-*-x64.zip](https://github.com/ggml-org/llama.cpp/releases)
+```powershell
+mkdir D:/portable/llama/runtime
+7z x cudart-llama-bin-win-cuda-*-x64.zip -oD:/portable/llama/runtime
+```
+```cmd
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\llama\runtime"
+```
 ### Installing LM Studio
 ```powershell
 mkdir D:/portable/lmstudio
@@ -3853,6 +3901,29 @@ Click `Install`
 Click `Next >`
 
 Click `Finish`
+### Installing NVIDIA CUDA Toolkit
+```powershell
+winget install -e --id Nvidia.CUDA
+```
+Or
+
+Download [cuda_*_windows.exe](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local)
+
+Open `cuda_*_windows.exe`
+
+Click `AGREE AND CONTINUE`
+
+Click `Custom (Advanced)`
+
+Click `Next`
+
+Click `Next`
+
+Click `Next`
+
+Click `Next`
+
+Click `Close`
 ### Installing NVIDIA Broadcast (Internet access required)
 Download [NVIDIA_Broadcast_v*.exe](https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app)
 
