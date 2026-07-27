@@ -174,19 +174,19 @@ Turn off `Launch Intel® Graphics Software`
 
 Click `Restart Now`
 ### Installing NVIDIA Drivers
-Download [*-notebook-win10-64bit-international-whql.exe](https://www.nvidia.com/en-us/drivers) <!--GeForce Game Ready Driver 391.* for GeForce GT 540M-->
+Download [*-notebook-win10-64bit-international-whql.exe](https://www.nvidia.com/en-us/drivers) <!--[GeForce Game Ready Driver 391.* for GeForce GT 540M](https://www.nvidia.com/en-us/drivers/details/13284)-->
 
 Open `*-notebook-win10-64bit-international-whql.exe`
 
 Or
 
-Download [*-notebook-win10-win11-64bit-international-dch-whql.exe](https://www.nvidia.com/en-us/drivers) <!--GeForce Security Update Driver 582.* for GeForce 940MX-->
+Download [*-notebook-win10-win11-64bit-international-dch-whql.exe](https://www.nvidia.com/en-us/drivers) <!--[GeForce Security Update Driver 582.* for GeForce 940MX](https://www.nvidia.com/en-us/drivers/details/280035)-->
 
 Open `*-notebook-win10-win11-64bit-international-dch-whql.exe`
 
 Or
 
-Download [*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe](https://www.nvidia.com/en-us/drivers) <!--NVIDIA Studio Driver 596.*-->
+Download [*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe](https://www.nvidia.com/en-us/drivers) <!--[NVIDIA Studio Driver 596.*](https://www.nvidia.com/en-us/drivers/details/267262)-->
 
 Open `*-desktop-win10-win11-64bit-international-nsd-dch-whql.exe`
 
@@ -242,7 +242,7 @@ Click `OK`
 
 Click `OK`
 ### Installing Win 10 Tweaker
-Download [Win 10 Tweaker](https://win10tweaker.ru)
+Download [Win 10 Tweaker.exe](https://win10tweaker.ru)
 ### Configuring Win 10 Tweaker
 Open `Win 10 Tweaker.exe`
 
@@ -2799,7 +2799,7 @@ Click `Apply`
 
 Click `Delete from PC`
 ### Installing Image Composite Editor 2.0.3
-Download [ICE-2.0.3-for-64-bit-Windows.msi](https://download.microsoft.com/download/7/3/9/73918E0B-C146-40FA-B18C-EADF03FEC4BA/ICE-2.0.3-for-64-bit-Windows.msi)
+Download [ICE-2.0.3-for-64-bit-Windows.msi](https://download.microsoft.com/download/7/3/9/73918E0B-C146-40FA-B18C-EADF03FEC4BA/ICE-2.0.3-for-64-bit-Windows.msi) <!--archive.org-->
 
 Open `ICE-2.0.3-for-64-bit-Windows.msi`
 
@@ -4734,11 +4734,11 @@ $lnk = $ws.CreateShortcut('D:/portable/Telegram.lnk')
 $lnk.TargetPath='D:/portable/Telegram/Telegram.exe'
 $lnk.Save()
 ```
-### Installing TerraMap
-Download [TerraMap-*.zip](https://terramap.github.io/windows.html)
+### Installing TerraMap 1.4.19
+Download [TerraMap-1.4.19.zip](https://terramap.github.io/windows.html)
 ```powershell
-7z x TerraMap-*.zip -oD:/portable
-Rename-Item D:/portable/TerraMap-* TerraMap
+7z x TerraMap-1.4.19.zip -oD:/portable
+Rename-Item D:/portable/TerraMap-1.4.19 TerraMap
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/TerraMap.lnk')
 $lnk.TargetPath='D:/portable/TerraMap/TerraMap.exe'
