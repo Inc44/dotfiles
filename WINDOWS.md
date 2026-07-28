@@ -174,7 +174,7 @@ Turn off `Launch Intel® Graphics Software`
 
 Click `Restart Now`
 ### Installing NVIDIA Drivers
-Download [*-notebook-win10-64bit-international-whql.exe](https://www.nvidia.com/en-us/drivers) <!--[GeForce Game Ready Driver 391.* for GeForce GT 540M](https://www.nvidia.com/en-us/drivers/details/13284)-->
+Download [*-notebook-win10-64bit-international-whql.exe](https://www.nvidia.com/en-us/drivers) <!--[GeForce Game Ready Driver 391.* for GeForce GT 540M](https://www.nvidia.com/en-us/drivers/details/132841)-->
 
 Open `*-notebook-win10-64bit-international-whql.exe`
 
@@ -1112,6 +1112,7 @@ $lnk = $ws.CreateShortcut('D:/portable/Advanced Renamer 3.lnk')
 $lnk.TargetPath='D:/portable/Advanced Renamer 3/ARen.exe'
 $lnk.Save()
 ```
+### Configuring Advanced Renamer 3.95.4
 Open `Advanced Renamer 3`
 
 Click `OK`
@@ -1157,6 +1158,7 @@ $lnk = $ws.CreateShortcut('D:/portable/Advanced Renamer 4.lnk')
 $lnk.TargetPath='D:/portable/Advanced Renamer 4/aren.exe'
 $lnk.Save()
 ```
+### Configuring Advanced Renamer 4
 Open `Advanced Renamer 4`
 
 Turn on `Accept license terms`
@@ -1493,7 +1495,7 @@ Or
 Download [BlueStacksInstaller_5.*_native.exe](https://cloud.bluestacks.com/api/getdownloadnow?platform=win)
 
 Open `BlueStacksInstaller_5.*_native.exe`
-### Installing Brother iPrint&Scan
+### Installing Brother iPrint&Scan (Internet access required)
 ```powershell
 winget install -e --id Brother.iPrintScan
 ```
@@ -1591,6 +1593,7 @@ $lnk = $ws.CreateShortcut('D:/portable/Checksum Compare.lnk')
 $lnk.TargetPath='D:/portable/Checksum Compare/Checksum compare.exe'
 $lnk.Save()
 ```
+### Configuring Checksum Compare
 Open `Checksum Compare`
 
 Click `Edition`
@@ -1866,6 +1869,8 @@ Or
 Download [DiscordSetup.exe](https://discord.com/api/downloads/distributions/app/installers/latest?arch=x64&channel=stable&platform=win)
 
 Open `DiscordSetup.exe`
+
+Click Close icon
 ### Configuring Discord
 Open `Discord`
 
@@ -1904,15 +1909,16 @@ $lnk.TargetPath='D:/portable/DiscordChatExporter/DiscordChatExporter.exe'
 $lnk.Save()
 ```
 ### Installing Disk2vhd
-Download [Disk2vhd.zip](https://download.sysinternals.com/files/Disk2vhd.zip)
+Download [disk2vhd64.exe](https://live.sysinternals.com/disk2vhd64.exe)
 ```powershell
 mkdir D:/portable/Disk2vhd
-7z x Disk2vhd.zip -oD:/portable/Disk2vhd
+copy disk2vhd64.exe D:/portable/Disk2vhd
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut('D:/portable/Disk2vhd.lnk')
 $lnk.TargetPath='D:/portable/Disk2vhd/disk2vhd64.exe'
 $lnk.Save()
 ```
+### Configuring Disk2vhd
 Open `Disk2vhd`
 
 Click `Agree`
@@ -1979,7 +1985,7 @@ $lnk = $ws.CreateShortcut('D:/portable/dupeGuru.lnk')
 $lnk.TargetPath='D:/portable/dupeguru/dupeguru-win64.exe'
 $lnk.Save()
 ```
-### Installing EarTrumpet
+### Installing EarTrumpet (Internet access required)
 ```powershell
 winget install -e --id File-New-Project.EarTrumpet
 ```
@@ -2016,6 +2022,8 @@ Or
 Download [EpicInstaller-*.exe](https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.exe)
 
 Open `EpicInstaller-*.exe`
+
+Click Close icon
 ### Configuring Epic Games Launcher (Internet access required)
 Type `your_email`
 
@@ -2408,13 +2416,15 @@ winget install -e --id GitHub.GitHubDesktop
 ```
 Or
 
-Download [GitHubDesktopSetup-x64.exe](https://desktop.github.com/download)
+Download [GitHubDesktopSetup-x64.exe](https://github.com/desktop/desktop/releases)
 
 Open `GitHubDesktopSetup-x64.exe`
 
 Click `Skip this step`
 
 Click `Finish`
+
+Click Close icon
 ### Installing Google Chrome
 ```powershell
 winget install -e --id Google.Chrome
@@ -2433,8 +2443,6 @@ Or
 Download [GoogleDriveSetup.exe](https://dl.google.com/drive-file-stream/GoogleDriveSetup.exe)
 
 Open `GoogleDriveSetup.exe`
-
-Turn off `Add desktop shortcuts to Google Docs, Sheets, and Slides`
 
 Click `Install`
 
@@ -2762,6 +2770,8 @@ Download [ICAT-*.exe](https://www.nvidia.com/en-us/geforce/technologies/icat)
 Open `ICAT-*.exe`
 
 Click `I Agree`
+
+Click Close icon
 ### Installing iCloud 7.21.0.23
 ```powershell
 winget install -e --id Apple.iCloud
@@ -2781,6 +2791,8 @@ Click `Install`
 Click `Finish`
 
 Click `Yes`
+
+Click Close icon
 ```cmd
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{F0D63F85-37EC-4097-B30D-61B4A8917118}" /f
 ```
@@ -3082,6 +3094,8 @@ Or
 Download [KindleForPC-installer-*.exe](https://www.amazon.com/kindlepcdownload)
 
 Open `KindleForPC-installer-*.exe`
+
+Click Close icon
 ### Installing Kiwix
 Download [kiwix-desktop_windows_x64_*.zip](https://download.kiwix.org/release/kiwix-desktop/kiwix-desktop_windows_x64.zip)
 ```powershell
@@ -3327,6 +3341,8 @@ Download [logioptionsplus_installer_offline.exe](https://download01.logi.com/web
 Open `logioptionsplus_installer_offline.exe`
 
 Click `INSTALL OPTIONS+`
+
+Click Close icon
 ### Installing Looping
 Download [Looping.zip](https://looping.net/Looping.zip)
 ```powershell
@@ -3429,6 +3445,42 @@ Open `MSTeams-x64.msix`
 Turn off `Launch when ready`
 
 Click `Install Teams`
+### Installing Microsoft Visual C++ 2008 Redistributable (x64)
+Download [vcredist_x64.exe](https://www.microsoft.com/en-us/download/details.aspx?id=26368)
+
+Click `Next >`
+
+Turn on `I have read and accept the license terms.`
+
+Click `Install >`
+
+Click `Finish`
+### Installing Microsoft Visual C++ 2008 Redistributable (x86)
+Download [vcredist_x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=26368)
+
+Click `Next >`
+
+Turn on `I have read and accept the license terms.`
+
+Click `Install >`
+
+Click `Finish`
+### Installing Microsoft Visual C++ 2010 Redistributable (x64)
+Download [vcredist_x64.exe](https://www.microsoft.com/en-us/download/details.aspx?id=26999)
+
+Turn on `I have read and accept the license terms.`
+
+Click `Install`
+
+Click `Finish`
+### Installing Microsoft Visual C++ 2010 Redistributable (x86)
+Download [vcredist_x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=26999)
+
+Turn on `I have read and accept the license terms.`
+
+Click `Install`
+
+Click `Finish`
 ### Installing Microsoft Visual C++ 2013 Redistributable (x64)
 Download [vcredist_x64.exe](https://aka.ms/highdpimfc2013x64enu)
 
@@ -3606,7 +3658,7 @@ Click `Next >`
 Turn off `Tell me more`
 
 Click `Close`
-### Installing Mine-imator
+### Installing Mine-imator 1
 ```powershell
 winget install -e --id DavidNorgren.Mine-imator
 ```
@@ -3648,7 +3700,7 @@ winget install -e --id Anaconda.Miniconda3
 ```
 Or
 
-Download [Miniconda3-latest-Windows-x86_64.exe](https://anaconda.com/api/installers/Miniconda3-latest-Windows-x86_64.exe)
+Download [Miniconda3-latest-Windows-x86_64.exe](https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe)
 
 Open `Miniconda3-latest-Windows-x86_64.exe`
 
@@ -3839,7 +3891,7 @@ winget install -e --id OpenJS.NodeJS
 ```
 Or
 
-Download [node-v*-win-x64.zip](https://nodejs.org/en/download)
+Download [node-v*-win-x64.zip](https://nodejs.org/en/download) <!--LTS-->
 ```powershell
 7z x node-v*-win-x64.zip -oD:/portable
 Rename-Item D:/portable/node-v*-win-x64 node
@@ -3990,6 +4042,7 @@ $lnk = $ws.CreateShortcut('D:/portable/Oculante.lnk')
 $lnk.TargetPath='D:/portable/Oculante/oculante.exe'
 $lnk.Save()
 ```
+### Configuring Oculante
 Open `Oculante`
 
 Click $\equiv$ icon
@@ -4034,6 +4087,8 @@ Download [OllamaSetup.exe](https://github.com/ollama/ollama/releases)
 Open `OllamaSetup.exe`
 
 Click `Install`
+
+Click Close icon
 ### Installing OP Auto Clicker
 ```powershell
 winget install -e --id OPAutoClicker.OPAutoClicker
@@ -4072,6 +4127,8 @@ Or
 Download [opencode-desktop-win-x64.exe](https://github.com/anomalyco/opencode/releases)
 
 Open `opencode-desktop-win-x64.exe`
+
+Click Close icon
 ### Installing Oracle VirtualBox
 ```powershell
 winget install -e --id Oracle.VirtualBox
@@ -4105,6 +4162,8 @@ Download [ClassicPaint.zip](https://win7games.com/download/ClassicPaint.zip)
 Open `ClassicPaint.zip`
 
 Open `ClassicPaint-*-setup.exe`
+
+Click `Next`
 
 Click `Next`
 
@@ -4216,6 +4275,8 @@ Turn on `I agree to the license terms and conditions`
 Click `Install`
 
 Click `Close`
+
+Click Close icon
 ### Configuring PowerToys
 Click `Configure PowerToys`
 
@@ -4421,6 +4482,11 @@ $lnk.TargetPath='D:/portable/PuTTY/PUTTY.EXE'
 $lnk.Save()
 ```
 ### Installing Python 3.13
+```powershell
+winget install -e --id Python.Python.3.13
+```
+Or
+
 Download [python-3.13.*-amd64.exe](https://www.python.org/downloads/windows)
 
 Open `python-3.13.*-amd64.exe`
@@ -4768,13 +4834,13 @@ winget install -e --id JFLarvoire.Ag
 ```
 Or
 
-Download [ag.zip](https://github.com/JFLarvoire/the_silver_searcher/releases)
+Download [ag-*-amd64.zip](https://github.com/JFLarvoire/the_silver_searcher/releases)
 ```powershell
 mkdir D:/portable/ag
-7z x ag.zip -oD:/portable/ag
+7z x ag-*-amd64.zip -oD:/portable/ag
 ```
 ```cmd
-setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\ag\WIN64"
+setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\ag"
 ```
 ### Installing Thio's SVG Thumbnail Extension
 ```powershell
@@ -4941,6 +5007,7 @@ $lnk = $ws.CreateShortcut('D:/portable/USBWebServer.lnk')
 $lnk.TargetPath='D:/portable/USBWebServer/usbwebserver.exe'
 $lnk.Save()
 ```
+### Configuring USBWebserver
 Open `USBWebServer`
 
 Click `Allow`
