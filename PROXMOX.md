@@ -128,6 +128,7 @@ iface nic0 inet static
 ```bash
 systemctl restart networking
 ```
+Follow [Creating Shared Network](WINDOWS.md)
 ### Installing iwlwifi Driver for Intel Wi-Fi 7 Support
 ```bash
 wget http://ftp.debian.org/debian/pool/non-free-firmware/f/firmware-nonfree/firmware-iwlwifi_20260519-1_all.deb
@@ -174,7 +175,7 @@ apt install iwd
 systemctl enable iwd
 systemctl start iwd
 ```
-[Connecting Wi-Fi](ARCH.md)
+Follow [Connecting Wi-Fi](ARCH.md)
 ```bash
 ip a
 ```
@@ -327,7 +328,7 @@ wget -O /tmp/i915-sriov-dkms_2026.05.06_amd64.deb "https://github.com/strongtz/i
 dpkg -i /tmp/i915-sriov-dkms_2026.05.06_amd64.deb
 nano /etc/default/grub (`GRUB_CMDLINE_LINUX_DEFAULT="intel_iommu=on i915.enable_guc=3 i915.max_vfs=7 module_blacklist=xe loglevel=0 quiet"`)
 grub-mkconfig -o /boot/efi/EFI/proxmox/grub.cfg
-update-initramfs -u
+update-initramfs -u -k all
 apt install sysfsutils
 echo "devices/pci0000:00/0000:00:02.0/sriov_numvfs = 7" > /etc/sysfs.conf
 reboot
@@ -338,7 +339,7 @@ echo "vfio-pci" | sudo tee /etc/modules-load.d/vfio-pci.conf
 sudo tee /etc/udev/rules.d/99-i915-vf-vfio.rules <<EOF
 ACTION=="add", SUBSYSTEM=="pci", KERNEL=="0000:00:02.[1-7]", ATTR{vendor}=="0x8086", ATTR{device}=="0x7d67", DRIVER!="vfio-pci", RUN+="/bin/sh -c 'echo \$kernel > /sys/bus/pci/devices/\$kernel/driver/unbind; echo vfio-pci > /sys/bus/pci/devices/\$kernel/driver_override; modprobe vfio-pci; echo \$kernel > /sys/bus/pci/drivers/vfio-pci/bind'"
 EOF
-update-initramfs -u
+update-initramfs -u -k all
 reboot
 ```
 ### Downloading ISO Images
@@ -420,6 +421,10 @@ Cores: `20`
 
 Type: `host`
 
+Turn on `Advanced`
+
+Select `Off` for `nested-virt`
+
 Click `Next`
 #### Memory
 Memory (MiB): `81920`
@@ -462,13 +467,15 @@ Select `Console`
 
 Click `Start Now`
 
-Follow [Partitioning Disk](ARCH.md)
+Follow [Partitioning Disk](ARCH.md) <!--cfdisk /dev/vda 2097152S EFI System, /dev/vdb 209715200S Microsoft basic data, /dev/vdc 209715200S Microsoft basic data, mkfs.fat -F32 /dev/vda1, mkfs.ntfs -Q /dev/vdb1, /dev/vdc1-->
 
 Select `Hardware`
 
 Select `Hard Disk (virtio2)`
 
 Click `Detach`
+
+Click `Yes`
 
 Select `Options`
 
@@ -496,8 +503,6 @@ Turn on `Enabled` for `virtio0`
 
 Turn on `Enabled` for `virtio1`
 
-Move `virtio0` above all
-
 Click `OK`
 
 Select `Console`
@@ -510,17 +515,15 @@ Follow [Installing VirtIO Drivers](WINDOWS.md)
 
 Click `Shutdown`
 
-Select `Hardware`
+Click `Hardware`
 
 Click `Add`
 
-Select `PCI Device`
+Click `PCI Device`
 
-Turn on `Raw Device`
+Click `Raw Device`
 
-Device: `0000:02:00.0` <!--AD106 [GeForce RTX 4060 Ti 16GB]-->
-
-Turn on `All Functions`
+Select `0000:00:02.1` for `Device:` <!--Arrow Lake-S [Intel Graphics]-->
 
 Turn on `PCI-Express`
 
@@ -528,11 +531,13 @@ Click `Add`
 
 Click `Add`
 
-Select `PCI Device`
+Click `PCI Device`
 
-Turn on `Raw Device`
+Click `Raw Device`
 
-Device: `0000:00:02.1` <!--Arrow Lake-S [Intel Graphics]-->
+Select `0000:02:00.0` for `Device:` <!--AD106 [GeForce RTX 4060 Ti 16GB]-->
+
+Turn on `All Functions`
 
 Turn on `PCI-Express`
 
@@ -550,9 +555,9 @@ Click `Start Now`
 
 Follow [Configuring Initial Password](WINDOWS.md)
 
-Follow [Installing NVIDIA Drivers](WINDOWS.md)
-
 Follow [Installing Intel Drivers](WINDOWS.md)
+
+Follow [Installing NVIDIA Drivers](WINDOWS.md)
 
 Click `Shutdown`
 
@@ -570,7 +575,25 @@ Select `Console`
 
 Click `Start Now`
 
-Follow [Partitioning Disk](ARCH.md)
+Follow [Partitioning Disk](ARCH.md) <!--cfdisk /dev/vdb, Delete /dev/vdb2, /dev/vdb3-->
+
+Select `Options`
+
+Double click on `Boot Order`
+
+Turn off `Enabled` for all
+
+Turn on `Enabled` for `virtio0`
+
+Turn on `Enabled` for `virtio1`
+
+Click `OK`
+
+Select `Console`
+
+Click `Start Now`
+
+Follow [Configuring Device Name](WINDOWS.md) to EOF
 ### Creating Arch Linux VM
 Click `Create VM`
 #### General
@@ -1230,7 +1253,7 @@ apt install dropbear-initramfs
 echo 'DROPBEAR_OPTIONS="-s -j -k -p 4452 -I 30"' >> /etc/dropbear/initramfs/dropbear.conf
 echo "IP=192.168.31.254::192.168.31.1:255.255.255.0::enp130s0:off" >> /etc/initramfs-tools/initramfs.conf
 nano /etc/dropbear/initramfs/authorized_keys
-update-initramfs -u
+update-initramfs -u -k all
 ```
 ### Connecting Dropbear from Laptop
 ```bash
