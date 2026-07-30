@@ -330,6 +330,34 @@ Click Microsoft Store icon
 #### Virus Scanner
 #### System Information
 Restart
+### Configuring Disks
+Right click Start Menu icon
+
+Select `Disk Management`
+
+Right click `(C:)`
+
+Click `Extend Volume...`
+
+Click `Next >`
+
+Type `*` for `Select the amount of space in MB:` <!--Total volume size in megabytes (MB): `102400`-->
+
+Click `Next >`
+
+Click `Finish`
+
+Right click `(*:)`
+
+Click `Change Drive Letter and Paths...`
+
+Click `Change...`
+
+Select `D` for `Assign the following drive letter:`
+
+Click `OK`
+
+Click `Yes`
 ### Configuring Folders
 Press Win + E
 
@@ -3959,6 +3987,8 @@ winget install -e --id Nvidia.CUDA
 ```
 Or
 
+Follow [Installing Visual Studio](WINDOWS.md)
+
 Download [cuda_*_windows.exe](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local)
 
 Open `cuda_*_windows.exe`
@@ -4134,6 +4164,8 @@ Click Close icon
 winget install -e --id Oracle.VirtualBox
 ```
 Or
+
+Follow [Installing Python](WINDOWS.md)
 
 Download [VirtualBox-*-Win.exe](https://www.virtualbox.org/wiki/Downloads)
 
@@ -4498,6 +4530,11 @@ Turn on `Add python.exe to PATH`
 Click `Install Now`
 
 Click `Close`
+### Installing Python 3.13 for Windows Extensions
+Download [pywin32-*-cp313-cp313-win_amd64.whl](https://pypi.org/project/pywin32)
+```powershell
+pip install (Resolve-Path pywin32-*-cp313-cp313-win_amd64.whl)
+```
 ### Installing qBittorrent (libtorrent 2)
 ```powershell
 winget install -e --id qBittorrent.qBittorrent.lt2
