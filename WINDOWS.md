@@ -1098,38 +1098,6 @@ Open `AdGuardVpn-*.exe`
 Click `Install`
 
 Click `Close`
-### Configuring AdGuard VPN (Internet access required)
-Click `I accept the AdGuard VPN EULA and Privacy policy`
-
-Click `Log in or create an account`
-
-Email `your_email`
-
-Click `Continue`
-
-Password `your_password`
-
-Click `Continue`
-
-Click `Open`
-
-Click `Stay with free version`
-
-Click `Settings`
-
-Click `App settings`
-
-Click `Launch app on system startup`
-
-Turn off `Launch app on system startup`
-
-Click < icon
-
-Click `Advanced settings`
-
-Turn on `Post-quantum cryptography`
-
-Turn on `Use Wintun`
 ### Installing Advanced Renamer 3.95.4
 Download [advanced_renamer_portable_3_95_4.zip](https://www.advancedrenamer.com/down/advanced_renamer_portable_3_95_4.zip)
 ```powershell
@@ -1140,42 +1108,6 @@ $lnk = $ws.CreateShortcut('D:/portable/Advanced Renamer 3.lnk')
 $lnk.TargetPath='D:/portable/Advanced Renamer 3/ARen.exe'
 $lnk.Save()
 ```
-### Configuring Advanced Renamer 3.95.4
-Open `Advanced Renamer 3`
-
-Click `OK`
-
-Turn on `Don't show this again`
-
-Click `Settings`
-
-Turn off `Show file info panel`
-
-Turn on `Show grid`
-
-Color mode: `Light`
-
-Click `Image files`
-
-EXIF field for image date time operations: `ExifTool DateOriginal`
-
-Turn on `Don't analyze image metadata`
-
-Click `Music & video files`
-
-Turn on `Don't analyze music metadata`
-
-Turn on `Don't analyze video metadata`
-
-Click `OK`
-
-Name collision rule `Append number`
-
-Click `Load Method List`
-
-File name: `Renaming Method List.aren`
-
-Click `Open`
 ### Installing Advanced Renamer 4
 Download [advanced_renamer_portable_4_*.zip](https://www.advancedrenamer.com/download)
 ```powershell
@@ -1186,48 +1118,6 @@ $lnk = $ws.CreateShortcut('D:/portable/Advanced Renamer 4.lnk')
 $lnk.TargetPath='D:/portable/Advanced Renamer 4/aren.exe'
 $lnk.Save()
 ```
-### Configuring Advanced Renamer 4
-Open `Advanced Renamer 4`
-
-Turn on `Accept license terms`
-
-Click `OK`
-
-Click `OK`
-
-Turn on `Don't show this again`
-
-Click `Settings`
-
-Turn on `Show grid`
-
-Turn on `Grid stripes`
-
-Color mode: `Light`
-
-Click `Media files`
-
-Field for image date time operations: `Date original`
-
-Turn on `Don't analyze image metadata`
-
-Turn on `Don't analyze audio metadata`
-
-Turn on `Don't analyze video metadata`
-
-Turn on `Don't analyze document metadata`
-
-Click `OK`
-
-Name collision rule `Append number`
-
-Click `Load Method List`
-
-Click `Load Method List...`
-
-File name: `Renaming Method List.aren`
-
-Click `Open`
 ### Installing AIMP
 ```powershell
 winget install -e --id AIMP.AIMP
@@ -1483,36 +1373,6 @@ $lnk.TargetPath='D:/portable/Bitwarden/Bitwarden.exe'
 $lnk.Save()
 copy D:/portable/Bitwarden.lnk 'C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Startup'
 ```
-### Configuring Bitwarden
-Open `Bitwarden`
-
-Email address `your_email`
-
-Turn on `Remember email`
-
-Click `Continue`
-
-Master password `your_password`
-
-Click `Log in`
-
-Click `File`
-
-Click `Settings`
-
-Select `On system lock` for `Timeout`
-
-Turn on `Unlock with Windows Hello`
-
-Click `Preferences`
-
-Select `10 seconds` for `Clear clipboard`
-
-Click `App settings (all accounts)`
-
-Turn on `Minimize to tray icon`
-
-Turn on `Allow browser integration`
 ### Installing BlueStacks (Internet access required)
 <!--Installer downloads multiple files from versioned links-->
 ```powershell
@@ -1621,22 +1481,6 @@ $lnk = $ws.CreateShortcut('D:/portable/Checksum Compare.lnk')
 $lnk.TargetPath='D:/portable/Checksum Compare/Checksum compare.exe'
 $lnk.Save()
 ```
-### Configuring Checksum Compare
-Open `Checksum Compare`
-
-Click `Edition`
-
-Click `Options...`
-
-Turn on `Sauvegarder les répertoires courants en quittant.`
-
-Turn on `Sauvegarder l'agencement des vues en quittant.`
-
-Langue `English`
-
-Click `Sauver`
-
-Click `Yes`
 ### Installing Cisco Packet Tracer
 Download [CiscoPacketTracer_*_win_64bit.exe](https://www.netacad.com/resources/lab-downloads)
 
@@ -1751,12 +1595,6 @@ $lnk = $ws.CreateShortcut('D:/portable/CrystalDiskInfo.lnk')
 $lnk.TargetPath='D:/portable/CrystalDiskInfo/DiskInfo64.exe'
 $lnk.Save()
 ```
-### Configuring CrystalDiskInfo
-Click `Jazyk(Language)`
-
-Click `A-N`
-
-Click `English, [English]`
 ### Installing CrystalDiskMark
 ```powershell
 winget install -e --id CrystalDewWorld.CrystalDiskMark
@@ -1899,28 +1737,6 @@ Download [DiscordSetup.exe](https://discord.com/api/downloads/distributions/app/
 Open `DiscordSetup.exe`
 
 Click Close icon
-### Configuring Discord
-Open `Discord`
-
-Type `your_email`
-
-Type `your_password`
-
-Click `Log In`
-
-Click ⚙️ icon
-
-Click `Voice & Video`
-
-Turn off `Automatically Adjust Input Sensitivity`
-
-Select `-100dB`
-
-Turn off `Echo Cancellation`
-
-Click `System`
-
-Turn off `Automatically open Discord when your computer starts up`
 ### Installing DiscordChatExporter.GUI
 ```powershell
 winget install -e --id Tyrrrz.DiscordChatExporter.GUI
@@ -1946,10 +1762,6 @@ $lnk = $ws.CreateShortcut('D:/portable/Disk2vhd.lnk')
 $lnk.TargetPath='D:/portable/Disk2vhd/disk2vhd64.exe'
 $lnk.Save()
 ```
-### Configuring Disk2vhd
-Open `Disk2vhd`
-
-Click `Agree`
 ### Installing DNS Benchmark 1.3.6668.0
 Download [DNSBench.exe](https://www.majorgeeks.com/mg/getmirror/dns_benchmark,1.html)
 ```powershell
@@ -2052,16 +1864,6 @@ Download [EpicInstaller-*.exe](https://launcher-public-service-prod06.ol.epicgam
 Open `EpicInstaller-*.exe`
 
 Click Close icon
-### Configuring Epic Games Launcher (Internet access required)
-Type `your_email`
-
-Click `Continue`
-
-Type `your_password`
-
-Click `Sign in`
-
-Click `Allow`
 ### Installing Everything
 ```powershell
 winget install -e --id voidtools.Everything
@@ -2430,14 +2232,6 @@ $lnk.Save()
 ```cmd
 setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\Git\cmd"
 ```
-### Configuring Git
-```bash
-git config --global --unset-all user.email
-git config --global --unset-all user.name
-git config --global init.defaultBranch master
-git config --global user.email email
-git config --global user.name name
-```
 ### Installing GitHub Desktop
 ```powershell
 winget install -e --id GitHub.GitHubDesktop
@@ -2741,52 +2535,6 @@ $lnk = $ws.CreateShortcut('D:/portable/Icaros.lnk')
 $lnk.TargetPath='D:/portable/Icaros/IcarosConfig.exe'
 $lnk.Save()
 ```
-### Configuring Icaros
-Open `Icaros`
-
-Click `Continue`
-
-Click `Got It!`
-
-PRESET: `MOST KNOWN`
-
-Click `3g2, 3gp, 3gp2, 3gpp, ai, aiff, amv, ape, asf, avi, avif, bik, bmp, cb7, cbr, cbz, dds, divx, dpg, dv, dvr-ms, eps, epub, evo, exr, f4v, flac, flv, gif, hdmov, heic, heif, indd, jpg, k3g, m1v, m2t, m2ts, m2v, m4b, m4p, m4v, mk3d, mka, mkv, mov, mp2v, mp3, mp4, mp4v, mpc, mpe, mpeg, mpg, mpv2, mpv4, mqv, mts, mxf, nsv, odp, ods, odt, ofr, ofs, ogg, ogm, ogv, opus, png, psd, psxprj, px, qt, ram, rm, rmvb, skm, spx, swf, tak, tif, tiff, tp, tpr, trp, ts, tta, vob, wav, webm, webp, wm, wmv, wv, xvid`
-
-Type `;aac;jxl;m4a`
-
-Turn on `Enable black/white frame detection`
-
-Turn on `Display movie reel on video thumbnails`
-
-Turn on `Use embedded Cover Art for thumbnails`
-
-Turn on `Use any embedded image as Cover Art`
-
-Click PROPERTIES icon
-
-Click THUMBNAILING icon
-
-Click PROPERTIES icon
-
-Click `Deselect All`
-
-Click all `Select All`
-
-Click CACHE icon
-
-Cache Location `D:\cache\icaros`
-
-Press Enter
-
-Click `Yes`
-
-Click `THUMBNAILING`
-
-Click `PROPERTIES`
-
-Click `CACHE`
-
-Click `CACHE`
 ### Installing ICAT
 ```powershell
 winget install -e --id Nvidia.ICAT
@@ -2824,20 +2572,6 @@ Click Close icon
 ```cmd
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{F0D63F85-37EC-4097-B30D-61B4A8917118}" /f
 ```
-### Configuring iCloud (Internet access required)
-Apple ID: `your_email`
-
-Password: `your_password`
-
-Click `Sign In`
-
-Click `Don't send`
-
-Turn off all
-
-Click `Apply`
-
-Click `Delete from PC`
 ### Installing Image Composite Editor 2.0.3
 Download [ICE-2.0.3-for-64-bit-Windows.msi](https://download.microsoft.com/download/7/3/9/73918E0B-C146-40FA-B18C-EADF03FEC4BA/ICE-2.0.3-for-64-bit-Windows.msi) <!--archive.org-->
 
@@ -2858,12 +2592,6 @@ Click `Next >`
 Turn off `Launch Image Composite Editor`
 
 Click `Close`
-### Configuring Image Composite Editor
-Click Options icon
-
-Turn off `Check for updates each time ICE starts`
-
-Click `OK`
 ### Installing ImageGlass
 ```powershell
 winget install -e --id DuongDieuPhap.ImageGlass
@@ -2920,14 +2648,6 @@ $lnk = $ws.CreateShortcut('D:/portable/Inkscape.lnk')
 $lnk.TargetPath='D:/portable/inkscape/bin/inkscape.exe'
 $lnk.Save()
 ```
-### Configuring Inkscape
-Open `Inkscape`
-
-Click `Time to Draw`
-
-Turn off `Show this every time`
-
-Click `New Document`
 ### Installing iPerf3
 ```powershell
 winget install -e --id ar51an.iPerf3
@@ -3029,26 +2749,6 @@ $lnk = $ws.CreateShortcut('D:/portable/JetBrains dotPeek.lnk')
 $lnk.TargetPath='D:/portable/JetBrains dotPeek/dotPeek64.exe'
 $lnk.Save()
 ```
-### Configuring JetBrains dotPeek
-Open `JetBrains dotPeek`
-
-Click `I accept the terms of the license agreement`
-
-Click `OK`
-
-Click `Not specified`
-
-Click `Europe`
-
-Click `OK`
-
-Scroll all down
-
-Click `I Accept`
-
-Click `OK`
-
-Click `OK`
 ### Installing Jpegcrop
 ```powershell
 winget install -e --id IJG.Jpegcrop
@@ -3230,10 +2930,6 @@ $lnk.TargetPath='D:/portable/LinpackXtreme/LinpackXtreme_x64.exe'
 $lnk.WorkingDirectory='D:/portable/LinpackXtreme'
 $lnk.Save()
 ```
-### Configuring LinpackXtreme (Internet access required)
-Open `LinpackXtreme`
-
-Press Enter
 ### Installing llama.cpp
 ```powershell
 winget install -e --id ggml.llamacpp
@@ -3282,82 +2978,6 @@ Click `Next`
 Click `Install`
 
 Click `Finish`
-
-Click `Get Started`
-
-Click `Continue`
-
-Turn on `Turn on Developer Mode`
-
-Turn off `Start local LLM service on login`
-
-Click `Continue to LM Studio`
-
-Click My Models icon
-
-Click ⋯ icon
-
-Click `Change...`
-
-Folder: `D:\lmstudio`
-
-Click `Select Folder`
-
-Click App Settings icon
-
-Click `Chat`
-
-Turn off `Move deleted chats and folders to Trash`
-### Configuring LM Studio (Internet access required)
-Click Start Menu icon
-
-Type `LM Studio`
-
-Press Enter
-
-Click App Settings icon
-
-Click `Runtime`
-
-Click `Check for updates`
-
-Click all `Update`
-
-Click 🗙 icon
-
-Click Chat icon
-
-Click `Select a model to load`
-
-Type `Qwen3.6-35B-A3B-MTP-GGUF`
-
-Click `🔎 Search more results for "Qwen3.6-35B-A3B-MTP-GGUF"`
-
-Select `GGUF Qwen3.6 35B A3B UD Q6_K_XL` for `Download Options`
-
-Click `📥 Download 34.40 GB`
-
-Click 🗙 icon
-
-Click `Select a model to load`
-
-Turn on `Manually choose model load parameters (or hold Alt)`
-
-Click `Qwen3.6 35B A3B UD`
-
-Context Length `262144`
-
-GPU Offload `41`
-
-Turn on `Remember settings for openai's gpt-oss 120b`
-
-Turn on `Show advanced settings`
-
-CPU Thread Pool Size `10`
-
-Number of layers for which to force MoE weights onto CPU `35`
-
-Click `Load Model`
 ### Installing Logi Options+
 ```powershell
 winget install -e --id Logitech.OptionsPlus
@@ -3751,16 +3371,6 @@ Turn off `Gettings started with Conda`
 Turn off `Welcome to Anaconda`
 
 Click `Finish`
-### Configuring Miniconda3 (Internet access required)
-Click Start Menu icon
-
-Type `Anaconda PowerShell Prompt`
-
-Press Enter
-```powershell
-conda init --condabin
-conda tos accept
-```
 ### Installing Mozilla Firefox (en-US)
 ```powershell
 winget install -e --id Mozilla.Firefox
@@ -4072,30 +3682,6 @@ $lnk = $ws.CreateShortcut('D:/portable/Oculante.lnk')
 $lnk.TargetPath='D:/portable/Oculante/oculante.exe'
 $lnk.Save()
 ```
-### Configuring Oculante
-Open `Oculante`
-
-Click $\equiv$ icon
-
-Click `Preferences`
-
-Click `Visual`
-
-Click `Accent color`
-
-Click `R 255`
-
-Type `135`
-
-Click `G 0`
-
-Type `100`
-
-Click `B 75`
-
-Type `184`
-
-Window title `{FULLPATH}`
 ### Installing Ollama
 ```powershell
 winget install -e --id Ollama.Ollama
@@ -4244,30 +3830,6 @@ Click `Next`
 Click `Per Computer`
 
 Click `Next`
-### Configuring Parsec (Internet access required)
-Click Start Menu icon
-
-Type `Parsec`
-
-Press Enter
-
-Email `your_email`
-
-Password `your_password`
-
-Click `Log In`
-
-Click `Settings`
-
-Select `Keyboard` for `Immersive mode`
-
-Click `Host`
-
-Select `50 Mbps` for `Bandwidth limit`
-
-Turn on `Constant FPS`
-
-Turn off `Echo Cancelling`
 ### Installing PeaZip
 ```powershell
 winget install -e --id Giorgiotani.Peazip
@@ -4309,170 +3871,6 @@ Click `Install`
 Click `Close`
 
 Click Close icon
-### Configuring PowerToys
-Click `Configure PowerToys`
-
-Turn off `Awake`
-
-Turn off `Command Palette`
-
-Turn on `Environment Variables`
-
-Turn off `File Locksmith`
-
-Turn on `Hosts File Editor`
-
-Turn off `PowerRename`
-
-Turn on `PowerToys Run`
-
-Turn on `Workspaces`
-
-Click `Always On Top`
-
-Select `4` for `Thickness (px)`
-
-Turn off `Play a sound when pinning a window`
-
----
-
-Click `Home`
-
-Click `Color Picker`
-
-Turn on `Show color name`
-
-Turn on `CMYK`
-
-Turn on `CIELAB`
-
----
-
-Click `Home`
-
-Click `FancyZones`
-
-Turn on `Make the dragged window transparent`
-
-Turn on `Override Windows Snap`
-
----
-
-Click `Home`
-
-Click `Hosts File Editor`
-
-Turn off `Show a warning at startup`
-
-Turn off `Backup hosts file`
-
----
-
-Click `Home`
-
-Click `Image Resizer`
-
-Click Remove icon
-
-Click `Yes`
-
-Click Remove icon
-
-Click `Yes`
-
-Click Remove icon
-
-Click `Yes`
-
-Click Remove icon
-
-Click `Yes`
-
-Click `Add new size`
-
-Click Edit icon
-
-Name `icon`
-
-Width `100`
-
-Height `100`
-
-Click `Add new size`
-
-Click Edit icon for `New size 1`
-
-Name `512`
-
-Width `512`
-
-Height `512`
-
-Select `PNG encoder` for `Fallback encoder`
-
-Select `100` for `JPEG quality level (%)`
-
----
-
-Click `Home`
-
-Click `Mouse Highlighter`
-
-Click `Appearance & behavior`
-
-Select `#A600F00` for `Primary button highlight color`
-
----
-
-Click `Home`
-
-Click `PowerToys Run`
-
-Turn on `OneNote`
-
-Click `Time and Date`
-
-Turn on `Show time with seconds`
-
-Custom formats `unix=UXT`
-
-Click `Unit Converter`
-
-Turn on `Include in global result`
-
-Click `Value Generator`
-
-Turn on `Include in global result`
-
-Click `Windows settings`
-
-Turn on `Include in global result`
-
-Click `Window Walker`
-
-Turn on `Show process id in the subtitle`
-
-Turn on `Stay open after closing windows and killing processes`
-
-Turn on `Hide Explorer process information`
-
----
-
-Click `Home`
-
-Click `Screen Ruler`
-
-Select `Spacing` for `Default mode`
-
-Select `35` for `Pixel tolerance for edge detection`
-
----
-
-Click `Home`
-
-Click `Shortcut Guide`
-
-Select `Right` for `Window position`
 ### Installing Prime95
 ```powershell
 winget install -e --id mersenne.prime95
@@ -4819,10 +4217,6 @@ $lnk = $ws.CreateShortcut('D:/portable/TechPowerUp GPU-Z.lnk')
 $lnk.TargetPath='D:/portable/TechPowerUp GPU-Z/GPU-Z.exe'
 $lnk.Save()
 ```
-### Configuring TechPowerUp GPU-Z
-Open `TechPowerUp GPU-Z`
-
-Click `No`
 ### Installing Telegram
 ```powershell
 winget install -e --id Telegram.TelegramDesktop
@@ -5044,26 +4438,6 @@ $lnk = $ws.CreateShortcut('D:/portable/USBWebServer.lnk')
 $lnk.TargetPath='D:/portable/USBWebServer/usbwebserver.exe'
 $lnk.Save()
 ```
-### Configuring USBWebserver
-Open `USBWebServer`
-
-Click `Allow`
-
-Click `Allow`
-
-Click ▾ icon
-
-Click `English`
-
-Click `PHPMyAdmin`
-
-Username: `root`
-
-Password: `your_password`
-
-Click `Log in`
-
-Select `Original` for Theme`
 ### Installing Ventoy
 ```powershell
 winget install -e --id Ventoy.Ventoy
@@ -5482,6 +4856,632 @@ Rename-Item D:/portable/zstd-v*-win64 zstd
 ```cmd
 setx /M PORTABLE_PATH "%PORTABLE_PATH%;D:\portable\zstd"
 ```
+### Configuring AdGuard VPN (Internet access required)
+Click `I accept the AdGuard VPN EULA and Privacy policy`
+
+Click `Log in or create an account`
+
+Email `your_email`
+
+Click `Continue`
+
+Password `your_password`
+
+Click `Continue`
+
+Click `Open`
+
+Click `Stay with free version`
+
+Click `Settings`
+
+Click `App settings`
+
+Click `Launch app on system startup`
+
+Turn off `Launch app on system startup`
+
+Click < icon
+
+Click `Advanced settings`
+
+Turn on `Post-quantum cryptography`
+
+Turn on `Use Wintun`
+### Configuring Advanced Renamer 3.95.4
+Open `Advanced Renamer 3`
+
+Click `OK`
+
+Turn on `Don't show this again`
+
+Click `Settings`
+
+Turn off `Show file info panel`
+
+Turn on `Show grid`
+
+Color mode: `Light`
+
+Click `Image files`
+
+EXIF field for image date time operations: `ExifTool DateOriginal`
+
+Turn on `Don't analyze image metadata`
+
+Click `Music & video files`
+
+Turn on `Don't analyze music metadata`
+
+Turn on `Don't analyze video metadata`
+
+Click `OK`
+
+Name collision rule `Append number`
+
+Click `Load Method List`
+
+File name: `Renaming Method List.aren`
+
+Click `Open`
+### Configuring Advanced Renamer 4
+Open `Advanced Renamer 4`
+
+Turn on `Accept license terms`
+
+Click `OK`
+
+Click `OK`
+
+Turn on `Don't show this again`
+
+Click `Settings`
+
+Turn on `Show grid`
+
+Turn on `Grid stripes`
+
+Color mode: `Light`
+
+Click `Media files`
+
+Field for image date time operations: `Date original`
+
+Turn on `Don't analyze image metadata`
+
+Turn on `Don't analyze audio metadata`
+
+Turn on `Don't analyze video metadata`
+
+Turn on `Don't analyze document metadata`
+
+Click `OK`
+
+Name collision rule `Append number`
+
+Click `Load Method List`
+
+Click `Load Method List...`
+
+File name: `Renaming Method List.aren`
+
+Click `Open`
+### Configuring Bitwarden
+Open `Bitwarden`
+
+Email address `your_email`
+
+Turn on `Remember email`
+
+Click `Continue`
+
+Master password `your_password`
+
+Click `Log in`
+
+Click `File`
+
+Click `Settings`
+
+Select `On system lock` for `Timeout`
+
+Turn on `Unlock with Windows Hello`
+
+Click `Preferences`
+
+Select `10 seconds` for `Clear clipboard`
+
+Click `App settings (all accounts)`
+
+Turn on `Minimize to tray icon`
+
+Turn on `Allow browser integration`
+### Configuring Checksum Compare
+Open `Checksum Compare`
+
+Click `Edition`
+
+Click `Options...`
+
+Turn on `Sauvegarder les répertoires courants en quittant.`
+
+Turn on `Sauvegarder l'agencement des vues en quittant.`
+
+Langue `English`
+
+Click `Sauver`
+
+Click `Yes`
+### Configuring CrystalDiskInfo
+Click `Jazyk(Language)`
+
+Click `A-N`
+
+Click `English, [English]`
+### Configuring Discord
+Open `Discord`
+
+Type `your_email`
+
+Type `your_password`
+
+Click `Log In`
+
+Click ⚙️ icon
+
+Click `Voice & Video`
+
+Turn off `Automatically Adjust Input Sensitivity`
+
+Select `-100dB`
+
+Turn off `Echo Cancellation`
+
+Click `System`
+
+Turn off `Automatically open Discord when your computer starts up`
+### Configuring Disk2vhd
+Open `Disk2vhd`
+
+Click `Agree`
+### Configuring Epic Games Launcher (Internet access required)
+Type `your_email`
+
+Click `Continue`
+
+Type `your_password`
+
+Click `Sign in`
+
+Click `Allow`
+### Configuring Git
+```bash
+git config --global --unset-all user.email
+git config --global --unset-all user.name
+git config --global init.defaultBranch master
+git config --global user.email email
+git config --global user.name name
+```
+### Configuring Icaros
+Open `Icaros`
+
+Click `Continue`
+
+Click `Got It!`
+
+PRESET: `MOST KNOWN`
+
+Click `3g2, 3gp, 3gp2, 3gpp, ai, aiff, amv, ape, asf, avi, avif, bik, bmp, cb7, cbr, cbz, dds, divx, dpg, dv, dvr-ms, eps, epub, evo, exr, f4v, flac, flv, gif, hdmov, heic, heif, indd, jpg, k3g, m1v, m2t, m2ts, m2v, m4b, m4p, m4v, mk3d, mka, mkv, mov, mp2v, mp3, mp4, mp4v, mpc, mpe, mpeg, mpg, mpv2, mpv4, mqv, mts, mxf, nsv, odp, ods, odt, ofr, ofs, ogg, ogm, ogv, opus, png, psd, psxprj, px, qt, ram, rm, rmvb, skm, spx, swf, tak, tif, tiff, tp, tpr, trp, ts, tta, vob, wav, webm, webp, wm, wmv, wv, xvid`
+
+Type `;aac;jxl;m4a`
+
+Turn on `Enable black/white frame detection`
+
+Turn on `Display movie reel on video thumbnails`
+
+Turn on `Use embedded Cover Art for thumbnails`
+
+Turn on `Use any embedded image as Cover Art`
+
+Click PROPERTIES icon
+
+Click THUMBNAILING icon
+
+Click PROPERTIES icon
+
+Click `Deselect All`
+
+Click all `Select All`
+
+Click CACHE icon
+
+Cache Location `D:\cache\icaros`
+
+Press Enter
+
+Click `Yes`
+
+Click `THUMBNAILING`
+
+Click `PROPERTIES`
+
+Click `CACHE`
+
+Click `CACHE`
+### Configuring iCloud (Internet access required)
+Apple ID: `your_email`
+
+Password: `your_password`
+
+Click `Sign In`
+
+Click `Don't send`
+
+Turn off all
+
+Click `Apply`
+
+Click `Delete from PC`
+### Configuring Image Composite Editor
+Click Options icon
+
+Turn off `Check for updates each time ICE starts`
+
+Click `OK`
+### Configuring Inkscape
+Open `Inkscape`
+
+Click `Time to Draw`
+
+Turn off `Show this every time`
+
+Click `New Document`
+### Configuring JetBrains dotPeek
+Open `JetBrains dotPeek`
+
+Click `I accept the terms of the license agreement`
+
+Click `OK`
+
+Click `Not specified`
+
+Click `Europe`
+
+Click `OK`
+
+Scroll all down
+
+Click `I Accept`
+
+Click `OK`
+
+Click `OK`
+### Configuring LinpackXtreme (Internet access required)
+Open `LinpackXtreme`
+
+Press Enter
+### Configuring LM Studio
+Click `Get Started`
+
+Click `Continue`
+
+Turn on `Turn on Developer Mode`
+
+Turn off `Start local LLM service on login`
+
+Click `Continue to LM Studio`
+
+Click My Models icon
+
+Click ⋯ icon
+
+Click `Change...`
+
+Folder: `D:\lmstudio`
+
+Click `Select Folder`
+
+Click App Settings icon
+
+Click `Chat`
+
+Turn off `Move deleted chats and folders to Trash`
+### Configuring LM Studio (Internet access required)
+Click Start Menu icon
+
+Type `LM Studio`
+
+Press Enter
+
+Click App Settings icon
+
+Click `Runtime`
+
+Click `Check for updates`
+
+Click all `Update`
+
+Click 🗙 icon
+
+Click Chat icon
+
+Click `Select a model to load`
+
+Type `Qwen3.6-35B-A3B-MTP-GGUF`
+
+Click `🔎 Search more results for "Qwen3.6-35B-A3B-MTP-GGUF"`
+
+Select `GGUF Qwen3.6 35B A3B UD Q6_K_XL` for `Download Options`
+
+Click `📥 Download 34.40 GB`
+
+Click 🗙 icon
+
+Click `Select a model to load`
+
+Turn on `Manually choose model load parameters (or hold Alt)`
+
+Click `Qwen3.6 35B A3B UD`
+
+Context Length `262144`
+
+GPU Offload `41`
+
+Turn on `Remember settings for openai's gpt-oss 120b`
+
+Turn on `Show advanced settings`
+
+CPU Thread Pool Size `10`
+
+Number of layers for which to force MoE weights onto CPU `35`
+
+Click `Load Model`
+### Configuring Miniconda3 (Internet access required)
+Click Start Menu icon
+
+Type `Anaconda PowerShell Prompt`
+
+Press Enter
+```powershell
+conda init --condabin
+conda tos accept
+```
+### Configuring Oculante
+Open `Oculante`
+
+Click $\equiv$ icon
+
+Click `Preferences`
+
+Click `Visual`
+
+Click `Accent color`
+
+Click `R 255`
+
+Type `135`
+
+Click `G 0`
+
+Type `100`
+
+Click `B 75`
+
+Type `184`
+
+Window title `{FULLPATH}`
+### Configuring Parsec (Internet access required)
+Click Start Menu icon
+
+Type `Parsec`
+
+Press Enter
+
+Email `your_email`
+
+Password `your_password`
+
+Click `Log In`
+
+Click `Settings`
+
+Select `Keyboard` for `Immersive mode`
+
+Click `Host`
+
+Select `50 Mbps` for `Bandwidth limit`
+
+Turn on `Constant FPS`
+
+Turn off `Echo Cancelling`
+### Configuring PowerToys
+Click `Configure PowerToys`
+
+Turn off `Awake`
+
+Turn off `Command Palette`
+
+Turn on `Environment Variables`
+
+Turn off `File Locksmith`
+
+Turn on `Hosts File Editor`
+
+Turn off `PowerRename`
+
+Turn on `PowerToys Run`
+
+Turn on `Workspaces`
+
+Click `Always On Top`
+
+Select `4` for `Thickness (px)`
+
+Turn off `Play a sound when pinning a window`
+
+---
+
+Click `Home`
+
+Click `Color Picker`
+
+Turn on `Show color name`
+
+Turn on `CMYK`
+
+Turn on `CIELAB`
+
+---
+
+Click `Home`
+
+Click `FancyZones`
+
+Turn on `Make the dragged window transparent`
+
+Turn on `Override Windows Snap`
+
+---
+
+Click `Home`
+
+Click `Hosts File Editor`
+
+Turn off `Show a warning at startup`
+
+Turn off `Backup hosts file`
+
+---
+
+Click `Home`
+
+Click `Image Resizer`
+
+Click Remove icon
+
+Click `Yes`
+
+Click Remove icon
+
+Click `Yes`
+
+Click Remove icon
+
+Click `Yes`
+
+Click Remove icon
+
+Click `Yes`
+
+Click `Add new size`
+
+Click Edit icon
+
+Name `icon`
+
+Width `100`
+
+Height `100`
+
+Click `Add new size`
+
+Click Edit icon for `New size 1`
+
+Name `512`
+
+Width `512`
+
+Height `512`
+
+Select `PNG encoder` for `Fallback encoder`
+
+Select `100` for `JPEG quality level (%)`
+
+---
+
+Click `Home`
+
+Click `Mouse Highlighter`
+
+Click `Appearance & behavior`
+
+Select `#A600F00` for `Primary button highlight color`
+
+---
+
+Click `Home`
+
+Click `PowerToys Run`
+
+Turn on `OneNote`
+
+Click `Time and Date`
+
+Turn on `Show time with seconds`
+
+Custom formats `unix=UXT`
+
+Click `Unit Converter`
+
+Turn on `Include in global result`
+
+Click `Value Generator`
+
+Turn on `Include in global result`
+
+Click `Windows settings`
+
+Turn on `Include in global result`
+
+Click `Window Walker`
+
+Turn on `Show process id in the subtitle`
+
+Turn on `Stay open after closing windows and killing processes`
+
+Turn on `Hide Explorer process information`
+
+---
+
+Click `Home`
+
+Click `Screen Ruler`
+
+Select `Spacing` for `Default mode`
+
+Select `35` for `Pixel tolerance for edge detection`
+
+---
+
+Click `Home`
+
+Click `Shortcut Guide`
+
+Select `Right` for `Window position`
+### Configuring TechPowerUp GPU-Z
+Open `TechPowerUp GPU-Z`
+
+Click `No`
+### Configuring USBWebserver
+Open `USBWebServer`
+
+Click `Allow`
+
+Click `Allow`
+
+Click ▾ icon
+
+Click `English`
+
+Click `PHPMyAdmin`
+
+Username: `root`
+
+Password: `your_password`
+
+Click `Log in`
+
+Select `Original` for Theme`
 ## Paid Portable
 ### Installing 4K Stogram Professional License
 Open `4K Stogram Professional` installer
