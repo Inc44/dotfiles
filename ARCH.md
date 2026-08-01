@@ -41,7 +41,7 @@ mount partition /mnt/home
 ```
 ### Installing Arch Linux
 ```bash
-archinstall --config /path/to/user_configuration.json --creds /path/to/user_credentials.json
+archinstall --config /path/to/user_configuration.json --creds /path/to/user_credentials.json --advanced
 exit
 reboot
 ```
@@ -87,8 +87,18 @@ Server = https://github.com/LizardByte/pacman-repo/releases/latest/download
 sudo pacman -Sy
 ```
 ### Pacman Installing Everything
+<!--linux, linux-lts provided by Kernels-->
+<!--htop, nano, openssh, smartmontools, vim, wget, xdg-utils provided by Profile>Type>Desktop-->
+<!--gnome, gnome-tweaks provided by Profile>Type>Desktop>GNOME-->
+<!--dkms, libva-nvidia-driver, nvidia-open-dkms provided by Profile>Graphics driver>Nvidia (open kernel module for newer GPUs, Turing+)-->
+<!--gdm provided by Profile>Greeter-->
+<!--gst-plugin-pipewire, libpulse, pipewire, pipewire-alsa, pipewire-jack, pipewire-pulse, wireplumber provided by Application>Audio-->
+<!--bluez, bluez-utils provided by Application>Bluetooth-->
+<!--cups, cups-pk-helper, system-config-printer provided by Application>Print service-->
+<!--noto-fonts, noto-fonts-cjk, noto-fonts-emoji, ttf-dejavu, ttf-liberation provided by Application>Additional fonts-->
+<!--baobab, decibels, epiphany, gdm, gnome-backgrounds, gnome-calculator, gnome-calendar, gnome-characters, gnome-clocks, gnome-color-manager, gnome-connections, gnome-console, gnome-contacts, gnome-control-center, gnome-disk-utility, gnome-font-viewer, gnome-keyring, gnome-logs, gnome-maps, gnome-menus, gnome-music, gnome-remote-desktop, gnome-session, gnome-settings-daemon, gnome-shell, gnome-software, gnome-system-monitor, gnome-text-editor, gnome-tour, gnome-user-docs, gnome-user-share, gnome-weather, grilo-plugins, gst-thumbnailers, gvfs, gvfs-afc, gvfs-dnssd, gvfs-goa, gvfs-gphoto2, gvfs-mtp, gvfs-nfs, gvfs-onedrive, gvfs-smb, gvfs-wsdd, loupe, malcontent, nautilus, orca, papers, rygel, showtime, simple-scan, snapshot, sushi, tecla, xdg-desktop-portal-gnome, xdg-user-dirs-gtk, yelp provided by gnome-->
 ```bash
-sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote audacity blender bspwm clinfo cmake composer conky cuda cups curl discord dkms docker emacs eog extension-manager ffmpeg firefox ghidra ghostscript git-lfs github-cli gnome-screenshot gnome-shell-extensions go gparted gsfonts hashcat hashcat-utils hplip httrack inkscape intel-compute-runtime jdk-openjdk john kitty kiwix-desktop lib32-nvidia-utils libgda6 libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk linux linux-lts lua-socket luarocks ly mariadb mokutil mono mpc mpd mpv nautilus ncmpcpp net-tools nodejs noto-fonts noto-fonts-cjk noto-fonts-emoji ntfs-3g nvidia-open-dkms nvidia-settings nvidia-utils nvtop obs-studio obsidian oculante ollama-cuda opam opencl-headers os-prober pacman-contrib patchelf pavucontrol pdf2svg perl-file-mimeinfo php php-apache phpmyadmin picom polybar power-profiles-daemon powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone reflector rofi rsync rust rxvt-unicode solaar speedtest-cli sqlite3 sqlitebrowser steam stow sunshine sxhkd system-config-printer telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr the_silver_searcher thunderbird time tk tmux torbrowser-launcher tree unpaper unzip veracrypt vim virtualbox virtualbox-guest-iso virtualbox-host-dkms wget xclip xorg-xkill yt-dlp zathura zathura-pdf-mupdf zig zsh
+sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote audacity blender bspwm clinfo cmake composer conky cuda curl discord docker emacs eog extension-manager ffmpeg firefox ghidra ghostscript git-lfs github-cli gnome-screenshot gnome-shell-extensions go gparted gsfonts hashcat hashcat-utils hplip httrack inkscape intel-compute-runtime jdk-openjdk john kitty kiwix-desktop lib32-nvidia-utils libgda6 libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk lua-socket luarocks ly mariadb mokutil mono mpc mpd mpv ncmpcpp net-tools nodejs ntfs-3g nvidia-settings nvidia-utils nvtop obs-studio obsidian oculante ollama-cuda opam opencl-headers os-prober pacman-contrib patchelf pavucontrol pdf2svg perl-file-mimeinfo php php-apache phpmyadmin picom polybar power-profiles-daemon powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone reflector rofi rsync rust rxvt-unicode solaar speedtest-cli sqlite3 sqlitebrowser steam stow sunshine sxhkd telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr the_silver_searcher thunderbird time tk tmux torbrowser-launcher tree unpaper unzip veracrypt virtualbox virtualbox-guest-iso virtualbox-host-dkms xclip xorg-xkill yt-dlp zathura zathura-pdf-mupdf zig zsh
 ```
 ### Yay Installing Everything
 ```bash
