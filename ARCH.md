@@ -59,6 +59,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 exit
 reboot
 ```
+### Configuring GNOME Tour
+Click `Skip`
 ### Installing Yay to use AUR repository
 ```bash
 sudo pacman -Sy git base-devel
@@ -98,15 +100,15 @@ sudo pacman -Sy
 <!--noto-fonts, noto-fonts-cjk, noto-fonts-emoji, ttf-dejavu, ttf-liberation provided by Application>Additional fonts-->
 <!--baobab, decibels, epiphany, gdm, gnome-backgrounds, gnome-calculator, gnome-calendar, gnome-characters, gnome-clocks, gnome-color-manager, gnome-connections, gnome-console, gnome-contacts, gnome-control-center, gnome-disk-utility, gnome-font-viewer, gnome-keyring, gnome-logs, gnome-maps, gnome-menus, gnome-music, gnome-remote-desktop, gnome-session, gnome-settings-daemon, gnome-shell, gnome-software, gnome-system-monitor, gnome-text-editor, gnome-tour, gnome-user-docs, gnome-user-share, gnome-weather, grilo-plugins, gst-thumbnailers, gvfs, gvfs-afc, gvfs-dnssd, gvfs-goa, gvfs-gphoto2, gvfs-mtp, gvfs-nfs, gvfs-onedrive, gvfs-smb, gvfs-wsdd, loupe, malcontent, nautilus, orca, papers, rygel, showtime, simple-scan, snapshot, sushi, tecla, xdg-desktop-portal-gnome, xdg-user-dirs-gtk, yelp provided by gnome-->
 ```bash
-sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote audacity blender bspwm clang clinfo cmake composer conky cuda curl discord docker emacs eog extension-manager ffmpeg firefox gcc-fortran ghc ghc-static ghidra ghostscript git-lfs github-cli gnome-screenshot gnome-shell-extensions go gparted gsfonts hashcat hashcat-utils hplip httrack inkscape intel-compute-runtime jdk-openjdk john kitty kiwix-desktop kotlin lib32-nvidia-utils libgda6 libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk lua-lanes lua-socket luarocks ly mariadb mokutil mono mpc mpd mpv nasm ncmpcpp net-tools nodejs npm ntfs-3g nvidia-settings nvidia-utils nvtop obs-studio obsidian ocaml oculante ollama-cuda opam opencl-headers opencl-headers openmp os-prober pacman-contrib patchelf pavucontrol pdf2svg perl-file-mimeinfo php php-apache phpmyadmin picom polybar power-profiles-daemon powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone reflector rofi rsync rust rxvt-unicode sbcl solaar speedtest-cli sqlite3 sqlitebrowser steam stow sunshine swi-prolog sxhkd telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr the_silver_searcher thunderbird time tk tmux torbrowser-launcher tree typescript unpaper unzip veracrypt virtualbox virtualbox-guest-iso virtualbox-host-dkms vulkan-headers xclip xorg-xkill yt-dlp zathura zathura-pdf-mupdf zig zsh
+sudo pacman -S aircrack-ng alsa-utils arandr arch-install-scripts asymptote audacity blender bspwm clang clinfo cmake composer conky cuda curl discord docker emacs eog evince extension-manager ffmpeg file-roller firefox gcc-fortran ghc ghc-static ghidra ghostscript git-lfs github-cli gnome-screenshot gnome-shell-extensions gnome-video-effects go gparted gsfonts hashcat hashcat-utils hplip httrack inkscape intel-compute-runtime jdk-openjdk john kitty kiwix-desktop kotlin lib32-nvidia-utils libgda6 libjxl libreoffice-still libreoffice-still-fr libreoffice-still-ru libreoffice-still-uk lua-lanes lua-socket luarocks ly mariadb mokutil mono mpc mpd mpv nasm ncmpcpp net-tools nodejs npm ntfs-3g nvidia-settings nvidia-utils nvtop obs-studio obsidian ocaml oculante ollama-cuda opam opencl-headers opencl-headers openmp os-prober pacman-contrib patchelf pavucontrol pdf2svg perl-file-mimeinfo php php-apache phpmyadmin picom polybar power-profiles-daemon powerline python-pillow python-pip python-pipx python-pywal qbittorrent rclone reflector rofi rsync rust rxvt-unicode sbcl solaar speedtest-cli sqlite3 sqlitebrowser steam stow sunshine swi-prolog sxhkd telegram-desktop tesseract tesseract-data-eng tesseract-data-fra tesseract-data-jpn tesseract-data-jpn_vert tesseract-data-rus tesseract-data-ukr the_silver_searcher thunderbird time tk tmux torbrowser-launcher tree typescript unpaper unzip veracrypt virtualbox virtualbox-guest-iso virtualbox-host-dkms vulkan-headers xclip xorg-xkill yt-dlp zathura zathura-pdf-mupdf zig zsh
 ```
 ### Yay Installing Everything
 ```bash
-yay -S activitywatch-bin anydesk-bin bambustudio-appimage betterlockscreen cyberghostvpn czkawka-gui-bin ect egpu-switcher gnucobol grub-customizer logtalk microsoft-edge-stable-bin miniconda3 mkinitcpio-firmware mono-basic neofetch nitrogen normcap nvidia-container-toolkit parsec-bin peazip pinta qview rclone-browser visual-studio-code-bin wrk xdman-beta-bin xwinwrap-0.9-bin yandex-browser
+yay -S activitywatch-bin anydesk-bin bambustudio-appimage betterlockscreen cheese cyberghostvpn czkawka-gui-bin ect egpu-switcher gnucobol grub-customizer logtalk microsoft-edge-stable-bin miniconda3 mkinitcpio-firmware mono-basic neofetch nitrogen normcap nvidia-container-toolkit parsec-bin peazip pinta qview rclone-browser visual-studio-code-bin wrk xdman-beta-bin xwinwrap-0.9-bin yandex-browser
 ```
-### Debloating Gnome
+### Debloating GNOME
 ```bash
-sudo pacman -Rsnc decibels epiphany evince gnome-calculator gnome-calendar gnome-clocks gnome-connections gnome-console gnome-contacts gnome-logs gnome-maps gnome-music gnome-software gnome-tour gnome-weather loupe orca papers rygel showtime simple-scan snapshot yelp
+sudo pacman -Rsnc gnome-app-list gnome-logs gnome-software gnome-tour
 ```
 ### Installing MariaDB
 ```bash
